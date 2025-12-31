@@ -1,0 +1,56 @@
+[
+  {
+    "name": "intel_ggtt_gmch_flush",
+    "callees": ["intel_gmch_gtt_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_gmch_enable_hw",
+    "callees": ["intel_gmch_enable_gtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_gmch_probe",
+    "callees": ["__builtin_expect", "_dev_err", "_dev_notice", "intel_gmch_gtt_get", "intel_gmch_probe", "needs_idle_maps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "needs_idle_maps",
+    "callees": ["i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_ggtt_remove",
+    "callees": ["intel_gmch_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_ggtt_clear_range",
+    "callees": ["intel_gmch_gtt_clear_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_ggtt_invalidate",
+    "callees": ["intel_gmch_gtt_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_ggtt_insert_entries",
+    "callees": ["intel_gmch_gtt_insert_sg_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_ggtt_insert_page",
+    "callees": ["intel_gmch_gtt_insert_page"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

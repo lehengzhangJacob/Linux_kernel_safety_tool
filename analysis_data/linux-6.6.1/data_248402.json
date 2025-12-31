@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_epb_save",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_epb_init",
+    "callees": ["__cpuhp_remove_state", "__cpuhp_setup_state", "register_syscore_ops", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_epb_offline",
+    "callees": ["get_cpu_device", "intel_epb_save", "sysfs_unmerge_group"],
+    "global_reads": ["cpuhp_tasks_frozen"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_epb_online",
+    "callees": ["get_cpu_device", "intel_epb_restore", "sysfs_merge_group"],
+    "global_reads": ["cpuhp_tasks_frozen"],
+    "global_writes": []
+  },
+  {
+    "name": "energy_perf_bias_store",
+    "callees": ["__sysfs_match_string", "kstrtoull", "rdmsrl_on_cpu", "wrmsrl_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "energy_perf_bias_show",
+    "callees": ["rdmsrl_on_cpu", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_epb_restore",
+    "callees": ["__builtin_expect", "_printk", "native_read_msr", "native_write_msr"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_epb_save",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

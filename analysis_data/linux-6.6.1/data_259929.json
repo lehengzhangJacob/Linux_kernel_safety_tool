@@ -1,0 +1,278 @@
+[
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search",
+    "callees": ["netlbl_domhsh_hash", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search",
+    "callees": ["netlbl_domhsh_hash", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search",
+    "callees": ["netlbl_domhsh_hash", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search",
+    "callees": ["netlbl_domhsh_hash", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_add",
+    "callees": ["netlbl_domhsh_add.part.0", "netlbl_domhsh_validate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_add.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "kzalloc", "netlbl_af4list_add", "netlbl_af4list_remove_entry", "netlbl_af4list_search_exact", "netlbl_af6list_add", "netlbl_af6list_remove_entry", "netlbl_af6list_search_exact", "netlbl_domhsh_audit_add", "netlbl_domhsh_free_entry", "netlbl_domhsh_hash", "netlbl_domhsh_search", "netlbl_domhsh_search_def"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_walk",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_getentry_af6",
+    "callees": ["netlbl_af6list_search", "netlbl_domhsh_search_def"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_getentry_af4",
+    "callees": ["netlbl_af4list_search", "netlbl_domhsh_search_def"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_getentry",
+    "callees": ["netlbl_domhsh_search_def"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_remove_default",
+    "callees": ["netlbl_domhsh_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_remove",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlbl_domhsh_remove_entry", "netlbl_domhsh_search", "netlbl_domhsh_search_def"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_remove_af6",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "calipso_doi_putdef", "kfree", "netlbl_af6list_remove", "netlbl_domhsh_remove_entry", "netlbl_domhsh_search", "netlbl_domhsh_search_def", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_remove_af4",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "cipso_v4_doi_putdef", "kfree", "netlbl_af4list_remove", "netlbl_domhsh_remove_entry", "netlbl_domhsh_search", "netlbl_domhsh_search_def", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_remove_entry",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "audit_log_end", "audit_log_format", "calipso_doi_putdef", "call_rcu", "cipso_v4_doi_putdef", "netlbl_audit_start_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_add_default",
+    "callees": ["netlbl_domhsh_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_add",
+    "callees": ["netlbl_domhsh_add.part.0", "netlbl_domhsh_validate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_init",
+    "callees": ["__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kmalloc_array", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_audit_add",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "audit_log_end", "audit_log_format", "netlbl_af4list_audit_addr", "netlbl_af6list_audit_addr", "netlbl_audit_start_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search_def",
+    "callees": ["netlbl_domhsh_search", "netlbl_domhsh_search_def.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_search",
+    "callees": ["netlbl_domhsh_hash", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_hash",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_domhsh_free_entry",
+    "callees": ["kfree", "netlbl_af4list_remove_entry", "netlbl_af6list_remove_entry"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

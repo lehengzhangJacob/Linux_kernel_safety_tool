@@ -1,0 +1,206 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pi_state_update_owner.part.0",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pi_state_update_owner",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "pi_state_update_owner.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_pi_state_owner",
+    "callees": ["__fixup_pi_state_owner", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_pi_state_owner",
+    "callees": ["__fixup_pi_state_owner", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_exit_race",
+    "callees": ["futex_get_value_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_pi_update_atomic",
+    "callees": ["__builtin_expect", "futex_cmpxchg_value_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_pi_owner.part.0",
+    "callees": ["__builtin_expect", "fixup_pi_state_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pi_state.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "pi_state_update_owner", "rt_mutex_proxy_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pi_state_update_owner.part.0",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_unlock_pi",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__task_pid_nr_ns", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "fault_in_user_writeable", "futex_cmpxchg_value_locked", "futex_hash", "futex_top_waiter", "get_futex_key", "get_pi_state", "put_pi_state", "wake_futex_pi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_lock_pi",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__futex_queue", "__rt_mutex_start_proxy_lock", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "fault_in_user_writeable", "fixup_pi_owner", "futex_lock_pi_atomic", "futex_q_lock", "futex_q_unlock", "futex_setup_timer", "futex_unqueue_pi", "get_futex_key", "hrtimer_cancel", "hrtimer_sleeper_start_expires", "refill_pi_state_cache", "rt_mutex_cleanup_proxy_lock", "rt_mutex_futex_trylock", "rt_mutex_wait_proxy_lock", "wait_for_owner_exiting"],
+    "global_reads": ["futex_q_init"],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_pi_owner",
+    "callees": ["fixup_pi_owner.part.0", "fixup_pi_state_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_pi_state_owner",
+    "callees": ["__fixup_pi_state_owner", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fixup_pi_state_owner",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__rt_mutex_futex_trylock", "__task_pid_nr_ns", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "fault_in_user_writeable", "futex_cmpxchg_value_locked", "futex_get_value_locked", "pi_state_update_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wake_futex_pi",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__rt_mutex_futex_unlock", "__task_pid_nr_ns", "_raw_spin_unlock_irq", "futex_cmpxchg_value_locked", "pi_state_update_owner", "rt_mutex_postunlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_lock_pi_atomic",
+    "callees": ["__attach_to_pi_owner", "__builtin_expect", "__task_pid_nr_ns", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "attach_to_pi_owner", "attach_to_pi_state", "futex_get_value_locked", "futex_top_waiter", "lock_pi_update_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_pi_update_atomic",
+    "callees": ["__builtin_expect", "futex_cmpxchg_value_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attach_to_pi_owner",
+    "callees": ["__attach_to_pi_owner", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "find_get_task_by_vpid", "handle_exit_race", "put_task_struct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__attach_to_pi_owner",
+    "callees": ["__builtin_expect", "rt_mutex_init_proxy_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_exit_race",
+    "callees": ["futex_get_value_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attach_to_pi_state",
+    "callees": ["__builtin_expect", "__task_pid_nr_ns", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "futex_get_value_locked", "get_pi_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pi_state",
+    "callees": ["__refcount_sub_and_test", "put_pi_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pi_state",
+    "callees": ["__builtin_expect", "__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pi_state_update_owner",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "pi_state_update_owner.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refill_pi_state_cache",
+    "callees": ["__builtin_expect", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "i915_gem_fence_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size",
+    "callees": ["i915_gem_fence_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size",
+    "callees": ["i915_gem_fence_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size",
+    "callees": ["i915_gem_fence_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size",
+    "callees": ["i915_gem_fence_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_alignment",
+    "callees": ["i915_gem_fence_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_get_tiling_ioctl",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_set_tiling_ioctl",
+    "callees": ["i915_gem_object_lookup", "i915_gem_object_set_tiling", "i915_tiling_ok", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_set_tiling",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__i915_gem_object_lock", "_raw_spin_lock", "_raw_spin_unlock", "bitmap_free", "bitmap_zalloc", "i915_gem_fence_alignment", "i915_gem_fence_size", "i915_gem_object_fence_prepare", "i915_gem_object_make_shrinkable", "i915_gem_object_make_unshrinkable", "i915_gem_object_release_mmap_gtt", "i915_gem_object_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_needs_bit17_swizzle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_fence_prepare",
+    "callees": ["__builtin_constant_p", "__i915_vma_unbind", "_raw_spin_lock", "_raw_spin_unlock", "i915_vma_fence_prepare", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_fence_prepare",
+    "callees": ["__builtin_constant_p", "i915_gem_fence_alignment", "i915_gem_fence_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_alignment",
+    "callees": ["i915_gem_fence_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_size",
+    "callees": ["i915_gem_fence_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lookup",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "i915_gem_object_get_rcu", "idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

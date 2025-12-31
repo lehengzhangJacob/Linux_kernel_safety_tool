@@ -1,0 +1,164 @@
+[
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_import",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_import",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_import",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_import",
+    "callees": ["crypto_shash_import", "hmac_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_module_exit",
+    "callees": ["crypto_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_module_init",
+    "callees": ["crypto_register_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_create",
+    "callees": ["crypto_attr_alg_name", "crypto_check_attr_type", "crypto_grab_shash", "crypto_inst_setname", "kzalloc", "shash_free_singlespawn_instance", "shash_register_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_exit_tfm",
+    "callees": ["crypto_destroy_tfm", "hmac_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_clone_tfm",
+    "callees": ["__builtin_expect", "crypto_clone_shash", "hmac_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_init_tfm",
+    "callees": ["__builtin_expect", "crypto_spawn_tfm2", "hmac_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_finup",
+    "callees": ["crypto_shash_finup", "crypto_shash_import"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_final",
+    "callees": ["crypto_shash_final", "crypto_shash_finup", "crypto_shash_import"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_update",
+    "callees": ["crypto_shash_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_init",
+    "callees": ["hmac_import"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_import",
+    "callees": ["crypto_shash_import", "hmac_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_export",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_setkey",
+    "callees": ["crypto_shash_digest", "crypto_shash_init", "crypto_shash_update", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hmac_ctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_import",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

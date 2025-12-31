@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_framebuffer_delete.part.0",
+    "callees": ["drm_client_buffer_delete", "drm_client_buffer_rmfb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_dev_hotplug.part.0",
+    "callees": ["__drm_dev_dbg", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_debugfs_init",
+    "callees": ["drm_debugfs_add_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_debugfs_internal_clients",
+    "callees": ["drm_printf", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_framebuffer_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_framebuffer_delete",
+    "callees": ["drm_client_framebuffer_delete.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_framebuffer_create",
+    "callees": ["__builtin_expect", "drm_client_buffer_addfb", "drm_client_buffer_create", "drm_client_buffer_delete", "drm_mode_destroy_dumb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_addfb",
+    "callees": ["__builtin_expect", "drm_format_info", "drm_format_info_bpp", "drm_framebuffer_lookup", "drm_mode_addfb", "drm_mode_object_put", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_rmfb",
+    "callees": ["_dev_err", "drm_mode_rmfb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_vunmap",
+    "callees": ["drm_gem_vunmap_unlocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_vmap",
+    "callees": ["drm_gem_vmap_unlocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_create",
+    "callees": ["drm_client_buffer_delete", "drm_format_info", "drm_format_info_bpp", "drm_gem_object_lookup", "drm_mode_create_dumb", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_buffer_delete",
+    "callees": ["drm_gem_vunmap_unlocked", "kfree", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_dev_restore",
+    "callees": ["__drm_dev_dbg", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_dev_hotplug",
+    "callees": ["__drm_dev_dbg", "drm_client_dev_hotplug.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_dev_unregister",
+    "callees": ["drm_client_release", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_release",
+    "callees": ["__drm_dev_dbg", "drm_client_close", "drm_client_modeset_free", "drm_dev_put", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_register",
+    "callees": ["__drm_dev_dbg", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_init",
+    "callees": ["drm_client_modeset_create", "drm_client_modeset_free", "drm_client_open", "drm_dev_get", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_close",
+    "callees": ["drm_file_free", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_client_open",
+    "callees": ["__builtin_expect", "drm_file_alloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

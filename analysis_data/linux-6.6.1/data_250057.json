@@ -1,0 +1,14 @@
+[
+  {
+    "name": "alsa_seq_exit",
+    "callees": ["snd_seq_autoload_exit", "snd_seq_info_done", "snd_seq_queues_delete", "snd_seq_system_client_done", "snd_sequencer_device_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alsa_seq_init",
+    "callees": ["client_init_data", "snd_seq_autoload_init", "snd_seq_info_done", "snd_seq_info_init", "snd_seq_system_client_init", "snd_sequencer_device_done", "snd_sequencer_device_init"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

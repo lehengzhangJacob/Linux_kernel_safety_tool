@@ -1,0 +1,218 @@
+[
+  {
+    "name": "cleanup_rapl_pmus",
+    "callees": ["kfree"],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_to_rapl_pmu",
+    "callees": [],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_to_rapl_pmu",
+    "callees": [],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_hrtimer_handle.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hrtimer_forward_now", "rapl_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_rapl_exit",
+    "callees": ["__cpuhp_remove_state", "cleanup_rapl_pmus", "perf_pmu_unregister"],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_init",
+    "callees": ["__cpuhp_remove_state", "__cpuhp_setup_state", "_printk", "cleanup_rapl_pmus", "init_rapl_pmus", "perf_msr_probe", "perf_pmu_register", "rapl_advertise", "rapl_check_hw_unit", "x86_match_cpu"],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": ["rapl_cntr_mask", "rapl_msrs"]
+  },
+  {
+    "name": "init_rapl_pmus",
+    "callees": ["kzalloc"],
+    "global_reads": ["__max_die_per_package", "__max_logical_packages"],
+    "global_writes": ["rapl_pmus"]
+  },
+  {
+    "name": "cleanup_rapl_pmus",
+    "callees": ["kfree"],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_advertise",
+    "callees": ["__builtin_constant_p", "_printk"],
+    "global_reads": ["rapl_cntr_mask", "rapl_timer_ms"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_check_hw_unit",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": ["rapl_timer_ms"]
+  },
+  {
+    "name": "rapl_cpu_online",
+    "callees": ["__builtin_constant_p", "cpu_to_rapl_pmu", "find_first_and_bit", "hrtimer_init", "kzalloc_node"],
+    "global_reads": ["nr_cpu_ids", "rapl_pmus", "rapl_timer_ms"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_cpu_offline",
+    "callees": ["__builtin_constant_p", "cpu_to_rapl_pmu", "cpumask_any_but", "perf_pmu_migrate_context"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "test_msr",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "event_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_get_attr_cpumask",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_read",
+    "callees": ["rapl_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_init",
+    "callees": ["cpu_to_rapl_pmu"],
+    "global_reads": ["rapl_cntr_mask", "rapl_msrs", "rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_del",
+    "callees": ["rapl_pmu_event_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_add",
+    "callees": ["__rapl_pmu_event_start", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_stop",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hrtimer_cancel", "rapl_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_pmu_event_start",
+    "callees": ["__rapl_pmu_event_start", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rapl_pmu_event_start",
+    "callees": ["__builtin_expect", "native_read_msr", "rapl_start_hrtimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_hrtimer_handle",
+    "callees": ["rapl_hrtimer_handle.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_start_hrtimer",
+    "callees": ["hrtimer_start_range_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rapl_scale",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_to_rapl_pmu",
+    "callees": [],
+    "global_reads": ["rapl_pmus"],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

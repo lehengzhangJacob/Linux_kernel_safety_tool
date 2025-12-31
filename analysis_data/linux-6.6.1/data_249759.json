@@ -1,0 +1,176 @@
+[
+  {
+    "name": "fat_truncate_blocks",
+    "callees": ["fat_flush_inodes", "fat_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_make_mode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_make_attrs",
+    "callees": ["fat_mode_can_hold_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatent_brelse",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_file_release.part.0",
+    "callees": ["fat_flush_inodes", "io_schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_setattr",
+    "callees": ["__mark_inode_dirty", "down_write", "fat_allow_set_time", "fat_block_truncate_page", "fat_cont_expand", "fat_sanitize_mode", "fat_truncate_blocks", "fat_truncate_time", "from_vfsgid", "from_vfsuid", "inode_dio_wait", "setattr_copy", "setattr_prepare", "truncate_setsize", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_sanitize_mode",
+    "callees": ["fat_mode_can_hold_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_getattr",
+    "callees": ["generic_fillattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_truncate_blocks",
+    "callees": ["fat_flush_inodes", "fat_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_fallocate",
+    "callees": ["down_write", "fat_add_cluster", "fat_cont_expand", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_cont_expand",
+    "callees": ["__mark_inode_dirty", "fat_truncate_time", "filemap_fdatawait_range", "filemap_fdatawrite_range", "generic_cont_expand_simple", "sync_mapping_buffers", "write_inode_now"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_file_fsync",
+    "callees": ["__generic_file_fsync", "blkdev_issue_flush", "sync_mapping_buffers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_file_release",
+    "callees": ["fat_file_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_generic_ioctl",
+    "callees": ["__builtin_expect", "fat_ioctl_fitrim", "fat_ioctl_get_attributes", "fat_ioctl_set_attributes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ioctl_fitrim",
+    "callees": ["_copy_from_user", "_copy_to_user", "capable", "fat_trim_fs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ioctl_set_attributes",
+    "callees": ["__builtin_expect", "__mark_inode_dirty", "capable", "current_time", "down_write", "fat_make_attrs", "fat_make_mode", "fat_save_attrs", "fat_setattr", "fsnotify_change", "mnt_drop_write_file", "mnt_want_write_file", "security_inode_setattr", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ioctl_get_attributes",
+    "callees": ["__builtin_expect", "down_read", "fat_make_attrs", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatent_brelse",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_save_attrs",
+    "callees": ["fat_mode_can_hold_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_make_attrs",
+    "callees": ["fat_mode_can_hold_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_make_mode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_change",
+    "callees": ["fsnotify_parent"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

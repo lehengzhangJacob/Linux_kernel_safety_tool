@@ -1,0 +1,122 @@
+[
+  {
+    "name": "netlink_policy_dump_get_policy_idx.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_get_policy_idx",
+    "callees": ["__builtin_expect", "netlink_policy_dump_get_policy_idx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_get_policy_idx.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_write",
+    "callees": ["__netlink_policy_dump_write_attr", "nla_nest_start_noflag", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_write_attr",
+    "callees": ["__netlink_policy_dump_write_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__netlink_policy_dump_write_attr",
+    "callees": ["__builtin_expect", "netlink_policy_dump_get_policy_idx", "nla_get_range_signed", "nla_get_range_unsigned", "nla_nest_start_noflag", "nla_put", "nla_put_64bit", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_attr_size_estimate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_loop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_add_policy",
+    "callees": ["__builtin_expect", "add_policy", "alloc_state", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_state",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlink_policy_dump_get_policy_idx",
+    "callees": ["__builtin_expect", "netlink_policy_dump_get_policy_idx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_policy",
+    "callees": ["__builtin_expect", "krealloc", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

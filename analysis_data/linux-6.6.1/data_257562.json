@@ -1,0 +1,386 @@
+[
+  {
+    "name": "i915_print_iommu_status",
+    "callees": ["drm_printf", "i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_hw_remove",
+    "callees": ["i915_perf_fini", "intel_opregion_cleanup", "pci_disable_msi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_find_root_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume_early",
+    "callees": ["i915_drm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume",
+    "callees": ["i915_drm_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume_early",
+    "callees": ["i915_drm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume",
+    "callees": ["i915_drm_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sanitize_gpu.part.0",
+    "callees": ["__intel_gt_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sanitize_gpu",
+    "callees": ["sanitize_gpu.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_workqueues_cleanup",
+    "callees": ["destroy_workqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_thaw",
+    "callees": ["i915_pm_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_thaw_early",
+    "callees": ["i915_pm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_lastclose",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_suspend_encoders.part.0",
+    "callees": ["drm_modeset_lock_all", "drm_modeset_unlock_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sanitize_gpu.part.0",
+    "callees": ["__intel_gt_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_reject_pin_ioctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_runtime_resume",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string", "intel_display_power_resume", "intel_gt_runtime_resume", "intel_hpd_init", "intel_hpd_poll_disable", "intel_opregion_notify_adapter", "intel_runtime_pm_enable_interrupts", "intel_uncore_runtime_resume", "intel_uncore_unclaimed_mmio", "pci_d3cold_enable", "pcie_find_root_port", "skl_watermark_ipc_update", "vlv_resume_prepare"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_runtime_suspend",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "assert_forcewakes_inactive", "dev_driver_string", "i915_gem_runtime_suspend", "intel_display_power_suspend", "intel_gt_runtime_resume", "intel_gt_runtime_suspend", "intel_hpd_poll_enable", "intel_opregion_notify_adapter", "intel_runtime_pm_disable_interrupts", "intel_runtime_pm_driver_release", "intel_runtime_pm_enable_interrupts", "intel_uncore_arm_unclaimed_mmio_detection", "intel_uncore_runtime_resume", "intel_uncore_suspend", "pci_d3cold_disable", "pcie_find_root_port", "vlv_suspend_complete"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "i915_pm_restore",
+    "callees": ["i915_pm_thaw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_restore_early",
+    "callees": ["i915_pm_thaw_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_thaw",
+    "callees": ["i915_pm_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_thaw_early",
+    "callees": ["i915_pm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_freeze_late",
+    "callees": ["i915_drm_suspend_late", "i915_gem_freeze_late"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_freeze",
+    "callees": ["i915_drm_suspend", "i915_gem_freeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_complete",
+    "callees": ["i915_driver_lastclose"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume",
+    "callees": ["i915_drm_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_resume_early",
+    "callees": ["i915_drm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_poweroff_late",
+    "callees": ["i915_drm_suspend_late"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_suspend_late",
+    "callees": ["i915_drm_suspend_late"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_suspend",
+    "callees": ["_dev_err", "i915_drm_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pm_prepare",
+    "callees": ["_dev_err", "i915_gem_backup_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_resume_switcheroo",
+    "callees": ["i915_drm_resume", "i915_drm_resume_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_drm_resume_early",
+    "callees": ["_dev_err", "intel_display_power_resume_early", "intel_gt_check_and_clear_faults", "intel_power_domains_resume", "intel_uncore_resume_early", "pci_enable_device", "pci_set_master", "pci_set_power_state", "vlv_resume_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_drm_resume",
+    "callees": ["_dev_err", "drm_kms_helper_poll_enable", "drm_mode_config_reset", "i915_gem_resume", "i915_ggtt_enable_hw", "i915_ggtt_resume", "i915_pcode_init", "i915_restore_display", "intel_clock_gating_init", "intel_display_driver_init_hw", "intel_display_driver_resume", "intel_dmc_resume", "intel_dp_mst_resume", "intel_dpt_resume", "intel_hpd_init", "intel_hpd_poll_disable", "intel_init_pch_refclk", "intel_opregion_resume", "intel_power_domains_enable", "intel_pps_unlock_regs_wa", "intel_runtime_pm_enable_interrupts", "sanitize_gpu", "setup_private_pat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_suspend_switcheroo",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "i915_drm_suspend", "i915_drm_suspend_late"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "i915_drm_suspend_late",
+    "callees": ["_dev_err", "acpi_target_system_state", "i915_gem_suspend_late", "intel_display_power_suspend_late", "intel_power_domains_resume", "intel_power_domains_suspend", "intel_runtime_pm_driver_release", "intel_uncore_suspend", "pci_disable_device", "pci_set_power_state", "vlv_suspend_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_drm_suspend",
+    "callees": ["acpi_target_system_state", "drm_kms_helper_poll_disable", "i915_gem_drain_freed_objects", "i915_ggtt_suspend", "i915_save_display", "intel_display_driver_suspend", "intel_dmc_suspend", "intel_dp_mst_suspend", "intel_dpt_suspend", "intel_hpd_cancel_work", "intel_opregion_suspend", "intel_power_domains_disable", "intel_runtime_pm_disable_interrupts", "intel_suspend_encoders.part.0", "pci_save_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_shutdown",
+    "callees": ["drm_atomic_helper_shutdown", "drm_kms_helper_poll_disable", "i915_gem_suspend", "intel_dmc_suspend", "intel_dp_mst_suspend", "intel_hpd_cancel_work", "intel_power_domains_disable", "intel_power_domains_driver_remove", "intel_runtime_pm_disable", "intel_runtime_pm_disable_interrupts", "intel_runtime_pm_driver_release", "intel_shutdown_encoders", "intel_suspend_encoders.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_shutdown_encoders",
+    "callees": ["drm_modeset_lock_all", "drm_modeset_unlock_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_postclose",
+    "callees": ["i915_gem_context_close", "i915_gem_flush_free_objects", "kref_put", "kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_lastclose",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_open",
+    "callees": ["i915_gem_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_release",
+    "callees": ["i915_driver_late_release", "i915_gem_drain_freed_objects", "i915_gem_driver_release", "i915_ggtt_driver_late_release", "i915_ggtt_driver_release", "intel_gmch_bar_teardown", "intel_memory_regions_driver_release", "intel_runtime_pm_driver_release", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_remove",
+    "callees": ["i915_driver_hw_remove", "i915_driver_unregister", "i915_gem_driver_remove", "i915_gem_suspend", "i915_reset_error_state", "intel_display_driver_remove", "intel_display_driver_remove_nogem", "intel_display_driver_remove_noirq", "intel_irq_uninstall", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_probe",
+    "callees": ["__builtin_expect", "__i915_printk", "_printk", "i915_driver_create", "i915_driver_early_probe", "i915_driver_hw_probe", "i915_driver_hw_remove", "i915_driver_late_release", "i915_driver_mmio_probe", "i915_driver_register", "i915_gem_drain_freed_objects", "i915_gem_driver_release", "i915_gem_driver_remove", "i915_gem_init", "i915_gem_suspend", "i915_ggtt_driver_late_release", "i915_ggtt_driver_release", "i915_welcome_messages", "intel_display_driver_probe", "intel_display_driver_probe_nogem", "intel_display_driver_probe_noirq", "intel_display_driver_remove", "intel_display_driver_remove_nogem", "intel_display_driver_remove_noirq", "intel_gmch_bar_teardown", "intel_gt_probe_all", "intel_gt_release_all", "intel_irq_install", "intel_irq_uninstall", "intel_memory_regions_driver_release", "intel_pxp_init", "intel_vgpu_detect", "pci_disable_device", "pci_enable_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_welcome_messages",
+    "callees": ["__builtin_expect", "drm_printf", "i915_print_iommu_status", "intel_device_info_print", "intel_display_device_info_print", "intel_gt_info_print", "intel_platform_name"],
+    "global_reads": ["__drm_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_print_iommu_status",
+    "callees": ["drm_printf", "i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_unregister",
+    "callees": ["drm_dev_unplug", "i915_gem_driver_unregister", "i915_hwmon_unregister", "i915_perf_unregister", "i915_pmu_unregister", "i915_switcheroo_unregister", "i915_teardown_sysfs", "intel_display_driver_unregister", "intel_gt_driver_unregister", "intel_power_domains_disable", "intel_pxp_fini", "intel_runtime_pm_disable", "intel_unregister_dsm_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_register",
+    "callees": ["_dev_err", "drm_dev_register", "i915_debugfs_register", "i915_gem_driver_register", "i915_hwmon_register", "i915_perf_register", "i915_pmu_register", "i915_setup_sysfs", "i915_switcheroo_register", "intel_display_driver_register", "intel_gt_driver_register", "intel_power_domains_enable", "intel_register_dsm_handler", "intel_runtime_pm_enable", "intel_vgpu_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_hw_remove",
+    "callees": ["i915_perf_fini", "intel_opregion_cleanup", "pci_disable_msi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_hw_probe",
+    "callees": ["__drm_dev_dbg", "__i915_printk", "_dev_err", "drm_aperture_remove_conflicting_pci_framebuffers", "i915_gem_drain_freed_objects", "i915_ggtt_driver_late_release", "i915_ggtt_driver_release", "i915_ggtt_enable_hw", "i915_ggtt_init_hw", "i915_ggtt_probe_hw", "i915_pcode_init", "i915_perf_fini", "i915_perf_init", "i915_set_dma_info", "intel_bw_init_hw", "intel_dram_detect", "intel_dram_edram_detect", "intel_gt_tiles_init", "intel_memory_regions_driver_release", "intel_memory_regions_hw_probe", "intel_opregion_cleanup", "intel_opregion_setup", "intel_vgpu_active", "intel_vgpu_has_full_ppgtt", "intel_vgpu_has_hwsp_emulation", "pci_disable_msi", "pci_enable_msi", "pci_set_master"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pcode_init",
+    "callees": ["_dev_err", "intel_pcode_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_set_dma_info",
+    "callees": ["_dev_err", "dma_set_coherent_mask", "dma_set_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_mmio_probe",
+    "callees": ["__drmm_add_action_or_reset", "intel_device_info_runtime_init", "intel_gmch_bar_setup", "intel_gmch_bar_teardown", "intel_gmch_bridge_setup", "intel_gt_init_mmio", "intel_uncore_init_mmio", "sanitize_gpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_late_release",
+    "callees": ["cpu_latency_qos_remove_request", "i915_gem_cleanup_early", "i915_params_free", "i915_workqueues_cleanup", "intel_gt_driver_late_release_all", "intel_irq_fini", "intel_power_domains_cleanup", "intel_region_ttm_device_fini", "vlv_suspend_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_driver_early_probe",
+    "callees": ["__mutex_init", "cpu_latency_qos_add_request", "i915_gem_init_early", "i915_memcpy_init_early", "i915_workqueues_cleanup", "i915_workqueues_init", "intel_clock_gating_hooks_init", "intel_detect_pch", "intel_detect_preproduction_hw", "intel_device_info_runtime_init_early", "intel_display_driver_early_probe", "intel_irq_init", "intel_region_ttm_device_fini", "intel_region_ttm_device_init", "intel_root_gt_init_early", "intel_runtime_pm_init_early", "intel_step_init", "intel_uncore_mmio_debug_init_early", "vlv_suspend_cleanup", "vlv_suspend_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sanitize_gpu",
+    "callees": ["sanitize_gpu.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_detect_preproduction_hw",
+    "callees": ["_dev_err", "add_taint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_workqueues_cleanup",
+    "callees": ["destroy_workqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_workqueues_init",
+    "callees": ["_dev_err", "alloc_workqueue", "destroy_workqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_find_root_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

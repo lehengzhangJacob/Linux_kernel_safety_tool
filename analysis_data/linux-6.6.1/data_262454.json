@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_put",
+    "callees": ["__mb_cache_entry_free", "wake_up_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_put",
+    "callees": ["__mb_cache_entry_free", "wake_up_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_wait_unused.part.0",
+    "callees": ["__var_waitqueue", "finish_wait", "init_wait_var_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mbcache_exit",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["mb_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "mbcache_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["mb_entry_cache"]
+  },
+  {
+    "name": "mb_cache_destroy",
+    "callees": ["__builtin_expect", "kfree", "mb_cache_entry_put", "unregister_shrinker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_create",
+    "callees": ["kfree", "kmalloc_array", "kzalloc", "register_shrinker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_shrink_worker",
+    "callees": ["mb_cache_shrink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_scan",
+    "callees": ["mb_cache_shrink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_shrink",
+    "callees": ["__SCT__cond_resched", "__builtin_constant_p", "__mb_cache_entry_free", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_touch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_delete_or_get",
+    "callees": ["__mb_cache_entry_free", "_raw_spin_lock", "_raw_spin_unlock", "mb_cache_entry_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_get",
+    "callees": ["__builtin_expect", "bit_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_find_next",
+    "callees": ["__entry_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_find_first",
+    "callees": ["__entry_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__entry_find",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "bit_spin_lock", "mb_cache_entry_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_wait_unused",
+    "callees": ["__SCT__might_resched", "mb_cache_entry_wait_unused.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mb_cache_entry_free",
+    "callees": ["__builtin_expect", "bit_spin_lock", "hlist_bl_del", "kmem_cache_free"],
+    "global_reads": ["mb_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_create",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "bit_spin_lock", "kmem_cache_alloc", "kmem_cache_free", "mb_cache_entry_put", "mb_cache_shrink", "schedule_work"],
+    "global_reads": ["mb_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "mb_cache_entry_put",
+    "callees": ["__mb_cache_entry_free", "wake_up_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hlist_bl_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

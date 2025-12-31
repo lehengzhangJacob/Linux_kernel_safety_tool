@@ -1,0 +1,140 @@
+[
+  {
+    "name": "__kernfs_iattrs",
+    "callees": ["kmem_cache_alloc", "ktime_get_real_ts64", "mutex_lock", "mutex_unlock", "simple_xattrs_init"],
+    "global_reads": ["kernfs_iattrs_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "__kernfs_iattrs",
+    "callees": ["kmem_cache_alloc", "ktime_get_real_ts64", "mutex_lock", "mutex_unlock", "simple_xattrs_init"],
+    "global_reads": ["kernfs_iattrs_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_xattr_set",
+    "callees": ["__builtin_expect", "__kernfs_iattrs", "simple_xattr_free", "simple_xattr_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_xattr_get",
+    "callees": ["__kernfs_iattrs", "simple_xattr_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_vfs_user_xattr_set",
+    "callees": ["__kernfs_iattrs", "kernfs_vfs_user_xattr_add", "kernfs_vfs_user_xattr_rm", "xattr_full_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_vfs_xattr_set",
+    "callees": ["kernfs_xattr_set", "xattr_full_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_vfs_xattr_get",
+    "callees": ["kernfs_xattr_get", "xattr_full_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_xattr_set",
+    "callees": ["__builtin_expect", "__kernfs_iattrs", "simple_xattr_free", "simple_xattr_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_xattr_get",
+    "callees": ["__kernfs_iattrs", "simple_xattr_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_permission",
+    "callees": ["down_read", "generic_permission", "kernfs_refresh_inode", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_evict_inode",
+    "callees": ["clear_inode", "kernfs_put", "truncate_inode_pages_final"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_get_inode",
+    "callees": ["iget_locked", "kernfs_init_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_init_inode",
+    "callees": ["__builtin_unreachable", "kernfs_get", "kernfs_refresh_inode", "make_empty_dir_inode", "set_default_inode_attr", "unlock_new_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_getattr",
+    "callees": ["down_read", "generic_fillattr", "kernfs_refresh_inode", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_refresh_inode",
+    "callees": ["set_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_listxattr",
+    "callees": ["__kernfs_iattrs", "simple_xattr_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_setattr",
+    "callees": ["__kernfs_setattr", "down_write", "setattr_copy", "setattr_prepare", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_setattr",
+    "callees": ["__kernfs_setattr", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kernfs_setattr",
+    "callees": ["__kernfs_iattrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kernfs_iattrs",
+    "callees": ["kmem_cache_alloc", "ktime_get_real_ts64", "mutex_lock", "mutex_unlock", "simple_xattrs_init"],
+    "global_reads": ["kernfs_iattrs_cache"],
+    "global_writes": []
+  }
+]

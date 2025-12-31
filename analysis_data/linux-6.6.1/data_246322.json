@@ -1,0 +1,32 @@
+[
+  {
+    "name": "lcm.part.0",
+    "callees": ["gcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lcm",
+    "callees": ["lcm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lcm.part.0",
+    "callees": ["gcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lcm_not_zero",
+    "callees": ["lcm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lcm",
+    "callees": ["lcm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,554 @@
+[
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_sys_off_handler",
+    "callees": ["kzalloc"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "register_sys_off_handler",
+    "callees": ["__builtin_expect", "alloc_sys_off_handler", "atomic_notifier_chain_register", "atomic_notifier_chain_register_unique_prio", "blocking_notifier_chain_register", "blocking_notifier_chain_register_unique_prio", "free_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_sys_off_handler",
+    "callees": ["__builtin_expect", "atomic_notifier_chain_unregister", "blocking_notifier_chain_unregister", "free_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_can_power_off",
+    "callees": ["atomic_notifier_call_chain_is_empty"],
+    "global_reads": ["pm_power_off"],
+    "global_writes": []
+  },
+  {
+    "name": "devm_unregister_sys_off_handler",
+    "callees": ["unregister_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_sys_off_handler",
+    "callees": ["__builtin_expect", "__devm_add_action_or_reset", "register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_unregister_sys_off_handler",
+    "callees": ["unregister_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_sys_off_handler",
+    "callees": ["__builtin_expect", "__devm_add_action_or_reset", "register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "run_cmd",
+    "callees": ["argv_free", "argv_split", "call_usermodehelper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_restart_prepare",
+    "callees": ["__usermodehelper_disable", "blocking_notifier_call_chain", "device_shutdown"],
+    "global_reads": [],
+    "global_writes": ["system_state"]
+  },
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_shutdown_prepare",
+    "callees": ["__usermodehelper_disable", "blocking_notifier_call_chain", "device_shutdown"],
+    "global_reads": [],
+    "global_writes": ["system_state"]
+  },
+  {
+    "name": "devm_unregister_sys_off_handler",
+    "callees": ["unregister_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hw_protection_shutdown.part.0",
+    "callees": ["hw_failure_emergency_poweroff", "schedule_work"],
+    "global_reads": [],
+    "global_writes": ["poweroff_force"]
+  },
+  {
+    "name": "free_sys_off_handler.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reboot_ksysfs_init",
+    "callees": ["kernel_reboot_sysctls_init", "kobject_create_and_add", "kobject_put", "sysfs_create_group"],
+    "global_reads": ["kernel_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_reboot_sysctls_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_store",
+    "callees": ["capable", "cpumask_weight", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": ["reboot_cpu", "reboot_default"]
+  },
+  {
+    "name": "cpu_show",
+    "callees": ["sprintf"],
+    "global_reads": ["reboot_cpu"],
+    "global_writes": []
+  },
+  {
+    "name": "type_store",
+    "callees": ["capable", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["reboot_default", "reboot_type"]
+  },
+  {
+    "name": "type_show",
+    "callees": ["sprintf"],
+    "global_reads": ["reboot_type"],
+    "global_writes": []
+  },
+  {
+    "name": "force_store",
+    "callees": ["capable", "kstrtobool"],
+    "global_reads": [],
+    "global_writes": ["reboot_default", "reboot_force"]
+  },
+  {
+    "name": "force_show",
+    "callees": ["sprintf"],
+    "global_reads": ["reboot_force"],
+    "global_writes": []
+  },
+  {
+    "name": "mode_store",
+    "callees": ["capable", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["reboot_default", "reboot_mode"]
+  },
+  {
+    "name": "mode_show",
+    "callees": ["sprintf"],
+    "global_reads": ["reboot_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "reboot_setup",
+    "callees": ["_printk", "cpumask_weight", "simple_strtoul", "strchr", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["reboot_cpu", "reboot_default", "reboot_force", "reboot_type"]
+  },
+  {
+    "name": "hw_protection_shutdown",
+    "callees": ["_printk", "hw_protection_shutdown.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hw_failure_emergency_poweroff",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "schedule_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hw_failure_emergency_poweroff_func",
+    "callees": ["_printk", "kernel_power_off", "kmsg_dump", "machine_emergency_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "orderly_reboot",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reboot_work_func",
+    "callees": ["__orderly_reboot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "orderly_poweroff",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": ["poweroff_force"]
+  },
+  {
+    "name": "poweroff_work_func",
+    "callees": ["__orderly_poweroff"],
+    "global_reads": ["poweroff_force"],
+    "global_writes": []
+  },
+  {
+    "name": "run_cmd",
+    "callees": ["argv_free", "argv_split", "call_usermodehelper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ctrl_alt_del",
+    "callees": ["kill_pid", "schedule_work"],
+    "global_reads": ["C_A_D", "cad_pid"],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_cad",
+    "callees": ["kernel_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_reboot",
+    "callees": ["do_exit", "hibernate", "kernel_can_power_off", "kernel_halt", "kernel_kexec", "kernel_power_off", "kernel_restart", "mutex_lock", "mutex_unlock", "ns_capable", "reboot_pid_ns", "strncpy_from_user", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": ["C_A_D"]
+  },
+  {
+    "name": "__ia32_sys_reboot",
+    "callees": ["__do_sys_reboot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_reboot",
+    "callees": ["__do_sys_reboot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_power_off",
+    "callees": ["_printk", "blocking_notifier_call_chain", "kernel_shutdown_prepare", "kmsg_dump", "machine_power_off", "migrate_to_reboot_cpu", "syscore_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_can_power_off",
+    "callees": ["atomic_notifier_call_chain_is_empty"],
+    "global_reads": ["pm_power_off"],
+    "global_writes": []
+  },
+  {
+    "name": "do_kernel_power_off",
+    "callees": ["atomic_notifier_call_chain", "register_sys_off_handler", "unregister_sys_off_handler"],
+    "global_reads": ["pm_power_off"],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pm_power_off",
+    "callees": [],
+    "global_reads": ["pm_power_off"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_platform_power_off",
+    "callees": ["unregister_sys_off_handler"],
+    "global_reads": ["platform_power_off_handler"],
+    "global_writes": ["platform_power_off_handler"]
+  },
+  {
+    "name": "register_platform_power_off",
+    "callees": ["__builtin_expect", "register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": ["platform_power_off_handler"]
+  },
+  {
+    "name": "platform_power_off_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_restart_handler",
+    "callees": ["devm_register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_power_off_handler",
+    "callees": ["devm_register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_sys_off_handler",
+    "callees": ["__builtin_expect", "__devm_add_action_or_reset", "register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_unregister_sys_off_handler",
+    "callees": ["unregister_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_sys_off_handler",
+    "callees": ["__builtin_expect", "atomic_notifier_chain_unregister", "blocking_notifier_chain_unregister", "free_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_sys_off_handler",
+    "callees": ["__builtin_expect", "alloc_sys_off_handler", "atomic_notifier_chain_register", "atomic_notifier_chain_register_unique_prio", "blocking_notifier_chain_register", "blocking_notifier_chain_register_unique_prio", "free_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sys_off_handler",
+    "callees": ["free_sys_off_handler.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_sys_off_handler",
+    "callees": ["kzalloc"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "sys_off_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_halt",
+    "callees": ["_printk", "kernel_shutdown_prepare", "kmsg_dump", "machine_halt", "migrate_to_reboot_cpu", "syscore_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_shutdown_prepare",
+    "callees": ["__usermodehelper_disable", "blocking_notifier_call_chain", "device_shutdown"],
+    "global_reads": [],
+    "global_writes": ["system_state"]
+  },
+  {
+    "name": "kernel_restart",
+    "callees": ["_printk", "blocking_notifier_call_chain", "kernel_restart_prepare", "kmsg_dump", "machine_restart", "migrate_to_reboot_cpu", "syscore_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "migrate_to_reboot_cpu",
+    "callees": ["cpu_hotplug_disable", "cpu_online", "find_first_bit", "set_cpus_allowed_ptr"],
+    "global_reads": ["reboot_cpu"],
+    "global_writes": []
+  },
+  {
+    "name": "do_kernel_restart",
+    "callees": ["atomic_notifier_call_chain"],
+    "global_reads": ["reboot_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_restart_handler",
+    "callees": ["atomic_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_restart_handler",
+    "callees": ["atomic_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_register_reboot_notifier",
+    "callees": ["__devres_alloc_node", "blocking_notifier_chain_register", "devres_add", "devres_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_unregister_reboot_notifier",
+    "callees": ["__builtin_expect", "blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_reboot_notifier",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_reboot_notifier",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_restart_prepare",
+    "callees": ["__usermodehelper_disable", "blocking_notifier_call_chain", "device_shutdown"],
+    "global_reads": [],
+    "global_writes": ["system_state"]
+  },
+  {
+    "name": "emergency_restart",
+    "callees": ["kmsg_dump", "machine_emergency_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

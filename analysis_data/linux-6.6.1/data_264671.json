@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "option_ms_init",
+    "callees": ["option_inquiry", "option_rezero"],
+    "global_reads": ["option_zero_cd"],
+    "global_writes": []
+  },
+  {
+    "name": "option_inquiry",
+    "callees": ["kfree", "kzalloc", "memcmp", "usb_stor_bulk_transfer_buf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

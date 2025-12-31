@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_remove_element",
+    "callees": ["acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_sort_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_TSS",
+    "callees": ["acpi_ns_check_sorted_list.part.0", "acpi_ns_get_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_PSS",
+    "callees": ["acpi_ns_check_sorted_list.part.0", "acpi_ut_predefined_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_PRT",
+    "callees": ["acpi_ut_predefined_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_HID",
+    "callees": ["acpi_ut_create_string_object", "acpi_ut_predefined_warning", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_CST",
+    "callees": ["acpi_ns_check_sorted_list.part.0", "acpi_ns_remove_element", "acpi_ut_predefined_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_CID",
+    "callees": ["acpi_ns_repair_HID"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_FDE",
+    "callees": ["acpi_ut_create_buffer_object", "acpi_ut_predefined_warning", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_repair_ALR",
+    "callees": ["acpi_ns_check_sorted_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_complex_repairs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

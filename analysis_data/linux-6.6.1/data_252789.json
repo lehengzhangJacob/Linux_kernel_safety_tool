@@ -1,0 +1,164 @@
+[
+  {
+    "name": "run_crash_ipi_callback.part.0",
+    "callees": ["crash_nmi_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "run_crash_ipi_callback.part.0",
+    "callees": ["crash_nmi_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_machine_power_off.part.0",
+    "callees": ["do_kernel_power_off"],
+    "global_reads": ["reboot_force"],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_panic_self_stop",
+    "callees": ["run_crash_ipi_callback.part.0"],
+    "global_reads": ["crash_ipi_issued"],
+    "global_writes": []
+  },
+  {
+    "name": "run_crash_ipi_callback",
+    "callees": ["run_crash_ipi_callback.part.0"],
+    "global_reads": ["crash_ipi_issued"],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_shootdown_cpus",
+    "callees": ["__builtin_expect", "__const_udelay", "__register_nmi_handler", "apic_send_IPI_allbutself"],
+    "global_reads": ["crash_ipi_issued"],
+    "global_writes": ["crashing_cpu", "shootdown_callback"]
+  },
+  {
+    "name": "crash_nmi_callback",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["crashing_cpu", "shootdown_callback"],
+    "global_writes": []
+  },
+  {
+    "name": "machine_crash_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "machine_halt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "machine_restart",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "machine_emergency_restart",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["reboot_emergency"]
+  },
+  {
+    "name": "machine_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "machine_power_off",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_machine_power_off",
+    "callees": ["kernel_can_power_off", "native_machine_power_off.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_machine_halt",
+    "callees": ["stop_this_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_machine_restart",
+    "callees": ["_printk"],
+    "global_reads": ["reboot_force"],
+    "global_writes": ["reboot_emergency"]
+  },
+  {
+    "name": "native_machine_shutdown",
+    "callees": ["clear_IO_APIC", "hpet_disable", "lapic_shutdown", "restore_boot_irq_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_machine_emergency_restart",
+    "callees": ["__const_udelay", "acpi_reboot", "efi_reboot", "idt_invalidate", "kb_wait", "mach_reboot_fixups", "machine_real_restart"],
+    "global_reads": ["page_offset_base", "port_cf9_safe", "reboot_mode", "reboot_type"],
+    "global_writes": ["port_cf9_safe", "reboot_type"]
+  },
+  {
+    "name": "mach_reboot_fixups",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kb_wait",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reboot_init",
+    "callees": ["dmi_check_system", "efi_reboot_required", "efi_runtime_disabled"],
+    "global_reads": ["reboot_default"],
+    "global_writes": ["reboot_type"]
+  },
+  {
+    "name": "set_kbd_reboot",
+    "callees": ["_printk"],
+    "global_reads": ["reboot_type"],
+    "global_writes": ["reboot_type"]
+  },
+  {
+    "name": "set_pci_reboot",
+    "callees": ["_printk"],
+    "global_reads": ["reboot_type"],
+    "global_writes": ["reboot_type"]
+  },
+  {
+    "name": "machine_real_restart",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "load_trampoline_pgtable", "rtc_cmos_write"],
+    "global_reads": ["real_mode_header"],
+    "global_writes": []
+  },
+  {
+    "name": "set_efi_reboot",
+    "callees": ["_printk", "efi_runtime_disabled"],
+    "global_reads": ["reboot_type"],
+    "global_writes": ["reboot_type"]
+  },
+  {
+    "name": "set_bios_reboot",
+    "callees": ["_printk"],
+    "global_reads": ["reboot_type"],
+    "global_writes": ["reboot_type"]
+  },
+  {
+    "name": "set_acpi_reboot",
+    "callees": ["_printk"],
+    "global_reads": ["reboot_type"],
+    "global_writes": ["reboot_type"]
+  }
+]

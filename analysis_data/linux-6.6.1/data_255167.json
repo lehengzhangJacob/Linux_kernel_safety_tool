@@ -1,0 +1,98 @@
+[
+  {
+    "name": "v9fs_sysfs_cleanup",
+    "callees": ["kobject_put", "sysfs_remove_group"],
+    "global_reads": ["v9fs_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_destroy_inode_cache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["v9fs_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "exit_v9fs",
+    "callees": ["unregister_filesystem", "v9fs_destroy_inode_cache", "v9fs_sysfs_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_v9fs",
+    "callees": ["_printk", "register_filesystem", "v9fs_destroy_inode_cache", "v9fs_init_inode_cache", "v9fs_sysfs_cleanup", "v9fs_sysfs_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_destroy_inode_cache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["v9fs_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_init_inode_cache",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["v9fs_inode_cache"]
+  },
+  {
+    "name": "v9fs_inode_init_once",
+    "callees": ["inode_init_once", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_sysfs_cleanup",
+    "callees": ["kobject_put", "sysfs_remove_group"],
+    "global_reads": ["v9fs_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_sysfs_init",
+    "callees": ["kobject_create_and_add", "kobject_put", "sysfs_create_group"],
+    "global_reads": ["fs_kobj", "v9fs_kobj"],
+    "global_writes": ["v9fs_kobj"]
+  },
+  {
+    "name": "v9fs_session_begin_cancel",
+    "callees": ["p9_client_begin_disconnect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_session_cancel",
+    "callees": ["p9_client_disconnect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_session_close",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kfree", "p9_client_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_session_init",
+    "callees": ["__builtin_expect", "__init_rwsem", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kstrdup", "p9_client_attach", "p9_client_create", "p9_client_destroy", "p9_is_proto_dotl", "p9_is_proto_dotu", "v9fs_parse_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_parse_options",
+    "callees": ["_printk", "get_cache_mode", "kfree", "kstrdup", "kstrtouint", "match_int", "match_strdup", "match_token", "strcmp", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_show_options",
+    "callees": ["p9_show_client_options", "seq_printf", "seq_puts", "strcmp"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "get_cache_mode",
+    "callees": ["_printk", "kstrtoint", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

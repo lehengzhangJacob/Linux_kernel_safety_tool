@@ -1,0 +1,194 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_map_pxm_to_node.part.0",
+    "callees": ["__acpi_map_pxm_to_node", "__builtin_constant_p", "find_first_zero_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_node",
+    "callees": ["acpi_get_pxm"],
+    "global_reads": ["numa_off"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_pxm",
+    "callees": ["acpi_evaluate_integer", "acpi_get_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_numa_init",
+    "callees": ["acpi_table_parse", "acpi_table_parse_cedt", "acpi_table_parse_entries", "acpi_table_parse_entries_array", "memset"],
+    "global_reads": ["acpi_disabled", "parsed_numa_memblks"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_srat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_srat_revision"]
+  },
+  {
+    "name": "acpi_parse_memory_affinity",
+    "callees": ["acpi_numa_memory_affinity_init", "acpi_table_print_srat_entry"],
+    "global_reads": ["parsed_numa_memblks"],
+    "global_writes": ["parsed_numa_memblks"]
+  },
+  {
+    "name": "acpi_parse_gi_affinity",
+    "callees": ["__builtin_constant_p", "_printk", "acpi_map_pxm_to_node", "acpi_table_print_srat_entry", "node_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_gicc_affinity",
+    "callees": ["acpi_table_print_srat_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_processor_affinity",
+    "callees": ["acpi_numa_processor_affinity_init", "acpi_table_print_srat_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_x2apic_affinity",
+    "callees": ["acpi_numa_x2apic_affinity_init", "acpi_table_print_srat_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_numa_x2apic_affinity_init",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_slit",
+    "callees": ["_printk", "acpi_numa_slit_init", "slit_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_cfmws",
+    "callees": ["__builtin_constant_p", "_printk", "acpi_map_pxm_to_node", "numa_add_memblk", "phys_to_target_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_numa_memory_affinity_init",
+    "callees": ["__builtin_constant_p", "_printk", "acpi_map_pxm_to_node", "numa_add_memblk"],
+    "global_reads": ["acpi_numa", "acpi_srat_revision", "max_possible_pfn"],
+    "global_writes": ["acpi_numa", "max_possible_pfn"]
+  },
+  {
+    "name": "acpi_numa_slit_init",
+    "callees": ["numa_set_distance"],
+    "global_reads": ["numa_off"],
+    "global_writes": []
+  },
+  {
+    "name": "srat_disabled",
+    "callees": [],
+    "global_reads": ["acpi_numa"],
+    "global_writes": []
+  },
+  {
+    "name": "bad_srat",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["acpi_numa"]
+  },
+  {
+    "name": "slit_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_map_pxm_to_node",
+    "callees": ["__nodes_weight", "acpi_map_pxm_to_node.part.0"],
+    "global_reads": ["numa_off"],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_map_pxm_to_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_to_pxm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pxm_to_node",
+    "callees": [],
+    "global_reads": ["numa_off"],
+    "global_writes": []
+  },
+  {
+    "name": "disable_srat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_numa"]
+  },
+  {
+    "name": "phys_to_target_node",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  }
+]

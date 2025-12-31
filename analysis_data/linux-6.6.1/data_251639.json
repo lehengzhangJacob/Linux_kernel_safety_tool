@@ -1,0 +1,86 @@
+[
+  {
+    "name": "pci_mmcfg_arch_unmap",
+    "callees": ["iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_free",
+    "callees": ["pci_mmcfg_arch_unmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mcfg_ioremap",
+    "callees": ["ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_map",
+    "callees": ["_printk", "mcfg_ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_unmap",
+    "callees": ["iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_base",
+    "callees": ["pci_mmconfig_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_unmap",
+    "callees": ["iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_map",
+    "callees": ["_printk", "mcfg_ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mcfg_ioremap",
+    "callees": ["ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_write",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "pci_dev_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_read",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "pci_dev_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_base",
+    "callees": ["pci_mmconfig_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_free",
+    "callees": ["pci_mmcfg_arch_unmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmcfg_arch_init",
+    "callees": ["pci_mmcfg_arch_free", "pci_mmcfg_arch_map"],
+    "global_reads": [],
+    "global_writes": ["raw_pci_ext_ops"]
+  }
+]

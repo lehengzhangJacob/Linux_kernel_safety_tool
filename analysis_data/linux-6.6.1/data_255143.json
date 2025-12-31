@@ -1,0 +1,218 @@
+[
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_load.part.0",
+    "callees": ["__request_module", "capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_hwtstamp_set_lower.part.0",
+    "callees": ["generic_hwtstamp_ioctl_lower"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_hwtstamp_get_lower.part.0",
+    "callees": ["generic_hwtstamp_ioctl_lower"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_get_hwtstamp_phylib.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_ioctl",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "capable", "dev_ethtool", "dev_get_mac_address", "dev_ifsioc", "dev_ifsioc_locked", "dev_load", "netdev_get_name", "ns_capable", "rtnl_lock", "rtnl_unlock", "strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_load",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__request_module", "capable", "dev_get_by_name_rcu", "dev_load.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_ifsioc",
+    "callees": ["__dev_get_by_name", "br_ioctl_call", "call_netdevice_notifiers", "dev_change_flags", "dev_change_name", "dev_change_tx_queue_len", "dev_eth_ioctl", "dev_get_hwtstamp", "dev_mc_add_global", "dev_mc_del_global", "dev_set_hwtstamp", "dev_set_mac_address_user", "dev_set_mtu", "dev_setifmap", "dev_siocbond", "dev_siocdevprivate", "dev_siocwandev", "memcpy", "netif_device_present", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_siocwandev",
+    "callees": ["netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_siocdevprivate",
+    "callees": ["netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_siocbond",
+    "callees": ["netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_hwtstamp_set_lower",
+    "callees": ["dev_set_hwtstamp_phylib", "generic_hwtstamp_set_lower.part.0", "netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_hwtstamp_get_lower",
+    "callees": ["dev_get_hwtstamp_phylib", "generic_hwtstamp_get_lower.part.0", "netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_hwtstamp_ioctl_lower",
+    "callees": ["dev_eth_ioctl", "strscpy_pad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_set_hwtstamp",
+    "callees": ["_copy_from_user", "_copy_to_user", "dev_eth_ioctl", "dev_set_hwtstamp_phylib", "net_hwtstamp_validate", "netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_set_hwtstamp_phylib",
+    "callees": ["netdev_err", "phy_hwtstamp_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_get_hwtstamp",
+    "callees": ["_copy_to_user", "dev_eth_ioctl", "dev_get_hwtstamp_phylib", "netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_get_hwtstamp_phylib",
+    "callees": ["dev_get_hwtstamp_phylib.part.0", "phy_hwtstamp_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_eth_ioctl",
+    "callees": ["netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_ifsioc_locked",
+    "callees": ["dev_get_by_name_rcu", "dev_get_flags", "dev_getifmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_setifmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_getifmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_ifconf",
+    "callees": ["__builtin_expect", "_copy_from_user", "inet_gifconf", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_hwtstamp_set",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done", "phylib_stubs"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "phy_hwtstamp_get",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done", "phylib_stubs"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

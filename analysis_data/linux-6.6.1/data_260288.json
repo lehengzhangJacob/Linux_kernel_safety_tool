@@ -1,0 +1,188 @@
+[
+  {
+    "name": "scsi_host_set_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_get",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_queue_work.part.0",
+    "callees": ["_dev_printk", "dump_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_busy_iter",
+    "callees": ["blk_mq_tagset_busy_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_host_busy_iter_fn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_complete_all_commands",
+    "callees": ["blk_mq_tagset_busy_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "complete_all_cmds_iter",
+    "callees": ["scsi_dma_unmap", "scsi_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_flush_work",
+    "callees": ["__builtin_constant_p", "__flush_workqueue", "__warn_flushing_systemwide_wq", "_dev_printk", "dump_stack"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_queue_work",
+    "callees": ["__builtin_expect", "queue_work_on", "scsi_queue_work.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_is_host_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_exit_hosts",
+    "callees": ["class_unregister", "ida_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_init_hosts",
+    "callees": ["class_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_put",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_busy",
+    "callees": ["blk_mq_tagset_busy_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_check_in_flight",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_get",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_lookup",
+    "callees": ["class_find_device", "put_device", "scsi_host_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_host_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_alloc",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__mutex_init", "_dev_printk", "alloc_workqueue", "dev_set_name", "device_initialize", "ida_alloc_range", "kfree", "kthread_create_on_node", "kzalloc", "put_device", "scsi_enable_async_suspend", "scsi_proc_hostdir_add", "wake_up_process"],
+    "global_reads": ["shost_eh_deadline"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_dev_release",
+    "callees": ["destroy_workqueue", "ida_free", "kfree", "kthread_stop", "put_device", "rcu_barrier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_add_host_with_dma",
+    "callees": ["__init_swait_queue_head", "__pm_runtime_disable", "__pm_runtime_set_status", "_dev_printk", "alloc_workqueue", "device_add", "device_del", "dma_max_mapping_size", "get_device", "kref_put", "kzalloc", "pm_runtime_enable", "pm_runtime_put_noidle", "put_device", "scsi_autopm_put_host", "scsi_host_set_state", "scsi_init_sense_cache", "scsi_mq_setup_tags", "scsi_proc_host_add", "scsi_sysfs_add_host", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_remove_host",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__flush_workqueue", "__warn_flushing_systemwide_wq", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_del", "device_unregister", "kref_put", "mutex_lock", "mutex_unlock", "scsi_autopm_get_host", "scsi_forget_host", "scsi_proc_host_rm", "scsi_proc_hostdir_rm", "transport_destroy_device", "transport_remove_device", "wait_for_completion"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_set_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_cls_release",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_runtime_put_noidle",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "ieee80211_compute_tkip_p1k",
+    "callees": ["tkip_mixing_phase1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tkip_decrypt_data",
+    "callees": ["drv_update_tkip_key", "ieee80211_wep_decrypt_data", "tkip_mixing_phase1", "tkip_mixing_phase2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tkip_encrypt_data",
+    "callees": ["ieee80211_get_tkip_p2k", "ieee80211_wep_encrypt_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_tkip_p2k",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ieee80211_compute_tkip_p1k", "ieee80211_hdrlen", "tkip_mixing_phase2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_tkip_rx_p1k",
+    "callees": ["memcpy", "tkip_mixing_phase1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_tkip_p1k_iv",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "ieee80211_compute_tkip_p1k", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_compute_tkip_p1k",
+    "callees": ["tkip_mixing_phase1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tkip_add_iv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tkip_mixing_phase2",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tkip_mixing_phase1",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_update_tkip_key",
+    "callees": ["__builtin_expect", "__warn_printk", "trace_drv_return_void", "trace_drv_update_tkip_key"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "trace_drv_update_tkip_key",
+    "callees": ["__SCT__tp_func_drv_update_tkip_key", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_void",
+    "callees": ["__SCT__tp_func_drv_return_void", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

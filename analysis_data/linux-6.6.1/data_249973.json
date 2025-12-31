@@ -1,0 +1,98 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_clear_bad",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pte_offset_map_lock",
+    "callees": ["__builtin_expect", "__pte_offset_map", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "pmd_pfn"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pte_offset_map_nolock",
+    "callees": ["__builtin_expect", "__pte_offset_map", "pmd_pfn"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__pte_offset_map",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "pmd_clear_bad", "pte_offset_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptep_clear_flush",
+    "callees": ["flush_tlb_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_clear_bad",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pud_clear_bad",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_clear_bad",
+    "callees": ["_printk", "native_set_p4d"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pgd_clear_bad",
+    "callees": ["_printk", "pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_irc_fini",
+    "callees": ["kfree", "nf_conntrack_helpers_unregister"],
+    "global_reads": ["irc_buffer", "ports_c"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_irc_init",
+    "callees": ["__builtin_return_address", "_printk", "kfree", "kmalloc_trace", "nf_conntrack_helpers_register", "nf_ct_helper_init"],
+    "global_reads": ["dcc_timeout", "irc_buffer", "max_dcc_channels", "ports_c"],
+    "global_writes": ["irc_buffer", "ports_c"]
+  },
+  {
+    "name": "help",
+    "callees": ["__builtin_bswap16", "_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "memcmp", "net_ratelimit", "nf_ct_expect_alloc", "nf_ct_expect_init", "nf_ct_expect_put", "nf_ct_expect_related_report", "nf_ct_helper_log", "parse_dcc", "skb_header_pointer", "strlen", "strncasecmp"],
+    "global_reads": ["irc_buffer"],
+    "global_writes": []
+  },
+  {
+    "name": "parse_dcc",
+    "callees": ["__builtin_bswap32", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

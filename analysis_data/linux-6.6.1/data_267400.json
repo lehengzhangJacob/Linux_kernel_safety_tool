@@ -1,0 +1,290 @@
+[
+  {
+    "name": "drm_kms_helper_connector_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_connector_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_connector_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_connector_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_encoder_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_enable",
+    "callees": ["drm_kms_helper_poll_enable.part.0"],
+    "global_reads": ["drm_kms_helper_poll"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_enable",
+    "callees": ["drm_kms_helper_poll_enable.part.0"],
+    "global_reads": ["drm_kms_helper_poll"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_disable",
+    "callees": ["cancel_delayed_work_sync", "drm_kms_helper_disable_hpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reschedule_output_poll_work",
+    "callees": ["schedule_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_fini.part.0",
+    "callees": ["drm_kms_helper_poll_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_enable.part.0",
+    "callees": ["drm_kms_helper_enable_hpd", "reschedule_output_poll_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_helper_tv_get_modes",
+    "callees": ["drm_mode_analog_ntsc_480i", "drm_mode_analog_pal_576i", "drm_mode_probed_add", "drm_object_property_get_default_value"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_helper_get_modes",
+    "callees": ["drm_edid_connector_add_modes", "drm_edid_connector_update", "drm_edid_free", "drm_edid_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_helper_get_modes_fixed",
+    "callees": ["_dev_err", "drm_mode_duplicate", "drm_mode_probed_add", "drm_mode_set_name", "drm_mode_vrefresh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_helper_get_modes_from_ddc",
+    "callees": ["drm_add_edid_modes", "drm_connector_update_edid_property", "drm_get_edid", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_helper_mode_valid_fixed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_helper_hpd_irq_event",
+    "callees": ["check_connector_changed", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_kms_helper_connector_hotplug_event", "drm_kms_helper_hotplug_event", "drm_mode_object_get", "drm_mode_object_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_helper_hpd_irq_event",
+    "callees": ["__drm_dev_dbg", "check_connector_changed", "drm_kms_helper_connector_hotplug_event", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_connector_changed",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "drm_get_connector_status_name", "drm_helper_probe_detect_ctx", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_fini",
+    "callees": ["drm_kms_helper_poll_fini.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_init",
+    "callees": ["drm_kms_helper_poll_enable", "init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_disable",
+    "callees": ["cancel_delayed_work_sync", "drm_kms_helper_disable_hpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_is_poll_worker",
+    "callees": ["current_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "output_poll_execute",
+    "callees": ["___drm_dbg", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_get_connector_status_name", "drm_helper_probe_detect_ctx", "drm_kms_helper_disable_hpd", "drm_kms_helper_hotplug_event", "mutex_trylock", "mutex_unlock", "schedule_delayed_work"],
+    "global_reads": ["drm_kms_helper_poll"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_connector_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_connector_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_hotplug_event",
+    "callees": ["drm_client_dev_hotplug", "drm_sysfs_hotplug_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_helper_probe_single_connector_modes",
+    "callees": ["___drm_dbg", "__builtin_expect", "__drm_helper_update_and_validate", "__warn_printk", "drm_add_modes_noedid", "drm_connector_update_edid_property", "drm_get_connector_status_name", "drm_helper_probe_add_cmdline_mode", "drm_helper_probe_detect", "drm_helper_probe_get_modes", "drm_kms_helper_poll_enable", "drm_mode_debug_printmodeline", "drm_mode_prune_invalid", "drm_mode_set_crtcinfo", "drm_mode_sort", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock", "drm_set_preferred_mode", "mod_delayed_work_on", "mutex_is_locked"],
+    "global_reads": ["system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_helper_update_and_validate",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "drm_connector_list_update", "drm_mode_validate_driver", "drm_mode_validate_flag", "drm_mode_validate_pipeline", "drm_mode_validate_size", "drm_mode_validate_ycbcr420"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_helper_probe_get_modes",
+    "callees": ["drm_edid_override_connector_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_helper_probe_detect",
+    "callees": ["drm_helper_probe_detect_ctx", "drm_modeset_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_helper_probe_detect_ctx",
+    "callees": ["__builtin_expect", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_reschedule",
+    "callees": ["reschedule_output_poll_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_poll_enable",
+    "callees": ["drm_kms_helper_poll_enable.part.0"],
+    "global_reads": ["drm_kms_helper_poll"],
+    "global_writes": []
+  },
+  {
+    "name": "reschedule_output_poll_work",
+    "callees": ["schedule_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_enable_hpd",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_kms_helper_disable_hpd",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_encoder_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_helper_probe_add_cmdline_mode",
+    "callees": ["drm_mode_create_from_cmdline_mode", "drm_mode_probed_add", "drm_mode_vrefresh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_validate_pipeline",
+    "callees": ["drm_bridge_chain_mode_valid", "drm_connector_mode_valid", "drm_crtc_mode_valid", "drm_encoder_mode_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_analog_pal_576i",
+    "callees": ["drm_analog_tv_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_analog_ntsc_480i",
+    "callees": ["drm_analog_tv_mode"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

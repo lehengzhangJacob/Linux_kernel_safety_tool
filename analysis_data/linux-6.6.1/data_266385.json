@@ -1,0 +1,194 @@
+[
+  {
+    "name": "rq_end_stats.part.0",
+    "callees": ["dm_stats_account_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rq_end_stats.part.0",
+    "callees": ["dm_stats_account_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rq_end_stats.part.0",
+    "callees": ["dm_stats_account_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_softirq_done.part.0",
+    "callees": ["__builtin_expect", "blk_mq_end_request", "dm_put", "rq_end_stats.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rq_end_stats.part.0",
+    "callees": ["dm_stats_account_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_cleanup_mapped_device",
+    "callees": ["blk_mq_free_tag_set", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_init_request_queue",
+    "callees": ["__dm_get_module_param", "blk_mq_alloc_tag_set", "blk_mq_free_tag_set", "blk_mq_init_allocated_queue", "dm_table_get_immutable_target", "kfree", "kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_queue_rq",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "dm_get_live_table", "dm_put", "dm_put_live_table", "dm_start_request", "dm_table_find_target", "init_tio", "map_request", "rq_end_stats.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_init_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_start_request",
+    "callees": ["__builtin_expect", "blk_mq_start_request", "dm_get", "dm_stats_account_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_rq_based_seq_io_merge_deadline_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_rq_based_seq_io_merge_deadline_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_request",
+    "callees": ["__builtin_unreachable", "_printk", "blk_insert_cloned_request", "blk_mq_cleanup_rq", "blk_mq_complete_request", "blk_rq_unprep_clone", "dm_disk", "dm_requeue_original_request", "setup_clone", "trace_block_rq_remap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_tio",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rq_bio_constructor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "end_clone_request",
+    "callees": ["blk_mq_complete_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_softirq_done",
+    "callees": ["dm_done", "dm_softirq_done.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_done",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "disable_discard", "disable_write_zeroes", "dm_end_request", "dm_requeue_original_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_requeue_original_request",
+    "callees": ["__builtin_expect", "blk_rq_unprep_clone", "dm_mq_delay_requeue_request", "dm_put", "rq_end_stats.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_delay_requeue_request",
+    "callees": ["blk_mq_delay_kick_requeue_list", "blk_mq_requeue_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mq_kick_requeue_list",
+    "callees": ["blk_mq_delay_kick_requeue_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_end_request",
+    "callees": ["__builtin_expect", "blk_mq_end_request", "blk_rq_unprep_clone", "dm_put", "rq_end_stats.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "end_clone_bio",
+    "callees": ["bio_put", "blk_update_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_stop_queue",
+    "callees": ["blk_mq_quiesce_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_start_queue",
+    "callees": ["blk_mq_kick_requeue_list", "blk_mq_unquiesce_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_request_based",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_get_reserved_rq_based_ios",
+    "callees": ["__dm_get_module_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_block_rq_remap",
+    "callees": ["__SCT__tp_func_block_rq_remap", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_cleanup_rq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

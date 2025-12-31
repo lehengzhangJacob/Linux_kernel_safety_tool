@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_dump_regs",
+    "callees": ["___drm_dbg", "ivch_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_mode_set",
+    "callees": ["ivch_reset", "ivch_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_get_hw_state",
+    "callees": ["ivch_read", "ivch_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_dpms",
+    "callees": ["__const_udelay", "ivch_read", "ivch_reset", "ivch_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_reset",
+    "callees": ["___drm_dbg", "ivch_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_detect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_init",
+    "callees": ["___drm_dbg", "ivch_dump_regs", "ivch_read", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivch_read",
+    "callees": ["___drm_dbg", "i2c_transfer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

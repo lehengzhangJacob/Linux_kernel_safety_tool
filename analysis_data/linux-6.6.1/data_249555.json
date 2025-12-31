@@ -1,0 +1,20 @@
+[
+  {
+    "name": "hchacha_block_generic",
+    "callees": ["chacha_permute", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chacha_block_generic",
+    "callees": ["chacha_permute", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chacha_permute",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

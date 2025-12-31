@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_show_fdinfo",
+    "callees": ["show_fdinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_fdinfo",
+    "callees": ["igrab", "inotify_mark_user_mask", "iput", "seq_printf", "seq_putc", "show_mark_fhandle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_mark_fhandle",
+    "callees": ["__builtin_expect", "__warn_printk", "exportfs_encode_inode_fh", "seq_printf"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "fsnotify_group_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_group_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

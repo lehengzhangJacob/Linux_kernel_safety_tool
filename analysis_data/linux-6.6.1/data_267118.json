@@ -1,0 +1,92 @@
+[
+  {
+    "name": "crtc_crc_cleanup",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_add_crc_entry",
+    "callees": ["__drm_err", "__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_crtc_crc_add",
+    "callees": ["debugfs_create_dir", "debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_crc_poll",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_crc_read",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "_copy_to_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "copy_overflow", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_crc_release",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "crtc_crc_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_crc_open",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "crtc_crc_cleanup", "drm_drv_uses_atomic_modeset", "drm_modeset_lock_single_interruptible", "drm_modeset_unlock", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_crc_cleanup",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc_control_write",
+    "callees": ["___drm_dbg", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kfree", "memdup_user_nul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc_control_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc_control_show",
+    "callees": ["seq_printf", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

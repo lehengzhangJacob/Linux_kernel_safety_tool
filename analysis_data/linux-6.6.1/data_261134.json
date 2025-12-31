@@ -1,0 +1,134 @@
+[
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_print_result",
+    "callees": ["__builtin_expect", "_dev_printk", "kfree", "scnprintf", "scsi_hostbyte_string", "scsi_log_reserve_buffer", "scsi_mlreturn_string", "sdev_format_header"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_print_sense",
+    "callees": ["scsi_log_print_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_print_sense",
+    "callees": ["scsi_log_print_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_print_sense_hdr",
+    "callees": ["scsi_log_print_sense_hdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_print_sense",
+    "callees": ["scsi_log_dump_sense", "scsi_log_print_sense_hdr", "scsi_normalize_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_print_sense_hdr",
+    "callees": ["_dev_printk", "kfree", "scsi_format_extd_sense", "scsi_format_sense_hdr", "scsi_log_reserve_buffer", "sdev_format_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_dump_sense",
+    "callees": ["_dev_printk", "hex_dump_to_buffer", "kfree", "scsi_log_reserve_buffer", "sdev_format_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_print_command",
+    "callees": ["__builtin_expect", "_dev_printk", "hex_dump_to_buffer", "kfree", "scnprintf", "scsi_format_opcode_name", "scsi_log_reserve_buffer", "sdev_format_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_format_command",
+    "callees": ["scnprintf", "scsi_format_opcode_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_format_opcode_name",
+    "callees": ["__builtin_expect", "scnprintf", "scsi_opcode_sa_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scmd_printk",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_dev_printk", "kfree", "scsi_log_reserve_buffer", "sdev_format_header", "vscnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_prefix_printk",
+    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "_dev_printk", "kfree", "scnprintf", "scsi_log_reserve_buffer", "vscnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_format_header",
+    "callees": ["__builtin_expect", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_log_reserve_buffer",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

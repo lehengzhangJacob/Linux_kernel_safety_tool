@@ -1,0 +1,1046 @@
+[
+  {
+    "name": "forward_timer_base",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "forward_timer_base",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "forward_timer_base",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "forward_timer_base",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "internal_add_timer",
+    "callees": ["calc_wheel_index", "enqueue_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__try_to_del_timer_sync",
+    "callees": ["_raw_spin_unlock_irqrestore", "detach_if_pending", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timers_update_migration.part.0",
+    "callees": ["static_key_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timers_update_migration",
+    "callees": ["static_key_disable", "timers_update_migration.part.0"],
+    "global_reads": ["sysctl_timer_migration", "tick_nohz_active"],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies_up_relative",
+    "callees": ["round_jiffies_common"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies_relative",
+    "callees": ["round_jiffies_common"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_add_timer",
+    "callees": ["calc_wheel_index", "enqueue_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__timer_delete",
+    "callees": ["_raw_spin_unlock_irqrestore", "detach_if_pending", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_init",
+    "callees": ["__SCT__tp_func_timer_init", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timer_key",
+    "callees": ["__builtin_expect", "trace_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_cancel",
+    "callees": ["__SCT__tp_func_timer_cancel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_timer",
+    "callees": ["trace_timer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_cancel",
+    "callees": ["__SCT__tp_func_timer_cancel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_timer",
+    "callees": ["trace_timer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timers_update_migration.part.0",
+    "callees": ["static_key_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usleep_range_state",
+    "callees": ["ktime_get", "schedule_hrtimeout_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msleep_interruptible",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "jiffies_to_msecs", "schedule_timeout", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msleep",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timers",
+    "callees": ["init_timer_cpus", "open_softirq", "posix_cputimers_init_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timer_cpus",
+    "callees": ["find_next_bit", "init_timer_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timer_cpu",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "timers_dead_cpu",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "forward_timer_base", "migrate_timer_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timers_prepare_cpu",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "migrate_timer_list",
+    "callees": ["detach_timer", "internal_add_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "schedule_timeout_idle",
+    "callees": ["schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "schedule_timeout_uninterruptible",
+    "callees": ["schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "schedule_timeout_killable",
+    "callees": ["schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "schedule_timeout_interruptible",
+    "callees": ["schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "schedule_timeout",
+    "callees": ["__mod_timer", "__timer_delete_sync", "_printk", "dump_stack", "init_timer_key", "schedule"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "process_timeout",
+    "callees": ["wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_process_times",
+    "callees": ["account_process_tick", "irq_work_tick", "rcu_sched_clock_irq", "run_local_timers", "run_posix_cpu_timers", "scheduler_tick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "run_local_timers",
+    "callees": ["hrtimer_run_queues", "raise_softirq"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "run_timer_softirq",
+    "callees": ["__run_timers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__run_timers",
+    "callees": ["__builtin_expect", "__next_timer_interrupt", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "collect_expired_timers", "expire_timers"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "timer_clear_idle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_next_timer_interrupt",
+    "callees": ["__builtin_expect", "__next_timer_interrupt", "_raw_spin_lock", "_raw_spin_unlock", "cmp_next_hrtimer_event", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmp_next_hrtimer_event",
+    "callees": ["hrtimer_get_next_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__next_timer_interrupt",
+    "callees": ["next_pending_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_pending_bucket",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "collect_expired_timers",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expire_timers",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "call_timer_fn", "detach_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_timer_fn",
+    "callees": ["__builtin_expect", "__warn_printk", "trace_timer_expire_entry", "trace_timer_expire_exit"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "timer_shutdown_sync",
+    "callees": ["__timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_delete_sync",
+    "callees": ["__timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__timer_delete_sync",
+    "callees": ["__builtin_expect", "__try_to_del_timer_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_to_del_timer_sync",
+    "callees": ["__try_to_del_timer_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__try_to_del_timer_sync",
+    "callees": ["_raw_spin_unlock_irqrestore", "detach_if_pending", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_shutdown",
+    "callees": ["__timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_delete",
+    "callees": ["__timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__timer_delete",
+    "callees": ["_raw_spin_unlock_irqrestore", "detach_if_pending", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_timer_on",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "forward_timer_base", "internal_add_timer", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_timer",
+    "callees": ["__builtin_expect", "__mod_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_reduce",
+    "callees": ["__mod_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_timer",
+    "callees": ["__mod_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_timer_pending",
+    "callees": ["__mod_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mod_timer",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "calc_wheel_index", "detach_if_pending", "enqueue_timer", "forward_timer_base", "get_target_base", "internal_add_timer", "lock_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_timer_base",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "get_timer_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "forward_timer_base",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "get_timer_base",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_if_pending",
+    "callees": ["__builtin_constant_p", "detach_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_timer",
+    "callees": ["trace_timer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timer_key",
+    "callees": ["__builtin_expect", "trace_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_add_timer",
+    "callees": ["calc_wheel_index", "enqueue_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enqueue_timer",
+    "callees": ["__builtin_constant_p", "trace_timer_start", "trigger_dyntick_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calc_wheel_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_up_relative",
+    "callees": ["__round_jiffies_up_relative"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_up",
+    "callees": ["round_jiffies_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies_up_relative",
+    "callees": ["round_jiffies_common"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies_up",
+    "callees": ["round_jiffies_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_relative",
+    "callees": ["__round_jiffies_relative"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies",
+    "callees": ["round_jiffies_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies_relative",
+    "callees": ["round_jiffies_common"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__round_jiffies",
+    "callees": ["round_jiffies_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_jiffies_common",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "timers_update_nohz",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_update_keys",
+    "callees": ["mutex_lock", "mutex_unlock", "static_key_enable", "timers_update_migration"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_sysctl_init",
+    "callees": ["register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_migration_handler",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_dointvec_minmax", "timers_update_migration"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timers_update_migration",
+    "callees": ["static_key_disable", "timers_update_migration.part.0"],
+    "global_reads": ["sysctl_timer_migration", "tick_nohz_active"],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_tick_stop",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_itimer_expire",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_itimer_state",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_hrtimer_class",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_hrtimer_expire_entry",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_hrtimer_start",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_hrtimer_init",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_timer_expire_entry",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_timer_start",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_timer_class",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_tick_stop",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_itimer_expire",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_itimer_state",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_hrtimer_class",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_hrtimer_expire_entry",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_hrtimer_start",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_hrtimer_init",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_timer_expire_entry",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_timer_start",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_timer_class",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_tick_stop",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_itimer_expire",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_itimer_state",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_hrtimer_class",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_hrtimer_expire_entry",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_hrtimer_start",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_hrtimer_init",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_timer_expire_entry",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_timer_start",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_flags_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_timer_class",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_tick_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_tick_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_itimer_expire",
+    "callees": ["__probestub_itimer_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_itimer_expire",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_itimer_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_itimer_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_hrtimer_cancel",
+    "callees": ["__probestub_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_hrtimer_cancel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_hrtimer_expire_exit",
+    "callees": ["__probestub_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_hrtimer_expire_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_hrtimer_expire_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_hrtimer_expire_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_hrtimer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_hrtimer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_hrtimer_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_hrtimer_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_timer_cancel",
+    "callees": ["__probestub_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_timer_cancel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_timer_expire_exit",
+    "callees": ["__probestub_timer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_timer_expire_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_timer_expire_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_timer_expire_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_timer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_timer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_timer_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_timer_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_cancel",
+    "callees": ["__SCT__tp_func_timer_cancel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_expire_exit",
+    "callees": ["__SCT__tp_func_timer_expire_exit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_expire_entry",
+    "callees": ["__SCT__tp_func_timer_expire_entry", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_start",
+    "callees": ["__SCT__tp_func_timer_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timer_init",
+    "callees": ["__SCT__tp_func_timer_init", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

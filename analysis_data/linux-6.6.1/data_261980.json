@@ -1,0 +1,674 @@
+[
+  {
+    "name": "check_set",
+    "callees": ["simple_strtoull", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_set",
+    "callees": ["simple_strtoull", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_remove_device",
+    "callees": ["__scsi_remove_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_remove_device",
+    "callees": ["__scsi_remove_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_to_shost",
+    "callees": ["scsi_is_host_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_bus_uevent.part.0",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_active_mode.part.0",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_eh_deadline.part.0",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_bus_match.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_is_sdev_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sysfs_device_initialize",
+    "callees": ["__refcount_add", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_set_name", "device_initialize", "get_device", "scsi_enable_async_suspend", "transport_setup_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sysfs_add_host",
+    "callees": ["transport_configure_device", "transport_register_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_register_interface",
+    "callees": ["class_interface_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_register_driver",
+    "callees": ["driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_remove_target",
+    "callees": ["__refcount_add", "__scsi_remove_target", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_to_shost", "scsi_target_reap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_remove_target",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_to_shost", "get_device", "put_device", "scsi_remove_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_remove_device",
+    "callees": ["__scsi_remove_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_remove_device",
+    "callees": ["blk_mq_destroy_queue", "bsg_unregister_queue", "cancel_work_sync", "device_del", "device_unregister", "kref_put", "mutex_lock", "mutex_unlock", "put_device", "scsi_device_set_state", "scsi_start_queue", "scsi_target_reap", "transport_destroy_device", "transport_remove_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sysfs_add_sdev",
+    "callees": ["__builtin_expect", "__pm_runtime_set_status", "device_add", "device_del", "pm_runtime_enable", "pm_runtime_forbid", "scsi_autopm_get_device", "scsi_autopm_get_target", "scsi_autopm_put_device", "scsi_autopm_put_target", "scsi_bsg_register_queue", "scsi_target_add", "sdev_prefix_printk", "transport_add_device", "transport_configure_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_target_add",
+    "callees": ["__pm_runtime_set_status", "_dev_err", "device_add", "pm_runtime_enable", "transport_add_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sdev_bin_attr_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sdev_attr_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_cdl_enable",
+    "callees": ["kstrtobool", "scsi_cdl_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_cdl_enable",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_queue_ramp_up_period",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_queue_ramp_up_period",
+    "callees": ["jiffies_to_msecs", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_blacklist",
+    "callees": ["scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_wwid",
+    "callees": ["scsi_vpd_lun_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_queue_depth",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_queue_depth",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_lun_change_reported",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_lun_change_reported",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_mode_parameter_change_reported",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_mode_parameter_change_reported",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_soft_threshold_reached",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_soft_threshold_reached",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_capacity_change_reported",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_capacity_change_reported",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_inquiry_change_reported",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_inquiry_change_reported",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_evt_media_change",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_evt_media_change",
+    "callees": ["__builtin_constant_p", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_modalias",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iostat_iotmo_cnt",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iostat_ioerr_cnt",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iostat_iodone_cnt",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iostat_iorequest_cnt",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iostat_counterbits",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_inquiry",
+    "callees": ["memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pg0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pgb2",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pgb1",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pgb0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pg89",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pg80",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_vpd_pg83",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memory_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_queue_type_field",
+    "callees": ["sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_queue_type_field",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_field",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_state_field",
+    "callees": ["blk_mq_run_hw_queues", "mutex_lock", "mutex_unlock", "scsi_device_set_state", "scsi_rescan_device", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_delete",
+    "callees": ["__builtin_expect", "device_remove_file", "scsi_device_get", "scsi_device_put", "scsi_remove_device", "sysfs_break_active_protection", "sysfs_unbreak_active_protection"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_rescan_field",
+    "callees": ["scsi_rescan_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_eh_timeout",
+    "callees": ["capable", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_eh_timeout",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_store_timeout",
+    "callees": ["blk_queue_rq_timeout", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_timeout",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_device_blocked",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_device_busy",
+    "callees": ["sbitmap_weight", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_cdl_supported",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_rev",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_model",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_vendor",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_scsi_level",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_show_type",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sysfs_unregister",
+    "callees": ["bus_unregister", "class_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_sysfs_register",
+    "callees": ["bus_register", "bus_unregister", "class_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_bus_uevent",
+    "callees": ["scsi_bus_uevent.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_bus_match",
+    "callees": ["scsi_bus_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_dev_release",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_put_queue", "cancel_work_sync", "kfree", "kvfree_call_rcu", "mutex_lock", "mutex_unlock", "put_device", "sbitmap_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_cls_release",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_nr_hw_queues",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_use_blk_mq",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_host_busy",
+    "callees": ["scsi_host_busy", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_proc_name",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_prot_guard_type",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_prot_capabilities",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_sg_prot_tablesize",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_sg_tablesize",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_can_queue",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_cmd_per_lun",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_unique_id",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_shost_eh_deadline",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kstrtoull", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_eh_deadline",
+    "callees": ["show_shost_eh_deadline.part.0", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_host_reset",
+    "callees": ["check_reset_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_reset_type",
+    "callees": ["sysfs_streq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_active_mode",
+    "callees": ["show_shost_active_mode.part.0", "show_shost_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_supported_mode",
+    "callees": ["show_shost_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_mode",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_shost_state",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_shost_state",
+    "callees": ["scsi_host_set_state", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_scan",
+    "callees": ["scsi_scan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_scan",
+    "callees": ["check_set", "scsi_scan_host_selected", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_set",
+    "callees": ["simple_strtoull", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_state_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_state_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_to_shost",
+    "callees": ["scsi_is_host_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sbitmap_free",
+    "callees": ["free_percpu", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

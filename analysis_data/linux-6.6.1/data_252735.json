@@ -1,0 +1,98 @@
+[
+  {
+    "name": "posix_acl_release.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release",
+    "callees": ["__refcount_sub_and_test", "posix_acl_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release",
+    "callees": ["__refcount_sub_and_test", "posix_acl_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_init_acl",
+    "callees": ["__ext4_set_acl", "posix_acl_create", "posix_acl_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_set_acl",
+    "callees": ["__builtin_expect", "__ext4_journal_start_sb", "__ext4_journal_stop", "__ext4_mark_inode_dirty", "__ext4_set_acl", "dquot_initialize", "ext4_should_retry_alloc", "ext4_xattr_set_credits", "inode_set_ctime_current", "posix_acl_update_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ext4_set_acl",
+    "callees": ["__builtin_expect", "ext4_acl_to_disk", "ext4_xattr_set_handle", "kfree", "set_cached_acl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_get_acl",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__builtin_unreachable", "__kmalloc", "ext4_acl_from_disk", "ext4_xattr_get", "kfree", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_acl_from_disk",
+    "callees": ["ext4_acl_count", "posix_acl_alloc", "posix_acl_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_acl_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release",
+    "callees": ["__refcount_sub_and_test", "posix_acl_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

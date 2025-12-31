@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_destroy_authunix",
+    "callees": ["mempool_destroy"],
+    "global_reads": ["unix_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "unx_validate",
+    "callees": ["__builtin_bswap32", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unx_refresh",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unx_marshal",
+    "callees": ["__builtin_bswap32", "xdr_reserve_space", "xdr_stream_encode_opaque"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "unx_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unx_destroy_cred",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unx_free_cred_callback",
+    "callees": ["mempool_free", "put_cred"],
+    "global_reads": ["unix_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "unx_lookup_cred",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace", "mempool_alloc", "rpc_task_gfp_mask", "rpcauth_init_cred"],
+    "global_reads": ["unix_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "unx_destroy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unx_create",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_init_authunix",
+    "callees": ["mempool_create"],
+    "global_reads": [],
+    "global_writes": ["unix_pool"]
+  },
+  {
+    "name": "xdr_stream_encode_opaque",
+    "callees": ["__builtin_expect", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

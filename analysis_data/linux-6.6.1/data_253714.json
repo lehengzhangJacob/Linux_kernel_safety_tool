@@ -1,0 +1,134 @@
+[
+  {
+    "name": "pnp_device_detach",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_detach",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_attach",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_id",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_unregister_driver",
+    "callees": ["driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_driver",
+    "callees": ["driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_bus_resume",
+    "callees": ["pnp_start_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_bus_poweroff",
+    "callees": ["__pnp_bus_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_bus_freeze",
+    "callees": ["__pnp_bus_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_bus_suspend",
+    "callees": ["__pnp_bus_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pnp_bus_suspend",
+    "callees": ["__suspend_report_result", "pnp_stop_dev"],
+    "global_reads": ["console_suspend_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_bus_match",
+    "callees": ["match_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_remove",
+    "callees": ["pnp_device_detach", "pnp_disable_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_probe",
+    "callees": ["match_device", "pnp_activate_dev", "pnp_device_attach", "pnp_device_detach", "pnp_disable_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_detach",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_device_attach",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compare_pnp_id",
+    "callees": ["compare_func", "memcmp", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compare_func",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

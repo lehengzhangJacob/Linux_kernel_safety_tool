@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_pci_device_info",
+    "callees": ["acpi_get_type", "acpi_os_read_pci_configuration", "acpi_ut_evaluate_numeric_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_process_pci_list",
+    "callees": ["acpi_hw_get_pci_device_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_build_pci_list",
+    "callees": ["acpi_get_parent", "acpi_os_allocate", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_derive_pci_id",
+    "callees": ["acpi_hw_build_pci_list", "acpi_hw_process_pci_list", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

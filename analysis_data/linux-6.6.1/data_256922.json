@@ -1,0 +1,128 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_selftest.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_selftest_get_strings",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_selftest_get_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_selftest",
+    "callees": ["memset", "net_selftest.part.0", "netdev_err"],
+    "global_reads": [],
+    "global_writes": ["net_test_next_id"]
+  },
+  {
+    "name": "net_test_phy_loopback_tcp",
+    "callees": ["__net_test_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_phy_loopback_udp_mtu",
+    "callees": ["__net_test_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_phy_loopback_udp",
+    "callees": ["__net_test_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_phy_loopback_disable",
+    "callees": ["phy_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_phy_loopback_enable",
+    "callees": ["phy_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_phy_phydev",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_netif_carrier",
+    "callees": ["netif_carrier_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__net_test_loopback",
+    "callees": ["__init_swait_queue_head", "dev_add_pack", "dev_direct_xmit", "dev_remove_pack", "kfree", "kzalloc", "net_test_get_skb", "wait_for_completion_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_loopback_validate",
+    "callees": ["__builtin_bswap16", "__skb_linearize", "complete", "kfree_skb_reason", "skb_unshare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_test_get_skb",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__netdev_alloc_skb", "ip_send_check", "memset", "skb_push", "skb_put", "tcp_v4_check", "udp4_hwcsum"],
+    "global_reads": ["net_test_next_id"],
+    "global_writes": ["net_test_next_id"]
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_direct_xmit",
+    "callees": ["__builtin_expect", "__dev_direct_xmit", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_linearize",
+    "callees": ["__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cloned",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

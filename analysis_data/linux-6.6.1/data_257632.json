@@ -1,0 +1,14 @@
+[
+  {
+    "name": "acpi_ut_debug_dump_buffer",
+    "callees": ["acpi_ut_dump_buffer"],
+    "global_reads": ["acpi_dbg_layer", "acpi_dbg_level"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_dump_buffer",
+    "callees": ["acpi_os_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

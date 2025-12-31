@@ -1,0 +1,548 @@
+[
+  {
+    "name": "kthread_queue_work",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kthread_insert_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_should_stop",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_should_stop",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmdrop",
+    "callees": ["__builtin_expect", "__mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_cancel_delayed_work_timer",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_insert_work_sanity_check",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_bind_mask.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "do_set_cpus_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_bind_mask",
+    "callees": ["__kthread_bind_mask.part.0", "wait_task_inactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_associate_blkcg.part.0",
+    "callees": ["__builtin_expect", "css_get", "css_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_bind_mask.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "do_set_cpus_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_blkcg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_associate_blkcg",
+    "callees": ["kthread_associate_blkcg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_unuse_mm",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "enter_lazy_tlb", "membarrier_update_current_mm", "mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_use_mm",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "membarrier_update_current_mm", "mmdrop", "switch_mm_irqs_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_destroy_worker",
+    "callees": ["__builtin_expect", "kfree", "kthread_flush_worker", "kthread_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_flush_worker",
+    "callees": ["__init_swait_queue_head", "kthread_queue_work", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_cancel_delayed_work_sync",
+    "callees": ["__kthread_cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_cancel_work_sync",
+    "callees": ["__kthread_cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_cancel_work_sync",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kthread_cancel_delayed_work_timer", "kthread_flush_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_mod_delayed_work",
+    "callees": ["__builtin_expect", "__kthread_queue_delayed_work", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kthread_cancel_delayed_work_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_cancel_delayed_work_timer",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_flush_work",
+    "callees": ["__builtin_expect", "__init_swait_queue_head", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kthread_insert_work", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_flush_work_fn",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_queue_delayed_work",
+    "callees": ["__kthread_queue_delayed_work", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_queue_delayed_work",
+    "callees": ["__builtin_expect", "add_timer", "kthread_insert_work", "kthread_insert_work_sanity_check"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_delayed_work_timer_fn",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kthread_insert_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_queue_work",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kthread_insert_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_insert_work",
+    "callees": ["kthread_insert_work.part.0", "kthread_insert_work_sanity_check", "trace_sched_kthread_work_queue_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_insert_work_sanity_check",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_create_worker_on_cpu",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__kthread_create_worker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_create_worker",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__kthread_create_worker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_create_worker",
+    "callees": ["__builtin_expect", "__kthread_bind", "__kthread_create_on_node", "kfree", "kzalloc", "memset", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_worker_fn",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "freezing", "kthread_should_stop", "schedule", "set_freezable", "trace_sched_kthread_work_execute_end", "trace_sched_kthread_work_execute_start", "try_to_freeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_init_worker",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthreadd",
+    "callees": ["__set_task_comm", "_raw_spin_lock", "_raw_spin_unlock", "create_kthread", "housekeeping_cpumask", "ignore_signals", "schedule", "set_cpus_allowed_ptr", "set_mems_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_stop",
+    "callees": ["__builtin_expect", "__refcount_add", "kthread_unpark", "put_task_struct", "set_ti_thread_flag", "trace_sched_kthread_stop", "trace_sched_kthread_stop_ret", "wait_for_completion", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_park",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "wait_for_completion", "wait_task_inactive", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_unpark",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__kthread_bind", "wake_up_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_is_per_cpu",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_set_per_cpu",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_create_on_cpu",
+    "callees": ["__builtin_expect", "__kthread_bind", "kthread_create_on_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_bind",
+    "callees": ["__kthread_bind"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_bind_mask",
+    "callees": ["__kthread_bind_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_bind",
+    "callees": ["__kthread_bind_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_bind_mask",
+    "callees": ["__kthread_bind_mask.part.0", "wait_task_inactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_create_on_node",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__kthread_create_on_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_create_on_node",
+    "callees": ["__builtin_expect", "__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kmalloc_trace", "kvasprintf", "wait_for_completion", "wait_for_completion_killable", "wake_up_process"],
+    "global_reads": ["kthreadd_task"],
+    "global_writes": []
+  },
+  {
+    "name": "create_kthread",
+    "callees": ["complete", "kernel_thread", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsk_fork_get_node",
+    "callees": [],
+    "global_reads": ["kthreadd_task"],
+    "global_writes": []
+  },
+  {
+    "name": "kthread",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__kthread_parkme", "complete", "housekeeping_cpumask", "kfree", "kthread_exit", "sched_setscheduler_nocheck", "schedule_preempt_disabled", "set_cpus_allowed_ptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_complete_and_exit",
+    "callees": ["complete", "kthread_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_exit",
+    "callees": ["__builtin_expect", "do_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_parkme",
+    "callees": ["__builtin_expect", "__kthread_parkme"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kthread_parkme",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "complete", "schedule_preempt_disabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_probe_data",
+    "callees": ["copy_from_kernel_nofault"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_data",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_func",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_freezable_should_stop",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__refrigerator", "freezing", "kthread_should_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_should_stop_or_park",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_should_park",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kthread_should_stop",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_kthread_struct",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_kthread_struct",
+    "callees": ["__builtin_expect", "__init_swait_queue_head", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_kthread_comm",
+    "callees": ["__builtin_expect", "__get_task_comm", "strscpy_pad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_kthread_work_execute_end",
+    "callees": ["__SCT__tp_func_sched_kthread_work_execute_end", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_kthread_work_execute_start",
+    "callees": ["__SCT__tp_func_sched_kthread_work_execute_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_kthread_work_queue_work",
+    "callees": ["__SCT__tp_func_sched_kthread_work_queue_work", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_kthread_stop_ret",
+    "callees": ["__SCT__tp_func_sched_kthread_stop_ret", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_kthread_stop",
+    "callees": ["__SCT__tp_func_sched_kthread_stop", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_mems_allowed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put",
+    "callees": ["percpu_ref_put_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_get",
+    "callees": ["percpu_ref_get_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmdrop",
+    "callees": ["__builtin_expect", "__mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

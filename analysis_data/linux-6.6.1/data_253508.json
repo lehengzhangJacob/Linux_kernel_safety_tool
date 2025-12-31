@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_cgroup_cls",
+    "callees": ["unregister_tcf_proto_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_cgroup_cls",
+    "callees": ["register_tcf_proto_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_dump",
+    "callees": ["nla_nest_start_noflag", "nlmsg_trim", "tcf_em_tree_dump", "tcf_exts_dump", "tcf_exts_dump_stats"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_walk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_delete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_destroy",
+    "callees": ["__cls_cgroup_destroy", "maybe_get_net", "tcf_queue_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_change",
+    "callees": ["kfree", "kzalloc", "maybe_get_net", "nla_parse_nested_deprecated", "tcf_em_tree_validate", "tcf_exts_destroy", "tcf_exts_init_ex", "tcf_exts_validate", "tcf_queue_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_destroy_work",
+    "callees": ["__cls_cgroup_destroy", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cls_cgroup_destroy",
+    "callees": ["kfree", "put_net", "tcf_em_tree_destroy", "tcf_exts_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cls_cgroup_classify",
+    "callees": ["__builtin_expect", "__tcf_em_tree_match", "task_get_classid", "tcf_action_exec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_get_classid",
+    "callees": ["task_cls_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,500 @@
+[
+  {
+    "name": "seccomp_log",
+    "callees": ["audit_seccomp"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_log",
+    "callees": ["audit_seccomp"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_log",
+    "callees": ["audit_seccomp"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_assign_mode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "arch_seccomp_spec_mitigate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_assign_mode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "arch_seccomp_spec_mitigate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_cache_check_allow_bitmap",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_may_assign_mode.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_may_assign_mode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "seccomp_may_assign_mode.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_filter_free.part.0",
+    "callees": ["bpf_prog_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_actions_logged_handler.part.0",
+    "callees": ["audit_actions_logged", "write_actions_logged"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_detach.part.0",
+    "callees": ["complete", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_may_assign_mode.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_filter_free.part.0",
+    "callees": ["bpf_prog_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_sysctl_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_actions_logged_handler",
+    "callees": ["read_actions_logged", "seccomp_actions_logged_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_actions_logged",
+    "callees": ["audit_seccomp_actions_logged", "memset", "seccomp_names_from_actions_logged"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "read_actions_logged",
+    "callees": ["memset", "proc_dostring", "seccomp_names_from_actions_logged"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_actions_logged_from_names",
+    "callees": ["seccomp_action_logged_from_name", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prctl_set_seccomp",
+    "callees": ["do_seccomp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_seccomp",
+    "callees": ["do_seccomp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_seccomp",
+    "callees": ["do_seccomp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_seccomp",
+    "callees": ["seccomp_get_action_avail", "seccomp_get_notif_sizes", "seccomp_set_mode_filter", "seccomp_set_mode_strict"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_get_notif_sizes",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_get_action_avail",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_set_mode_filter",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "fd_install", "fput", "get_unused_fd_flags", "has_duplicate_listener", "init_listener", "mutex_lock_killable", "mutex_unlock", "put_unused_fd", "seccomp_assign_mode", "seccomp_attach_filter", "seccomp_filter_free.part.0", "seccomp_may_assign_mode", "seccomp_notify_detach.part.0", "seccomp_prepare_user_filter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_listener",
+    "callees": ["__builtin_expect", "__refcount_add", "anon_inode_getfile", "get_random_u64", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_poll",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_ioctl",
+    "callees": ["seccomp_notify_addfd", "seccomp_notify_id_valid", "seccomp_notify_recv", "seccomp_notify_send", "seccomp_notify_set_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_addfd",
+    "callees": ["__init_swait_queue_head", "_copy_from_user", "check_zeroed_user", "complete", "fget", "fput", "mutex_lock", "mutex_lock_interruptible", "mutex_unlock", "wait_for_completion_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_set_flags",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_id_valid",
+    "callees": ["_copy_from_user", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_send",
+    "callees": ["_copy_from_user", "complete", "complete_on_current_cpu", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_recv",
+    "callees": ["__task_pid_nr_ns", "__wake_up", "_copy_to_user", "check_zeroed_user", "complete", "memset", "mutex_lock", "mutex_unlock", "recv_wait_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recv_wait_event",
+    "callees": ["__builtin_expect", "finish_wait", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recv_wake_function",
+    "callees": ["autoremove_wake_function"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_notify_release",
+    "callees": ["__put_seccomp_filter", "seccomp_notify_detach.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_set_mode_strict",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "disable_TSC", "seccomp_assign_mode", "seccomp_may_assign_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prctl_get_seccomp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__secure_computing",
+    "callees": ["__builtin_unreachable", "__seccomp_filter", "__secure_computing_strict", "do_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__seccomp_filter",
+    "callees": ["__seccomp_filter", "do_exit", "fatal_signal_pending", "force_sig_seccomp", "populate_seccomp_data", "ptrace_event", "seccomp_do_user_notification", "seccomp_log", "seccomp_run_filters"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_handle_addfd",
+    "callees": ["complete", "receive_fd", "receive_fd_replace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__secure_computing_strict",
+    "callees": ["do_exit", "seccomp_log"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_log",
+    "callees": ["audit_seccomp"],
+    "global_reads": ["seccomp_actions_logged"],
+    "global_writes": []
+  },
+  {
+    "name": "get_seccomp_filter",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_attach_filter",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "seccomp_cache_prepare", "seccomp_can_sync_threads", "seccomp_sync_threads"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_cache_prepare",
+    "callees": ["seccomp_cache_prepare_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_is_const_allow",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_prepare_user_filter",
+    "callees": ["_copy_from_user", "seccomp_prepare_filter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_prepare_filter",
+    "callees": ["__builtin_constant_p", "__init_waitqueue_head", "__mutex_init", "bpf_prog_create_from_user", "kfree", "kzalloc", "ns_capable_noaudit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_sync_threads",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__put_seccomp_filter", "__seccomp_filter_orphan", "get_seccomp_filter", "mutex_is_locked", "seccomp_assign_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_filter_release",
+    "callees": ["__builtin_expect", "__put_seccomp_filter", "__seccomp_filter_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_seccomp_filter",
+    "callees": ["__refcount_sub_and_test", "seccomp_filter_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__seccomp_filter_orphan",
+    "callees": ["__refcount_sub_and_test", "__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_can_sync_threads",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__task_pid_nr_ns", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_assign_mode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "arch_seccomp_spec_mitigate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_seccomp_spec_mitigate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_may_assign_mode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "seccomp_may_assign_mode.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_run_filters",
+    "callees": ["__builtin_expect", "bpf_prog_run_pin_on_cpu", "seccomp_cache_check_allow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_cache_check_allow_bitmap",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seccomp_check_filter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "populate_seccomp_data",
+    "callees": ["syscall_get_arguments"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_run_pin_on_cpu",
+    "callees": ["migrate_disable", "migrate_enable", "sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "syscall_get_arguments",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bitmap_copy",
+    "callees": ["__builtin_constant_p", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bitmap_fill",
+    "callees": ["__builtin_constant_p", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

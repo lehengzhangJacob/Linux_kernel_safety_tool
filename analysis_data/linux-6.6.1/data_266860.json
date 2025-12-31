@@ -1,0 +1,290 @@
+[
+  {
+    "name": "i915_gem_stolen_insert_node_in_range",
+    "callees": ["drm_mm_insert_node_in_range", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_remove_node",
+    "callees": ["drm_mm_remove_node", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_insert_node_in_range",
+    "callees": ["drm_mm_insert_node_in_range", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valid_stolen_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_remove_node",
+    "callees": ["drm_mm_remove_node", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_node_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_node_offset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_node_allocated",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_node_address",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_area_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_area_address",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_initialized",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_is_stolen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_smem_setup",
+    "callees": ["__builtin_expect", "intel_memory_region_create", "intel_memory_region_set_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_lmem_setup",
+    "callees": ["__builtin_expect", "_dev_err", "i915_pci_resource_valid", "intel_gt_mcr_read_any", "intel_memory_region_create", "intel_memory_region_set_name", "mtl_get_gms_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtl_get_gms_size",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_stolen_lmem",
+    "callees": ["drm_mm_takedown", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_stolen_lmem",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_mm_takedown", "i915_gem_init_stolen", "io_mapping_init_wc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_stolen_smem",
+    "callees": ["drm_mm_takedown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_stolen_smem",
+    "callees": ["i915_gem_init_stolen", "init_stolen_smem.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_create_stolen",
+    "callees": ["i915_gem_object_create_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_i915_gem_object_stolen_init",
+    "callees": ["__drm_dev_dbg", "__i915_gem_object_create_stolen", "drm_mm_reserve_node", "i915_gem_stolen_insert_node_in_range", "i915_gem_stolen_remove_node", "kfree", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_create_stolen",
+    "callees": ["__builtin_expect", "drm_gem_private_object_init", "i915_gem_object_init", "i915_gem_object_init_memory_region", "i915_gem_object_pin_pages", "i915_gem_object_release_memory_region", "i915_gem_object_set_cache_coherency", "i915_gem_object_unlock", "ww_mutex_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_release_stolen",
+    "callees": ["i915_gem_object_release_memory_region", "i915_gem_stolen_remove_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_put_pages_stolen",
+    "callees": ["kfree", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_pages_stolen",
+    "callees": ["__builtin_expect", "__i915_gem_object_set_pages", "i915_pages_create_for_stolen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pages_create_for_stolen",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "sg_alloc_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_init_stolen",
+    "callees": ["__drm_dev_dbg", "__mutex_init", "_dev_notice", "adjust_stolen", "drm_mm_init", "i915_vtd_active", "init_reserved_stolen", "intel_vgpu_active", "request_smem_stolen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_reserved_stolen",
+    "callees": ["_dev_err", "bdw_get_stolen_reserved", "chv_get_stolen_reserved", "g4x_get_stolen_reserved", "gen6_get_stolen_reserved", "gen7_get_stolen_reserved", "icl_get_stolen_reserved", "resource_contains", "vlv_get_stolen_reserved"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_smem_stolen",
+    "callees": ["__devm_request_region", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "adjust_stolen",
+    "callees": ["__drm_dev_dbg", "valid_stolen_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valid_stolen_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_remove_node",
+    "callees": ["drm_mm_remove_node", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_insert_node",
+    "callees": ["i915_gem_stolen_insert_node_in_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_stolen_insert_node_in_range",
+    "callees": ["drm_mm_insert_node_in_range", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_pin_pages",
+    "callees": ["__builtin_expect", "__i915_gem_object_get_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_mapping_init_wc",
+    "callees": ["ioremap_wc", "pgprot_writecombine"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "resource_contains",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

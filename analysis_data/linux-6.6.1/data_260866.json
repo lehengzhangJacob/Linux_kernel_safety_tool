@@ -1,0 +1,80 @@
+[
+  {
+    "name": "acpi_ac_get_state",
+    "callees": ["acpi_evaluate_integer", "acpi_format_exception", "acpi_handle_printk"],
+    "global_reads": ["ac_only"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_exit",
+    "callees": ["acpi_bus_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_init",
+    "callees": ["acpi_bus_register_driver", "acpi_quirk_skip_acpi_ac_and_battery", "dmi_check_system"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_remove",
+    "callees": ["acpi_dev_remove_notify_handler", "kfree", "power_supply_unregister", "unregister_acpi_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_resume",
+    "callees": ["acpi_ac_get_state", "kobject_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_add",
+    "callees": ["__builtin_expect", "__builtin_memcpy", "_printk", "acpi_ac_get_state", "acpi_dev_install_notify_handler", "kfree", "kzalloc", "power_supply_register", "power_supply_unregister", "register_acpi_notifier", "unregister_acpi_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ac_only_quirk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["ac_only"]
+  },
+  {
+    "name": "thinkpad_e530_quirk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["ac_sleep_before_get_state_ms"]
+  },
+  {
+    "name": "acpi_ac_battery_notify",
+    "callees": ["acpi_ac_get_state", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_notify",
+    "callees": ["acpi_ac_get_state", "acpi_bus_generate_netlink_event", "acpi_notifier_call_chain", "kobject_uevent", "msleep"],
+    "global_reads": ["ac_sleep_before_get_state_ms"],
+    "global_writes": []
+  },
+  {
+    "name": "get_ac_property",
+    "callees": ["acpi_ac_get_state", "power_supply_get_drvdata"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ac_get_state",
+    "callees": ["acpi_evaluate_integer", "acpi_format_exception", "acpi_handle_printk"],
+    "global_reads": ["ac_only"],
+    "global_writes": []
+  }
+]

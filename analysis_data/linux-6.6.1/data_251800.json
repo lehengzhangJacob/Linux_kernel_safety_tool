@@ -1,0 +1,230 @@
+[
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_queue.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_basic.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy.part.0",
+    "callees": ["_raw_spin_unlock_bh", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_finish_copy",
+    "callees": ["_raw_spin_unlock_bh", "gnet_stats_copy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy_app",
+    "callees": ["_raw_spin_unlock_bh", "gnet_stats_copy", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy_queue",
+    "callees": ["gnet_stats_add_queue", "gnet_stats_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_queue",
+    "callees": ["gnet_stats_add_queue.part.0", "gnet_stats_add_queue_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_queue_cpu",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy_rate_est",
+    "callees": ["gen_estimator_read", "gnet_stats_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy_basic_hw",
+    "callees": ["___gnet_stats_copy_basic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy_basic",
+    "callees": ["___gnet_stats_copy_basic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_basic",
+    "callees": ["__builtin_expect", "gnet_stats_add_basic.part.0", "gnet_stats_add_basic_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_add_basic_cpu",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_basic_sync_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_start_copy",
+    "callees": ["gnet_stats_start_copy_compat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_start_copy_compat",
+    "callees": ["_raw_spin_lock_bh", "gnet_stats_copy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gnet_stats_copy",
+    "callees": ["gnet_stats_copy.part.0", "nla_put_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

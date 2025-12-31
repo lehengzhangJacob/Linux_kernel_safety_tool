@@ -1,0 +1,200 @@
+[
+  {
+    "name": "show_ip",
+    "callees": ["_printk", "show_opcodes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iret_regs",
+    "callees": ["_printk", "show_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die_body",
+    "callees": ["notify_die", "print_modules", "show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die_body",
+    "callees": ["notify_die", "print_modules", "show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die_body",
+    "callees": ["notify_die", "print_modules", "show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_ip",
+    "callees": ["_printk", "show_opcodes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die",
+    "callees": ["__die_body", "__die_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_stack_pointer.part.0",
+    "callees": ["__builtin_frame_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_stack_pointer.part.0",
+    "callees": ["__builtin_frame_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_regs.part.0",
+    "callees": ["show_trace_log_lvl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_regs_if_on_stack.part.0",
+    "callees": ["__show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_stack_pointer.part.0",
+    "callees": ["__builtin_frame_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_regs",
+    "callees": ["__show_regs", "show_regs.part.0", "show_regs_print_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "die_addr",
+    "callees": ["__die_body", "__die_header", "oops_begin", "oops_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "die",
+    "callees": ["__die", "oops_begin", "oops_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die",
+    "callees": ["__die_body", "__die_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die_body",
+    "callees": ["notify_die", "print_modules", "show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__die_header",
+    "callees": ["_printk"],
+    "global_reads": ["die_counter"],
+    "global_writes": ["die_counter", "exec_summary_regs"]
+  },
+  {
+    "name": "oops_end",
+    "callees": ["__show_regs", "add_taint", "bust_spinlocks", "crash_kexec", "kexec_should_crash", "oops_exit", "panic", "rewind_stack_and_make_dead"],
+    "global_reads": ["die_nest_count", "panic_on_oops"],
+    "global_writes": ["die_nest_count", "die_owner"]
+  },
+  {
+    "name": "oops_begin",
+    "callees": ["__builtin_expect", "bust_spinlocks", "console_verbose", "oops_enter", "queued_spin_lock_slowpath"],
+    "global_reads": ["die_nest_count", "die_owner"],
+    "global_writes": ["die_nest_count", "die_owner"]
+  },
+  {
+    "name": "show_stack_regs",
+    "callees": ["show_trace_log_lvl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_stack",
+    "callees": ["get_stack_pointer.part.0", "show_trace_log_lvl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_trace_log_lvl",
+    "callees": ["__kernel_text_address", "_printk", "get_stack_info", "get_stack_pointer.part.0", "show_regs_if_on_stack", "stack_type_name", "unwind_get_return_address_ptr", "unwind_next_frame", "unwind_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_regs_if_on_stack",
+    "callees": ["on_stack", "show_iret_regs", "show_regs_if_on_stack.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_iret_regs",
+    "callees": ["_printk", "show_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_ip",
+    "callees": ["_printk", "show_opcodes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_opcodes",
+    "callees": ["_printk", "copy_code"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in_entry_stack",
+    "callees": ["get_cpu_entry_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in_task_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_start",
+    "callees": ["__unwind_start", "get_stack_pointer.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

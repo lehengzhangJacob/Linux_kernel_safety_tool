@@ -1,0 +1,512 @@
+[
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_bus_device_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_tur",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_tur",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_restore_cmnd",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_tur",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_report_bus_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_report_bus_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_restore_cmnd",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_bus_device_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_wakeup",
+    "callees": ["scsi_eh_wakeup.part.0", "scsi_host_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_wakeup",
+    "callees": ["scsi_eh_wakeup.part.0", "scsi_host_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action",
+    "callees": ["scsi_eh_action.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action",
+    "callees": ["scsi_eh_action.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_should_retry_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_wakeup.part.0",
+    "callees": ["trace_scsi_eh_wakeup", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_ready_devs.part.0",
+    "callees": ["scsi_eh_bus_reset", "scsi_eh_host_reset", "scsi_eh_offline_sdevs", "scsi_eh_target_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_sense_info_fld",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "scsi_sense_desc_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_command_normalize_sense",
+    "callees": ["scsi_normalize_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_ioctl_reset",
+    "callees": ["__builtin_expect", "__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_rq_init", "capable", "kfree", "kzalloc", "memset", "scsi_autopm_get_host", "scsi_autopm_put_host", "scsi_init_command", "scsi_run_host_queues", "scsi_try_bus_device_reset", "scsi_try_bus_reset", "scsi_try_host_reset", "scsi_try_target_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_report_device_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_report_bus_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_error_handler",
+    "callees": ["kthread_should_stop", "schedule", "scsi_autopm_get_host", "scsi_autopm_put_host", "scsi_host_busy", "scsi_restart_operations", "scsi_unjam_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_unjam_host",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "scsi_eh_flush_done_q", "scsi_eh_get_sense", "scsi_eh_ready_devs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_flush_done_q",
+    "callees": ["scsi_eh_should_retry_cmd", "scsi_finish_command", "scsi_noretry_cmd", "scsi_queue_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_ready_devs",
+    "callees": ["scsi_eh_bus_device_reset", "scsi_eh_ready_devs.part.0", "scsi_eh_stu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_lock_door",
+    "callees": ["__builtin_expect", "blk_execute_rq_nowait", "scsi_alloc_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eh_lock_door_done",
+    "callees": ["blk_mq_free_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_decide_disposition",
+    "callees": ["scsi_check_sense", "scsi_handle_queue_full", "scsi_handle_queue_ramp_up", "scsi_noretry_cmd", "sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_noretry_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_offline_sdevs",
+    "callees": ["mutex_lock", "mutex_unlock", "scsi_device_set_state", "sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_bus_reset",
+    "callees": ["scsi_eh_test_devices", "scsi_host_eh_past_deadline", "scsi_try_bus_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_target_reset",
+    "callees": ["scsi_eh_test_devices", "scsi_host_eh_past_deadline", "scsi_try_target_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_bus_device_reset",
+    "callees": ["__scsi_iterate_devices", "scsi_device_put", "scsi_eh_action", "scsi_eh_tur", "scsi_host_eh_past_deadline", "scsi_try_bus_device_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_stu",
+    "callees": ["__scsi_iterate_devices", "scsi_check_sense", "scsi_device_put", "scsi_eh_action", "scsi_eh_try_stu", "scsi_eh_tur", "scsi_host_eh_past_deadline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_try_stu",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_test_devices",
+    "callees": ["scsi_eh_action", "scsi_eh_try_stu", "scsi_eh_tur", "scsi_host_eh_past_deadline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_tur",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_get_sense",
+    "callees": ["scsi_decide_disposition", "scsi_host_eh_past_deadline", "scsi_request_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_finish_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_action",
+    "callees": ["scsi_eh_action.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_request_sense",
+    "callees": ["scsi_send_eh_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_send_eh_cmnd",
+    "callees": ["jiffies_to_msecs", "msleep", "mutex_lock", "mutex_unlock", "scsi_abort_eh_cmnd", "scsi_eh_completed_normally", "scsi_eh_prep_cmnd", "scsi_eh_restore_cmnd", "wait_for_completion_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_restore_cmnd",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_prep_cmnd",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "memcpy", "memset", "sg_init_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_abort_eh_cmnd",
+    "callees": ["scsi_try_bus_device_reset", "scsi_try_bus_reset", "scsi_try_host_reset", "scsi_try_target_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_bus_device_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_target_reset",
+    "callees": ["__starget_for_each_device", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_report_device_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_bus_reset",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "msleep", "scsi_report_bus_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_try_host_reset",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "msleep", "scsi_report_bus_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_done",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_completed_normally",
+    "callees": ["scsi_check_sense", "scsi_handle_queue_full", "scsi_handle_queue_ramp_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_handle_queue_full",
+    "callees": ["__scsi_iterate_devices", "scsi_track_queue_full"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_handle_queue_ramp_up",
+    "callees": ["__scsi_iterate_devices", "scsi_change_queue_depth"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_check_sense",
+    "callees": ["scsi_normalize_sense", "scsi_report_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_report_sense",
+    "callees": ["__builtin_constant_p", "schedule_work", "sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_block_when_processing_errors",
+    "callees": ["__SCT__might_resched", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_timeout",
+    "callees": ["scsi_abort_command", "scsi_eh_scmd_add", "trace_scsi_dispatch_cmd_timeout"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_scmd_add",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "call_rcu", "scsi_eh_reset", "scsi_host_set_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_inc_host_failed",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "scsi_eh_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_abort_command",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_delayed_work_on"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scmd_eh_abort_handler",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "scsi_eh_scmd_add", "scsi_eh_should_retry_cmd", "scsi_finish_command", "scsi_host_eh_past_deadline", "scsi_noretry_cmd", "scsi_queue_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_should_retry_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_eh_past_deadline",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_schedule_eh",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "scsi_eh_wakeup", "scsi_host_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_eh_wakeup",
+    "callees": ["scsi_eh_wakeup.part.0", "scsi_host_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_scsi_eh_wakeup",
+    "callees": ["__SCT__tp_func_scsi_eh_wakeup", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_scsi_dispatch_cmd_timeout",
+    "callees": ["__SCT__tp_func_scsi_dispatch_cmd_timeout", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

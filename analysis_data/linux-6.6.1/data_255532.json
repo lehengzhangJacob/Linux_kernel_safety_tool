@@ -1,0 +1,32 @@
+[
+  {
+    "name": "nfs4_set_lease_period",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "rpc_set_connect_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_kill_renewd",
+    "callees": ["cancel_delayed_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_schedule_state_renewal",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "mod_delayed_work_on"],
+    "global_reads": ["jiffies", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_renew_state",
+    "callees": ["__builtin_constant_p", "nfs4_schedule_state_renewal", "nfs_delegations_present", "nfs_expire_all_delegations", "nfs_expire_unreferenced_delegations", "put_cred"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

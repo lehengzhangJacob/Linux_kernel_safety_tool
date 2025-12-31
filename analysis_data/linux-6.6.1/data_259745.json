@@ -1,0 +1,20 @@
+[
+  {
+    "name": "utsname_sysctl_init",
+    "callees": ["register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uts_proc_notify",
+    "callees": ["proc_sys_poll_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_do_uts_string",
+    "callees": ["add_device_randomness", "down_read", "down_write", "memcpy", "proc_dostring", "proc_sys_poll_notify", "up_read", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

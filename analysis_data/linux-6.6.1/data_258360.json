@@ -1,0 +1,272 @@
+[
+  {
+    "name": "inet6_bind_sk.part.0",
+    "callees": ["__inet6_bind"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_bind_sk",
+    "callees": ["inet6_bind_sk.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_cleanup_mibs",
+    "callees": ["free_percpu", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_bind_sk.part.0",
+    "callees": ["__inet6_bind"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_create.part.0",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__request_module", "ns_capable", "sk_alloc", "sk_common_release", "sock_init_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_unregister_protosw.part.0",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_init",
+    "callees": ["_printk", "addrconf_cleanup", "addrconf_init", "calipso_exit", "calipso_init", "dev_add_pack", "dev_remove_pack", "icmpv6_cleanup", "icmpv6_init", "if6_proc_exit", "if6_proc_init", "igmp6_cleanup", "igmp6_init", "igmp6_late_cleanup", "igmp6_late_init", "ioam6_exit", "ioam6_init", "ip6_flowlabel_cleanup", "ip6_flowlabel_init", "ip6_route_cleanup", "ip6_route_init", "ipv6_anycast_cleanup", "ipv6_anycast_init", "ipv6_exthdrs_exit", "ipv6_exthdrs_init", "ipv6_frag_exit", "ipv6_frag_init", "ipv6_misc_proc_exit", "ipv6_misc_proc_init", "ipv6_netfilter_fini", "ipv6_netfilter_init", "ipv6_sysctl_register", "ndisc_cleanup", "ndisc_init", "ndisc_late_cleanup", "ndisc_late_init", "pingv6_exit", "pingv6_init", "proto_register", "proto_unregister", "raw6_proc_exit", "raw6_proc_init", "rawv6_exit", "rawv6_init", "register_pernet_subsys", "rtnl_unregister_all", "seg6_exit", "seg6_init", "sock_register", "sock_unregister", "tcpv6_exit", "tcpv6_init", "udplite6_proc_exit", "udplite6_proc_init", "udplitev6_exit", "udplitev6_init", "udpv6_exit", "udpv6_init", "udpv6_offload_exit", "udpv6_offload_init", "unregister_pernet_subsys"],
+    "global_reads": ["disable_ipv6_mod"],
+    "global_writes": ["ipv6_bpf_stub", "ipv6_stub"]
+  },
+  {
+    "name": "ipv6_route_input",
+    "callees": ["ip6_route_input"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_net_exit",
+    "callees": ["ac6_proc_exit", "ipv6_cleanup_mibs", "tcp6_proc_exit", "udp6_proc_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_net_init",
+    "callees": ["__builtin_constant_p", "ac6_proc_init", "ipv6_cleanup_mibs", "ipv6_init_mibs", "memset", "tcp6_proc_exit", "tcp6_proc_init", "udp6_proc_exit", "udp6_proc_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_cleanup_mibs",
+    "callees": ["free_percpu", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_opt_accepted",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_sk_rebuild_header",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__sk_dst_check", "fl6_update_dst", "ip6_dst_lookup_flow", "ip6_dst_store", "memset", "security_sk_classify_flow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_unregister_protosw",
+    "callees": ["_printk", "inet6_unregister_protosw.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_register_protosw",
+    "callees": ["_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_recvmsg",
+    "callees": ["__builtin_expect", "sock_rps_record_flow", "tcp_recvmsg", "udpv6_recvmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_sendmsg",
+    "callees": ["__builtin_expect", "inet_send_prepare", "tcp_sendmsg", "udpv6_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_compat_ioctl",
+    "callees": ["inet6_compat_routing_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_compat_routing_ioctl",
+    "callees": ["__builtin_expect", "_copy_from_user", "ipv6_route_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_ioctl",
+    "callees": ["_copy_from_user", "addrconf_add_ifaddr", "addrconf_del_ifaddr", "addrconf_set_dstaddr", "ipv6_route_ioctl", "sk_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_getname",
+    "callees": ["ipv6_iface_scope_id", "lock_sock_nested", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_cleanup_sock",
+    "callees": ["fl6_free_socklist", "kfree_skb_reason", "txopt_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_release",
+    "callees": ["inet_release", "ipv6_sock_ac_close", "ipv6_sock_mc_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_bind",
+    "callees": ["inet6_bind_sk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_bind_sk",
+    "callees": ["inet6_bind_sk.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__inet6_bind",
+    "callees": ["__builtin_bswap16", "__ipv6_addr_type", "__rcu_read_lock", "__rcu_read_unlock", "dev_get_by_index_rcu", "inet_addr_type_dev_table", "inet_addr_valid_or_nonlocal", "inet_reset_saddr", "ipv6_can_nonlocal_bind", "ipv6_chk_addr", "lock_sock_nested", "ns_capable", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_create",
+    "callees": ["inet6_create.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_sock_destruct",
+    "callees": ["inet6_cleanup_sock", "inet_sock_destruct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mod_enabled",
+    "callees": [],
+    "global_reads": ["disable_ipv6_mod"],
+    "global_writes": []
+  },
+  {
+    "name": "rt6_get_cookie",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_reset_saddr",
+    "callees": ["inet_reset_saddr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_iface_scope_id",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "txopt_put",
+    "callees": ["__refcount_sub_and_test", "kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_addr_valid_or_nonlocal",
+    "callees": ["inet_can_nonlocal_bind"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_can_nonlocal_bind",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_rps_record_flow",
+    "callees": ["sock_rps_record_flow_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_rps_record_flow_hash",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "rps_record_sock_flow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rps_record_sock_flow",
+    "callees": [],
+    "global_reads": ["rps_cpu_mask"],
+    "global_writes": []
+  }
+]

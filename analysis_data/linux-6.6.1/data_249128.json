@@ -1,0 +1,176 @@
+[
+  {
+    "name": "pci_disable_msi.part.0",
+    "callees": ["msi_lock_descs", "msi_unlock_descs", "pci_free_msi_irqs", "pci_msi_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_disable_msi",
+    "callees": ["pci_disable_msi.part.0"],
+    "global_reads": ["pci_msi_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_irq_vector.part.0",
+    "callees": ["msi_domain_get_virq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_irq_vector",
+    "callees": ["pci_irq_vector.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_can_alloc_dyn.part.0",
+    "callees": ["pci_msi_domain_supports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_can_alloc_dyn.part.0",
+    "callees": ["pci_msi_domain_supports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_irq_vector.part.0",
+    "callees": ["msi_domain_get_virq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_disable_msix.part.0",
+    "callees": ["msi_lock_descs", "msi_unlock_descs", "pci_free_msi_irqs", "pci_msix_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_alloc_irq_at.part.0",
+    "callees": ["msi_domain_alloc_irq_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_can_alloc_dyn.part.0",
+    "callees": ["pci_msi_domain_supports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_disable_msi.part.0",
+    "callees": ["msi_lock_descs", "msi_unlock_descs", "pci_free_msi_irqs", "pci_msi_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msi_enabled",
+    "callees": [],
+    "global_reads": ["pci_msi_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_restore_msi_state",
+    "callees": ["__pci_restore_msi_state", "__pci_restore_msix_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_free_irq_vectors",
+    "callees": ["pci_disable_msi", "pci_disable_msix"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_ims_free_irq",
+    "callees": ["__builtin_expect", "msi_domain_free_irqs_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_ims_alloc_irq",
+    "callees": ["msi_domain_alloc_irq_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_irq_get_affinity",
+    "callees": ["__builtin_expect", "irq_get_msi_desc", "pci_irq_vector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_irq_vector",
+    "callees": ["pci_irq_vector.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_alloc_irq_vectors_affinity",
+    "callees": ["__builtin_expect", "__pci_enable_msi_range", "__pci_enable_msix_range", "irq_create_affinity_masks", "pci_intx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_alloc_irq_vectors",
+    "callees": ["pci_alloc_irq_vectors_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_disable_msix",
+    "callees": ["pci_disable_msix.part.0"],
+    "global_reads": ["pci_msi_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_free_irq",
+    "callees": ["__builtin_expect", "msi_domain_free_irqs_range", "pci_msix_can_alloc_dyn.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_alloc_irq_at",
+    "callees": ["pci_msix_alloc_irq_at.part.0", "pci_msix_can_alloc_dyn.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_can_alloc_dyn",
+    "callees": ["pci_msix_can_alloc_dyn.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_enable_msix_range",
+    "callees": ["__pci_enable_msix_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_msix_vec_count",
+    "callees": ["pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_disable_msi",
+    "callees": ["pci_disable_msi.part.0"],
+    "global_reads": ["pci_msi_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_enable_msi",
+    "callees": ["__pci_enable_msi_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_msi_desc",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ethnl_set_module",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_module_validate",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_fill_reply",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_reply_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

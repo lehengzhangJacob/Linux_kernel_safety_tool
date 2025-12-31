@@ -1,0 +1,68 @@
+[
+  {
+    "name": "__integrity_iint_find",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_fs_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["integrity_dir"]
+  },
+  {
+    "name": "integrity_kernel_read",
+    "callees": ["__kernel_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_iintcache_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["iint_cache"]
+  },
+  {
+    "name": "init_once",
+    "callees": ["__mutex_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_inode_free",
+    "callees": ["__integrity_iint_find", "_raw_write_lock", "_raw_write_unlock", "iint_free", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_inode_get",
+    "callees": ["_raw_write_lock", "_raw_write_unlock", "integrity_iint_find", "kmem_cache_alloc", "kmem_cache_free", "rb_insert_color"],
+    "global_reads": ["iint_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "iint_free",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["iint_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_iint_find",
+    "callees": ["__integrity_iint_find", "_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__integrity_iint_find",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integrity_load_keys",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_setitimer",
+    "callees": ["__builtin_expect", "_printk", "do_setitimer", "get_itimerval", "memset", "put_itimerval"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "trace_itimer_state.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_itimer_state",
+    "callees": ["__SCT__tp_func_itimer_state", "cpu_online", "trace_itimer_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_setitimer",
+    "callees": ["do_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "itimer_get_remtime",
+    "callees": ["__hrtimer_get_remaining", "hrtimer_active", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_getitimer",
+    "callees": ["do_getitimer", "put_itimerval"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_itimer_state.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_setitimer",
+    "callees": ["__builtin_expect", "_printk", "do_setitimer", "get_old_itimerval32", "memset", "put_old_itimerval32"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__ia32_compat_sys_setitimer",
+    "callees": ["__do_compat_sys_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_old_itimerval32",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_setitimer",
+    "callees": ["__builtin_expect", "_printk", "do_setitimer", "get_itimerval", "memset", "put_itimerval"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__ia32_sys_setitimer",
+    "callees": ["__do_sys_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_setitimer",
+    "callees": ["__do_sys_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_itimerval",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_alarm",
+    "callees": ["alarm_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_alarm",
+    "callees": ["alarm_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_setitimer",
+    "callees": ["do_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_itimer",
+    "callees": ["do_setitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_setitimer",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "hrtimer_start_range_ns", "hrtimer_try_to_cancel", "itimer_get_remtime", "ns_to_timespec64", "set_cpu_itimer", "trace_itimer_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_cpu_itimer",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ns_to_timespec64", "set_process_cpu_timer", "trace_itimer_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "it_real_fn",
+    "callees": ["kill_pid_info", "trace_itimer_expire"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_getitimer",
+    "callees": ["do_getitimer", "put_old_itimerval32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_getitimer",
+    "callees": ["__do_compat_sys_getitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_getitimer",
+    "callees": ["do_getitimer", "put_itimerval"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_getitimer",
+    "callees": ["__do_sys_getitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_getitimer",
+    "callees": ["__do_sys_getitimer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_getitimer",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "get_cpu_itimer", "itimer_get_remtime", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_itimer",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ns_to_timespec64", "thread_group_sample_cputime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "itimer_get_remtime",
+    "callees": ["__hrtimer_get_remaining", "hrtimer_active", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_itimer_state",
+    "callees": ["__SCT__tp_func_itimer_state", "cpu_online", "trace_itimer_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

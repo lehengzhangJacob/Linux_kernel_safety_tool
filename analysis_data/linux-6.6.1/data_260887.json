@@ -1,0 +1,134 @@
+[
+  {
+    "name": "scsi_exit_devinfo",
+    "callees": ["remove_proc_entry", "scsi_dev_info_remove_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_device_flags_keyed.part.0",
+    "callees": [],
+    "global_reads": ["scsi_default_dev_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_device_flags_keyed",
+    "callees": ["__builtin_expect", "scsi_dev_info_list_find", "scsi_get_device_flags_keyed.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_device_flags_keyed.part.0",
+    "callees": [],
+    "global_reads": ["scsi_default_dev_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_strcpy_devinfo.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_remove_list",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_add_list",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_exit_devinfo",
+    "callees": ["remove_proc_entry", "scsi_dev_info_remove_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_scsi_devinfo_write",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "__get_free_pages", "_copy_from_user", "free_pages", "scsi_dev_info_list_add_str"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_scsi_devinfo_open",
+    "callees": ["seq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devinfo_seq_stop",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devinfo_seq_next",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devinfo_seq_start",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devinfo_seq_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_device_flags_keyed",
+    "callees": ["__builtin_expect", "scsi_dev_info_list_find", "scsi_get_device_flags_keyed.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_get_device_flags",
+    "callees": ["scsi_get_device_flags_keyed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_list_add_str",
+    "callees": ["_printk", "scsi_dev_info_list_add_keyed", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_list_del_keyed",
+    "callees": ["__builtin_expect", "kfree", "scsi_dev_info_list_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_list_find",
+    "callees": ["__builtin_expect", "memcmp", "strnlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dev_info_list_add_keyed",
+    "callees": ["__builtin_expect", "__builtin_return_address", "_printk", "kfree", "kmalloc_trace", "kstrtoull", "scsi_strcpy_devinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_strcpy_devinfo",
+    "callees": ["memset", "scsi_strcpy_devinfo.part.0", "strlen", "strncpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_init_devinfo",
+    "callees": ["proc_create", "scsi_dev_info_add_list", "scsi_dev_info_list_add_keyed", "scsi_dev_info_list_add_str", "scsi_exit_devinfo"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

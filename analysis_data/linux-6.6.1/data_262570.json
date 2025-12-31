@@ -1,0 +1,128 @@
+[
+  {
+    "name": "pcmcia_disable_device.part.0",
+    "callees": ["free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_disable_device",
+    "callees": ["pcmcia_disable_device.part.0", "pcmcia_release_configuration", "pcmcia_release_io", "pcmcia_release_window"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_request_window",
+    "callees": ["mutex_lock", "mutex_unlock", "request_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_setup_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_cleanup_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_request_irq",
+    "callees": ["request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_request_io",
+    "callees": ["alloc_io_space", "mutex_lock", "mutex_unlock", "release_io_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_enable_device",
+    "callees": ["_dev_warn", "msleep", "mutex_lock", "mutex_unlock", "pcmcia_write_cis_mem"],
+    "global_reads": ["io_speed"],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_release_window",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_release_io",
+    "callees": ["mutex_lock", "mutex_unlock", "release_io_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_release_configuration",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_fixup_vpp",
+    "callees": ["_dev_warn", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_fixup_iowidth",
+    "callees": ["msleep", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["io_speed"],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_map_mem_page",
+    "callees": ["_dev_warn", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_write_config_byte",
+    "callees": ["pcmcia_access_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_read_config_byte",
+    "callees": ["pcmcia_access_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_access_config",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_io_space",
+    "callees": ["_dev_warn", "release_io_space", "request_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_io_space",
+    "callees": ["kfree", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_find_mem_region",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_validate_mem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

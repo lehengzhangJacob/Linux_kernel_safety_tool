@@ -1,0 +1,116 @@
+[
+  {
+    "name": "profiling_store.part.0",
+    "callees": ["create_proc_profile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ksysfs_init",
+    "callees": ["kobject_create_and_add", "kobject_put", "sysfs_create_bin_file", "sysfs_create_group", "sysfs_remove_group"],
+    "global_reads": ["kernel_kobj"],
+    "global_writes": ["kernel_kobj"]
+  },
+  {
+    "name": "notes_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_normal_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_normal_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_expedited_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_expedited_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscaps_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["file_caps_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "crash_elfcorehdr_size_show",
+    "callees": ["arch_crash_get_elfcorehdr_size", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmcoreinfo_show",
+    "callees": ["paddr_vmcoreinfo_note", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_crash_size_store",
+    "callees": ["crash_shrink_memory", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_crash_size_show",
+    "callees": ["crash_get_memory_size", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_crash_loaded_show",
+    "callees": ["kexec_crash_loaded", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_loaded_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["kexec_image"],
+    "global_writes": []
+  },
+  {
+    "name": "profiling_store",
+    "callees": ["profile_init", "profile_setup", "profiling_store.part.0"],
+    "global_reads": ["prof_on"],
+    "global_writes": []
+  },
+  {
+    "name": "profiling_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["prof_on"],
+    "global_writes": []
+  },
+  {
+    "name": "address_bits_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_byteorder_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_seqnum_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["uevent_seqnum"],
+    "global_writes": []
+  }
+]

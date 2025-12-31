@@ -1,0 +1,188 @@
+[
+  {
+    "name": "hdmi_manual_channel_allocation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_setup_channel_mapping.part.0",
+    "callees": ["hdmi_setup_fake_chmap", "hdmi_std_setup_channel_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_add_chmap_ctls",
+    "callees": ["snd_pcm_add_chmap_ctls"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_register_chmap_ops",
+    "callees": ["init_channel_allocations"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_chmap_ctl_put",
+    "callees": ["hdmi_manual_channel_allocation", "memcmp", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_chmap_ctl_get",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_chmap_ctl_tlv",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "_copy_to_user", "copy_overflow", "spk_mask_from_spk_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "spk_mask_from_spk_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_cea_alloc_to_tlv_chmap",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_chmap_cea_alloc_validate_get_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_chmap_ctl_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_channel_allocation",
+    "callees": ["hdmi_channel_allocation_spk_alloc_blk", "hdmi_manual_channel_allocation"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_get_ch_alloc_from_ca",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_get_active_channels",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_setup_channel_mapping",
+    "callees": ["hdmi_manual_setup_channel_mapping", "snd_hdac_setup_channel_mapping.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_setup_fake_chmap",
+    "callees": ["from_cea_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_manual_channel_allocation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "from_cea_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_spk_to_chmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "to_cea_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_chmap_to_spk_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_std_setup_channel_mapping",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_print_channel_allocation",
+    "callees": ["scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_channel_allocations",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_set_channel_count",
+    "callees": ["hdmi_get_channel_count", "snd_hdac_codec_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_get_channel_count",
+    "callees": ["snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_pin_get_slot_channel",
+    "callees": ["snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_pin_set_slot_channel",
+    "callees": ["snd_hdac_codec_write"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

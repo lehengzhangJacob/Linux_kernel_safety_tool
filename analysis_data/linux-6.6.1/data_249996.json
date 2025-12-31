@@ -1,0 +1,98 @@
+[
+  {
+    "name": "ZSTD_createDDict_advanced",
+    "callees": ["ZSTD_customMalloc", "ZSTD_freeDDict.part.0", "ZSTD_initDDict_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_createDDict_advanced",
+    "callees": ["ZSTD_customMalloc", "ZSTD_freeDDict.part.0", "ZSTD_initDDict_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_freeDDict.part.0",
+    "callees": ["ZSTD_customFree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_getDictID_fromDDict",
+    "callees": ["ZSTD_getDictID_fromDict"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_sizeof_DDict",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_estimateDDictSize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_freeDDict",
+    "callees": ["ZSTD_freeDDict.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_initStaticDDict",
+    "callees": ["ZSTD_initDDict_internal", "__builtin_memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_createDDict_byReference",
+    "callees": ["ZSTD_createDDict_advanced"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_createDDict",
+    "callees": ["ZSTD_createDDict_advanced"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_createDDict_advanced",
+    "callees": ["ZSTD_customMalloc", "ZSTD_freeDDict.part.0", "ZSTD_initDDict_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_initDDict_internal",
+    "callees": ["ZSTD_customMalloc", "ZSTD_loadEntropy_intoDDict", "__builtin_memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_copyDDictParameters",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_DDict_dictSize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ZSTD_DDict_dictContent",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

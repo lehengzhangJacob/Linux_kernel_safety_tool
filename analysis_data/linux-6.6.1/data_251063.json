@@ -1,0 +1,638 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_mapcount",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tlb_reset_range",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_get_unmap_shift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush",
+    "callees": ["flush_tlb_mm_range", "tlb_get_unmap_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush_mmu_tlbonly",
+    "callees": ["__tlb_reset_range", "tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_end_vma.part.0",
+    "callees": ["tlb_flush_mmu_tlbonly"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tlb_reset_range",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_get_unmap_shift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush",
+    "callees": ["flush_tlb_mm_range", "tlb_get_unmap_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush_mmu_tlbonly",
+    "callees": ["__tlb_reset_range", "tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_end_vma.part.0",
+    "callees": ["tlb_flush_mmu_tlbonly"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_do_file_pageout",
+    "callees": ["file_permission", "inode_owner_or_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma",
+    "callees": ["tlb_start_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma",
+    "callees": ["tlb_start_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pte_to_swp_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_mapcount",
+    "callees": ["__builtin_expect", "folio_total_mapcount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_page_index",
+    "callees": ["__builtin_expect", "linear_hugepage_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_end_vma.part.0",
+    "callees": ["tlb_flush_mmu_tlbonly"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_process_madvise",
+    "callees": ["__builtin_expect", "capable", "do_madvise", "import_iovec", "iov_iter_advance", "kfree", "mm_access", "mmput", "pidfd_get_task", "put_task_struct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_process_madvise",
+    "callees": ["__do_sys_process_madvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_process_madvise",
+    "callees": ["__do_sys_process_madvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_madvise",
+    "callees": ["do_madvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_madvise",
+    "callees": ["do_madvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_madvise",
+    "callees": ["blk_finish_plug", "blk_start_plug", "madvise_walk_vmas", "mmap_read_lock", "mmap_read_unlock", "mmap_write_lock_killable", "mmap_write_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_vma_behavior",
+    "callees": ["madvise_cold", "madvise_dontneed_free", "madvise_pageout", "madvise_populate", "madvise_remove", "madvise_update_vma", "madvise_willneed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_remove",
+    "callees": ["fput", "mmap_read_lock", "mmap_read_unlock", "vfs_fallocate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_populate",
+    "callees": ["__builtin_expect", "_printk", "faultin_vma_page_range", "mmap_read_lock", "mtree_load"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "madvise_dontneed_free",
+    "callees": ["madvise_dontneed_free_valid_vma", "madvise_free_single_vma", "zap_page_range_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_dontneed_free_valid_vma",
+    "callees": ["madvise_dontneed_free_valid_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_free_single_vma",
+    "callees": ["lru_add_drain", "mmu_notifier_invalidate_range_end", "mmu_notifier_invalidate_range_start", "tlb_end_vma.part.0", "tlb_finish_mmu", "tlb_gather_mmu", "tlb_start_vma", "update_hiwater_rss", "walk_page_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_free_pte_range",
+    "callees": ["__SCT__cond_resched", "__pte_offset_map_lock", "__rcu_read_unlock", "_raw_spin_unlock", "add_mm_counter", "flush_tlb_batched_pending", "folio_free_swap", "folio_mapcount", "folio_mark_lazyfree", "folio_put", "folio_trylock", "folio_unlock", "free_swap_and_cache", "page_mapcount", "pte_to_swp_entry", "vm_normal_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_pageout",
+    "callees": ["can_do_file_pageout", "lru_add_drain", "madvise_pageout_page_range", "tlb_finish_mmu", "tlb_gather_mmu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_pageout_page_range",
+    "callees": ["tlb_end_vma.part.0", "tlb_start_vma", "walk_page_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_cold",
+    "callees": ["lru_add_drain", "madvise_cold_page_range", "tlb_finish_mmu", "tlb_gather_mmu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_cold_page_range",
+    "callees": ["tlb_end_vma.part.0", "tlb_start_vma", "walk_page_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_cold_or_pageout_pte_range",
+    "callees": ["__SCT__cond_resched", "__pte_offset_map_lock", "__rcu_read_unlock", "_raw_spin_unlock", "can_do_file_pageout", "fatal_signal_pending", "flush_tlb_batched_pending", "folio_deactivate", "folio_isolate_lru", "folio_mapcount", "folio_put", "folio_putback_lru", "folio_trylock", "folio_unlock", "page_mapcount", "reclaim_pages", "vm_normal_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_do_file_pageout",
+    "callees": ["file_permission", "inode_owner_or_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "madvise_willneed",
+    "callees": ["fput", "lru_add_drain", "mmap_read_lock", "mmap_read_unlock", "shmem_swapin_range", "vfs_fadvise", "walk_page_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_swapin_range",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__swap_read_unplug", "linear_page_index", "put_page", "read_swap_cache_async", "xas_find", "xas_next_entry", "xas_pause"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swapin_walk_pmd_entry",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__pte_offset_map_lock", "__rcu_read_unlock", "__swap_read_unplug", "_raw_spin_unlock", "pte_to_swp_entry", "put_page", "read_swap_cache_async"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush",
+    "callees": ["flush_tlb_mm_range", "tlb_get_unmap_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_start_vma",
+    "callees": ["tlb_start_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_get_unmap_shift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_flush_mmu_tlbonly",
+    "callees": ["__tlb_reset_range", "tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tlb_reset_range",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pte_to_swp_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_page_index",
+    "callees": ["__builtin_expect", "linear_hugepage_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_hiwater_rss",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_mapcount",
+    "callees": ["__builtin_expect", "folio_total_mapcount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_mapcount",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmu_notifier_invalidate_range_end",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__mmu_notifier_invalidate_range_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmu_notifier_invalidate_range_start",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__mmu_notifier_invalidate_range_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xas_next_entry",
+    "callees": ["__builtin_expect", "xas_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_start_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_lock_killable",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write_killable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

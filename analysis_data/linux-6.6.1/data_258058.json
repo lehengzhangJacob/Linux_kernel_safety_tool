@@ -1,0 +1,92 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_threaded_wake_irq.part.0",
+    "callees": ["pm_wakeup_dev_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_disarm_wake_irq",
+    "callees": ["disable_irq_nosync", "irq_set_irq_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_arm_wake_irq",
+    "callees": ["enable_irq", "irq_set_irq_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_enable_wake_irq_complete",
+    "callees": ["enable_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_disable_wake_irq_check",
+    "callees": ["disable_irq_nosync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_enable_wake_irq_check",
+    "callees": ["__builtin_expect", "enable_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_set_dedicated_wake_irq_reverse",
+    "callees": ["__dev_pm_set_dedicated_wake_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_set_dedicated_wake_irq",
+    "callees": ["__dev_pm_set_dedicated_wake_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_pm_set_dedicated_wake_irq",
+    "callees": ["dev_pm_attach_wake_irq", "free_irq", "irq_modify_status", "kasprintf", "kfree", "kzalloc", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_threaded_wake_irq",
+    "callees": ["__pm_runtime_resume", "_dev_warn", "handle_threaded_wake_irq.part.0", "irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_clear_wake_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_wakeup_detach_irq", "free_irq", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_set_wake_irq",
+    "callees": ["dev_pm_attach_wake_irq", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_pm_attach_wake_irq",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_driver_string", "device_wakeup_attach_irq"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  }
+]

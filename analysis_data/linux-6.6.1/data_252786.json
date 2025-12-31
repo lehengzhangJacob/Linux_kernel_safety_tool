@@ -1,0 +1,164 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop.part.0",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop.part.0",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sch_frag_xmit_hook",
+    "callees": ["sch_fragment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sch_fragment",
+    "callees": ["__builtin_bswap16", "_printk", "dst_init", "ip_do_fragment", "kfree_skb_reason", "memset", "net_ratelimit", "netdev_name", "refdst_drop.part.0", "sch_frag_prepare_frag", "skb_protocol.part.0"],
+    "global_reads": ["ipv6_stub"],
+    "global_writes": []
+  },
+  {
+    "name": "sch_frag_dst_get_mtu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sch_frag_prepare_frag",
+    "callees": ["memcpy", "memset", "skb_pull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sch_frag_xmit",
+    "callees": ["__skb_dst_copy", "kfree_skb_reason", "memcpy", "skb_cow_head", "skb_postpush_rcsum", "skb_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_dst_copy",
+    "callees": ["dst_hold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netdev_name",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_postpush_rcsum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cow_head",
+    "callees": ["__skb_cow", "skb_header_cloned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_cow",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_cloned",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

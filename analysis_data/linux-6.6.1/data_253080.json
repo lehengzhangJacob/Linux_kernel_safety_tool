@@ -1,0 +1,962 @@
+[
+  {
+    "name": "__bpf_prog_free",
+    "callees": ["free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_free",
+    "callees": ["free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_free",
+    "callees": ["free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_free",
+    "callees": ["free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_free_used_maps",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_copy_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_update_at",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_adj_delta_to_imm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_alloc.part.0",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_get_offsets_bpf_xdp_link_attach_failed",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_needs_zext",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_get_trace_printk_proto",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_needs_zext",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_needs_zext",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_mem_disconnect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_alloc.part.0",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_bpf_xdp_link_attach_failed",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit", "strcpy", "trace_event_get_offsets_bpf_xdp_link_attach_failed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_mem_return_failed",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_mem_connect",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_mem_disconnect",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_devmap_xmit",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_cpumap_enqueue",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_cpumap_kthread",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_redirect_template",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_bulk_tx",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_xdp_exception",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_bpf_xdp_link_attach_failed",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "strcpy", "trace_event_buffer_commit", "trace_event_buffer_reserve", "trace_event_get_offsets_bpf_xdp_link_attach_failed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_mem_return_failed",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_mem_connect",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_mem_disconnect",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_devmap_xmit",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_cpumap_enqueue",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_cpumap_kthread",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_redirect_template",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_bulk_tx",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_xdp_exception",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_get_offsets_bpf_xdp_link_attach_failed",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_bpf_xdp_link_attach_failed",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_mem_return_failed",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_mem_connect",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_mem_disconnect",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_devmap_xmit",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_cpumap_enqueue",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_cpumap_kthread",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_redirect_template",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_bulk_tx",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_xdp_exception",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_bpf_xdp_link_attach_failed",
+    "callees": ["__probestub_mem_disconnect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_bpf_xdp_link_attach_failed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_mem_return_failed",
+    "callees": ["__probestub_mem_connect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_mem_return_failed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_mem_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_mem_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_mem_disconnect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_mem_disconnect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_devmap_xmit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_devmap_xmit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_cpumap_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_cpumap_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_cpumap_kthread",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_cpumap_kthread",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_redirect_map_err",
+    "callees": ["__probestub_xdp_redirect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_redirect_map_err",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_redirect_map",
+    "callees": ["__probestub_xdp_redirect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_redirect_map",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_redirect_err",
+    "callees": ["__probestub_xdp_redirect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_redirect_err",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_redirect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_redirect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_bulk_tx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_bulk_tx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_xdp_exception",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_xdp_exception",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_arch_text_invalidate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_arch_text_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_arch_text_poke",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_supports_far_kfunc_call",
+    "callees": ["bpf_jit_needs_zext.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_supports_kfunc_call",
+    "callees": ["bpf_jit_needs_zext.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_supports_subprog_tailcalls",
+    "callees": ["bpf_jit_needs_zext.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_needs_zext",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_helper_changes_pkt_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_jit_compile",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_int_jit_compile",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_event_output",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_get_trace_vprintk_proto",
+    "callees": ["bpf_get_trace_printk_proto.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_get_trace_printk_proto",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_get_raw_cpu_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_user_rnd_u32",
+    "callees": ["__builtin_expect", "prandom_u32_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_user_rnd_init_once",
+    "callees": ["__builtin_expect", "__do_once_done", "__do_once_start", "prandom_seed_full_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_free",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_free_deferred",
+    "callees": ["__bpf_prog_free", "bpf_free_used_maps", "kfree", "put_callchain_buffers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_free_used_btfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_free_used_maps",
+    "callees": ["__bpf_free_used_maps", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_free_used_maps",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_copy_info",
+    "callees": ["bpf_prog_array_copy_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_copy",
+    "callees": ["bpf_prog_array_alloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_update_at",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_delete_safe_at",
+    "callees": ["bpf_prog_array_update_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_delete_safe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_copy_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_user", "bpf_prog_array_copy_core", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_copy_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_is_empty",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_free_sleepable",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_free",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_array_alloc",
+    "callees": ["bpf_prog_array_alloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_ret1",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_select_runtime",
+    "callees": ["bpf_check_tail_call", "bpf_int_jit_compile", "bpf_prog_alloc_jited_linfo", "bpf_prog_jit_attempt_done", "bpf_prog_lock_ro", "bpf_prog_select_func"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_select_func",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_check_tail_call",
+    "callees": ["bpf_prog_map_compatible", "map_type_contains_progs", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_map_compatible",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run512",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run480",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run448",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run416",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run384",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run352",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run320",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run288",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run256",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run224",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run192",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run160",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run128",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run96",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run64",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_run32",
+    "callees": ["___bpf_prog_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "___bpf_prog_run",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_bswap64", "__builtin_expect", "__builtin_unreachable", "_printk", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_opcode_in_insntable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_call_base",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_kallsyms_del_all",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_remove_insns",
+    "callees": ["__builtin_expect", "bpf_adj_branches", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_patch_insn_single",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bpf_adj_branches", "bpf_adj_linfo", "bpf_prog_realloc", "memcpy", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_adj_linfo",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_adj_branches",
+    "callees": ["bpf_adj_delta_to_imm", "bpf_adj_delta_to_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_adj_delta_to_off",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_adj_delta_to_imm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_calc_tag",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "memset", "sha1_init", "sha1_transform", "vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bpf_prog_free",
+    "callees": ["free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_realloc",
+    "callees": ["__bpf_prog_free", "__vmalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_fill_jited_linfo",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_jit_attempt_done",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_alloc_jited_linfo",
+    "callees": ["kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_alloc",
+    "callees": ["__alloc_percpu_gfp", "bpf_prog_alloc_no_stats", "find_next_bit", "free_percpu", "kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_alloc_no_stats",
+    "callees": ["__alloc_percpu_gfp", "__mutex_init", "__vmalloc", "kfree", "kzalloc", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_internal_load_pointer_neg_helper",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_prog_lock_ro",
+    "callees": ["set_memory_ro", "set_vm_flush_reset_perms"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_vm_flush_reset_perms",
+    "callees": ["find_vm_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

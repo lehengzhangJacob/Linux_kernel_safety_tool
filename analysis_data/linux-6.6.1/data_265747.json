@@ -1,0 +1,122 @@
+[
+  {
+    "name": "drm_dev_is_unplugged",
+    "callees": ["drm_dev_enter", "drm_dev_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_version.part.0",
+    "callees": ["drm_copy_field"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_ioctl_flags.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_ioctl_flags",
+    "callees": ["drm_ioctl_flags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_ioctl",
+    "callees": ["__bad_copy_from", "__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__copy_overflow", "__drm_dev_dbg", "__kmalloc", "_copy_from_user", "_copy_to_user", "drm_dev_is_unplugged", "drm_ioctl_kernel", "kfree", "kmalloc_large", "kmalloc_trace", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_ioctl_kernel",
+    "callees": ["__builtin_expect", "drm_dev_is_unplugged", "drm_ioctl_permit", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_ioctl_permit",
+    "callees": ["__builtin_expect", "capable", "drm_is_current_master"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_version",
+    "callees": ["drm_copy_field", "drm_version.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_copy_field",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "__warn_printk", "_copy_to_user", "strlen"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_invalid_op",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_noop",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_setversion",
+    "callees": ["drm_set_busid", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_setclientcap",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_getcap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_getstats",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_getclient",
+    "callees": ["__task_pid_nr_ns"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_getunique",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_is_unplugged",
+    "callees": ["drm_dev_enter", "drm_dev_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "name": "led_classdev_resume",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_put",
+    "callees": ["module_put", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_classdev_suspend",
+    "callees": ["flush_work", "led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "leds_exit",
+    "callees": ["class_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "leds_init",
+    "callees": ["class_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_classdev_unregister",
+    "callees": ["__builtin_expect", "devres_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_classdev_match",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_classdev_register_ext",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "led_classdev_register_ext"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_classdev_release",
+    "callees": ["led_classdev_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_classdev_unregister",
+    "callees": ["__builtin_expect", "device_unregister", "down_write", "flush_work", "led_set_brightness", "led_stop_software_blink", "led_trigger_set", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_classdev_register_ext",
+    "callees": ["__builtin_expect", "__init_rwsem", "__mutex_init", "_dev_err", "_dev_warn", "device_create_with_groups", "device_set_node", "down_write", "fwnode_property_present", "fwnode_property_read_string", "fwnode_property_read_u32_array", "led_classdev_next_name", "led_compose_name", "led_init_core", "led_trigger_set_default", "led_update_brightness", "mutex_lock", "mutex_unlock", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_of_led_get_optional",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_remove_lookup",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_add_lookup",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_get",
+    "callees": ["__builtin_expect", "__devm_led_get", "led_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_get",
+    "callees": ["class_find_device", "kfree_const", "kstrdup_const", "led_module_get.part.0", "mutex_lock", "mutex_unlock", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_of_led_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__devm_led_get",
+    "callees": ["__devres_alloc_node", "devres_add", "led_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_led_release",
+    "callees": ["led_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_put",
+    "callees": ["module_put", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "of_led_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_resume",
+    "callees": ["led_classdev_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_suspend",
+    "callees": ["led_classdev_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_classdev_resume",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_classdev_suspend",
+    "callees": ["flush_work", "led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "color_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_brightness_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "brightness_store",
+    "callees": ["flush_work", "kstrtoull", "led_set_brightness", "led_trigger_remove", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "brightness_show",
+    "callees": ["led_update_brightness", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

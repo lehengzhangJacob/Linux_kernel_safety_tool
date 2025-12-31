@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsw_get_aux_clock_divider.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_irq_handler",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_ch",
+    "callees": ["__drm_dev_dbg", "get_encoder_by_aux_ch", "intel_bios_dp_aux_ch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_encoder_by_aux_ch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_init",
+    "callees": ["cpu_latency_qos_add_request", "drm_dp_aux_init", "kasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_fini",
+    "callees": ["cpu_latency_qos_remove_request", "cpu_latency_qos_request_active", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xelpdp_aux_data_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xelpdp_aux_ctl_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tgl_aux_data_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tgl_aux_ctl_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skl_aux_data_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skl_aux_ctl_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_aux_data_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_aux_ctl_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g4x_aux_data_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g4x_aux_ctl_reg",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_transfer",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "intel_dp_aux_header", "intel_dp_aux_xfer", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_xfer",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__intel_display_power_put_async", "__warn_printk", "_dev_err", "cpu_latency_qos_update_request", "dev_driver_string", "intel_aux_power_domain", "intel_display_power_get", "intel_dp_aux_wait_done", "intel_phy_is_tc", "intel_port_to_phy", "intel_pps_check_power_unlocked", "intel_pps_lock", "intel_pps_unlock", "intel_pps_vdd_off_unlocked", "intel_pps_vdd_on_unlocked", "intel_tc_port_connected_locked", "intel_tc_port_lock", "intel_tc_port_unlock", "msleep", "trace_i915_reg_rw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skl_get_aux_send_ctl",
+    "callees": ["intel_tc_port_in_tbt_alt_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g4x_get_aux_send_ctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skl_get_aux_clock_divider",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsw_get_aux_clock_divider",
+    "callees": ["hsw_get_aux_clock_divider.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_get_aux_clock_divider",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g4x_get_aux_clock_divider",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_wait_done",
+    "callees": ["__intel_wait_for_register", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_aux_pack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

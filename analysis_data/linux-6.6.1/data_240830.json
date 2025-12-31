@@ -1,0 +1,38 @@
+[
+  {
+    "name": "calibrate_delay",
+    "callees": ["_printk", "calibrate_delay_converge", "calibrate_delay_direct", "calibrate_delay_is_known", "calibration_delay_done"],
+    "global_reads": ["lpj_fine", "preset_lpj", "printed"],
+    "global_writes": ["loops_per_jiffy", "printed"]
+  },
+  {
+    "name": "calibration_delay_done",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calibrate_delay_is_known",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calibrate_delay_converge",
+    "callees": ["__delay"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "calibrate_delay_direct",
+    "callees": ["_printk", "read_current_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "lpj_setup",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": ["preset_lpj"]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "p9_release_pages",
+    "callees": ["put_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

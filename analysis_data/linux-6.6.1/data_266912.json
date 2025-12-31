@@ -1,0 +1,410 @@
+[
+  {
+    "name": "drm_vblank_count",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_wait_vblank_reply",
+    "callees": ["drm_vblank_count_and_time", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_last_vbltimestamp",
+    "callees": ["drm_crtc_from_index", "drm_crtc_get_last_vbltimestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_find",
+    "callees": ["drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_last_vbltimestamp",
+    "callees": ["drm_crtc_from_index", "drm_crtc_get_last_vbltimestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_init.part.0",
+    "callees": ["__drmm_add_action_or_reset", "__init_waitqueue_head", "drm_vblank_worker_init", "init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_queue_sequence_ioctl",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "drm_crtc_find", "drm_event_reserve_init_locked", "drm_vblank_count_and_time", "drm_vblank_get", "drm_vblank_put", "kfree", "kzalloc", "send_vblank_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_get_sequence_ioctl",
+    "callees": ["__drm_dev_dbg", "drm_crtc_find", "drm_modeset_lock", "drm_modeset_unlock", "drm_vblank_count_and_time", "drm_vblank_get", "drm_vblank_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_handle_vblank",
+    "callees": ["drm_handle_vblank"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_handle_vblank",
+    "callees": ["__builtin_expect", "__wake_up", "__warn_printk", "_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "dev_driver_string", "drm_handle_vblank_events", "drm_handle_vblank_works", "drm_update_vblank_count", "vblank_disable_fn"],
+    "global_reads": ["__already_done", "drm_vblank_offdelay"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_handle_vblank_events",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_dev_dbg", "drm_crtc_from_index", "drm_vblank_count_and_time", "drm_vblank_put", "send_vblank_event", "trace_drm_vblank_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_wait_vblank_ioctl",
+    "callees": ["__SCT__might_resched", "__drm_dev_dbg", "drm_lease_held", "drm_queue_vblank_event", "drm_vblank_count", "drm_vblank_get", "drm_vblank_put", "drm_wait_vblank_reply", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_wait_vblank_reply",
+    "callees": ["drm_vblank_count_and_time", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_queue_vblank_event",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "drm_crtc_from_index", "drm_event_reserve_init_locked", "drm_vblank_count_and_time", "drm_vblank_put", "kfree", "kzalloc", "send_vblank_event", "trace_drm_vblank_event_queued"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_legacy_modeset_ctl_ioctl",
+    "callees": ["drm_legacy_vblank_post_modeset", "drm_legacy_vblank_pre_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_legacy_vblank_post_modeset",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dev_driver_string", "drm_reset_vblank_timestamp", "drm_vblank_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_legacy_vblank_pre_modeset",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_vblank_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_restore",
+    "callees": ["__builtin_expect", "drm_vblank_restore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_restore",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_dev_dbg", "__get_vblank_counter", "__warn_printk", "dev_driver_string", "drm_get_last_vbltimestamp"],
+    "global_reads": ["__already_done", "__drm_debug"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_crtc_vblank_on",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dev_driver_string", "drm_reset_vblank_timestamp", "drm_vblank_enable"],
+    "global_reads": ["drm_vblank_offdelay"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_set_max_vblank_count",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_reset",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_off",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__wake_up", "__warn_printk", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "dev_driver_string", "drm_vblank_cancel_pending_works", "drm_vblank_count_and_time", "drm_vblank_disable_and_save", "drm_vblank_put", "kthread_flush_worker", "send_vblank_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_wait_one_vblank",
+    "callees": ["drm_wait_one_vblank"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_wait_one_vblank",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__warn_printk", "dev_driver_string", "drm_vblank_count", "drm_vblank_get", "drm_vblank_put", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_put",
+    "callees": ["drm_vblank_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_put",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "mod_timer", "vblank_disable_fn"],
+    "global_reads": ["drm_vblank_offdelay", "jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_get",
+    "callees": ["drm_vblank_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_get",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_driver_string", "drm_vblank_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_enable",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_dev_dbg", "__enable_vblank", "_raw_spin_lock", "_raw_spin_unlock", "drm_update_vblank_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__enable_vblank",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_crtc_from_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_send_vblank_event",
+    "callees": ["drm_vblank_count_and_time", "ktime_get", "send_vblank_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_arm_vblank_event",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drm_crtc_accurate_vblank_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_vblank_event",
+    "callees": ["drm_send_event_timestamp_locked", "ns_to_timespec64", "trace_drm_vblank_event_delivered"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_next_vblank_start",
+    "callees": ["drm_crtc_get_last_vbltimestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_count_and_time",
+    "callees": ["drm_vblank_count_and_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_count_and_time",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_count",
+    "callees": ["drm_vblank_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_last_vbltimestamp",
+    "callees": ["drm_crtc_from_index", "drm_crtc_get_last_vbltimestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_get_last_vbltimestamp",
+    "callees": ["ktime_get"],
+    "global_reads": ["drm_timestamp_precision"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_helper_get_vblank_timestamp",
+    "callees": ["drm_crtc_vblank_helper_get_vblank_timestamp_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_helper_get_vblank_timestamp_internal",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string", "drm_drv_uses_atomic_modeset", "ns_to_timespec64"],
+    "global_reads": ["__already_done", "__drm_debug"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_calc_timestamping_constants",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string", "drm_mode_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_vblank_waitqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_has_vblank",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_init",
+    "callees": ["drm_vblank_init.part.0", "drmm_kmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_init_release",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "kthread_destroy_worker", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vblank_disable_fn",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "drm_vblank_disable_and_save"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_disable_and_save",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__disable_vblank", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "drm_update_vblank_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__disable_vblank",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_crtc_from_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_accurate_vblank_count",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_driver_string", "drm_update_vblank_count", "drm_vblank_count"],
+    "global_reads": ["__already_done", "__drm_debug"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_vblank_count",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_update_vblank_count",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__get_vblank_counter", "__warn_printk", "dev_driver_string", "drm_get_last_vbltimestamp", "store_vblank"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_reset_vblank_timestamp",
+    "callees": ["__get_vblank_counter", "_raw_spin_lock", "_raw_spin_unlock", "drm_get_last_vbltimestamp", "store_vblank"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_vblank_counter",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_crtc_from_index", "drm_vblank_no_hw_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vblank_no_hw_counter",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "store_vblank",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drm_vblank_event_delivered",
+    "callees": ["__SCT__tp_func_drm_vblank_event_delivered", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drm_vblank_event_queued",
+    "callees": ["__SCT__tp_func_drm_vblank_event_queued", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drm_vblank_event",
+    "callees": ["__SCT__tp_func_drm_vblank_event", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_find",
+    "callees": ["drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

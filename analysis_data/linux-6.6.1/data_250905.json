@@ -1,0 +1,230 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_read_vpd",
+    "callees": ["__pci_read_vpd.part.0", "pci_vpd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_read_vpd",
+    "callees": ["__pci_read_vpd.part.0", "pci_vpd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_write_vpd",
+    "callees": ["__pci_write_vpd.part.0", "pci_vpd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_write_vpd",
+    "callees": ["__pci_write_vpd.part.0", "pci_vpd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_find_tag",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_alloc.part.0",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "__pci_read_vpd", "kfree", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_chelsio_extend_vpd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_blacklist_vpd",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_f0_vpd_link",
+    "callees": ["pci_dev_put", "pci_get_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_check_csum",
+    "callees": ["pci_vpd_find_ro_info_keyword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_find_ro_info_keyword",
+    "callees": ["pci_vpd_find_info_keyword", "pci_vpd_find_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_write_vpd_any",
+    "callees": ["__pci_write_vpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_write_vpd",
+    "callees": ["__pci_write_vpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_write_vpd",
+    "callees": ["__pci_write_vpd.part.0", "pci_vpd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_read_vpd_any",
+    "callees": ["__pci_read_vpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_read_vpd",
+    "callees": ["__pci_read_vpd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pci_read_vpd",
+    "callees": ["__pci_read_vpd.part.0", "pci_vpd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_find_info_keyword",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_find_id_string",
+    "callees": ["pci_vpd_find_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_find_tag",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_alloc",
+    "callees": ["pci_vpd_alloc.part.0", "pci_vpd_available"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vpd_attr_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vpd_write",
+    "callees": ["__pci_write_vpd", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_dev_put", "pci_get_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vpd_read",
+    "callees": ["__pci_read_vpd", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_dev_put", "pci_get_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_init",
+    "callees": ["__mutex_init", "pci_find_capability"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_write",
+    "callees": ["mutex_lock_killable", "mutex_unlock", "pci_user_write_config_dword", "pci_user_write_config_word", "pci_vpd_available", "pci_vpd_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_read",
+    "callees": ["fatal_signal_pending", "mutex_lock_killable", "mutex_unlock", "pci_user_read_config_dword", "pci_user_write_config_word", "pci_vpd_available", "pci_vpd_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_wait",
+    "callees": ["_dev_warn", "pci_user_read_config_word", "usleep_range_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_available",
+    "callees": ["pci_vpd_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vpd_size",
+    "callees": ["__pci_read_vpd", "_dev_info", "_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

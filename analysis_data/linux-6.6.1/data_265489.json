@@ -1,0 +1,50 @@
+[
+  {
+    "name": "intel_wopcm_init",
+    "callees": ["__builtin_expect", "__check_layout", "__drm_dev_dbg", "__wopcm_regs_locked", "__wopcm_regs_writable", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__wopcm_regs_writable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__wopcm_regs_locked",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__check_layout",
+    "callees": ["__builtin_expect", "_dev_err", "check_hw_restrictions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_hw_restrictions",
+    "callees": ["gen9_check_dword_gap", "gen9_check_huc_fw_fits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen9_check_huc_fw_fits",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen9_check_dword_gap",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wopcm_init_early",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

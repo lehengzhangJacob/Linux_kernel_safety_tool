@@ -1,0 +1,74 @@
+[
+  {
+    "name": "acpi_ds_clear_implicit_return.part.0",
+    "callees": ["acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_do_implicit_return.part.0",
+    "callees": ["acpi_ds_clear_implicit_return.part.0", "acpi_ut_add_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_clear_implicit_return.part.0",
+    "callees": ["acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_evaluate_name_path",
+    "callees": ["acpi_ds_create_operand", "acpi_ds_obj_stack_pop", "acpi_ds_result_push", "acpi_ex_resolve_to_value", "acpi_ut_copy_iobject_to_iobject", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_operands",
+    "callees": ["acpi_ds_create_operand", "acpi_ds_obj_stack_pop_and_delete", "acpi_exception"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_operand",
+    "callees": ["acpi_ds_init_object_from_op", "acpi_ds_obj_stack_push", "acpi_ds_result_pop", "acpi_ex_get_name_string", "acpi_exception", "acpi_ns_lookup", "acpi_ps_get_opcode_info", "acpi_ut_create_internal_object_dbg", "acpi_ut_delete_object_desc", "acpi_ut_prefixed_namespace_error", "kfree"],
+    "global_reads": ["acpi_gbl_root_node"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_clear_operands",
+    "callees": ["acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_resolve_operands",
+    "callees": ["acpi_ex_resolve_to_value"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_delete_result_if_not_used",
+    "callees": ["acpi_ds_is_result_used", "acpi_ds_result_pop", "acpi_error", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_is_result_used",
+    "callees": ["acpi_ds_do_implicit_return", "acpi_error", "acpi_ps_get_opcode_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_do_implicit_return",
+    "callees": ["acpi_ds_do_implicit_return.part.0"],
+    "global_reads": ["acpi_gbl_enable_interpreter_slack"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_clear_implicit_return",
+    "callees": ["acpi_ds_clear_implicit_return.part.0"],
+    "global_reads": ["acpi_gbl_enable_interpreter_slack"],
+    "global_writes": []
+  }
+]

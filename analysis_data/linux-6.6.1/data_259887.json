@@ -1,0 +1,164 @@
+[
+  {
+    "name": "acpi_irq_penalty_update",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_init",
+    "callees": ["acpi_scan_add_handler", "register_syscore_ops"],
+    "global_reads": ["acpi_irq_balance", "acpi_irq_model", "acpi_noirq"],
+    "global_writes": ["acpi_irq_balance"]
+  },
+  {
+    "name": "acpi_irq_balance_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_irq_balance"]
+  },
+  {
+    "name": "acpi_irq_nobalance_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_irq_balance"]
+  },
+  {
+    "name": "acpi_irq_pci",
+    "callees": ["acpi_irq_penalty_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_irq_isa",
+    "callees": ["acpi_irq_penalty_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_penalize_sci_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["sci_irq", "sci_penalty"]
+  },
+  {
+    "name": "acpi_isa_irq_available",
+    "callees": ["acpi_irq_get_penalty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_penalize_isa_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_irq_penalty_update",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_remove",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irqrouter_resume",
+    "callees": ["acpi_pci_link_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_add",
+    "callees": ["__builtin_memcpy", "_printk", "acpi_evaluate_object", "acpi_pci_link_get_current", "acpi_pci_link_get_possible", "kfree", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_free_irq",
+    "callees": ["acpi_evaluate_object", "acpi_fetch_acpi_dev", "acpi_handle_printk", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_allocate_irq",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_handle_printk", "acpi_pci_link_allocate", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_allocate",
+    "callees": ["acpi_handle_printk", "acpi_irq_get_penalty", "acpi_pci_link_set"],
+    "global_reads": ["acpi_irq_balance", "acpi_strict"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_irq_penalty_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_irq_get_penalty",
+    "callees": ["acpi_irq_pci_sharing_penalty"],
+    "global_reads": ["sci_irq", "sci_penalty"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_irq_pci_sharing_penalty",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_set",
+    "callees": ["acpi_bus_get_status", "acpi_evaluation_failure_warn", "acpi_handle_printk", "acpi_pci_link_get_current", "acpi_set_current_resources", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_get_current",
+    "callees": ["acpi_bus_get_status", "acpi_evaluation_failure_warn", "acpi_handle_printk", "acpi_walk_resources"],
+    "global_reads": ["acpi_strict"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_check_current",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_get_possible",
+    "callees": ["acpi_walk_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_link_check_possible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

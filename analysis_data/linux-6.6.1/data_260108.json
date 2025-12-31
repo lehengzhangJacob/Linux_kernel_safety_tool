@@ -1,0 +1,350 @@
+[
+  {
+    "name": "__static_key_slow_dec_cpuslocked",
+    "callees": ["__static_key_slow_dec_cpuslocked.part.0", "lockdep_assert_cpus_held", "static_key_slow_try_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "addr_conflict",
+    "callees": ["arch_jump_entry_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jump_label_text_reserved",
+    "callees": ["addr_conflict"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec_cpuslocked",
+    "callees": ["__static_key_slow_dec_cpuslocked.part.0", "lockdep_assert_cpus_held", "static_key_slow_try_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_sort_entries",
+    "callees": ["sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module",
+    "callees": ["within_module_core", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec",
+    "callees": ["__static_key_slow_dec_cpuslocked", "cpus_read_lock", "cpus_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_entry_set_init.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec_cpuslocked.part.0",
+    "callees": ["jump_label_update", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_disable_cpuslocked.part.0",
+    "callees": ["jump_label_update", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_enable_cpuslocked.part.0",
+    "callees": ["jump_label_update", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_cmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_entry_set_init.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_update",
+    "callees": ["__builtin_expect", "__jump_label_mod_update", "__jump_label_update", "__module_address"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_text_reserved",
+    "callees": ["__jump_label_mod_text_reserved", "__jump_label_text_reserved"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_init_module",
+    "callees": ["register_module_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_module_notify",
+    "callees": ["__warn_printk", "cpus_read_lock", "cpus_read_unlock", "jump_label_add_module", "jump_label_del_module", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_del_module",
+    "callees": ["__builtin_expect", "kfree", "within_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_add_module",
+    "callees": ["__builtin_expect", "__jump_label_update", "__module_address", "jump_entry_set_init.part.0", "jump_label_sort_entries", "kfree", "kzalloc", "within_module", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jump_label_mod_update",
+    "callees": ["__builtin_expect", "__jump_label_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jump_label_mod_text_reserved",
+    "callees": ["__builtin_expect", "__jump_label_text_reserved", "__module_text_address", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_init_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_init",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "jump_entry_set_init.part.0", "jump_label_sort_entries", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": ["static_key_initialized"]
+  },
+  {
+    "name": "__jump_label_update",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "arch_jump_label_transform_apply", "arch_jump_label_transform_queue", "jump_label_can_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_can_update",
+    "callees": ["__builtin_expect", "__warn_printk", "kernel_text_address"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__jump_label_text_reserved",
+    "callees": ["addr_conflict"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "addr_conflict",
+    "callees": ["arch_jump_entry_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_rate_limit",
+    "callees": ["__builtin_expect", "__warn_printk", "init_timer_key"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_deferred_flush",
+    "callees": ["__builtin_expect", "__warn_printk", "flush_delayed_work"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec_deferred",
+    "callees": ["__builtin_expect", "__warn_printk", "schedule_delayed_work", "static_key_slow_try_dec"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_slow_dec_cpuslocked",
+    "callees": ["__builtin_expect", "__static_key_slow_dec_cpuslocked", "__warn_printk"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_slow_dec",
+    "callees": ["__builtin_expect", "__static_key_slow_dec", "__warn_printk"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_update_timeout",
+    "callees": ["__static_key_slow_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec",
+    "callees": ["__static_key_slow_dec_cpuslocked", "cpus_read_lock", "cpus_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_key_slow_dec_cpuslocked",
+    "callees": ["__static_key_slow_dec_cpuslocked.part.0", "lockdep_assert_cpus_held", "static_key_slow_try_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_slow_try_dec",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_disable",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "static_key_disable_cpuslocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_disable_cpuslocked",
+    "callees": ["__builtin_expect", "__warn_printk", "lockdep_assert_cpus_held", "static_key_disable_cpuslocked.part.0"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_enable",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "static_key_enable_cpuslocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_enable_cpuslocked",
+    "callees": ["__builtin_expect", "__warn_printk", "lockdep_assert_cpus_held", "static_key_enable_cpuslocked.part.0"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_slow_inc",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "static_key_slow_inc_cpuslocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_slow_inc_cpuslocked",
+    "callees": ["__builtin_expect", "jump_label_update", "lockdep_assert_cpus_held", "mutex_lock", "mutex_unlock", "static_key_fast_inc_not_disabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_fast_inc_not_disabled",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["static_key_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "static_key_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_sort_entries",
+    "callees": ["sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_swap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_cmp",
+    "callees": ["jump_label_cmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jump_label_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module",
+    "callees": ["within_module_core", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

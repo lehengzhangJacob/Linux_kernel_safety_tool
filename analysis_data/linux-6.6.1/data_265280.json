@@ -1,0 +1,356 @@
+[
+  {
+    "name": "minstrel_ht_avg_ampdu_len",
+    "callees": ["minstrel_ht_avg_ampdu_len.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_tp_avg",
+    "callees": ["minstrel_ht_avg_ampdu_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_downgrade_rate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_fill_rate_array",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_avg_ampdu_len",
+    "callees": ["minstrel_ht_avg_ampdu_len.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_ri_txstat_valid.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc80211_minstrel_exit",
+    "callees": ["ieee80211_rate_control_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc80211_minstrel_init",
+    "callees": ["ieee80211_rate_control_register", "init_sample_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_sample_table",
+    "callees": ["get_random_bytes", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_expected_throughput",
+    "callees": ["minstrel_ht_get_tp_avg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_alloc",
+    "callees": ["kzalloc", "minstrel_ht_init_cck_rates", "minstrel_ht_init_ofdm_rates"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_init_ofdm_rates",
+    "callees": ["memset", "minstrel_ht_fill_rate_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_fill_rate_array",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_free_sta",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_alloc_sta",
+    "callees": ["kmalloc_large"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_rate_update",
+    "callees": ["minstrel_ht_update_caps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_rate_init",
+    "callees": ["minstrel_ht_update_caps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_update_caps",
+    "callees": ["__builtin_expect", "ieee80211_frame_duration", "memset", "minstrel_get_valid_vht_rates", "minstrel_ht_update_cck", "minstrel_ht_update_ofdm", "minstrel_ht_update_rates", "minstrel_ht_update_stats", "rate_lowest_index", "test_sta_flag"],
+    "global_reads": ["jiffies", "minstrel_vht_only"],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_update_ofdm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_update_cck",
+    "callees": ["_ieee80211_hw_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_rate",
+    "callees": ["__builtin_expect", "minstrel_ht_get_sample_rate"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_update_rates",
+    "callees": ["ieee80211_sta_recalc_aggregates", "kzalloc", "minstrel_ht_get_max_amsdu_len", "minstrel_ht_set_rate", "rate_control_set_rates"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_max_amsdu_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_set_rate",
+    "callees": ["minstrel_calc_retransmit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_calc_retransmit",
+    "callees": ["minstrel_ht_avg_ampdu_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_tx_status",
+    "callees": ["minstrel_downgrade_rate", "minstrel_ht_get_stats", "minstrel_ht_ri_get_stats", "minstrel_ht_ri_txstat_valid", "minstrel_ht_txstat_valid", "minstrel_ht_update_rates", "minstrel_ht_update_stats"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_downgrade_rate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_ri_txstat_valid",
+    "callees": ["minstrel_ht_ri_txstat_valid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_txstat_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_update_stats",
+    "callees": ["_ieee80211_hw_check", "minstrel_ht_assign_best_tp_rates", "minstrel_ht_calc_rate_stats", "minstrel_ht_get_tp_avg", "minstrel_ht_prob_rate_reduce_streams", "minstrel_ht_refill_sample_rates", "minstrel_ht_set_best_prob_rate", "minstrel_ht_sort_best_tp_rates"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_refill_sample_rates",
+    "callees": ["memcpy", "minstrel_ht_move_sample_rates", "minstrel_ht_next_inc_rate", "minstrel_ht_next_jump_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_next_jump_rate",
+    "callees": ["minstrel_ht_group_min_rate_offset", "minstrel_ht_next_group_sample_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_next_group_sample_rate",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_1881", "__compiletime_assert_1886"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_next_inc_rate",
+    "callees": ["minstrel_ht_group_min_rate_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_group_min_rate_offset",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_1861", "__compiletime_assert_1866"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_move_sample_rates",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_prob_rate_reduce_streams",
+    "callees": ["minstrel_ht_get_tp_avg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_assign_best_tp_rates",
+    "callees": ["minstrel_ht_get_tp_avg", "minstrel_ht_sort_best_tp_rates"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_set_best_prob_rate",
+    "callees": ["minstrel_ht_get_tp_avg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_sort_best_tp_rates",
+    "callees": ["memmove", "minstrel_ht_get_tp_avg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_tp_avg",
+    "callees": ["minstrel_ht_avg_ampdu_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_avg_ampdu_len",
+    "callees": ["minstrel_ht_avg_ampdu_len.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_ri_get_stats",
+    "callees": ["minstrel_vht_ri_get_group_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_ht_get_stats",
+    "callees": ["minstrel_vht_get_group_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_vht_get_group_idx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "minstrel_get_valid_vht_rates",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

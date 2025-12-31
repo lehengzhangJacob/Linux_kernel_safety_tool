@@ -1,0 +1,92 @@
+[
+  {
+    "name": "_flat_send_IPI_mask",
+    "callees": ["__default_send_IPI_dest_field"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "physflat_probe",
+    "callees": ["cpumask_weight"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "physflat_acpi_madt_oem_check",
+    "callees": ["_printk", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_probe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_phys_pkg_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_apic_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_get_apic_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_send_IPI_mask_allbutself",
+    "callees": ["__builtin_constant_p", "_flat_send_IPI_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_send_IPI_mask",
+    "callees": ["_flat_send_IPI_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_flat_send_IPI_mask",
+    "callees": ["__default_send_IPI_dest_field"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flat_acpi_madt_oem_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_apic_mem_eoi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_apic_mem_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_apic_mem_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,392 @@
+[
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_op_unaligned",
+    "callees": ["ahash_restore_req", "ahash_save_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op",
+    "callees": ["ahash_op_unaligned", "crypto_ahash_op.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_op_unaligned",
+    "callees": ["ahash_restore_req", "ahash_save_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op",
+    "callees": ["ahash_op_unaligned", "crypto_ahash_op.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup_finish1",
+    "callees": ["ahash_restore_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hash_walk_next",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_set_needkey.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_set_needkey",
+    "callees": ["ahash_set_needkey.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg",
+    "callees": ["ahash_prepare_alg.part.0", "hash_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg",
+    "callees": ["ahash_prepare_alg.part.0", "hash_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_ahash",
+    "callees": ["ahash_prepare_alg", "crypto_register_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup_done2.part.0",
+    "callees": ["ahash_restore_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_set_needkey.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_hash_walk_first.part.0",
+    "callees": ["hash_walk_new_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_hash_alg_has_setkey",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_register_instance",
+    "callees": ["__builtin_expect", "ahash_prepare_alg", "crypto_register_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_ahashes",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_ahashes",
+    "callees": ["crypto_register_ahash", "crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_ahash",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_ahash",
+    "callees": ["ahash_prepare_alg", "crypto_register_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_prepare_alg",
+    "callees": ["ahash_prepare_alg.part.0", "hash_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_clone_ahash",
+    "callees": ["__builtin_expect", "crypto_clone_shash_ops_async", "crypto_clone_tfm", "crypto_destroy_tfm", "crypto_tfm_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_has_ahash",
+    "callees": ["crypto_type_has_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alloc_ahash",
+    "callees": ["crypto_alloc_tfm_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_grab_ahash",
+    "callees": ["crypto_grab_spawn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_free_instance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_extsize",
+    "callees": ["crypto_alg_extsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_init_tfm",
+    "callees": ["ahash_set_needkey", "crypto_init_shash_ops_async"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_exit_tfm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup",
+    "callees": ["ahash_def_finup_finish1", "ahash_save_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup_done1",
+    "callees": ["ahash_def_finup_finish1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup_finish1",
+    "callees": ["ahash_restore_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_def_finup_done2",
+    "callees": ["ahash_def_finup_done2.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_digest",
+    "callees": ["crypto_ahash_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_finup",
+    "callees": ["crypto_ahash_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_final",
+    "callees": ["crypto_ahash_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_op",
+    "callees": ["ahash_op_unaligned", "crypto_ahash_op.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_op_unaligned",
+    "callees": ["ahash_restore_req", "ahash_save_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_op_unaligned_done",
+    "callees": ["ahash_restore_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_restore_req",
+    "callees": ["kfree_sensitive", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_save_req",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "crypto_ahash_import", "kfree", "kfree_sensitive", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_setkey",
+    "callees": ["__builtin_expect", "ahash_set_needkey", "ahash_setkey_unaligned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_set_needkey",
+    "callees": ["ahash_set_needkey.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_nosetkey",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahash_setkey_unaligned",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_hash_walk_first",
+    "callees": ["crypto_hash_walk_first.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_hash_walk_done",
+    "callees": ["__SCT__cond_resched", "hash_walk_new_entry", "hash_walk_next", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hash_walk_new_entry",
+    "callees": ["hash_walk_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hash_walk_next",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_tfm_get",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

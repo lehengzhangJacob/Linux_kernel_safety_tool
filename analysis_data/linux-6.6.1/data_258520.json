@@ -1,0 +1,308 @@
+[
+  {
+    "name": "kimage_free_page_list",
+    "callees": ["kimage_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_page_list",
+    "callees": ["kimage_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_page_list",
+    "callees": ["kimage_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_page_list",
+    "callees": ["kimage_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_is_destination_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_control_pages",
+    "callees": ["kimage_alloc_crash_control_pages", "kimage_alloc_normal_control_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_is_destination_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_entry",
+    "callees": ["kimage_free_pages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_entry",
+    "callees": ["kimage_free_pages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_kexec",
+    "callees": ["_printk", "cpu_hotplug_enable", "kernel_restart_prepare", "kmsg_dump", "machine_kexec", "machine_shutdown", "migrate_to_reboot_cpu"],
+    "global_reads": ["kexec_image"],
+    "global_writes": ["kexec_in_progress"]
+  },
+  {
+    "name": "crash_save_cpu",
+    "callees": ["append_elf_note", "elf_core_copy_regs", "final_note", "memset"],
+    "global_reads": ["crash_notes", "nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "crash_shrink_memory",
+    "callees": ["__crash_shrink_memory", "insert_resource", "release_resource"],
+    "global_reads": ["kexec_crash_image"],
+    "global_writes": []
+  },
+  {
+    "name": "__crash_shrink_memory",
+    "callees": ["crash_free_reserved_phys_range", "insert_resource", "kzalloc", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crash_get_memory_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crash_kexec",
+    "callees": ["__crash_kexec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__crash_kexec",
+    "callees": ["crash_save_vmcoreinfo", "crash_setup_regs", "machine_crash_shutdown", "machine_kexec"],
+    "global_reads": ["kexec_crash_image"],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_load_permitted",
+    "callees": ["capable", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["kexec_load_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_core_sysctl_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_limit_handler",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_dointvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_load_segment",
+    "callees": ["kimage_load_crash_segment", "kimage_load_normal_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_load_crash_segment",
+    "callees": ["__SCT__cond_resched", "__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "arch_kexec_post_alloc_pages", "arch_kexec_pre_free_pages", "memcpy", "memset"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_load_normal_segment",
+    "callees": ["__SCT__cond_resched", "__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "kimage_add_entry", "kimage_alloc_page", "memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_page",
+    "callees": ["copy_highpage", "kimage_alloc_pages", "kimage_dst_used", "kimage_is_destination_range"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_dst_used",
+    "callees": [],
+    "global_reads": ["page_offset_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free",
+    "callees": ["crash_update_vmcoreinfo_safecopy", "kfree", "kimage_free_entry", "kimage_free_page_list", "machine_kexec_cleanup", "vunmap"],
+    "global_reads": ["page_offset_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_entry",
+    "callees": ["kimage_free_pages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_terminate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_add_entry",
+    "callees": ["kimage_alloc_page"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_crash_copy_vmcoreinfo",
+    "callees": ["_printk", "crash_update_vmcoreinfo_safecopy", "kimage_alloc_control_pages", "vmap"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_control_pages",
+    "callees": ["kimage_alloc_crash_control_pages", "kimage_alloc_normal_control_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_crash_control_pages",
+    "callees": ["__SCT__cond_resched", "arch_kexec_post_alloc_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_normal_control_pages",
+    "callees": ["kimage_alloc_pages", "kimage_free_page_list", "kimage_is_destination_range"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_page_list",
+    "callees": ["kimage_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_free_pages",
+    "callees": ["__free_pages", "arch_kexec_pre_free_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_alloc_pages",
+    "callees": ["alloc_pages", "arch_kexec_post_alloc_pages", "fatal_signal_pending"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kimage_is_destination_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_kimage_alloc_init",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sanity_check_segment_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_crash_loaded",
+    "callees": [],
+    "global_reads": ["kexec_crash_image"],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_should_crash",
+    "callees": [],
+    "global_reads": ["crash_kexec_post_notifiers", "panic_on_oops"],
+    "global_writes": []
+  },
+  {
+    "name": "crash_free_reserved_phys_range",
+    "callees": ["free_reserved_page"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "crash_setup_regs",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_highpage",
+    "callees": ["copy_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "elf_core_copy_regs",
+    "callees": ["x86_fsbase_read_cpu", "x86_gsbase_read_cpu_inactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_fsbase_read_cpu",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_reserved_page",
+    "callees": ["__free_pages", "adjust_managed_page_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

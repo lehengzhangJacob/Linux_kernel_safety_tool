@@ -1,0 +1,116 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_dup",
+    "callees": ["fd_install", "get_unused_fd_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_utimes",
+    "callees": ["kern_path", "path_put", "vfs_utimes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_rmdir",
+    "callees": ["do_rmdir", "getname_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_mkdir",
+    "callees": ["__builtin_expect", "current_umask", "done_path_create", "kern_path_create", "vfs_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_unlink",
+    "callees": ["do_unlinkat", "getname_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_symlink",
+    "callees": ["__builtin_expect", "done_path_create", "kern_path_create", "vfs_symlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_link",
+    "callees": ["__builtin_expect", "done_path_create", "kern_path", "kern_path_create", "may_linkat", "path_put", "vfs_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_mknod",
+    "callees": ["__builtin_expect", "current_umask", "done_path_create", "kern_path_create", "vfs_mknod"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_stat",
+    "callees": ["kern_path", "path_put", "vfs_getattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_eaccess",
+    "callees": ["kern_path", "path_permission", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_chmod",
+    "callees": ["chmod_common", "kern_path", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_chown",
+    "callees": ["chown_common", "kern_path", "mnt_drop_write", "mnt_want_write", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_chroot",
+    "callees": ["kern_path", "ns_capable", "path_permission", "path_put", "set_fs_root"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_chdir",
+    "callees": ["kern_path", "path_permission", "path_put", "set_fs_pwd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_umount",
+    "callees": ["kern_path", "path_umount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_mount",
+    "callees": ["kern_path", "path_mount", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

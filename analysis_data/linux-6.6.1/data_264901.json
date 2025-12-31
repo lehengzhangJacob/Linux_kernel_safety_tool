@@ -1,0 +1,320 @@
+[
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_xhci_dbg_quirks.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_resuming_ports",
+    "callees": ["xhci_get_rhub"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_bus_resume",
+    "callees": ["__builtin_constant_p", "_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_next_bit", "msleep", "usb_hcd_is_primary_hcd", "xhci_find_slot_id_by_port", "xhci_get_rhub", "xhci_handshake", "xhci_port_missing_cas_quirk", "xhci_ring_device"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_port_missing_cas_quirk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_bus_suspend",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "msleep", "usb_amd_pt_check_port", "usb_hcd_is_primary_hcd", "usleep_range_state", "xhci_find_slot_id_by_port", "xhci_get_rhub", "xhci_stop_device"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_hub_status_data",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memset", "trace_xhci_hub_status_data", "usb_hcd_is_primary_hcd", "xhci_get_rhub", "xhci_hc_died"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_hub_control",
+    "callees": ["__builtin_constant_p", "_dev_err", "_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memset", "msleep", "trace_xhci_get_port_status", "usb_hcd_end_port_resume", "usb_hcd_is_primary_hcd", "usb_hcd_start_port_resume", "usleep_range_state", "wait_for_completion_timeout", "xhci_clear_port_change_bit", "xhci_create_usb3x_bos_desc", "xhci_disable_port", "xhci_enter_test_mode", "xhci_exit_test_mode", "xhci_find_slot_id_by_port", "xhci_get_ext_port_status", "xhci_get_port_status", "xhci_get_rhub", "xhci_hc_died", "xhci_hub_descriptor", "xhci_ring_device", "xhci_set_port_power", "xhci_set_remote_wake_mask", "xhci_stop_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_port_status",
+    "callees": ["xhci_get_rhub", "xhci_get_usb2_port_status", "xhci_get_usb3_port_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_usb2_port_status",
+    "callees": ["__builtin_constant_p", "usb_hcd_end_port_resume", "xhci_handle_usb2_port_link_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_usb3_port_status",
+    "callees": ["usb_hcd_end_port_resume", "usb_hcd_is_primary_hcd", "xhci_del_comp_mod_timer", "xhci_hub_report_usb3_link_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_ext_port_status",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_handle_usb2_port_link_resume",
+    "callees": ["__builtin_constant_p", "_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mod_timer", "usb_hcd_end_port_resume", "usb_hcd_is_primary_hcd", "usb_hcd_start_port_resume", "wait_for_completion_timeout", "xhci_find_slot_id_by_port", "xhci_ring_device"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_del_comp_mod_timer",
+    "callees": ["timer_delete_sync", "xhci_dbg_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_hub_report_usb3_link_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_test_and_clear_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_set_link_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_exit_test_mode",
+    "callees": ["_dev_err", "pm_runtime_allow", "xhci_halt", "xhci_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_enter_test_mode",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_runtime_forbid", "xhci_disable_slot", "xhci_free_virt_device", "xhci_halt", "xhci_port_set_test_mode", "xhci_set_port_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_port_set_test_mode",
+    "callees": ["xhci_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_set_port_power",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "usb_acpi_power_manageable", "usb_acpi_set_power_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_get_rhub",
+    "callees": ["usb_hcd_is_primary_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_disable_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_ring_device",
+    "callees": ["xhci_ring_ep_doorbell"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_find_slot_id_by_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_port_state_to_neutral",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_hub_descriptor",
+    "callees": ["xhci_usb2_hub_descriptor", "xhci_usb3_hub_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xhci_create_usb3x_bos_desc",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_713", "__compiletime_assert_718", "__compiletime_assert_738"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_xhci_hub_status_data",
+    "callees": ["__SCT__tp_func_xhci_hub_status_data", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_xhci_get_port_status",
+    "callees": ["__SCT__tp_func_xhci_get_port_status", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_xhci_stop_device",
+    "callees": ["__SCT__tp_func_xhci_stop_device", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_xhci_dbg_quirks",
+    "callees": ["__SCT__tp_func_xhci_dbg_quirks", "cpu_online", "trace_xhci_dbg_quirks.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

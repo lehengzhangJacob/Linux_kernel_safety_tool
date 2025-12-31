@@ -1,0 +1,14 @@
+[
+  {
+    "name": "nfs_unregister_sysctl",
+    "callees": ["unregister_sysctl_table"],
+    "global_reads": ["nfs_callback_sysctl_table"],
+    "global_writes": ["nfs_callback_sysctl_table"]
+  },
+  {
+    "name": "nfs_register_sysctl",
+    "callees": ["register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": ["nfs_callback_sysctl_table"]
+  }
+]

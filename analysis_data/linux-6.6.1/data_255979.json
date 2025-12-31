@@ -1,0 +1,74 @@
+[
+  {
+    "name": "virtio_pci_legacy_remove",
+    "callees": ["vp_legacy_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_pci_legacy_probe",
+    "callees": ["vp_legacy_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_vq",
+    "callees": ["ioread8", "vp_legacy_queue_vector", "vp_legacy_set_queue_address", "vring_del_virtqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_vq",
+    "callees": ["_dev_err", "virtqueue_get_desc_addr", "vp_legacy_get_queue_enable", "vp_legacy_get_queue_size", "vp_legacy_queue_vector", "vp_legacy_set_queue_address", "vring_create_virtqueue", "vring_del_virtqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_config_vector",
+    "callees": ["vp_legacy_config_vector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_reset",
+    "callees": ["vp_legacy_get_status", "vp_legacy_set_status", "vp_synchronize_vectors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_set_status",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "vp_legacy_set_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get_status",
+    "callees": ["vp_legacy_get_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_set",
+    "callees": ["iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get",
+    "callees": ["ioread8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_finalize_features",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "vp_legacy_set_features", "vring_transport_features"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get_features",
+    "callees": ["vp_legacy_get_features"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

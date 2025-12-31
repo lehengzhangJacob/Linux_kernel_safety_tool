@@ -1,0 +1,212 @@
+[
+  {
+    "name": "pcie_port_device_remove",
+    "callees": ["device_for_each_child", "pci_free_irq_vectors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_init",
+    "callees": ["__pci_register_driver", "dmi_check_system", "pcie_pme_init"],
+    "global_reads": ["pcie_ports_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "dmi_pcie_pme_disable_msi",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["pcie_pme_msi_disabled"]
+  },
+  {
+    "name": "pcie_portdrv_mmio_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_slot_reset",
+    "callees": ["device_for_each_child", "pci_restore_state", "pci_save_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_error_detected",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_shutdown",
+    "callees": ["__pm_runtime_use_autosuspend", "pci_bridge_d3_possible", "pcie_port_device_remove", "pm_runtime_forbid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_remove",
+    "callees": ["__pm_runtime_use_autosuspend", "pci_bridge_d3_possible", "pci_disable_device", "pcie_port_device_remove", "pm_runtime_forbid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_portdrv_probe",
+    "callees": ["__pm_runtime_suspend", "__pm_runtime_use_autosuspend", "ktime_get_mono_fast_ns", "pci_bridge_d3_possible", "pci_save_state", "pcie_link_rcec", "pcie_port_device_register", "pm_runtime_allow", "pm_runtime_set_autosuspend_delay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_runtime_idle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_runtime_suspend",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_setup",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": ["pcie_ports_disabled", "pcie_ports_dpc_native", "pcie_ports_native"]
+  },
+  {
+    "name": "pcie_port_service_unregister",
+    "callees": ["driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_service_register",
+    "callees": ["driver_register"],
+    "global_reads": ["pcie_ports_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_shutdown_service",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_remove_service",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_probe_service",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_remove",
+    "callees": ["device_for_each_child", "pci_free_irq_vectors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_find_device",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_service_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_iter",
+    "callees": ["device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_runtime_resume",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_resume",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_resume_noirq",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_suspend",
+    "callees": ["device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_device_register",
+    "callees": ["get_port_device_capability", "pci_disable_device", "pci_enable_device", "pci_free_irq_vectors", "pci_set_master", "pcie_device_init", "pcie_init_service_irqs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_device_init",
+    "callees": ["dev_set_name", "device_register", "kzalloc", "pm_runtime_no_callbacks", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_port_device_capability",
+    "callees": ["pci_find_ext_capability", "pci_find_host_bridge", "pcie_capability_clear_and_set_word", "pcie_capability_read_dword", "pcie_pme_interrupt_enable"],
+    "global_reads": ["pcie_ports_native"],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_init_service_irqs",
+    "callees": ["pci_alloc_irq_vectors", "pci_irq_vector", "pcie_port_enable_irq_vec"],
+    "global_reads": ["pcie_pme_msi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_port_enable_irq_vec",
+    "callees": ["pci_alloc_irq_vectors", "pci_free_irq_vectors", "pci_irq_vector", "pcie_message_numbers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_pcie_device",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

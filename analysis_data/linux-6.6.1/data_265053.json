@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_mod_tpt_led_trig",
+    "callees": ["__builtin_expect", "ieee80211_start_tpt_led_trig", "ieee80211_stop_tpt_led_trig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_stop_tpt_led_trig",
+    "callees": ["led_trigger_event", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_create_tpt_led_trigger",
+    "callees": ["__builtin_expect", "init_timer_key", "kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tpt_trig_timer",
+    "callees": ["led_trigger_blink", "mod_timer", "round_jiffies"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_get_rx_led_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_get_tx_led_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_get_assoc_led_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_get_radio_led_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_led_exit",
+    "callees": ["kfree", "led_trigger_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_led_init",
+    "callees": ["kfree", "led_trigger_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tpt_led_deactivate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tpt_led_activate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_radio_led_deactivate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_radio_led_activate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_assoc_led_deactivate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_assoc_led_activate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_rx_led_deactivate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_rx_led_activate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tx_led_deactivate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_tx_led_activate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_led_names",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_alloc_led_names",
+    "callees": ["kasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_led_radio",
+    "callees": ["led_trigger_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_led_assoc",
+    "callees": ["led_trigger_event"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

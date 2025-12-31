@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_mmap_obj",
+    "callees": ["__refcount_add", "vma_start_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_access",
+    "callees": ["ttm_bo_reserve", "ttm_bo_unreserve", "ttm_bo_vm_access_kmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_access_kmap",
+    "callees": ["__builtin_expect", "memcpy", "ttm_bo_kmap", "ttm_bo_kunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_close",
+    "callees": ["ttm_bo_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_open",
+    "callees": ["__builtin_expect", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_fault",
+    "callees": ["drm_dev_enter", "drm_dev_exit", "ttm_bo_vm_dummy_page", "ttm_bo_vm_fault_reserved", "ttm_bo_vm_reserve", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_dummy_page",
+    "callees": ["__drmm_add_action_or_reset", "alloc_pages", "vmf_insert_pfn_prot"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_release_dummy_page",
+    "callees": ["__free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_fault_reserved",
+    "callees": ["__builtin_expect", "ttm_bo_io_mem_pfn", "ttm_bo_vm_fault_idle", "ttm_io_prot", "ttm_mem_io_reserve", "ttm_tt_populate", "vmf_insert_pfn_prot"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_reserve",
+    "callees": ["__builtin_expect", "__refcount_add", "mmap_read_unlock", "ttm_bo_put", "ww_mutex_lock_interruptible", "ww_mutex_trylock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_io_mem_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_vm_fault_idle",
+    "callees": ["__builtin_expect", "__refcount_add", "dma_resv_test_signaled", "dma_resv_wait_timeout", "mmap_read_unlock", "ttm_bo_put", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_unreserve",
+    "callees": ["ttm_bo_move_to_lru_tail_unlocked", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_bo_move_to_lru_tail_unlocked",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ttm_bo_move_to_lru_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_start_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

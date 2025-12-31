@@ -1,0 +1,20 @@
+[
+  {
+    "name": "acpi_hw_legacy_wake",
+    "callees": ["acpi_hw_disable_all_gpes", "acpi_hw_enable_all_runtime_gpes", "acpi_hw_execute_sleep_method", "acpi_write_bit_register"],
+    "global_reads": [],
+    "global_writes": ["acpi_gbl_sleep_type_a", "acpi_gbl_system_awake_and_running"]
+  },
+  {
+    "name": "acpi_hw_legacy_wake_prep",
+    "callees": ["acpi_hw_get_bit_register_info", "acpi_hw_register_read", "acpi_hw_write_pm1_control"],
+    "global_reads": ["acpi_gbl_sleep_type_a_s0", "acpi_gbl_sleep_type_b_s0"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_legacy_sleep",
+    "callees": ["acpi_hw_clear_acpi_status", "acpi_hw_disable_all_gpes", "acpi_hw_enable_all_wakeup_gpes", "acpi_hw_get_bit_register_info", "acpi_hw_register_read", "acpi_hw_register_write", "acpi_hw_write_pm1_control", "acpi_os_enter_sleep", "acpi_os_stall", "acpi_read_bit_register", "acpi_write_bit_register"],
+    "global_reads": ["acpi_gbl_sleep_type_a", "acpi_gbl_sleep_type_b"],
+    "global_writes": ["acpi_gbl_system_awake_and_running"]
+  }
+]

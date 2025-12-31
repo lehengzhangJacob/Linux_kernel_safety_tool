@@ -1,0 +1,392 @@
+[
+  {
+    "name": "kobj_child_ns_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_child_ns_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_type_registered",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_child_ns_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_kset_leave",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_get_ownership",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_add_varg",
+    "callees": ["_printk", "kobject_add_internal", "kobject_set_name_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_del.part.0",
+    "callees": ["__kobject_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_del.part.0",
+    "callees": ["__kobject_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_init.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_drop",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_initial",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_netlink",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_grab_current",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_current_may_mount",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_ops",
+    "callees": ["kobj_child_ns_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_child_ns_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_type_registered",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_ns_type_register",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_create_and_add",
+    "callees": ["kfree", "kset_create", "kset_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_create",
+    "callees": ["kfree", "kobject_set_name", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_get_ownership",
+    "callees": ["kobject_get_ownership"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_find_obj",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kobject_get_unless_zero", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_unregister",
+    "callees": ["kobject_del.part.0", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_register",
+    "callees": ["_printk", "kfree_const", "kobject_add_internal", "kobject_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_attr_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_attr_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kset_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_create_and_add",
+    "callees": ["_printk", "kobject_add", "kobject_create", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_create",
+    "callees": ["kobject_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynamic_kobj_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_put",
+    "callees": ["__warn_printk", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_release",
+    "callees": ["kobject_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_cleanup",
+    "callees": ["__kobject_del", "kfree_const", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_get_unless_zero",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_get",
+    "callees": ["__refcount_add", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_del",
+    "callees": ["kobject_del.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kobject_del",
+    "callees": ["kernfs_put", "kobj_kset_leave", "kobject_uevent", "sysfs_remove_dir", "sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_move",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "kobject_get", "kobject_get_path", "kobject_namespace", "kobject_put", "kobject_uevent_env", "sprintf", "strlen", "sysfs_move_dir_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_rename",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kfree_const", "kmalloc_large", "kmalloc_trace", "kobject_get", "kobject_get_path", "kobject_namespace", "kobject_put", "kobject_uevent_env", "kstrdup_const", "sprintf", "strlen", "sysfs_rename_dir_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_init_and_add",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "kobject_add_varg", "kobject_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_add",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_printk", "dump_stack_lvl", "kobject_add_varg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_add_varg",
+    "callees": ["_printk", "kobject_add_internal", "kobject_set_name_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_init",
+    "callees": ["_printk", "dump_stack_lvl", "kobject_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_set_name",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "kobject_set_name_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_set_name_vargs",
+    "callees": ["kfree_const", "kstrdup", "kvasprintf_const", "strchr", "strreplace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_add_internal",
+    "callees": ["__warn_printk", "_printk", "create_dir", "kobj_kset_join", "kobj_kset_leave", "kobject_get", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_kset_leave",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_kset_join",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kset_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_get_path",
+    "callees": ["fill_kobj_path", "get_kobj_path_length", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_kobj_path",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_kobj_path_length",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dir",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kernfs_enable_ns", "kernfs_get", "kobj_child_ns_ops", "kobj_ns_type_registered", "kobject_namespace", "sysfs_create_dir_ns", "sysfs_create_groups", "sysfs_remove_dir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_get_ownership",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_namespace",
+    "callees": ["kobj_child_ns_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_enable_ns",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

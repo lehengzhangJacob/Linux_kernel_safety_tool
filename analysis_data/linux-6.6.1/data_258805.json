@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_ut_get_mutex_object",
+    "callees": ["acpi_ut_get_mutex_object.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_get_mutex_object.part.0",
+    "callees": ["acpi_get_handle", "acpi_ns_get_attached_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_release_mutex",
+    "callees": ["acpi_os_signal_semaphore", "acpi_ut_get_mutex_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_acquire_mutex",
+    "callees": ["acpi_os_wait_semaphore", "acpi_ut_get_mutex_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_get_mutex_object",
+    "callees": ["acpi_ut_get_mutex_object.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_proc_quirk_mwait_check",
+    "callees": ["dmi_check_system"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_proc_quirk_set_no_mwait",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["boot_option_idle_override"]
+  },
+  {
+    "name": "acpi_quirk_skip_acpi_ac_and_battery",
+    "callees": ["__builtin_expect", "_printk", "acpi_dev_present", "dmi_first_match"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "force_storage_d3",
+    "callees": ["x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_device_override_status",
+    "callees": ["acpi_get_name", "acpi_match_device_ids", "dmi_check_system", "kfree", "strcmp", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

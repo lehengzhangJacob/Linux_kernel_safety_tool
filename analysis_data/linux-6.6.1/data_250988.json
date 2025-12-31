@@ -1,0 +1,128 @@
+[
+  {
+    "name": "timer_list_header",
+    "callees": ["SEQ_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "move_iter",
+    "callees": ["find_next_bit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_timer_list_procfs",
+    "callees": ["proc_create_seq_private"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_next",
+    "callees": ["move_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_start",
+    "callees": ["ktime_get", "move_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "move_iter",
+    "callees": ["find_next_bit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_show",
+    "callees": ["print_cpu", "print_tickdevice", "tick_get_device", "timer_list_header", "timer_list_show_tickdevices_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysrq_timer_list_show",
+    "callees": ["find_next_bit", "ktime_get", "print_cpu", "print_tickdevice", "tick_get_device", "timer_list_header", "timer_list_show_tickdevices_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_header",
+    "callees": ["SEQ_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_list_show_tickdevices_header",
+    "callees": ["SEQ_printf", "print_tickdevice", "tick_get_broadcast_device", "tick_get_broadcast_mask", "tick_get_broadcast_oneshot_mask"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "print_cpu",
+    "callees": ["SEQ_printf", "print_base", "tick_get_tick_sched"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "print_base",
+    "callees": ["SEQ_printf", "print_active_timers"],
+    "global_reads": ["hrtimer_resolution"],
+    "global_writes": []
+  },
+  {
+    "name": "print_active_timers",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "print_timer", "timerqueue_iterate_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_timer",
+    "callees": ["SEQ_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "SEQ_printf",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "seq_vprintf", "vprintk"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

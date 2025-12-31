@@ -1,0 +1,38 @@
+[
+  {
+    "name": "rcu_sync_dtor",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "rcu_barrier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_sync_exit",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_sync_enter",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "rcu_sync_func", "schedule", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_sync_func",
+    "callees": ["__builtin_expect", "__wake_up_locked", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_sync_enter_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_sync_init",
+    "callees": ["__init_waitqueue_head", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

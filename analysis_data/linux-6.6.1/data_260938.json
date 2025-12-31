@@ -1,0 +1,122 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_resume.part.0",
+    "callees": ["_dev_err", "acpi_device_update_power", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_driver_exit",
+    "callees": ["platform_driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_driver_init",
+    "callees": ["__platform_driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_resume",
+    "callees": ["acpi_fan_resume.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_suspend",
+    "callees": ["acpi_fan_suspend.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_remove",
+    "callees": ["acpi_fan_delete_attributes", "is_acpi_device_node", "sysfs_remove_link", "thermal_cooling_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_probe",
+    "callees": ["__builtin_expect", "_dev_err", "acpi_device_update_power", "acpi_fan_create_attributes", "acpi_fan_delete_attributes", "acpi_fan_get_fif", "acpi_fan_get_fps", "acpi_fan_is_acpi4", "devm_kmalloc", "is_acpi_device_node", "strncmp", "sysfs_create_link", "thermal_cooling_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_get_fps",
+    "callees": ["__builtin_expect", "_dev_err", "acpi_evaluate_object", "acpi_extract_package", "devm_kmalloc", "kfree", "sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_speed_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_get_fif",
+    "callees": ["_dev_err", "acpi_evaluate_object", "acpi_extract_package", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_is_acpi4",
+    "callees": ["acpi_has_method"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_set_cur_state",
+    "callees": ["fan_set_state", "fan_set_state_acpi4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_set_state",
+    "callees": ["acpi_device_set_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_get_cur_state",
+    "callees": ["fan_get_state", "fan_get_state_acpi4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_get_state",
+    "callees": ["acpi_device_update_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_get_state_acpi4",
+    "callees": ["acpi_fan_get_fst"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_get_fst",
+    "callees": ["_dev_err", "acpi_evaluate_object", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fan_get_max_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "__find_target_type",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_target_type",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_target_exit",
+    "callees": ["dm_unregister_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_target_init",
+    "callees": ["dm_register_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_dax_direct_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_io_hints",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_release_clone_rq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_clone_and_map_rq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_map",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_dtr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_err_ctr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_unregister_target",
+    "callees": ["__builtin_unreachable", "__find_target_type", "_printk", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_register_target",
+    "callees": ["__find_target_type", "_printk", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_target_iterate",
+    "callees": ["down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_put_target_type",
+    "callees": ["down_read", "module_put", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_get_target_type",
+    "callees": ["__request_module", "get_target_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_target_type",
+    "callees": ["__find_target_type", "down_read", "try_module_get", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_target_type",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

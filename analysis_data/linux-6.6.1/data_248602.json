@@ -1,0 +1,44 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_centaur",
+    "callees": ["detect_num_cpu_cores", "early_init_centaur", "init_c3", "init_ia32_feat_ctl", "init_intel_cacheinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_centaur",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_c3",
+    "callees": ["_printk", "native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

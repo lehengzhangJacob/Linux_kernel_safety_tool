@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iptable_nat_exit",
+    "callees": ["unregister_pernet_subsys", "xt_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iptable_nat_init",
+    "callees": ["register_pernet_subsys", "xt_register_template", "xt_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iptable_nat_net_exit",
+    "callees": ["ipt_unregister_table_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iptable_nat_net_pre_exit",
+    "callees": ["ipt_nat_unregister_lookups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iptable_nat_table_init",
+    "callees": ["ipt_alloc_initial_table", "ipt_nat_register_lookups", "ipt_register_table", "ipt_unregister_table_exit", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipt_nat_unregister_lookups",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kfree", "nf_nat_ipv4_unregister_fn"],
+    "global_reads": ["iptable_nat_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "ipt_nat_register_lookups",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "kfree", "kmemdup", "nf_nat_ipv4_register_fn", "nf_nat_ipv4_unregister_fn", "xt_find_table"],
+    "global_reads": ["iptable_nat_net_id"],
+    "global_writes": []
+  }
+]

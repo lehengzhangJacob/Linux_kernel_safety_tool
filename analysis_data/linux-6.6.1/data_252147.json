@@ -1,0 +1,404 @@
+[
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_async_call",
+    "callees": ["__builtin_expect", "__nlm_async_call", "rpc_put_task", "rpc_wait_for_completion_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_async_call",
+    "callees": ["__builtin_expect", "__nlm_async_call", "rpc_put_task", "rpc_wait_for_completion_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_lock.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_lock",
+    "callees": ["__SCT__tp_func_nlmclnt_lock", "cpu_online", "trace_nlmclnt_lock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_next_cookie",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmclnt_find_lockowner",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_do_async_call",
+    "callees": ["__builtin_expect", "__nlm_async_call", "rpc_put_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_release_call.part.0",
+    "callees": ["__builtin_expect", "kfree", "nlmclnt_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_lock.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_stat_to_errno",
+    "callees": ["__builtin_bswap32", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_cancel_callback",
+    "callees": ["__builtin_bswap32", "__builtin_constant_p", "_printk", "nlm_rebind_host", "rpc_delay", "rpc_restart_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_cancel",
+    "callees": ["__refcount_add", "nlm_alloc_call", "nlmclnt_async_call", "nlmclnt_release_call", "nlmclnt_setlockargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_unlock_callback",
+    "callees": ["__builtin_bswap32", "__builtin_constant_p", "_printk", "nlm_rebind_host", "rpc_delay", "rpc_restart_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_unlock_prepare",
+    "callees": ["rpc_call_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_unlock",
+    "callees": ["__builtin_bswap32", "__refcount_add", "_printk", "down_read", "locks_lock_inode_wait", "nlmclnt_async_call", "nlmclnt_release_call", "trace_nlmclnt_unlock", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_reclaim",
+    "callees": ["__builtin_bswap32", "_printk", "locks_init_lock", "memset", "nlmclnt_call", "nlmclnt_setlockargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_lock",
+    "callees": ["_printk", "do_vfs_lock", "down_read", "locks_lock_inode_wait", "nlm_stat_to_errno", "nlmclnt_async_call", "nlmclnt_call", "nlmclnt_cancel", "nlmclnt_dequeue_block", "nlmclnt_prepare_block", "nlmclnt_queue_block", "nlmclnt_release_call", "nlmclnt_wait", "nsm_monitor", "trace_nlmclnt_lock", "up_read"],
+    "global_reads": ["nsm_local_state"],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_locks_init_private",
+    "callees": ["nlmclnt_find_lockowner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_locks_release_private",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "nlmclnt_put_lockowner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_locks_copy_lock",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_test",
+    "callees": ["nlm_stat_to_errno", "nlmclnt_call", "nlmclnt_release_call", "trace_nlmclnt_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_async_call",
+    "callees": ["__builtin_expect", "__nlm_async_call", "rpc_put_task", "rpc_wait_for_completion_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_async_reply",
+    "callees": ["nlm_do_async_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_async_call",
+    "callees": ["nlm_do_async_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_do_async_call",
+    "callees": ["__builtin_expect", "__nlm_async_call", "rpc_put_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlm_async_call",
+    "callees": ["nlm_bind_host", "rpc_run_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_call",
+    "callees": ["__wake_up", "_printk", "nlm_bind_host", "nlm_rebind_host", "nlm_wait_on_grace", "rpc_call_sync", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_wait_on_grace",
+    "callees": ["finish_wait", "prepare_to_wait", "schedule_timeout", "signal_pending", "try_to_freeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_rpc_release",
+    "callees": ["nlmclnt_release_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_release_call",
+    "callees": ["__refcount_sub_and_test", "nlmclnt_release_call.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_alloc_call",
+    "callees": ["_printk", "kzalloc", "locks_init_lock", "nlm_get_host", "schedule_timeout_interruptible", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_proc",
+    "callees": ["nlm_alloc_call", "nlmclnt_lock", "nlmclnt_locks_init_private", "nlmclnt_release_call", "nlmclnt_setlockargs", "nlmclnt_test", "nlmclnt_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_setlockargs",
+    "callees": ["memcpy", "nlmclnt_next_cookie", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_find_lockowner",
+    "callees": ["__builtin_return_address", "__nlm_alloc_pid", "__nlmclnt_find_lockowner", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kmalloc_trace", "nlm_get_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmclnt_find_lockowner",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlm_alloc_pid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_put_lockowner",
+    "callees": ["_raw_spin_unlock", "kfree", "nlmclnt_release_host", "refcount_dec_and_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmclnt_next_cookie",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_unlock",
+    "callees": ["__SCT__tp_func_nlmclnt_unlock", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_lock",
+    "callees": ["__SCT__tp_func_nlmclnt_lock", "cpu_online", "trace_nlmclnt_lock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nlmclnt_test",
+    "callees": ["__SCT__tp_func_nlmclnt_test", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "do_page_cache_ra",
+    "callees": ["page_cache_ra_unbounded"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_page_cache_ra",
+    "callees": ["page_cache_ra_unbounded"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_page_cache_ra",
+    "callees": ["page_cache_ra_unbounded"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__readahead_folio",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readahead_folio",
+    "callees": ["__readahead_folio", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_cache_async_ra.part.0",
+    "callees": ["blk_cgroup_congested", "ondemand_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readahead_expand",
+    "callees": ["__builtin_expect", "filemap_add_folio", "filemap_alloc_folio", "folio_put", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_readahead",
+    "callees": ["ksys_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_readahead",
+    "callees": ["ksys_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ksys_readahead",
+    "callees": ["__fdget", "fput", "vfs_fadvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_cache_async_ra",
+    "callees": ["page_cache_async_ra.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_cache_sync_ra",
+    "callees": ["blk_cgroup_congested", "force_page_cache_ra", "ondemand_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ondemand_readahead",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "do_page_cache_ra", "get_init_ra_size", "inode_to_bdi", "page_cache_next_miss", "try_context_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_cache_ra_order",
+    "callees": ["do_page_cache_ra"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_context_readahead",
+    "callees": ["count_history_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "count_history_pages",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "page_cache_prev_miss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_init_ra_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "force_page_cache_ra",
+    "callees": ["__builtin_expect", "do_page_cache_ra", "inode_to_bdi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_page_cache_ra",
+    "callees": ["page_cache_ra_unbounded"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_cache_ra_unbounded",
+    "callees": ["down_read", "filemap_add_folio", "filemap_alloc_folio", "folio_put", "read_pages", "up_read", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_pages",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "blk_finish_plug", "blk_start_plug", "filemap_remove_folio", "folio_put", "folio_unlock", "readahead_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_ra_state_init",
+    "callees": ["inode_to_bdi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readahead_folio",
+    "callees": ["__readahead_folio", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__readahead_folio",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

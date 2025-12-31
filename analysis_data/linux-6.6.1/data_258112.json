@@ -1,0 +1,512 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_is_unprivileged_user",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_is_unprivileged_user",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_is_unprivileged_user",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pipe_info",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_pipe_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_pipe_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_pipe_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "round_pipe_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pipe_info",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_pipe_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_pipe_flags",
+    "callees": ["__do_pipe_flags.part.0", "create_pipe_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_pipe_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_pipe_flags.part.0",
+    "callees": ["audit_fd_pair", "fput", "get_unused_fd_flags", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_pipe_fs",
+    "callees": ["__builtin_expect", "__register_sysctl_init", "kern_mount", "register_filesystem", "unregister_filesystem"],
+    "global_reads": [],
+    "global_writes": ["pipe_mnt"]
+  },
+  {
+    "name": "proc_dopipe_max_size",
+    "callees": ["do_proc_douintvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_proc_dopipe_max_size_conv",
+    "callees": ["round_pipe_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipefs_init_fs_context",
+    "callees": ["init_pseudo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_fcntl",
+    "callees": ["mutex_lock", "mutex_unlock", "pipe_set_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pipe_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_set_size",
+    "callees": ["capable", "pipe_is_unprivileged_user", "pipe_resize_ring", "round_pipe_size"],
+    "global_reads": ["pipe_max_size"],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_resize_ring",
+    "callees": ["__builtin_expect", "__wake_up", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kfree", "kmalloc_array", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "round_pipe_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "round_pipe_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fifo_open",
+    "callees": ["__builtin_expect", "__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "alloc_pipe_info", "free_pipe_info", "mutex_lock", "mutex_unlock", "put_pipe_info", "stream_open", "wait_for_partner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_partner",
+    "callees": ["finish_wait", "mutex_lock", "mutex_unlock", "prepare_to_wait", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_wait_writable",
+    "callees": ["__SCT__might_resched", "finish_wait", "init_wait_entry", "mutex_lock", "mutex_unlock", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_wait_readable",
+    "callees": ["__SCT__might_resched", "finish_wait", "init_wait_entry", "mutex_lock", "mutex_unlock", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_pipe",
+    "callees": ["do_pipe2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_pipe",
+    "callees": ["do_pipe2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_pipe2",
+    "callees": ["do_pipe2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_pipe2",
+    "callees": ["do_pipe2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_pipe2",
+    "callees": ["__builtin_expect", "__do_pipe_flags", "_copy_to_user", "fd_install", "fput", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_pipe_flags",
+    "callees": ["__do_pipe_flags", "fd_install"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_pipe_flags",
+    "callees": ["__do_pipe_flags.part.0", "create_pipe_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_pipe_files",
+    "callees": ["__builtin_expect", "alloc_file_clone", "alloc_file_pseudo", "fput", "free_pipe_info", "get_pipe_inode", "iput", "put_pipe_info", "stream_open"],
+    "global_reads": ["pipe_mnt"],
+    "global_writes": []
+  },
+  {
+    "name": "get_pipe_inode",
+    "callees": ["alloc_pipe_info", "get_next_ino", "inode_set_ctime_current", "iput", "new_inode_pseudo"],
+    "global_reads": ["pipe_mnt"],
+    "global_writes": []
+  },
+  {
+    "name": "pipefs_dname",
+    "callees": ["dynamic_dname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_pipe_info",
+    "callees": ["__free_pages", "free_uid", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pipe_info",
+    "callees": ["__init_waitqueue_head", "__mutex_init", "__refcount_add", "capable", "free_uid", "kfree", "kmalloc_array", "kzalloc", "pipe_is_unprivileged_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_is_unprivileged_user",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "too_many_pipe_buffers_hard",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "too_many_pipe_buffers_soft",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "account_pipe_buffers",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_fasync",
+    "callees": ["fasync_helper", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_release",
+    "callees": ["__wake_up", "kill_fasync", "mutex_lock", "mutex_unlock", "put_pipe_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pipe_info",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_pipe_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_poll",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_ioctl",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_write",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__wake_up_sync_key", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "alloc_pages", "copy_page_from_iter", "file_update_time", "finish_wait", "init_wait_entry", "kill_fasync", "mutex_lock", "mutex_unlock", "percpu_down_read_trylock", "percpu_up_read", "prepare_to_wait_event", "schedule", "send_sig", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_read",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__wake_up_sync_key", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "copy_page_to_iter", "file_accessed", "finish_wait", "init_wait_entry", "kill_fasync", "mutex_lock", "mutex_unlock", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_pipe_buf_release",
+    "callees": ["put_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_pipe_buf_get",
+    "callees": ["try_get_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_pipe_buf_try_steal",
+    "callees": ["_compound_head", "lock_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "anon_pipe_buf_try_steal",
+    "callees": ["_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "anon_pipe_buf_release",
+    "callees": ["_compound_head", "put_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_double_lock",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_fd_pair",
+    "callees": ["__audit_fd_pair", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_page",
+    "callees": ["__SCT__might_resched", "__folio_lock", "_compound_head", "folio_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_get_page",
+    "callees": ["__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_accessed",
+    "callees": ["touch_atime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_up_read",
+    "callees": ["__builtin_expect", "rcuwait_wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_down_read_trylock",
+    "callees": ["__builtin_expect", "__percpu_down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

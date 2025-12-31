@@ -1,0 +1,200 @@
+[
+  {
+    "name": "trace_rdev_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int",
+    "callees": ["__SCT__tp_func_rdev_return_int", "cpu_online", "trace_rdev_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int",
+    "callees": ["__SCT__tp_func_rdev_return_int", "cpu_online", "trace_rdev_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_leave_all",
+    "callees": ["cfg80211_leave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_suspend",
+    "callees": ["__SCT__tp_func_rdev_suspend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_suspend",
+    "callees": ["trace_rdev_return_int", "trace_rdev_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "addresses_show.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_sysfs_exit",
+    "callees": ["class_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_sysfs_init",
+    "callees": ["class_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_namespace",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_resume",
+    "callees": ["cfg80211_bss_age", "cfg80211_shutdown_all_interfaces", "ktime_get_coarse_with_offset", "mutex_lock", "mutex_unlock", "rdev_resume", "rtnl_lock", "rtnl_unlock", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_suspend",
+    "callees": ["cfg80211_leave_all", "cfg80211_process_rdev_events", "cfg80211_process_wiphy_works", "ktime_get_coarse_with_offset", "mutex_lock", "mutex_unlock", "rdev_suspend", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_leave_all",
+    "callees": ["cfg80211_leave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_dev_release",
+    "callees": ["cfg80211_dev_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "addresses_show",
+    "callees": ["addresses_show.part.0", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "name_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "address_mask_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "macaddress_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "index_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_resume",
+    "callees": ["trace_rdev_resume", "trace_rdev_return_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_suspend",
+    "callees": ["trace_rdev_return_int", "trace_rdev_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_resume",
+    "callees": ["__SCT__tp_func_rdev_resume", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int",
+    "callees": ["__SCT__tp_func_rdev_return_int", "cpu_online", "trace_rdev_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_suspend",
+    "callees": ["__SCT__tp_func_rdev_suspend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "netlbl_af4list_search",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_search_exact",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_audit_addr",
+    "callees": ["__builtin_bswap32", "audit_log_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_audit_addr",
+    "callees": ["__builtin_bswap32", "audit_log_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_remove",
+    "callees": ["netlbl_af6list_search_exact"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_remove_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_remove",
+    "callees": ["netlbl_af4list_search_exact"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_remove_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_add",
+    "callees": ["memcmp", "netlbl_af6list_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_add",
+    "callees": ["__builtin_bswap32", "netlbl_af4list_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_search_exact",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_search",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_search_exact",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_search",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

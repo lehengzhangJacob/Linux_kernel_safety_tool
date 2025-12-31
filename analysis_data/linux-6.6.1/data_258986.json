@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_newreno_mark_lost",
+    "callees": ["rb_first", "tcp_fragment", "tcp_mark_skb_lost"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_update_reo_wnd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_reo_timeout",
+    "callees": ["tcp_cwnd_reduction", "tcp_enter_recovery", "tcp_rack_detect_loss", "tcp_rearm_rto", "tcp_xmit_retransmit_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_advance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_mark_lost",
+    "callees": ["__builtin_constant_p", "__usecs_to_jiffies", "inet_csk_reset_xmit_timer", "jiffies_to_usecs", "tcp_rack_detect_loss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_detect_loss",
+    "callees": ["tcp_mark_skb_lost", "tcp_rack_reo_wnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_skb_timeout",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rack_reo_wnd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

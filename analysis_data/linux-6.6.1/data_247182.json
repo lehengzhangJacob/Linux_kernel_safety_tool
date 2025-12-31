@@ -1,0 +1,122 @@
+[
+  {
+    "name": "io_xattr_cleanup",
+    "callees": ["kfree", "kvfree", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_xattr_cleanup",
+    "callees": ["kfree", "kvfree", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_xattr_cleanup",
+    "callees": ["kfree", "kvfree", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_xattr_cleanup",
+    "callees": ["kfree", "kvfree", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_setxattr_prep",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "setxattr_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_setxattr.part.0",
+    "callees": ["do_setxattr", "mnt_drop_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_setxattr.part.0",
+    "callees": ["do_setxattr", "mnt_drop_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_setxattr",
+    "callees": ["__builtin_expect", "__io_setxattr", "filename_lookup", "io_xattr_cleanup", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_fsetxattr",
+    "callees": ["__builtin_expect", "__io_setxattr", "io_xattr_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_fsetxattr_prep",
+    "callees": ["__io_setxattr_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_setxattr_prep",
+    "callees": ["__builtin_expect", "__io_setxattr_prep", "getname_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_setxattr_prep",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "setxattr_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_getxattr",
+    "callees": ["__builtin_expect", "do_getxattr", "filename_lookup", "io_xattr_cleanup", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_fgetxattr",
+    "callees": ["__builtin_expect", "do_getxattr", "io_xattr_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_getxattr_prep",
+    "callees": ["__builtin_expect", "__io_getxattr_prep", "getname_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_fgetxattr_prep",
+    "callees": ["__io_getxattr_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_getxattr_prep",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "strncpy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_xattr_cleanup",
+    "callees": ["kfree", "kvfree", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

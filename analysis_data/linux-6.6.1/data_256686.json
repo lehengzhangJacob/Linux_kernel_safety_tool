@@ -1,0 +1,446 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid_task",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid_task",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_task_by_pid_ns",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_task_by_vpid",
+    "callees": ["find_task_by_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_vpid",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_vpid",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attach_pid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_create",
+    "callees": ["fd_install", "pidfd_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_create",
+    "callees": ["fd_install", "pidfd_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_vpid",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_get_pid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "find_vpid", "get_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_get_pid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "find_vpid", "get_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_pidfd_getfd",
+    "callees": ["__builtin_expect", "__fdget", "fput", "pidfd_getfd", "pidfd_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_task_by_pid_ns",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_pidfd_open",
+    "callees": ["find_get_pid", "pidfd_create", "put_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pid.part.0",
+    "callees": ["__refcount_sub_and_test", "kmem_cache_free", "put_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_pidfd_getfd",
+    "callees": ["__builtin_expect", "__fdget", "fput", "pidfd_getfd", "pidfd_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_pidfd_getfd",
+    "callees": ["__do_sys_pidfd_getfd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_pidfd_getfd",
+    "callees": ["__do_sys_pidfd_getfd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_getfd",
+    "callees": ["__builtin_expect", "__pidfd_fget", "fput", "get_pid_task", "put_task_struct", "receive_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pidfd_fget",
+    "callees": ["down_read_killable", "fget_task", "ptrace_may_access", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_idr_init",
+    "callees": ["_printk", "cpumask_weight", "kmem_cache_create"],
+    "global_reads": ["pid_max", "pid_max_max", "pid_max_min"],
+    "global_writes": ["pid_max", "pid_max_min"]
+  },
+  {
+    "name": "__do_sys_pidfd_open",
+    "callees": ["find_get_pid", "pidfd_create", "put_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_pidfd_open",
+    "callees": ["__do_sys_pidfd_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_pidfd_open",
+    "callees": ["__do_sys_pidfd_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_create",
+    "callees": ["fd_install", "pidfd_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_get_task",
+    "callees": ["__builtin_expect", "get_pid_task", "pidfd_get_pid", "put_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pidfd_get_pid",
+    "callees": ["__builtin_expect", "__fdget", "fput", "get_pid.part.0", "pidfd_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_ge_pid",
+    "callees": ["idr_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_active_pid_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__task_pid_nr_ns",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_vnr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_nr_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_get_pid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "find_vpid", "get_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid_task",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_task_pid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "get_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_get_task_by_vpid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "find_task_by_vpid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_task_by_vpid",
+    "callees": ["find_task_by_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_task_by_pid_ns",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_task",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "transfer_pid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exchange_tids",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "change_pid",
+    "callees": ["__change_pid", "attach_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_pid",
+    "callees": ["__change_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__change_pid",
+    "callees": ["free_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attach_pid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_vpid",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_pid_ns",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_pid_allocation",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pid",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "checkpoint_restore_ns_capable", "get_pid_ns", "idr_alloc", "idr_alloc_cyclic", "idr_preload", "idr_remove", "idr_replace", "kmem_cache_alloc", "kmem_cache_free", "put_pid_ns"],
+    "global_reads": ["pid_max"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pid",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "call_rcu", "idr_remove", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_put_pid",
+    "callees": ["put_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_pid",
+    "callees": ["put_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "checkpoint_restore_ns_capable",
+    "callees": ["ns_capable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

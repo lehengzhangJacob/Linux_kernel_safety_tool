@@ -1,0 +1,272 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_nsproxy",
+    "callees": ["__refcount_sub_and_test", "free_nsproxy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_task_namespaces",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock", "_raw_spin_unlock", "put_nsproxy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_uts_ns",
+    "callees": ["__refcount_sub_and_test", "free_uts_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cgroup_ns.part.0",
+    "callees": ["__refcount_sub_and_test", "free_cgroup_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_time_ns",
+    "callees": ["__refcount_sub_and_test", "free_time_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_nsproxy",
+    "callees": ["__refcount_sub_and_test", "free_nsproxy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cgroup_ns.part.0",
+    "callees": ["__refcount_sub_and_test", "free_cgroup_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_setns",
+    "callees": ["__builtin_expect", "__fdget", "commit_nsset", "fput", "perf_event_namespaces", "pidfd_pid", "prepare_nsset", "proc_ns_file", "put_nsset", "validate_nsset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_setns",
+    "callees": ["__do_sys_setns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_setns",
+    "callees": ["__do_sys_setns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "commit_nsset",
+    "callees": ["exit_sem", "set_fs_pwd", "set_fs_root", "switch_task_namespaces", "timens_commit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_nsset",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "from_mnt_ns", "get_pid_ns", "pid_task", "ptrace_may_access", "put_nsproxy", "put_pid_ns", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_nsset",
+    "callees": ["__builtin_expect", "copy_fs_struct", "create_new_namespaces", "prepare_creds", "put_nsset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_nsset",
+    "callees": ["free_fs_struct", "free_nsproxy", "put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exec_task_namespaces",
+    "callees": ["__builtin_expect", "create_new_namespaces", "switch_task_namespaces", "timens_on_fork"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_task_namespaces",
+    "callees": ["switch_task_namespaces"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_task_namespaces",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock", "_raw_spin_unlock", "put_nsproxy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unshare_nsproxy_namespaces",
+    "callees": ["__builtin_expect", "create_new_namespaces", "ns_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_nsproxy",
+    "callees": ["kmem_cache_free", "put_cgroup_ns.part.0", "put_ipc_ns", "put_mnt_ns", "put_net", "put_pid_ns", "put_time_ns", "put_uts_ns"],
+    "global_reads": ["nsproxy_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "copy_namespaces",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "create_new_namespaces", "ns_capable", "timens_on_fork"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_new_namespaces",
+    "callees": ["__builtin_expect", "__refcount_add", "copy_cgroup_ns", "copy_ipcs", "copy_mnt_ns", "copy_net_ns", "copy_pid_ns", "copy_time_ns", "copy_utsname", "create_nsproxy", "kmem_cache_free", "put_cgroup_ns.part.0", "put_ipc_ns", "put_mnt_ns", "put_net", "put_pid_ns", "put_uts_ns"],
+    "global_reads": ["nsproxy_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "create_nsproxy",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["nsproxy_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "put_time_ns",
+    "callees": ["__refcount_sub_and_test", "free_time_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_uts_ns",
+    "callees": ["__refcount_sub_and_test", "free_uts_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_nsproxy",
+    "callees": ["__refcount_sub_and_test", "free_nsproxy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsproxy_cache_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["nsproxy_cachep"]
+  }
+]

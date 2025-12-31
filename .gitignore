@@ -1,28 +1,17 @@
-# 编译生成的中间文件 (太大且无需提交)
-build_analysis_linux-6.6.1/
-*.o
-*.a
-*.ko
-*.so
-
-# 解压后的内核源码 (仓库中已有 linux-6.6.1.tar.xz 压缩包，提交解压后的文件会导致仓库过大无法上传)
-linux-6.6.1/
-linux-5.15.145/
-linux-6.11.10/
-linux-6.12.6/
+# --- Files larger than 50MB (Cannot be pushed to GitLab) ---
+build_analysis_linux-6.6.1/vmlinux
+build_analysis_linux-6.6.1/vmlinux.o
+build_analysis_linux-6.6.1/.tmp_vmlinux.kallsyms*
+tools/jdk-17.0.2/lib/modules
+tools/jdk-17.0.2/lib/src.zip
+tools/*.tar.gz
+tools/neo4j-community-4.4.34/data/transactions/*/neostore.transaction.db.0
 *.tar.xz
+ast_linux-6.6.1.log
 
-# 系统临时文件
+# --- System files ---
 .DS_Store
 *.swp
 *~
 
-# Tools (Binaries are too large for Git, use setup_tools.sh to install)
-tools/jdk-*/
-tools/neo4j-*/
-tools/*.tar.gz
-tools/*.zip
-
-# Keep python scripts in tools/
-!tools/*.py
 

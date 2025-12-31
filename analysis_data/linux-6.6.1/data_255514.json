@@ -1,0 +1,86 @@
+[
+  {
+    "name": "fib_notifier_ops_unregister.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_notifier_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_notifier_net_exit",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "fib_notifier_net_init",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "fib_notifier_ops_unregister",
+    "callees": ["fib_notifier_ops_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_notifier_ops_register",
+    "callees": ["__fib_notifier_ops_register", "kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib_notifier_ops_register",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_fib_notifier",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "atomic_notifier_chain_unregister"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "register_fib_notifier",
+    "callees": ["fib_dump_is_consistent", "fib_net_dump", "fib_seq_sum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_dump_is_consistent",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "atomic_notifier_chain_register", "atomic_notifier_chain_unregister", "fib_seq_sum"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "fib_net_dump",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "module_put", "try_module_get"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "fib_seq_sum",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "module_put", "rtnl_lock", "rtnl_unlock", "try_module_get"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib_notifiers",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "atomic_notifier_call_chain"],
+    "global_reads": ["fib_notifier_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib_notifier",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

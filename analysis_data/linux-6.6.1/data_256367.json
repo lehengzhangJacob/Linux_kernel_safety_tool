@@ -1,0 +1,128 @@
+[
+  {
+    "name": "ip_options_compile",
+    "callees": ["__icmp_send", "__ip_options_compile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "spec_dst_fill.part.0",
+    "callees": ["fib_compute_spec_dst"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop.part.0",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop.part.0",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "spec_dst_fill.part.0",
+    "callees": ["fib_compute_spec_dst"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_rcv_srr",
+    "callees": ["__builtin_bswap32", "__icmp_send", "ip_route_input", "refdst_drop.part.0", "skb_dst_drop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_forward_options",
+    "callees": ["_printk", "ip_rt_get_source", "ip_send_check", "memcmp", "net_ratelimit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_get",
+    "callees": ["copy_from_sockptr_offset", "ip_options_compile", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_undo",
+    "callees": ["memmove", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_compile",
+    "callees": ["__icmp_send", "__ip_options_compile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ip_options_compile",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "cipso_v4_validate", "inet_addr_type", "inet_current_timestamp", "memmove", "ns_capable", "spec_dst_fill.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_fragment",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ip_options_echo",
+    "callees": ["inet_addr_type", "memcmp", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_options_build",
+    "callees": ["inet_current_timestamp", "ip_rt_get_source", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_dst_drop",
+    "callees": ["refdst_drop.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "name": "get_cpu_device.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_possible",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_device",
+    "callees": ["cpu_possible", "get_cpu_device.part.0"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_device.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_dev_init",
+    "callees": ["cpu_register_vulnerabilities", "panic", "subsys_system_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_register_vulnerabilities",
+    "callees": ["_printk", "bus_get_dev_root", "put_device", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_show_not_affected",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_is_hotpluggable",
+    "callees": ["get_cpu_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_device_create",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__cpu_device_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cpu_device_create",
+    "callees": ["device_add", "device_initialize", "kobject_set_name_vargs", "kzalloc", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_device",
+    "callees": ["cpu_possible", "get_cpu_device.part.0"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "register_cpu",
+    "callees": ["cpu_online", "dev_pm_qos_expose_latency_limit", "device_register", "memset", "put_device", "register_cpu_under_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_uevent",
+    "callees": ["add_uevent_var", "kfree", "kzalloc", "print_cpu_modalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_cpu_modalias",
+    "callees": ["__builtin_constant_p", "__warn_printk", "sysfs_emit_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_device_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crash_hotplug_show",
+    "callees": ["arch_crash_hotplug_cpu_support", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_cpus_isolated",
+    "callees": ["housekeeping_cpumask", "sysfs_emit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "print_cpus_offline",
+    "callees": ["sysfs_emit_at"],
+    "global_reads": ["nr_cpu_ids", "total_cpus"],
+    "global_writes": []
+  },
+  {
+    "name": "print_cpus_kernel_max",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_cpus_attr",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "crash_notes_size_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crash_notes_show",
+    "callees": ["per_cpu_ptr_to_phys", "sysfs_emit"],
+    "global_reads": ["crash_notes"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_cpu",
+    "callees": ["device_unregister", "unregister_cpu_under_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_subsys_offline",
+    "callees": ["cpu_device_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_subsys_online",
+    "callees": ["change_cpu_under_node", "cpu_device_up", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "change_cpu_under_node",
+    "callees": ["register_cpu_under_node", "unregister_cpu_under_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_subsys_match",
+    "callees": ["acpi_driver_match_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_possible",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

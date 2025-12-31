@@ -1,0 +1,356 @@
+[
+  {
+    "name": "__hw_addr_del_entry",
+    "callees": ["kvfree_call_rcu", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_flush",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_flush",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one.part.0",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one",
+    "callees": ["__hw_addr_del_ex", "__hw_addr_unsync_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one.part.0",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one",
+    "callees": ["__hw_addr_del_ex", "__hw_addr_unsync_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_mc_del",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_del_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_add",
+    "callees": ["__hw_addr_add_ex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_add",
+    "callees": ["__hw_addr_add_ex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_unsync.part.0",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_unsync", "_raw_spin_lock", "_raw_spin_unlock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_unsync.part.0",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_unsync", "_raw_spin_lock", "_raw_spin_unlock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one.part.0",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_flush",
+    "callees": ["__hw_addr_flush", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_unsync",
+    "callees": ["dev_mc_unsync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_sync_multiple",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_sync_multiple", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_sync",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_sync", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_del_global",
+    "callees": ["__dev_mc_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_del",
+    "callees": ["__dev_mc_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_mc_del",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_del_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_add_global",
+    "callees": ["__dev_mc_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_add",
+    "callees": ["__dev_mc_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_mc_add",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_add_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_add_excl",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_add_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_flush",
+    "callees": ["__hw_addr_flush", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_unsync",
+    "callees": ["dev_uc_unsync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_sync_multiple",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_sync_multiple", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_sync",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_sync", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_del",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_del_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_add",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_add", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uc_add_excl",
+    "callees": ["__dev_set_rx_mode", "__hw_addr_add_ex", "_raw_spin_lock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_addr_del",
+    "callees": ["__builtin_expect", "__hw_addr_del_ex", "__warn_printk", "call_netdevice_notifiers", "memcmp", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "dev_addr_add",
+    "callees": ["__builtin_expect", "__hw_addr_add", "__warn_printk", "call_netdevice_notifiers", "dev_pre_changeaddr_notify", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "dev_addr_mod",
+    "callees": ["__builtin_expect", "__hw_addr_insert", "dev_addr_check", "memcpy", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_addr_init",
+    "callees": ["__hw_addr_add", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_addr_flush",
+    "callees": ["__hw_addr_flush", "dev_addr_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_addr_check",
+    "callees": ["__warn_printk", "memcmp", "netdev_name", "netdev_reg_state", "netdev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_flush",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_dev",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_ref_unsync_dev",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_ref_sync_dev",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_sync_dev",
+    "callees": ["__hw_addr_del_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync",
+    "callees": ["__hw_addr_unsync_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_sync",
+    "callees": ["__hw_addr_sync_one", "__hw_addr_unsync_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_sync_multiple",
+    "callees": ["__hw_addr_sync_one", "__hw_addr_unsync_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_unsync_one",
+    "callees": ["__hw_addr_del_ex", "__hw_addr_unsync_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_sync_one",
+    "callees": ["__hw_addr_add_ex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_del_ex",
+    "callees": ["__hw_addr_del_entry", "__hw_addr_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_del_entry",
+    "callees": ["kvfree_call_rcu", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_add",
+    "callees": ["__hw_addr_add_ex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_add_ex",
+    "callees": ["__hw_addr_create", "memcmp", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_create",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hw_addr_insert",
+    "callees": ["memcmp", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netdev_reg_state",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "netdev_name",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

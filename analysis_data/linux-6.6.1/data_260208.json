@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_remove_driver",
+    "callees": ["kfree", "make_driver_name", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_add_driver",
+    "callees": ["kfree", "kobject_put", "kset_find_obj", "make_driver_name", "module_create_drivers_dir", "sysfs_create_link"],
+    "global_reads": ["module_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "module_create_drivers_dir",
+    "callees": ["kobject_create_and_add", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

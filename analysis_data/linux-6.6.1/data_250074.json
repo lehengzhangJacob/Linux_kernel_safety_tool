@@ -1,0 +1,452 @@
+[
+  {
+    "name": "__io_sqe_buffers_unregister",
+    "callees": ["io_buffer_unmap", "io_rsrc_data_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__refcount_add.part.0",
+    "callees": ["refcount_warn_saturate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_sqe_buffers_unregister",
+    "callees": ["io_buffer_unmap", "io_rsrc_data_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_file_bitmap_clear",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_file_bitmap_set",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_free_page_table",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_node_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_scm_file_account",
+    "callees": ["__builtin_expect", "__io_scm_file_account", "unix_get_socket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__refcount_add.part.0",
+    "callees": ["refcount_warn_saturate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_import_fixed",
+    "callees": ["__builtin_expect", "iov_iter_bvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_sqe_buffers_register",
+    "callees": ["__builtin_expect", "__io_sqe_buffers_unregister", "io_buffer_validate", "io_buffers_map_alloc", "io_copy_iov", "io_rsrc_data_alloc", "io_rsrc_data_free", "io_sqe_buffer_register", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffers_map_alloc",
+    "callees": ["kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_sqe_buffer_register",
+    "callees": ["__builtin_expect", "_compound_head", "io_buffer_account_pin", "io_pin_pages", "kvfree", "kvmalloc_node", "unpin_user_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_pin_pages",
+    "callees": ["__builtin_expect", "kvfree", "kvmalloc_node", "mmap_read_lock", "mmap_read_unlock", "pin_user_pages", "unpin_user_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_account_pin",
+    "callees": ["__builtin_constant_p", "_compound_head", "compound_order", "headpage_already_acct", "io_account_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "headpage_already_acct",
+    "callees": ["__builtin_constant_p", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_sqe_buffers_unregister",
+    "callees": ["__io_sqe_buffers_unregister", "io_rsrc_ref_quiesce"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_sqe_buffers_unregister",
+    "callees": ["io_buffer_unmap", "io_rsrc_data_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_sqe_files_register",
+    "callees": ["__builtin_expect", "__io_sqe_files_unregister", "_copy_from_user", "fget", "fput", "io_alloc_file_tables", "io_file_bitmap_set", "io_file_get_flags", "io_is_uring_fops", "io_rsrc_data_alloc", "io_rsrc_data_free", "io_scm_file_account"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_file_scm_put",
+    "callees": ["__skb_dequeue", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "fput", "kfree_skb_reason", "memmove", "skb_dequeue", "unix_notinflight"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_scm_file_account",
+    "callees": ["__alloc_skb", "__builtin_expect", "__refcount_add", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "fput", "kfree", "kzalloc", "skb_queue_head", "unix_get_socket", "unix_inflight"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_sqe_files_unregister",
+    "callees": ["__io_sqe_files_unregister", "io_rsrc_ref_quiesce"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_sqe_files_unregister",
+    "callees": ["fput", "io_file_bitmap_clear", "io_free_file_tables", "io_rsrc_data_free", "kfree_skb_reason", "skb_dequeue", "unix_get_socket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_queue_rsrc_removal",
+    "callees": ["__builtin_expect", "io_put_rsrc_node", "io_rsrc_node_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_files_update",
+    "callees": ["__builtin_expect", "__io_sqe_files_update", "io_files_update_with_index_alloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_files_update_with_index_alloc",
+    "callees": ["__io_close_fixed", "_copy_from_user", "_copy_to_user", "fget", "io_fixed_fd_install"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_files_update_prep",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_register_rsrc",
+    "callees": ["_copy_from_user", "io_sqe_buffers_register", "io_sqe_files_register", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_register_rsrc_update",
+    "callees": ["__io_register_rsrc_update", "_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_register_files_update",
+    "callees": ["__builtin_expect", "__io_sqe_files_update", "_copy_from_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_register_rsrc_update",
+    "callees": ["__builtin_expect", "__io_sqe_buffers_update", "__io_sqe_files_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_sqe_buffers_update",
+    "callees": ["__builtin_expect", "_copy_from_user", "io_buffer_unmap", "io_buffer_validate", "io_copy_iov", "io_queue_rsrc_removal", "io_sqe_buffer_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_sqe_files_update",
+    "callees": ["_copy_from_user", "fget", "fput", "io_file_bitmap_clear", "io_file_bitmap_set", "io_file_get_flags", "io_is_uring_fops", "io_queue_rsrc_removal", "io_scm_file_account"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_data_alloc",
+    "callees": ["__bad_copy_to", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "io_alloc_page_table", "io_rsrc_data_free", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_alloc_page_table",
+    "callees": ["io_free_page_table", "kmalloc_array", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_data_free",
+    "callees": ["io_free_page_table", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_free_page_table",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_ref_quiesce",
+    "callees": ["finish_wait", "io_put_rsrc_node", "io_rsrc_node_alloc", "io_run_task_work_sig", "mutex_lock", "mutex_unlock", "prepare_to_wait", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_node_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_node_ref_zero",
+    "callees": ["__builtin_expect", "__wake_up", "io_rsrc_node_destroy", "io_rsrc_put_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_node_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_rsrc_put_work",
+    "callees": ["io_buffer_unmap", "io_post_aux_cqe", "io_rsrc_file_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_unmap",
+    "callees": ["io_unaccount_mem", "kvfree", "unpin_user_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_copy_iov",
+    "callees": ["__bad_copy_to", "__builtin_expect", "__builtin_object_size", "_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_account_mem",
+    "callees": ["__io_account_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_unaccount_mem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_account_mem",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_scm_file_account",
+    "callees": ["__builtin_expect", "__io_scm_file_account", "unix_get_socket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_dequeue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_file_bitmap_set",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_file_bitmap_clear",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

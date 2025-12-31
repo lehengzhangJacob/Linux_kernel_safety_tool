@@ -1,0 +1,122 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_write",
+    "callees": ["__shmem_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_read",
+    "callees": ["__shmem_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_read_to_iosys_map",
+    "callees": ["__builtin_expect", "iosys_map_memcpy_to", "kmap", "mark_page_accessed", "put_page", "shmem_read_mapping_page_gfp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__shmem_rw",
+    "callees": ["__builtin_expect", "kmap", "mark_page_accessed", "memcpy", "put_page", "set_page_dirty", "shmem_read_mapping_page_gfp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_unpin_map",
+    "callees": ["vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_pin_map",
+    "callees": ["__builtin_expect", "kvfree", "kvmalloc_node", "put_page", "shmem_read_mapping_page_gfp", "vmap"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_create_from_object",
+    "callees": ["__builtin_expect", "i915_gem_object_is_lmem", "i915_gem_object_is_shmem", "i915_gem_object_pin_map_unlocked", "shmem_create_from_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shmem_create_from_data",
+    "callees": ["__builtin_expect", "__shmem_rw", "fput", "shmem_file_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

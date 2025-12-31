@@ -1,0 +1,14 @@
+[
+  {
+    "name": "disable_modeset",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["video_nomodeset"]
+  },
+  {
+    "name": "video_firmware_drivers_only",
+    "callees": [],
+    "global_reads": ["video_nomodeset"],
+    "global_writes": []
+  }
+]

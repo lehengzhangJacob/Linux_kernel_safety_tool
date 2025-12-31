@@ -1,0 +1,128 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next",
+    "callees": ["find_next_mod_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ftrace_formats_open.part.0",
+    "callees": ["seq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_trace_printk",
+    "callees": ["register_module_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_trace_printk_function_export",
+    "callees": ["trace_create_file", "tracing_init_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ftrace_formats_open",
+    "callees": ["ftrace_formats_open.part.0", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "t_stop",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "t_show",
+    "callees": ["seq_printf", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "t_next",
+    "callees": ["find_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "t_start",
+    "callees": ["find_next", "mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next",
+    "callees": ["find_next_mod_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_is_tracepoint_string",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ftrace_vprintk",
+    "callees": ["trace_vprintk"],
+    "global_reads": ["trace_printk_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "__trace_printk",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "trace_vprintk"],
+    "global_reads": ["trace_printk_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "__ftrace_vbprintk",
+    "callees": ["__builtin_expect", "trace_vbprintk"],
+    "global_reads": ["trace_printk_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "__trace_bprintk",
+    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "trace_vbprintk"],
+    "global_reads": ["trace_printk_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_printk_control",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["trace_printk_enabled"]
+  },
+  {
+    "name": "module_trace_bprintk_format_notify",
+    "callees": ["hold_module_trace_bprintk_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hold_module_trace_bprintk_format",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "lookup_format", "mutex_lock", "mutex_unlock", "strcpy", "strlen", "trace_printk_init_buffers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_format",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

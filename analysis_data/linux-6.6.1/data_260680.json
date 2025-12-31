@@ -1,0 +1,242 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_init_fs_context",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cred",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dup_fs_context.part.0",
+    "callees": ["__mutex_init", "__refcount_add", "get_cred", "get_filesystem", "kmemdup", "put_fs_context", "security_fs_context_dup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_clean_context",
+    "callees": ["__builtin_expect", "legacy_init_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_clean_context",
+    "callees": ["kfree", "security_free_mnt_opts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_monolithic_mount_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_init_fs_context",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_reconfigure",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_get_tree",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_parse_monolithic",
+    "callees": ["_printk", "security_sb_eat_lsm_opts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_parse_param",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "logfc", "memchr", "memcpy", "strchr", "strlen", "vfs_parse_fs_param_source"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_fs_context_dup",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_fs_context_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_fs_context",
+    "callees": ["deactivate_super", "dput", "kfree", "put_cred", "put_fc_log", "put_filesystem", "put_net", "security_free_mnt_opts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_fc_log",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "logfc",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_printk", "kasprintf", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dup_fs_context",
+    "callees": ["vfs_dup_fs_context.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fc_drop_locked",
+    "callees": ["deactivate_locked_super", "dput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fs_context_for_submount",
+    "callees": ["__builtin_expect", "alloc_fs_context", "put_fs_context", "security_fs_context_submount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fs_context_for_reconfigure",
+    "callees": ["alloc_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fs_context_for_mount",
+    "callees": ["alloc_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_fs_context",
+    "callees": ["__mutex_init", "__refcount_add", "get_cred", "get_filesystem", "kzalloc", "lockref_get", "put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_parse_monolithic",
+    "callees": ["vfs_parse_monolithic_sep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_comma_sep",
+    "callees": ["strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_monolithic_sep",
+    "callees": ["security_sb_eat_lsm_opts", "strchr", "strlen", "vfs_parse_fs_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_fs_string",
+    "callees": ["kfree", "kmemdup_nul", "vfs_parse_fs_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_fs_param",
+    "callees": ["logfc", "security_fs_context_parse_param", "vfs_parse_fs_param_source", "vfs_parse_sb_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_fs_param_source",
+    "callees": ["logfc", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_parse_sb_flag",
+    "callees": ["lookup_constant"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cred",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

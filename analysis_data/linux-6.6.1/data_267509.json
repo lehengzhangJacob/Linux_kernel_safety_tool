@@ -1,0 +1,206 @@
+[
+  {
+    "name": "slpc_get_state_string",
+    "callees": ["drm_clflush_virt_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_fini",
+    "callees": ["i915_vma_unpin_and_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_print_info",
+    "callees": ["drm_printf", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_get_state_string", "slpc_query_task_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_dec_waiters",
+    "callees": ["mutex_lock", "mutex_unlock", "slpc_force_min_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_set_boost_freq",
+    "callees": ["mutex_lock", "mutex_unlock", "slpc_force_min_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_enable",
+    "callees": ["__builtin_expect", "_dev_err", "intel_guc_pm_intrmsk_enable", "intel_guc_slpc_set_ignore_eff_freq", "intel_guc_slpc_set_media_ratio_mode", "slpc_get_rp_values", "slpc_query_task_state", "slpc_reset", "slpc_set_param", "slpc_set_softlimits", "slpc_shared_data_reset", "update_server_min_softlimit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_unset_gucrc_mode",
+    "callees": ["_dev_err", "guc_action_slpc_unset_param", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_override_gucrc_mode",
+    "callees": ["_dev_err", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_get_rp_values",
+    "callees": ["gen6_rps_get_freq_caps", "intel_gpu_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_server_min_softlimit",
+    "callees": ["is_slpc_min_freq_rpmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_slpc_min_freq_rpmax",
+    "callees": ["_dev_err", "intel_guc_slpc_get_min_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_set_softlimits",
+    "callees": ["__builtin_expect", "intel_guc_slpc_set_max_freq", "intel_guc_slpc_set_min_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_pm_intrmsk_enable",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_set_media_ratio_mode",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_get_min_freq",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_query_task_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_set_min_freq",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "mutex_lock", "mutex_unlock", "slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_set_ignore_eff_freq",
+    "callees": ["_dev_err", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "mutex_lock", "mutex_unlock", "slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_get_max_freq",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_query_task_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_set_max_freq",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_shared_data_reset",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_reset",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "_dev_err", "drm_clflush_virt_range", "guc_action_slpc_reset", "ktime_get_raw", "slpc_get_state_string", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_action_slpc_reset",
+    "callees": ["intel_guc_ct_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_get_state_string",
+    "callees": ["drm_clflush_virt_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_init",
+    "callees": ["__builtin_expect", "__mutex_init", "_dev_err", "intel_guc_allocate_and_map_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_boost_work",
+    "callees": ["mutex_lock", "mutex_unlock", "slpc_force_min_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_force_min_freq",
+    "callees": ["_dev_notice", "guc_action_slpc_set_param_nb", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_set_param",
+    "callees": ["_dev_err", "guc_action_slpc_set_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slpc_query_task_state",
+    "callees": ["__builtin_expect", "_dev_err", "drm_clflush_virt_range", "guc_action_slpc_query"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_action_slpc_query",
+    "callees": ["intel_guc_ct_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_action_slpc_set_param",
+    "callees": ["intel_guc_ct_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_slpc_init_early",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

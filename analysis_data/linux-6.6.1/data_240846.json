@@ -1,0 +1,68 @@
+[
+  {
+    "name": "vfs_fadvise",
+    "callees": ["generic_fadvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fadvise64_64",
+    "callees": ["ksys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fadvise64_64",
+    "callees": ["ksys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fadvise64",
+    "callees": ["__ia32_sys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fadvise64",
+    "callees": ["__x64_sys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fadvise64_64",
+    "callees": ["ksys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fadvise64_64",
+    "callees": ["ksys_fadvise64_64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ksys_fadvise64_64",
+    "callees": ["__fdget", "fput", "vfs_fadvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_fadvise",
+    "callees": ["generic_fadvise"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_fadvise",
+    "callees": ["__filemap_fdatawrite_range", "_raw_spin_lock", "_raw_spin_unlock", "force_page_cache_readahead", "inode_to_bdi", "invalidate_mapping_pages", "lru_add_drain", "lru_add_drain_all", "mapping_try_invalidate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "force_page_cache_readahead",
+    "callees": ["force_page_cache_ra"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

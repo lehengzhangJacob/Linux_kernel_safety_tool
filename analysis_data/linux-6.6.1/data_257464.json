@@ -1,0 +1,134 @@
+[
+  {
+    "name": "async_synchronize_cookie_domain.part.0",
+    "callees": ["finish_wait", "init_wait_entry", "lowest_in_progress", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain",
+    "callees": ["__SCT__might_resched", "async_synchronize_cookie_domain.part.0", "ktime_get", "lowest_in_progress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_in_progress",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_in_progress",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain.part.0",
+    "callees": ["finish_wait", "init_wait_entry", "lowest_in_progress", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain",
+    "callees": ["__SCT__might_resched", "async_synchronize_cookie_domain.part.0", "ktime_get", "lowest_in_progress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_in_progress",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_in_progress",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain.part.0",
+    "callees": ["finish_wait", "init_wait_entry", "lowest_in_progress", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain",
+    "callees": ["__SCT__might_resched", "async_synchronize_cookie_domain.part.0", "ktime_get", "lowest_in_progress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain.part.0",
+    "callees": ["finish_wait", "init_wait_entry", "lowest_in_progress", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_is_async",
+    "callees": ["current_wq_worker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie",
+    "callees": ["async_synchronize_cookie_domain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_cookie_domain",
+    "callees": ["__SCT__might_resched", "async_synchronize_cookie_domain.part.0", "ktime_get", "lowest_in_progress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_full_domain",
+    "callees": ["async_synchronize_cookie_domain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_synchronize_full",
+    "callees": ["async_synchronize_cookie_domain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_schedule_node",
+    "callees": ["async_schedule_node_domain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "async_schedule_node_domain",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "kzalloc", "queue_work_node"],
+    "global_reads": ["next_cookie", "system_unbound_wq"],
+    "global_writes": ["next_cookie"]
+  },
+  {
+    "name": "async_run_entry_fn",
+    "callees": ["__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_in_progress",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_wq_worker",
+    "callees": ["kthread_data"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

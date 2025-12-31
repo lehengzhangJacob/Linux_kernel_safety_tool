@@ -1,0 +1,56 @@
+[
+  {
+    "name": "lpit_read_residency_counter_us.part.0",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_init_lpit",
+    "callees": ["acpi_get_table", "acpi_put_table", "lpit_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_process",
+    "callees": ["lpit_update_residency"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_update_residency",
+    "callees": ["bus_get_dev_root", "ioremap", "put_device", "sysfs_add_file_to_group"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_read_residency_count_address",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "low_power_idle_cpu_residency_us_show",
+    "callees": ["lpit_read_residency_counter_us", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "low_power_idle_system_residency_us_show",
+    "callees": ["lpit_read_residency_counter_us", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_read_residency_counter_us",
+    "callees": ["acpi_os_read_iomem", "lpit_read_residency_counter_us.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

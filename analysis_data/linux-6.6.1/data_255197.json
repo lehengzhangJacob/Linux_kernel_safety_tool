@@ -1,0 +1,26 @@
+[
+  {
+    "name": "acpi_hw_validate_io_block",
+    "callees": ["acpi_hw_validate_io_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_port",
+    "callees": ["acpi_hw_validate_io_request", "acpi_os_write_port"],
+    "global_reads": ["acpi_gbl_truncate_io_addresses"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_read_port",
+    "callees": ["acpi_hw_validate_io_request", "acpi_os_read_port"],
+    "global_reads": ["acpi_gbl_truncate_io_addresses"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_validate_io_request",
+    "callees": ["acpi_error"],
+    "global_reads": ["acpi_gbl_osi_data"],
+    "global_writes": []
+  }
+]

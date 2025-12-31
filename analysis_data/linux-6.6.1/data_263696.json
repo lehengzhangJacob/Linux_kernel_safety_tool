@@ -1,0 +1,518 @@
+[
+  {
+    "name": "e1000e_phy_reset_dsp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_reset_dsp",
+    "callees": ["e1000e_phy_reset_dsp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_ife",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_m88",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_disable_phy_wakeup_reg_access_bm",
+    "callees": ["e1000_disable_phy_wakeup_reg_access_bm.part.0", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_82577",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000e_read_phy_reg_igp",
+    "callees": ["e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000e_write_phy_reg_igp",
+    "callees": ["e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_read_kmrn_reg",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_write_kmrn_reg",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_reset_dsp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_cable_length_82577",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_phy_info_82577",
+    "callees": ["e1000_check_polarity_82577", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_force_speed_duplex_82577",
+    "callees": ["__const_udelay", "e1000e_phy_force_speed_duplex_setup", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_82577",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_link_stall_workaround_hv",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_access_phy_debug_regs_hv",
+    "callees": ["e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_write_phy_reg_page_hv",
+    "callees": ["__e1000_write_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_write_phy_reg_hv_locked",
+    "callees": ["__e1000_write_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_write_phy_reg_hv",
+    "callees": ["__e1000_write_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_write_phy_reg_hv",
+    "callees": ["e1000_access_phy_debug_regs_hv", "e1000_access_phy_wakeup_reg_bm", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_read_phy_reg_page_hv",
+    "callees": ["__e1000_read_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_read_phy_reg_hv_locked",
+    "callees": ["__e1000_read_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_read_phy_reg_hv",
+    "callees": ["__e1000_read_phy_reg_hv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_read_phy_reg_hv",
+    "callees": ["e1000_access_phy_debug_regs_hv", "e1000_access_phy_wakeup_reg_bm", "e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_power_down_phy_copper",
+    "callees": ["usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_power_up_phy_copper",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_access_phy_wakeup_reg_bm",
+    "callees": ["e1000_disable_phy_wakeup_reg_access_bm", "e1000_enable_phy_wakeup_reg_access_bm", "e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_disable_phy_wakeup_reg_access_bm",
+    "callees": ["e1000_disable_phy_wakeup_reg_access_bm.part.0", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_enable_phy_wakeup_reg_access_bm",
+    "callees": ["e1000_enable_phy_wakeup_reg_access_bm.part.0", "e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_bm2",
+    "callees": ["e1000_access_phy_wakeup_reg_bm", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_bm2",
+    "callees": ["e1000_access_phy_wakeup_reg_bm", "e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_bm",
+    "callees": ["e1000_access_phy_wakeup_reg_bm", "e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_bm",
+    "callees": ["e1000_access_phy_wakeup_reg_bm", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_determine_phy_address",
+    "callees": ["e1000e_get_phy_id", "e1000e_get_phy_type_from_id", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_phy_type_from_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_init_script_igp3",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_cfg_done_generic",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_hw_reset_generic",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_sw_reset",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_phy_info_ife",
+    "callees": ["e1000_check_polarity_ife", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_phy_info_igp",
+    "callees": ["e1000_check_polarity_igp", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_phy_info_m88",
+    "callees": ["e1000_check_polarity_m88", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_cable_length_igp_2",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_cable_length_m88",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_has_link_generic",
+    "callees": ["__builtin_constant_p", "__const_udelay", "__udelay", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_wait_autoneg",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_ife",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_igp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_polarity_m88",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_downshift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_set_d3_lplu_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_force_speed_duplex_setup",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_force_speed_duplex_ife",
+    "callees": ["__const_udelay", "e1000e_phy_force_speed_duplex_setup", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_force_speed_duplex_m88",
+    "callees": ["e1000e_phy_force_speed_duplex_setup", "e1000e_phy_has_link_generic", "e1000e_phy_reset_dsp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_force_speed_duplex_igp",
+    "callees": ["__const_udelay", "e1000e_phy_force_speed_duplex_setup", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_setup_copper_link",
+    "callees": ["e1000_copper_link_autoneg", "e1000e_config_fc_after_link_up", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_copper_link_autoneg",
+    "callees": ["e1000_phy_setup_autoneg", "e1000_wait_autoneg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_setup_autoneg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_copper_link_setup_igp",
+    "callees": ["e1000_set_master_slave_mode", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_copper_link_setup_m88",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_copper_link_setup_82577",
+    "callees": ["e1000_set_master_slave_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_master_slave_mode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_kmrn_reg_locked",
+    "callees": ["__e1000_write_kmrn_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_kmrn_reg",
+    "callees": ["__e1000_write_kmrn_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_write_kmrn_reg",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_kmrn_reg_locked",
+    "callees": ["__e1000_read_kmrn_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_kmrn_reg",
+    "callees": ["__e1000_read_kmrn_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000_read_kmrn_reg",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_igp_locked",
+    "callees": ["__e1000e_write_phy_reg_igp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_igp",
+    "callees": ["__e1000e_write_phy_reg_igp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000e_write_phy_reg_igp",
+    "callees": ["e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_igp_locked",
+    "callees": ["__e1000e_read_phy_reg_igp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_igp",
+    "callees": ["__e1000e_read_phy_reg_igp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e1000e_read_phy_reg_igp",
+    "callees": ["e1000e_read_phy_reg_mdic", "e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_page_igp",
+    "callees": ["e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_m88",
+    "callees": ["e1000e_write_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_m88",
+    "callees": ["e1000e_read_phy_reg_mdic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_phy_reg_mdic",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_phy_reg_mdic",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phy_reset_dsp",
+    "callees": ["e1000e_phy_reset_dsp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_phy_id",
+    "callees": ["usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_reset_block_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

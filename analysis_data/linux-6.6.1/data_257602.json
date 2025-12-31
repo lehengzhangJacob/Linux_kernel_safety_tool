@@ -1,0 +1,638 @@
+[
+  {
+    "name": "echo_set_canon_col",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_set_canon_col",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_flow_ctrl",
+    "callees": ["process_echoes", "start_tty", "stop_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_flow_ctrl",
+    "callees": ["process_echoes", "start_tty", "stop_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__isig",
+    "callees": ["kill_pgrp", "put_pid", "tty_get_pgrp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_packet_mode_flush.part.0",
+    "callees": ["__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_packet_mode_flush",
+    "callees": ["n_tty_packet_mode_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zero_buffer.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zero_buffer.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_buffer_flags",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_check_unthrottle.part.0",
+    "callees": ["n_tty_kick_worker", "tty_unthrottle_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_kick_worker.part.0",
+    "callees": ["___ratelimit", "__builtin_constant_p", "__builtin_expect", "__warn_printk", "tty_buffer_restart_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zero_buffer.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_signal_char.part.0",
+    "callees": ["commit_echoes", "echo_char"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_flagged.part.0",
+    "callees": ["_printk", "tty_driver_name", "tty_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_packet_mode_flush.part.0",
+    "callees": ["__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_lookahead_flow_ctrl.part.0",
+    "callees": ["__builtin_expect", "n_tty_receive_char_flow_ctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_echoes.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing.part.0",
+    "callees": ["echo_char_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_char_raw.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_inherit_ops",
+    "callees": [],
+    "global_reads": ["n_tty_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_ioctl",
+    "callees": ["__builtin_expect", "down_write", "inq_canon", "n_tty_ioctl_helper", "tty_chars_in_buffer", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inq_canon",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_poll",
+    "callees": ["__builtin_constant_p", "input_available_p", "mutex_is_locked", "poll_wait", "tty_buffer_flush_work", "tty_chars_in_buffer", "tty_hung_up_p", "tty_write_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_write",
+    "callees": ["add_wait_queue", "down_read", "mutex_lock", "mutex_unlock", "process_echoes", "process_output", "process_output_block", "remove_wait_queue", "signal_pending", "tty_check_change", "tty_hung_up_p", "tty_io_nonblock", "up_read", "wait_woken"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_read",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "add_wait_queue", "canon_copy_from_read_buf", "canon_skip_eof", "copy_from_read_buf", "down_read", "input_available_p", "job_control", "mutex_lock_interruptible", "mutex_trylock", "mutex_unlock", "n_tty_check_unthrottle", "n_tty_kick_worker", "remove_wait_queue", "signal_pending", "tty_buffer_flush_work", "tty_hung_up_p", "tty_io_nonblock", "up_read", "wait_woken"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "canon_skip_eof",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "canon_copy_from_read_buf",
+    "callees": ["__builtin_constant_p", "find_first_bit", "find_next_bit", "tty_audit_push", "tty_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_from_read_buf",
+    "callees": ["memcpy", "tty_audit_add_data", "zero_buffer.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_open",
+    "callees": ["__mutex_init", "n_tty_set_termios", "tty_unthrottle", "vzalloc"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_close",
+    "callees": ["down_write", "n_tty_packet_mode_flush", "up_write", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_set_termios",
+    "callees": ["__builtin_constant_p", "__wake_up", "memset", "process_echoes", "start_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf2",
+    "callees": ["n_tty_receive_buf_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf",
+    "callees": ["n_tty_receive_buf_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf_common",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__receive_buf", "down_read", "n_tty_check_throttle", "n_tty_kick_worker", "tty_unthrottle_safe", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__receive_buf",
+    "callees": ["__wake_up", "flush_echoes", "kill_fasync", "n_tty_receive_buf_closing", "n_tty_receive_buf_raw", "n_tty_receive_buf_real_raw", "n_tty_receive_buf_standard"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf_standard",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "n_tty_receive_char", "n_tty_receive_char_flagged", "n_tty_receive_char_lnext", "n_tty_receive_char_special"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf_closing",
+    "callees": ["__builtin_expect", "n_tty_receive_char_closing"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_buf_raw",
+    "callees": ["__builtin_expect", "n_tty_receive_char_flagged"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_lookahead_flow_ctrl",
+    "callees": ["n_tty_lookahead_flow_ctrl.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_lnext",
+    "callees": ["__builtin_expect", "n_tty_receive_char", "n_tty_receive_char_flagged"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_flagged",
+    "callees": ["n_tty_receive_break", "n_tty_receive_char_flagged.part.0", "n_tty_receive_overrun", "n_tty_receive_parity_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_closing",
+    "callees": ["n_tty_receive_char_flow_ctrl", "process_echoes", "start_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char",
+    "callees": ["commit_echoes", "echo_char", "echo_set_canon_col", "finish_erasing", "process_echoes", "start_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_special",
+    "callees": ["commit_echoes", "echo_char", "echo_char_raw", "echo_set_canon_col", "finish_erasing", "n_tty_receive_char_canon", "n_tty_receive_char_flow_ctrl", "n_tty_receive_signal_char", "process_echoes", "start_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_canon",
+    "callees": ["commit_echoes", "echo_char", "echo_char_raw", "echo_set_canon_col", "eraser", "finish_erasing", "n_tty_receive_handle_newline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_handle_newline",
+    "callees": ["__builtin_constant_p", "__wake_up", "kill_fasync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_char_flow_ctrl",
+    "callees": ["process_echoes", "start_tty", "stop_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_signal_char",
+    "callees": ["isig", "n_tty_receive_signal_char.part.0", "process_echoes", "start_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_overrun",
+    "callees": ["_printk", "tty_driver_name", "tty_name"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_receive_break",
+    "callees": ["isig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isig",
+    "callees": ["__isig", "down_read", "down_write", "mutex_lock", "mutex_unlock", "n_tty_packet_mode_flush", "reset_buffer_flags", "tty_driver_flush_buffer", "up_read", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__isig",
+    "callees": ["kill_pgrp", "put_pid", "tty_get_pgrp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eraser",
+    "callees": ["echo_char", "echo_char_raw", "echo_erase_tab", "echo_move_back_col", "finish_erasing"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_erasing",
+    "callees": ["finish_erasing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_char_raw",
+    "callees": ["echo_char_raw.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_erase_tab",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_set_canon_col",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "echo_move_back_col",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_echoes",
+    "callees": ["__process_echoes", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_echoes",
+    "callees": ["__process_echoes", "mutex_lock", "mutex_unlock", "process_echoes.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "commit_echoes",
+    "callees": ["__process_echoes", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__process_echoes",
+    "callees": ["do_output_char", "n_tty_process_echo_ops", "tty_put_char", "tty_write_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_process_echo_ops",
+    "callees": ["tty_put_char"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_output_block",
+    "callees": ["mutex_lock", "mutex_unlock", "tty_write_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_output",
+    "callees": ["do_output_char", "mutex_lock", "mutex_unlock", "tty_write_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_output_char",
+    "callees": ["tty_put_char"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_flush_buffer",
+    "callees": ["down_write", "n_tty_kick_worker", "n_tty_packet_mode_flush", "reset_buffer_flags", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_packet_mode_flush",
+    "callees": ["n_tty_packet_mode_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_buffer_flags",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_check_unthrottle",
+    "callees": ["n_tty_check_unthrottle.part.0", "n_tty_kick_worker", "tty_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_check_throttle",
+    "callees": ["tty_throttle_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_write_wakeup",
+    "callees": ["kill_fasync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_kick_worker",
+    "callees": ["___ratelimit", "__builtin_expect", "__warn_printk", "n_tty_kick_worker.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_copy",
+    "callees": ["memcpy", "tty_audit_add_data", "zero_buffer.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "n_tty_init",
+    "callees": ["tty_register_ldisc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_first_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "xfrm6_ipcomp_rcv.part.0",
+    "callees": ["icmp6_send", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ipcomp_rcv.part.0",
+    "callees": ["icmp6_send", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_protocol_deregister.part.0",
+    "callees": ["_printk", "inet6_del_protocol", "mutex_lock", "mutex_unlock", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ipcomp_rcv.part.0",
+    "callees": ["icmp6_send", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_protocol_fini",
+    "callees": ["xfrm_input_unregister_afinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_protocol_init",
+    "callees": ["xfrm_input_register_afinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_protocol_deregister",
+    "callees": ["xfrm6_protocol_deregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_protocol_register",
+    "callees": ["_printk", "inet6_add_protocol", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ipcomp_err",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ipcomp_rcv",
+    "callees": ["xfrm6_ipcomp_rcv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ah_err",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ah_rcv",
+    "callees": ["xfrm6_ah_rcv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_esp_err",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_esp_rcv",
+    "callees": ["xfrm6_esp_rcv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_rcv_encap",
+    "callees": ["icmp6_send", "ip6_route_input_lookup", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_rcv_cb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

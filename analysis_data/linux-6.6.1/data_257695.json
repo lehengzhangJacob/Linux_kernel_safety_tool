@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_proc_mcast_ctl.part.0",
+    "callees": ["cn_proc_ack", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_proc_init",
+    "callees": ["_printk", "cn_add_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_proc_mcast_ctl",
+    "callees": ["cn_proc_mcast_ctl.part.0", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_proc_ack",
+    "callees": ["ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_exit_connector",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_coredump_connector",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_comm_connector",
+    "callees": ["__get_task_comm", "ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_ptrace_connector",
+    "callees": ["ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_sid_connector",
+    "callees": ["ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_id_connector",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ktime_get", "memset", "send_msg"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_exec_connector",
+    "callees": ["ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_fork_connector",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ktime_get", "memset", "send_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_filter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

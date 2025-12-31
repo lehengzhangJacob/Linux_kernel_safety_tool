@@ -1,0 +1,74 @@
+[
+  {
+    "name": "pnp_fixup_device",
+    "callees": ["_dev_printk", "compare_pnp_id"],
+    "global_reads": ["pnp_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_mch",
+    "callees": ["_dev_info", "get_intel_host", "memset", "pci_dev_put", "pci_read_config_dword", "pcibios_bus_to_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_intel_host",
+    "callees": ["pci_get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_mmconfig_area",
+    "callees": ["_dev_info", "amd_get_mmconfig_range", "pnp_add_mem_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_system_pci_resources",
+    "callees": ["_dev_warn", "pci_get_device", "pnp_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ad1815_mpu_resources",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_add_irq_optional_dependent_sets",
+    "callees": ["_dev_info", "dbg_pnp_show_option", "pnp_clone_dependent_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_clone_dependent_set",
+    "callees": ["__builtin_return_address", "_dev_err", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_sb16audio_resources",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_cmi8330_resources",
+    "callees": ["__builtin_constant_p", "_dev_info", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_awe32_resources",
+    "callees": ["quirk_awe32_add_ports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_awe32_add_ports",
+    "callees": ["__builtin_return_address", "_dev_err", "_dev_info", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

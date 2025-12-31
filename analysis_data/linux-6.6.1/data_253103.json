@@ -1,0 +1,158 @@
+[
+  {
+    "name": "acpi_ev_install_gpe_handler",
+    "callees": ["acpi_ev_install_gpe_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_release_global_lock.part.0",
+    "callees": ["acpi_ex_release_mutex_object"],
+    "global_reads": ["acpi_gbl_global_lock_mutex"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_gpe_handler.part.0",
+    "callees": ["acpi_ev_add_gpe_reference", "acpi_ev_detect_gpe", "acpi_ev_get_gpe_event_info", "acpi_os_acquire_lock", "acpi_os_release_lock", "acpi_os_wait_events_complete", "acpi_ut_release_mutex", "kfree"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_install_gpe_handler.part.0",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_ev_remove_gpe_reference", "acpi_os_acquire_lock", "acpi_os_allocate_zeroed", "acpi_os_release_lock", "acpi_ut_release_mutex", "acpi_warning", "kfree"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_fixed_event_handler.part.0",
+    "callees": ["acpi_disable_event", "acpi_ut_get_event_name", "acpi_ut_release_mutex", "acpi_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_fixed_event_handler.part.0",
+    "callees": ["acpi_clear_event", "acpi_enable_event", "acpi_ut_get_event_name", "acpi_ut_release_mutex", "acpi_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_sci_handler.part.0",
+    "callees": ["acpi_os_acquire_lock", "acpi_os_release_lock", "acpi_ut_release_mutex", "kfree"],
+    "global_reads": ["acpi_gbl_gpe_lock", "acpi_gbl_sci_handler_list"],
+    "global_writes": ["acpi_gbl_sci_handler_list"]
+  },
+  {
+    "name": "acpi_remove_notify_handler.part.0",
+    "callees": ["acpi_ev_is_notify_object", "acpi_ns_get_attached_object", "acpi_os_wait_events_complete", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_global_event_handler.part.0",
+    "callees": ["acpi_ut_release_mutex"],
+    "global_reads": ["acpi_gbl_global_event_handler"],
+    "global_writes": ["acpi_gbl_global_event_handler", "acpi_gbl_global_event_handler_context"]
+  },
+  {
+    "name": "acpi_install_notify_handler.part.0",
+    "callees": ["acpi_ev_is_notify_object", "acpi_ns_attach_object", "acpi_ns_get_attached_object", "acpi_ut_add_reference", "acpi_ut_create_internal_object_dbg", "acpi_ut_release_mutex", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_release_global_lock",
+    "callees": ["acpi_release_global_lock.part.0"],
+    "global_reads": ["acpi_gbl_global_lock_handle"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_acquire_global_lock",
+    "callees": ["acpi_ex_acquire_mutex_object", "acpi_ex_enter_interpreter", "acpi_ex_exit_interpreter"],
+    "global_reads": ["acpi_gbl_global_lock_handle", "acpi_gbl_global_lock_mutex"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_gpe_handler",
+    "callees": ["acpi_remove_gpe_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_gpe_raw_handler",
+    "callees": ["acpi_ev_install_gpe_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_gpe_handler",
+    "callees": ["acpi_ev_install_gpe_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_install_gpe_handler",
+    "callees": ["acpi_ev_install_gpe_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_fixed_event_handler",
+    "callees": ["acpi_remove_fixed_event_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_fixed_event_handler",
+    "callees": ["acpi_install_fixed_event_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_global_event_handler",
+    "callees": ["acpi_install_global_event_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_sci_handler",
+    "callees": ["acpi_remove_sci_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_sci_handler",
+    "callees": ["acpi_os_acquire_lock", "acpi_os_allocate", "acpi_os_release_lock", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex", "kfree"],
+    "global_reads": ["acpi_gbl_gpe_lock", "acpi_gbl_sci_handler_list"],
+    "global_writes": ["acpi_gbl_sci_handler_list"]
+  },
+  {
+    "name": "acpi_remove_notify_handler",
+    "callees": ["acpi_remove_notify_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_notify_handler",
+    "callees": ["acpi_install_notify_handler.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

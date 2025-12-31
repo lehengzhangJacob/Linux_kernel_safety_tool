@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ptp_kvm_adjfine",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_init",
+    "callees": ["__builtin_expect", "_printk", "kvm_arch_ptp_init", "ptp_clock_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_exit",
+    "callees": ["kvm_arch_ptp_exit", "ptp_clock_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_gettime",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kvm_arch_ptp_get_clock", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_settime",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_adjtime",
+    "callees": ["ptp_kvm_adjfine"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_adjfine",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_getcrosststamp",
+    "callees": ["get_device_system_crosststamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_kvm_get_time_fn",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "kvm_arch_ptp_get_crosststamp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

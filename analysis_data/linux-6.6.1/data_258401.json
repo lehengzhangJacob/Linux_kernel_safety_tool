@@ -1,0 +1,296 @@
+[
+  {
+    "name": "__do_sys_fcntl",
+    "callees": ["__builtin_expect", "__fdget_raw", "do_fcntl", "fput", "security_file_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_flock",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_flock64",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_modown",
+    "callees": ["__refcount_add", "_raw_write_lock_irq", "_raw_write_unlock_irq", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sigio_perm",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "security_file_send_sigiotask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sigio_perm",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "security_file_send_sigiotask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigurg_to_task.part.0",
+    "callees": ["do_send_sig_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigurg_to_task",
+    "callees": ["send_sigurg_to_task.part.0", "sigio_perm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kill_fasync.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kill_fasync_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigurg_to_task.part.0",
+    "callees": ["do_send_sig_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fcntl_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["fasync_cache"]
+  },
+  {
+    "name": "kill_fasync",
+    "callees": ["kill_fasync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kill_fasync_rcu",
+    "callees": ["_printk", "_raw_read_lock_irqsave", "_raw_read_unlock_irqrestore", "send_sigio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_helper",
+    "callees": ["fasync_add_entry", "fasync_remove_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_add_entry",
+    "callees": ["fasync_insert_entry", "kmem_cache_alloc", "kmem_cache_free"],
+    "global_reads": ["fasync_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_insert_entry",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock_irq", "_raw_write_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_free",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["fasync_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["fasync_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_remove_entry",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock_irq", "_raw_write_unlock_irq", "call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fasync_free_rcu",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["fasync_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigurg",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_read_lock", "_raw_read_lock_irqsave", "_raw_read_unlock", "_raw_read_unlock_irqrestore", "pid_task", "send_sigurg_to_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigurg_to_task",
+    "callees": ["send_sigurg_to_task.part.0", "sigio_perm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigio",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_read_lock", "_raw_read_lock_irqsave", "_raw_read_unlock", "_raw_read_unlock_irqrestore", "pid_task", "send_sigio_to_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigio_to_task",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "do_send_sig_info", "memset", "sigio_perm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sigio_perm",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "security_file_send_sigiotask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_fcntl",
+    "callees": ["do_compat_fcntl64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_fcntl",
+    "callees": ["__do_compat_sys_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_fcntl64",
+    "callees": ["do_compat_fcntl64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_compat_fcntl64",
+    "callees": ["__builtin_expect", "__fdget_raw", "do_fcntl", "fcntl_getlk", "fcntl_setlk", "fput", "get_compat_flock", "get_compat_flock64", "put_compat_flock", "put_compat_flock64", "security_file_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_compat_flock64",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_compat_flock",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_flock64",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_flock",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fcntl",
+    "callees": ["__builtin_expect", "__fdget_raw", "do_fcntl", "fput", "security_file_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fcntl",
+    "callees": ["__do_sys_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fcntl",
+    "callees": ["__do_sys_fcntl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_fcntl",
+    "callees": ["_copy_from_user", "_copy_to_user", "f_dupfd", "f_getown", "f_getown_ex", "f_setown", "f_setown_ex", "fcntl_dirnotify", "fcntl_getlease", "fcntl_getlk", "fcntl_rw_hint", "fcntl_setlease", "fcntl_setlk", "get_close_on_exec", "memfd_fcntl", "pipe_fcntl", "set_close_on_exec", "setfl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_getown_ex",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_copy_to_user", "_raw_read_lock_irq", "_raw_read_unlock_irq", "pid_task", "pid_vnr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_setown_ex",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_copy_from_user", "f_modown", "find_vpid", "security_file_set_fowner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_getown",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_read_lock_irq", "_raw_read_unlock_irq", "pid_task", "pid_vnr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_delown",
+    "callees": ["f_modown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_setown",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "f_modown", "find_vpid", "security_file_set_fowner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__f_setown",
+    "callees": ["f_modown", "security_file_set_fowner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_modown",
+    "callees": ["__refcount_add", "_raw_write_lock_irq", "_raw_write_unlock_irq", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setfl",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "inode_owner_or_capable", "iocb_flags"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

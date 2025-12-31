@@ -1,0 +1,464 @@
+[
+  {
+    "name": "get_timespec64",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_timespec64",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_timespec64",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_settimeofday",
+    "callees": ["__builtin_expect", "_copy_from_user", "do_sys_settimeofday64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_timespec64",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns_to_timespec64",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_gettimeofday",
+    "callees": ["__builtin_expect", "_copy_to_user", "ktime_get_real_ts64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_normalized_timespec64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_old_timespec32",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_old_timespec32",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_stime",
+    "callees": ["__builtin_expect", "do_settimeofday64", "security_settime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_stime32",
+    "callees": ["__builtin_expect", "do_settimeofday64", "security_settime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_time32",
+    "callees": ["__builtin_expect", "ktime_get_real_seconds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_time",
+    "callees": ["__builtin_expect", "ktime_get_real_seconds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsecs_to_jiffies64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_old_itimerspec32",
+    "callees": ["__put_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_old_itimerspec32",
+    "callees": ["__get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_itimerspec64",
+    "callees": ["put_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_itimerspec64",
+    "callees": ["get_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_old_timespec32",
+    "callees": ["__put_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_old_timespec32",
+    "callees": ["__get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_old_timespec32",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_timespec64",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_timespec64",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timespec64_add_safe",
+    "callees": ["__builtin_expect", "set_normalized_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsecs_to_jiffies",
+    "callees": ["nsecs_to_jiffies64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsecs_to_jiffies64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies64_to_msecs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies64_to_nsecs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsec_to_clock_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies_64_to_clock_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clock_t_to_jiffies",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies_to_clock_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies_to_timespec64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timespec64_to_jiffies",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__usecs_to_jiffies",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__msecs_to_jiffies",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns_to_timespec64",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_normalized_timespec64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns_to_kernel_old_timeval",
+    "callees": ["ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mktime64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies_to_usecs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jiffies_to_msecs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_adjtimex_time32",
+    "callees": ["do_adjtimex", "get_old_timex32", "put_old_timex32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_adjtimex_time32",
+    "callees": ["__do_sys_adjtimex_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_adjtimex_time32",
+    "callees": ["__do_sys_adjtimex_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_old_timex32",
+    "callees": ["_copy_to_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_old_timex32",
+    "callees": ["_copy_from_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_adjtimex",
+    "callees": ["_copy_from_user", "_copy_to_user", "do_adjtimex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_adjtimex",
+    "callees": ["__do_sys_adjtimex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_adjtimex",
+    "callees": ["__do_sys_adjtimex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_settimeofday",
+    "callees": ["__builtin_expect", "_copy_from_user", "do_sys_settimeofday64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_settimeofday",
+    "callees": ["__do_compat_sys_settimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_gettimeofday",
+    "callees": ["__builtin_expect", "_copy_to_user", "ktime_get_real_ts64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_gettimeofday",
+    "callees": ["__do_compat_sys_gettimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_settimeofday",
+    "callees": ["__builtin_expect", "_copy_from_user", "do_sys_settimeofday64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_settimeofday",
+    "callees": ["__do_sys_settimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_settimeofday",
+    "callees": ["__do_sys_settimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_sys_settimeofday64",
+    "callees": ["do_settimeofday64", "security_settime64", "timekeeping_warp_clock", "update_vsyscall_tz"],
+    "global_reads": ["firsttime"],
+    "global_writes": ["firsttime", "sys_tz"]
+  },
+  {
+    "name": "__do_sys_gettimeofday",
+    "callees": ["__builtin_expect", "_copy_to_user", "ktime_get_real_ts64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_gettimeofday",
+    "callees": ["__do_sys_gettimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_gettimeofday",
+    "callees": ["__do_sys_gettimeofday"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_stime32",
+    "callees": ["__builtin_expect", "do_settimeofday64", "security_settime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_stime32",
+    "callees": ["__do_sys_stime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_stime32",
+    "callees": ["__do_sys_stime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_time32",
+    "callees": ["__builtin_expect", "ktime_get_real_seconds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_time32",
+    "callees": ["__do_sys_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_time32",
+    "callees": ["__do_sys_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_stime",
+    "callees": ["__builtin_expect", "do_settimeofday64", "security_settime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_stime",
+    "callees": ["__do_sys_stime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_stime",
+    "callees": ["__do_sys_stime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_time",
+    "callees": ["__builtin_expect", "ktime_get_real_seconds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_time",
+    "callees": ["__do_sys_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_time",
+    "callees": ["__do_sys_time"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

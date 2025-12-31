@@ -1,0 +1,284 @@
+[
+  {
+    "name": "drm_mm_interval_tree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_propagate",
+    "callees": ["drm_mm_interval_tree_augment_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_propagate",
+    "callees": ["augment_callbacks_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_dump_hole",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_takedown.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_print",
+    "callees": ["drm_mm_dump_hole", "drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_dump_hole",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_takedown",
+    "callees": ["__builtin_expect", "drm_mm_takedown.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_init",
+    "callees": ["add_hole"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_scan_color_evict",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_scan_remove_block",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_scan_add_block",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_scan_init_with_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_replace_node",
+    "callees": ["__builtin_constant_p", "clear_bit_unlock", "rb_replace_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_remove_node",
+    "callees": ["add_hole", "clear_bit_unlock", "drm_mm_interval_tree_remove", "rm_hole"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_insert_node_in_range",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "add_hole", "drm_mm_interval_tree_add_node", "first_hole", "next_hole", "rm_hole"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_reserve_node",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "add_hole", "drm_mm_interval_tree_add_node", "find_hole_addr", "rm_hole"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_hole",
+    "callees": ["next_hole_high_addr", "next_hole_low_addr", "rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_hole_low_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_hole_high_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_hole",
+    "callees": ["find_hole_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rm_hole",
+    "callees": ["__rb_erase_color", "augment_callbacks_copy", "augment_callbacks_propagate", "rb_erase_cached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_hole",
+    "callees": ["insert_hole_addr", "insert_hole_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insert_hole_addr",
+    "callees": ["__rb_insert_augmented"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_rotate",
+    "callees": ["augment_callbacks_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_propagate",
+    "callees": ["augment_callbacks_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "augment_callbacks_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insert_hole_size",
+    "callees": ["rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_add_node",
+    "callees": ["__builtin_constant_p", "__rb_insert_augmented"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_mm_interval_first",
+    "callees": ["drm_mm_interval_tree_iter_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_iter_first",
+    "callees": ["drm_mm_interval_tree_subtree_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_subtree_search",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_remove",
+    "callees": ["__rb_erase_color", "drm_mm_interval_tree_augment_copy", "drm_mm_interval_tree_augment_propagate", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_rotate",
+    "callees": ["drm_mm_interval_tree_augment_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_propagate",
+    "callees": ["drm_mm_interval_tree_augment_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_interval_tree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

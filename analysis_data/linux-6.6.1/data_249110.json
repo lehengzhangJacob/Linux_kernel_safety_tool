@@ -1,0 +1,14 @@
+[
+  {
+    "name": "mpi_mulm",
+    "callees": ["mpi_mul", "mpi_tdiv_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_mul",
+    "callees": ["mpi_alloc_limb_space", "mpi_assign_limb_space", "mpi_free_limb_space", "mpi_resize", "mpihelp_mul"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "efi_memmap_unmap",
+    "callees": ["__builtin_constant_p", "early_memunmap", "memunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_init_late",
+    "callees": ["__builtin_expect", "__efi_memmap_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_init_early",
+    "callees": ["__builtin_expect", "__efi_memmap_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__efi_memmap_init",
+    "callees": ["__efi_memmap_free", "_printk", "early_memremap", "memremap"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "acpi_ns_lookup",
+    "callees": ["acpi_ds_scope_stack_push", "acpi_error", "acpi_ns_externalize_name", "acpi_ns_opens_scope", "acpi_ns_search_and_enter", "acpi_os_printf", "acpi_ut_get_descriptor_name", "acpi_ut_get_type_name", "acpi_warning", "kfree"],
+    "global_reads": ["acpi_gbl_ns_lookup_count", "acpi_gbl_root_node"],
+    "global_writes": ["acpi_gbl_ns_lookup_count"]
+  },
+  {
+    "name": "acpi_ns_root_initialize",
+    "callees": ["acpi_error", "acpi_ns_attach_object", "acpi_ns_create_node", "acpi_ns_get_node", "acpi_os_create_semaphore", "acpi_os_predefined_override", "acpi_ut_acquire_mutex", "acpi_ut_create_internal_object_dbg", "acpi_ut_release_mutex", "acpi_ut_remove_reference", "strcmp", "strlen"],
+    "global_reads": ["acpi_gbl_create_osi_method", "acpi_gbl_root_node"],
+    "global_writes": ["acpi_gbl_global_lock_mutex", "acpi_gbl_root_node"]
+  }
+]

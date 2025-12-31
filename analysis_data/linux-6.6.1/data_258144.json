@@ -1,0 +1,26 @@
+[
+  {
+    "name": "warn_set",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_irc_init",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "nf_nat_helper_register"],
+    "global_reads": ["nf_nat_irc_hook"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_irc_fini",
+    "callees": ["nf_nat_helper_unregister", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "help",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__nf_nat_mangle_tcp_packet", "nf_ct_helper_log", "nf_ct_unexpect_related", "nf_nat_exp_find_port", "snprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

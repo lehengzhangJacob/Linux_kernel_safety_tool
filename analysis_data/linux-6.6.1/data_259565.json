@@ -1,0 +1,1046 @@
+[
+  {
+    "name": "call_fib6_entry_notifiers",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_metric_set",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_entry_notifiers",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_entry_notifiers",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "node_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "node_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_entry_notifiers_replace",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_new_sernum",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib6_clean_all",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_clean_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib6_clean_all",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_clean_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_link",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walk",
+    "callees": ["fib6_walk_continue", "fib6_walker_link", "fib6_walker_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_link",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walk",
+    "callees": ["fib6_walk_continue", "fib6_walker_link", "fib6_walker_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal.part.0",
+    "callees": ["__ipv6_prefix_equal64_half.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal",
+    "callees": ["__ipv6_prefix_equal64_half.part.0", "ipv6_prefix_equal.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_free_immediate",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_dump_end",
+    "callees": ["fib6_walker_unlink", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_update_sernum_upto_root",
+    "callees": ["fib6_new_sernum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal.part.0",
+    "callees": ["__ipv6_prefix_equal64_half.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal",
+    "callees": ["__ipv6_prefix_equal64_half.part.0", "ipv6_prefix_equal.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_expires_locked",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_link",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_setup_walk",
+    "callees": ["fib6_walker_link", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_link",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_get_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_net_init.part.0",
+    "callees": ["fib6_notifier_exit", "fib6_tables_init", "inet_peer_base_init", "init_timer_key", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib6_drop_pcpu_from.part.0",
+    "callees": ["fib6_info_release", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal.part.0",
+    "callees": ["__ipv6_prefix_equal64_half.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_stop",
+    "callees": ["ipv6_route_native_seq_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_show",
+    "callees": ["ipv6_route_native_seq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_start",
+    "callees": ["__rcu_read_lock", "ipv6_route_seq_next", "ipv6_route_seq_setup_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_next",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_walk_continue", "fib6_walker_unlink", "ipv6_route_check_sernum", "ipv6_route_seq_next_table", "ipv6_route_seq_setup_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_check_sernum",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_next_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_seq_setup_walk",
+    "callees": ["fib6_walker_link", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_yield",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_route_native_seq_show",
+    "callees": ["nexthop_fib6_nh", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_gc_cleanup",
+    "callees": ["kmem_cache_destroy", "unregister_pernet_subsys"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_init",
+    "callees": ["kmem_cache_create", "kmem_cache_destroy", "register_pernet_subsys", "rtnl_register_module", "unregister_pernet_subsys"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": ["__fib6_flush_trees", "fib6_node_kmem"]
+  },
+  {
+    "name": "fib6_net_exit",
+    "callees": ["fib6_notifier_exit", "inetpeer_invalidate_tree", "kfree", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_net_init",
+    "callees": ["fib6_net_init.part.0", "fib6_notifier_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_gc_timer_cb",
+    "callees": ["fib6_run_gc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_run_gc",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_trylock_bh", "_raw_spin_unlock_bh", "fib6_gc_all", "mod_timer", "round_jiffies", "timer_delete"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_age",
+    "callees": ["rt6_age_exceptions"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_flush_trees",
+    "callees": ["__fib6_clean_all", "fib6_new_sernum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_all_skip_notify",
+    "callees": ["__fib6_clean_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_all",
+    "callees": ["__fib6_clean_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib6_clean_all",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_clean_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_tree",
+    "callees": ["fib6_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_node",
+    "callees": ["__builtin_expect", "fib6_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walk",
+    "callees": ["fib6_walk_continue", "fib6_walker_link", "fib6_walker_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walk_continue",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_del",
+    "callees": ["__builtin_expect", "fib6_del_route"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_locate",
+    "callees": ["fib6_locate_1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_node_lookup",
+    "callees": ["fib6_node_lookup_1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_node_lookup_1",
+    "callees": ["__builtin_expect", "ipv6_prefix_equal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_add",
+    "callees": ["__builtin_expect", "_printk", "fib6_add_1", "fib6_add_rt2node", "fib6_new_sernum", "fib6_repair_tree", "fib6_start_gc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_update_sernum_stub",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_update_sernum_upto_root"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_update_sernum_upto_root",
+    "callees": ["fib6_new_sernum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_force_start_gc",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_start_gc",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_add_rt2node",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__refcount_add", "_printk", "call_fib6_entry_notifiers", "fib6_clean_expires_locked", "fib6_info_release", "fib6_metric_set", "fib6_purge_rt", "fib6_set_expires_locked", "inet6_rt_notify", "rt6_duplicate_nexthop", "rt6_multipath_rebalance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_purge_rt",
+    "callees": ["__refcount_add", "fib6_clean_expires_locked", "fib6_drop_pcpu_from", "fib6_find_prefix", "fib6_info_release", "rt6_flush_exceptions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_drop_pcpu_from",
+    "callees": ["__fib6_drop_pcpu_from.part.0", "nexthop_for_each_fib6_nh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_nh_drop_pcpu_from",
+    "callees": ["__fib6_drop_pcpu_from.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_metric_set",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_dump_fib",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "do_trace_netlink_extack", "fib6_dump_end", "fib6_dump_table", "ip_valid_fib_dump_req", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_dump_done",
+    "callees": ["fib6_dump_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_dump_end",
+    "callees": ["fib6_walker_unlink", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_dump_node",
+    "callees": ["rt6_dump_route"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_tables_dump",
+    "callees": ["fib6_table_dump", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_table_dump",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "fib6_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_node_dump",
+    "callees": ["fib6_rt_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_rt_dump",
+    "callees": ["call_fib6_entry_notifier", "call_fib6_multipath_entry_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_entry_notifiers_replace",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_multipath_entry_notifiers",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_entry_notifiers",
+    "callees": ["call_fib6_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_tables_seq_read",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_tables_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_lookup",
+    "callees": ["fib6_table_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_rule_lookup",
+    "callees": ["dst_hold", "ip6_rt_put_flags", "pol_lookup_func"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_get_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_new_table",
+    "callees": ["fib6_get_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_free",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_free_rcu",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "node_free_immediate",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "node_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["fib6_node_kmem"],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_destroy_rcu",
+    "callees": ["__builtin_expect", "fib6_nh_release", "ip_fib_metrics_put", "kfree", "nexthop_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_update_sernum",
+    "callees": ["fib6_new_sernum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_new_sernum",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_unlink",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_walker_link",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rt6_duplicate_nexthop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6_rt_put_flags",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nexthop_fib6_nh",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nexthop_put",
+    "callees": ["__refcount_sub_and_test", "call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pol_lookup_func",
+    "callees": ["__builtin_expect", "__ip6_route_redirect", "ip6_pol_route_input", "ip6_pol_route_lookup", "ip6_pol_route_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_clean_expires_locked",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_set_expires_locked",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_info_release",
+    "callees": ["__refcount_sub_and_test", "fib6_info_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_fib_metrics_put",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_prefix_equal",
+    "callees": ["__ipv6_prefix_equal64_half.part.0", "ipv6_prefix_equal.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_deinit",
+    "callees": ["_dev_err", "device_remove_file", "kfree", "led_classdev_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_init",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "_dev_err", "_dev_info", "_dev_warn", "device_create_file", "hid_validate_values", "input_ff_create_memless", "kfree", "kzalloc", "led_classdev_register_ext", "led_classdev_unregister", "lg4ff_handle_multimode_wheel", "lg4ff_init_wheel_data", "lg4ff_set_leds", "snprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_handle_multimode_wheel",
+    "callees": ["_dev_err", "lg4ff_get_mode_switch_command", "lg4ff_identify_multimode_wheel", "lg4ff_switch_compatibility_mode"],
+    "global_reads": ["lg4ff_no_autoswitch"],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_led_get_brightness",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_led_set_brightness",
+    "callees": ["_dev_err", "lg4ff_set_leds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_set_leds",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_real_id_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_real_id_show",
+    "callees": ["_dev_err", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_range_store",
+    "callees": ["_dev_err", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_range_show",
+    "callees": ["_dev_err", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_combine_store",
+    "callees": ["_dev_err", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_combine_show",
+    "callees": ["_dev_err", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_alternate_modes_store",
+    "callees": ["_dev_err", "_dev_info", "kasprintf", "kfree", "lg4ff_get_mode_switch_command", "lg4ff_switch_compatibility_mode", "strcmp", "strlen"],
+    "global_reads": ["lg4ff_no_autoswitch"],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_alternate_modes_show",
+    "callees": ["_dev_err", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_switch_compatibility_mode",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_get_mode_switch_command",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_set_range_dfp",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_set_range_g25",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_set_autocenter_ffex",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_set_autocenter_default",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_play",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_raw_event",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_adjust_input_event",
+    "callees": ["_dev_err", "input_event", "lg4ff_adjust_dfp_x_axis"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lg4ff_adjust_dfp_x_axis",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

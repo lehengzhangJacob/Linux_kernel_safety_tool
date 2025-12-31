@@ -1,0 +1,176 @@
+[
+  {
+    "name": "fscontext_create_fd",
+    "callees": ["anon_inode_getfd", "put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_alloc_log",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fspick",
+    "callees": ["__builtin_expect", "fs_context_for_reconfigure", "fscontext_alloc_log", "fscontext_create_fd", "may_mount", "path_put", "put_fs_context", "user_path_at_empty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_create_fd",
+    "callees": ["anon_inode_getfd", "put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_alloc_log",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fsopen",
+    "callees": ["__builtin_expect", "fs_context_for_mount", "fscontext_alloc_log", "fscontext_create_fd", "get_fs_type", "kfree", "may_mount", "put_filesystem", "put_fs_context", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_alloc_log",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_create_fd",
+    "callees": ["anon_inode_getfd", "put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fsconfig",
+    "callees": ["__builtin_expect", "__fdget", "fget", "fput", "getname_flags", "kfree", "memdup_user_nul", "mutex_lock_interruptible", "mutex_unlock", "putname", "strlen", "strndup_user", "vfs_fsconfig_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fsconfig",
+    "callees": ["__do_sys_fsconfig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fsconfig",
+    "callees": ["__do_sys_fsconfig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_fsconfig_locked",
+    "callees": ["finish_clean_context", "vfs_cmd_create", "vfs_cmd_reconfigure", "vfs_parse_fs_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_cmd_reconfigure",
+    "callees": ["down_write", "ns_capable", "reconfigure_super", "up_write", "vfs_clean_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_cmd_create",
+    "callees": ["__builtin_expect", "fc_drop_locked", "mount_capable", "security_sb_kern_mount", "up_write", "vfs_get_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fspick",
+    "callees": ["__builtin_expect", "fs_context_for_reconfigure", "fscontext_alloc_log", "fscontext_create_fd", "may_mount", "path_put", "put_fs_context", "user_path_at_empty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fspick",
+    "callees": ["__do_sys_fspick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fspick",
+    "callees": ["__do_sys_fspick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_fsopen",
+    "callees": ["__builtin_expect", "fs_context_for_mount", "fscontext_alloc_log", "fscontext_create_fd", "get_fs_type", "kfree", "may_mount", "put_filesystem", "put_fs_context", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_fsopen",
+    "callees": ["__do_sys_fsopen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_fsopen",
+    "callees": ["__do_sys_fsopen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_alloc_log",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_create_fd",
+    "callees": ["anon_inode_getfd", "put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_release",
+    "callees": ["put_fs_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fscontext_read",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow", "kfree", "mutex_lock_interruptible", "mutex_unlock", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

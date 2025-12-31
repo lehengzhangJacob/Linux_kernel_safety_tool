@@ -1,0 +1,212 @@
+[
+  {
+    "name": "drop_partition",
+    "callees": ["device_del", "kobject_put", "put_device", "xa_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drop_partition",
+    "callees": ["device_del", "kobject_put", "put_device", "xa_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_partitions",
+    "callees": ["kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_partitions",
+    "callees": ["kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_partition",
+    "callees": ["bdev_mark_dead", "drop_partition", "remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_unlock_native_capacity.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_part_sector",
+    "callees": ["__builtin_expect", "read_cache_folio"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_disk_changed",
+    "callees": ["blk_add_partitions", "delete_partition", "invalidate_bdev", "kobject_uevent", "set_capacity", "sync_blockdev", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_add_partitions",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "blk_add_partition", "check_partition", "disk_unlock_native_capacity", "free_partitions", "kobject_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_add_partition",
+    "callees": ["__builtin_expect", "_printk", "add_partition", "disk_unlock_native_capacity", "md_autodetect_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_unlock_native_capacity",
+    "callees": ["_printk", "disk_unlock_native_capacity.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_resize_partition",
+    "callees": ["bdev_set_nr_sectors", "mutex_lock", "mutex_unlock", "partition_overlaps", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_del_partition",
+    "callees": ["delete_partition", "mutex_lock", "mutex_unlock", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_add_partition",
+    "callees": ["__builtin_expect", "add_partition", "mutex_lock", "mutex_unlock", "partition_overlaps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "partition_overlaps",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_partition",
+    "callees": ["_printk", "bdev_add", "bdev_alloc", "bdev_set_nr_sectors", "blk_alloc_ext_minor", "dev_set_name", "device_add", "device_create_file", "device_del", "device_initialize", "disk_set_zoned", "get_device", "kmemdup", "kobject_create_and_add", "kobject_put", "kobject_uevent", "put_device", "put_disk", "strlen", "xa_insert", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "whole_disk_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_partition",
+    "callees": ["bdev_mark_dead", "drop_partition", "remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drop_partition",
+    "callees": ["device_del", "kobject_put", "put_device", "xa_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_uevent",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_release",
+    "callees": ["iput", "put_disk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_discard_alignment_show",
+    "callees": ["bdev_discard_alignment", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_alignment_offset_show",
+    "callees": ["bdev_alignment_offset", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_ro_show",
+    "callees": ["bdev_read_only", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_start_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "part_partition_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_partition",
+    "callees": ["__get_free_pages", "_printk", "allocate_partitions", "free_pages", "free_partitions", "memset", "snprintf", "sprintf", "strlcat", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_partitions",
+    "callees": ["kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_disk_ro",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

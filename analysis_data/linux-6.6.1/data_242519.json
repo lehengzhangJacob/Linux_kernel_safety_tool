@@ -1,0 +1,152 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_free_certificate.part.0",
+    "callees": ["kfree", "public_key_free", "public_key_signature_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_akid_note_serial",
+    "callees": ["__builtin_expect", "asymmetric_key_generate_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_akid_note_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_akid_note_kid",
+    "callees": ["__builtin_expect", "asymmetric_key_generate_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_not_after",
+    "callees": ["x509_decode_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_not_before",
+    "callees": ["x509_decode_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_decode_time",
+    "callees": ["mktime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_process_extension",
+    "callees": ["__builtin_expect", "asymmetric_key_generate_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_extract_key_data",
+    "callees": ["parse_OID"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_params",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_subject",
+    "callees": ["x509_fabricate_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_issuer",
+    "callees": ["__builtin_expect", "asymmetric_key_generate_id", "x509_fabricate_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_extract_name_segment",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_serial",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_signature",
+    "callees": ["_printk", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_sig_algo",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_tbs_certificate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_note_OID",
+    "callees": ["look_up_OID", "sprint_oid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_cert_parse",
+    "callees": ["__builtin_expect", "_printk", "asn1_ber_decoder", "asymmetric_key_generate_id", "kfree", "kmemdup", "kzalloc", "x509_check_for_self_signed", "x509_free_certificate.part.0", "x509_get_sig_params"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_free_certificate",
+    "callees": ["x509_free_certificate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

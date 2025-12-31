@@ -1,0 +1,668 @@
+[
+  {
+    "name": "irq_domain_free_irq_data",
+    "callees": ["irq_get_irq_data", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irq_data",
+    "callees": ["irq_get_irq_data", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_descs",
+    "callees": ["__irq_alloc_descs", "irq_domain_alloc_descs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate",
+    "callees": ["irq_domain_associate_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate_many",
+    "callees": ["irq_domain_associate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate",
+    "callees": ["irq_domain_associate_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate_many",
+    "callees": ["irq_domain_associate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate",
+    "callees": ["irq_domain_associate_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate_many",
+    "callees": ["irq_domain_associate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_create_mapping_affinity_locked",
+    "callees": ["irq_domain_alloc_descs.part.0", "irq_domain_associate_locked", "irq_free_descs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_publish",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_add",
+    "callees": ["__irq_domain_create", "__irq_domain_publish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_publish",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_add",
+    "callees": ["__irq_domain_create", "__irq_domain_publish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_publish",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_add",
+    "callees": ["__irq_domain_create", "__irq_domain_publish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_create_legacy",
+    "callees": ["__irq_domain_add", "irq_domain_associate_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irqd_set_trigger_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_mapping",
+    "callees": ["radix_tree_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_hwirq_and_chip",
+    "callees": ["irq_domain_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate",
+    "callees": ["irq_domain_associate_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_clear_mapping",
+    "callees": ["radix_tree_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_trigger_type",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_mapping",
+    "callees": ["radix_tree_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_publish",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_clear_mapping",
+    "callees": ["radix_tree_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_dev_initialized.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_dev_initialized",
+    "callees": ["__builtin_expect", "fwnode_dev_initialized.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_find_mapping",
+    "callees": ["__irq_resolve_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_alloc_irqs.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_descs.part.0",
+    "callees": ["__irq_alloc_descs"],
+    "global_reads": ["nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_fix_revmap.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs_hierarchy.part.0",
+    "callees": ["irq_domain_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_update_bus_token.part.0",
+    "callees": ["kasprintf", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_dev_initialized.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_deactivate_irq",
+    "callees": ["__irq_domain_deactivate_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_activate_irq",
+    "callees": ["__irq_domain_activate_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_activate_irq",
+    "callees": ["__irq_domain_activate_irq", "__irq_domain_deactivate_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_deactivate_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs_parent",
+    "callees": ["irq_domain_free_irqs_hierarchy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_irqs_parent",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs",
+    "callees": ["__builtin_expect", "__warn_printk", "irq_domain_free_irq_data", "irq_domain_free_irqs_hierarchy", "irq_domain_remove_irq", "irq_free_descs", "irq_get_irq_data", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_pop_irq",
+    "callees": ["__builtin_expect", "irq_domain_clear_mapping", "irq_domain_fix_revmap", "irq_domain_free_irqs_hierarchy", "irq_domain_get_irq_data", "irq_get_irq_data", "irq_to_desc", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_push_irq",
+    "callees": ["__builtin_expect", "irq_domain_fix_revmap", "irq_domain_set_mapping", "irq_get_irq_data", "irq_to_desc", "kfree", "kzalloc_node", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_fix_revmap",
+    "callees": ["irq_domain_fix_revmap.part.0", "radix_tree_lookup_slot", "radix_tree_replace_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_alloc_irqs",
+    "callees": ["__builtin_expect", "__irq_domain_alloc_irqs.part.0", "irq_domain_alloc_irqs_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_irqs_locked",
+    "callees": ["irq_domain_alloc_descs", "irq_domain_alloc_irq_data", "irq_domain_free_irq_data", "irq_domain_insert_irq", "irq_domain_trim_hierarchy", "irq_free_descs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_irqs_hierarchy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs_hierarchy",
+    "callees": ["irq_domain_free_irqs_hierarchy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs_top",
+    "callees": ["__irq_set_handler", "irq_domain_free_irqs_common", "irq_set_handler_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irqs_common",
+    "callees": ["irq_domain_free_irqs_hierarchy", "irq_domain_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_info",
+    "callees": ["__irq_set_handler", "irq_domain_set_hwirq_and_chip", "irq_set_handler_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_hwirq_and_chip",
+    "callees": ["irq_domain_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_get_irq_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_irq_data",
+    "callees": ["irq_domain_free_irq_data", "irq_domain_insert_irq_data", "irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_trim_hierarchy",
+    "callees": ["__builtin_expect", "_printk", "irq_get_irq_data", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_disconnect_hierarchy",
+    "callees": ["irq_domain_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_irq_data",
+    "callees": ["irq_get_irq_data", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_insert_irq_data",
+    "callees": ["kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_remove_irq",
+    "callees": ["irq_domain_clear_mapping", "irq_get_irq_data", "irq_modify_status", "irq_set_chip_and_handler_name", "synchronize_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_insert_irq",
+    "callees": ["irq_domain_set_mapping", "irq_get_irq_data", "irq_modify_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_create_hierarchy",
+    "callees": ["__irq_domain_create", "__irq_domain_publish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_reset_irq_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_alloc_descs",
+    "callees": ["__irq_alloc_descs", "irq_domain_alloc_descs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_translate_twocell",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_translate_onecell",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_xlate_onetwocell",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_xlate_twocell",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_xlate_onecell",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_resolve_mapping",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "radix_tree_lookup"],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_dispose_mapping",
+    "callees": ["__builtin_expect", "irq_domain_disassociate", "irq_domain_free_irqs", "irq_free_descs", "irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_create_of_mapping",
+    "callees": ["irq_create_fwspec_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_create_fwspec_mapping",
+    "callees": ["__builtin_expect", "_printk", "irq_create_mapping_affinity_locked", "irq_domain_alloc_irqs_locked", "irq_domain_translate", "irq_find_mapping", "irq_find_matching_fwspec", "irq_get_irq_data", "irq_get_trigger_type", "irqd_set_trigger_type", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "of_phandle_args_to_fwspec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_translate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_create_mapping_affinity",
+    "callees": ["__warn_printk", "irq_create_mapping_affinity_locked", "irq_find_mapping", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_create_mapping_affinity_locked",
+    "callees": ["irq_domain_alloc_descs.part.0", "irq_domain_associate_locked", "irq_free_descs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate_many",
+    "callees": ["irq_domain_associate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate",
+    "callees": ["irq_domain_associate_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_associate_locked",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk", "irq_domain_set_mapping", "irq_get_irq_data", "irq_modify_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_disassociate",
+    "callees": ["__builtin_expect", "__warn_printk", "irq_domain_clear_mapping", "irq_get_irq_data", "irq_modify_status", "irq_set_chip_and_handler_name", "mutex_lock", "mutex_unlock", "synchronize_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_set_mapping",
+    "callees": ["radix_tree_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_clear_mapping",
+    "callees": ["radix_tree_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_default_host",
+    "callees": [],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_set_default_host",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["irq_default_domain"]
+  },
+  {
+    "name": "irq_find_matching_fwspec",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_create_legacy",
+    "callees": ["__irq_domain_add", "irq_domain_associate_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_add_legacy",
+    "callees": ["irq_domain_create_legacy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_create_simple",
+    "callees": ["__irq_alloc_descs", "__irq_domain_add", "_printk", "irq_domain_associate_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_update_bus_token",
+    "callees": ["irq_domain_update_bus_token.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_remove",
+    "callees": ["__builtin_expect", "fwnode_dev_initialized", "fwnode_handle_put", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["irq_default_domain"],
+    "global_writes": ["irq_default_domain"]
+  },
+  {
+    "name": "__irq_domain_add",
+    "callees": ["__irq_domain_create", "__irq_domain_publish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_publish",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_create",
+    "callees": ["__builtin_expect", "__mutex_init", "_printk", "fwnode_dev_initialized", "fwnode_handle_get", "is_acpi_device_node", "is_software_node", "kasprintf", "kfree", "kstrdup", "kzalloc_node", "strreplace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_domain_free_fwnode",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__irq_domain_alloc_fwnode",
+    "callees": ["kasprintf", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irqchip_fwnode_get_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_find_mapping",
+    "callees": ["__irq_resolve_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_trigger_type",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irqd_set_trigger_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_dev_initialized",
+    "callees": ["__builtin_expect", "fwnode_dev_initialized.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

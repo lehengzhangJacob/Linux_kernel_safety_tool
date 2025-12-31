@@ -1,0 +1,134 @@
+[
+  {
+    "name": "azx_int_clear",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_init_chip.part.0",
+    "callees": ["azx_int_clear", "snd_hdac_bus_init_cmd_io", "snd_hdac_bus_reset_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_stop_chip.part.0",
+    "callees": ["azx_int_clear", "azx_int_disable", "snd_hdac_bus_stop_cmd_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_link_power",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_free_stream_pages",
+    "callees": ["snd_dma_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_alloc_stream_pages",
+    "callees": ["__builtin_expect", "snd_dma_alloc_dir_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_handle_stream_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_stop_chip",
+    "callees": ["snd_hdac_bus_stop_chip.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_init_chip",
+    "callees": ["snd_hdac_bus_init_chip.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "azx_int_clear",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "azx_int_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_reset_link",
+    "callees": ["snd_hdac_bus_enter_link_reset", "snd_hdac_bus_exit_link_reset", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_exit_link_reset",
+    "callees": ["usleep_range_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_enter_link_reset",
+    "callees": ["usleep_range_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_parse_capabilities",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_get_response",
+    "callees": ["__SCT__cond_resched", "__const_udelay", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "finish_wait", "init_wait_entry", "msleep", "prepare_to_wait", "schedule_timeout", "snd_hdac_bus_update_rirb"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_update_rirb",
+    "callees": ["___ratelimit", "__wake_up", "_dev_err", "snd_hdac_bus_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_send_cmd",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_stop_cmd_io",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "hdac_wait_for_cmd_dmas"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdac_wait_for_cmd_dmas",
+    "callees": ["__const_udelay"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_init_cmd_io",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "azx_clear_corbrp", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "azx_clear_corbrp",
+    "callees": ["__const_udelay", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

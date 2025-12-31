@@ -1,0 +1,728 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_inode_parent_hidden.part.0",
+    "callees": ["__audit_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_inode_parent_hidden",
+    "callees": ["__builtin_expect", "audit_inode_parent_hidden.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_unlink",
+    "callees": ["__builtin_expect", "audit_inode_parent_hidden", "down_write", "dput", "getname", "ihold", "iput", "lookup_one_len", "mnt_drop_write", "mnt_want_write", "putname", "strlen", "up_write", "vfs_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_get.part.0",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "msg_tree_erase",
+    "callees": ["kfree", "rb_erase", "rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_tree_erase",
+    "callees": ["kfree", "rb_erase", "rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_get",
+    "callees": ["__builtin_expect", "_printk", "msg_get.part.0", "msg_tree_erase"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "remove_notification",
+    "callees": ["netlink_sendskb", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_file",
+    "callees": ["__audit_file", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_tree_erase",
+    "callees": ["kfree", "rb_erase", "rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_inode_parent_hidden.part.0",
+    "callees": ["__audit_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_inode_parent_hidden",
+    "callees": ["__builtin_expect", "audit_inode_parent_hidden.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_mq_attr",
+    "callees": ["_copy_from_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mq_sendrecv",
+    "callees": ["__audit_mq_sendrecv", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_notify",
+    "callees": ["_copy_from_user", "do_mq_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_timeout",
+    "callees": ["get_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_prepare_timeout",
+    "callees": ["get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_timeout",
+    "callees": ["get_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_prepare_timeout",
+    "callees": ["get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_timeout",
+    "callees": ["get_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_prepare_timeout",
+    "callees": ["get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ipc_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ipc_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ipc_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_open",
+    "callees": ["_copy_from_user", "do_mq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedreceive_time32",
+    "callees": ["compat_prepare_timeout", "do_mq_timedreceive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedsend_time32",
+    "callees": ["compat_prepare_timeout", "do_mq_timedsend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedreceive",
+    "callees": ["do_mq_timedreceive", "prepare_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedsend",
+    "callees": ["do_mq_timedsend", "prepare_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_get.part.0",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "audit_inode_parent_hidden.part.0",
+    "callees": ["__audit_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ipc_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_mqueue_fs",
+    "callees": ["_printk", "kmem_cache_create", "kmem_cache_destroy", "mq_init_ns", "register_filesystem", "retire_mq_sysctls", "setup_mq_sysctls", "unregister_filesystem"],
+    "global_reads": ["mqueue_inode_cachep"],
+    "global_writes": ["mqueue_inode_cachep"]
+  },
+  {
+    "name": "mq_clear_sbinfo",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mq_init_ns",
+    "callees": ["__builtin_expect", "mq_create_mount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedreceive_time32",
+    "callees": ["compat_prepare_timeout", "do_mq_timedreceive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_timedreceive_time32",
+    "callees": ["__do_sys_mq_timedreceive_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_timedreceive_time32",
+    "callees": ["__do_sys_mq_timedreceive_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedsend_time32",
+    "callees": ["compat_prepare_timeout", "do_mq_timedsend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_timedsend_time32",
+    "callees": ["__do_sys_mq_timedsend_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_timedsend_time32",
+    "callees": ["__do_sys_mq_timedsend_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_prepare_timeout",
+    "callees": ["get_old_timespec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_mq_getsetattr",
+    "callees": ["do_mq_getsetattr", "get_compat_mq_attr", "put_compat_mq_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_mq_getsetattr",
+    "callees": ["__do_compat_sys_mq_getsetattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_mq_notify",
+    "callees": ["do_mq_notify", "get_compat_sigevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_mq_notify",
+    "callees": ["__do_compat_sys_mq_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_mq_open",
+    "callees": ["do_mq_open", "get_compat_mq_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_mq_open",
+    "callees": ["__do_compat_sys_mq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_compat_mq_attr",
+    "callees": ["_copy_to_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_mq_attr",
+    "callees": ["_copy_from_user", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_getsetattr",
+    "callees": ["__bad_copy_from", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "_copy_to_user", "do_mq_getsetattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_getsetattr",
+    "callees": ["__do_sys_mq_getsetattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_getsetattr",
+    "callees": ["__do_sys_mq_getsetattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mq_getsetattr",
+    "callees": ["__builtin_expect", "__fdget", "_raw_spin_lock", "_raw_spin_unlock", "audit_mq_getsetattr", "fput", "inode_set_ctime_current"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_notify",
+    "callees": ["_copy_from_user", "do_mq_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_notify",
+    "callees": ["__do_sys_mq_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_notify",
+    "callees": ["__do_sys_mq_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mq_notify",
+    "callees": ["__alloc_skb", "__bad_copy_to", "__builtin_expect", "__builtin_object_size", "__fdget", "__refcount_add", "_copy_from_user", "_raw_spin_lock", "_raw_spin_unlock", "audit_mq_notify", "consume_skb", "fput", "inode_set_ctime_current", "netlink_attachskb", "netlink_detachskb", "netlink_getsockbyfilp", "remove_notification", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedreceive",
+    "callees": ["do_mq_timedreceive", "prepare_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_timedreceive",
+    "callees": ["__do_sys_mq_timedreceive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_timedreceive",
+    "callees": ["__do_sys_mq_timedreceive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_timedsend",
+    "callees": ["do_mq_timedsend", "prepare_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_timedsend",
+    "callees": ["__do_sys_mq_timedsend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_timedsend",
+    "callees": ["__do_sys_mq_timedsend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mq_timedreceive",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__fdget", "_raw_spin_lock", "_raw_spin_unlock", "audit_file", "audit_mq_sendrecv", "fput", "free_msg", "inode_set_ctime_current", "kfree", "kmalloc_trace", "msg_get", "pipelined_receive", "store_msg", "wake_up_q", "wq_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mq_timedsend",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__do_notify", "__fdget", "__pipelined_op", "_raw_spin_lock", "_raw_spin_unlock", "audit_file", "audit_mq_sendrecv", "fput", "free_msg", "inode_set_ctime_current", "kfree", "kmalloc_trace", "load_msg", "msg_insert", "wake_up_q", "wq_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipelined_receive",
+    "callees": ["__pipelined_op", "__wake_up", "msg_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_unlink",
+    "callees": ["__builtin_expect", "audit_inode_parent_hidden", "down_write", "dput", "getname", "ihold", "iput", "lookup_one_len", "mnt_drop_write", "mnt_want_write", "putname", "strlen", "up_write", "vfs_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_unlink",
+    "callees": ["__do_sys_mq_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_unlink",
+    "callees": ["__do_sys_mq_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mq_open",
+    "callees": ["_copy_from_user", "do_mq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mq_open",
+    "callees": ["__do_sys_mq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mq_open",
+    "callees": ["__do_sys_mq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mq_open",
+    "callees": ["__builtin_expect", "audit_mq_open", "dentry_open", "down_write", "fd_install", "get_unused_fd_flags", "getname", "lookup_one_len", "mnt_drop_write", "mnt_want_write", "mntget", "path_put", "prepare_open", "put_unused_fd", "putname", "strlen", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_open",
+    "callees": ["audit_inode", "audit_inode_parent_hidden", "current_umask", "inode_permission", "vfs_mkobj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_notification",
+    "callees": ["netlink_sendskb", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_timeout",
+    "callees": ["get_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_notify",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__task_pid_nr_ns", "__wake_up", "do_send_sig_info", "memset", "netlink_sendskb", "pid_task", "put_pid"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "wq_sleep",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "schedule_hrtimeout_range_clock", "signal_pending", "wq_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wq_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_poll_file",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_flush_file",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "remove_notification"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_read_file",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "inode_set_ctime_current", "pid_vnr", "simple_read_from_buffer", "snprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_unlink",
+    "callees": ["dput", "drop_nlink", "inode_set_ctime_current"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_create",
+    "callees": ["mqueue_create_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_create_attr",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "capable", "d_instantiate", "get_ipc_ns.part.0", "inode_set_ctime_current", "lockref_get", "mqueue_get_inode", "put_ipc_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_evict_inode",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "clear_inode", "dec_rlimit_ucounts", "free_msg", "get_ns_from_inode", "kfree", "msg_get", "put_ipc_ns", "put_ucounts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_free_inode",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["mqueue_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_alloc_inode",
+    "callees": ["kmem_cache_alloc_lru"],
+    "global_reads": ["mqueue_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "init_once",
+    "callees": ["inode_init_once"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_init_fs_context",
+    "callees": ["get_ipc_ns.part.0", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_fs_context_free",
+    "callees": ["kfree", "put_ipc_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_get_tree",
+    "callees": ["get_tree_keyed", "get_tree_nodev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_fill_super",
+    "callees": ["__builtin_expect", "d_make_root", "mqueue_get_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mqueue_get_inode",
+    "callees": ["__init_waitqueue_head", "_raw_spin_lock", "_raw_spin_unlock", "capable", "dec_rlimit_ucounts", "get_next_ino", "get_ucounts", "inc_nlink", "inc_rlimit_ucounts", "inode_set_ctime_current", "iput", "memset", "new_inode", "put_ucounts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_get",
+    "callees": ["__builtin_expect", "_printk", "msg_get.part.0", "msg_tree_erase"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "msg_tree_erase",
+    "callees": ["kfree", "rb_erase", "rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msg_insert",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ns_from_inode",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "get_ipc_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mq_getsetattr",
+    "callees": ["__audit_mq_getsetattr", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mq_notify",
+    "callees": ["__audit_mq_notify", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mq_sendrecv",
+    "callees": ["__audit_mq_sendrecv", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mq_open",
+    "callees": ["__audit_mq_open", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_inode_parent_hidden",
+    "callees": ["__builtin_expect", "audit_inode_parent_hidden.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_file",
+    "callees": ["__audit_file", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

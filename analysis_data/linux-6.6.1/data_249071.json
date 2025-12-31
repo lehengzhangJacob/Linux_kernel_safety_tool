@@ -1,0 +1,110 @@
+[
+  {
+    "name": "__arch_remove_optimized_kprobe",
+    "callees": ["__free_insn_slot", "perf_event_text_poke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "optimized_callback.part.0",
+    "callees": ["__builtin_expect", "kprobes_inc_nmissed_count", "opt_pre_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_detour_execution.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_detour_execution",
+    "callees": ["setup_detour_execution.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_unoptimize_kprobes",
+    "callees": ["arch_unoptimize_kprobe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_unoptimize_kprobe",
+    "callees": ["perf_event_text_poke", "text_poke", "text_poke_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_optimize_kprobes",
+    "callees": ["__builtin_expect", "text_poke_bp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_prepare_optimized_kprobe",
+    "callees": ["__arch_remove_optimized_kprobe", "__get_insn_slot", "can_optimize", "copy_optimized_instructions", "kfree", "kzalloc", "memcpy", "perf_event_text_poke", "synthesize_relcall", "synthesize_reljump", "text_poke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_remove_optimized_kprobe",
+    "callees": ["__arch_remove_optimized_kprobe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__arch_remove_optimized_kprobe",
+    "callees": ["__free_insn_slot", "perf_event_text_poke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_within_optimized_kprobe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_check_optimized_kprobe",
+    "callees": ["get_kprobe", "kprobe_disarmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_optimize",
+    "callees": ["insn_decode", "insn_jump_into_range", "kallsyms_lookup_size_offset", "recover_probed_instruction", "search_exception_tables"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_optimized_instructions",
+    "callees": ["__copy_instruction", "alternatives_text_reserved", "can_boost", "jump_label_text_reserved", "static_call_text_reserved"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "optimized_callback",
+    "callees": ["optimized_callback.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__recover_optprobed_insn",
+    "callees": ["copy_from_kernel_nofault", "get_kprobe", "memcpy", "optprobe_queued_unopt"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

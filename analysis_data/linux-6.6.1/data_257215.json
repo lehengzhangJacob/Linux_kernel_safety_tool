@@ -1,0 +1,44 @@
+[
+  {
+    "name": "serial8250_early_in",
+    "callees": ["ioread32be"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_serial8250_setup",
+    "callees": ["init_port", "serial8250_early_in", "serial8250_early_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_port",
+    "callees": ["serial8250_early_in", "serial8250_early_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_serial8250_write",
+    "callees": ["uart_console_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_putc",
+    "callees": ["serial8250_early_in", "serial8250_early_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_early_out",
+    "callees": ["iowrite32be"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_early_in",
+    "callees": ["ioread32be"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

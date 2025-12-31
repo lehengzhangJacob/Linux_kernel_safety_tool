@@ -1,0 +1,170 @@
+[
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull.part.0",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull",
+    "callees": ["__builtin_bswap16", "ipv6_mc_may_pull.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull.part.0",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull",
+    "callees": ["__builtin_bswap16", "ipv6_mc_may_pull.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull.part.0",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull",
+    "callees": ["__builtin_bswap16", "ipv6_mc_may_pull.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_mld.part.0",
+    "callees": ["ipv6_mc_check_icmpv6", "ipv6_mc_check_mld_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_validate_checksum.part.0",
+    "callees": ["__skb_checksum_validate_complete", "ip6_compute_pseudo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull.part.0",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_mld",
+    "callees": ["ipv6_mc_check_exthdrs", "ipv6_mc_check_ip6hdr", "ipv6_mc_check_mld.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_icmpv6",
+    "callees": ["__builtin_bswap16", "ipv6_mc_may_pull", "kfree_skb_reason", "skb_checksum_trimmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_validate_checksum",
+    "callees": ["__skb_checksum_validate_needed", "ipv6_mc_validate_checksum.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_mld_msg",
+    "callees": ["ipv6_mc_check_mld_query", "ipv6_mc_check_mld_reportv2", "ipv6_mc_may_pull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_mld_query",
+    "callees": ["__builtin_bswap16", "__ipv6_addr_type", "ipv6_mc_may_pull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_mld_reportv2",
+    "callees": ["ipv6_mc_may_pull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_exthdrs",
+    "callees": ["ipv6_skip_exthdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_check_ip6hdr",
+    "callees": ["__builtin_bswap16", "pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_mc_may_pull",
+    "callees": ["__builtin_bswap16", "ipv6_mc_may_pull.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_decr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

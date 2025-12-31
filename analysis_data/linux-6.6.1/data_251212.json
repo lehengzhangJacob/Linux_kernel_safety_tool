@@ -1,0 +1,170 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_futex_time32",
+    "callees": ["__builtin_expect", "do_futex", "get_old_timespec32", "ktime_add_safe", "ktime_get", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_futex",
+    "callees": ["__builtin_expect", "do_futex", "get_timespec64", "ktime_add_safe", "ktime_get", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_get_robust_list",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "find_task_by_vpid", "ptrace_may_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_futex_time32",
+    "callees": ["__builtin_expect", "do_futex", "get_old_timespec32", "ktime_add_safe", "ktime_get", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_futex_time32",
+    "callees": ["__do_sys_futex_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_futex_time32",
+    "callees": ["__do_sys_futex_time32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_get_robust_list",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "find_task_by_vpid", "ptrace_may_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_get_robust_list",
+    "callees": ["__do_compat_sys_get_robust_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_set_robust_list",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_futex_waitv",
+    "callees": ["__builtin_expect", "futex_parse_waitv", "futex_setup_timer", "futex_wait_multiple", "get_timespec64", "hrtimer_cancel", "kfree", "kmalloc_array", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_futex_waitv",
+    "callees": ["__do_sys_futex_waitv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_futex_waitv",
+    "callees": ["__do_sys_futex_waitv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_parse_waitv",
+    "callees": ["_copy_from_user"],
+    "global_reads": ["futex_q_init"],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_futex",
+    "callees": ["__builtin_expect", "do_futex", "get_timespec64", "ktime_add_safe", "ktime_get", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_futex",
+    "callees": ["__do_sys_futex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_futex",
+    "callees": ["__do_sys_futex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_futex",
+    "callees": ["futex_lock_pi", "futex_requeue", "futex_unlock_pi", "futex_wait", "futex_wait_requeue_pi", "futex_wake", "futex_wake_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_get_robust_list",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "find_task_by_vpid", "ptrace_may_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_get_robust_list",
+    "callees": ["__do_sys_get_robust_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_get_robust_list",
+    "callees": ["__do_sys_get_robust_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_set_robust_list",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_set_robust_list",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

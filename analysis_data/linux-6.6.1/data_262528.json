@@ -1,0 +1,410 @@
+[
+  {
+    "name": "serio_find_driver",
+    "callees": ["_dev_warn", "device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_find_driver",
+    "callees": ["_dev_warn", "device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_find_driver",
+    "callees": ["_dev_warn", "device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_find_driver",
+    "callees": ["_dev_warn", "device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_cleanup",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_disconnect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_free_event",
+    "callees": ["kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_connect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_free_event",
+    "callees": ["kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_port.part.0",
+    "callees": ["serio_disconnect_port", "serio_find_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_port",
+    "callees": ["serio_reconnect_driver", "serio_reconnect_port.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_uevent.part.0",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_port.part.0",
+    "callees": ["serio_disconnect_port", "serio_find_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_exit",
+    "callees": ["bus_unregister", "cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_init",
+    "callees": ["_printk", "bus_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_interrupt",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_close",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_open",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_resume",
+    "callees": ["_dev_warn", "mutex_lock", "mutex_unlock", "serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_suspend",
+    "callees": ["serio_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_uevent",
+    "callees": ["add_uevent_var", "serio_uevent.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_bus_match",
+    "callees": ["serio_match_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_unregister_driver",
+    "callees": ["driver_unregister", "mutex_lock", "mutex_unlock", "serio_disconnect_port", "serio_find_driver", "serio_remove_pending_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__serio_register_driver",
+    "callees": ["_printk", "driver_register", "driver_unregister", "serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_attach_driver",
+    "callees": ["_printk", "driver_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_shutdown",
+    "callees": ["serio_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_cleanup",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_driver_remove",
+    "callees": ["serio_disconnect_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_driver_probe",
+    "callees": ["serio_connect_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bind_mode_store",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bind_mode_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "description_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_unregister_child_port",
+    "callees": ["mutex_lock", "mutex_unlock", "serio_destroy_port", "serio_disconnect_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_unregister_port",
+    "callees": ["mutex_lock", "mutex_unlock", "serio_destroy_port", "serio_disconnect_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__serio_register_port",
+    "callees": ["serio_init_port", "serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect",
+    "callees": ["serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_rescan",
+    "callees": ["serio_queue_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_disconnect_port",
+    "callees": ["device_release_driver", "serio_destroy_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_subtree",
+    "callees": ["serio_reconnect_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_port",
+    "callees": ["serio_reconnect_driver", "serio_reconnect_port.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_destroy_port",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "device_del", "put_device", "serio_get_pending_child", "serio_remove_pending_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_add_port",
+    "callees": ["_dev_err", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_init_port",
+    "callees": ["__module_get", "__mutex_init", "dev_set_name", "device_initialize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_release_port",
+    "callees": ["kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_id_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_set_bind_mode",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_show_bind_mode",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drvctl_store",
+    "callees": ["driver_find", "mutex_lock_interruptible", "mutex_unlock", "serio_bind_driver", "serio_disconnect_port", "serio_find_driver", "serio_reconnect_subtree", "serio_remove_duplicate_events", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "extra_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "id_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proto_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "type_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "modalias_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_show_description",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_get_pending_child",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_remove_pending_events",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serio_free_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_queue_event",
+    "callees": ["__builtin_return_address", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "kmalloc_trace", "queue_work_on", "try_module_get"],
+    "global_reads": ["system_long_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "serio_handle_event",
+    "callees": ["mutex_lock", "mutex_unlock", "serio_add_port", "serio_attach_driver", "serio_disconnect_port", "serio_find_driver", "serio_free_event", "serio_get_event", "serio_reconnect_port", "serio_reconnect_subtree", "serio_remove_duplicate_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_remove_duplicate_events",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serio_free_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_free_event",
+    "callees": ["kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_get_event",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_find_driver",
+    "callees": ["_dev_warn", "device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_bind_driver",
+    "callees": ["_dev_warn", "device_bind_driver", "serio_connect_driver", "serio_disconnect_driver", "serio_match_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_match_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_disconnect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_reconnect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serio_connect_driver",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

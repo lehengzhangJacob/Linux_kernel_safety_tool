@@ -1,0 +1,92 @@
+[
+  {
+    "name": "__snd_device_disconnect.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_device_disconnect.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_device_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_device_disconnect.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_get_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_free_all",
+    "callees": ["__builtin_expect", "__snd_device_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_disconnect_all",
+    "callees": ["__builtin_expect", "__snd_device_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_register_all",
+    "callees": ["__builtin_expect", "__snd_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_register",
+    "callees": ["__builtin_expect", "__snd_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_device_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_free",
+    "callees": ["__builtin_expect", "__snd_device_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_disconnect",
+    "callees": ["__builtin_expect", "__snd_device_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_device_free",
+    "callees": ["__snd_device_disconnect.part.0", "_dev_err", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_new",
+    "callees": ["__builtin_expect", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

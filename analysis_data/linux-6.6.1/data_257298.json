@@ -1,0 +1,44 @@
+[
+  {
+    "name": "acpi_tb_uninstall_table.part.0",
+    "callees": ["acpi_tb_invalidate_table", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_uninstall_table.part.0",
+    "callees": ["acpi_tb_invalidate_table", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_uninstall_table.part.0",
+    "callees": ["acpi_tb_invalidate_table", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_uninstall_table",
+    "callees": ["acpi_tb_uninstall_table.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_override_table",
+    "callees": ["acpi_info", "acpi_os_physical_table_override", "acpi_os_table_override", "acpi_tb_acquire_temp_table", "acpi_tb_init_table_descriptor", "acpi_tb_release_temp_table", "acpi_tb_uninstall_table.part.0", "acpi_tb_validate_temp_table", "acpi_tb_verify_temp_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_install_standard_table",
+    "callees": ["acpi_error", "acpi_info", "acpi_tb_acquire_temp_table", "acpi_tb_install_table_with_override", "acpi_tb_notify_table", "acpi_tb_release_temp_table", "acpi_tb_uninstall_table.part.0", "acpi_tb_verify_temp_table", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex"],
+    "global_reads": ["acpi_gbl_disable_ssdt_table_install"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_tb_install_table_with_override",
+    "callees": ["acpi_tb_get_next_table_descriptor", "acpi_tb_init_table_descriptor", "acpi_tb_override_table", "acpi_tb_print_table_header", "acpi_ut_set_integer_width"],
+    "global_reads": ["acpi_gbl_dsdt_index"],
+    "global_writes": []
+  }
+]

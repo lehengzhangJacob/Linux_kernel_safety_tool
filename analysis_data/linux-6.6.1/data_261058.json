@@ -1,0 +1,140 @@
+[
+  {
+    "name": "trace_drv_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_void",
+    "callees": ["__SCT__tp_func_drv_return_void", "cpu_online", "trace_drv_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_put_zero",
+    "callees": ["memset", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_twt_teardown_request.part.0",
+    "callees": ["trace_drv_return_void", "trace_drv_twt_teardown_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_status_twt_action",
+    "callees": ["ieee80211_s1g_tx_twt_setup_fail", "mutex_lock", "mutex_unlock", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_rx_twt_action",
+    "callees": ["drv_twt_teardown_request", "ieee80211_s1g_rx_twt_setup", "mutex_lock", "mutex_unlock", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_send_twt_teardown",
+    "callees": ["__netdev_alloc_skb", "ieee80211_tx_skb_tid", "memcpy", "skb_put_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_send_twt_setup",
+    "callees": ["__netdev_alloc_skb", "ieee80211_tx_skb_tid", "memcpy", "skb_put_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_is_twt_setup",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_s1g_sta_rate_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_twt_teardown_request",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__warn_printk", "drv_twt_teardown_request.part.0"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drv_add_twt_setup",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__warn_printk", "trace_drv_add_twt_setup", "trace_drv_return_void"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "trace_drv_twt_teardown_request",
+    "callees": ["__SCT__tp_func_drv_twt_teardown_request", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_add_twt_setup",
+    "callees": ["__SCT__tp_func_drv_add_twt_setup", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_void",
+    "callees": ["__SCT__tp_func_drv_return_void", "cpu_online", "trace_drv_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_put_zero",
+    "callees": ["memset", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

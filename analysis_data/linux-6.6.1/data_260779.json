@@ -1,0 +1,170 @@
+[
+  {
+    "name": "memcpy_from_page",
+    "callees": ["memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_538"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_cleanup",
+    "callees": ["unregister_virtio_driver", "v9fs_unregister_trans"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_init",
+    "callees": ["register_virtio_driver", "v9fs_register_trans", "v9fs_unregister_trans"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_remove",
+    "callees": ["_dev_emerg", "kfree", "kobject_uevent", "msleep", "mutex_lock", "mutex_unlock", "sysfs_remove_file_ns", "virtio_reset_device"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_create",
+    "callees": ["_printk", "mutex_lock", "mutex_unlock", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_probe",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__builtin_return_address", "__init_waitqueue_head", "__virtio_cread_many", "__virtio_test_bit", "_dev_err", "_printk", "kfree", "kmalloc_trace", "kobject_uevent", "kzalloc", "mutex_lock", "mutex_unlock", "nr_free_buffer_pages", "sg_init_table", "sysfs_create_file_ns", "sysfs_remove_file_ns", "virtio_device_ready", "virtio_find_single_vq", "virtio_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_mount_tag_show",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_zc_request",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "finish_wait", "handle_rerror", "init_wait_entry", "kvfree", "p9_get_mapped_pages.part.0", "p9_release_pages", "p9_req_put", "pack_sg_list", "pack_sg_list_p", "prepare_to_wait_event", "schedule", "virtqueue_add_sgs", "virtqueue_kick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_rerror",
+    "callees": ["__builtin_expect", "memcpy_from_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_request",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "finish_wait", "init_wait_entry", "pack_sg_list", "prepare_to_wait_event", "schedule", "virtqueue_add_sgs", "virtqueue_kick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_cancelled",
+    "callees": ["p9_req_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_cancel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "req_done",
+    "callees": ["__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "p9_client_cb", "virtqueue_get_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_virtio_close",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_device_ready",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_538"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "memcpy_from_page",
+    "callees": ["memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_to_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

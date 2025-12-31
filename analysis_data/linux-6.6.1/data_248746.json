@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_cmpabs",
+    "callees": ["do_mpi_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_cmp",
+    "callees": ["do_mpi_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mpi_cmp",
+    "callees": ["mpi_normalize", "mpihelp_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_cmp_ui",
+    "callees": ["mpi_cmp_ui.part.0", "mpi_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

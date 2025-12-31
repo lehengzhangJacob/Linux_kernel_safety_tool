@@ -1,0 +1,92 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_register.part.0",
+    "callees": ["_printk", "device_add", "mdiobus_unregister_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_driver_unregister",
+    "callees": ["driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_driver_register",
+    "callees": ["_printk", "driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_remove",
+    "callees": ["mdio_device_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_probe",
+    "callees": ["mdio_device_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_reset",
+    "callees": ["fsleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_remove",
+    "callees": ["device_del", "mdiobus_unregister_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_register",
+    "callees": ["mdio_device_register.part.0", "mdiobus_register_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_create",
+    "callees": ["dev_set_name", "device_initialize", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_bus_match",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_release",
+    "callees": ["fwnode_handle_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_device_free",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsleep",
+    "callees": ["__builtin_constant_p", "__const_udelay", "__udelay", "msleep", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

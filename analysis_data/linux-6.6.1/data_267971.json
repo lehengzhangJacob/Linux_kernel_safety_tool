@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_acpi_video_register",
+    "callees": ["acpi_video_register", "acpi_video_register_backlight", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_acpi_assign_connector_fwnodes",
+    "callees": ["acpi_find_child_device", "device_get_next_child_node", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "fwnode_handle_get", "fwnode_handle_put", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_acpi_device_id_update",
+    "callees": ["acpi_display_type", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsm_get_bios_data_funcs_supported",
+    "callees": ["acpi_evaluate_dsm", "is_acpi_device_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_unregister_dsm_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_register_dsm_handler",
+    "callees": ["intel_dsm_detect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsm_platform_mux_info",
+    "callees": ["___drm_dbg", "acpi_evaluate_dsm_typed", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

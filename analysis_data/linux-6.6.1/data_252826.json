@@ -1,0 +1,200 @@
+[
+  {
+    "name": "strpbrk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncat.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncasecmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memchr_inv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memchr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strnstr",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strstr",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memscan",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcmp",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memcmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strsep",
+    "callees": ["strpbrk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strpbrk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strcspn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strspn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strnlen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strlen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strnchr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strrchr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strnchrnul",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strchrnul",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strchr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strcmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strlcat",
+    "callees": ["__builtin_expect", "__builtin_memcpy", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncat",
+    "callees": ["strncat.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strcat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stpcpy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strscpy",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strlcpy",
+    "callees": ["__builtin_memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncpy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strcpy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strcasecmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncasecmp",
+    "callees": ["strncasecmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

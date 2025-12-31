@@ -1,0 +1,50 @@
+[
+  {
+    "name": "defrag6_net_exit.part.0",
+    "callees": ["nf_unregister_net_hooks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_defrag_ipv6_disable",
+    "callees": ["mutex_lock", "mutex_unlock", "nf_unregister_net_hooks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_defrag_ipv6_enable",
+    "callees": ["mutex_lock", "mutex_unlock", "nf_register_net_hooks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_defrag_fini",
+    "callees": ["nf_ct_frag6_cleanup", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_defrag_init",
+    "callees": ["_printk", "nf_ct_frag6_cleanup", "nf_ct_frag6_init", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "defrag6_net_exit",
+    "callees": ["defrag6_net_exit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_defrag",
+    "callees": ["nf_ct_frag6_gather", "nf_ct_is_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_template",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

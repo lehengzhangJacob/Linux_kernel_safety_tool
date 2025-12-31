@@ -1,0 +1,110 @@
+[
+  {
+    "name": "acpi_hw_read_multiple",
+    "callees": ["acpi_hw_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_read_multiple",
+    "callees": ["acpi_hw_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_read_multiple",
+    "callees": ["acpi_hw_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_multiple",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_multiple",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_multiple",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_register_write",
+    "callees": ["acpi_error", "acpi_hw_read", "acpi_hw_read_multiple", "acpi_hw_write", "acpi_hw_write_multiple", "acpi_hw_write_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_multiple",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_read_multiple",
+    "callees": ["acpi_hw_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_register_write",
+    "callees": ["acpi_error", "acpi_hw_read", "acpi_hw_read_multiple", "acpi_hw_write", "acpi_hw_write_multiple", "acpi_hw_write_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_register_read",
+    "callees": ["acpi_error", "acpi_hw_read", "acpi_hw_read_multiple", "acpi_hw_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write_pm1_control",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_bit_register_info",
+    "callees": ["acpi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_clear_acpi_status",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "acpi_ev_walk_gpe_list", "acpi_hw_register_write"],
+    "global_reads": ["acpi_gbl_hardware_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_write",
+    "callees": ["acpi_hw_get_access_bit_width", "acpi_hw_validate_register", "acpi_hw_write_port", "acpi_os_write_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_read",
+    "callees": ["acpi_hw_get_access_bit_width", "acpi_hw_read_port", "acpi_hw_validate_register", "acpi_os_read_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_validate_register",
+    "callees": ["acpi_error", "acpi_hw_get_access_bit_width", "acpi_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_access_bit_width",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

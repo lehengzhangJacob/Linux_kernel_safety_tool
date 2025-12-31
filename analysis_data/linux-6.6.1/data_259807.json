@@ -1,0 +1,212 @@
+[
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_reply",
+    "callees": ["genlmsg_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_reply",
+    "callees": ["genlmsg_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "taskstats_init",
+    "callees": ["_printk", "genl_register_family"],
+    "global_reads": [],
+    "global_writes": ["family_registered"]
+  },
+  {
+    "name": "taskstats_init_early",
+    "callees": ["__init_rwsem", "find_next_bit", "kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["taskstats_cache"]
+  },
+  {
+    "name": "taskstats_exit",
+    "callees": ["__task_pid_nr_ns", "fill_stats", "fill_tgid_exit", "kfree_skb_reason", "memcpy", "mk_reply", "prepare_reply", "send_cpu_listeners", "taskstats_tgid_alloc"],
+    "global_reads": ["family_registered"],
+    "global_writes": []
+  },
+  {
+    "name": "taskstats_tgid_alloc",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kmem_cache_alloc", "kmem_cache_free"],
+    "global_reads": ["taskstats_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "taskstats_user_cmd",
+    "callees": ["cmd_attr_deregister_cpumask", "cmd_attr_pid", "cmd_attr_register_cpumask", "cmd_attr_tgid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_attr_tgid",
+    "callees": ["fill_stats_for_tgid", "kfree_skb_reason", "mk_reply", "prepare_reply", "send_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_attr_pid",
+    "callees": ["fill_stats_for_pid", "kfree_skb_reason", "mk_reply", "prepare_reply", "send_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_attr_deregister_cpumask",
+    "callees": ["add_del_listener", "parse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_attr_register_cpumask",
+    "callees": ["add_del_listener", "parse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroupstats_user_cmd",
+    "callees": ["__fdget", "cgroupstats_build", "fput", "kfree_skb_reason", "memset", "nla_reserve", "prepare_reply", "send_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mk_reply",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nla_reserve_64bit", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "bitmap_parselist", "kfree", "kmalloc_trace", "nla_strscpy"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "add_del_listener",
+    "callees": ["__builtin_return_address", "down_write", "find_next_bit", "kfree", "kmalloc_node_trace", "task_active_pid_ns", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_tgid_exit",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "delayacct_add_tsk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_stats_for_tgid",
+    "callees": ["__lock_task_sighand", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_unlock_irqrestore", "delayacct_add_tsk", "find_task_by_vpid", "ktime_get", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_stats_for_pid",
+    "callees": ["fill_stats", "find_get_task_by_vpid", "put_task_struct", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exe_add_tsk",
+    "callees": ["fput", "get_task_exe_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_cpu_listeners",
+    "callees": ["down_read", "down_write", "kfree", "kfree_skb_reason", "netlink_unicast", "skb_clone", "up_read", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_reply",
+    "callees": ["genlmsg_reply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_reply",
+    "callees": ["genlmsg_put", "kfree_skb_reason", "nlmsg_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

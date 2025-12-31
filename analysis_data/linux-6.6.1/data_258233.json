@@ -1,0 +1,458 @@
+[
+  {
+    "name": "pm_system_wakeup",
+    "callees": ["s2idle_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_system_wakeup",
+    "callees": ["s2idle_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_system_wakeup",
+    "callees": ["s2idle_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_disable",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "wakeup_source_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_attach_irq",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_deactivate",
+    "callees": ["wakeup_source_deactivate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_deactivate",
+    "callees": ["wakeup_source_deactivate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_report_event",
+    "callees": ["pm_system_wakeup", "wakeup_source_activate"],
+    "global_reads": ["events_check_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_free",
+    "callees": ["ida_free", "kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_free",
+    "callees": ["ida_free", "kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_destroy.part.0",
+    "callees": ["__pm_relax.part.0", "wakeup_source_free", "wakeup_source_record"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_dev_event.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_wakeup_ws_event.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_ws_event.part.0",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mod_timer", "wakeup_source_deactivate", "wakeup_source_report_event"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "pm_stay_awake.part.0",
+    "callees": ["__pm_stay_awake.part.0", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pm_stay_awake.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "timer_delete", "wakeup_source_report_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_set_wakeup_capable.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_unregister.part.0",
+    "callees": ["wakeup_source_destroy.part.0", "wakeup_source_remove", "wakeup_source_sysfs_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_relax.part.0",
+    "callees": ["__pm_relax.part.0", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_destroy.part.0",
+    "callees": ["__pm_relax.part.0", "wakeup_source_free", "wakeup_source_record"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pm_relax.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "wakeup_source_deactivate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_deactivate.part.0",
+    "callees": ["__wake_up", "ktime_get", "timer_delete", "trace_wakeup_source_deactivate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_debugfs_init",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_stats_open",
+    "callees": ["seq_open_private"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_stats_seq_show",
+    "callees": ["print_wakeup_source_stats"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_stats_seq_stop",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_stats_seq_next",
+    "callees": ["print_wakeup_source_stats"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_stats_seq_start",
+    "callees": ["__srcu_read_lock", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_save_wakeup_count",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["events_check_enabled"],
+    "global_writes": ["events_check_enabled", "saved_count"]
+  },
+  {
+    "name": "pm_get_wakeup_count",
+    "callees": ["finish_wait", "pm_print_active_wakeup_sources", "prepare_to_wait", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_system_irq_wakeup",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_debug_messages_should_print", "pm_system_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_clear",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_system_cancel_wakeup",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_system_wakeup",
+    "callees": ["s2idle_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_pending",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_debug_messages_should_print", "pm_print_active_wakeup_sources"],
+    "global_reads": ["events_check_enabled", "saved_count"],
+    "global_writes": ["events_check_enabled"]
+  },
+  {
+    "name": "pm_print_active_wakeup_sources",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "_printk", "pm_debug_messages_should_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_dev_event",
+    "callees": ["pm_wakeup_dev_event.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_ws_event",
+    "callees": ["pm_wakeup_ws_event.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_wakeup_timer_fn",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "wakeup_source_deactivate"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "pm_relax",
+    "callees": ["pm_relax.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pm_relax",
+    "callees": ["__pm_relax.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_deactivate",
+    "callees": ["wakeup_source_deactivate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_stay_awake",
+    "callees": ["pm_stay_awake.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pm_stay_awake",
+    "callees": ["__pm_stay_awake.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_report_event",
+    "callees": ["pm_system_wakeup", "wakeup_source_activate"],
+    "global_reads": ["events_check_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_activate",
+    "callees": ["__builtin_expect", "__warn_printk", "ktime_get", "trace_wakeup_source_activate"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "device_set_wakeup_enable",
+    "callees": ["device_wakeup_disable", "device_wakeup_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_set_wakeup_capable",
+    "callees": ["device_set_wakeup_capable.part.0", "wakeup_sysfs_add", "wakeup_sysfs_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_disable",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "wakeup_source_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_disarm_wake_irqs",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "dev_pm_disarm_wake_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_arm_wake_irqs",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "dev_pm_arm_wake_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_detach_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_attach_irq",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_enable",
+    "callees": ["device_wakeup_attach", "wakeup_source_register", "wakeup_source_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_wakeup_attach",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "device_wakeup_attach_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_walk_next",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_walk_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_read_unlock",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_sources_read_lock",
+    "callees": ["__srcu_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_unregister",
+    "callees": ["wakeup_source_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_register",
+    "callees": ["wakeup_source_add", "wakeup_source_create", "wakeup_source_free", "wakeup_source_sysfs_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_remove",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "synchronize_srcu", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_add",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_destroy",
+    "callees": ["wakeup_source_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_free",
+    "callees": ["ida_free", "kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_record",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_source_create",
+    "callees": ["ida_alloc_range", "kfree", "kfree_const", "kstrdup_const", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wakeup_source_deactivate",
+    "callees": ["__SCT__tp_func_wakeup_source_deactivate", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wakeup_source_activate",
+    "callees": ["__SCT__tp_func_wakeup_source_activate", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

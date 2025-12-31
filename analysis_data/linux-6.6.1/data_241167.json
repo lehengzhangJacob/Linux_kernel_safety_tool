@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_gen_pool_init",
+    "callees": ["mce_gen_pool_create"],
+    "global_reads": ["mce_evt_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "mce_gen_pool_create",
+    "callees": ["gen_pool_add_owner", "gen_pool_create", "gen_pool_destroy"],
+    "global_reads": [],
+    "global_writes": ["mce_evt_pool"]
+  },
+  {
+    "name": "mce_gen_pool_add",
+    "callees": ["___ratelimit", "_printk", "filter_mce", "gen_pool_alloc", "llist_add_batch", "memcpy"],
+    "global_reads": ["mce_evt_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "mce_gen_pool_empty",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_gen_pool_process",
+    "callees": ["blocking_notifier_call_chain", "gen_pool_free_owner", "llist_reverse_order"],
+    "global_reads": ["mce_evt_pool"],
+    "global_writes": []
+  },
+  {
+    "name": "mce_gen_pool_prepare_records",
+    "callees": ["is_duplicate_mce_record", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_duplicate_mce_record",
+    "callees": ["mce_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

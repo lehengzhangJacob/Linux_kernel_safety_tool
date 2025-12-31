@@ -1,0 +1,170 @@
+[
+  {
+    "name": "futex_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "double_unlock_hb",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unqueue_multiple",
+    "callees": ["futex_unqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wake_mark.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait_restart",
+    "callees": ["futex_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait",
+    "callees": ["futex_setup_timer", "futex_unqueue", "futex_wait_queue", "futex_wait_setup", "hrtimer_cancel", "signal_pending"],
+    "global_reads": ["futex_q_init"],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait_setup",
+    "callees": ["__builtin_expect", "futex_get_value_locked", "futex_q_lock", "futex_q_unlock", "get_futex_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait_multiple",
+    "callees": ["futex_sleep_multiple", "futex_wait_multiple_setup", "hrtimer_sleeper_start_expires", "signal_pending", "unqueue_multiple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_sleep_multiple",
+    "callees": ["schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait_multiple_setup",
+    "callees": ["__builtin_expect", "__futex_queue", "_raw_spin_unlock", "futex_get_value_locked", "futex_q_lock", "futex_q_unlock", "get_futex_key", "unqueue_multiple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unqueue_multiple",
+    "callees": ["futex_unqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wait_queue",
+    "callees": ["__builtin_expect", "__futex_queue", "_raw_spin_unlock", "hrtimer_sleeper_start_expires", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wake_op",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "double_lock_hb", "double_unlock_hb", "fault_in_user_writeable", "futex_atomic_op_inuser", "futex_hash", "futex_match", "futex_wake_mark", "get_futex_key", "wake_up_q"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_atomic_op_inuser",
+    "callees": ["___ratelimit", "__access_ok", "__builtin_expect", "__get_task_comm", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wake",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "futex_hash", "futex_match", "futex_wake_mark", "get_futex_key", "wake_up_q"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_wake_mark",
+    "callees": ["__builtin_expect", "__futex_unqueue", "__refcount_add", "futex_wake_mark.part.0", "wake_q_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "double_unlock_hb",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "double_lock_hb",
+    "callees": ["_raw_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "futex_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

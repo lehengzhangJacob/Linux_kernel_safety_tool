@@ -1,0 +1,290 @@
+[
+  {
+    "name": "acpi_queue_thermal_check.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["acpi_thermal_pm_queue"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_queue_thermal_check",
+    "callees": ["__builtin_constant_p", "acpi_queue_thermal_check.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_queue_thermal_check.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["acpi_thermal_pm_queue"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_queue_thermal_check",
+    "callees": ["__builtin_constant_p", "acpi_queue_thermal_check.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_get_temperature",
+    "callees": ["acpi_evaluate_integer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_sysfs_remove",
+    "callees": ["sysfs_remove_link", "thermal_zone_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_sysfs_remove",
+    "callees": ["sysfs_remove_link", "thermal_zone_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_unregister_thermal_zone",
+    "callees": ["acpi_thermal_zone_sysfs_remove", "kfree", "thermal_zone_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_queue_thermal_check.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["acpi_thermal_pm_queue"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_exit",
+    "callees": ["acpi_bus_unregister_driver", "destroy_workqueue"],
+    "global_reads": ["acpi_thermal_pm_queue"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_init",
+    "callees": ["_printk", "acpi_bus_register_driver", "alloc_workqueue", "destroy_workqueue", "dmi_check_system"],
+    "global_reads": ["acpi_thermal_pm_queue", "off"],
+    "global_writes": ["acpi_thermal_pm_queue"]
+  },
+  {
+    "name": "thermal_psv",
+    "callees": ["thermal_psv.part.0"],
+    "global_reads": ["psv"],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_tzp",
+    "callees": ["thermal_tzp.part.0"],
+    "global_reads": ["tzp"],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_nocrt",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["crt"]
+  },
+  {
+    "name": "thermal_act",
+    "callees": ["thermal_act.part.0"],
+    "global_reads": ["act"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_resume",
+    "callees": ["acpi_bus_update_power", "acpi_queue_thermal_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_suspend",
+    "callees": ["__builtin_constant_p", "__flush_workqueue", "__warn_flushing_systemwide_wq"],
+    "global_reads": ["acpi_thermal_pm_queue", "system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_remove",
+    "callees": ["__builtin_constant_p", "__flush_workqueue", "__warn_flushing_systemwide_wq", "acpi_dev_remove_notify_handler", "acpi_thermal_unregister_thermal_zone", "kfree"],
+    "global_reads": ["acpi_thermal_pm_queue", "system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_add",
+    "callees": ["__builtin_constant_p", "__builtin_memcpy", "__flush_workqueue", "__mutex_init", "__warn_flushing_systemwide_wq", "_printk", "acpi_dev_install_notify_handler", "acpi_thermal_get_info", "acpi_thermal_register_thermal_zone", "acpi_thermal_unregister_thermal_zone", "kfree", "kzalloc", "strcpy"],
+    "global_reads": ["acpi_thermal_pm_queue", "system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_check_fn",
+    "callees": ["__refcount_add", "mutex_lock", "mutex_unlock", "refcount_dec_not_one", "thermal_zone_device_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_get_info",
+    "callees": ["acpi_execute_simple_method", "acpi_thermal_aml_dependency_fix", "acpi_thermal_get_polling_frequency", "acpi_thermal_get_temperature", "acpi_thermal_get_trip_points"],
+    "global_reads": ["tzp"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_aml_dependency_fix",
+    "callees": ["acpi_evaluate_integer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_notify",
+    "callees": ["acpi_queue_thermal_check", "acpi_thermal_trips_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_unregister_thermal_zone",
+    "callees": ["acpi_thermal_zone_sysfs_remove", "kfree", "thermal_zone_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_register_thermal_zone",
+    "callees": ["__builtin_expect", "_dev_info", "acpi_thermal_zone_sysfs_add", "acpi_thermal_zone_sysfs_remove", "kfree", "kmalloc_array", "thermal_zone_device_enable", "thermal_zone_device_id", "thermal_zone_device_register_with_trips", "thermal_zone_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_sysfs_remove",
+    "callees": ["sysfs_remove_link", "thermal_zone_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_sysfs_add",
+    "callees": ["sysfs_create_link", "sysfs_remove_link", "thermal_zone_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_unbind_cooling_device",
+    "callees": ["acpi_thermal_cooling_device_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_bind_cooling_device",
+    "callees": ["acpi_thermal_cooling_device_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_cooling_device_cb",
+    "callees": ["acpi_fetch_acpi_dev", "thermal_zone_bind_cooling_device", "thermal_zone_device_priv", "thermal_zone_unbind_cooling_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_device_critical",
+    "callees": ["acpi_bus_generate_netlink_event", "thermal_zone_device_critical", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_zone_device_hot",
+    "callees": ["acpi_bus_generate_netlink_event", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_get_trend",
+    "callees": ["thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_get_temp",
+    "callees": ["acpi_thermal_get_temperature", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_get_trip_points",
+    "callees": ["__acpi_thermal_trips_update", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_trips_update",
+    "callees": ["acpi_bus_generate_netlink_event", "acpi_queue_thermal_check", "thermal_zone_device_exec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_queue_thermal_check",
+    "callees": ["__builtin_constant_p", "acpi_queue_thermal_check.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_adjust_thermal_zone",
+    "callees": ["__acpi_thermal_trips_update", "for_each_thermal_trip", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_adjust_trip",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_thermal_trips_update",
+    "callees": ["_printk", "acpi_evaluate_integer", "acpi_evaluate_reference", "acpi_handle_printk", "memcmp", "memcpy", "memset"],
+    "global_reads": ["act", "crt", "psv"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_thermal_get_temperature",
+    "callees": ["acpi_evaluate_integer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

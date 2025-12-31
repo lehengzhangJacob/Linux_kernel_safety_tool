@@ -1,0 +1,80 @@
+[
+  {
+    "name": "free_dr",
+    "callees": ["kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_kfree.part.0",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "del_dr", "free_dr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drmm_mutex_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_kfree",
+    "callees": ["drmm_kfree.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_kstrdup",
+    "callees": ["drmm_kmalloc", "memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_kmalloc",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__drm_dev_dbg", "__kmalloc_node_track_caller", "add_dr", "kstrdup_const", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drmm_add_action_or_reset",
+    "callees": ["__drmm_add_action"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drmm_add_action",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__drm_dev_dbg", "__kmalloc_node_track_caller", "add_dr", "kstrdup_const", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_add_final_kfree",
+    "callees": ["__builtin_expect", "ksize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_dr",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_dr",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_managed_release",
+    "callees": ["__drm_dev_dbg", "free_dr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_dr",
+    "callees": ["kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

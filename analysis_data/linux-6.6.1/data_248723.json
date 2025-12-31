@@ -1,0 +1,332 @@
+[
+  {
+    "name": "cond_policydb_destroy",
+    "callees": ["avtab_destroy", "cond_list_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_destroy_dup",
+    "callees": ["cond_policydb_destroy", "hashtab_destroy", "hashtab_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_destroy",
+    "callees": ["avtab_destroy", "cond_list_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_write_av_list.part.0",
+    "callees": ["avtab_write_item"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_dup",
+    "callees": ["avtab_init", "cond_policydb_destroy_dup", "duplicate_policydb_bools", "duplicate_policydb_cond_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_destroy_dup",
+    "callees": ["cond_policydb_destroy", "hashtab_destroy", "hashtab_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_policydb_bools",
+    "callees": ["hashtab_duplicate", "hashtab_map", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_bools_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_bools_copy",
+    "callees": ["kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_bools_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_policydb_cond_list",
+    "callees": ["avtab_alloc_dup", "avtab_destroy", "cond_dup_av_list", "cond_list_destroy", "kmalloc_array", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_dup_av_list",
+    "callees": ["avtab_insert_nonunique", "kmalloc_array", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_compute_av",
+    "callees": ["avtab_search_node", "avtab_search_node_next", "services_compute_xperms_drivers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_compute_xperms",
+    "callees": ["avtab_search_node", "avtab_search_node_next", "services_compute_xperms_decision"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_write_list",
+    "callees": ["cond_write_node", "put_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_write_node",
+    "callees": ["cond_write_av_list", "put_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_write_av_list",
+    "callees": ["cond_write_av_list.part.0", "put_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_write_bool",
+    "callees": ["put_entry", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_read_list",
+    "callees": ["avtab_alloc", "cond_list_destroy", "cond_read_node", "kmalloc_array", "next_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_read_node",
+    "callees": ["cond_read_av_list", "expr_node_isvalid", "kmalloc_array", "next_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expr_node_isvalid",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_read_av_list",
+    "callees": ["avtab_read_item", "kfree", "kmalloc_array", "next_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_insertf",
+    "callees": ["_printk", "avtab_insert_nonunique", "avtab_search_node", "avtab_search_node_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_read_bool",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "kzalloc", "next_entry", "symtab_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_index_bool",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_destroy_bool",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_init_bool_indexes",
+    "callees": ["kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_destroy",
+    "callees": ["avtab_destroy", "cond_list_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_list_destroy",
+    "callees": ["cond_node_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_node_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_policydb_init",
+    "callees": ["avtab_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evaluate_cond_nodes",
+    "callees": ["evaluate_cond_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evaluate_cond_node",
+    "callees": ["_printk", "cond_evaluate_expr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

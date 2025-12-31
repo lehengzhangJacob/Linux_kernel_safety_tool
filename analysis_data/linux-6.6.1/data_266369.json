@@ -1,0 +1,26 @@
+[
+  {
+    "name": "efi_shutdown_init",
+    "callees": ["__builtin_expect", "efi_poweroff_required", "register_sys_off_handler"],
+    "global_reads": [],
+    "global_writes": ["efi_sys_off_handler"]
+  },
+  {
+    "name": "efi_power_off",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_poweroff_required",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_reboot",
+    "callees": [],
+    "global_reads": ["efi_reboot_quirk_mode"],
+    "global_writes": []
+  }
+]

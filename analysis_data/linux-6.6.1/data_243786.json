@@ -1,0 +1,62 @@
+[
+  {
+    "name": "keyctl_pkey_params_free",
+    "callees": ["key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_free",
+    "callees": ["key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_get.part.0",
+    "callees": ["__builtin_expect", "lookup_user_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_verify",
+    "callees": ["__builtin_expect", "keyctl_pkey_params_free", "keyctl_pkey_params_get_2", "kfree", "memdup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_e_d_s",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__builtin_unreachable", "__copy_overflow", "__kmalloc", "_copy_to_user", "keyctl_pkey_params_free", "keyctl_pkey_params_get_2", "kfree", "kmalloc_large", "kmalloc_trace", "memdup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_query",
+    "callees": ["_copy_to_user", "keyctl_pkey_params_free", "keyctl_pkey_params_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_get_2",
+    "callees": ["__builtin_unreachable", "_copy_from_user", "keyctl_pkey_params_get", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_get",
+    "callees": ["__builtin_expect", "keyctl_pkey_params_get.part.0", "keyctl_pkey_params_parse", "memset", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_parse",
+    "callees": ["__builtin_constant_p", "match_token", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "keyctl_pkey_params_free",
+    "callees": ["key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_step",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_pulse",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_amplitude",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_act_cable_test_tdr",
+    "callees": ["ethnl_act_cable_test_tdr_cfg", "ethnl_cable_test_started", "ethnl_ops_begin", "ethnl_ops_complete", "ethnl_parse_header_dev_get", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": ["ethtool_phy_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_act_cable_test_tdr_cfg",
+    "callees": ["do_trace_netlink_extack", "nla_parse_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_fault_length",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_result",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_finished",
+    "callees": ["ethnl_multicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_free",
+    "callees": ["kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_cable_test_alloc",
+    "callees": ["ethnl_bcastmsg_put", "ethnl_fill_reply_header", "kfree_skb_reason", "nla_nest_start_noflag", "nla_put", "nlmsg_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_act_cable_test",
+    "callees": ["ethnl_cable_test_started", "ethnl_ops_begin", "ethnl_ops_complete", "ethnl_parse_header_dev_get", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": ["ethtool_phy_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

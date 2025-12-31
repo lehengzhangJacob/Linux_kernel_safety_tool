@@ -1,0 +1,68 @@
+[
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_iter",
+    "callees": ["__builtin_return_address", "iomap_iter_advance", "iomap_iter_done", "iomap_length", "trace_iomap_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_iter_done",
+    "callees": ["__builtin_expect", "trace_iomap_iter_dstmap", "trace_iomap_iter_srcmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_iter_advance",
+    "callees": ["__builtin_expect", "iomap_length", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_iomap_iter",
+    "callees": ["__SCT__tp_func_iomap_iter", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_iomap_iter_srcmap",
+    "callees": ["__SCT__tp_func_iomap_iter_srcmap", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_iomap_iter_dstmap",
+    "callees": ["__SCT__tp_func_iomap_iter_dstmap", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

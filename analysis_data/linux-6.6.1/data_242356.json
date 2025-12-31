@@ -1,0 +1,212 @@
+[
+  {
+    "name": "__pti_set_user_pgtbl",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": ["p4d_offset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": ["p4d_offset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pgd_none",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pti_set_user_pgtbl",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_print_if_insecure",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_print_if_insecure",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_finalize",
+    "callees": ["ptdump_walk_user_pgd_level_checkwx", "pti_clone_kernel_text", "pti_clone_pgtable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_init",
+    "callees": ["_printk", "pti_clone_p4d", "pti_clone_pgtable", "pti_clone_user_shared", "pti_setup_vsyscall", "set_memory_nonglobal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_clone_kernel_text",
+    "callees": ["pti_clone_pgtable", "pti_kernel_image_global_ok", "set_memory_global"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_kernel_image_global_ok",
+    "callees": [],
+    "global_reads": ["pti_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_clone_user_shared",
+    "callees": ["__builtin_expect", "find_next_bit", "per_cpu_ptr_to_phys", "pfn_pte", "pti_clone_p4d", "pti_user_pagetable_walk_pte"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_clone_p4d",
+    "callees": ["p4d_offset", "pti_user_pagetable_walk_p4d"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_setup_vsyscall",
+    "callees": ["__builtin_expect", "lookup_address", "pti_user_pagetable_walk_pte", "set_vsyscall_pgtable_user_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_user_pagetable_walk_pte",
+    "callees": ["__builtin_expect", "__get_free_pages", "__warn_printk", "pte_offset_kernel", "pti_user_pagetable_walk_pmd"],
+    "global_reads": ["__already_done", "page_offset_base", "phys_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "pti_user_pagetable_walk_pmd",
+    "callees": ["__builtin_expect", "__get_free_pages", "native_set_p4d", "pmd_offset", "pti_user_pagetable_walk_p4d"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_user_pagetable_walk_p4d",
+    "callees": ["__builtin_expect", "__get_free_pages", "__warn_printk", "p4d_offset", "pgd_none", "pti_set_user_pgtbl"],
+    "global_reads": ["__already_done", "page_offset_base", "pgdir_shift", "phys_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__pti_set_user_pgtbl",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "pti_check_boottime_disable",
+    "callees": ["cmdline_find_option", "cmdline_find_option_bool", "cpu_mitigations_off", "pti_print_if_insecure", "pti_print_if_secure", "strncmp"],
+    "global_reads": ["x86_hyper_type"],
+    "global_writes": ["pti_mode"]
+  },
+  {
+    "name": "pti_print_if_insecure",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pgd_none",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": ["p4d_offset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_set_p4d",
+    "callees": ["pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  }
+]

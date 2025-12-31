@@ -1,0 +1,140 @@
+[
+  {
+    "name": "sscanf_key",
+    "callees": ["sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_ipv4_init",
+    "callees": ["register_net_sysctl_sz", "register_pernet_subsys", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_sysctl_exit_net",
+    "callees": ["kfree", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_sysctl_init_net",
+    "callees": ["kfree", "kmemdup", "kzalloc", "register_net_sysctl_sz", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_fib_multipath_hash_fields",
+    "callees": ["call_netevent_notifiers", "proc_douintvec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_fib_multipath_hash_policy",
+    "callees": ["call_netevent_notifiers", "proc_dou8vec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_udp_hash_entries",
+    "callees": ["memset", "proc_dointvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tcp_ehash_entries",
+    "callees": ["memset", "proc_dointvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tcp_available_ulp",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "proc_dostring", "tcp_get_available_ulp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tfo_blackhole_detect_timeout",
+    "callees": ["proc_dointvec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tcp_fastopen_key",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "memset", "proc_dostring", "snprintf", "sscanf_key", "strchr", "tcp_fastopen_get_cipher", "tcp_fastopen_reset_cipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sscanf_key",
+    "callees": ["sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_allowed_congestion_control",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "proc_dostring", "tcp_get_allowed_congestion_control", "tcp_set_allowed_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tcp_available_congestion_control",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "proc_dostring", "tcp_get_available_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tcp_congestion_control",
+    "callees": ["proc_dostring", "tcp_get_default_congestion_control", "tcp_set_default_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_fwd_update_priority",
+    "callees": ["call_netevent_notifiers", "proc_dou8vec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_ping_group_range",
+    "callees": ["inet_get_ping_group_range_table", "proc_doulongvec_minmax", "set_ping_group_range"],
+    "global_reads": ["overflowgid"],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_privileged_ports",
+    "callees": ["inet_get_local_port_range", "proc_dointvec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_local_port_range",
+    "callees": ["inet_get_local_port_range", "proc_dointvec_minmax", "set_local_port_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_local_port_range",
+    "callees": ["___ratelimit", "_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "bio_set_dev",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_set_dev",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_stripe_exit",
+    "callees": ["destroy_workqueue", "dm_unregister_target"],
+    "global_reads": ["dm_stripe_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "dm_stripe_init",
+    "callees": ["_printk", "alloc_workqueue", "destroy_workqueue", "dm_register_target"],
+    "global_reads": ["dm_stripe_wq"],
+    "global_writes": ["dm_stripe_wq"]
+  },
+  {
+    "name": "stripe_io_hints",
+    "callees": ["blk_limits_io_min", "blk_limits_io_opt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_iterate_devices",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_end_io",
+    "callees": ["memset", "queue_work_on", "sprintf", "strcmp"],
+    "global_reads": ["dm_stripe_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_status",
+    "callees": ["scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_map",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_set_dev", "dm_bio_get_target_bio_nr", "stripe_map_range", "stripe_map_sector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_map_range",
+    "callees": ["bio_endio", "bio_set_dev", "stripe_map_range_sector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_map_range_sector",
+    "callees": ["stripe_map_sector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_map_sector",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_dtr",
+    "callees": ["dm_put_device", "flush_work", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stripe_ctr",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "__builtin_return_address", "__kmalloc", "dm_put_device", "dm_set_target_max_io_len", "get_stripe", "kfree", "kmalloc_large", "kmalloc_trace", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_stripe",
+    "callees": ["dm_get_device", "dm_table_get_mode", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trigger_event",
+    "callees": ["dm_table_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_set_dev",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

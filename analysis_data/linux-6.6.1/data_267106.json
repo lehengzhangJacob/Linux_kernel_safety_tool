@@ -1,0 +1,212 @@
+[
+  {
+    "name": "dma_fence_is_signaled",
+    "callees": ["__builtin_constant_p", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_is_signaled",
+    "callees": ["__builtin_constant_p", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_wait_priority",
+    "callees": ["dma_fence_is_signaled", "i915_gem_fence_wait_priority.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_wait_priority.part.0",
+    "callees": ["__local_bh_enable_ip", "__refcount_add", "dma_fence_put.part.0", "fence_set_priority"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fence_set_priority.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait_migration",
+    "callees": ["__SCT__might_resched", "i915_gem_object_wait_moving_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_wait_ioctl",
+    "callees": ["i915_gem_object_lookup", "i915_gem_object_wait", "kref_put", "ktime_get", "nsecs_to_jiffies", "to_wait_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "to_wait_timeout",
+    "callees": ["nsecs_to_jiffies64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait",
+    "callees": ["__SCT__might_resched", "i915_gem_object_wait_reservation"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait_priority",
+    "callees": ["dma_fence_put.part.0", "dma_resv_iter_first_unlocked", "dma_resv_iter_next_unlocked", "i915_gem_fence_wait_priority"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_fence_wait_priority",
+    "callees": ["dma_fence_is_signaled", "i915_gem_fence_wait_priority.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fence_set_priority",
+    "callees": ["dma_fence_is_signaled", "fence_set_priority.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait_reservation",
+    "callees": ["dma_fence_put.part.0", "dma_resv_iter_first_unlocked", "dma_resv_iter_next_unlocked", "i915_gem_object_boost", "i915_gem_object_wait_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_boost",
+    "callees": ["dma_fence_put.part.0", "dma_resv_iter_first_unlocked", "dma_resv_iter_next_unlocked", "i915_request_started", "intel_rps_boost"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait_fence",
+    "callees": ["__builtin_constant_p", "dma_fence_wait_timeout", "i915_request_wait_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lookup",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "i915_gem_object_get_rcu", "idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_started",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_is_signaled",
+    "callees": ["__builtin_constant_p", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

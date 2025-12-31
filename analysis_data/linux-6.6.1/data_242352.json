@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_key_exit",
+    "callees": ["unregister_asymmetric_key_parser"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_key_init",
+    "callees": ["register_asymmetric_key_parser"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_key_preparse",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__module_get", "asymmetric_key_generate_id", "bin2hex", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy", "public_key_signature_free", "strlen", "x509_cert_parse", "x509_free_certificate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_check_for_self_signed",
+    "callees": ["asymmetric_key_id_same", "memcmp", "public_key_verify_signature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x509_get_sig_params",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "crypto_alloc_shash", "crypto_destroy_tfm", "crypto_shash_digest", "crypto_shash_init", "kfree", "kmalloc_large", "kmalloc_trace", "kmemdup", "kzalloc", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

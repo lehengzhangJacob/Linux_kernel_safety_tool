@@ -1,0 +1,56 @@
+[
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tcc_get_temp",
+    "callees": ["intel_tcc_get_tjmax", "native_read_msr_safe", "rdmsr_safe_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tcc_set_offset",
+    "callees": ["native_read_msr_safe", "native_write_msr_safe", "rdmsr_safe_on_cpu", "wrmsr_safe_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tcc_get_offset",
+    "callees": ["native_read_msr_safe", "rdmsr_safe_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tcc_get_tjmax",
+    "callees": ["native_read_msr_safe", "rdmsr_safe_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

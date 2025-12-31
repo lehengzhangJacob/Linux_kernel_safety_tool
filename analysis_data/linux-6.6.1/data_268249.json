@@ -1,0 +1,200 @@
+[
+  {
+    "name": "is_pipe_dsc",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_power_domain",
+    "callees": ["is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl1_reg",
+    "callees": ["dss_ctl1_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl1_reg",
+    "callees": ["dss_ctl1_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl1_reg",
+    "callees": ["dss_ctl1_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_source_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl2_reg",
+    "callees": ["dss_ctl2_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl2_reg",
+    "callees": ["dss_ctl2_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vdsc_set_min_max_qp",
+    "callees": ["intel_lookup_range_max_qp", "intel_lookup_range_min_qp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_get_config",
+    "callees": ["dss_ctl1_reg", "dss_ctl2_reg", "intel_display_power_get_if_enabled", "intel_display_power_put_unchecked", "intel_dsc_power_domain", "intel_dsc_source_support", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_disable",
+    "callees": ["dss_ctl1_reg", "dss_ctl2_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_enable",
+    "callees": ["dss_ctl1_reg", "dss_ctl2_reg", "intel_crtc_is_bigjoiner_slave", "intel_dsc_pps_configure"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uncompressed_joiner_enable",
+    "callees": ["dss_ctl1_reg", "intel_crtc_is_bigjoiner_slave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl2_reg",
+    "callees": ["dss_ctl2_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dss_ctl1_reg",
+    "callees": ["dss_ctl1_reg.part.0", "is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_dp_pps_write",
+    "callees": ["drm_dsc_dp_pps_header_init", "drm_dsc_pps_payload_pack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_dsi_pps_write",
+    "callees": ["drm_dsc_pps_payload_pack", "mipi_dsi_compression_mode", "mipi_dsi_picture_parameter_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_pps_configure",
+    "callees": ["__drm_dev_dbg", "is_pipe_dsc", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_get_num_vdsc_instances",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_power_domain",
+    "callees": ["is_pipe_dsc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_compute_params",
+    "callees": ["__drm_dev_dbg", "calculate_rc_params", "drm_dsc_set_rc_buf_thresh", "drm_dsc_setup_rc_params", "intel_dsc_slice_dimensions_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_rc_params",
+    "callees": ["intel_vdsc_set_min_max_qp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vdsc_set_min_max_qp",
+    "callees": ["intel_lookup_range_max_qp", "intel_lookup_range_min_qp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_pipe_dsc",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsc_source_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

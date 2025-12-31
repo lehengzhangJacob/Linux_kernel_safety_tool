@@ -1,0 +1,104 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_dsb_busy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_cleanup",
+    "callees": ["i915_vma_unpin_and_release", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_prepare",
+    "callees": ["__builtin_expect", "_dev_info", "i915_gem_object_create_internal", "i915_gem_object_ggtt_pin", "i915_gem_object_pin_map_unlocked", "i915_vma_unpin_and_release", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "kfree", "kref_put", "kzalloc"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "intel_dsb_wait",
+    "callees": ["__SCT__might_resched", "_dev_err", "is_dsb_busy", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_commit",
+    "callees": ["__builtin_expect", "__warn_printk", "_dev_err", "dev_driver_string", "is_dsb_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_finish",
+    "callees": ["intel_dsb_align_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_align_tail",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_reg_write",
+    "callees": ["assert_dsb_has_room", "intel_dsb_emit", "intel_dsb_prev_ins_is_indexed_write", "intel_dsb_prev_ins_is_mmio_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dsb_emit",
+    "callees": ["assert_dsb_has_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_dsb_busy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "assert_dsb_has_room",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

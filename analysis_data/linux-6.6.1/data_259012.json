@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_mt_exit",
+    "callees": ["xt_unregister_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_mt_init",
+    "callees": ["xt_register_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_mt_destroy",
+    "callees": ["nf_ct_netns_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_mt_check",
+    "callees": ["___ratelimit", "nf_ct_netns_get", "state_mt_check.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_mt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

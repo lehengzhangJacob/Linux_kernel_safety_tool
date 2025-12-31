@@ -1,0 +1,20 @@
+[
+  {
+    "name": "acpi_ds_load1_end_op",
+    "callees": ["acpi_ds_create_buffer_field", "acpi_ds_create_operands", "acpi_ds_init_field_objects", "acpi_ds_scope_stack_pop", "acpi_ex_create_method", "acpi_ex_create_region", "acpi_ns_get_attached_object", "acpi_ns_opens_scope", "acpi_ps_get_opcode_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_load1_begin_op",
+    "callees": ["acpi_ds_scope_stack_push", "acpi_error", "acpi_ns_lookup", "acpi_ns_opens_scope", "acpi_ps_alloc_op", "acpi_ps_append_arg", "acpi_ps_get_next_namestring", "acpi_ps_get_parent_scope", "acpi_ut_get_node_name", "acpi_ut_get_type_name", "acpi_ut_prefixed_namespace_error"],
+    "global_reads": ["acpi_gbl_root_node"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_init_callbacks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

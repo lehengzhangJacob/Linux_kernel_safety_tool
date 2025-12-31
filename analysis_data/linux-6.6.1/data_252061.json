@@ -1,0 +1,44 @@
+[
+  {
+    "name": "add_rtc_cmos",
+    "callees": ["_dev_info", "compare_pnp_id", "platform_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_persistent_clock64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_persistent_clock64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_cmos_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_cmos_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mach_get_cmos_time",
+    "callees": ["_printk", "mc146818_get_time", "rtc_tm_to_time64"],
+    "global_reads": ["pm_trace_rtc_abused"],
+    "global_writes": []
+  },
+  {
+    "name": "mach_set_cmos_time",
+    "callees": ["_printk", "mc146818_set_time", "rtc_time64_to_tm", "rtc_valid_tm"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

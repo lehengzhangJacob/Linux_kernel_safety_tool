@@ -1,0 +1,194 @@
+[
+  {
+    "name": "rcu_segcblist_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_move_seglen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_insert_done_cbs.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_extract_pend_cbs.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_extract_done_cbs.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_merge",
+    "callees": ["lockdep_assert_cpus_held", "rcu_segcblist_extract_done_cbs", "rcu_segcblist_extract_pend_cbs", "rcu_segcblist_init", "rcu_segcblist_insert_done_cbs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_accelerate",
+    "callees": ["__builtin_expect", "rcu_segcblist_move_seglen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_advance",
+    "callees": ["__builtin_expect", "rcu_segcblist_move_seglen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_insert_pend_cbs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_insert_done_cbs",
+    "callees": ["rcu_segcblist_insert_done_cbs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_insert_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_extract_pend_cbs",
+    "callees": ["rcu_segcblist_extract_pend_cbs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_extract_done_cbs",
+    "callees": ["rcu_segcblist_extract_done_cbs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_entrain",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_nextgp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_first_pend_cb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_first_cb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_pend_cbs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_ready_cbs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_offload",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_disable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_inc_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_add_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_move_seglen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_n_segment_cbs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_segcblist_get_seglen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_cblist_dequeue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_cblist_flush_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_cblist_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_cblist_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

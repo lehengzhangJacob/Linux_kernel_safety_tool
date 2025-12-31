@@ -1,0 +1,578 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_max_logical_packages",
+    "callees": ["_printk"],
+    "global_reads": ["__max_smt_threads", "total_cpus"],
+    "global_writes": ["__max_logical_packages"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "common_cpu_up",
+    "callees": ["alternatives_enable_smp", "irq_init_percpu_irqstack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_cpu_from_maps",
+    "callees": ["numa_remove_cpu", "set_cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_disable_common",
+    "callees": ["fixup_irqs", "lapic_offline", "lock_vector_lock", "remove_cpu_from_maps", "remove_siblinginfo", "unlock_vector_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_core_flags",
+    "callees": [],
+    "global_reads": ["sysctl_sched_itmt_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "smpboot_restore_warm_reset_vector",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rtc_cmos_write"],
+    "global_reads": ["page_offset_base", "smpboot_warm_reset_vector_count"],
+    "global_writes": ["smpboot_warm_reset_vector_count"]
+  },
+  {
+    "name": "arch_cpuhp_cleanup_kick_cpu.part.0",
+    "callees": ["smpboot_restore_warm_reset_vector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_cleanup_kick_cpu.part.0",
+    "callees": ["smpboot_restore_warm_reset_vector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_play_dead",
+    "callees": ["cpuhp_ap_report_dead", "cpuidle_play_dead", "hlt_play_dead", "idle_task_exit", "mwait_play_dead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hlt_play_dead",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "smp_kick_mwait_play_dead",
+    "callees": ["__builtin_expect", "__const_udelay", "_printk", "find_next_andnot_bit"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "mwait_play_dead",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "play_dead_common",
+    "callees": ["cpuhp_ap_report_dead", "idle_task_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_cpu_disable",
+    "callees": ["apic_soft_disable", "cpu_disable_common", "lapic_can_unplug_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_disable_common",
+    "callees": ["fixup_irqs", "lapic_offline", "lock_vector_lock", "remove_cpu_from_maps", "remove_siblinginfo", "unlock_vector_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_cpu_from_maps",
+    "callees": ["numa_remove_cpu", "set_cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_siblinginfo",
+    "callees": ["__builtin_constant_p", "cpumask_weight", "find_next_bit", "recompute_smt_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recompute_smt_state",
+    "callees": ["cpumask_weight", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": ["__max_smt_threads"]
+  },
+  {
+    "name": "setup_cpu_local_masks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prefill_possible_map",
+    "callees": ["_printk", "set_cpu_possible"],
+    "global_reads": ["disabled_cpus", "nr_cpu_ids", "num_processors", "setup_max_cpus", "setup_possible_cpus"],
+    "global_writes": ["nr_cpu_ids", "total_cpus"]
+  },
+  {
+    "name": "_setup_possible_cpus",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_smp_cpus_done",
+    "callees": ["build_sched_topology", "cache_aps_init", "calculate_max_logical_packages", "impress_friends"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_max_logical_packages",
+    "callees": ["_printk"],
+    "global_reads": ["__max_smt_threads", "total_cpus"],
+    "global_writes": ["__max_logical_packages"]
+  },
+  {
+    "name": "native_smp_prepare_boot_cpu",
+    "callees": ["native_pv_lock_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_thaw_secondary_cpus_end",
+    "callees": ["cache_aps_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_thaw_secondary_cpus_begin",
+    "callees": ["set_cache_aps_delayed_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_smp_prepare_cpus",
+    "callees": ["_printk", "disable_smp", "print_cpu_info", "smp_prepare_cpus_common", "smp_quirk_init_udelay", "speculative_store_bypass_ht_init"],
+    "global_reads": ["apic_intr_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_init_parallel_bringup",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["smpboot_control"]
+  },
+  {
+    "name": "smp_prepare_cpus_common",
+    "callees": ["find_next_bit", "set_cpu_sibling_map", "smp_cpu_index_default", "smp_store_boot_cpu_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "smp_cpu_index_default",
+    "callees": ["find_next_bit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "disable_smp",
+    "callees": ["_printk", "disable_ioapic_support", "init_cpu_possible", "init_cpu_present", "physid_set_mask_of_physid"],
+    "global_reads": ["boot_cpu_physical_apicid", "smp_found_config"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_disable_smp_support",
+    "callees": ["disable_ioapic_support"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_sync_state_poll",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_cleanup_dead_cpu",
+    "callees": ["_printk"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_cleanup_kick_cpu",
+    "callees": ["arch_cpuhp_cleanup_kick_cpu.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_cpuhp_kick_ap_alive",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_kick_ap",
+    "callees": ["__builtin_constant_p", "_printk", "common_cpu_up", "do_boot_cpu", "mtrr_save_state"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "do_boot_cpu",
+    "callees": ["__SCT__apic_call_read", "__SCT__apic_call_write", "announce_cpu", "arch_cpuhp_cleanup_kick_cpu.part.0", "init_espfix_ap", "smpboot_setup_warm_reset_vector", "wakeup_secondary_cpu_via_init"],
+    "global_reads": ["apic", "real_mode_header", "smpboot_control"],
+    "global_writes": ["initial_code", "smpboot_control"]
+  },
+  {
+    "name": "common_cpu_up",
+    "callees": ["alternatives_enable_smp", "irq_init_percpu_irqstack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "announce_cpu",
+    "callees": ["__nodes_weight", "_printk", "cpumask_weight", "early_cpu_to_node", "num_digits"],
+    "global_reads": ["current_node", "first", "node_width", "system_state", "width"],
+    "global_writes": ["current_node", "first", "node_width", "width"]
+  },
+  {
+    "name": "wakeup_secondary_cpu_via_init",
+    "callees": ["__SCT__apic_call_icr_write", "__SCT__apic_call_read", "__SCT__apic_call_write", "__builtin_expect", "__const_udelay", "_printk", "lapic_get_maxlvt", "send_init_sequence"],
+    "global_reads": ["apic", "init_udelay"],
+    "global_writes": []
+  },
+  {
+    "name": "send_init_sequence",
+    "callees": ["__SCT__apic_call_icr_write", "__SCT__apic_call_read", "__SCT__apic_call_write", "__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "lapic_get_maxlvt"],
+    "global_reads": ["apic", "init_udelay"],
+    "global_writes": []
+  },
+  {
+    "name": "smp_quirk_init_udelay",
+    "callees": [],
+    "global_reads": ["init_udelay"],
+    "global_writes": ["init_udelay"]
+  },
+  {
+    "name": "cpu_init_udelay",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "impress_friends",
+    "callees": ["_printk", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clustergroup_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_coregroup_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_cpu_sibling_map",
+    "callees": ["__builtin_constant_p", "cpumask_weight", "find_first_bit", "find_next_bit", "match_l2c", "match_llc", "match_smt", "topology_same_node"],
+    "global_reads": ["__max_smt_threads", "smp_num_siblings"],
+    "global_writes": ["__max_smt_threads", "x86_has_numa_in_package"]
+  },
+  {
+    "name": "build_sched_topology",
+    "callees": ["set_sched_topology"],
+    "global_reads": ["x86_has_numa_in_package"],
+    "global_writes": []
+  },
+  {
+    "name": "x86_die_flags",
+    "callees": [],
+    "global_reads": ["sysctl_sched_itmt_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "x86_cluster_flags",
+    "callees": ["x86_core_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_smt_flags",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_core_flags",
+    "callees": [],
+    "global_reads": ["sysctl_sched_itmt_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "match_llc",
+    "callees": ["topology_same_node", "topology_sane", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_l2c",
+    "callees": ["match_smt", "topology_sane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_smt",
+    "callees": ["topology_sane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "smp_store_cpu_info",
+    "callees": ["identify_secondary_cpu"],
+    "global_reads": ["boot_cpu_data"],
+    "global_writes": []
+  },
+  {
+    "name": "smp_store_boot_cpu_info",
+    "callees": ["topology_update_die_map", "topology_update_package_map"],
+    "global_reads": ["boot_cpu_data"],
+    "global_writes": []
+  },
+  {
+    "name": "topology_update_die_map",
+    "callees": ["_printk", "topology_phys_to_logical_die"],
+    "global_reads": ["logical_die"],
+    "global_writes": ["logical_die"]
+  },
+  {
+    "name": "topology_update_package_map",
+    "callees": ["_printk", "topology_phys_to_logical_pkg"],
+    "global_reads": ["logical_packages"],
+    "global_writes": ["logical_packages"]
+  },
+  {
+    "name": "topology_phys_to_logical_die",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "topology_phys_to_logical_pkg",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "start_secondary",
+    "callees": ["ap_calibrate_delay", "ap_starting", "check_tsc_sync_target", "cpu_init", "cpu_init_exception_handling", "cpu_startup_entry", "cpuhp_ap_sync_alive", "cr4_init", "fpu__init_cpu", "lapic_online", "load_ucode_ap", "lock_vector_lock", "rcu_cpu_starting", "set_cpu_online", "speculative_store_bypass_ht_init", "unlock_vector_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ap_calibrate_delay",
+    "callees": ["calibrate_delay"],
+    "global_reads": ["loops_per_jiffy"],
+    "global_writes": []
+  },
+  {
+    "name": "ap_starting",
+    "callees": ["ap_init_aperfmperf", "apic_ap_setup", "notify_cpu_starting", "set_cpu_sibling_map", "smp_store_cpu_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "smpboot_restore_warm_reset_vector",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rtc_cmos_write"],
+    "global_reads": ["page_offset_base", "smpboot_warm_reset_vector_count"],
+    "global_writes": ["smpboot_warm_reset_vector_count"]
+  },
+  {
+    "name": "smpboot_setup_warm_reset_vector",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rtc_cmos_write"],
+    "global_reads": ["page_offset_base", "smpboot_warm_reset_vector_count"],
+    "global_writes": ["smpboot_warm_reset_vector_count"]
+  },
+  {
+    "name": "arch_update_cpu_topology",
+    "callees": [],
+    "global_reads": ["x86_topology_update"],
+    "global_writes": ["x86_topology_update"]
+  },
+  {
+    "name": "cpu_cpu_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_smt_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_cpu_to_node",
+    "callees": [],
+    "global_reads": ["x86_cpu_to_node_map_early_ptr"],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_weight",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

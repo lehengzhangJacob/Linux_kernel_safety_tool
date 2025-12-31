@@ -1,0 +1,50 @@
+[
+  {
+    "name": "crypto_sig_set_privkey",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_set_pubkey",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_verify",
+    "callees": ["crypto_akcipher_sync_post", "crypto_akcipher_sync_prep", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_sign",
+    "callees": ["crypto_akcipher_sync_post", "crypto_akcipher_sync_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_maxsize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alloc_sig",
+    "callees": ["crypto_alloc_tfm_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_show",
+    "callees": ["seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sig_init_tfm",
+    "callees": ["crypto_init_akcipher_ops_sig"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

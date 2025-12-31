@@ -1,0 +1,92 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_process_vm_writev",
+    "callees": ["process_vm_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_process_vm_writev",
+    "callees": ["process_vm_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_process_vm_readv",
+    "callees": ["process_vm_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_process_vm_readv",
+    "callees": ["process_vm_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_vm_rw",
+    "callees": ["__builtin_expect", "import_iovec", "iovec_from_user", "kfree", "process_vm_rw_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_vm_rw_pages",
+    "callees": ["copy_page_from_iter", "copy_page_to_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

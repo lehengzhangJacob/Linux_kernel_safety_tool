@@ -1,0 +1,332 @@
+[
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__mapped_all",
+    "callees": [],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "_e820__mapped_any",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__memblock_setup",
+    "callees": ["memblock_add", "memblock_allow_resize", "memblock_dump_all", "memblock_reserve", "memblock_trim_memory"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__memory_setup",
+    "callees": ["_printk", "e820__print_table", "memcpy"],
+    "global_reads": ["e820_table", "e820_table_firmware", "e820_table_kexec"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__memory_setup_default",
+    "callees": ["__append_e820_table", "__e820__range_add", "e820__update_table"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__reserve_resources_late",
+    "callees": ["_printk", "insert_resource_expand_to_fit", "reserve_region_with_split"],
+    "global_reads": ["e820_res", "e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__reserve_resources",
+    "callees": ["do_mark_busy", "e820_type_to_iores_desc", "e820_type_to_string", "firmware_map_add_early", "insert_resource", "memblock_alloc_try_nid", "panic"],
+    "global_reads": ["e820_table", "e820_table_firmware"],
+    "global_writes": ["e820_res"]
+  },
+  {
+    "name": "e820_type_to_iores_desc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820_type_to_string",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__finish_early_params",
+    "callees": ["_printk", "e820__print_table", "e820__update_table", "early_panic"],
+    "global_reads": ["e820_table", "userdef"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__reserve_setup_data",
+    "callees": ["__e820__range_update", "_printk", "e820__print_table", "e820__update_table", "early_memremap", "early_memunmap"],
+    "global_reads": ["e820_table", "e820_table_kexec"],
+    "global_writes": []
+  },
+  {
+    "name": "parse_memmap_opt",
+    "callees": ["parse_memmap_one", "strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_memopt",
+    "callees": ["_printk", "e820__range_remove", "memparse", "strcmp"],
+    "global_reads": [],
+    "global_writes": ["userdef"]
+  },
+  {
+    "name": "e820__end_of_low_ram_pfn",
+    "callees": ["e820_end_pfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__end_of_ram_pfn",
+    "callees": ["e820_end_pfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__memblock_alloc_reserved",
+    "callees": ["__e820__range_update", "_printk", "e820__update_table", "memblock_phys_alloc_range"],
+    "global_reads": ["e820_table_kexec"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__register_nvs_regions",
+    "callees": ["acpi_nvs_register"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__register_nosave_regions",
+    "callees": ["register_nosave_region"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__memory_setup_extended",
+    "callees": ["__append_e820_table", "_printk", "e820__print_table", "e820__update_table", "early_memremap", "early_memunmap", "memcpy"],
+    "global_reads": ["e820_table", "e820_table_firmware", "e820_table_kexec"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__reallocate_tables",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kmemdup"],
+    "global_reads": ["e820_table", "e820_table_firmware", "e820_table_kexec"],
+    "global_writes": ["e820_table", "e820_table_firmware", "e820_table_kexec"]
+  },
+  {
+    "name": "e820__setup_pci_gap",
+    "callees": ["_printk", "e820_search_gap"],
+    "global_reads": ["max_pfn"],
+    "global_writes": ["pci_mem_start"]
+  },
+  {
+    "name": "e820__update_table_print",
+    "callees": ["_printk", "e820__print_table", "e820__update_table"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__range_remove",
+    "callees": ["__e820__range_add", "_printk", "e820_print_type", "memset"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__range_update",
+    "callees": ["__e820__range_update"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_update",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__e820__range_add", "_printk", "e820_print_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__append_e820_table",
+    "callees": ["__builtin_expect", "__e820__range_add"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__update_table",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "memcpy", "sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpcompare",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__print_table",
+    "callees": ["_printk", "e820_print_type"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820_print_type",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__range_add",
+    "callees": ["__e820__range_add"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__range_add",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__get_entry_type",
+    "callees": ["__e820__mapped_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e820__mapped_all",
+    "callees": ["__e820__mapped_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e820__mapped_all",
+    "callees": [],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__mapped_any",
+    "callees": ["_e820__mapped_any"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "e820__mapped_raw_any",
+    "callees": ["_e820__mapped_any"],
+    "global_reads": ["e820_table_firmware"],
+    "global_writes": []
+  },
+  {
+    "name": "_e820__mapped_any",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

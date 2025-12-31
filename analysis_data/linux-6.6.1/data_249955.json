@@ -1,0 +1,86 @@
+[
+  {
+    "name": "fat_fh_to_dentry_nostale.part.0",
+    "callees": ["__fat_nfs_get_inode", "d_obtain_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fat_nfs_get_inode.part.0",
+    "callees": ["__bread_gfp", "__brelse", "_fat_msg", "fat_build_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_encode_fh_nostale.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_parent",
+    "callees": ["__brelse", "d_obtain_alias", "fat_dget", "fat_get_dotdot_entry", "fat_rebuild_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_rebuild_parent",
+    "callees": ["__bread_gfp", "__brelse", "_fat_msg", "fat_build_inode", "fat_dget", "fat_fill_inode", "fat_scan_logstart", "iput", "iunique", "new_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_fh_to_parent_nostale",
+    "callees": ["__fat_nfs_get_inode", "d_obtain_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_fh_to_parent",
+    "callees": ["generic_fh_to_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_fh_to_dentry_nostale",
+    "callees": ["fat_fh_to_dentry_nostale.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_fh_to_dentry",
+    "callees": ["generic_fh_to_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_encode_fh_nostale",
+    "callees": ["fat_encode_fh_nostale.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_nfs_get_inode",
+    "callees": ["__fat_nfs_get_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fat_nfs_get_inode",
+    "callees": ["__fat_nfs_get_inode.part.0", "fat_ilookup", "iput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ilookup",
+    "callees": ["fat_iget", "ilookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_dget",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "igrab"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

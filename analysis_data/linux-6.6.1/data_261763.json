@@ -1,0 +1,26 @@
+[
+  {
+    "name": "is_acpi_node",
+    "callees": ["is_acpi_data_node", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_mdiobus_register_phy",
+    "callees": ["__builtin_expect", "fwnode_get_phy_id", "fwnode_handle_get", "fwnode_handle_put", "fwnode_property_match_string", "get_phy_device", "is_acpi_node", "phy_device_create", "phy_device_free", "phy_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_mdiobus_phy_device_register",
+    "callees": ["device_set_node", "driver_deferred_probe_check_state", "fwnode_handle_get", "fwnode_handle_put", "fwnode_irq_get", "fwnode_property_present", "fwnode_property_read_u32_array", "phy_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_acpi_node",
+    "callees": ["is_acpi_data_node", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

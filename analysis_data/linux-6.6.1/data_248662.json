@@ -1,0 +1,74 @@
+[
+  {
+    "name": "mpi_normalize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_lshift",
+    "callees": ["mpi_lshift_limbs", "mpi_resize", "mpi_rshift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_lshift_limbs",
+    "callees": ["mpi_resize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_rshift",
+    "callees": ["mpi_resize", "mpihelp_rshift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_rshift_limbs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_clear_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_clear_highbit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_set_highbit",
+    "callees": ["mpi_resize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_set_bit",
+    "callees": ["mpi_resize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_test_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_get_nbits",
+    "callees": ["mpi_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_normalize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

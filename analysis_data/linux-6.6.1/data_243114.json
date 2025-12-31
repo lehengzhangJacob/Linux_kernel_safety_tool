@@ -1,0 +1,104 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_key_users_show",
+    "callees": ["seq_printf"],
+    "global_reads": ["key_quota_maxbytes", "key_quota_maxkeys", "key_quota_root_maxbytes", "key_quota_root_maxkeys", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_key_users_stop",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_key_users_next",
+    "callees": ["key_user_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_key_users_start",
+    "callees": ["_raw_spin_lock", "key_user_first", "key_user_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_keys_show",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "key_put", "key_task_permission", "ktime_get_real_seconds", "memcpy", "search_cred_keyrings_rcu", "seq_printf", "seq_putc", "sprintf"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_keys_stop",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_keys_next",
+    "callees": ["key_serial_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_keys_start",
+    "callees": ["_raw_spin_lock", "find_ge_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "key_proc_init",
+    "callees": ["panic", "proc_create_seq_private"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

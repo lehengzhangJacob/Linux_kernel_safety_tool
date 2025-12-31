@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_kctl_jack_report",
+    "callees": ["snd_ctl_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_kctl_jack_new",
+    "callees": ["get_available_index", "jack_kctl_name_gen", "snd_ctl_new1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_available_index",
+    "callees": ["memset", "snd_ctl_find_id", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jack_detect_kctl_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "journal_brelse_array",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_descriptor_block_csum_verify.part.0",
+    "callees": ["__builtin_bswap32", "jbd2_chksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scan_revoke_records",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "jbd2_journal_has_csum_v2or3", "jbd2_journal_set_revoke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_one_pass",
+    "callees": ["__SCT__cond_resched", "__brelse", "__builtin_bswap32", "__builtin_bswap64", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__getblk_gfp", "_printk", "calc_chksums", "count_tags", "fc_do_one_pass", "jbd2_block_tag_csum_verify", "jbd2_commit_block_csum_verify", "jbd2_descriptor_block_csum_verify", "jbd2_journal_has_csum_v2or3", "jbd2_journal_test_revoke", "journal_tag_bytes", "jread", "lock_buffer", "mark_buffer_dirty", "memcpy", "read_tag_block", "scan_revoke_records", "unlock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_block_tag_csum_verify",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "jbd2_chksum", "jbd2_journal_has_csum_v2or3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_commit_block_csum_verify",
+    "callees": ["__builtin_bswap32", "jbd2_chksum", "jbd2_journal_has_csum_v2or3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calc_chksums",
+    "callees": ["_printk", "count_tags", "crc32_be", "jread"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_skip_recovery",
+    "callees": ["_printk", "do_one_pass", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_recover",
+    "callees": ["__builtin_bswap32", "blkdev_issue_flush", "do_one_pass", "jbd2_journal_clear_revoke", "memset", "sync_blockdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "count_tags",
+    "callees": ["jbd2_journal_has_csum_v2or3", "journal_tag_bytes", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_descriptor_block_csum_verify",
+    "callees": ["jbd2_descriptor_block_csum_verify.part.0", "jbd2_journal_has_csum_v2or3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jread",
+    "callees": ["__brelse", "__builtin_constant_p", "__getblk_gfp", "_printk", "bh_read_nowait", "do_readahead", "jbd2_journal_bmap", "wait_on_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "journal_brelse_array",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_on_buffer",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__wait_on_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

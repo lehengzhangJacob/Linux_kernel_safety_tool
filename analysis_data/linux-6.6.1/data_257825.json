@@ -1,0 +1,50 @@
+[
+  {
+    "name": "enlarge_skb",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_exp_find_port",
+    "callees": ["__builtin_bswap16", "get_random_u32_below", "nf_ct_expect_related_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_follow_master",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "nf_nat_setup_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_mangle_udp_packet",
+    "callees": ["__builtin_bswap16", "enlarge_skb", "mangle_contents", "nf_nat_csum_recalc", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_nat_mangle_tcp_packet",
+    "callees": ["enlarge_skb", "mangle_contents", "nf_ct_seqadj_set", "nf_nat_csum_recalc", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enlarge_skb",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mangle_contents",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__builtin_unreachable", "ip_send_check", "memcpy", "memmove", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_95", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

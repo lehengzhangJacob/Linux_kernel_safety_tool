@@ -1,0 +1,206 @@
+[
+  {
+    "name": "virt_efi_set_variable_nb.part.0",
+    "callees": ["__efi_call", "arch_efi_call_virt_setup", "arch_efi_call_virt_teardown", "efi_call_virt_check_flags", "ibt_restore", "ibt_save", "up"],
+    "global_reads": ["efi_disable_ibt_for_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_variable_info_nb.part.0",
+    "callees": ["__efi_call", "arch_efi_call_virt_setup", "arch_efi_call_virt_teardown", "efi_call_virt_check_flags", "ibt_restore", "ibt_save", "up"],
+    "global_reads": ["efi_disable_ibt_for_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_reset_system.part.0",
+    "callees": ["__efi_call", "arch_efi_call_virt_setup", "arch_efi_call_virt_teardown", "ibt_restore", "ibt_save", "up"],
+    "global_reads": ["efi_disable_ibt_for_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_time.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_time.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_wakeup_time.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_wakeup_time.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_variable.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_next_variable.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_variable.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_next_high_mono_count.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_variable_info.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_update_capsule.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_capsule_caps.part.0",
+    "callees": ["__efi_queue_work", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_call_acpi_prm_handler",
+    "callees": ["__efi_queue_work", "down_interruptible", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_native_runtime_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_capsule_caps",
+    "callees": ["down_interruptible", "virt_efi_query_capsule_caps.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_update_capsule",
+    "callees": ["down_interruptible", "virt_efi_update_capsule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_reset_system",
+    "callees": ["_printk", "down_trylock", "virt_efi_reset_system.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_next_high_mono_count",
+    "callees": ["down_interruptible", "virt_efi_get_next_high_mono_count.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_variable_info_nb",
+    "callees": ["down_trylock", "virt_efi_query_variable_info_nb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_query_variable_info",
+    "callees": ["down_interruptible", "virt_efi_query_variable_info.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_variable_nb",
+    "callees": ["down_trylock", "virt_efi_set_variable_nb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_variable",
+    "callees": ["down_interruptible", "virt_efi_set_variable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_next_variable",
+    "callees": ["down_interruptible", "virt_efi_get_next_variable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_variable",
+    "callees": ["down_interruptible", "virt_efi_get_variable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_wakeup_time",
+    "callees": ["down_interruptible", "virt_efi_set_wakeup_time.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_wakeup_time",
+    "callees": ["down_interruptible", "virt_efi_get_wakeup_time.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_set_time",
+    "callees": ["down_interruptible", "virt_efi_set_time.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_efi_get_time",
+    "callees": ["down_interruptible", "virt_efi_get_time.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__efi_queue_work",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__init_swait_queue_head", "_printk", "queue_work_on", "wait_for_completion"],
+    "global_reads": ["__already_done", "efi_rts_wq"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "efi_call_rts",
+    "callees": ["__efi_call", "_printk", "arch_efi_call_virt_setup", "arch_efi_call_virt_teardown", "complete", "efi_call_virt_check_flags", "ibt_restore", "ibt_save"],
+    "global_reads": ["efi_disable_ibt_for_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_call_virt_check_flags",
+    "callees": ["___ratelimit", "__builtin_expect", "__builtin_return_address", "_printk", "add_taint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_call_virt_save_flags",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

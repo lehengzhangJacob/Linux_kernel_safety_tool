@@ -1,0 +1,74 @@
+[
+  {
+    "name": "trace_guest_halt_poll_ns.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_guest_halt_poll_ns",
+    "callees": ["__SCT__tp_func_guest_halt_poll_ns", "cpu_online", "trace_guest_halt_poll_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "haltpoll_reflect.part.0",
+    "callees": ["adjust_poll_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_guest_halt_poll_ns.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_haltpoll",
+    "callees": ["cpuidle_register_governor", "kvm_para_available"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "haltpoll_enable_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "haltpoll_reflect",
+    "callees": ["haltpoll_reflect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "adjust_poll_limit",
+    "callees": ["trace_guest_halt_poll_ns"],
+    "global_reads": ["guest_halt_poll_allow_shrink", "guest_halt_poll_grow", "guest_halt_poll_grow_start", "guest_halt_poll_ns", "guest_halt_poll_shrink"],
+    "global_writes": []
+  },
+  {
+    "name": "haltpoll_select",
+    "callees": ["cpuidle_governor_latency_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_guest_halt_poll_ns",
+    "callees": ["__SCT__tp_func_guest_halt_poll_ns", "cpu_online", "trace_guest_halt_poll_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

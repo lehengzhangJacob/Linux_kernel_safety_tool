@@ -1,0 +1,38 @@
+[
+  {
+    "name": "a4_driver_exit",
+    "callees": ["hid_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "a4_driver_init",
+    "callees": ["__hid_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "a4_probe",
+    "callees": ["_dev_err", "devm_kmalloc", "hid_hw_start", "hid_open_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "a4_event",
+    "callees": ["input_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "a4_input_mapped",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "a4_input_mapping",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,416 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ring_retire",
+    "callees": ["i915_active_release", "intel_ring_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_do_unpin.part.0",
+    "callees": ["__refcount_add", "i915_active_acquire_barrier", "i915_active_release", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_revoke",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_ban",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_get_avg_runtime_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_get_total_runtime_ns",
+    "callees": ["ktime_get_raw_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_bind_parent_child",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_get_active_request",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_fence_get_rcu", "i915_request_completed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_create_request",
+    "callees": ["i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init", "i915_request_create", "intel_context_pin_ww", "intel_context_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_prepare_remote_request",
+    "callees": ["i915_active_add_request", "i915_active_fence_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_exit_engine",
+    "callees": ["__SCT__might_resched", "__intel_wakeref_put", "intel_timeline_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_enter_engine",
+    "callees": ["intel_timeline_enter", "intel_wakeref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_context_module_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["slab_ce"]
+  },
+  {
+    "name": "i915_context_module_exit",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["slab_ce"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_fini",
+    "callees": ["i915_active_fini", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_init",
+    "callees": ["__i915_active_init", "__i915_sw_fence_init", "__mutex_init", "__refcount_add", "i915_sw_fence_commit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sw_fence_dummy_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_active",
+    "callees": ["__intel_ring_pin", "__intel_timeline_pin", "__refcount_add", "i915_active_acquire_if_busy", "i915_vma_make_unshrinkable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_retire",
+    "callees": ["intel_context_post_unpin", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_do_unpin",
+    "callees": ["__intel_context_do_unpin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_do_pin",
+    "callees": ["__intel_context_do_pin_ww", "i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_context_do_pin_ww",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "i915_active_acquire", "i915_active_acquire_barrier", "i915_active_release", "i915_gem_object_lock", "i915_gem_ww_unlock_single", "intel_context_active_acquire", "intel_context_alloc_state", "intel_context_is_closed", "intel_context_post_unpin", "intel_context_pre_pin", "intel_engine_pm_might_get", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_post_unpin",
+    "callees": ["__context_unpin_state", "__ring_retire", "intel_timeline_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pre_pin",
+    "callees": ["__context_pin_state", "__ring_active", "__ring_retire", "intel_timeline_pin", "intel_timeline_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ring_retire",
+    "callees": ["i915_active_release", "intel_ring_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ring_active",
+    "callees": ["i915_active_acquire", "intel_ring_pin", "intel_ring_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__context_unpin_state",
+    "callees": ["i915_active_release", "i915_vma_make_shrinkable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__context_pin_state",
+    "callees": ["i915_active_acquire", "i915_ggtt_pin", "i915_vma_make_unshrinkable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_active_acquire",
+    "callees": ["__builtin_constant_p", "i915_active_acquire_preallocate_barrier", "i915_active_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_alloc_state",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "intel_context_is_banned", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_create",
+    "callees": ["intel_context_init", "kmem_cache_alloc"],
+    "global_reads": ["slab_ce"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_free",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcu_context_free",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["slab_ce"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_is_banned",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_is_closed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin",
+    "callees": ["__builtin_expect", "__intel_context_do_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_ww",
+    "callees": ["__builtin_expect", "__intel_context_do_pin_ww", "intel_context_pin_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_completed",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

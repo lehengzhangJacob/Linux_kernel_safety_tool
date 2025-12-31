@@ -1,0 +1,470 @@
+[
+  {
+    "name": "mm_compute_batch",
+    "callees": ["cpumask_weight"],
+    "global_reads": [],
+    "global_writes": ["vm_committed_as_batch"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmdline_parse_core",
+    "callees": ["__builtin_expect", "memparse", "simple_strtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_set_state",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_set_state",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mm_core_init",
+    "callees": ["build_all_zonelists", "init_espfix_bsp", "kmem_cache_init", "mem_debugging_and_hardening_init", "mem_init", "mem_init_print_info", "mm_cache_init", "page_alloc_init_cpuhp", "pgtable_cache_init", "pti_init", "report_meminit", "stack_depot_early_init", "vmalloc_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem_init_print_info",
+    "callees": ["_printk", "get_num_physpages"],
+    "global_reads": ["totalcma_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "report_meminit",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem_debugging_and_hardening_init",
+    "callees": ["static_key_disable", "static_key_enable"],
+    "global_reads": ["_init_on_alloc_enabled_early", "_init_on_free_enabled_early"],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_on_free",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_on_alloc",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memblock_free_pages",
+    "callees": ["__free_pages_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dma_reserve",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["dma_reserve"]
+  },
+  {
+    "name": "alloc_large_system_hash",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "_printk", "alloc_pages_exact", "find_vm_area", "memblock_alloc_try_nid", "memblock_alloc_try_nid_raw", "panic", "vmalloc_huge"],
+    "global_reads": ["hashdist", "nr_all_pages", "nr_kernel_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "page_alloc_init_late",
+    "callees": ["buffer_init", "find_first_bit", "find_next_bit", "first_online_pgdat", "memblock_discard", "next_zone", "page_alloc_sysctl_init", "set_zone_contiguous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_zone_contiguous",
+    "callees": ["__SCT__cond_resched", "__pageblock_pfn_to_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_map_pfn_alignment",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__next_mem_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_area_init",
+    "callees": ["__next_mem_pfn_range", "_printk", "check_for_memory", "find_first_bit", "find_next_bit", "find_zone_movable_pfns_for_nodes", "fixup_hashdist", "free_area_init_node", "memblock_alloc_try_nid", "memblock_start_of_DRAM", "memmap_init", "memset", "mminit_verify_pageflags_layout", "node_set_state", "node_state", "panic", "subsection_map_init"],
+    "global_reads": [],
+    "global_writes": ["nr_node_ids"]
+  },
+  {
+    "name": "check_for_memory",
+    "callees": ["node_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_area_init_node",
+    "callees": ["__builtin_expect", "_printk", "calculate_node_totalpages", "free_area_init_core", "get_pfn_range_for_nid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pfn_range_for_nid",
+    "callees": ["__next_mem_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memmap_alloc",
+    "callees": ["memblock_alloc_exact_nid_raw", "memblock_alloc_try_nid_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_area_init_core",
+    "callees": ["_printk", "init_currently_empty_zone", "pgdat_init_internals", "zone_init_internals"],
+    "global_reads": ["dma_reserve", "nr_all_pages", "nr_kernel_pages"],
+    "global_writes": ["nr_all_pages", "nr_kernel_pages"]
+  },
+  {
+    "name": "set_pageblock_order",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_currently_empty_zone",
+    "callees": ["_printk", "zone_init_free_lists"],
+    "global_reads": ["mminit_loglevel"],
+    "global_writes": []
+  },
+  {
+    "name": "zone_init_free_lists",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_init_internals",
+    "callees": ["zone_pcp_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pgdat_init_internals",
+    "callees": ["__init_waitqueue_head", "lruvec_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_node_totalpages",
+    "callees": ["zone_absent_pages_in_node", "zone_spanned_pages_in_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_spanned_pages_in_node",
+    "callees": ["adjust_zone_range_for_zone_movable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_absent_pages_in_node",
+    "callees": ["__absent_pages_in_range"],
+    "global_reads": ["mirrored_kernelcore"],
+    "global_writes": []
+  },
+  {
+    "name": "absent_pages_in_range",
+    "callees": ["__absent_pages_in_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__absent_pages_in_range",
+    "callees": ["__next_mem_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "adjust_zone_range_for_zone_movable",
+    "callees": [],
+    "global_reads": ["mirrored_kernelcore", "movable_zone"],
+    "global_writes": []
+  },
+  {
+    "name": "memmap_init",
+    "callees": ["__next_mem_pfn_range", "init_unavailable_range", "memmap_init_zone_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memmap_init_zone_range",
+    "callees": ["init_unavailable_range", "memmap_init_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memmap_init_range",
+    "callees": ["__SCT__cond_resched", "overlap_memmap_init", "set_pageblock_migratetype"],
+    "global_reads": ["highest_memmap_pfn", "vmemmap_base"],
+    "global_writes": ["highest_memmap_pfn"]
+  },
+  {
+    "name": "init_unavailable_range",
+    "callees": ["_printk", "pfn_valid"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "overlap_memmap_init",
+    "callees": [],
+    "global_reads": ["mirrored_kernelcore", "r"],
+    "global_writes": ["r"]
+  },
+  {
+    "name": "reserve_bootmem_region",
+    "callees": ["pfn_valid"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_hashdist",
+    "callees": ["__nodes_weight"],
+    "global_reads": [],
+    "global_writes": ["hashdist"]
+  },
+  {
+    "name": "set_hashdist",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": ["hashdist"]
+  },
+  {
+    "name": "find_zone_movable_pfns_for_nodes",
+    "callees": ["__next_mem_pfn_range", "__nodes_weight", "_printk", "early_calculate_totalpages", "find_first_bit", "find_next_bit", "find_usable_zone_for_movable", "get_pfn_range_for_nid", "memblock_has_mirror"],
+    "global_reads": ["mirrored_kernelcore", "movable_zone", "required_kernelcore", "required_kernelcore_percent", "required_movablecore", "required_movablecore_percent"],
+    "global_writes": ["required_kernelcore", "required_movablecore"]
+  },
+  {
+    "name": "find_usable_zone_for_movable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["movable_zone"]
+  },
+  {
+    "name": "early_calculate_totalpages",
+    "callees": ["__next_mem_pfn_range", "node_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmdline_parse_movablecore",
+    "callees": ["cmdline_parse_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmdline_parse_kernelcore",
+    "callees": ["cmdline_parse_core", "parse_option_str"],
+    "global_reads": [],
+    "global_writes": ["mirrored_kernelcore"]
+  },
+  {
+    "name": "cmdline_parse_core",
+    "callees": ["__builtin_expect", "memparse", "simple_strtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mm_sysfs_init",
+    "callees": ["kobject_create_and_add"],
+    "global_reads": ["kernel_kobj"],
+    "global_writes": ["mm_kobj"]
+  },
+  {
+    "name": "mm_compute_batch_init",
+    "callees": ["mm_compute_batch"],
+    "global_reads": ["sysctl_overcommit_memory"],
+    "global_writes": []
+  },
+  {
+    "name": "mm_compute_batch",
+    "callees": ["cpumask_weight"],
+    "global_reads": [],
+    "global_writes": ["vm_committed_as_batch"]
+  },
+  {
+    "name": "set_mminit_loglevel",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mminit_verify_pageflags_layout",
+    "callees": ["_printk"],
+    "global_reads": ["mminit_loglevel"],
+    "global_writes": []
+  },
+  {
+    "name": "mminit_verify_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist", "_printk", "find_first_bit", "find_next_bit"],
+    "global_reads": ["mminit_loglevel"],
+    "global_writes": []
+  },
+  {
+    "name": "setup_nr_node_ids",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["nr_node_ids"]
+  },
+  {
+    "name": "early_pfn_to_nid",
+    "callees": ["__early_pfn_to_nid", "_raw_spin_lock", "_raw_spin_unlock", "find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_num_physpages",
+    "callees": ["find_first_bit", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "node_set_state",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

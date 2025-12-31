@@ -1,0 +1,392 @@
+[
+  {
+    "name": "rtl8139_chip_reset",
+    "callees": ["__const_udelay", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_rx_mode",
+    "callees": ["__set_rx_mode", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_write.part.0",
+    "callees": ["iowrite16", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_check_media.part.0",
+    "callees": ["mii_check_media"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_read.part.0",
+    "callees": ["ioread16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_init_ring",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_regs.part.0",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "memcpy_fromio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_tx_timeout.part.0",
+    "callees": ["init_timer_key", "schedule_delayed_work"],
+    "global_reads": ["next_tick"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_check_media.part.0",
+    "callees": ["mii_check_media"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_write.part.0",
+    "callees": ["iowrite16", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_read.part.0",
+    "callees": ["ioread16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_cleanup_module",
+    "callees": ["pci_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_init_module",
+    "callees": ["__pci_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_resume",
+    "callees": ["__builtin_constant_p", "netif_device_attach", "rtl8139_hw_start", "rtl8139_init_ring"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_suspend",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread32", "iowrite16", "iowrite32", "iowrite8", "netif_device_detach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_rx_mode",
+    "callees": ["__set_rx_mode", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_rx_mode",
+    "callees": ["__bitrev32", "__builtin_constant_p", "crc32_le", "ioread32", "iowrite32"],
+    "global_reads": ["multicast_filter_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_stats64",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread32", "iowrite32", "netdev_stats_to_stats64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netdev_ioctl",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "generic_mii_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_strings",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_ethtool_stats",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_sset_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_regs",
+    "callees": ["rtl8139_get_regs.part.0"],
+    "global_reads": ["use_io"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_regs_len",
+    "callees": [],
+    "global_reads": ["use_io"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_link",
+    "callees": ["mii_link_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_nway_reset",
+    "callees": ["mii_nway_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_link_ksettings",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mii_ethtool_set_link_ksettings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_link_ksettings",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mii_ethtool_get_link_ksettings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_drvinfo",
+    "callees": ["strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_wol",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_get_wol",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ioread8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_close",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_free_attrs", "free_irq", "ioread32", "iowrite16", "iowrite32", "iowrite8", "napi_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_set_mac_address",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dev_addr_mod", "ioread32", "ioread8", "iowrite32", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_poll_controller",
+    "callees": ["disable_irq_nosync", "enable_irq", "rtl8139_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_interrupt",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__napi_schedule", "_raw_spin_lock", "_raw_spin_unlock", "ioread16", "iowrite16", "napi_schedule_prep", "rtl8139_tx_interrupt", "rtl8139_weird_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_poll",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "ioread16", "iowrite16", "napi_complete_done", "rtl8139_rx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_weird_interrupt",
+    "callees": ["__builtin_expect", "_printk", "ioread32", "iowrite32", "netdev_err", "pci_read_config_word", "pci_write_config_word", "rtl_check_media.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_rx",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__napi_alloc_skb", "eth_type_trans", "ioread8", "iowrite16", "memcpy", "netif_receive_skb", "rtl8139_isr_ack", "rtl8139_rx_err", "skb_put"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_isr_ack",
+    "callees": ["__builtin_expect", "ioread16", "iowrite16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_rx_err",
+    "callees": ["ioread8", "iowrite32", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_tx_interrupt",
+    "callees": ["__builtin_expect", "_printk", "ioread32", "iowrite16", "iowrite32", "netdev_err", "netif_tx_wake_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_start_xmit",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_kfree_skb_any_reason", "ioread32", "iowrite32", "memset", "skb_copy_and_csum_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_tx_timeout",
+    "callees": ["rtl8139_tx_timeout.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_tx_timeout_task",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_lock_irq", "_raw_spin_unlock_bh", "_raw_spin_unlock_irq", "ioread8", "iowrite16", "iowrite8", "napi_disable", "napi_enable", "netif_tx_wake_queue", "rtl8139_hw_start", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_start_thread",
+    "callees": ["schedule_delayed_work"],
+    "global_reads": ["next_tick"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_thread",
+    "callees": ["__builtin_constant_p", "rtl8139_thread_iter", "rtl8139_tx_timeout_task", "rtnl_lock", "rtnl_unlock", "schedule_delayed_work"],
+    "global_reads": ["next_tick"],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_init_ring",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_hw_start",
+    "callees": ["ioread16", "ioread32", "ioread8", "iowrite16", "iowrite32", "iowrite8", "rtl8139_chip_reset", "rtl8139_set_rx_mode", "rtl_check_media.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_open",
+    "callees": ["dma_alloc_attrs", "dma_free_attrs", "free_irq", "napi_enable", "request_threaded_irq", "rtl8139_hw_start", "rtl8139_init_ring", "rtl8139_start_thread"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_write",
+    "callees": ["mdio_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_read",
+    "callees": ["mdio_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_eeprom",
+    "callees": ["ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_remove_one",
+    "callees": ["__builtin_expect", "__rtl8139_cleanup_dev", "_printk", "cancel_delayed_work_sync", "pci_disable_device", "unregister_netdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_init_one",
+    "callees": ["__builtin_expect", "__rtl8139_cleanup_dev", "_dev_info", "_printk", "dev_addr_mod", "init_timer_key", "iowrite8", "mdio_write.part.0", "netdev_info", "netif_napi_add_weight", "pci_disable_device", "read_eeprom", "register_netdev", "rtl8139_init_board"],
+    "global_reads": ["board_idx", "debug", "printed_version"],
+    "global_writes": ["board_idx", "printed_version", "use_io"]
+  },
+  {
+    "name": "rtl8139_set_features",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread32", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl8139_init_board",
+    "callees": ["__builtin_expect", "__rtl8139_cleanup_dev", "_dev_err", "_printk", "alloc_etherdev_mqs", "ioread32", "ioread8", "iowrite8", "pci_disable_device", "pci_enable_device", "pci_iomap", "pci_request_regions", "pci_set_master", "rtl8139_chip_reset"],
+    "global_reads": ["use_io"],
+    "global_writes": ["use_io"]
+  },
+  {
+    "name": "rtl8139_chip_reset",
+    "callees": ["__const_udelay", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rtl8139_cleanup_dev",
+    "callees": ["__builtin_expect", "_printk", "free_netdev", "pci_iounmap", "pci_release_regions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bitrev32",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

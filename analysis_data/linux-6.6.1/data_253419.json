@@ -1,0 +1,20 @@
+[
+  {
+    "name": "kasprintf",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "kvasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kvasprintf_const",
+    "callees": ["kstrdup_const", "kvasprintf", "strchr", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kvasprintf",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__builtin_va_copy", "__builtin_va_end", "__kmalloc_node_track_caller", "__warn_printk", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "__uuid_parse",
+    "callees": ["__uuid_parse.part.0", "uuid_is_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uuid_gen_common",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uuid_parse.part.0",
+    "callees": ["hex_to_bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uuid_parse",
+    "callees": ["__uuid_parse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guid_parse",
+    "callees": ["__uuid_parse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uuid_parse",
+    "callees": ["__uuid_parse.part.0", "uuid_is_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uuid_is_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uuid_gen",
+    "callees": ["__uuid_gen_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guid_gen",
+    "callees": ["__uuid_gen_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uuid_gen_common",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generate_random_guid",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generate_random_uuid",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "intel_llc_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_llc_enable",
+    "callees": ["gen6_update_ring_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_update_ring_freq",
+    "callees": ["calc_ia_freq", "get_ia_constants", "snb_pcode_write_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calc_ia_freq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ia_constants",
+    "callees": ["cpu_max_MHz", "intel_rps_get_max_raw_freq", "intel_rps_get_min_raw_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_max_MHz",
+    "callees": ["cpufreq_cpu_get", "cpufreq_cpu_put"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  }
+]

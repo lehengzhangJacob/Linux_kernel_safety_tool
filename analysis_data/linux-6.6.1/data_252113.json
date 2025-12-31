@@ -1,0 +1,500 @@
+[
+  {
+    "name": "trace_find_mark",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unregister_trace_event",
+    "callees": ["ida_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_fn_trace",
+    "callees": ["seq_print_ip_sym", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_time.part.0",
+    "callees": ["ns2usecs", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_seq_print_sym.part.0",
+    "callees": ["trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_time.part.0",
+    "callees": ["ns2usecs", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_events",
+    "callees": ["__builtin_expect", "__warn_printk", "register_trace_event"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "trace_func_repeats_print",
+    "callees": ["__builtin_expect", "print_fn_trace", "trace_handle_return", "trace_print_time", "trace_seq_printf", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_func_repeats_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_data",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_print",
+    "callees": ["__builtin_expect", "seq_print_ip_sym", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_bprint_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_bprintf", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_bprint_print",
+    "callees": ["__builtin_expect", "seq_print_ip_sym", "trace_handle_return", "trace_seq_bprintf", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_bputs_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_bputs_print",
+    "callees": ["__builtin_expect", "seq_print_ip_sym", "trace_handle_return", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timerlat_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_timerlat_print",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_osnoise_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_osnoise_print",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_hwlat_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_hwlat_print",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_user_stack_print",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "find_task_by_vpid", "get_task_mm", "mmput", "seq_print_user_ip", "trace_handle_return", "trace_seq_putc", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_stack_print",
+    "callees": ["__builtin_expect", "seq_print_ip_sym", "trace_handle_return", "trace_seq_putc", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctxwake_bin",
+    "callees": ["trace_handle_return", "trace_seq_putmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wake_hex",
+    "callees": ["trace_ctxwake_hex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctx_hex",
+    "callees": ["trace_ctxwake_hex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctxwake_hex",
+    "callees": ["trace_handle_return", "trace_seq_putmem_hex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wake_raw",
+    "callees": ["trace_ctxwake_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctx_raw",
+    "callees": ["trace_ctxwake_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctxwake_raw",
+    "callees": ["trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wake_print",
+    "callees": ["trace_ctxwake_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctx_print",
+    "callees": ["trace_ctxwake_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ctxwake_print",
+    "callees": ["trace_find_cmdline", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_fn_bin",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_putmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_fn_hex",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_putmem_hex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_fn_raw",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_fn_trace",
+    "callees": ["__builtin_expect", "print_fn_trace", "trace_handle_return", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_fn_trace",
+    "callees": ["seq_print_ip_sym", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nop_print",
+    "callees": ["trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_event_fields",
+    "callees": ["down_read", "print_fields", "trace_event_name", "trace_handle_return", "trace_seq_printf", "trace_seq_puts", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_array",
+    "callees": ["trace_seq_printf", "trace_seq_putc", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_trace_event",
+    "callees": ["__unregister_trace_event", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unregister_trace_event",
+    "callees": ["ida_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_trace_event",
+    "callees": ["__builtin_expect", "__warn_printk", "alloc_trace_event_type", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_read_unlock",
+    "callees": ["up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_read_lock",
+    "callees": ["down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_trace_event_type",
+    "callees": ["ida_alloc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ftrace_find_event",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_lat_context",
+    "callees": ["lat_print_generic", "lat_print_timestamp", "trace_find_cmdline", "trace_find_next_entry", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_context",
+    "callees": ["trace_find_cmdline", "trace_find_tgid", "trace_print_lat_fmt", "trace_print_time", "trace_seq_printf", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_find_mark",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_lat_fmt",
+    "callees": ["trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_print_ip_sym",
+    "callees": ["trace_seq_print_sym", "trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_seq_print_sym",
+    "callees": ["kallsyms_lookup", "sprint_symbol", "trace_seq_print_sym.part.0", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_output_call",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "trace_output_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_output_raw",
+    "callees": ["trace_event_format", "trace_handle_return", "trace_seq_printf", "trace_seq_vprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_printf",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "trace_check_vprintf", "trace_event_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_prep",
+    "callees": ["trace_event_name", "trace_handle_return", "trace_seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_hex_dump_seq",
+    "callees": ["trace_seq_hex_dump", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_array_seq",
+    "callees": ["trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_hex_seq",
+    "callees": ["trace_seq_printf", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_bitmask_seq",
+    "callees": ["trace_seq_bitmask", "trace_seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_symbols_seq",
+    "callees": ["trace_seq_printf", "trace_seq_putc", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_flags_seq",
+    "callees": ["trace_seq_printf", "trace_seq_putc", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_printk_msg_only",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_bprintk_msg_only",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_bprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_print_bputs_msg_only",
+    "callees": ["__builtin_expect", "trace_handle_return", "trace_seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

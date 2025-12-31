@@ -1,0 +1,20 @@
+[
+  {
+    "name": "acpi_parse_spcr",
+    "callees": ["_printk", "acpi_get_table", "acpi_put_table", "add_preferred_console", "qdf2400_erratum_44_present", "setup_earlycon", "snprintf", "strlen", "xgene_8250_erratum_present"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": ["qdf2400_e44_present"]
+  },
+  {
+    "name": "xgene_8250_erratum_present",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qdf2400_erratum_44_present",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_coherent_ok",
+    "callees": ["translate_phys_to_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_set_offset",
+    "callees": ["_dev_err", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_need_sync",
+    "callees": ["translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_max_mapping_size",
+    "callees": ["dma_addressing_limited", "is_swiotlb_active", "swiotlb_max_mapping_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_supported",
+    "callees": ["translate_phys_to_dma"],
+    "global_reads": ["max_pfn", "zone_dma_bits"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_mmap",
+    "callees": ["dma_pgprot", "remap_pfn_range", "translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_can_mmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_get_sgtable",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dma_direct_to_page", "sg_alloc_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_map_resource",
+    "callees": ["__builtin_expect", "_dev_err"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "dma_direct_map_sg",
+    "callees": ["dma_direct_map_page", "dma_direct_unmap_sg", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_unmap_sg",
+    "callees": ["dma_direct_unmap_page", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_sync_sg_for_cpu",
+    "callees": ["sg_next", "swiotlb_sync_single_for_cpu", "translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_sync_sg_for_device",
+    "callees": ["sg_next", "swiotlb_sync_single_for_device", "translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_free_pages",
+    "callees": ["dma_free_contiguous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_alloc_pages",
+    "callees": ["__dma_direct_alloc_pages", "memset", "translate_phys_to_dma"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_free",
+    "callees": ["dma_direct_to_page", "dma_free_contiguous", "is_vmalloc_addr", "vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_alloc",
+    "callees": ["__dma_direct_alloc_pages", "dma_direct_alloc_no_mapping", "memset", "translate_phys_to_dma"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_alloc_no_mapping",
+    "callees": ["__dma_direct_alloc_pages", "translate_phys_to_dma"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_coherent_ok",
+    "callees": ["translate_phys_to_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_optimal_gfp_mask",
+    "callees": ["translate_dma_to_phys"],
+    "global_reads": ["zone_dma_bits"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_get_required_mask",
+    "callees": ["translate_phys_to_dma"],
+    "global_reads": ["max_pfn"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_unmap_page",
+    "callees": ["dma_direct_sync_single_for_cpu", "swiotlb_tbl_unmap_single", "translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_direct_map_page",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "is_swiotlb_active", "swiotlb_map", "translate_phys_to_dma"],
+    "global_reads": ["__already_done", "vmemmap_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "dma_direct_sync_single_for_cpu",
+    "callees": ["swiotlb_sync_single_for_cpu", "translate_dma_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_addressing_limited",
+    "callees": ["dma_get_required_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_node",
+    "callees": ["__alloc_pages", "warn_if_node_offline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "name": "__freelist_add",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__freelist_add",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rethook_find_ret_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__freelist_add",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_recycle.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freelist_add",
+    "callees": ["__freelist_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_recycle",
+    "callees": ["__builtin_expect", "freelist_add", "rethook_recycle.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rethook_find_ret_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freelist_add",
+    "callees": ["__freelist_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_recycle.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_trampoline_handler",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__rethook_find_ret_addr", "_printk", "arch_rethook_fixup_return", "rethook_recycle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_rethook_fixup_return",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_find_ret_addr",
+    "callees": ["__builtin_expect", "__rethook_find_ret_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rethook_find_ret_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_hook",
+    "callees": ["arch_rethook_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_try_get",
+    "callees": ["__builtin_expect", "freelist_try_get", "rcu_is_watching"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_recycle",
+    "callees": ["__builtin_expect", "freelist_add", "rethook_recycle.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_rethook_node_rcu",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_add_node",
+    "callees": ["__refcount_add", "freelist_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_alloc",
+    "callees": ["kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_free",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_free_rcu",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rethook_flush_task",
+    "callees": ["__builtin_expect", "rethook_recycle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freelist_try_get",
+    "callees": ["__builtin_expect", "__freelist_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freelist_add",
+    "callees": ["__freelist_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__freelist_add",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

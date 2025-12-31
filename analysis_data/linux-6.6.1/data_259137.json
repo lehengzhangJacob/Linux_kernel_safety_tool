@@ -1,0 +1,434 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_poll_cb",
+    "callees": ["__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_fence_put.part.0", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_poll_cb",
+    "callees": ["__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_fence_put.part.0", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_end_cpu_access",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_unpin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_debug_show.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dma_resv_describe", "mutex_unlock", "seq_printf", "seq_puts", "ww_mutex_lock_interruptible", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_map_attachment.part.0",
+    "callees": ["__builtin_expect", "__map_dma_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_deinit",
+    "callees": ["debugfs_remove", "kern_unmount"],
+    "global_reads": ["dma_buf_debugfs_dir", "dma_buf_mnt"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_init",
+    "callees": ["__builtin_expect", "__mutex_init", "dma_buf_init_debugfs", "kern_mount"],
+    "global_reads": [],
+    "global_writes": ["dma_buf_mnt"]
+  },
+  {
+    "name": "dma_buf_debug_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_debug_show",
+    "callees": ["dma_buf_debug_show.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_vunmap_unlocked",
+    "callees": ["__builtin_expect", "dma_buf_vunmap", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_vunmap",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_vmap_unlocked",
+    "callees": ["__builtin_expect", "dma_buf_vmap", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_vmap",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_mmap",
+    "callees": ["__builtin_expect", "vma_set_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_end_cpu_access",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_begin_cpu_access",
+    "callees": ["__builtin_expect", "__dma_buf_begin_cpu_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_move_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_unmap_attachment_unlocked",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "dma_buf_unmap_attachment", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_unmap_attachment",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "dma_buf_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_map_attachment_unlocked",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "dma_buf_map_attachment", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_map_attachment",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "dma_buf_map_attachment.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_unpin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_pin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_detach",
+    "callees": ["__builtin_expect", "kfree", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_attach",
+    "callees": ["dma_buf_dynamic_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_dynamic_attach",
+    "callees": ["__builtin_expect", "__map_dma_buf", "dma_buf_detach", "kfree", "kzalloc", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__map_dma_buf",
+    "callees": ["__builtin_expect", "dma_resv_wait_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_put",
+    "callees": ["__builtin_expect", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_get",
+    "callees": ["fget", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_fd",
+    "callees": ["fd_install", "get_unused_fd_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_export",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "dma_buf_getfile", "dma_resv_init", "fput", "kzalloc", "module_put", "mutex_lock", "mutex_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_getfile",
+    "callees": ["__builtin_expect", "alloc_anon_inode", "alloc_file_pseudo", "inode_set_bytes", "iput"],
+    "global_reads": ["dma_buf_mnt"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_show_fdinfo",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_ioctl",
+    "callees": ["_copy_from_user", "dma_buf_begin_cpu_access", "dma_buf_end_cpu_access", "dma_buf_export_sync_file", "dma_buf_import_sync_file", "dma_buf_set_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_import_sync_file",
+    "callees": ["_copy_from_user", "dma_fence_put.part.0", "dma_fence_unwrap_first", "dma_fence_unwrap_next", "dma_resv_add_fence", "dma_resv_reserve_fences", "sync_file_get_fence", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_export_sync_file",
+    "callees": ["_copy_from_user", "_copy_to_user", "dma_fence_get_stub", "dma_fence_put.part.0", "dma_resv_get_singleton", "fd_install", "fput", "get_unused_fd_flags", "put_unused_fd", "sync_file_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_set_name",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_poll",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dma_buf_poll_add_cb", "dma_buf_poll_cb", "poll_wait", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_poll_add_cb",
+    "callees": ["dma_fence_add_callback", "dma_fence_get", "dma_fence_put.part.0", "dma_resv_iter_first", "dma_resv_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_poll_cb",
+    "callees": ["__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_fence_put.part.0", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_llseek",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_mmap_internal",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_fs_init_context",
+    "callees": ["init_pseudo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_file_release",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_buf_release",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dma_resv_fini", "kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmabuffs_dname",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dynamic_dname", "strlcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

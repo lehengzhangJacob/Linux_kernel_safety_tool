@@ -1,0 +1,80 @@
+[
+  {
+    "name": "__do_clflush.part.0",
+    "callees": ["__i915_gem_object_flush_frontbuffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_clflush",
+    "callees": ["__builtin_expect", "__do_clflush.part.0", "drm_clflush_sg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_clflush.part.0",
+    "callees": ["__i915_gem_object_flush_frontbuffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_clflush_object",
+    "callees": ["__builtin_expect", "__do_clflush", "clflush_work_create", "dma_resv_add_fence", "dma_resv_reserve_fences", "i915_fence_context_timeout", "i915_gem_object_has_struct_page", "i915_sw_fence_await_reservation", "i915_sw_fence_commit", "trace_i915_gem_object_clflush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clflush_work_create",
+    "callees": ["__builtin_return_address", "__i915_gem_object_get_pages", "__refcount_add", "dma_fence_work_init", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clflush_release",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clflush_work",
+    "callees": ["__do_clflush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_clflush",
+    "callees": ["__builtin_expect", "__do_clflush.part.0", "drm_clflush_sg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_i915_gem_object_clflush",
+    "callees": ["__SCT__tp_func_i915_gem_object_clflush", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

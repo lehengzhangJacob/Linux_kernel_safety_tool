@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_wol",
+    "callees": ["do_trace_netlink_extack", "ethnl_update_binary", "ethnl_update_bitset32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_wol_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wol_fill_reply",
+    "callees": ["ethnl_put_bitset32", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wol_reply_size",
+    "callees": ["ethnl_bitset32_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wol_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

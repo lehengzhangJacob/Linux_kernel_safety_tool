@@ -1,0 +1,290 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_cooling_device_destroy_sysfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "weight_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "weight_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_cooling_device_stats_reinit",
+    "callees": ["thermal_cooling_device_destroy_sysfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_cooling_device_destroy_sysfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_cooling_device_setup_sysfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cur_state_store",
+    "callees": ["mutex_lock", "mutex_unlock", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cur_state_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_state_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_type_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_zone_destroy_device_groups",
+    "callees": ["destroy_trip_attrs", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thermal_zone_create_device_groups",
+    "callees": ["create_trip_attrs", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_trip_attrs",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_trip_attrs",
+    "callees": ["kfree", "kmalloc_array", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "offset_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "offset_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slope_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slope_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integral_cutoff_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "integral_cutoff_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_d_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_d_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_i_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_i_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_pu_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_pu_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_po_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "k_po_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sustainable_power_store",
+    "callees": ["kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sustainable_power_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "available_policies_show",
+    "callees": ["thermal_build_list_of_policies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_store",
+    "callees": ["snprintf", "thermal_zone_device_set_policy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_hyst_show",
+    "callees": ["__thermal_zone_get_trip", "mutex_lock", "mutex_unlock", "sprintf", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_hyst_store",
+    "callees": ["__thermal_zone_get_trip", "kstrtoint", "mutex_lock", "mutex_unlock", "sscanf", "thermal_zone_set_trip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_temp_show",
+    "callees": ["__thermal_zone_get_trip", "mutex_lock", "mutex_unlock", "sprintf", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_temp_store",
+    "callees": ["__thermal_zone_get_trip", "kstrtoint", "mutex_lock", "mutex_unlock", "sscanf", "thermal_zone_set_trip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trip_point_type_show",
+    "callees": ["__thermal_zone_get_trip", "mutex_lock", "mutex_unlock", "sprintf", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mode_store",
+    "callees": ["strncmp", "thermal_zone_device_disable", "thermal_zone_device_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mode_show",
+    "callees": ["mutex_lock", "mutex_unlock", "sprintf", "thermal_zone_device_is_enabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "temp_show",
+    "callees": ["sprintf", "thermal_zone_get_temp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "type_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

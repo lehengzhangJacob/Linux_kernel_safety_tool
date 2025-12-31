@@ -1,0 +1,50 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_nvs_restore",
+    "callees": ["_printk", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_nvs_save",
+    "callees": ["_printk", "acpi_os_get_iomem", "ioremap_cache", "memcpy", "suspend_nvs_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_nvs_alloc",
+    "callees": ["__get_free_pages", "suspend_nvs_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_nvs_free",
+    "callees": ["acpi_os_unmap_iomem", "free_pages", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_nvs_register",
+    "callees": ["_printk", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_nvs_for_each_region",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_nvs_register",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "suspend_nvs_register"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "acpi_enter_sleep_state.part.0",
+    "callees": ["acpi_hw_extended_sleep", "acpi_hw_legacy_sleep"],
+    "global_reads": ["acpi_gbl_reduced_hardware"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_leave_sleep_state",
+    "callees": ["acpi_hw_extended_wake", "acpi_hw_legacy_wake"],
+    "global_reads": ["acpi_gbl_reduced_hardware"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_leave_sleep_state_prep",
+    "callees": ["acpi_hw_extended_wake_prep", "acpi_hw_legacy_wake_prep"],
+    "global_reads": ["acpi_gbl_reduced_hardware"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enter_sleep_state",
+    "callees": ["acpi_enter_sleep_state.part.0", "acpi_error"],
+    "global_reads": ["acpi_gbl_sleep_type_a", "acpi_gbl_sleep_type_b"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enter_sleep_state_prep",
+    "callees": ["acpi_evaluate_object", "acpi_get_sleep_type_data", "acpi_hw_execute_sleep_method"],
+    "global_reads": [],
+    "global_writes": ["acpi_gbl_sleep_type_a_s0"]
+  },
+  {
+    "name": "acpi_enter_sleep_state_s4bios",
+    "callees": ["acpi_hw_clear_acpi_status", "acpi_hw_disable_all_gpes", "acpi_hw_enable_all_wakeup_gpes", "acpi_hw_write_port", "acpi_os_stall", "acpi_read_bit_register", "acpi_write_bit_register"],
+    "global_reads": [],
+    "global_writes": ["acpi_gbl_system_awake_and_running"]
+  },
+  {
+    "name": "acpi_set_firmware_waking_vector",
+    "callees": [],
+    "global_reads": ["acpi_gbl_FACS"],
+    "global_writes": []
+  }
+]

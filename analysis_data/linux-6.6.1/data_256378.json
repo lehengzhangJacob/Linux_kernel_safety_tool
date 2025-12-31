@@ -1,0 +1,260 @@
+[
+  {
+    "name": "free_ef",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ef",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_mkdir",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_inode_attr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_rcu_ef.part.0",
+    "callees": ["llist_add_batch", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_remove_events_dir",
+    "callees": ["eventfs_remove_rec", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_remove",
+    "callees": ["eventfs_remove_rec", "mutex_lock", "mutex_unlock", "simple_recursive_removal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_remove_rec",
+    "callees": ["__builtin_expect", "call_srcu", "eventfs_remove_rec", "unhook_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unhook_dentry",
+    "callees": ["lockref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_rcu_ef",
+    "callees": ["free_ef", "free_rcu_ef.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_workfn",
+    "callees": ["__builtin_expect", "dput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_add_file",
+    "callees": ["__builtin_expect", "eventfs_prepare_ef", "mutex_lock", "mutex_unlock", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_add_events_file",
+    "callees": ["__builtin_expect", "eventfs_prepare_ef", "mutex_lock", "mutex_unlock", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_add_dir",
+    "callees": ["__builtin_expect", "eventfs_prepare_ef", "mutex_lock", "mutex_unlock", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_add_subsystem_dir",
+    "callees": ["__builtin_expect", "eventfs_prepare_ef", "mutex_lock", "mutex_unlock", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_create_events_dir",
+    "callees": ["__builtin_expect", "d_instantiate", "fsnotify_mkdir", "inc_nlink", "kfree", "kzalloc", "security_locked_down", "tracefs_end_creating", "tracefs_failed_creating", "tracefs_get_inode", "tracefs_start_creating"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcache_readdir_wrapper",
+    "callees": ["dcache_readdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcache_dir_open_wrapper",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__srcu_read_lock", "__srcu_read_unlock", "create_dentry", "d_real", "dcache_dir_open", "kmalloc_trace", "krealloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_release",
+    "callees": ["__builtin_expect", "dcache_dir_close", "dput", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_root_lookup",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "create_dentry", "match_event_file", "simple_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_event_file",
+    "callees": ["mutex_lock", "mutex_unlock", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dentry",
+    "callees": ["__builtin_expect", "create_dir", "create_file", "d_invalidate", "down_write", "dput", "eventfs_post_create_dir", "lockref_get", "mutex_lock", "mutex_unlock", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_post_create_dir",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_set_ef_status_free",
+    "callees": ["__builtin_expect", "free_ef", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ef",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dir",
+    "callees": ["__builtin_expect", "d_instantiate", "eventfs_end_creating", "eventfs_failed_creating", "eventfs_start_creating", "fsnotify_mkdir", "inc_nlink", "tracefs_get_inode", "update_inode_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_file",
+    "callees": ["__builtin_expect", "d_instantiate", "eventfs_end_creating", "eventfs_failed_creating", "eventfs_start_creating", "fsnotify_create", "tracefs_get_inode", "update_inode_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_inode_attr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eventfs_set_attr",
+    "callees": ["mutex_lock", "mutex_unlock", "simple_setattr", "update_attr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_attr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_mkdir",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_create",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "d_real",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

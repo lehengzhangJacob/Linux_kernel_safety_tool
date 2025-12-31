@@ -1,0 +1,278 @@
+[
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "sparse_buffer_free",
+    "callees": ["__builtin_expect", "memblock_free"],
+    "global_reads": ["sparsemap_buf"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sparse_init",
+    "callees": ["__nr_to_section", "memblocks_present", "next_present_section_nr", "set_pageblock_order", "sparse_init_nid", "vmemmap_populate_print_last"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sparse_init_nid",
+    "callees": ["__nr_to_section", "__populate_section_memmap", "_printk", "next_present_section_nr", "sparse_buffer_fini", "sparse_buffer_init", "sparse_early_usemaps_alloc_pgdat_section", "sparse_init_one_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_print_last",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sparse_buffer_alloc",
+    "callees": ["sparse_buffer_free"],
+    "global_reads": ["sparsemap_buf", "sparsemap_buf_end"],
+    "global_writes": ["sparsemap_buf"]
+  },
+  {
+    "name": "sparse_buffer_fini",
+    "callees": ["sparse_buffer_free"],
+    "global_reads": ["sparsemap_buf", "sparsemap_buf_end"],
+    "global_writes": ["sparsemap_buf"]
+  },
+  {
+    "name": "sparse_buffer_init",
+    "callees": ["__builtin_expect", "memmap_alloc"],
+    "global_reads": ["page_offset_base", "phys_base", "sparsemap_buf"],
+    "global_writes": ["sparsemap_buf", "sparsemap_buf_end"]
+  },
+  {
+    "name": "sparse_buffer_free",
+    "callees": ["__builtin_expect", "memblock_free"],
+    "global_reads": ["sparsemap_buf"],
+    "global_writes": []
+  },
+  {
+    "name": "mem_section_usage_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memblocks_present",
+    "callees": ["__next_mem_pfn_range", "memory_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_present",
+    "callees": ["__builtin_expect", "__nr_to_section", "memblock_alloc_try_nid", "mminit_validate_memmodel_limits", "panic", "sparse_index_init"],
+    "global_reads": ["__highest_present_section_nr", "mem_section"],
+    "global_writes": ["__highest_present_section_nr", "mem_section"]
+  },
+  {
+    "name": "subsection_map_init",
+    "callees": ["__nr_to_section", "subsection_mask_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subsection_mask_set",
+    "callees": ["__bitmap_set", "__builtin_constant_p", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mminit_validate_memmodel_limits",
+    "callees": ["_printk"],
+    "global_reads": ["mminit_loglevel"],
+    "global_writes": []
+  },
+  {
+    "name": "sparse_index_alloc",
+    "callees": ["kzalloc_node", "memblock_alloc_try_nid", "panic", "slab_is_available"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_present_section_nr",
+    "callees": ["present_section_nr"],
+    "global_reads": ["__highest_present_section_nr"],
+    "global_writes": []
+  },
+  {
+    "name": "present_section_nr",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  }
+]

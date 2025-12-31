@@ -1,0 +1,182 @@
+[
+  {
+    "name": "emulate_push_stack",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emulate_push_stack",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uretprobe_is_alive",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uretprobe_hijack_return_addr",
+    "callees": ["__builtin_expect", "_copy_from_user", "_copy_to_user", "_printk", "force_sig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_skip_sstep",
+    "callees": ["send_sig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_abort_xol",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_exception_notify",
+    "callees": ["uprobe_post_sstep_notifier", "uprobe_pre_sstep_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_post_xol",
+    "callees": ["__builtin_expect", "send_sig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_xol_was_trapped",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_pre_xol",
+    "callees": ["set_task_blockstep", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_uprobe_analyze_insn",
+    "callees": ["__builtin_constant_p", "branch_setup_xol_ops", "push_setup_xol_ops", "riprel_analyze", "uprobe_init_insn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "push_setup_xol_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_setup_xol_ops",
+    "callees": ["branch_clear_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_clear_offset",
+    "callees": ["insn_offset_immediate", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_post_xol_op",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "push_emulate_op",
+    "callees": ["emulate_push_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_emulate_op",
+    "callees": ["check_jmp_cond", "emulate_push_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_abort_op",
+    "callees": ["riprel_post_xol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_post_xol_op",
+    "callees": ["emulate_push_stack", "riprel_post_xol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emulate_push_stack",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_pre_xol_op",
+    "callees": ["riprel_pre_xol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "riprel_pre_xol",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "riprel_analyze",
+    "callees": ["insn_rip_relative"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uprobe_init_insn",
+    "callees": ["__builtin_constant_p", "insn_decode", "is_prefix_bad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_prefix_bad",
+    "callees": ["inat_get_opcode_attribute"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpmsg_put_line.part.0",
+    "callees": ["seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpmsg_put_line.part.0",
+    "callees": ["seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_misc_proc_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_proc_exit_net",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_proc_init_net",
+    "callees": ["proc_create_net_single", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netstat_seq_show",
+    "callees": ["find_next_bit", "kfree", "kzalloc", "memset", "seq_printf", "seq_putc", "seq_puts", "snmp_fold_field"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snmp_seq_show",
+    "callees": ["icmp_put", "icmpmsg_put", "snmp_seq_show_ipstats", "snmp_seq_show_tcp_udp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmp_put",
+    "callees": ["seq_printf", "seq_puts", "snmp_fold_field"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpmsg_put",
+    "callees": ["icmpmsg_put_line.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sockstat_seq_show",
+    "callees": ["__percpu_counter_sum", "seq_printf", "sock_prot_inuse_get", "socket_seq_show", "tcp_orphan_count_sum"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

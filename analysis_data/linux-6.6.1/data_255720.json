@@ -1,0 +1,32 @@
+[
+  {
+    "name": "d_real",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_setlease",
+    "callees": ["nfs4_proc_setlease"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_file_flush",
+    "callees": ["errseq_check", "errseq_sample", "filemap_fdatawrite", "nfs4_delegation_flush_on_close", "nfs_wb_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_file_open",
+    "callees": ["__builtin_expect", "alloc_nfs_open_context", "d_drop", "d_real", "dget_parent", "dput", "filemap_write_and_wait_range", "nfs_check_flags", "nfs_file_set_open_context", "put_nfs_open_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "d_real",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

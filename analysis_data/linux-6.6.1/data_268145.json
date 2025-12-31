@@ -1,0 +1,302 @@
+[
+  {
+    "name": "intel_dp_set_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_program_link_training_pattern", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_program_link_training_pattern", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_update_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_set_signal_levels"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_update_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_set_signal_levels"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_update_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_set_signal_levels"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_lttpr_transparent_mode",
+    "callees": ["drm_dp_dpcd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_lttpr_transparent_mode",
+    "callees": ["drm_dp_dpcd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_reset_link_train",
+    "callees": ["intel_dp_set_link_train", "intel_dp_set_signal_levels", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_per_lane_signal_levels",
+    "callees": ["intel_dp_phy_is_downstream_of_source"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_128b132b_sdp_crc16",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_write", "drm_dp_phy_name", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_start_link_train",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "intel_dp_128b132b_link_train", "intel_dp_init_lttpr_and_dprx_caps", "intel_dp_is_uhbr", "intel_dp_link_train_all_phys", "intel_dp_prepare_link_train", "intel_dp_schedule_fallback_link_training"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_128b132b_link_train",
+    "callees": ["__SCT__might_resched", "__drm_dev_dbg", "_dev_err", "drm_dp_phy_name", "intel_digital_port_connected", "intel_dp_128b132b_intra_hop", "intel_dp_128b132b_lane_cds", "intel_dp_128b132b_lane_eq", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_128b132b_lane_cds",
+    "callees": ["__drm_dev_dbg", "_dev_err", "drm_dp_128b132b_cds_interlane_align_done", "drm_dp_128b132b_eq_interlane_align_done", "drm_dp_128b132b_lane_symbol_locked", "drm_dp_128b132b_link_training_failed", "drm_dp_dpcd_read_link_status", "drm_dp_dpcd_write", "drm_dp_phy_name", "intel_digital_port_connected", "intel_dp_dump_link_status", "msecs_to_jiffies_timeout", "usleep_range_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_128b132b_lane_eq",
+    "callees": ["__drm_dev_dbg", "_dev_err", "drm_dp_128b132b_eq_interlane_align_done", "drm_dp_128b132b_lane_channel_eq_done", "drm_dp_128b132b_link_training_failed", "drm_dp_128b132b_read_aux_rd_interval", "drm_dp_dpcd_read_link_status", "drm_dp_phy_name", "intel_digital_port_connected", "intel_dp_dump_link_status", "intel_dp_get_adjust_train", "intel_dp_reset_link_train", "intel_dp_set_link_train", "intel_dp_update_link_train", "usleep_range_state"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_link_train_all_phys",
+    "callees": ["intel_dp_disable_dpcd_training_pattern", "intel_dp_link_train_phy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_schedule_fallback_link_training",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "intel_digital_port_connected", "intel_dp_get_link_train_fallback_values", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_link_train_phy",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "intel_dp_link_training_channel_equalization", "intel_dp_link_training_clock_recovery"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_stop_link_train",
+    "callees": ["__SCT__might_resched", "__drm_dev_dbg", "drm_dp_phy_name", "intel_dp_128b132b_intra_hop", "intel_dp_disable_dpcd_training_pattern", "intel_dp_is_uhbr", "intel_dp_program_link_training_pattern", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_link_training_channel_equalization",
+    "callees": ["__drm_dev_dbg", "_dev_err", "drm_dp_channel_eq_ok", "drm_dp_clock_recovery_ok", "drm_dp_dpcd_read_phy_link_status", "drm_dp_phy_name", "drm_dp_read_channel_eq_delay", "intel_digital_port_connected", "intel_dp_dump_link_status", "intel_dp_get_adjust_train", "intel_dp_is_uhbr", "intel_dp_set_link_train", "intel_dp_training_pattern", "intel_dp_update_link_train", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_training_pattern",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "intel_dp_is_uhbr", "intel_dp_source_supports_tps3", "intel_dp_source_supports_tps4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_link_training_clock_recovery",
+    "callees": ["__drm_dev_dbg", "_dev_err", "drm_dp_clock_recovery_ok", "drm_dp_dpcd_read_phy_link_status", "drm_dp_phy_name", "drm_dp_read_clock_recovery_delay", "intel_digital_port_connected", "intel_dp_adjust_request_changed", "intel_dp_dump_link_status", "intel_dp_get_adjust_train", "intel_dp_is_uhbr", "intel_dp_link_max_vswing_reached", "intel_dp_reset_link_train", "intel_dp_update_link_train", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_dump_link_status",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_adjust_request_changed",
+    "callees": ["drm_dp_get_adjust_request_pre_emphasis", "drm_dp_get_adjust_request_voltage", "drm_dp_get_adjust_tx_ffe_preset", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_update_downspread_ctrl",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_link_max_vswing_reached",
+    "callees": ["intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_update_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_set_signal_levels"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_reset_link_train",
+    "callees": ["intel_dp_set_link_train", "intel_dp_set_signal_levels", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_signal_levels",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "intel_dp_is_uhbr", "intel_dp_phy_is_downstream_of_source"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_program_link_training_pattern",
+    "callees": ["__drm_dev_dbg", "dp_training_pattern_name", "drm_dp_phy_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dp_training_pattern_name",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_link_train",
+    "callees": ["drm_dp_dpcd_write", "intel_dp_program_link_training_pattern", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_get_adjust_train",
+    "callees": ["__drm_dev_dbg", "drm_dp_get_adjust_request_pre_emphasis", "drm_dp_get_adjust_request_voltage", "drm_dp_get_adjust_tx_ffe_preset", "drm_dp_phy_name", "intel_dp_get_lane_adjust_train", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_get_lane_adjust_train",
+    "callees": ["intel_dp_get_lane_adjust_tx_ffe_preset", "intel_dp_get_lane_adjust_vswing_preemph", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_get_lane_adjust_vswing_preemph",
+    "callees": ["drm_dp_get_adjust_request_pre_emphasis", "drm_dp_get_adjust_request_voltage", "has_per_lane_signal_levels", "intel_dp_phy_preemph_max", "intel_dp_phy_voltage_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_get_lane_adjust_tx_ffe_preset",
+    "callees": ["drm_dp_get_adjust_tx_ffe_preset", "has_per_lane_signal_levels"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_per_lane_signal_levels",
+    "callees": ["intel_dp_phy_is_downstream_of_source"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_phy_preemph_max",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_dp_lttpr_pre_emphasis_level_3_supported", "intel_dp_phy_is_downstream_of_source"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_dp_phy_voltage_max",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_dp_lttpr_voltage_swing_level_3_supported", "intel_dp_phy_is_downstream_of_source"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_dp_phy_is_downstream_of_source",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_dp_lttpr_count"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_dp_init_lttpr_and_dprx_caps",
+    "callees": ["drm_dp_dpcd_probe", "drm_dp_read_dpcd_caps", "intel_dp_init_lttpr", "intel_dp_is_edp", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_init_lttpr",
+    "callees": ["__drm_dev_dbg", "drm_dp_lttpr_count", "drm_dp_phy_name", "intel_dp_read_lttpr_common_caps", "intel_dp_read_lttpr_phy_caps", "intel_dp_set_lttpr_transparent_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_set_lttpr_transparent_mode",
+    "callees": ["drm_dp_dpcd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_read_lttpr_common_caps",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "drm_dp_read_lttpr_common_caps", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_read_lttpr_phy_caps",
+    "callees": ["__drm_dev_dbg", "drm_dp_phy_name", "drm_dp_read_lttpr_phy_caps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msecs_to_jiffies_timeout",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

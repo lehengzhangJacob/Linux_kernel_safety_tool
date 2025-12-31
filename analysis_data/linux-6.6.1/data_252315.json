@@ -1,0 +1,104 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_core_init",
+    "callees": ["register_net_sysctl_sz", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_core_net_exit",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kfree", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_core_net_init",
+    "callees": ["kfree", "kmemdup", "register_net_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fb_tunnels_only_for_init_net_sysctl_setup",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": ["sysctl_fb_tunnels_only_for_init_net"]
+  },
+  {
+    "name": "proc_do_rss_key",
+    "callees": ["proc_dostring", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_do_dev_weight",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_dointvec"],
+    "global_reads": ["dev_weight_rx_bias", "dev_weight_tx_bias"],
+    "global_writes": []
+  },
+  {
+    "name": "set_default_qdisc",
+    "callees": ["proc_dostring", "qdisc_get_default", "qdisc_set_default"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flow_limit_table_len_sysctl",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_dointvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flow_limit_cpu_sysctl",
+    "callees": ["__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "bitmap_parse", "dump_cpumask", "find_next_bit", "kvfree_call_rcu", "kzalloc_node", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["netdev_flow_limit_table_len", "nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "rps_sock_flow_sysctl",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "kvfree_call_rcu", "mutex_lock", "mutex_unlock", "proc_dointvec", "static_key_slow_dec", "static_key_slow_inc", "vmalloc"],
+    "global_reads": ["nr_cpu_ids", "rps_sock_flow_table"],
+    "global_writes": ["rps_cpu_mask"]
+  },
+  {
+    "name": "rps_default_mask_sysctl",
+    "callees": ["bitmap_parse", "dump_cpumask", "rps_cpumask_housekeeping", "rps_default_mask_cow_alloc", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "rps_default_mask_cow_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_cpumask",
+    "callees": ["memcpy", "scnprintf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  }
+]

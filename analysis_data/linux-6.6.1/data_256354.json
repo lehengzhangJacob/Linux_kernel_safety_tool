@@ -1,0 +1,158 @@
+[
+  {
+    "name": "xfrm_replay_seqhi",
+    "callees": ["__builtin_bswap32", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_seqhi",
+    "callees": ["__builtin_bswap32", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_init_replay",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_overflow",
+    "callees": ["__xfrm_replay_overflow", "xfrm_replay_overflow_bmp", "xfrm_replay_overflow_esn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_advance_esn",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xfrm_aevent_is_on", "xfrm_replay_notify", "xfrm_replay_seqhi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_recheck",
+    "callees": ["xfrm_replay_check_bmp", "xfrm_replay_check_legacy", "xfrm_replay_recheck_esn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_recheck_esn",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xfrm_replay_check_esn", "xfrm_replay_seqhi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_check",
+    "callees": ["xfrm_replay_check_bmp", "xfrm_replay_check_esn", "xfrm_replay_check_legacy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_check_esn",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xfrm_audit_state_replay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_overflow_esn",
+    "callees": ["__builtin_expect", "xfrm_aevent_is_on", "xfrm_audit_state_replay_overflow", "xfrm_replay_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_notify_esn",
+    "callees": ["km_state_notify", "memcmp", "memcpy", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_notify_bmp",
+    "callees": ["km_state_notify", "memcmp", "memcpy", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_advance_bmp",
+    "callees": ["__builtin_bswap32", "xfrm_aevent_is_on", "xfrm_replay_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_check_bmp",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xfrm_audit_state_replay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_overflow_bmp",
+    "callees": ["__builtin_expect", "xfrm_aevent_is_on", "xfrm_audit_state_replay_overflow", "xfrm_replay_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_advance",
+    "callees": ["__builtin_bswap32", "xfrm_aevent_is_on", "xfrm_replay_advance_bmp", "xfrm_replay_advance_esn", "xfrm_replay_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_check_legacy",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xfrm_audit_state_replay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__xfrm_replay_overflow",
+    "callees": ["__builtin_expect", "xfrm_aevent_is_on", "xfrm_audit_state_replay_overflow", "xfrm_replay_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_notify",
+    "callees": ["km_state_notify", "memcmp", "memcpy", "mod_timer", "xfrm_replay_notify_bmp", "xfrm_replay_notify_esn"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_replay_seqhi",
+    "callees": ["__builtin_bswap32", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_aevent_is_on",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

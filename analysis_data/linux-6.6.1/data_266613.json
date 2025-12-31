@@ -1,0 +1,248 @@
+[
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_find",
+    "callees": ["__rh_find.part.0", "__rh_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_find",
+    "callees": ["__rh_find.part.0", "__rh_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_find",
+    "callees": ["__rh_find.part.0", "__rh_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_find.part.0",
+    "callees": ["__rh_alloc", "_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_region_hash_destroy.part.0",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dm_dirty_log_destroy", "kfree", "mempool_exit", "mempool_free", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_start_recovery",
+    "callees": ["up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_stop_recovery",
+    "callees": ["down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_delay",
+    "callees": ["__rh_find", "_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_recovery_in_flight",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_recovery_end",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_recovery_start",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_recovery_prepare",
+    "callees": ["__rh_recovery_prepare", "down_trylock", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_recovery_prepare",
+    "callees": ["__rh_find", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_dec",
+    "callees": ["__builtin_expect", "__rh_lookup", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_inc_pending",
+    "callees": ["rh_inc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rh_inc",
+    "callees": ["__rh_find", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_update_states",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock_irq", "_raw_write_unlock_irq", "complete_resync_work", "mempool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_mark_nosync",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__rh_find", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "complete_resync_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "complete_resync_work",
+    "callees": ["up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_get_state",
+    "callees": ["__rh_lookup", "_raw_read_lock", "_raw_read_unlock", "dm_rh_get_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_find",
+    "callees": ["__rh_find.part.0", "__rh_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_alloc",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__rh_insert", "__rh_lookup", "_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock_irq", "_raw_write_unlock_irq", "kmalloc_trace", "mempool_alloc", "mempool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_insert",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rh_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_dirty_log",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_region_hash_destroy",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dm_region_hash_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_region_hash_create",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_printk", "kfree", "kzalloc", "mempool_init", "vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_get_region_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_get_region_key",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_region_context",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_bio_to_region",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_rh_region_to_sector",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

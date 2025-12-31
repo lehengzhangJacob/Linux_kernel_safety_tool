@@ -1,0 +1,56 @@
+[
+  {
+    "name": "exit_nfs_v4",
+    "callees": ["nfs4_unregister_sysctl", "nfs_idmap_quit", "unregister_nfs_version"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_nfs_v4",
+    "callees": ["nfs4_register_sysctl", "nfs_idmap_init", "nfs_idmap_quit", "register_nfs_version"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_get_referral_tree",
+    "callees": ["do_nfs4_mount", "logfc", "nfs4_create_referral_server"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_try_get_tree",
+    "callees": ["do_nfs4_mount", "logfc", "nfs4_create_server"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_nfs4_mount",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "fc_mount", "kfree", "kmalloc_large", "kmalloc_trace", "mntput", "mount_subtree", "nfs_free_server", "nfs_referral_loop_protect", "nfs_referral_loop_unprotect", "put_fs_context", "snprintf", "strchr", "strlen", "vfs_dup_fs_context", "vfs_parse_fs_param"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_referral_loop_unprotect",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_referral_loop_protect",
+    "callees": ["__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_evict_inode",
+    "callees": ["clear_inode", "nfs_clear_inode", "nfs_inode_evict_delegation", "truncate_inode_pages_final"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_write_inode",
+    "callees": ["nfs_write_inode"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

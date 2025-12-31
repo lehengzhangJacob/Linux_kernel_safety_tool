@@ -1,0 +1,26 @@
+[
+  {
+    "name": "virtio_gpu_debugfs_init",
+    "callees": ["drm_debugfs_create_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_debugfs_host_visible_mm",
+    "callees": ["drm_mm_print", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_debugfs_irq_info",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_features",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

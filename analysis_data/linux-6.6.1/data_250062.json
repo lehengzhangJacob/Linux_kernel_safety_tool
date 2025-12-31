@@ -1,0 +1,44 @@
+[
+  {
+    "name": "clocksource_arch_init",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "time_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["late_time_init"]
+  },
+  {
+    "name": "x86_late_time_init",
+    "callees": ["tsc_init", "use_tpause_delay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hpet_time_init",
+    "callees": ["hpet_enable", "pit_timer_init", "setup_default_timer_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_default_timer_irq",
+    "callees": ["_printk", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timer_interrupt",
+    "callees": [],
+    "global_reads": ["global_clock_event"],
+    "global_writes": []
+  },
+  {
+    "name": "profile_pc",
+    "callees": ["in_lock_functions"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

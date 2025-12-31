@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "severities_debugfs_init",
+    "callees": ["debugfs_create_file", "mce_get_debugfs_dir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "severities_coverage_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "severities_coverage_open",
+    "callees": ["seq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "s_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "s_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "s_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "s_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_severity",
+    "callees": ["mce_severity_amd", "mce_severity_intel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_severity_intel",
+    "callees": ["error_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_context",
+    "callees": ["ex_get_fixup_type", "is_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_copy_from_user",
+    "callees": ["copy_from_kernel_nofault", "fault_in_kernel_space", "insn_decode", "insn_get_addr_ref"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

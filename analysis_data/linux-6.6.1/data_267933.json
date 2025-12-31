@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_cntrl_reg",
+    "callees": ["intel_vga_cntrl_reg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_redisable_power_on.part.0",
+    "callees": ["__drm_dev_dbg", "intel_vga_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_unregister",
+    "callees": ["vga_client_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_register",
+    "callees": ["vga_client_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_set_decode",
+    "callees": ["intel_gmch_vga_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_reset_io_mem",
+    "callees": ["vga_get", "vga_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_redisable",
+    "callees": ["intel_display_power_get_if_enabled", "intel_display_power_put_unchecked", "intel_vga_redisable_power_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_redisable_power_on",
+    "callees": ["intel_vga_cntrl_reg", "intel_vga_redisable_power_on.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_disable",
+    "callees": ["__const_udelay", "intel_vga_cntrl_reg", "vga_get", "vga_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vga_cntrl_reg",
+    "callees": ["intel_vga_cntrl_reg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

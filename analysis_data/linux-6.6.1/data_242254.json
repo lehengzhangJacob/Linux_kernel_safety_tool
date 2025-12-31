@@ -1,0 +1,104 @@
+[
+  {
+    "name": "noop_send_IPI_allbutself",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_allbutself",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_apic_write",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["apic_is_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "noop_apic_read",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["apic_is_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "noop_apic_eoi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_get_apic_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_phys_pkg_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_apic_icr_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_wakeup_secondary_cpu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_apic_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_self",
+    "callees": ["noop_send_IPI_allbutself"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_all",
+    "callees": ["noop_send_IPI_allbutself"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_allbutself",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_mask_allbutself",
+    "callees": ["noop_send_IPI_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_send_IPI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

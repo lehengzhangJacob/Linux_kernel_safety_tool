@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_update_content_protection",
+    "callees": ["__builtin_expect", "drm_sysfs_connector_property_event", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_connector_attach_content_protection_property",
+    "callees": ["drm_object_attach_property", "drm_property_create_enum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_hdcp_content_type_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_content_protection_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_check_ksvs_revoked",
+    "callees": ["___drm_dbg", "drm_hdcp_print_ksv", "drm_hdcp_request_srm", "kfree", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_srm_update",
+    "callees": ["drm_hdcp_parse_hdcp1_srm", "drm_hdcp_parse_hdcp2_srm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_parse_hdcp2_srm",
+    "callees": ["___drm_dbg", "__builtin_bswap16", "__drm_err", "kmalloc_array", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_parse_hdcp1_srm",
+    "callees": ["___drm_dbg", "__builtin_bswap16", "__builtin_expect", "__drm_err", "drm_hdcp_get_revoked_ksvs", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_get_revoked_ksvs",
+    "callees": ["___drm_dbg", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_hdcp_print_ksv",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

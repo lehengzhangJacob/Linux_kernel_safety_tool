@@ -1,0 +1,74 @@
+[
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_suspend_resume.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_suspend_resume.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thaw_kernel_threads",
+    "callees": ["__thaw_task", "_printk", "_raw_read_lock", "_raw_read_unlock", "schedule", "thaw_workqueues"],
+    "global_reads": [],
+    "global_writes": ["pm_nosig_freezing"]
+  },
+  {
+    "name": "thaw_processes",
+    "callees": ["__builtin_expect", "__thaw_task", "__usermodehelper_set_disable_depth", "_printk", "_raw_read_lock", "_raw_read_unlock", "cpuset_wait_for_hotplug", "oom_killer_enable", "schedule", "static_key_slow_dec", "thaw_workqueues", "trace_suspend_resume"],
+    "global_reads": ["___tp_str", "pm_freezing"],
+    "global_writes": ["pm_freezing", "pm_nosig_freezing"]
+  },
+  {
+    "name": "freeze_kernel_threads",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "thaw_kernel_threads", "try_to_freeze_tasks"],
+    "global_reads": [],
+    "global_writes": ["pm_nosig_freezing"]
+  },
+  {
+    "name": "freeze_processes",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__msecs_to_jiffies", "__usermodehelper_disable", "__usermodehelper_set_disable_depth", "oom_killer_disable", "pm_wakeup_clear", "static_key_slow_inc", "thaw_processes", "try_to_freeze_tasks"],
+    "global_reads": ["freeze_timeout_msecs", "pm_freezing"],
+    "global_writes": ["pm_freezing"]
+  },
+  {
+    "name": "try_to_freeze_tasks",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "_printk", "_raw_read_lock", "_raw_read_unlock", "freeze_task", "freeze_workqueues_begin", "freeze_workqueues_busy", "freezing", "frozen", "ktime_get_with_offset", "pm_wakeup_pending", "sched_show_task", "show_freezable_workqueues", "usleep_range_state"],
+    "global_reads": ["freeze_timeout_msecs", "jiffies", "pm_debug_messages_on"],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

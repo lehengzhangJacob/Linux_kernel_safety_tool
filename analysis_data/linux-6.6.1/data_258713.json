@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_teardown_sysfs",
+    "callees": ["device_remove_bin_file", "kobject_put", "sysfs_remove_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_setup_sysfs",
+    "callees": ["_dev_err", "_dev_warn", "device_create_bin_file", "i915_setup_error_capture", "intel_engines_add_sysfs", "kobject_create_and_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_setup_error_capture",
+    "callees": ["_dev_err", "sysfs_create_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_state_write",
+    "callees": ["__drm_dev_dbg", "i915_reset_error_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_state_read",
+    "callees": ["__builtin_expect", "i915_first_error_state", "i915_gpu_coredump_copy_to_buffer", "kref_put", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_l3_write",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kfree", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_l3_read",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kdev_minor_to_i915",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

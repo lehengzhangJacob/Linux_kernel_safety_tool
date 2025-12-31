@@ -1,0 +1,224 @@
+[
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_nlm4_stat",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nlm4_stat",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "__builtin_unreachable", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_dec_res",
+    "callees": ["__builtin_expect", "decode_cookie", "decode_nlm4_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_dec_testres",
+    "callees": ["__builtin_expect", "decode_cookie", "decode_nlm4_testrply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_nlm4_testrply",
+    "callees": ["__builtin_expect", "decode_nlm4_holder", "decode_nlm4_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_testres",
+    "callees": ["encode_netobj", "encode_nlm4_holder", "encode_nlm4_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_res",
+    "callees": ["encode_netobj", "encode_nlm4_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_unlockargs",
+    "callees": ["encode_netobj", "encode_nlm4_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_cancargs",
+    "callees": ["encode_bool", "encode_netobj", "encode_nlm4_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_lockargs",
+    "callees": ["__builtin_bswap32", "encode_bool", "encode_netobj", "encode_nlm4_lock", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm4_xdr_enc_testargs",
+    "callees": ["encode_bool", "encode_netobj", "encode_nlm4_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nlm4_lock",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "encode_caller_name", "encode_netobj", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_caller_name",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_nlm4_holder",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "__builtin_expect", "decode_netobj", "locks_init_lock", "memset", "nlm4svc_set_file_lock_range", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nlm4_holder",
+    "callees": ["__builtin_bswap32", "__builtin_bswap64", "encode_bool", "encode_netobj", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_nlm4_stat",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nlm4_stat",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "__builtin_unreachable", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_cookie",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "memcpy", "memset", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_netobj",
+    "callees": ["__builtin_expect", "xdr_stream_decode_opaque_inline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_netobj",
+    "callees": ["xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_bool",
+    "callees": ["xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_stream_decode_u32",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

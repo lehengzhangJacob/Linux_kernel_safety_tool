@@ -1,0 +1,32 @@
+[
+  {
+    "name": "usb_stor_set_xfer_buf",
+    "callees": ["usb_stor_access_xfer_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_access_xfer_buf",
+    "callees": ["memcpy", "sg_miter_next", "sg_miter_skip", "sg_miter_start", "sg_miter_stop", "sg_nents", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_transparent_scsi_command",
+    "callees": ["usb_stor_invoke_transport"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_ufi_command",
+    "callees": ["usb_stor_invoke_transport"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_pad12_command",
+    "callees": ["usb_stor_invoke_transport"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

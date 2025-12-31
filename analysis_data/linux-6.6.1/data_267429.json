@@ -1,0 +1,140 @@
+[
+  {
+    "name": "drm_simple_display_pipe_init",
+    "callees": ["drm_connector_attach_encoder", "drm_crtc_init_with_planes", "drm_encoder_init", "drm_universal_plane_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_display_pipe_attach_bridge",
+    "callees": ["drm_bridge_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_destroy_state",
+    "callees": ["drm_atomic_helper_plane_destroy_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_duplicate_state",
+    "callees": ["drm_atomic_helper_plane_duplicate_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_reset",
+    "callees": ["drm_atomic_helper_plane_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_format_mod_supported",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_end_fb_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_begin_fb_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_cleanup_fb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_prepare_fb",
+    "callees": ["__builtin_expect", "drm_gem_plane_helper_prepare_fb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_atomic_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_atomic_check",
+    "callees": ["drm_atomic_helper_check_plane_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_disable_vblank",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_enable_vblank",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_destroy_state",
+    "callees": ["drm_atomic_helper_crtc_destroy_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_duplicate_state",
+    "callees": ["drm_atomic_helper_crtc_duplicate_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_reset",
+    "callees": ["drm_atomic_helper_crtc_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_check",
+    "callees": ["drm_atomic_add_affected_planes", "drm_atomic_helper_check_crtc_primary_plane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drmm_simple_encoder_alloc",
+    "callees": ["__drmm_encoder_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_encoder_init",
+    "callees": ["drm_encoder_init"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

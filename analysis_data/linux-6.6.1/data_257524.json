@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_release_callback.part.0",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_free_dev",
+    "callees": ["_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "kfree", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_alloc_dev",
+    "callees": ["kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_del_callback",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "cn_queue_release_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_add_callback",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "cn_queue_alloc_callback_entry", "cn_queue_release_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_cb_equal",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_release_callback",
+    "callees": ["__refcount_sub_and_test", "cn_queue_release_callback.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cn_queue_alloc_callback_entry",
+    "callees": ["_printk", "kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

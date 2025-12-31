@@ -1,0 +1,56 @@
+[
+  {
+    "name": "der_length_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "der_length_size",
+    "callees": ["der_length_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "der_length_size.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g_verify_token_header",
+    "callees": ["der_read_length", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g_make_token_header",
+    "callees": ["der_write_length", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "g_token_size",
+    "callees": ["der_length_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "der_read_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "der_write_length",
+    "callees": ["der_length_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "der_length_size",
+    "callees": ["der_length_size.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "acpi_check_wakeup_handlers",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_unregister_wakeup_handler",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_wakeup_handler",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["acpi_sci_irq"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_wakeup_device_init",
+    "callees": ["acpi_enable_gpe", "device_set_wakeup_enable", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_disable_wakeup_devices",
+    "callees": ["acpi_disable_wakeup_device_power", "acpi_set_gpe_wake_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_wakeup_devices",
+    "callees": ["acpi_enable_wakeup_device_power", "acpi_set_gpe_wake_mask"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

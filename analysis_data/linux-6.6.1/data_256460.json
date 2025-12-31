@@ -1,0 +1,362 @@
+[
+  {
+    "name": "get_agp_version",
+    "callees": ["pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_key.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_key",
+    "callees": ["agp_free_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_free_by_type",
+    "callees": ["agp_free_key", "kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_key",
+    "callees": ["agp_free_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_page",
+    "callees": ["_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_destroy_page.part.0",
+    "callees": ["__free_pages", "put_page"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_destroy_pages.part.0",
+    "callees": ["__free_pages", "put_page", "set_pages_array_wb"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_memory.part.0",
+    "callees": ["agp_free_key", "kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_key.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp3_generic_cleanup",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp3_generic_configure",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword", "pci_write_config_word", "pcibios_resource_to_bus"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp3_generic_tlbflush",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp3_generic_fetch_size",
+    "callees": ["pci_read_config_word"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_type_to_mask_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_mask_memory",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "global_cache_flush",
+    "callees": ["on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipi_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_find_bridge",
+    "callees": [],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_destroy_page",
+    "callees": ["agp_generic_destroy_page.part.0", "set_pages_wb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_destroy_pages",
+    "callees": ["agp_generic_destroy_pages.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_alloc_page",
+    "callees": ["alloc_pages", "get_page", "set_pages_uc"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_alloc_pages",
+    "callees": ["alloc_pages", "get_page", "set_pages_array_uc"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_alloc_user",
+    "callees": ["agp_create_user_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_free_by_type",
+    "callees": ["agp_free_key", "kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_alloc_by_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_remove_memory",
+    "callees": ["agp_num_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_insert_memory",
+    "callees": [],
+    "global_reads": ["agp_memory_reserved", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_generic_free_gatt_table",
+    "callees": ["free_pages", "set_memory_wb"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": ["agp_gatt_table"]
+  },
+  {
+    "name": "agp_generic_create_gatt_table",
+    "callees": ["__get_free_pages", "_printk", "set_memory_uc"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": ["agp_gatt_table"]
+  },
+  {
+    "name": "agp_generic_enable",
+    "callees": ["_dev_info", "agp_3_5_enable", "agp_collect_device_status", "agp_device_command", "get_agp_version", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "get_agp_version",
+    "callees": ["pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_device_command",
+    "callees": ["_dev_info", "pci_find_capability", "pci_get_device", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_collect_device_status",
+    "callees": ["_printk", "agp_v2_parse_one", "agp_v3_parse_one", "pci_dev_put", "pci_find_capability", "pci_get_class", "pci_read_config_dword"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_v3_parse_one",
+    "callees": ["_printk"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_v2_parse_one",
+    "callees": ["_printk"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_unbind_memory",
+    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_bind_memory",
+    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_copy_info",
+    "callees": ["agp_return_size", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_num_entries",
+    "callees": [],
+    "global_reads": ["agp_bridge", "agp_memory_reserved"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_return_size",
+    "callees": [],
+    "global_reads": ["agp_bridge", "agp_memory_reserved"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_allocate_memory",
+    "callees": ["agp_create_memory", "agp_free_memory", "agp_generic_alloc_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_memory",
+    "callees": ["agp_free_memory.part.0", "agp_generic_free_by_type", "agp_unbind_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_create_memory",
+    "callees": ["agp_free_key", "agp_get_key", "kfree", "kvmalloc_node", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_create_user_memory",
+    "callees": ["agp_free_key", "agp_get_key", "kfree", "kvmalloc_node", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_alloc_page_array",
+    "callees": ["kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_get_key",
+    "callees": ["__builtin_constant_p", "_find_first_zero_bit"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_free_key",
+    "callees": ["agp_free_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_page",
+    "callees": ["_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

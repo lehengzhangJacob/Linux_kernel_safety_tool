@@ -1,0 +1,116 @@
+[
+  {
+    "name": "stack_depot_fetch",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_fetch",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "depot_init_pool.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_get_extra_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_set_extra_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_snprint",
+    "callees": ["stack_depot_fetch", "stack_trace_snprint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_print",
+    "callees": ["stack_depot_fetch", "stack_trace_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_fetch",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_save",
+    "callees": ["__stack_depot_save"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stack_depot_save",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alloc_pages", "depot_alloc_stack", "depot_init_pool", "filter_irq_stacks", "find_stack", "free_pages", "jhash2"],
+    "global_reads": ["page_offset_base", "stack_depot_disabled", "stack_hash_mask", "stack_table", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "find_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "depot_alloc_stack",
+    "callees": ["__builtin_expect", "__warn_printk", "depot_init_pool", "memcpy"],
+    "global_reads": ["__already_done", "pool_index", "pool_offset"],
+    "global_writes": ["__already_done", "pool_offset"]
+  },
+  {
+    "name": "depot_init_pool",
+    "callees": ["depot_init_pool.part.0"],
+    "global_reads": ["pool_index"],
+    "global_writes": []
+  },
+  {
+    "name": "stack_depot_init",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "_printk", "kvmalloc_node", "mutex_lock", "mutex_unlock", "nr_free_buffer_pages"],
+    "global_reads": ["stack_bucket_number_order", "stack_depot_disabled", "stack_table"],
+    "global_writes": ["stack_depot_disabled", "stack_hash_mask", "stack_table"]
+  },
+  {
+    "name": "disable_stack_depot",
+    "callees": ["_printk", "kstrtobool"],
+    "global_reads": ["stack_depot_disabled"],
+    "global_writes": ["stack_table"]
+  },
+  {
+    "name": "stack_depot_early_init",
+    "callees": ["__builtin_expect", "_printk", "alloc_large_system_hash"],
+    "global_reads": ["__stack_depot_early_init_passed", "__stack_depot_early_init_requested", "stack_bucket_number_order", "stack_depot_disabled"],
+    "global_writes": ["__stack_depot_early_init_passed", "stack_depot_disabled", "stack_table"]
+  },
+  {
+    "name": "stack_depot_request_early_init",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["__stack_depot_early_init_passed"],
+    "global_writes": ["__stack_depot_early_init_requested"]
+  }
+]

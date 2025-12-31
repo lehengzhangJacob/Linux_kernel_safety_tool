@@ -1,0 +1,230 @@
+[
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_mode_object_add",
+    "callees": ["__builtin_expect", "idr_alloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_get.part.0",
+    "callees": ["___drm_dbg", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_put.part.0",
+    "callees": ["___drm_dbg", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_obj_set_property_ioctl",
+    "callees": ["__drm_mode_object_find", "drm_drv_uses_atomic_modeset", "drm_mode_object_put.part.0", "set_property_atomic", "set_property_legacy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_property_atomic",
+    "callees": ["drm_atomic_commit", "drm_atomic_connector_commit_dpms", "drm_atomic_set_property", "drm_atomic_state_alloc", "drm_atomic_state_clear", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_property_legacy",
+    "callees": ["drm_connector_set_obj_prop", "drm_drv_uses_atomic_modeset", "drm_mode_crtc_set_obj_prop", "drm_mode_plane_set_obj_prop", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "drm_property_change_valid_get", "drm_property_change_valid_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_obj_find_prop_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_obj_get_properties_ioctl",
+    "callees": ["__drm_mode_object_find", "drm_drv_uses_atomic_modeset", "drm_mode_object_get_properties", "drm_mode_object_put.part.0", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_get_properties",
+    "callees": ["__builtin_expect", "__drm_object_property_get_value"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_object_property_get_default_value",
+    "callees": ["__builtin_expect", "drm_drv_uses_atomic_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_object_property_get_value",
+    "callees": ["__builtin_expect", "__drm_object_property_get_value", "drm_drv_uses_atomic_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_object_property_get_value",
+    "callees": ["drm_atomic_get_property", "drm_drv_uses_atomic_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_object_property_set_value",
+    "callees": ["__builtin_expect", "drm_drv_uses_atomic_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_object_attach_property",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_get",
+    "callees": ["drm_mode_object_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_put",
+    "callees": ["drm_mode_object_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_find",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_mode_object_find",
+    "callees": ["__drm_dev_dbg", "__refcount_add_not_zero", "_drm_lease_held", "idr_find", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_lease_required",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_unregister",
+    "callees": ["__builtin_expect", "idr_remove", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_register",
+    "callees": ["idr_replace", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_object_add",
+    "callees": ["__drm_mode_object_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_mode_object_add",
+    "callees": ["__builtin_expect", "idr_alloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

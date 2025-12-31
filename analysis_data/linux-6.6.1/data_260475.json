@@ -1,0 +1,368 @@
+[
+  {
+    "name": "trace_drv_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int",
+    "callees": ["__SCT__tp_func_drv_return_int", "cpu_online", "trace_drv_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int",
+    "callees": ["__SCT__tp_func_drv_return_int", "cpu_online", "trace_drv_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int",
+    "callees": ["__SCT__tp_func_drv_return_int", "cpu_online", "trace_drv_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_remain_on_channel",
+    "callees": ["__SCT__tp_func_drv_remain_on_channel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_remain_on_channel",
+    "callees": ["__SCT__might_resched", "trace_drv_remain_on_channel", "trace_drv_return_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_recalc_sw_work",
+    "callees": ["ieee80211_end_finished_rocs", "mod_delayed_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_cancel_remain_on_channel",
+    "callees": ["__SCT__tp_func_drv_cancel_remain_on_channel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_cancel_remain_on_channel",
+    "callees": ["__SCT__might_resched", "trace_drv_cancel_remain_on_channel", "trace_drv_return_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_start_next_roc.part.0",
+    "callees": ["ieee80211_queue_delayed_work", "round_jiffies_relative"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_roc_purge",
+    "callees": ["__ieee80211_roc_work", "drv_cancel_remain_on_channel", "ieee80211_roc_notify_destroy", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_roc_setup",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_mgmt_tx_cancel_wait",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "ieee80211_cancel_roc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_mgmt_tx",
+    "callees": ["__netdev_alloc_skb", "__rcu_read_lock", "__rcu_read_unlock", "_ieee80211_hw_check", "ieee80211_attach_ack_skb", "ieee80211_free_txskb", "ieee80211_start_roc_work", "ieee80211_tx_skb_tid", "kfree_skb_reason", "memcmp", "mutex_lock", "mutex_unlock", "skb_put_data", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_cancel_remain_on_channel",
+    "callees": ["ieee80211_cancel_roc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_cancel_roc",
+    "callees": ["__builtin_expect", "drv_cancel_remain_on_channel", "flush_work", "ieee80211_roc_notify_destroy", "ieee80211_start_next_roc", "mod_delayed_work_on", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_remain_on_channel",
+    "callees": ["ieee80211_start_roc_work", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_start_roc_work",
+    "callees": ["drv_remain_on_channel", "ieee80211_coalesce_hw_started_roc", "ieee80211_handle_roc_started", "ieee80211_is_radar_required", "ieee80211_mgmt_tx_cookie", "ieee80211_queue_delayed_work", "ieee80211_recalc_sw_work", "jiffies_to_msecs", "kfree", "kzalloc"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_remain_on_channel_expired",
+    "callees": ["ieee80211_queue_work", "trace_api_remain_on_channel_expired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_hw_roc_done",
+    "callees": ["ieee80211_end_finished_rocs", "ieee80211_start_next_roc", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_roc_work",
+    "callees": ["__ieee80211_roc_work", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_roc_work",
+    "callees": ["__builtin_expect", "_ieee80211_start_next_roc", "ieee80211_flush_queues", "ieee80211_hw_config", "ieee80211_offchannel_return", "ieee80211_recalc_idle", "ieee80211_recalc_sw_work", "ieee80211_start_next_roc"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_start_next_roc",
+    "callees": ["__builtin_expect", "_ieee80211_start_next_roc", "ieee80211_run_deferred_scan", "ieee80211_start_next_roc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_start_next_roc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__msecs_to_jiffies", "_dev_warn", "drv_remain_on_channel", "ieee80211_handle_roc_started", "ieee80211_hw_config", "ieee80211_offchannel_stop_vifs", "ieee80211_queue_delayed_work", "ieee80211_queue_work", "ieee80211_recalc_idle"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_ready_on_channel",
+    "callees": ["ieee80211_queue_work", "trace_api_ready_on_channel"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_hw_roc_start",
+    "callees": ["ieee80211_handle_roc_started", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_handle_roc_started",
+    "callees": ["__builtin_expect", "cfg80211_ready_on_channel", "ieee80211_tx_skb_tid_band"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_recalc_sw_work",
+    "callees": ["ieee80211_end_finished_rocs", "mod_delayed_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_end_finished_rocs",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "ieee80211_roc_notify_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_roc_notify_destroy",
+    "callees": ["cfg80211_mgmt_tx_status", "cfg80211_remain_on_channel_expired", "cfg80211_tx_mgmt_expired", "ieee80211_free_txskb", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_offchannel_return",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "ieee80211_link_info_change_notify", "ieee80211_offchannel_ps_disable", "ieee80211_wake_queues_by_reason", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_offchannel_stop_vifs",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "ieee80211_flush_queues", "ieee80211_link_info_change_notify", "ieee80211_offchannel_ps_enable", "ieee80211_stop_queues_by_reason", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_offchannel_ps_disable",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "ieee80211_send_nullfunc", "ieee80211_sta_reset_beacon_monitor", "ieee80211_sta_reset_conn_monitor", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_offchannel_ps_enable",
+    "callees": ["_ieee80211_hw_check", "cancel_work_sync", "ieee80211_hw_config", "ieee80211_send_nullfunc", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_cancel_remain_on_channel",
+    "callees": ["__SCT__might_resched", "trace_drv_cancel_remain_on_channel", "trace_drv_return_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_remain_on_channel",
+    "callees": ["__SCT__might_resched", "trace_drv_remain_on_channel", "trace_drv_return_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_api_remain_on_channel_expired",
+    "callees": ["__SCT__tp_func_api_remain_on_channel_expired", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_api_ready_on_channel",
+    "callees": ["__SCT__tp_func_api_ready_on_channel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_cancel_remain_on_channel",
+    "callees": ["__SCT__tp_func_drv_cancel_remain_on_channel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_remain_on_channel",
+    "callees": ["__SCT__tp_func_drv_remain_on_channel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int",
+    "callees": ["__SCT__tp_func_drv_return_int", "cpu_online", "trace_drv_return_int.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_put_data",
+    "callees": ["memcpy", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

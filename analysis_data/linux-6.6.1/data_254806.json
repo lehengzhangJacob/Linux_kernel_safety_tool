@@ -1,0 +1,134 @@
+[
+  {
+    "name": "nf_queue_entry_release_refs",
+    "callees": ["sock_gen_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_entry_release_refs",
+    "callees": ["sock_gen_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue",
+    "callees": ["__nf_queue", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_entry_release_refs",
+    "callees": ["sock_gen_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_reinject",
+    "callees": ["__builtin_expect", "__local_bh_enable_ip", "kfree", "kfree_skb_reason", "nf_iterate", "nf_queue", "nf_queue_entry_release_refs", "nf_reroute"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_iterate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue",
+    "callees": ["__nf_queue", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_queue",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "__refcount_add_not_zero", "kfree", "kmalloc_trace", "nf_ip6_saveroute", "nf_ip_saveroute", "nf_queue_entry_get_refs", "nf_queue_entry_release_refs", "sk_is_refcounted", "skb_dst_force"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip6_saveroute",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip_saveroute",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_nf_hook_drop",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_entry_get_refs",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_entry_free",
+    "callees": ["kfree", "nf_queue_entry_release_refs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_queue_entry_release_refs",
+    "callees": ["sock_gen_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_unregister_queue_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_register_queue_handler",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_is_refcounted",
+    "callees": ["sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_dst_force",
+    "callees": ["rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

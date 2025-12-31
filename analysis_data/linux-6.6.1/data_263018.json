@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_drop",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_drop",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_drop",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_exit",
+    "callees": ["__refcount_add", "_printk", "kref_put", "mon_bin_del", "mon_bin_exit", "mon_text_del", "mon_text_exit", "mutex_lock", "mutex_unlock", "usb_mon_deregister", "usb_unregister_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_init",
+    "callees": ["_printk", "idr_get_next", "mon_bin_exit", "mon_bin_init", "mon_bus0_init", "mon_bus_init", "mon_text_exit", "mon_text_init", "mutex_lock", "mutex_unlock", "usb_mon_register", "usb_register_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus0_init",
+    "callees": ["mon_bin_add", "mon_text_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_init",
+    "callees": ["kzalloc", "mon_bin_add", "mon_text_add", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_notify",
+    "callees": ["mon_bus_add", "mon_bus_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_remove",
+    "callees": ["kref_put", "mon_bin_del", "mon_text_del", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_add",
+    "callees": ["mon_bus_init", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_complete",
+    "callees": ["mon_bus_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_complete",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_submit_error",
+    "callees": ["mon_bus_submit_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_submit_error",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_submit",
+    "callees": ["mon_bus_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_bus_submit",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_reader_del",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kref_put", "mon_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_reader_add",
+    "callees": ["__refcount_add", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

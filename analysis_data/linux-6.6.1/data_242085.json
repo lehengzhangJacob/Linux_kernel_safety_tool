@@ -1,0 +1,254 @@
+[
+  {
+    "name": "asymmetric_key_id_same.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same",
+    "callees": ["asymmetric_key_id_same.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_restriction_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same",
+    "callees": ["asymmetric_key_id_same.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_restriction_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same",
+    "callees": ["asymmetric_key_id_same.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_free_kids.part.0",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_partial.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_partial",
+    "callees": ["asymmetric_key_id_partial.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_match_key_ids",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_partial.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_free_kids.part.0",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_cleanup",
+    "callees": ["unregister_key_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_init",
+    "callees": ["register_key_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_asymmetric_key_parser",
+    "callees": ["_printk", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_asymmetric_key_parser",
+    "callees": ["_printk", "down_write", "strcmp", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_verify_signature",
+    "callees": ["verify_signature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_eds_op",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_lookup_restriction",
+    "callees": ["__builtin_expect", "asymmetric_restriction_alloc", "key_lookup", "key_put", "kfree", "kstrndup", "kstrtoint", "strcmp", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_restriction_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_destroy",
+    "callees": ["asymmetric_key_free_kids.part.0", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_free_preparse",
+    "callees": ["asymmetric_key_free_kids.part.0", "kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_preparse",
+    "callees": ["down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_describe",
+    "callees": ["seq_printf", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_match_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_match_preparse",
+    "callees": ["__builtin_expect", "asymmetric_key_hex_to_key_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_cmp_name",
+    "callees": ["asymmetric_key_id_same"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_cmp_partial",
+    "callees": ["asymmetric_match_key_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_cmp",
+    "callees": ["asymmetric_match_key_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_hex_to_key_id",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "hex2bin", "kfree", "kmalloc_large", "kmalloc_trace", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__asymmetric_key_hex_to_key_id",
+    "callees": ["hex2bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_match_key_ids",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_partial",
+    "callees": ["asymmetric_key_id_partial.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_id_same",
+    "callees": ["asymmetric_key_id_same.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asymmetric_key_generate_id",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_asymmetric_key",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "asymmetric_key_id_same", "bin2hex", "key_put", "keyring_search", "kfree", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

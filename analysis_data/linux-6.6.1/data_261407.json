@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fib6_notifier_exit",
+    "callees": ["fib_notifier_ops_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_notifier_init",
+    "callees": ["__builtin_expect", "fib_notifier_ops_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_dump",
+    "callees": ["fib6_tables_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib6_seq_read",
+    "callees": ["fib6_tables_seq_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_notifiers",
+    "callees": ["call_fib_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib6_notifier",
+    "callees": ["call_fib_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

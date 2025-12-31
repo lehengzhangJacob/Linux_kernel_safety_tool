@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_destroy_many.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "free_percpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_startup",
+    "callees": ["__builtin_expect", "__cpuhp_setup_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_counter_compare",
+    "callees": ["__percpu_counter_sum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_cpu_dead",
+    "callees": ["_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": ["percpu_counter_batch"]
+  },
+  {
+    "name": "compute_batch_value",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["percpu_counter_batch"]
+  },
+  {
+    "name": "percpu_counter_destroy_many",
+    "callees": ["__builtin_expect", "percpu_counter_destroy_many.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_counter_init_many",
+    "callees": ["__alloc_percpu_gfp", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_counter_sum",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_next_or_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_sync",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_add_batch",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_counter_set",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

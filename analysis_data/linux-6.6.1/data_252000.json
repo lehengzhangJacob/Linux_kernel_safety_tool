@@ -1,0 +1,50 @@
+[
+  {
+    "name": "acpi_ds_create_index_field",
+    "callees": ["acpi_ds_get_field_names", "acpi_ns_lookup", "acpi_ut_prefixed_namespace_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_bank_field",
+    "callees": ["acpi_ds_get_field_names", "acpi_ns_lookup", "acpi_ut_prefixed_namespace_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_init_field_objects",
+    "callees": ["acpi_error", "acpi_ns_lookup", "acpi_ps_get_arg", "acpi_ut_prefixed_namespace_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_field",
+    "callees": ["acpi_ds_get_field_names", "acpi_ns_lookup", "acpi_os_allocate_zeroed", "acpi_ut_prefixed_namespace_error", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_get_field_names",
+    "callees": ["acpi_error", "acpi_ex_prep_field_value", "acpi_ns_get_attached_object", "acpi_ns_lookup", "acpi_ut_prefixed_namespace_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_buffer_field",
+    "callees": ["acpi_error", "acpi_ns_attach_object", "acpi_ns_get_attached_object", "acpi_ns_lookup", "acpi_ps_get_arg", "acpi_ut_create_internal_object_dbg", "acpi_ut_prefixed_namespace_error", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

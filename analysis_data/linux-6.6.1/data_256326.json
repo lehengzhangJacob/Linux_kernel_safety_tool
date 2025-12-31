@@ -1,0 +1,338 @@
+[
+  {
+    "name": "rng_get_data.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_get_data",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_is_locked", "rng_get_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_get_data.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_get_data",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_is_locked", "rng_get_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng.part.0",
+    "callees": ["get_current_rng_nolock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng",
+    "callees": ["get_current_rng.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng.part.0",
+    "callees": ["get_current_rng_nolock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng",
+    "callees": ["get_current_rng.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_rng",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_rng",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng_nolock",
+    "callees": ["__refcount_add"],
+    "global_reads": ["current_rng"],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng.part.0",
+    "callees": ["get_current_rng_nolock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng",
+    "callees": ["get_current_rng.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_current_rng.part.0",
+    "callees": ["__builtin_expect", "_printk", "kthread_create_on_node", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": ["hwrng_fill"]
+  },
+  {
+    "name": "get_current_rng.part.0",
+    "callees": ["get_current_rng_nolock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_get_data.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hwrng_modexit",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kfree", "misc_deregister", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["current_rng", "rng_buffer", "rng_fillbuf"],
+    "global_writes": []
+  },
+  {
+    "name": "hwrng_modinit",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "misc_register"],
+    "global_reads": ["rng_buffer", "rng_fillbuf"],
+    "global_writes": ["rng_buffer", "rng_fillbuf"]
+  },
+  {
+    "name": "hwrng_msleep",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "wait_for_completion_interruptible_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_hwrng_unregister",
+    "callees": ["devres_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_hwrng_register",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "hwrng_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_hwrng_match",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_hwrng_release",
+    "callees": ["hwrng_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hwrng_unregister",
+    "callees": ["add_early_randomness", "complete_all", "drop_current_rng", "enable_best_rng", "get_current_rng_nolock", "kthread_stop", "mutex_lock", "mutex_unlock", "put_rng", "wait_for_completion"],
+    "global_reads": ["current_rng", "hwrng_fill"],
+    "global_writes": ["cur_rng_set_by_user"]
+  },
+  {
+    "name": "hwrng_register",
+    "callees": ["__init_swait_queue_head", "__refcount_add", "add_early_randomness", "complete", "mutex_lock", "mutex_unlock", "put_rng", "set_current_rng", "strcmp"],
+    "global_reads": ["cur_rng_set_by_user", "current_rng"],
+    "global_writes": []
+  },
+  {
+    "name": "hwrng_fillfn",
+    "callees": ["__builtin_expect", "add_hwgenerator_randomness", "get_current_rng", "kthread_should_stop", "mutex_lock", "mutex_unlock", "put_rng", "rng_get_data", "wait_for_completion_interruptible_timeout"],
+    "global_reads": ["current_quality", "rng_fillbuf"],
+    "global_writes": ["hwrng_fill"]
+  },
+  {
+    "name": "unregister_miscdev",
+    "callees": ["misc_deregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_quality_store",
+    "callees": ["enable_best_rng", "kstrtou16", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": ["current_rng"],
+    "global_writes": ["current_quality"]
+  },
+  {
+    "name": "rng_quality_show",
+    "callees": ["__builtin_expect", "get_current_rng", "put_rng", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_selected_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["cur_rng_set_by_user"],
+    "global_writes": []
+  },
+  {
+    "name": "rng_available_show",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "strlcat", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_current_show",
+    "callees": ["__builtin_expect", "get_current_rng", "put_rng", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_current_store",
+    "callees": ["add_early_randomness", "enable_best_rng", "get_current_rng_nolock", "mutex_lock_interruptible", "mutex_unlock", "put_rng", "set_current_rng", "sysfs_streq"],
+    "global_reads": ["current_rng"],
+    "global_writes": ["cur_rng_set_by_user"]
+  },
+  {
+    "name": "enable_best_rng",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drop_current_rng", "mutex_is_locked", "set_current_rng"],
+    "global_reads": ["current_rng"],
+    "global_writes": ["cur_rng_set_by_user"]
+  },
+  {
+    "name": "rng_dev_read",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow", "get_current_rng", "mutex_lock_interruptible", "mutex_unlock", "put_rng", "rng_get_data", "schedule_timeout_interruptible", "signal_pending"],
+    "global_reads": ["data_avail", "rng_buffer"],
+    "global_writes": ["data_avail"]
+  },
+  {
+    "name": "rng_get_data",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_is_locked", "rng_get_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rng_dev_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hwrng_init",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": ["default_quality"],
+    "global_writes": ["current_quality"]
+  },
+  {
+    "name": "put_rng",
+    "callees": ["kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng",
+    "callees": ["get_current_rng.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_rng_nolock",
+    "callees": ["__refcount_add"],
+    "global_reads": ["current_rng"],
+    "global_writes": []
+  },
+  {
+    "name": "drop_current_rng",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kref_put", "mutex_is_locked"],
+    "global_reads": ["current_rng"],
+    "global_writes": ["current_rng"]
+  },
+  {
+    "name": "set_current_rng",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drop_current_rng", "hwrng_init", "mutex_is_locked", "set_current_rng.part.0"],
+    "global_reads": ["hwrng_fill"],
+    "global_writes": ["current_rng"]
+  },
+  {
+    "name": "add_early_randomness",
+    "callees": ["add_hwgenerator_randomness", "mutex_lock", "mutex_unlock", "rng_get_data"],
+    "global_reads": ["rng_fillbuf"],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "rtc_proc_del_device",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_proc_add_device",
+    "callees": ["proc_create_single_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_proc_show",
+    "callees": ["rtc_read_alarm", "rtc_read_time", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

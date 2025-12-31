@@ -1,0 +1,50 @@
+[
+  {
+    "name": "dm_sysfs_exit",
+    "callees": ["dm_kobject", "kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_sysfs_init",
+    "callees": ["dm_disk", "dm_kobject", "kobject_init_and_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_use_blk_mq_show",
+    "callees": ["sprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_suspended_show",
+    "callees": ["dm_suspended_md", "sprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_uuid_show",
+    "callees": ["__builtin_memcpy", "__builtin_strlen", "dm_copy_name_and_uuid", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_name_show",
+    "callees": ["__builtin_memcpy", "__builtin_strlen", "dm_copy_name_and_uuid", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_store",
+    "callees": ["dm_get_from_kobject", "dm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_attr_show",
+    "callees": ["dm_get_from_kobject", "dm_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]
