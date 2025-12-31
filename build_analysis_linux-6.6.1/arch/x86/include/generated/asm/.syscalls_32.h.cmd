@@ -1,0 +1,1 @@
+savedcmd_arch/x86/include/generated/asm/syscalls_32.h := sh /home/jacob/contest/linux-6.6.1/scripts/syscalltbl.sh --abis i386 /home/jacob/contest/linux-6.6.1/arch/x86/entry/syscalls/syscall_32.tbl arch/x86/include/generated/asm/syscalls_32.h

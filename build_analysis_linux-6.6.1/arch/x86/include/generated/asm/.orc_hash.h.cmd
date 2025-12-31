@@ -1,0 +1,1 @@
+savedcmd_arch/x86/include/generated/asm/orc_hash.h := mkdir -p arch/x86/include/generated/asm/; sh /home/jacob/contest/linux-6.6.1/scripts/orc_hash.sh < /home/jacob/contest/linux-6.6.1/arch/x86/include/asm/orc_types.h > arch/x86/include/generated/asm/orc_hash.h
