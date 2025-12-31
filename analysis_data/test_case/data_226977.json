@@ -1,0 +1,20 @@
+[
+  {
+    "name": "func_a",
+    "callees": ["func_b"],
+    "global_reads": [],
+    "global_writes": ["global_var"]
+  },
+  {
+    "name": "func_b",
+    "callees": ["func_c"],
+    "global_reads": ["another_var"],
+    "global_writes": []
+  },
+  {
+    "name": "func_c",
+    "callees": [],
+    "global_reads": ["global_var"],
+    "global_writes": ["global_var"]
+  }
+]
