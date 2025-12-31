@@ -1,1 +1,0 @@
-savedcmd_arch/x86/kernel/cpu/capflags.c := sh /home/jacob/contest/linux-6.6.1/arch/x86/kernel/cpu/mkcapflags.sh arch/x86/kernel/cpu/capflags.c /home/jacob/contest/linux-6.6.1/arch/x86/kernel/cpu/../../include/asm/cpufeatures.h /home/jacob/contest/linux-6.6.1/arch/x86/kernel/cpu/../../include/asm/vmxfeatures.h /home/jacob/contest/linux-6.6.1/arch/x86/kernel/cpu/mkcapflags.sh FORCE

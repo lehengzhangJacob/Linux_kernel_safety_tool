@@ -1,1 +1,0 @@
-savedcmd_arch/x86/include/generated/uapi/asm/unistd_64.h := sh /home/jacob/contest/linux-6.6.1/scripts/syscallhdr.sh --abis common,64 --emit-nr   /home/jacob/contest/linux-6.6.1/arch/x86/entry/syscalls/syscall_64.tbl arch/x86/include/generated/uapi/asm/unistd_64.h
