@@ -8,6 +8,8 @@
 
 查看数据库中的节点和关系总数。
 
+![随机浏览](graphs/graph1.png)
+
 ```cypher
 MATCH (n) RETURN count(n) as Nodes, count((n)-[]->()) as Relationships
 ```
@@ -32,7 +34,7 @@ LIMIT 50
 查看所有最终**读取**或**写入**了指定全局变量（例如 `vc_class`）的函数调用路径（深度最多 5 层）。
 这是分析竞态条件最直观的视图。
 
-![全局变量调用链](graphs/graphA.png)
+![全局变量调用链](graphs/graph2A.png)
 
 ```cypher
 // 将 'vc_class' 替换为你感兴趣的变量名
@@ -45,7 +47,7 @@ LIMIT 50
 
 找出被读取或写入次数最多的前 10 个全局变量，并直接展示它们与调用函数的连接图。这些变量通常是系统的核心状态。
 
-![最热门全局变量](graphs/graphB.png)
+![最热门全局变量](graphs/graph2B.png)
 
 ```cypher
 // 1. 先聚合统计，找出前 10 名
@@ -64,7 +66,7 @@ LIMIT 100
 
 写入操作通常比读取操作更危险。此查询只展示修改了变量的路径。
 
-![只看写入](graphs/graphC.png)
+![只看写入](graphs/graph2C.png)
 
 ```cypher
 MATCH path = (start:Function)-[:CALLS*1..5]->(end:Function)-[:WRITES]->(g:GlobalVariable {name: 'vc_class'})
@@ -80,6 +82,8 @@ LIMIT 50
 
 查看函数 A 是否间接调用了函数 B。
 注意：Linux 内核系统调用通常有前缀（如 `__x64_sys_` 或 `ksys_`）。
+
+![最短路径](graphs/graph3.png)
 
 ```cypher
 MATCH (start:Function {name: '__x64_sys_read'}), (end:Function {name: 'vfs_read'})
