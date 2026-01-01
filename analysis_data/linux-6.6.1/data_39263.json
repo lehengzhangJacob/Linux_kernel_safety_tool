@@ -1,0 +1,14 @@
+[
+  {
+    "name": "pit_timer_init",
+    "callees": ["clockevent_i8253_init", "use_pit"],
+    "global_reads": [],
+    "global_writes": ["global_clock_event"]
+  },
+  {
+    "name": "use_pit",
+    "callees": ["apic_needs_pit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

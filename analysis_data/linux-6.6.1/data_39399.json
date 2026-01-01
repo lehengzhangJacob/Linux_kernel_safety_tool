@@ -1,0 +1,56 @@
+[
+  {
+    "name": "pci_direct_probe",
+    "callees": ["__release_region", "__request_region", "pci_check_type1", "pci_check_type2"],
+    "global_reads": ["pci_probe"],
+    "global_writes": ["port_cf9_safe", "raw_pci_ops"]
+  },
+  {
+    "name": "pci_direct_init",
+    "callees": ["_printk"],
+    "global_reads": ["pci_probe", "raw_pci_ext_ops"],
+    "global_writes": ["raw_pci_ext_ops", "raw_pci_ops"]
+  },
+  {
+    "name": "pci_check_type2",
+    "callees": ["pci_sanity_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_check_type1",
+    "callees": ["pci_sanity_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_sanity_check",
+    "callees": ["dmi_get_bios_year"],
+    "global_reads": ["pci_probe"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_conf2_write",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_conf2_read",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_conf1_write",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_conf1_read",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

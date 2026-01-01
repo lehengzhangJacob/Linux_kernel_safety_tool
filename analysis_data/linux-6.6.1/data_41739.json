@@ -1,0 +1,62 @@
+[
+  {
+    "name": "pvclock_get_pvti_cpu0_va",
+    "callees": [],
+    "global_reads": ["pvti_cpu0_va"],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_set_pvti_cpu0_va",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": ["pvti_cpu0_va"]
+  },
+  {
+    "name": "pvclock_read_wallclock",
+    "callees": ["pvclock_clocksource_read", "set_normalized_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_clocksource_read_nowd",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["valid_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_clocksource_read",
+    "callees": ["__builtin_expect", "clocksource_touch_watchdog", "rcu_cpu_stall_reset"],
+    "global_reads": ["valid_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_read_flags",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["valid_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_touch_watchdogs",
+    "callees": ["clocksource_touch_watchdog", "rcu_cpu_stall_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_tsc_khz",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pvclock_set_flags",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["valid_flags"]
+  }
+]

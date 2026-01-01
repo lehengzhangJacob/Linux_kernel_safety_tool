@@ -1,0 +1,122 @@
+[
+  {
+    "name": "input_dev_ensure_poller.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_ensure_poller.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_setup_polling.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_ensure_poller.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_poller_attrs_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_get_poll_min",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_get_poll_max",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_set_poll_interval",
+    "callees": ["cancel_delayed_work_sync", "input_dev_poller_queue_work", "input_device_enabled", "kstrtouint", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_get_poll_interval",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_get_poll_interval",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_set_max_poll_interval",
+    "callees": ["input_dev_ensure_poller.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_set_min_poll_interval",
+    "callees": ["input_dev_ensure_poller.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_set_poll_interval",
+    "callees": ["input_dev_ensure_poller.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_setup_polling",
+    "callees": ["init_timer_key", "input_setup_polling.part.0", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_poller_stop",
+    "callees": ["cancel_delayed_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_poller_start",
+    "callees": ["input_dev_poller_queue_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_poller_finalize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_poller_work",
+    "callees": ["input_dev_poller_queue_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_dev_poller_queue_work",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "queue_delayed_work_on", "round_jiffies_relative"],
+    "global_reads": ["system_freezable_wq"],
+    "global_writes": []
+  }
+]

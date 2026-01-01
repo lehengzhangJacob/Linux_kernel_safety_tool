@@ -1,0 +1,38 @@
+[
+  {
+    "name": "hid_generic_probe.part.0",
+    "callees": ["hid_hw_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_generic_exit",
+    "callees": ["hid_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_generic_init",
+    "callees": ["__hid_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_generic_probe",
+    "callees": ["hid_generic_probe.part.0", "hid_open_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_generic_match",
+    "callees": ["bus_for_each_drv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__check_hid_generic",
+    "callees": ["hid_match_device"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

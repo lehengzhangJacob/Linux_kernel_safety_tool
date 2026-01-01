@@ -1,0 +1,26 @@
+[
+  {
+    "name": "intel_detect_pch",
+    "callees": ["__drm_dev_dbg", "intel_is_virt_pch", "intel_pch_type", "intel_virt_detect_pch", "pci_dev_put", "pci_get_class"],
+    "global_reads": ["x86_hyper_type"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_virt_detect_pch",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "intel_pch_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_is_virt_pch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_pch_type",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

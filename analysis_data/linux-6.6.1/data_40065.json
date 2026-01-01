@@ -1,0 +1,68 @@
+[
+  {
+    "name": "acpi_ds_method_data_get_node",
+    "callees": ["acpi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_get_node",
+    "callees": ["acpi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_set_value",
+    "callees": ["acpi_ds_method_data_get_node", "acpi_ut_add_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_store_object_to_local",
+    "callees": ["acpi_ds_method_data_delete_value", "acpi_ds_method_data_get_node", "acpi_ds_method_data_set_value", "acpi_ex_store_object_to_node", "acpi_ns_get_attached_object", "acpi_ut_copy_iobject_to_iobject", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_delete_value",
+    "callees": ["acpi_ds_method_data_get_node", "acpi_ns_get_attached_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_get_value",
+    "callees": ["acpi_ds_method_data_get_node", "acpi_error", "acpi_ut_add_reference", "acpi_ut_create_integer_object"],
+    "global_reads": ["acpi_gbl_enable_interpreter_slack"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_set_value",
+    "callees": ["acpi_ds_method_data_get_node", "acpi_ut_add_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_get_node",
+    "callees": ["acpi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_init_args",
+    "callees": ["acpi_ds_method_data_set_value"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_delete_all",
+    "callees": ["acpi_ns_detach_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_method_data_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

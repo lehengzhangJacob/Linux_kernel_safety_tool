@@ -1,0 +1,26 @@
+[
+  {
+    "name": "phc_vclocks_cleanup_data",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phc_vclocks_fill_reply",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phc_vclocks_reply_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phc_vclocks_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete", "ethtool_get_phc_vclocks"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

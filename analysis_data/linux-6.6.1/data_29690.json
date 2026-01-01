@@ -1,0 +1,182 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_ptmx_path",
+    "callees": ["devpts_ptmx_path.part.0", "path_pts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_devpts_fs",
+    "callees": ["register_filesystem", "register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_pty_kill",
+    "callees": ["__builtin_expect", "d_drop", "dput", "drop_nlink", "fsnotify_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_get_priv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_pty_new",
+    "callees": ["d_add", "d_alloc_name", "fsnotify_create", "init_special_inode", "inode_set_ctime_current", "iput", "new_inode", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_kill_index",
+    "callees": ["ida_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_new_index",
+    "callees": ["ida_alloc_range"],
+    "global_reads": ["pty_limit", "pty_reserve"],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_kill_sb",
+    "callees": ["ida_destroy", "kfree", "kill_litter_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_mount",
+    "callees": ["mount_nodev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_fill_super",
+    "callees": ["_printk", "d_make_root", "dput", "inode_set_ctime_current", "mknod_ptmx", "new_inode", "new_pts_fs_info", "parse_mount_options", "set_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_show_options",
+    "callees": ["seq_printf"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_remount",
+    "callees": ["parse_mount_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mknod_ptmx",
+    "callees": ["_printk", "d_add", "d_alloc_name", "down_write", "dput", "init_special_inode", "inode_set_ctime_current", "new_inode", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_mount_options",
+    "callees": ["_printk", "match_int", "match_octal", "match_token", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_release",
+    "callees": ["deactivate_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_acquire",
+    "callees": ["devpts_ptmx_path", "path_get", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_mntget",
+    "callees": ["devpts_ptmx_path", "dput", "follow_up", "mntput", "path_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devpts_ptmx_path",
+    "callees": ["devpts_ptmx_path.part.0", "path_pts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_unlink",
+    "callees": ["__builtin_expect", "fsnotify_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_delete",
+    "callees": ["fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_create",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

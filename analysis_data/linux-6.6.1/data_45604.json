@@ -1,0 +1,452 @@
+[
+  {
+    "name": "__free_fw_priv",
+    "callees": ["_raw_spin_unlock", "kfree", "kfree_const", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_fw_cache_entry",
+    "callees": ["kfree", "kstrdup_const", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware",
+    "callees": ["__module_get", "_request_firmware", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_cache_is_setup",
+    "callees": ["devres_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_cache_is_setup",
+    "callees": ["devres_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_cache_is_setup",
+    "callees": ["devres_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__lookup_fw_priv",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_firmware.part.0",
+    "callees": ["firmware_free_data", "firmware_is_builtin", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fw_entry_found",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_fw_cache_entry",
+    "callees": ["kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_fw_cache_entry",
+    "callees": ["kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_fw_pm_ops",
+    "callees": ["unregister_pm_notifier", "unregister_syscore_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__async_dev_cache_fw_image.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_fw_cache_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_firmware.part.0",
+    "callees": ["firmware_free_data", "firmware_is_builtin", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_pm_notify.part.0",
+    "callees": ["device_uncache_fw_images_delay", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_class_exit",
+    "callees": ["unregister_fw_pm_ops", "unregister_reboot_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_class_init",
+    "callees": ["register_fw_pm_ops", "register_reboot_notifier", "unregister_fw_pm_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_shutdown_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_fw_pm_ops",
+    "callees": ["unregister_pm_notifier", "unregister_syscore_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_fw_pm_ops",
+    "callees": ["init_timer_key", "register_pm_notifier", "register_syscore_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_pm_notify",
+    "callees": ["device_cache_fw_images", "fw_pm_notify.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_uncache_fw_images_work",
+    "callees": ["__device_uncache_fw_images"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_cache_fw_images",
+    "callees": ["async_synchronize_full_domain", "cancel_delayed_work_sync", "dpm_for_each_dev", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_uncache_fw_images",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_fw_cache_entry", "uncache_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_cache_fw_image",
+    "callees": ["__fw_entry_found", "_raw_spin_lock", "_raw_spin_unlock", "async_schedule_node_domain", "devres_for_each_res", "free_fw_cache_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_name_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_create_fw_entry",
+    "callees": ["alloc_fw_cache_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__async_dev_cache_fw_image",
+    "callees": ["__async_dev_cache_fw_image.part.0", "cache_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_fw_cache_entry",
+    "callees": ["kfree", "kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_cache_piggyback_on_request",
+    "callees": ["__fw_entry_found", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "alloc_fw_cache_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fw_entry_found",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_fw_cache_entry",
+    "callees": ["kfree", "kstrdup_const", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_fw_priv",
+    "callees": ["__lookup_fw_priv", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_firmware",
+    "callees": ["kfree", "request_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware_nowait",
+    "callees": ["fw_cache_is_setup", "get_device", "kfree", "kfree_const", "kstrdup_const", "kzalloc", "schedule_work", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware_work_func",
+    "callees": ["_request_firmware", "kfree", "kfree_const", "module_put", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_firmware",
+    "callees": ["release_firmware.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_partial_firmware_into_buf",
+    "callees": ["__module_get", "_request_firmware", "fw_cache_is_setup", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware_into_buf",
+    "callees": ["__module_get", "_request_firmware", "fw_cache_is_setup", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_cache",
+    "callees": ["fw_add_devm_name", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_platform",
+    "callees": ["__module_get", "_request_firmware", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware_direct",
+    "callees": ["__module_get", "_request_firmware", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_nowarn",
+    "callees": ["__module_get", "_request_firmware", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_firmware",
+    "callees": ["__module_get", "_request_firmware", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_request_firmware",
+    "callees": ["_dev_warn", "_request_firmware_prepare", "assign_fw", "fw_abort_batch_reqs", "fw_get_filesystem_firmware", "override_creds", "prepare_kernel_cred", "put_cred", "release_firmware.part.0", "revert_creds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_abort_batch_reqs",
+    "callees": ["complete_all", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "assign_fw",
+    "callees": ["fw_add_devm_name", "fw_cache_piggyback_on_request", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_add_devm_name",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "fw_cache_is_setup", "kstrdup_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_cache_is_setup",
+    "callees": ["devres_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devm_match",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_name_devm_release",
+    "callees": ["kfree_const"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_fw_priv",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_lookup_fw_priv",
+    "callees": ["__allocate_fw_priv", "__lookup_fw_priv", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__lookup_fw_priv",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__allocate_fw_priv",
+    "callees": ["__init_swait_queue_head", "kfree", "kstrdup_const", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_state_init",
+    "callees": ["__init_swait_queue_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

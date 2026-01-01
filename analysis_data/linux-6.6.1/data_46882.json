@@ -1,0 +1,128 @@
+[
+  {
+    "name": "wakeref_auto_timeout",
+    "callees": ["_raw_spin_unlock_irqrestore", "intel_runtime_pm_put_unchecked", "refcount_dec_and_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeref_auto_timeout",
+    "callees": ["_raw_spin_unlock_irqrestore", "intel_runtime_pm_put_unchecked", "refcount_dec_and_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeref_auto_timeout",
+    "callees": ["_raw_spin_unlock_irqrestore", "intel_runtime_pm_put_unchecked", "refcount_dec_and_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_auto",
+    "callees": ["intel_wakeref_auto.part.0", "timer_delete_sync", "wakeref_auto_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_auto.part.0",
+    "callees": ["__assert_rpm_wakelock_held", "__refcount_add_not_zero", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "intel_runtime_pm_get_if_in_use", "mod_timer", "wakeref_auto_timeout"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_auto_fini",
+    "callees": ["intel_wakeref_auto"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_auto",
+    "callees": ["intel_wakeref_auto.part.0", "timer_delete_sync", "wakeref_auto_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_auto_init",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeref_auto_timeout",
+    "callees": ["_raw_spin_unlock_irqrestore", "intel_runtime_pm_put_unchecked", "refcount_dec_and_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_wait_for_idle",
+    "callees": ["__SCT__might_resched", "__var_waitqueue", "finish_wait", "init_wait_var_entry", "intel_wakeref_unlock_wait", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_wakeref_init",
+    "callees": ["__mutex_init", "init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_wakeref_put_work",
+    "callees": ["____intel_wakeref_put_last", "__builtin_expect", "mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_wakeref_put_last",
+    "callees": ["____intel_wakeref_put_last", "mod_delayed_work_on", "mutex_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____intel_wakeref_put_last",
+    "callees": ["__builtin_expect", "intel_runtime_pm_put_unchecked", "mutex_unlock", "wake_up_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_wakeref_get_first",
+    "callees": ["__builtin_expect", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_unlock_wait",
+    "callees": ["flush_delayed_work", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

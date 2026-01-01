@@ -1,0 +1,62 @@
+[
+  {
+    "name": "real_trim_memory",
+    "callees": ["e820__range_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "real_trim_memory",
+    "callees": ["e820__range_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtrr_trim_uncached_memory",
+    "callees": ["_printk", "e820__update_table_print", "memset", "native_read_msr", "real_trim_memory", "x86_get_mtrr_mem_range"],
+    "global_reads": ["changed_by_mtrr_cleanup", "disable_mtrr_trim", "mtrr_if", "mtrr_tom2", "nr_range", "num_var_ranges"],
+    "global_writes": ["nr_range"]
+  },
+  {
+    "name": "real_trim_memory",
+    "callees": ["e820__range_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_special_default_mtrr",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_mtrr_trim_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["disable_mtrr_trim"]
+  },
+  {
+    "name": "mtrr_cleanup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,350 @@
+[
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "simple_copy_to_iter",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_iter", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sk_queue_drop_skb",
+    "callees": ["__refcount_dec", "_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "simple_copy_to_iter",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_iter", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__refcount_add.part.0",
+    "callees": ["refcount_warn_saturate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_free_datagram_locked.part.0",
+    "callees": ["__builtin_expect", "__kfree_skb", "__lock_sock_fast", "skb_orphan", "unlock_sock_fast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__refcount_add.part.0",
+    "callees": ["refcount_warn_saturate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "datagram_poll",
+    "callees": ["sk_set_bit", "sock_flag", "sock_poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_and_csum_datagram_msg",
+    "callees": ["__builtin_expect", "__skb_checksum_complete", "csum_partial", "iov_iter_revert", "netdev_rx_csum_fault", "skb_copy_and_csum_datagram", "skb_copy_datagram_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_and_csum_datagram",
+    "callees": ["__skb_datagram_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zerocopy_sg_from_iter",
+    "callees": ["__zerocopy_sg_from_iter", "skb_copy_datagram_from_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__zerocopy_sg_from_iter",
+    "callees": ["__refcount_add", "_compound_head", "compound_order", "iov_iter_get_pages2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_datagram_from_iter",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_iter", "copy_page_from_iter", "skb_copy_datagram_from_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_datagram_iter",
+    "callees": ["__skb_datagram_iter", "trace_skb_copy_datagram_iovec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "simple_copy_to_iter",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_iter", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_copy_and_hash_datagram_iter",
+    "callees": ["__skb_datagram_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_datagram_iter",
+    "callees": ["__builtin_expect", "__skb_datagram_iter", "iov_iter_revert", "kmap", "simple_copy_to_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_kill_datagram",
+    "callees": ["__sk_queue_drop_skb", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sk_queue_drop_skb",
+    "callees": ["__refcount_dec", "_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_free_datagram_locked",
+    "callees": ["__builtin_expect", "__skb_free_datagram_locked.part.0", "skb_unref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_free_datagram",
+    "callees": ["consume_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_recv_datagram",
+    "callees": ["__skb_recv_datagram"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_recv_datagram",
+    "callees": ["__skb_try_recv_datagram", "__skb_wait_for_more_packets"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_try_recv_datagram",
+    "callees": ["__builtin_expect", "__skb_try_recv_from_queue", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "sk_busy_loop", "sk_can_busy_loop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_try_recv_from_queue",
+    "callees": ["__builtin_expect", "__refcount_add", "skb_set_peeked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_set_peeked",
+    "callees": ["consume_skb", "skb_clone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_wait_for_more_packets",
+    "callees": ["__builtin_expect", "finish_wait", "prepare_to_wait_exclusive", "schedule_timeout", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "receiver_wake_function",
+    "callees": ["autoremove_wake_function"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_busy_loop",
+    "callees": ["napi_busy_loop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_can_busy_loop",
+    "callees": ["signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_skb_copy_datagram_iovec",
+    "callees": ["__SCT__tp_func_skb_copy_datagram_iovec", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_poll_wait",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unlock_sock_fast",
+    "callees": ["_raw_spin_unlock_bh", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_unref",
+    "callees": ["__builtin_expect", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

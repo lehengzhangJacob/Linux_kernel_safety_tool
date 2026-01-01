@@ -1,0 +1,260 @@
+[
+  {
+    "name": "socket_complete_resume",
+    "callees": ["cb_alloc", "cb_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_remove",
+    "callees": ["_dev_notice", "socket_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_complete_resume",
+    "callees": ["cb_alloc", "cb_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_remove",
+    "callees": ["_dev_notice", "socket_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pcmcia_pm_op",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pcmcia_pm_op",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pcmcia_pm_op",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_events.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_dev_complete.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_uevents.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_events.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_pcmcia_cs",
+    "callees": ["class_unregister", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_pcmcia_cs",
+    "callees": ["__init_swait_queue_head", "class_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_dev_complete",
+    "callees": ["__builtin_expect", "__pcmcia_pm_op", "pcmcia_socket_dev_complete.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_dev_resume",
+    "callees": ["__pcmcia_pm_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_dev_resume_noirq",
+    "callees": ["__pcmcia_pm_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_dev_suspend_noirq",
+    "callees": ["__pcmcia_pm_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pcmcia_pm_op",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_release_socket_class",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_socket_uevent",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_reset_card",
+    "callees": ["mutex_lock", "mutex_unlock", "socket_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_register_pcmcia",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_uevents",
+    "callees": ["pcmcia_parse_uevents.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_events",
+    "callees": ["pcmcia_parse_events.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccardd",
+    "callees": ["_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "complete", "device_register", "device_unregister", "kthread_should_stop", "msleep", "mutex_lock", "mutex_unlock", "pccard_sysfs_add_socket", "pccard_sysfs_remove_socket", "schedule", "set_freezable", "socket_detect_change", "socket_insert", "socket_remove", "socket_resume", "socket_suspend", "try_to_freeze"],
+    "global_reads": ["dead_socket"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_detect_change",
+    "callees": ["msleep", "socket_insert", "socket_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_remove",
+    "callees": ["_dev_notice", "socket_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_resume",
+    "callees": ["socket_complete_resume", "socket_early_resume", "socket_late_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_late_resume",
+    "callees": ["mutex_lock", "mutex_unlock", "socket_insert", "socket_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "socket_early_resume",
+    "callees": ["mutex_lock", "mutex_unlock", "socket_setup"],
+    "global_reads": ["dead_socket", "resume_delay"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_suspend",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": ["dead_socket"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_insert",
+    "callees": ["_dev_notice", "cb_alloc", "mutex_lock", "mutex_unlock", "socket_setup", "socket_shutdown"],
+    "global_reads": ["setup_delay"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_setup",
+    "callees": ["_dev_err", "msleep", "socket_reset"],
+    "global_reads": ["vcc_settle"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_shutdown",
+    "callees": ["_dev_err", "cb_free", "kfree", "msleep", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["dead_socket", "shutdown_delay"],
+    "global_writes": []
+  },
+  {
+    "name": "socket_reset",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "_dev_err", "msleep"],
+    "global_reads": ["reset_time", "unreset_check", "unreset_delay", "unreset_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_get_socket_by_nr",
+    "callees": ["down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_unregister_socket",
+    "callees": ["down_write", "kthread_stop", "mutex_lock", "mutex_unlock", "up_write", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_register_socket",
+    "callees": ["__builtin_expect", "__init_swait_queue_head", "__mutex_init", "__request_module", "_dev_warn", "dev_set_name", "down_write", "kthread_create_on_node", "mutex_lock", "mutex_unlock", "pcmcia_parse_events.part.0", "up_write", "wait_for_completion", "wake_up_process"],
+    "global_reads": ["cis_speed"],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_release_socket",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_put_socket",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_get_socket",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

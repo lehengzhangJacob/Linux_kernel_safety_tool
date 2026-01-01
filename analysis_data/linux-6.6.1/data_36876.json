@@ -1,0 +1,188 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_ref_tryget_live_rcu",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put.part.0",
+    "callees": ["percpu_ref_put_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put",
+    "callees": ["css_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_ref_tryget_live",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "percpu_ref_tryget_live_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_tryget_online",
+    "callees": ["percpu_ref_tryget_live"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put.part.0",
+    "callees": ["percpu_ref_put_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_fork.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "freeze_task", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_parent_freezing_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_self_freezing_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_write",
+    "callees": ["freezer_change_state", "of_css", "strcmp", "strim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_change_state",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cpus_read_lock", "cpus_read_unlock", "css_next_descendant_pre", "css_put", "css_tryget_online", "freezer_apply_state", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_apply_state",
+    "callees": ["freeze_cgroup", "static_key_slow_dec_cpuslocked", "static_key_slow_inc_cpuslocked", "unfreeze_cgroup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unfreeze_cgroup",
+    "callees": ["__thaw_task", "css_task_iter_end", "css_task_iter_next", "css_task_iter_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freeze_cgroup",
+    "callees": ["css_task_iter_end", "css_task_iter_next", "css_task_iter_start", "freeze_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_read",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "css_next_descendant_post", "css_put", "css_tryget_online", "mutex_lock", "mutex_unlock", "of_css", "seq_putc", "seq_puts", "update_if_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_if_frozen",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "css_next_child", "css_task_iter_end", "css_task_iter_next", "css_task_iter_start", "freezing", "frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_fork",
+    "callees": ["freezer_fork.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_attach",
+    "callees": ["__thaw_task", "cgroup_taskset_first", "cgroup_taskset_next", "freeze_task", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_css_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_css_offline",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "mutex_lock", "mutex_unlock", "static_key_slow_dec_cpuslocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_css_online",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "mutex_lock", "mutex_unlock", "static_key_slow_inc_cpuslocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezer_css_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_freezing",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put",
+    "callees": ["css_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_tryget_online",
+    "callees": ["percpu_ref_tryget_live"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_ref_tryget_live",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "percpu_ref_tryget_live_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_ref_tryget_live_rcu",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

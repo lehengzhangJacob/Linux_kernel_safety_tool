@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_ringfd_unregister",
+    "callees": ["_copy_from_user", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_ringfd_register",
+    "callees": ["__io_uring_add_tctx_node", "_copy_from_user", "_copy_to_user", "fput", "io_ring_add_registered_fd", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_ring_add_registered_fd",
+    "callees": ["fget", "fput", "io_is_uring_fops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_ring_add_registered_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_uring_unreg_ringfd",
+    "callees": ["fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_uring_clean_tctx",
+    "callees": ["__SCT__cond_resched", "io_uring_del_tctx_node", "io_wq_put_and_exit", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_uring_del_tctx_node",
+    "callees": ["__builtin_expect", "kfree", "mutex_lock", "mutex_unlock", "xa_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_uring_add_tctx_node_from_submit",
+    "callees": ["__io_uring_add_tctx_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_uring_add_tctx_node",
+    "callees": ["__builtin_expect", "__builtin_return_address", "io_uring_alloc_task_context", "io_wq_max_workers", "kfree", "kmalloc_trace", "mutex_lock", "mutex_unlock", "xa_load", "xa_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_uring_alloc_task_context",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__percpu_counter_init_many", "io_init_wq_offload", "kfree", "kzalloc", "percpu_counter_destroy_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_uring_free",
+    "callees": ["__builtin_expect", "kfree", "percpu_counter_destroy_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_init_wq_offload",
+    "callees": ["__init_waitqueue_head", "io_wq_create", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

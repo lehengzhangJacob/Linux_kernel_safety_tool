@@ -1,0 +1,86 @@
+[
+  {
+    "name": "drm_bridge_connector_hpd_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_get_modes.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_init",
+    "callees": ["drm_bridge_is_panel", "drm_connector_init_with_ddc", "drm_panel_bridge_set_orientation", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_get_modes",
+    "callees": ["drm_bridge_connector_get_modes.part.0", "drm_bridge_connector_get_modes_edid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_get_modes_edid",
+    "callees": ["drm_add_edid_modes", "drm_bridge_connector_detect", "drm_connector_update_edid_property", "drm_edid_is_valid", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_debugfs_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_destroy",
+    "callees": ["drm_bridge_hpd_disable", "drm_connector_cleanup", "drm_connector_unregister", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_detect",
+    "callees": ["drm_bridge_connector_detect.part.0", "drm_bridge_connector_hpd_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_disable_hpd",
+    "callees": ["drm_bridge_hpd_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_enable_hpd",
+    "callees": ["drm_bridge_hpd_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_hpd_cb",
+    "callees": ["drm_bridge_connector_hpd_notify", "drm_kms_helper_connector_hotplug_event", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_connector_hpd_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

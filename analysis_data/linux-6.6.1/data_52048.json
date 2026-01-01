@@ -1,0 +1,410 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_changed",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_stay_awake", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_property",
+    "callees": ["power_supply_get_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_property",
+    "callees": ["power_supply_get_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_find_ocv2cap_table.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_init_wakeup.part.0",
+    "callees": ["device_set_wakeup_capable", "device_wakeup_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_init_wakeup",
+    "callees": ["device_init_wakeup.part.0", "device_set_wakeup_capable", "device_wakeup_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate",
+    "callees": ["fixp_linear_interpolate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate",
+    "callees": ["fixp_linear_interpolate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_init_wakeup.part.0",
+    "callees": ["device_set_wakeup_capable", "device_wakeup_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_property.part.0",
+    "callees": ["power_supply_battery_info_get_prop", "power_supply_battery_info_has_prop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_find_ocv2cap_table.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_class_exit",
+    "callees": ["class_destroy"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_class_init",
+    "callees": ["__builtin_expect", "class_create", "power_supply_init_attrs"],
+    "global_reads": [],
+    "global_writes": ["power_supply_class"]
+  },
+  {
+    "name": "power_supply_get_drvdata",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_unregister",
+    "callees": ["__builtin_expect", "cancel_delayed_work_sync", "cancel_work_sync", "device_init_wakeup", "device_unregister", "power_supply_remove_hwmon_sysfs", "power_supply_remove_triggers", "psy_unregister_thermal", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_power_supply_register_no_ws",
+    "callees": ["__builtin_expect", "__devres_alloc_node", "__power_supply_register", "devres_add", "devres_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_power_supply_register",
+    "callees": ["__builtin_expect", "__devres_alloc_node", "__power_supply_register", "devres_add", "devres_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_power_supply_release",
+    "callees": ["power_supply_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_register_no_ws",
+    "callees": ["__power_supply_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_register",
+    "callees": ["__power_supply_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_register",
+    "callees": ["_printk", "dev_set_name", "device_add", "device_del", "device_init_wakeup", "device_initialize", "init_timer_key", "kzalloc", "power_supply_add_hwmon_sysfs", "power_supply_check_supplies", "power_supply_create_triggers", "power_supply_get_battery_info", "power_supply_remove_triggers", "psy_register_thermal", "psy_unregister_thermal", "put_device", "queue_delayed_work_on"],
+    "global_reads": ["power_supply_class", "system_power_efficient_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "psy_register_thermal",
+    "callees": ["__builtin_expect", "thermal_tripless_zone_device_register", "thermal_zone_device_enable", "thermal_zone_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_read_temp",
+    "callees": ["__builtin_expect", "power_supply_get_property", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_unreg_notifier",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_reg_notifier",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_dev_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_powers",
+    "callees": ["sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_external_power_changed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_property_is_writeable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_set_property",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_property",
+    "callees": ["power_supply_get_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_battery_bti_in_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_batinfo_ocv2cap",
+    "callees": ["power_supply_find_ocv2cap_table.part.0", "power_supply_ocv2cap_simple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_find_ocv2cap_table",
+    "callees": ["power_supply_find_ocv2cap_table.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_ocv2cap_simple",
+    "callees": ["fixp_linear_interpolate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_maintenance_charging_setting",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_vbat2ri",
+    "callees": ["fixp_linear_interpolate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_temp2resist_simple",
+    "callees": ["fixp_linear_interpolate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_battery_info_get_prop",
+    "callees": ["power_supply_battery_info_has_prop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_battery_info_has_prop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_put_battery_info",
+    "callees": ["devm_kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_battery_info",
+    "callees": ["__dev_fwnode", "_dev_warn", "devm_kmalloc", "fwnode_handle_put", "fwnode_property_get_reference_args", "fwnode_property_read_string", "fwnode_property_read_u32_array", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_put",
+    "callees": ["__SCT__might_resched", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_by_name",
+    "callees": ["class_find_device"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_match_device_by_name",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_set_battery_charged",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_get_property_from_supplier",
+    "callees": ["class_for_each_device"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_get_supplier_property",
+    "callees": ["__power_supply_is_supplied_by", "power_supply_get_property"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_is_system_supplied",
+    "callees": ["class_for_each_device"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_is_system_supplied",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_am_i_supplied",
+    "callees": ["class_for_each_device"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_am_i_supplied",
+    "callees": ["__power_supply_is_supplied_by"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_check_supplies",
+    "callees": ["__builtin_expect", "device_property_read_string_array", "devm_kmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_deferred_register_work",
+    "callees": ["msleep", "mutex_trylock", "mutex_unlock", "power_supply_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_changed",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_stay_awake", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_changed_work",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blocking_notifier_call_chain", "class_for_each_device", "kobject_uevent", "pm_relax", "power_supply_update_leds"],
+    "global_reads": ["power_supply_class"],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_changed_work",
+    "callees": ["__power_supply_is_supplied_by"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__power_supply_is_supplied_by",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixp_linear_interpolate",
+    "callees": ["fixp_linear_interpolate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_init_wakeup",
+    "callees": ["device_init_wakeup.part.0", "device_set_wakeup_capable", "device_wakeup_disable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

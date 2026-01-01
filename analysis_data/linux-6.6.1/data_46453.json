@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_resource_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_resource_to_rsgt",
+    "callees": ["i915_rsgt_from_buddy_resource", "i915_rsgt_from_mm_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_fini",
+    "callees": ["drain_workqueue", "i915_gem_flush_free_objects", "i915_ttm_buddy_man_fini", "msleep", "mutex_lock", "mutex_unlock", "ttm_resource_manager_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_init",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_270", "i915_ttm_buddy_man_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_to_ttm_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_device_fini",
+    "callees": ["ttm_device_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_region_ttm_device_init",
+    "callees": ["i915_ttm_driver", "ttm_device_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_cleanup",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

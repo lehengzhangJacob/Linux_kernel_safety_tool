@@ -1,0 +1,98 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_crash_gracefully_on_page_fault",
+    "callees": ["__warn_printk", "_printk", "arch_efi_call_virt_teardown", "complete", "current_work", "machine_real_restart", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_poweroff_required",
+    "callees": [],
+    "global_reads": ["acpi_gbl_reduced_hardware", "acpi_no_s5"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_reboot_required",
+    "callees": [],
+    "global_reads": ["acpi_gbl_reduced_hardware"],
+    "global_writes": ["efi_reboot_quirk_mode"]
+  },
+  {
+    "name": "efi_free_boot_services",
+    "callees": ["__builtin_constant_p", "_printk", "efi_memmap_alloc", "efi_memmap_install", "efi_unmap_pages", "memblock_free_late", "memcpy", "memremap", "memunmap"],
+    "global_reads": ["page_offset_base", "real_mode_header"],
+    "global_writes": ["real_mode_header"]
+  },
+  {
+    "name": "efi_unmap_pages",
+    "callees": ["__builtin_constant_p", "_printk", "kernel_unmap_pages_in_pgd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_reserve_boot_services",
+    "callees": ["__builtin_constant_p", "can_free_region", "memblock_is_region_reserved", "memblock_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_free_region",
+    "callees": ["e820__mapped_all"],
+    "global_reads": ["phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_query_variable_store",
+    "callees": ["efi_delete_dummy_variable", "kfree", "kzalloc", "query_variable_store_nonblocking"],
+    "global_reads": ["efi_no_storage_paranoia"],
+    "global_writes": []
+  },
+  {
+    "name": "query_variable_store_nonblocking",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_reserved_space",
+    "callees": [],
+    "global_reads": ["efi_no_storage_paranoia"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_delete_dummy_variable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_storage_paranoia",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["efi_no_storage_paranoia"]
+  },
+  {
+    "name": "efi_reuse_config",
+    "callees": ["__builtin_constant_p", "_printk", "early_memremap", "early_memunmap", "memcmp"],
+    "global_reads": ["efi_setup"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_apply_memmap_quirks",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_arch_mem_reserve",
+    "callees": ["_printk", "e820__range_update", "e820__update_table", "early_memremap_prot", "early_memunmap", "efi_mem_desc_lookup", "efi_memmap_alloc", "efi_memmap_insert", "efi_memmap_install", "efi_memmap_split_count"],
+    "global_reads": ["__default_kernel_pte_mask", "e820_table"],
+    "global_writes": []
+  }
+]

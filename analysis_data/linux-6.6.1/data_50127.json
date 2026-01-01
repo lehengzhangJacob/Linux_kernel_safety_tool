@@ -1,0 +1,308 @@
+[
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_cleanup",
+    "callees": ["_printk", "kfree", "usb_put_intf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_bidir",
+    "callees": ["usblp_submit_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_cache_device_id_string.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_driver_exit",
+    "callees": ["usb_deregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_driver_init",
+    "callees": ["usb_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_resume",
+    "callees": ["handle_bidir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_suspend",
+    "callees": ["usb_kill_anchored_urbs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_disconnect",
+    "callees": ["__builtin_unreachable", "__wake_up", "_dev_err", "mutex_lock", "mutex_unlock", "usb_deregister_dev", "usb_kill_anchored_urbs", "usb_poison_anchored_urbs", "usblp_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_cache_device_id_string",
+    "callees": ["__builtin_bswap16", "usblp_cache_device_id_string.part.0", "usblp_ctrl_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_set_protocol",
+    "callees": ["_printk", "usb_set_interface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_select_alts",
+    "callees": ["_printk", "usb_find_common_endpoints"],
+    "global_reads": ["proto_bias"],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_probe",
+    "callees": ["__builtin_return_address", "__init_waitqueue_head", "__mutex_init", "_dev_err", "_dev_info", "init_usb_anchor", "kfree", "kmalloc_trace", "kzalloc", "usb_get_intf", "usb_put_intf", "usb_register_dev", "usblp_cache_device_id_string", "usblp_quirks", "usblp_select_alts", "usblp_set_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee1284_id_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_devnode",
+    "callees": ["kasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_quirks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_submit_read",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "usb_alloc_urb", "usb_anchor_urb", "usb_free_urb", "usb_submit_urb", "usb_unanchor_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_rtest",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_rwait_and_lock",
+    "callees": ["add_wait_queue", "mutex_lock_interruptible", "mutex_unlock", "remove_wait_queue", "schedule", "usblp_rtest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_wtest",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_wwait",
+    "callees": ["add_wait_queue", "mutex_lock", "mutex_lock_interruptible", "mutex_unlock", "remove_wait_queue", "schedule_timeout", "usblp_check_status", "usblp_ctrl_msg", "usblp_wtest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_read",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_user", "_printk", "mutex_unlock", "usblp_rwait_and_lock", "usblp_submit_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_write",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "__wake_up", "_copy_from_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mutex_lock_interruptible", "mutex_unlock", "usb_anchor_urb", "usb_free_urb", "usb_submit_urb", "usb_unanchor_urb", "usblp_new_writeurb", "usblp_wwait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_new_writeurb",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "usb_alloc_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ioctl",
+    "callees": ["___ratelimit", "__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "_dev_err", "_printk", "copy_overflow", "mutex_lock", "mutex_unlock", "usb_kill_anchored_urbs", "usblp_cache_device_id_string", "usblp_ctrl_msg", "usblp_hp_channel_change_request", "usblp_set_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_poll",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mutex_lock", "mutex_unlock", "poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_release",
+    "callees": ["mutex_lock", "mutex_unlock", "usb_autopm_put_interface", "usb_kill_anchored_urbs", "usblp_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_cleanup",
+    "callees": ["_printk", "kfree", "usb_put_intf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_open",
+    "callees": ["handle_bidir", "mutex_lock", "mutex_unlock", "usb_autopm_get_interface", "usb_autopm_put_interface", "usb_find_interface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_bidir",
+    "callees": ["usblp_submit_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_check_status",
+    "callees": ["___ratelimit", "_printk", "mutex_lock", "mutex_unlock", "usblp_ctrl_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_bulk_write",
+    "callees": ["__wake_up", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "usb_free_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_bulk_read",
+    "callees": ["__wake_up", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "usb_free_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_hp_channel_change_request",
+    "callees": ["kfree", "kzalloc", "usblp_ctrl_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usblp_ctrl_msg",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_usb_anchor",
+    "callees": ["__init_waitqueue_head", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "name": "dyn_event_open.part.0",
+    "callees": ["seq_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dyn_event.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_arg_pair_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_arg_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_cmd_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_str_add",
+    "callees": ["_printk", "seq_buf_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_arg_pair_add",
+    "callees": ["_printk", "seq_buf_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynevent_arg_add",
+    "callees": ["_printk", "seq_buf_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_dynamic_event",
+    "callees": ["trace_create_file", "tracing_init_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_write",
+    "callees": ["trace_parse_run_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_open",
+    "callees": ["dyn_event_open.part.0", "dyn_events_release_all", "tracing_check_open_get_tr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_events_release_all",
+    "callees": ["mutex_lock", "mutex_unlock", "tracing_reset_all_online_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_seq_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_seq_stop",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_seq_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_seq_start",
+    "callees": ["mutex_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dyn_event",
+    "callees": ["create_dyn_event.part.0", "dyn_event_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_release",
+    "callees": ["argv_free", "argv_split", "mutex_lock", "mutex_unlock", "strchr", "tracing_reset_all_online_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dyn_event_register",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_dyn_busy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_dyn_put_ref",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_dyn_try_get_ref",
+    "callees": ["__builtin_expect", "down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

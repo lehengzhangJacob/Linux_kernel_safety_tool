@@ -1,0 +1,152 @@
+[
+  {
+    "name": "unmask_8259A_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["cached_irq_mask"],
+    "global_writes": ["cached_irq_mask"]
+  },
+  {
+    "name": "mask_8259A_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["cached_irq_mask"],
+    "global_writes": ["cached_irq_mask"]
+  },
+  {
+    "name": "probe_8259A.part.0",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": ["legacy_pic"]
+  },
+  {
+    "name": "legacy_pic_pcat_compat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["pcat_compat"]
+  },
+  {
+    "name": "i8259A_init_ops",
+    "callees": ["register_syscore_ops"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pic_probe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pic_irq_pending_noop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pic_int_noop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pic_uint_noop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_pic_noop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_8259A",
+    "callees": ["__const_udelay", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": ["i8259A_auto_eoi"]
+  },
+  {
+    "name": "probe_8259A",
+    "callees": ["probe_8259A.part.0"],
+    "global_reads": ["legacy_pic", "pcat_compat"],
+    "global_writes": []
+  },
+  {
+    "name": "unmask_8259A",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mask_8259A",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8259A_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8259A_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8259A_resume",
+    "callees": ["init_8259A"],
+    "global_reads": ["i8259A_auto_eoi"],
+    "global_writes": []
+  },
+  {
+    "name": "mask_and_ack_8259A",
+    "callees": ["_printk_deferred", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "i8259A_irq_real"],
+    "global_reads": ["cached_irq_mask", "spurious_irq_mask"],
+    "global_writes": ["cached_irq_mask", "spurious_irq_mask"]
+  },
+  {
+    "name": "i8259A_irq_real",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "make_8259A_irq",
+    "callees": ["disable_irq_nosync", "enable_irq", "irq_modify_status", "irq_set_chip_and_handler_name", "lapic_assign_legacy_vector"],
+    "global_reads": ["io_apic_irqs"],
+    "global_writes": ["io_apic_irqs"]
+  },
+  {
+    "name": "i8259A_irq_pending",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_8259A_irq",
+    "callees": ["unmask_8259A_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmask_8259A_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["cached_irq_mask"],
+    "global_writes": ["cached_irq_mask"]
+  },
+  {
+    "name": "disable_8259A_irq",
+    "callees": ["mask_8259A_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mask_8259A_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["cached_irq_mask"],
+    "global_writes": ["cached_irq_mask"]
+  }
+]

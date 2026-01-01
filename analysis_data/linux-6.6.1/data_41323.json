@@ -1,0 +1,98 @@
+[
+  {
+    "name": "core_kernel_text.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_kernel_text",
+    "callees": ["in_gate_area_no_mm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "core_kernel_text",
+    "callees": ["core_kernel_text.part.0", "is_kernel_text"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "core_kernel_text.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_kernel_text",
+    "callees": ["in_gate_area_no_mm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "core_kernel_text",
+    "callees": ["core_kernel_text.part.0", "is_kernel_text"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_text_address.part.0",
+    "callees": ["__is_insn_slot_addr", "ct_nmi_enter", "ct_nmi_exit", "is_module_text_address", "rcu_is_watching"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "core_kernel_text.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "func_ptr_is_kernel_text",
+    "callees": ["core_kernel_text", "is_module_text_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_text_address",
+    "callees": ["core_kernel_text", "kernel_text_address.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kernel_text_address",
+    "callees": ["kernel_text_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "core_kernel_text",
+    "callees": ["core_kernel_text.part.0", "is_kernel_text"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "search_exception_tables",
+    "callees": ["search_extable", "search_module_extables"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "search_kernel_exception_table",
+    "callees": ["search_extable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sort_main_extable",
+    "callees": ["_printk", "sort_extable"],
+    "global_reads": ["main_extable_sort_needed"],
+    "global_writes": []
+  },
+  {
+    "name": "is_kernel_text",
+    "callees": ["in_gate_area_no_mm"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

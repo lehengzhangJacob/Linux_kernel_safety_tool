@@ -1,0 +1,272 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_port_set_initialized",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_check_console.part.0",
+    "callees": ["register_console"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_check_console",
+    "callees": ["console_list_lock", "console_list_unlock", "hvc_check_console.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_check_console.part.0",
+    "callees": ["register_console"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_init",
+    "callees": ["__builtin_expect", "__tty_alloc_driver", "_printk", "kthread_create_on_node", "kthread_stop", "tty_driver_kref_put", "tty_register_driver", "wake_up_process"],
+    "global_reads": ["hvc_task", "tty_std_termios"],
+    "global_writes": ["hvc_driver", "hvc_task"]
+  },
+  {
+    "name": "hvc_remove",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "console_lock", "console_unlock", "tty_kref_put", "tty_port_put", "tty_port_tty_get", "tty_vhangup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_alloc",
+    "callees": ["__builtin_expect", "hvc_check_console", "hvc_init", "kzalloc", "mutex_lock", "mutex_unlock", "tty_port_init"],
+    "global_reads": ["last_hvc"],
+    "global_writes": ["last_hvc"]
+  },
+  {
+    "name": "hvc_tiocmset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_tiocmget",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "khvcd",
+    "callees": ["__SCT__cond_resched", "__builtin_constant_p", "__hvc_poll", "__msecs_to_jiffies", "kthread_should_stop", "mutex_lock", "mutex_unlock", "schedule", "schedule_timeout_interruptible", "set_freezable", "try_to_freeze"],
+    "global_reads": ["hvc_kicked", "timeout"],
+    "global_writes": ["hvc_kicked", "timeout"]
+  },
+  {
+    "name": "__hvc_resize",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_poll",
+    "callees": ["__hvc_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hvc_poll",
+    "callees": ["__SCT__cond_resched", "__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "handle_sysrq", "hvc_push", "tty_buffer_request_room", "tty_flip_buffer_push", "tty_hangup", "tty_insert_flip_char", "tty_kref_put", "tty_port_tty_get", "tty_wakeup"],
+    "global_reads": ["sysrq_pressed"],
+    "global_writes": ["sysrq_pressed", "timeout"]
+  },
+  {
+    "name": "hvc_chars_in_buffer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_write_room",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_set_winsz",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_do_resize", "tty_kref_put", "tty_port_tty_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_write",
+    "callees": ["__SCT__cond_resched", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hvc_flush", "hvc_push", "memcpy", "wake_up_process"],
+    "global_reads": ["hvc_task"],
+    "global_writes": ["hvc_kicked"]
+  },
+  {
+    "name": "hvc_push",
+    "callees": ["memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_hangup",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cancel_work_sync", "tty_port_tty_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_cleanup",
+    "callees": ["tty_port_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_close",
+    "callees": ["__builtin_constant_p", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cancel_work_sync", "tty_hung_up_p", "tty_port_set_initialized", "tty_port_tty_set", "tty_wait_until_sent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_open",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_port_set_initialized", "tty_port_tty_set", "wake_up_process"],
+    "global_reads": ["hvc_task"],
+    "global_writes": ["hvc_kicked"]
+  },
+  {
+    "name": "hvc_install",
+    "callees": ["hvc_get_by_index", "tty_port_install", "tty_port_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_unthrottle",
+    "callees": ["wake_up_process"],
+    "global_reads": ["hvc_task"],
+    "global_writes": ["hvc_kicked"]
+  },
+  {
+    "name": "hvc_kick",
+    "callees": ["wake_up_process"],
+    "global_reads": ["hvc_task"],
+    "global_writes": ["hvc_kicked"]
+  },
+  {
+    "name": "hvc_instantiate",
+    "callees": ["hvc_check_console", "hvc_get_by_index", "tty_port_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_check_console",
+    "callees": ["console_list_lock", "console_list_unlock", "hvc_check_console.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_port_destruct",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_console_init",
+    "callees": ["register_console"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_console_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_console_device",
+    "callees": [],
+    "global_reads": ["hvc_driver"],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_console_print",
+    "callees": ["__hvc_flush", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hvc_get_by_index",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mutex_lock", "mutex_unlock", "tty_port_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_port_set_initialized",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

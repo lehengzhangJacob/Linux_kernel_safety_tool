@@ -1,0 +1,242 @@
+[
+  {
+    "name": "drm_bridge_add",
+    "callees": ["__mutex_init", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_remove",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_remove",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_remove_void",
+    "callees": ["drm_bridge_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_hpd_enable.part.0",
+    "callees": ["__builtin_expect", "__warn_printk", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_call_pre_enable.part.0",
+    "callees": ["__builtin_expect", "drm_atomic_get_old_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_call_post_disable.part.0",
+    "callees": ["__builtin_expect", "drm_atomic_get_old_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_hpd_disable.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_get_modes.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_debugfs_init",
+    "callees": ["drm_debugfs_add_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_chains_info",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_hpd_notify",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_hpd_disable",
+    "callees": ["drm_bridge_hpd_disable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_hpd_enable",
+    "callees": ["drm_bridge_hpd_enable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_get_edid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_get_modes",
+    "callees": ["drm_bridge_get_modes.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_detect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_check",
+    "callees": ["drm_atomic_bridge_chain_select_bus_fmts", "drm_atomic_bridge_check", "drm_atomic_bridge_propagate_bus_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_propagate_bus_flags",
+    "callees": ["drm_atomic_get_new_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_select_bus_fmts",
+    "callees": ["__builtin_expect", "__builtin_return_address", "drm_atomic_get_new_bridge_state", "kfree", "kmalloc_trace", "select_bus_fmt_recursive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "select_bus_fmt_recursive",
+    "callees": ["__builtin_expect", "drm_atomic_get_new_bridge_state", "kfree", "select_bus_fmt_recursive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_check",
+    "callees": ["__builtin_expect", "drm_atomic_get_new_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_enable",
+    "callees": ["__builtin_expect", "drm_atomic_get_old_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_pre_enable",
+    "callees": ["drm_atomic_bridge_call_pre_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_call_pre_enable",
+    "callees": ["drm_atomic_bridge_call_pre_enable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_post_disable",
+    "callees": ["drm_atomic_bridge_call_post_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_call_post_disable",
+    "callees": ["drm_atomic_bridge_call_post_disable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_bridge_chain_disable",
+    "callees": ["__builtin_expect", "drm_atomic_get_old_bridge_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_chain_mode_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_chain_mode_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_chain_mode_fixup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_detach",
+    "callees": ["__builtin_expect", "drm_atomic_private_obj_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_attach",
+    "callees": ["__builtin_expect", "__drm_err", "drm_atomic_private_obj_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_atomic_destroy_priv_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_atomic_duplicate_priv_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_remove",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_drm_bridge_add",
+    "callees": ["__devm_add_action_or_reset", "drm_bridge_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_remove_void",
+    "callees": ["drm_bridge_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_bridge_add",
+    "callees": ["__mutex_init", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

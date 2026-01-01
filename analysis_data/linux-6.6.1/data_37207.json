@@ -1,0 +1,212 @@
+[
+  {
+    "name": "queue_access_lock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_access_lock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_access_unlock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_access_unlock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_info_queues_read",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "queueptr", "seq_printf", "snd_seq_prioq_avail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_control_queue",
+    "callees": ["__builtin_expect", "queue_access_lock", "queue_access_unlock", "queueptr", "snd_seq_queue_process_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_process_event",
+    "callees": ["queue_broadcast_event", "snd_seq_prioq_leave", "snd_seq_timer_continue", "snd_seq_timer_set_position_tick", "snd_seq_timer_set_position_time", "snd_seq_timer_set_skew", "snd_seq_timer_set_tempo", "snd_seq_timer_start", "snd_seq_timer_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_remove_cells",
+    "callees": ["__builtin_constant_p", "queueptr", "snd_seq_prioq_remove_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_client_leave_cells",
+    "callees": ["queueptr", "snd_seq_prioq_leave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_client_leave",
+    "callees": ["__builtin_constant_p", "queue_delete", "queue_list_remove", "queueptr", "snd_seq_prioq_leave", "snd_seq_queue_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_is_used",
+    "callees": ["__builtin_constant_p", "queueptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_use",
+    "callees": ["mutex_lock", "mutex_unlock", "queue_use", "queueptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_use",
+    "callees": ["snd_seq_timer_close", "snd_seq_timer_defaults", "snd_seq_timer_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_timer_set_tempo",
+    "callees": ["queue_access_lock", "queue_access_unlock", "queueptr", "snd_seq_timer_set_skew", "snd_seq_timer_set_tempo_ppq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_timer_close",
+    "callees": ["queueptr", "snd_seq_timer_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_timer_open",
+    "callees": ["queueptr", "snd_seq_timer_defaults", "snd_seq_timer_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_set_owner",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_access_lock", "queue_access_unlock", "queueptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_check_access",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queueptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_access_unlock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_access_lock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_enqueue_event",
+    "callees": ["__builtin_expect", "queueptr", "snd_seq_check_queue", "snd_seq_inc_real_time", "snd_seq_prioq_cell_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_check_queue",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "snd_seq_dispatch_event", "snd_seq_prioq_cell_out", "snd_seq_timer_get_cur_tick", "snd_seq_timer_get_cur_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_find_name",
+    "callees": ["queueptr", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queueptr",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_delete",
+    "callees": ["queue_delete", "queue_list_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queue_alloc",
+    "callees": ["queue_delete", "queue_list_add", "queue_new", "queue_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_queues_delete",
+    "callees": ["queue_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_delete",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock", "snd_seq_prioq_delete", "snd_seq_timer_close", "snd_seq_timer_delete", "snd_seq_timer_stop", "snd_use_lock_sync_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_new",
+    "callees": ["__mutex_init", "kfree", "kzalloc", "snd_seq_prioq_delete", "snd_seq_prioq_new", "snd_seq_timer_delete", "snd_seq_timer_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_list_remove",
+    "callees": ["_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["num_queues"],
+    "global_writes": ["num_queues"]
+  },
+  {
+    "name": "queue_list_add",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["num_queues"],
+    "global_writes": ["num_queues"]
+  },
+  {
+    "name": "snd_seq_queue_get_cur_queues",
+    "callees": [],
+    "global_reads": ["num_queues"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_inc_real_time",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

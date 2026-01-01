@@ -1,0 +1,38 @@
+[
+  {
+    "name": "c_show",
+    "callees": ["seq_printf", "seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "c_stop",
+    "callees": ["up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "c_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "c_start",
+    "callees": ["down_read", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_exit_proc",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_init_proc",
+    "callees": ["proc_create_seq_private"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

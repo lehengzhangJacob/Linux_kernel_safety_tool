@@ -1,0 +1,230 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jhash_nwords",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jhash_nwords",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jhash_nwords",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jhash_nwords",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lookup_reuseport",
+    "callees": ["__builtin_expect", "inet6_ehashfn", "reuseport_select_sock", "udp6_ehashfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match",
+    "callees": ["inet6_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match",
+    "callees": ["inet6_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_hash.part.0",
+    "callees": ["__inet_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_hash",
+    "callees": ["inet6_hash.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_hash_connect",
+    "callees": ["__inet_hash_connect", "secure_ipv6_port_ephemeral"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__inet6_check_established",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "inet6_ehashfn", "inet6_match", "inet_twsk_deschedule_put", "sk_nulls_del_node_init_rcu", "twsk_unique"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lookup",
+    "callees": ["__builtin_bswap16", "__inet6_lookup", "__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lookup_listener",
+    "callees": ["__builtin_expect", "inet6_lhash2_lookup", "inet6_lookup_run_sk_lookup", "ipv6_portaddr_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lookup_run_sk_lookup",
+    "callees": ["__builtin_expect", "bpf_sk_lookup_run_v6", "inet6_lookup_reuseport"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lhash2_lookup",
+    "callees": ["compute_score", "inet6_lookup_reuseport"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_lookup_reuseport",
+    "callees": ["__builtin_expect", "inet6_ehashfn", "reuseport_select_sock", "udp6_ehashfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compute_score",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__inet6_lookup_established",
+    "callees": ["__builtin_expect", "__refcount_add_not_zero", "inet6_ehashfn", "inet6_match", "sock_gen_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_ehashfn",
+    "callees": ["__builtin_expect", "__do_once_done", "__do_once_start", "__jhash_nwords", "get_random_bytes", "jhash2"],
+    "global_reads": ["inet6_ehash_secret", "ipv6_hash_secret"],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_sk_lookup_run_v6",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "migrate_disable", "migrate_enable", "sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_match",
+    "callees": ["inet6_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "twsk_unique",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jhash_nwords",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hlist_nulls_del_init_rcu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec",
+    "callees": ["__refcount_dec"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "i915_restore_display",
+    "callees": ["intel_gmbus_reset", "intel_restore_swf", "intel_vga_redisable", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_save_display",
+    "callees": ["intel_save_swf", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_restore_swf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_save_swf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ia32_binfmt_init",
+    "callees": ["register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vdso32_setup",
+    "callees": ["_printk", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": ["vdso32_enabled"]
+  }
+]

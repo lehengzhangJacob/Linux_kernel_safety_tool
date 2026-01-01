@@ -1,0 +1,104 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_suspend_cleanup",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_suspend_init",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_resume_prepare",
+    "callees": ["intel_clock_gating_init", "vlv_allow_gt_wake", "vlv_check_no_gt_access", "vlv_force_gfx_clock", "vlv_restore_gunit_s0ix_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_suspend_complete",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "vlv_allow_gt_wake", "vlv_check_no_gt_access", "vlv_force_gfx_clock", "vlv_save_gunit_s0ix_state", "vlv_wait_for_gt_wells"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_check_no_gt_access",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_allow_gt_wake",
+    "callees": ["_dev_err", "intel_uncore_rmw", "vlv_wait_for_pw_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_force_gfx_clock",
+    "callees": ["__intel_wait_for_register", "_dev_err", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_wait_for_pw_status",
+    "callees": ["__SCT__might_resched", "ktime_get_raw", "trace_i915_reg_rw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_restore_gunit_s0ix_state",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_save_gunit_s0ix_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

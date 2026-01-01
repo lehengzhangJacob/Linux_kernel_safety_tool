@@ -1,0 +1,164 @@
+[
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_set_pub_key.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_set_pub_key.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_create",
+    "callees": ["__builtin_expect", "akcipher_register_instance", "crypto_attr_alg_name", "crypto_check_attr_type", "crypto_drop_spawn", "crypto_grab_akcipher", "kfree", "kzalloc", "rsa_lookup_asn1", "snprintf", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_free",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_exit_tfm",
+    "callees": ["crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_init_tfm",
+    "callees": ["__builtin_expect", "crypto_spawn_tfm2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_verify",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "pkcs1pad_verify_complete", "sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_verify_complete_cb",
+    "callees": ["pkcs1pad_verify_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_verify_complete",
+    "callees": ["__crypto_memneq", "kfree_sensitive", "memcmp", "sg_nents_for_len", "sg_pcopy_to_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_sign",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy", "memset", "pkcs1pad_encrypt_sign_complete", "pkcs1pad_sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_decrypt",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "pkcs1pad_decrypt_complete", "sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_decrypt_complete_cb",
+    "callees": ["pkcs1pad_decrypt_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_decrypt_complete",
+    "callees": ["kfree_sensitive", "sg_copy_from_buffer", "sg_nents_for_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_encrypt",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "get_random_u32_below", "kmalloc_large", "kmalloc_trace", "pkcs1pad_encrypt_sign_complete", "pkcs1pad_sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_encrypt_sign_complete_cb",
+    "callees": ["pkcs1pad_encrypt_sign_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_encrypt_sign_complete",
+    "callees": ["__builtin_expect", "kfree", "kfree_sensitive", "kzalloc", "sg_copy_from_buffer", "sg_copy_to_buffer", "sg_nents_for_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_sg_set_buf",
+    "callees": ["sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_get_max_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_set_priv_key",
+    "callees": ["pkcs1pad_set_priv_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkcs1pad_set_pub_key",
+    "callees": ["pkcs1pad_set_pub_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rsa_lookup_asn1",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

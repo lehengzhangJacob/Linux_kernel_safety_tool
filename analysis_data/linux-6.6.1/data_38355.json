@@ -1,0 +1,266 @@
+[
+  {
+    "name": "isofs_dentry_cmp_common",
+    "callees": ["strncasecmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_hashi_common",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_inodecache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["isofs_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_dentry_cmp_common",
+    "callees": ["strncasecmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_get_block.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_iso9660_fs",
+    "callees": ["destroy_inodecache", "unregister_filesystem", "zisofs_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_iso9660_fs",
+    "callees": ["destroy_inodecache", "init_inodecache", "register_filesystem", "zisofs_cleanup", "zisofs_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_mount",
+    "callees": ["mount_bdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__isofs_iget",
+    "callees": ["iget5_locked", "iget_failed", "isofs_read_inode", "unlock_new_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_iget5_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_iget5_test",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_read_inode",
+    "callees": ["__bread_gfp", "__brelse", "__builtin_constant_p", "__builtin_return_address", "__kmalloc", "_printk", "init_special_inode", "inode_nohighmem", "iso_date", "isofs_read_level3_size", "kfree", "kmalloc_trace", "memcpy", "parse_rock_ridge_inode", "set_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_isofs_bmap",
+    "callees": ["generic_block_bmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_readahead",
+    "callees": ["mpage_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_read_folio",
+    "callees": ["mpage_read_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_bread",
+    "callees": ["__bread_gfp", "isofs_bmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_bmap",
+    "callees": ["isofs_get_blocks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_get_block",
+    "callees": ["isofs_get_block.part.0", "isofs_get_blocks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_get_blocks",
+    "callees": ["__builtin_expect", "__getblk_gfp", "__isofs_iget", "_printk", "iput", "map_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_statfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_fill_super",
+    "callees": ["__bread_gfp", "__brelse", "__builtin_expect", "__isofs_iget", "_printk", "d_make_root", "iput", "isofs_get_last_session", "kfree", "kzalloc", "load_nls", "load_nls_default", "mktime64", "parse_options", "rootdir_empty", "sb_min_blocksize", "sb_set_blocksize", "strcmp", "strncmp", "unload_nls"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_show_options",
+    "callees": ["seq_printf", "seq_puts"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "parse_options",
+    "callees": ["kfree", "kstrdup", "match_int", "match_strdup", "match_token", "match_uint", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_dentry_cmpi_ms",
+    "callees": ["isofs_dentry_cmp_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_dentry_cmp_ms",
+    "callees": ["isofs_dentry_cmp_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_hashi_ms",
+    "callees": ["isofs_hashi_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_hash_ms",
+    "callees": ["isofs_hash_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_dentry_cmpi",
+    "callees": ["isofs_dentry_cmp_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_hashi",
+    "callees": ["isofs_hashi_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_dentry_cmp_common",
+    "callees": ["strncasecmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_hashi_common",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_remount",
+    "callees": ["sync_filesystem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_inodecache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["isofs_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "init_inodecache",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["isofs_inode_cachep"]
+  },
+  {
+    "name": "init_once",
+    "callees": ["inode_init_once"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_free_inode",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["isofs_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_alloc_inode",
+    "callees": ["kmem_cache_alloc_lru"],
+    "global_reads": ["isofs_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_put_super",
+    "callees": ["kfree", "unload_nls"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_bh",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

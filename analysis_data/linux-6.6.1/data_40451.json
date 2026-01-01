@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_walk_pgd",
+    "callees": ["mmap_write_lock", "mmap_write_unlock", "walk_page_range_novma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_hole",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_pte_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_pmd_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_pud_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_p4d_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptdump_pgd_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

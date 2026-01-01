@@ -1,0 +1,236 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_rs485_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear",
+    "callees": ["exar_misc_clear.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear",
+    "callees": ["exar_misc_clear.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_get_platform",
+    "callees": ["dmi_first_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_register_gpio.part.0",
+    "callees": ["__xr17v35x_register_gpio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_pci_driver_exit",
+    "callees": ["pci_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_pci_driver_init",
+    "callees": ["__pci_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_resume",
+    "callees": ["exar_misc_clear", "serial8250_resume_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_suspend",
+    "callees": ["serial8250_suspend_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_pci_remove",
+    "callees": ["serial8250_unregister_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_pci_probe",
+    "callees": ["__builtin_expect", "_dev_err", "devm_kmalloc", "devm_request_threaded_irq", "exar_misc_clear", "memset", "pci_alloc_irq_vectors", "pci_irq_vector", "pci_set_master", "pcim_enable_device", "pcim_iomap", "serial8250_register_8250_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_handler",
+    "callees": ["exar_misc_clear"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_misc_clear",
+    "callees": ["exar_misc_clear.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_xr17v35x_exit",
+    "callees": ["exar_get_platform", "serial8250_get_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_xr17v35x_setup",
+    "callees": ["default_setup", "exar_get_platform", "setup_gpio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_get_platform",
+    "callees": ["dmi_first_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iot2040_register_gpio",
+    "callees": ["__xr17v35x_register_gpio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iot2040_rs485_config",
+    "callees": ["generic_rs485_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_rs485_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_unregister_gpio",
+    "callees": ["device_remove_software_node", "platform_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_register_gpio",
+    "callees": ["xr17v35x_register_gpio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__xr17v35x_register_gpio",
+    "callees": ["device_add_software_node", "is_acpi_device_node", "platform_device_add", "platform_device_alloc", "platform_device_put", "set_primary_fwnode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_gpio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_xr17c154_setup",
+    "callees": ["default_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_connect_tech_setup",
+    "callees": ["default_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fastcom335_setup",
+    "callees": ["default_setup", "pci_fastcom335_setup.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_shutdown",
+    "callees": ["serial8250_do_shutdown", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_startup",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "serial8250_do_startup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_set_divisor",
+    "callees": ["serial8250_do_set_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xr17v35x_get_divisor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exar_pm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "tty_audit_buf_push",
+    "callees": ["tty_audit_log"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_push",
+    "callees": ["tty_audit_log"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_push",
+    "callees": ["tty_audit_log"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_free",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_add_data",
+    "callees": ["__builtin_expect", "memcpy", "mutex_lock", "mutex_unlock", "tty_audit_buf_get", "tty_audit_buf_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_get",
+    "callees": ["__builtin_expect", "audit_log_lost", "tty_audit_buf_alloc", "tty_audit_buf_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_push",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "tty_audit_buf_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_tiocsti",
+    "callees": ["tty_audit_log", "tty_audit_push"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_fork",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_exit",
+    "callees": ["tty_audit_buf_free", "tty_audit_buf_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_push",
+    "callees": ["tty_audit_log"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_log",
+    "callees": ["__get_task_comm", "__rcu_read_lock", "__rcu_read_unlock", "audit_log_end", "audit_log_format", "audit_log_n_hex", "audit_log_start", "audit_log_untrustedstring"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_free",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_audit_buf_alloc",
+    "callees": ["__builtin_return_address", "__mutex_init", "kfree", "kmalloc_trace", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "name": "sdahi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdahi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdahi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdahi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdalo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_bit_add_numbered_bus",
+    "callees": ["__i2c_bit_add_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_bit_add_bus",
+    "callees": ["__i2c_bit_add_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i2c_bit_add_bus",
+    "callees": ["_dev_warn", "test_bus"],
+    "global_reads": ["bit_test"],
+    "global_writes": []
+  },
+  {
+    "name": "bit_func",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bit_xfer_atomic",
+    "callees": ["_dev_warn", "bit_xfer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bit_xfer",
+    "callees": ["bit_doAddress", "i2c_repstart", "i2c_start", "i2c_stop", "readbytes", "sendbytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bit_doAddress",
+    "callees": ["_dev_err", "i2c_outb", "i2c_repstart", "try_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readbytes",
+    "callees": ["_dev_err", "acknak", "i2c_inb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acknak",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "_dev_err", "sclhi", "scllo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_address",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "i2c_outb", "i2c_start", "i2c_stop", "yield"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_bus",
+    "callees": ["_printk", "sclhi", "scllo", "sdahi", "sdalo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_stop",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "sclhi", "sdalo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_repstart",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "sclhi", "scllo", "sdahi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_start",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "scllo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sclhi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scllo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdahi",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdalo",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

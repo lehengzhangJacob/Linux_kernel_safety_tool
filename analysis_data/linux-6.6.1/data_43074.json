@@ -1,0 +1,206 @@
+[
+  {
+    "name": "con_free_unimap",
+    "callees": ["con_release_unimap", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_allocate_new",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_do_clear_unimap",
+    "callees": ["con_allocate_new", "con_release_unimap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inverse_translate.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "console_map_init",
+    "callees": ["con_set_default_unimap", "vc_cons_allocated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "conv_uni_to_pc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "conv_uni_to_8bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "conv_8bit_to_uni",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_get_unimap",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_user", "console_lock", "console_unlock", "kvfree", "kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_copy_unimap",
+    "callees": ["con_free_unimap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_set_default_unimap",
+    "callees": ["con_do_clear_unimap", "con_insert_unipair", "con_release_unimap", "con_unify_unimap", "kfree", "set_inverse_trans_unicode", "set_inverse_transl"],
+    "global_reads": ["dflt"],
+    "global_writes": ["dflt"]
+  },
+  {
+    "name": "con_set_unimap",
+    "callees": ["__builtin_expect", "con_insert_unipair", "con_unify_unimap", "con_unshare_unimap", "console_lock", "console_unlock", "kvfree", "set_inverse_trans_unicode", "set_inverse_transl", "vmemdup_user"],
+    "global_reads": ["dflt"],
+    "global_writes": ["dflt"]
+  },
+  {
+    "name": "con_unshare_unimap",
+    "callees": ["con_allocate_new", "con_insert_unipair", "con_release_unimap", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_clear_unimap",
+    "callees": ["con_do_clear_unimap", "console_lock", "console_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_do_clear_unimap",
+    "callees": ["con_allocate_new", "con_release_unimap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_allocate_new",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_insert_unipair",
+    "callees": ["kmalloc_array", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_unify_unimap",
+    "callees": ["con_release_unimap", "kfree", "memcmp", "vc_cons_allocated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_free_unimap",
+    "callees": ["con_release_unimap", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_release_unimap",
+    "callees": ["kfree"],
+    "global_reads": ["dflt"],
+    "global_writes": ["dflt"]
+  },
+  {
+    "name": "con_get_trans_new",
+    "callees": ["_copy_to_user", "console_lock", "console_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_set_trans_new",
+    "callees": ["_copy_from_user", "console_lock", "console_unlock", "update_user_maps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "con_get_trans_old",
+    "callees": ["_copy_to_user", "console_lock", "console_unlock", "conv_uni_to_pc"],
+    "global_reads": ["fg_console"],
+    "global_writes": []
+  },
+  {
+    "name": "con_set_trans_old",
+    "callees": ["__builtin_expect", "console_lock", "console_unlock", "update_user_maps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_user_maps",
+    "callees": ["set_inverse_trans_unicode", "set_inverse_transl", "vc_cons_allocated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inverse_translate",
+    "callees": ["inverse_translate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_translate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_inverse_trans_unicode",
+    "callees": ["kmalloc_array", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_inverse_transl",
+    "callees": ["__builtin_return_address", "conv_uni_to_pc", "kmalloc_trace", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

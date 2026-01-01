@@ -1,0 +1,20 @@
+[
+  {
+    "name": "mon_stat_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_stat_read",
+    "callees": ["simple_read_from_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mon_stat_open",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

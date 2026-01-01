@@ -1,0 +1,368 @@
+[
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bits_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bits_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_ioctl_handler",
+    "callees": ["evdev_do_ioctl", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_detach_client",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_exit",
+    "callees": ["input_unregister_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_init",
+    "callees": ["input_register_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_disconnect",
+    "callees": ["cdev_device_del", "evdev_cleanup", "input_free_minor", "input_unregister_handle", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_connect",
+    "callees": ["__mutex_init", "_printk", "cdev_device_add", "cdev_init", "dev_set_name", "device_initialize", "evdev_cleanup", "get_device", "input_free_minor", "input_get_new_minor", "input_register_handle", "input_unregister_handle", "kzalloc", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_cleanup",
+    "callees": ["evdev_hangup", "evdev_mark_dead", "input_close_device", "input_flush_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_mark_dead",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_ioctl_compat",
+    "callees": ["evdev_ioctl_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_ioctl",
+    "callees": ["evdev_ioctl_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_ioctl_handler",
+    "callees": ["evdev_do_ioctl", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_do_ioctl",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "_copy_to_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "bits_to_user", "evdev_get_mask", "evdev_grab", "evdev_handle_get_keycode", "evdev_handle_get_keycode_v2", "evdev_handle_get_val", "evdev_handle_mt_request", "evdev_handle_set_keycode", "evdev_handle_set_keycode_v2", "evdev_revoke", "evdev_set_clk_type", "evdev_set_mask", "handle_eviocgbit", "input_ff_effect_from_user", "input_ff_erase", "input_ff_upload", "input_inject_event", "input_release_device", "str_to_user", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_get_mask",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "bits_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_set_mask",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "bitmap_free", "bitmap_zalloc", "bits_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_revoke",
+    "callees": ["__wake_up", "evdev_ungrab", "input_flush_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_handle_get_val",
+    "callees": ["__evdev_flush_queue", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "bitmap_alloc", "bitmap_copy", "bitmap_free", "bits_to_user", "evdev_queue_syn_dropped"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_handle_set_keycode_v2",
+    "callees": ["_copy_from_user", "input_set_keycode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_handle_set_keycode",
+    "callees": ["__builtin_expect", "_copy_from_user", "input_set_keycode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_handle_get_keycode_v2",
+    "callees": ["_copy_from_user", "_copy_to_user", "input_get_keycode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_handle_get_keycode",
+    "callees": ["__builtin_expect", "_copy_from_user", "input_get_keycode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_eviocgbit",
+    "callees": ["bits_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "str_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bits_from_user",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bits_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_poll",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_read",
+    "callees": ["__SCT__might_resched", "evdev_fetch_next_event", "finish_wait", "init_wait_entry", "input_event_to_user", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_fetch_next_event",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_write",
+    "callees": ["__SCT__cond_resched", "input_event_from_user", "input_inject_event", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_open",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "evdev_attach_client", "evdev_compute_buffer_size", "evdev_detach_client", "evdev_open_device", "kvfree", "kvmalloc_node", "stream_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_release",
+    "callees": ["bitmap_free", "evdev_close_device", "evdev_detach_client", "evdev_ungrab", "input_flush_device", "kvfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_hangup",
+    "callees": ["__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "kill_fasync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_close_device",
+    "callees": ["input_close_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_open_device",
+    "callees": ["input_open_device", "mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_detach_client",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_grab",
+    "callees": ["input_grab_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_free",
+    "callees": ["kfree", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_fasync",
+    "callees": ["fasync_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_event",
+    "callees": ["evdev_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_events",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "evdev_pass_values", "input_get_timestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_pass_values",
+    "callees": ["__evdev_is_filtered", "__pass_event", "__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pass_event",
+    "callees": ["__builtin_expect", "kill_fasync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_set_clk_type",
+    "callees": ["__evdev_queue_syn_dropped", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "evdev_queue_syn_dropped",
+    "callees": ["__evdev_queue_syn_dropped", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__evdev_queue_syn_dropped",
+    "callees": ["__builtin_expect", "input_get_timestamp", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__evdev_flush_queue",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__evdev_is_filtered",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bitmap_copy",
+    "callees": ["__builtin_constant_p", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

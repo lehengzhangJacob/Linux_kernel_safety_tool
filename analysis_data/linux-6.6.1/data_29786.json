@@ -1,0 +1,446 @@
+[
+  {
+    "name": "gcm_hash_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_free",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_init_crypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_len_continue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_free",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_module_exit",
+    "callees": ["crypto_unregister_templates", "kfree"],
+    "global_reads": ["gcm_zeroes"],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_module_init",
+    "callees": ["crypto_register_templates", "kfree", "kzalloc", "sg_init_one"],
+    "global_reads": ["gcm_zeroes"],
+    "global_writes": ["gcm_zeroes"]
+  },
+  {
+    "name": "crypto_rfc4543_create",
+    "callees": ["aead_register_instance", "crypto_attr_alg_name", "crypto_check_attr_type", "crypto_drop_spawn", "crypto_grab_aead", "kfree", "kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_free",
+    "callees": ["crypto_rfc4106_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_exit_tfm",
+    "callees": ["crypto_destroy_tfm", "crypto_put_default_null_skcipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_init_tfm",
+    "callees": ["__builtin_expect", "crypto_destroy_tfm", "crypto_get_default_null_skcipher", "crypto_spawn_tfm2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_decrypt",
+    "callees": ["crypto_rfc4543_crypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_encrypt",
+    "callees": ["crypto_rfc4543_crypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_copy_src_to_dst",
+    "callees": ["crypto_skcipher_encrypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_crypt",
+    "callees": ["crypto_aead_decrypt", "crypto_aead_encrypt", "crypto_rfc4543_copy_src_to_dst"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_setauthsize",
+    "callees": ["crypto_aead_setauthsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4543_setkey",
+    "callees": ["crypto_aead_setkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_create",
+    "callees": ["aead_register_instance", "crypto_attr_alg_name", "crypto_check_attr_type", "crypto_drop_spawn", "crypto_grab_aead", "kfree", "kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_free",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_exit_tfm",
+    "callees": ["crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_init_tfm",
+    "callees": ["__builtin_expect", "crypto_spawn_tfm2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_decrypt",
+    "callees": ["crypto_aead_decrypt", "crypto_rfc4106_crypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_encrypt",
+    "callees": ["crypto_aead_encrypt", "crypto_rfc4106_crypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_crypt",
+    "callees": ["scatterwalk_ffwd", "scatterwalk_map_and_copy", "sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_setauthsize",
+    "callees": ["crypto_aead_setauthsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_rfc4106_setkey",
+    "callees": ["crypto_aead_setkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_base_create",
+    "callees": ["__builtin_expect", "crypto_attr_alg_name", "crypto_gcm_create_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_create",
+    "callees": ["__builtin_expect", "crypto_attr_alg_name", "crypto_gcm_create_common", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_create_common",
+    "callees": ["aead_register_instance", "crypto_check_attr_type", "crypto_gcm_free", "crypto_grab_ahash", "crypto_grab_skcipher", "kzalloc", "snprintf", "strcmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_free",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_exit_tfm",
+    "callees": ["crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_init_tfm",
+    "callees": ["__builtin_expect", "crypto_destroy_tfm", "crypto_spawn_tfm2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_decrypt",
+    "callees": ["crypto_gcm_init_common", "gcm_hash", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_dec_hash_continue",
+    "callees": ["crypto_gcm_init_crypt", "crypto_gcm_verify", "crypto_skcipher_decrypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_decrypt_done",
+    "callees": ["crypto_gcm_verify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_verify",
+    "callees": ["__crypto_memneq", "crypto_xor", "scatterwalk_map_and_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_encrypt",
+    "callees": ["crypto_gcm_init_common", "crypto_gcm_init_crypt", "crypto_skcipher_encrypt", "gcm_encrypt_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_encrypt_done",
+    "callees": ["gcm_encrypt_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_encrypt_continue",
+    "callees": ["gcm_hash", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_enc_copy_hash",
+    "callees": ["crypto_xor", "scatterwalk_map_and_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash",
+    "callees": ["crypto_ahash_init", "gcm_hash_init_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_init_done",
+    "callees": ["gcm_hash_init_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_init_continue",
+    "callees": ["gcm_hash_assoc_continue", "gcm_hash_assoc_remain_continue", "gcm_hash_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_assoc_done",
+    "callees": ["gcm_hash_assoc_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_assoc_continue",
+    "callees": ["gcm_hash_assoc_remain_continue", "gcm_hash_update"],
+    "global_reads": ["gcm_zeroes"],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_assoc_remain_done",
+    "callees": ["gcm_hash_assoc_remain_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_assoc_remain_continue",
+    "callees": ["gcm_hash_crypt_continue", "gcm_hash_crypt_remain_continue", "gcm_hash_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_crypt_done",
+    "callees": ["gcm_hash_crypt_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_crypt_continue",
+    "callees": ["gcm_hash_crypt_remain_continue", "gcm_hash_update"],
+    "global_reads": ["gcm_zeroes"],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_crypt_remain_done",
+    "callees": ["gcm_hash_crypt_remain_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_crypt_remain_continue",
+    "callees": ["gcm_hash_len", "gcm_hash_len_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_len_done",
+    "callees": ["gcm_hash_len_continue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_len_continue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_len",
+    "callees": ["__builtin_bswap64", "crypto_ahash_finup", "memcpy", "sg_init_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gcm_hash_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_init_crypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_init_common",
+    "callees": ["memcpy", "memset", "scatterwalk_ffwd", "sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_setauthsize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_gcm_setkey",
+    "callees": ["__init_swait_queue_head", "crypto_ahash_setkey", "crypto_skcipher_encrypt", "crypto_skcipher_setkey", "crypto_wait_req", "kfree_sensitive", "kzalloc", "sg_init_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_wait_req",
+    "callees": ["wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

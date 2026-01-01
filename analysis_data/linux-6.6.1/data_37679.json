@@ -1,0 +1,38 @@
+[
+  {
+    "name": "tick_init_highres",
+    "callees": ["tick_switch_to_oneshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_oneshot_mode_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_switch_to_oneshot",
+    "callees": ["_printk", "clockevents_switch_state", "tick_broadcast_switch_to_oneshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_setup_oneshot",
+    "callees": ["clockevents_program_event", "clockevents_switch_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_resume_oneshot",
+    "callees": ["clockevents_program_event", "clockevents_switch_state", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_program_event",
+    "callees": ["__builtin_expect", "clockevents_program_event", "clockevents_switch_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

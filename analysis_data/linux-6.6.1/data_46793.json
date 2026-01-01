@@ -1,0 +1,128 @@
+[
+  {
+    "name": "attribute_container_add_class_device",
+    "callees": ["attribute_container_add_attrs", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_add_class_device",
+    "callees": ["attribute_container_add_attrs", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_find_class_device",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_class_device_del",
+    "callees": ["attribute_container_remove_attrs", "device_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_remove_attrs",
+    "callees": ["device_remove_file", "sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_add_class_device_adapter",
+    "callees": ["attribute_container_add_class_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_add_class_device",
+    "callees": ["attribute_container_add_attrs", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_add_attrs",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "device_create_file", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_trigger",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_device_trigger",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_device_trigger_safe",
+    "callees": ["__builtin_expect", "do_attribute_container_device_trigger_safe", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_attribute_container_device_trigger_safe",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_remove_device",
+    "callees": ["attribute_container_remove_attrs", "device_unregister", "klist_del", "klist_iter_exit", "klist_iter_init", "klist_next", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_add_device",
+    "callees": ["_dev_err", "attribute_container_add_class_device", "dev_set_name", "device_initialize", "get_device", "klist_add_tail", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_release",
+    "callees": ["kfree", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_unregister",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_register",
+    "callees": ["klist_init", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attribute_container_classdev_to_container",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_container_klist_put",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_container_klist_get",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

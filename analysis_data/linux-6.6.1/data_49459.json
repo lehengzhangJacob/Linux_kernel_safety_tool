@@ -1,0 +1,158 @@
+[
+  {
+    "name": "sr_revalidate_disk.part.0",
+    "callees": ["get_sectorsize", "sr_cd_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_revalidate_disk",
+    "callees": ["scsi_test_unit_ready", "sr_revalidate_disk.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_revalidate_disk.part.0",
+    "callees": ["get_sectorsize", "sr_cd_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_sr",
+    "callees": ["driver_unregister", "unregister_blkdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_sr",
+    "callees": ["__register_blkdev", "scsi_register_driver", "unregister_blkdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_remove",
+    "callees": ["del_gendisk", "put_disk", "scsi_autopm_get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_read_cdda_bpc",
+    "callees": ["__builtin_expect", "blk_execute_rq", "blk_mq_free_request", "blk_rq_map_user", "blk_rq_unmap_user", "scsi_alloc_request", "scsi_normalize_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_packet",
+    "callees": ["sr_do_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_capabilities",
+    "callees": ["__builtin_bswap16", "__builtin_return_address", "cdrom_number_of_slots", "kfree", "kmalloc_trace", "scsi_mode_sense", "scsi_test_unit_ready", "sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_sectorsize",
+    "callees": ["__builtin_bswap32", "blk_queue_logical_block_size", "cdrom_get_last_written", "memset", "scsi_execute_cmd", "sdev_prefix_printk", "set_capacity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_probe",
+    "callees": ["__builtin_constant_p", "__mutex_init", "_find_first_zero_bit", "_raw_spin_lock", "_raw_spin_unlock", "blk_mq_alloc_disk_for_queue", "blk_pm_runtime_init", "blk_queue_rq_timeout", "device_add_disk", "get_capabilities", "kfree", "kzalloc", "put_disk", "register_cdrom", "scsi_autopm_get_device", "scsi_autopm_put_device", "sdev_prefix_printk", "set_capacity", "sprintf", "sr_revalidate_disk", "sr_vendor_init", "unregister_cdrom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_open",
+    "callees": ["scsi_block_when_processing_errors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_free_disk",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "unregister_cdrom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_block_check_events",
+    "callees": ["cdrom_check_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_block_ioctl",
+    "callees": ["capable", "cdrom_ioctl", "mutex_lock", "mutex_unlock", "scsi_autopm_get_device", "scsi_autopm_put_device", "scsi_ioctl", "scsi_ioctl_block_when_processing_errors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_block_release",
+    "callees": ["cdrom_release", "mutex_lock", "mutex_unlock", "scsi_device_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_block_open",
+    "callees": ["cdrom_open", "disk_check_media_change", "mutex_lock", "mutex_unlock", "scsi_autopm_get_device", "scsi_autopm_put_device", "scsi_device_get", "scsi_device_put", "sr_revalidate_disk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_revalidate_disk",
+    "callees": ["scsi_test_unit_ready", "sr_revalidate_disk.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_init_command",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "blk_dump_rq_flags", "scmd_printk", "scsi_alloc_sgtables", "scsi_free_sgtables", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_done",
+    "callees": ["__builtin_bswap32", "set_capacity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_check_events",
+    "callees": ["scsi_status_is_good", "scsi_test_unit_ready", "sdev_prefix_printk", "sr_get_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_get_events",
+    "callees": ["__builtin_bswap16", "scsi_execute_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sr_runtime_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

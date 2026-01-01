@@ -1,0 +1,116 @@
+[
+  {
+    "name": "find_filesystem",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fs_maxindex",
+    "callees": ["_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_sysfs",
+    "callees": ["fs_index", "fs_maxindex", "fs_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_fs_type",
+    "callees": ["__builtin_expect", "__get_fs_type", "__request_module", "_printk", "module_put", "strchr", "strlen"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__get_fs_type",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "find_filesystem", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_filesystems_init",
+    "callees": ["proc_create_single_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "filesystems_proc_show",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "seq_printf"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_sysfs",
+    "callees": ["fs_index", "fs_maxindex", "fs_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_sysfs",
+    "callees": ["__do_sys_sysfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_sysfs",
+    "callees": ["__do_sys_sysfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fs_maxindex",
+    "callees": ["_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  },
+  {
+    "name": "fs_name",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_user", "_raw_read_lock", "_raw_read_unlock", "module_put", "strlen", "try_module_get"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  },
+  {
+    "name": "fs_index",
+    "callees": ["__builtin_expect", "_raw_read_lock", "_raw_read_unlock", "getname", "putname", "strcmp"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_filesystem",
+    "callees": ["_raw_write_lock", "_raw_write_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_filesystem",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_write_lock", "_raw_write_unlock", "find_filesystem", "strchr", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_filesystem",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_filesystem",
+    "callees": ["module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_filesystem",
+    "callees": ["__module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_bdev_fs_names",
+    "callees": ["_printk", "_raw_read_lock", "_raw_read_unlock", "memcpy", "strlen"],
+    "global_reads": ["file_systems"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__mod_lruvec_kmem_state",
+    "callees": ["__mod_node_page_state", "virt_to_head_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__mod_lruvec_kmem_state",
+    "callees": ["__mod_node_page_state", "virt_to_head_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__mod_lruvec_kmem_state",
+    "callees": ["__mod_node_page_state", "virt_to_head_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_update_node.part.0",
+    "callees": ["__mod_lruvec_kmem_state", "list_lru_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_init",
+    "callees": ["__list_lru_init", "_printk", "free_prealloced_shrinker", "prealloc_shrinker", "register_shrinker_prepared"],
+    "global_reads": ["bucket_order"],
+    "global_writes": ["bucket_order"]
+  },
+  {
+    "name": "scan_shadow_nodes",
+    "callees": ["list_lru_walk_one_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shadow_lru_isolate",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__mod_lruvec_kmem_state", "_raw_spin_lock_irq", "_raw_spin_trylock", "_raw_spin_unlock", "_raw_spin_unlock_irq", "inode_add_lru", "list_lru_isolate", "mapping_shrinkable", "xa_delete_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "count_shadow_nodes",
+    "callees": ["list_lru_count_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_update_node",
+    "callees": ["__mod_lruvec_kmem_state", "list_lru_del", "workingset_update_node.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_activation",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_refault",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "lru_note_cost_refault", "mod_node_page_state", "workingset_test_recent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_test_recent",
+    "callees": ["node_page_state"],
+    "global_reads": ["bucket_order"],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_eviction",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["bucket_order"],
+    "global_writes": []
+  },
+  {
+    "name": "workingset_age_nonresident",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_shrinkable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mod_lruvec_kmem_state",
+    "callees": ["__mod_node_page_state", "virt_to_head_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

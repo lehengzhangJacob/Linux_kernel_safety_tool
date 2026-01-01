@@ -1,0 +1,278 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capable",
+    "callees": ["cap_capable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capable",
+    "callees": ["cap_capable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capable",
+    "callees": ["cap_capable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capable",
+    "callees": ["cap_capable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_setioprio",
+    "callees": ["cap_safe_nice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capability_init",
+    "callees": ["security_add_hooks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_mmap_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_mmap_addr",
+    "callees": ["cap_capable"],
+    "global_reads": ["dac_mmap_min_addr"],
+    "global_writes": []
+  },
+  {
+    "name": "cap_vm_enough_memory",
+    "callees": ["cap_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_prctl",
+    "callees": ["cap_capable", "cap_prctl_drop", "commit_creds", "prepare_creds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_prctl_drop",
+    "callees": ["commit_creds", "ns_capable", "prepare_creds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_setnice",
+    "callees": ["cap_task_setioprio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_setioprio",
+    "callees": ["cap_safe_nice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_setscheduler",
+    "callees": ["cap_safe_nice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_safe_nice",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ns_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_task_fix_setuid",
+    "callees": ["cap_emulate_setxuid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_emulate_setxuid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inode_removexattr",
+    "callees": ["capable_wrt_inode_uidgid", "ns_capable", "strcmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inode_setxattr",
+    "callees": ["ns_capable", "strcmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_bprm_creds_from_file",
+    "callees": ["__builtin_expect", "audit_log_bprm_fcaps", "get_file_caps", "handle_privileged_root", "nonroot_raised_pE", "ns_capable", "ptracer_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_vfs_caps_from_disk",
+    "callees": ["__vfs_getxattr", "make_vfsuid", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_convert_nscap",
+    "callees": ["__builtin_return_address", "capable_wrt_inode_uidgid", "from_vfsuid", "kmalloc_trace", "memcpy", "ns_capable", "validheader"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validheader",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inode_getsecurity",
+    "callees": ["d_find_any_alias", "dput", "kfree", "kzalloc", "make_vfsuid", "memcpy", "strcmp", "vfs_getxattr_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inode_killpriv",
+    "callees": ["__vfs_removexattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inode_need_killpriv",
+    "callees": ["__vfs_getxattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capset",
+    "callees": ["__builtin_expect", "cap_inh_is_capped"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_inh_is_capped",
+    "callees": ["cap_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capget",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_ptrace_traceme",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "has_ns_capability"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_ptrace_access_check",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ns_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_settime",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cap_capable",
+    "callees": ["cap_capable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_setuid_and_fcaps_mixed",
+    "callees": ["_printk"],
+    "global_reads": ["warned"],
+    "global_writes": ["warned"]
+  },
+  {
+    "name": "audit_log_bprm_fcaps",
+    "callees": ["__audit_log_bprm_fcaps", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

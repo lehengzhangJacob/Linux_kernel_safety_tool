@@ -1,0 +1,170 @@
+[
+  {
+    "name": "acpi_locate_initial_tables",
+    "callees": ["_printk", "acpi_initialize_tables"],
+    "global_reads": ["acpi_verify_table_checksum"],
+    "global_writes": ["acpi_gbl_enable_table_validation"]
+  },
+  {
+    "name": "__acpi_table_parse_entries",
+    "callees": ["acpi_table_parse_entries_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_table_parse_entries",
+    "callees": ["acpi_table_parse_entries_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_force_32bit_fadt_addr",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["acpi_gbl_use32_bit_fadt_addresses"]
+  },
+  {
+    "name": "acpi_force_table_verification_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_verify_table_checksum"]
+  },
+  {
+    "name": "acpi_parse_apic_instance",
+    "callees": ["_printk", "kstrtoint"],
+    "global_reads": ["acpi_apic_instance"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_init",
+    "callees": ["acpi_locate_initial_tables", "acpi_table_initrd_scan", "check_multiple_madt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_init_complete",
+    "callees": ["acpi_table_initrd_scan", "check_multiple_madt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_reserve_initial_tables",
+    "callees": ["_printk", "memblock_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_locate_initial_tables",
+    "callees": ["_printk", "acpi_initialize_tables"],
+    "global_reads": ["acpi_verify_table_checksum"],
+    "global_writes": ["acpi_gbl_enable_table_validation"]
+  },
+  {
+    "name": "acpi_os_table_override",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_physical_table_override",
+    "callees": ["acpi_table_initrd_override"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_initrd_scan",
+    "callees": ["_printk", "acpi_install_physical_table", "acpi_os_map_memory", "acpi_os_unmap_memory"],
+    "global_reads": ["acpi_tables_addr", "all_tables_size"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_initrd_override",
+    "callees": ["_printk", "acpi_os_map_memory", "acpi_os_unmap_memory", "memcmp"],
+    "global_reads": ["acpi_tables_addr", "all_tables_size"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_upgrade",
+    "callees": ["_printk", "arch_reserve_mem_area", "early_memremap", "early_memunmap", "find_cpio_data", "memblock_phys_alloc_range", "memcmp", "memcpy", "security_locked_down"],
+    "global_reads": ["acpi_tables_addr", "all_tables_size", "initrd_end", "initrd_start", "max_low_pfn_mapped"],
+    "global_writes": ["acpi_tables_addr", "all_tables_size"]
+  },
+  {
+    "name": "check_multiple_madt",
+    "callees": ["_printk", "acpi_get_table", "acpi_put_table"],
+    "global_reads": ["acpi_apic_instance"],
+    "global_writes": ["acpi_apic_instance"]
+  },
+  {
+    "name": "acpi_table_parse",
+    "callees": ["acpi_get_table", "acpi_put_table", "strncmp"],
+    "global_reads": ["acpi_apic_instance", "acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_parse_madt",
+    "callees": ["__acpi_table_parse_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_table_parse_entries",
+    "callees": ["acpi_table_parse_entries_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_entries_array",
+    "callees": ["_printk", "acpi_get_entry_length", "acpi_get_entry_type", "acpi_get_subtable_type", "call_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_subtable_type",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_print_madt_entry",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_parse_cedt",
+    "callees": ["__acpi_table_parse_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_parse_entries_array",
+    "callees": ["acpi_get_table", "acpi_parse_entries_array", "acpi_put_table", "strncmp"],
+    "global_reads": ["acpi_apic_instance", "acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_table_parse_entries",
+    "callees": ["__acpi_table_parse_entries"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

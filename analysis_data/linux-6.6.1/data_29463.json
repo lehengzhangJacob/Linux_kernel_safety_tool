@@ -1,0 +1,236 @@
+[
+  {
+    "name": "kprobe_post_process.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_post_process",
+    "callees": ["kprobe_post_process.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_post_process.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_post_process",
+    "callees": ["kprobe_post_process.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reenter_kprobe.part.0",
+    "callees": ["__builtin_unreachable", "_printk", "dump_kprobe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_singlestep.part.0",
+    "callees": ["kprobe_post_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_post_process.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_trampoline_kprobe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_init_kprobes",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_populate_kprobe_blacklist",
+    "callees": ["kprobe_add_area_blacklist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_fault_handler",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_int3_handler",
+    "callees": ["get_kprobe", "kprobe_post_process", "reenter_kprobe", "setup_singlestep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reenter_kprobe",
+    "callees": ["kprobes_inc_nmissed_count", "reenter_kprobe.part.0", "setup_singlestep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resume_singlestep",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_singlestep",
+    "callees": ["setup_detour_execution", "setup_singlestep.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_post_process",
+    "callees": ["kprobe_post_process.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_remove_kprobe",
+    "callees": ["__free_insn_slot", "perf_event_text_poke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_disarm_kprobe",
+    "callees": ["perf_event_text_poke", "text_poke", "text_poke_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_arm_kprobe",
+    "callees": ["perf_event_text_poke", "text_poke", "text_poke_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_prepare_kprobe",
+    "callees": ["__free_insn_slot", "__get_insn_slot", "alternatives_text_reserved", "arch_copy_kprobe", "can_probe", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_copy_kprobe",
+    "callees": ["__copy_instruction", "perf_event_text_poke", "prepare_emulation", "text_poke"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_emulation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_jmp_indirect",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_call_indirect",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_loop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_jcc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_jmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_call",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_ret",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kprobe_emulate_ifmodifiers",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_insn_page",
+    "callees": ["module_alloc", "set_memory_rox"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__copy_instruction",
+    "callees": ["_printk", "copy_from_kernel_nofault", "insn_decode", "insn_rip_relative", "recover_probed_instruction"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_adjust_kprobe_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_probe",
+    "callees": ["insn_decode", "kallsyms_lookup_size_offset", "recover_probed_instruction"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recover_probed_instruction",
+    "callees": ["__recover_optprobed_insn", "__recover_probed_insn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__recover_probed_insn",
+    "callees": ["copy_from_kernel_nofault", "get_kprobe", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_boost",
+    "callees": ["__builtin_constant_p", "inat_get_opcode_attribute", "search_exception_tables"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "synthesize_relcall",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "synthesize_reljump",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

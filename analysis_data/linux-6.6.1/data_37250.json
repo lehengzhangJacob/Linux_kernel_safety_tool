@@ -1,0 +1,26 @@
+[
+  {
+    "name": "video_setup",
+    "callees": ["strchr", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["video_of_only", "video_option"]
+  },
+  {
+    "name": "__video_get_options",
+    "callees": ["__video_get_option_string"],
+    "global_reads": ["video_of_only"],
+    "global_writes": []
+  },
+  {
+    "name": "video_get_options",
+    "callees": ["__video_get_option_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__video_get_option_string",
+    "callees": ["strlen", "strncmp"],
+    "global_reads": ["video_option"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "delay_halt.part.0",
+    "callees": [],
+    "global_reads": ["delay_halt_fn"],
+    "global_writes": []
+  },
+  {
+    "name": "__ndelay",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udelay",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__const_udelay",
+    "callees": [],
+    "global_reads": ["delay_fn", "loops_per_jiffy"],
+    "global_writes": []
+  },
+  {
+    "name": "__delay",
+    "callees": [],
+    "global_reads": ["delay_fn"],
+    "global_writes": []
+  },
+  {
+    "name": "read_current_timer",
+    "callees": [],
+    "global_reads": ["delay_fn"],
+    "global_writes": []
+  },
+  {
+    "name": "use_mwaitx_delay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["delay_fn", "delay_halt_fn"]
+  },
+  {
+    "name": "delay_halt",
+    "callees": ["delay_halt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delay_halt_mwaitx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delay_halt_tpause",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delay_tsc",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delay_loop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "use_tpause_delay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["delay_fn", "delay_halt_fn"]
+  },
+  {
+    "name": "use_tsc_delay",
+    "callees": [],
+    "global_reads": ["delay_fn"],
+    "global_writes": ["delay_fn"]
+  }
+]

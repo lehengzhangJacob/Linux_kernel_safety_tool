@@ -1,0 +1,128 @@
+[
+  {
+    "name": "e1000_lower_eec_clk",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_lower_eec_clk",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_poll_eerd_eewr_done",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_raise_eec_clk",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_reload_nvm_generic",
+    "callees": ["__ew32", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_update_nvm_checksum_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_validate_nvm_checksum_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_read_mac_addr_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_read_pba_string_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_write_nvm_spi",
+    "callees": ["e1000_ready_nvm_eeprom", "e1000_shift_out_eec_bits", "e1000_standby_nvm", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_read_nvm_eerd",
+    "callees": ["__ew32", "e1000e_poll_eerd_eewr_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_ready_nvm_eeprom",
+    "callees": ["__const_udelay", "__ew32", "e1000_shift_in_eec_bits", "e1000_shift_out_eec_bits", "e1000_standby_nvm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_release_nvm",
+    "callees": ["__ew32", "e1000_stop_nvm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_stop_nvm",
+    "callees": ["e1000_lower_eec_clk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_standby_nvm",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_acquire_nvm",
+    "callees": ["__const_udelay", "__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_poll_eerd_eewr_done",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_shift_out_eec_bits",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay", "e1000_lower_eec_clk", "e1000_raise_eec_clk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_lower_eec_clk",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_raise_eec_clk",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__ew32", "__udelay"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

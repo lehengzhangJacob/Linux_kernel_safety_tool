@@ -1,0 +1,98 @@
+[
+  {
+    "name": "xprt_sendmsg",
+    "callees": ["iov_iter_advance", "sock_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_send_kvec",
+    "callees": ["iov_iter_kvec", "xprt_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_sendmsg",
+    "callees": ["iov_iter_advance", "sock_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_sendmsg",
+    "callees": ["iov_iter_advance", "sock_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_sock_sendmsg",
+    "callees": ["__builtin_expect", "xprt_send_kvec", "xprt_send_pagedata", "xprt_send_rm_and_kvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_send_pagedata",
+    "callees": ["iov_iter_bvec", "xdr_buf_pagecount", "xprt_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_send_kvec",
+    "callees": ["iov_iter_kvec", "xprt_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xprt_sendmsg",
+    "callees": ["iov_iter_advance", "sock_sendmsg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "csum_partial_copy_to_xdr",
+    "callees": ["__builtin_expect", "csum_partial", "netdev_rx_csum_fault", "skb_checksum", "skb_csum_unnecessary", "xdr_partial_copy_from_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_skb_read_and_csum_bits",
+    "callees": ["skb_copy_and_csum_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_skb_read_bits",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

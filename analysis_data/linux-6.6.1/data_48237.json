@@ -1,0 +1,74 @@
+[
+  {
+    "name": "mac_hid_stop_emulation",
+    "callees": ["input_unregister_device", "input_unregister_handler"],
+    "global_reads": ["mac_hid_emumouse_dev"],
+    "global_writes": ["mac_hid_emumouse_dev"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_emumouse_filter.part.0",
+    "callees": ["input_event"],
+    "global_reads": ["mac_hid_emumouse_dev", "mouse_button2_keycode", "mouse_button3_keycode"],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_exit",
+    "callees": ["mac_hid_stop_emulation", "unregister_sysctl_table"],
+    "global_reads": ["mac_hid_sysctl_header", "mouse_emulate_buttons"],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_init",
+    "callees": ["register_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": ["mac_hid_sysctl_header"]
+  },
+  {
+    "name": "mac_hid_toggle_emumouse",
+    "callees": ["mac_hid_start_emulation", "mac_hid_stop_emulation", "mutex_lock_killable", "mutex_unlock", "proc_dointvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_stop_emulation",
+    "callees": ["input_unregister_device", "input_unregister_handler"],
+    "global_reads": ["mac_hid_emumouse_dev"],
+    "global_writes": ["mac_hid_emumouse_dev"]
+  },
+  {
+    "name": "mac_hid_start_emulation",
+    "callees": ["input_register_handler", "input_unregister_device", "mac_hid_create_emumouse"],
+    "global_reads": ["mac_hid_emumouse_dev"],
+    "global_writes": ["mac_hid_emumouse_dev"]
+  },
+  {
+    "name": "mac_hid_emumouse_disconnect",
+    "callees": ["input_close_device", "input_unregister_handle", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_emumouse_connect",
+    "callees": ["_printk", "input_open_device", "input_register_handle", "input_unregister_handle", "kfree", "kzalloc"],
+    "global_reads": ["mac_hid_emumouse_dev"],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_emumouse_filter",
+    "callees": ["mac_hid_emumouse_filter.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mac_hid_create_emumouse",
+    "callees": ["input_allocate_device", "input_free_device", "input_register_device"],
+    "global_reads": ["mac_hid_emumouse_dev"],
+    "global_writes": ["mac_hid_emumouse_dev"]
+  }
+]

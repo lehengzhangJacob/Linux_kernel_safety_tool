@@ -1,0 +1,104 @@
+[
+  {
+    "name": "intel_crtc_put_color_blobs",
+    "callees": ["drm_property_blob_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_crtc_state",
+    "callees": ["drm_atomic_get_crtc_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_state_clear",
+    "callees": ["drm_atomic_state_default_clear", "intel_atomic_clear_global_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_state_free",
+    "callees": ["drm_atomic_state_default_release", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_state_alloc",
+    "callees": ["drm_atomic_state_init", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_destroy_state",
+    "callees": ["__builtin_expect", "__drm_atomic_helper_crtc_destroy_state", "__warn_printk", "dev_driver_string", "intel_crtc_put_color_blobs", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_free_hw_state",
+    "callees": ["intel_crtc_put_color_blobs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_put_color_blobs",
+    "callees": ["drm_property_blob_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_duplicate_state",
+    "callees": ["__drm_atomic_helper_crtc_duplicate_state", "drm_property_blob_get", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_digital_connector_state",
+    "callees": ["drm_atomic_get_connector_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_any_crtc_needs_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_connector_needs_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_digital_connector_duplicate_state",
+    "callees": ["__drm_atomic_helper_connector_duplicate_state", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_digital_connector_atomic_check",
+    "callees": ["drm_connector_atomic_hdr_metadata_equal", "intel_hdcp_atomic_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_digital_connector_atomic_set_property",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_digital_connector_atomic_get_property",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

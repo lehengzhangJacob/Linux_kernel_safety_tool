@@ -1,0 +1,26 @@
+[
+  {
+    "name": "lzorle1x_1_compress",
+    "callees": ["lzogeneric1x_1_compress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzo1x_1_compress",
+    "callees": ["lzogeneric1x_1_compress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzogeneric1x_1_compress",
+    "callees": ["lzo1x_1_do_compress", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzo1x_1_do_compress",
+    "callees": ["__builtin_ctzll", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

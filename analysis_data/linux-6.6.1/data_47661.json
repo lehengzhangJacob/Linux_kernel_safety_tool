@@ -1,0 +1,140 @@
+[
+  {
+    "name": "seg6_validate_srh.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_dumphmac_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_sethmac",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_validate_srh.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_exit",
+    "callees": ["genl_unregister_family", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_init",
+    "callees": ["_printk", "genl_register_family", "genl_unregister_family", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_net_exit",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_net_init",
+    "callees": ["__mutex_init", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_dumphmac",
+    "callees": ["seg6_genl_sethmac"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_dumphmac_done",
+    "callees": ["seg6_genl_dumphmac_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_dumphmac_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_get_tunsrc",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "genlmsg_put", "genlmsg_reply", "kfree_skb_reason", "nla_put", "nlmsg_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_set_tunsrc",
+    "callees": ["kfree", "kmemdup", "mutex_lock", "mutex_unlock", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_genl_sethmac",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_icmp_srh",
+    "callees": ["seg6_get_srh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_get_srh",
+    "callees": ["ipv6_find_hdr", "pskb_may_pull_reason", "seg6_validate_srh.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seg6_validate_srh",
+    "callees": ["seg6_validate_srh.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

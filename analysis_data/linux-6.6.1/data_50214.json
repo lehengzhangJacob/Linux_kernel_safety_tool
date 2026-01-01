@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_remove_ep_devs",
+    "callees": ["device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_create_ep_devs",
+    "callees": ["dev_set_name", "device_register", "kzalloc", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ep_device_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "direction_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "interval_show",
+    "callees": ["sprintf", "usb_decode_interval"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "type_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wMaxPacketSize_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bInterval_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bmAttributes_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bEndpointAddress_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bLength_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

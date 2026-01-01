@@ -1,0 +1,134 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_write_end",
+    "callees": ["__builtin_expect", "_compound_head", "folio_mark_dirty", "folio_put", "folio_unlock", "inode_add_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_write_begin",
+    "callees": ["netfs_write_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_direct_IO",
+    "callees": ["inode_add_bytes", "p9_client_read", "p9_client_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_launder_folio",
+    "callees": ["folio_clear_dirty_for_io", "folio_wait_private_2", "v9fs_vfs_write_folio_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_vfs_writepage",
+    "callees": ["_compound_head", "folio_mapping", "folio_redirty_for_writepage", "folio_unlock", "mapping_set_error", "v9fs_vfs_write_folio_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_vfs_write_folio_locked",
+    "callees": ["__builtin_expect", "__folio_start_writeback", "__warn_printk", "folio_end_writeback", "folio_mapping", "folio_wait_private_2", "iov_iter_xarray", "p9_client_write", "p9_fid_put", "v9fs_fid_find_inode"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "v9fs_invalidate_folio",
+    "callees": ["folio_wait_private_2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_release_folio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_begin_cache_operation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_free_request",
+    "callees": ["p9_fid_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_init_request",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "p9_fid_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_issue_read",
+    "callees": ["__builtin_constant_p", "iov_iter_xarray", "netfs_subreq_terminated", "p9_client_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error",
+    "callees": ["__builtin_expect", "__filemap_set_wb_err", "errseq_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

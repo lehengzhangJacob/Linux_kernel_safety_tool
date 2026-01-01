@@ -1,0 +1,704 @@
+[
+  {
+    "name": "e100_disable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_disable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up",
+    "callees": ["e100_rx_alloc_list", "e100_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_disable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up",
+    "callees": ["e100_rx_alloc_list", "e100_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_disable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up",
+    "callees": ["e100_rx_alloc_list", "e100_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_enable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_start_receiver",
+    "callees": ["e100_exec_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_start_receiver",
+    "callees": ["e100_exec_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_enable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up",
+    "callees": ["e100_rx_alloc_list", "e100_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_free",
+    "callees": ["dma_free_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_loopback_test",
+    "callees": ["e100_loopback_test.part.0", "e100_rx_alloc_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_loopback_test.part.0",
+    "callees": ["__netdev_alloc_skb", "dma_sync_single_for_cpu", "e100_alloc_cbs", "e100_clean_cbs", "e100_hw_init", "e100_hw_reset", "e100_rx_clean_list", "e100_start_receiver", "e100_xmit_frame", "memcmp", "memset", "msleep", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_open.part.0",
+    "callees": ["netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up.part.0",
+    "callees": ["e100_alloc_cbs", "e100_clean_cbs", "e100_enable_irq", "e100_hw_init", "e100_rx_clean_list", "e100_set_multicast_list", "e100_start_receiver", "mod_timer", "napi_enable", "netif_tx_wake_queue", "request_threaded_irq", "timer_delete_sync"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_hw_init.part.0",
+    "callees": ["e100_disable_irq", "e100_exec_cb", "e100_exec_cmd", "e100_load_ucode_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_strings.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_cleanup_module",
+    "callees": ["pci_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_init_module",
+    "callees": ["__pci_register_driver", "_printk"],
+    "global_reads": ["debug"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_io_resume",
+    "callees": ["__builtin_constant_p", "e100_open", "mod_timer", "netif_device_attach", "pci_enable_wake"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_io_slot_reset",
+    "callees": ["_printk", "e100_hw_reset", "e100_phy_init", "pci_enable_device", "pci_set_master"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_io_error_detected",
+    "callees": ["__builtin_constant_p", "e100_down", "netif_device_detach", "pci_disable_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_shutdown",
+    "callees": ["__e100_power_off", "__e100_shutdown"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_resume",
+    "callees": ["__builtin_constant_p", "e100_up", "netdev_err", "netif_device_attach", "pci_enable_device", "pci_set_master"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_suspend",
+    "callees": ["__e100_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__e100_shutdown",
+    "callees": ["__builtin_constant_p", "e100_asf", "e100_down", "netif_device_detach", "pci_disable_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_remove",
+    "callees": ["dma_pool_destroy", "e100_free", "free_netdev", "pci_disable_device", "pci_iounmap", "pci_release_regions", "unregister_netdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_probe",
+    "callees": ["__builtin_memcpy", "alloc_etherdev_mqs", "dev_addr_mod", "device_set_wakeup_enable", "dma_pool_create", "dma_set_mask", "e100_alloc", "e100_eeprom_load", "e100_free", "e100_get_defaults", "e100_hw_reset", "e100_phy_init", "free_netdev", "init_timer_key", "netdev_err", "netdev_info", "netif_napi_add_weight", "pci_disable_device", "pci_enable_device", "pci_iomap", "pci_iounmap", "pci_pme_active", "pci_release_regions", "pci_request_regions", "pci_set_master", "register_netdev", "strncpy", "unregister_netdev"],
+    "global_reads": ["debug", "eeprom_bad_csum_allow", "use_io"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_features",
+    "callees": ["e100_exec_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_close",
+    "callees": ["e100_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_open",
+    "callees": ["e100_open.part.0", "e100_up", "netif_carrier_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_free",
+    "callees": ["dma_free_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_alloc",
+    "callees": ["dma_alloc_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_do_ioctl",
+    "callees": ["generic_mii_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_strings",
+    "callees": ["e100_get_strings.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_ethtool_stats",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_sset_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_phys_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_diag_test",
+    "callees": ["__builtin_constant_p", "e100_down", "e100_eeprom_load", "e100_loopback_test", "e100_self_test", "e100_up", "memset", "mii_ethtool_gset", "mii_ethtool_sset", "mii_link_ok", "msleep_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_ringparam",
+    "callees": ["__builtin_constant_p", "e100_down", "e100_up", "netdev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_ringparam",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_eeprom",
+    "callees": ["e100_eeprom_save", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_eeprom",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_eeprom_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_link",
+    "callees": ["mii_link_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_nway_reset",
+    "callees": ["mii_nway_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_wol",
+    "callees": ["device_set_wakeup_enable", "e100_exec_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_wol",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_regs",
+    "callees": ["e100_exec_cb", "ioread16", "ioread8", "memcpy", "memset", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_regs_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_drvinfo",
+    "callees": ["strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_link_ksettings",
+    "callees": ["e100_exec_cb", "mii_ethtool_set_link_ksettings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_link_ksettings",
+    "callees": ["mii_ethtool_get_link_ksettings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_loopback_test",
+    "callees": ["e100_loopback_test.part.0", "e100_rx_alloc_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_tx_timeout_task",
+    "callees": ["__builtin_constant_p", "e100_down", "e100_up", "ioread8", "netdev_printk", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_tx_timeout",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_down",
+    "callees": ["e100_clean_cbs", "e100_hw_reset", "e100_rx_clean_list", "free_irq", "napi_disable", "netif_carrier_off", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_up",
+    "callees": ["e100_rx_alloc_list", "e100_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_asf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_mac_address",
+    "callees": ["dev_addr_mod", "e100_exec_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_netpoll",
+    "callees": ["e100_disable_irq", "e100_enable_irq", "e100_intr", "e100_tx_clean"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_poll",
+    "callees": ["__builtin_expect", "e100_enable_irq", "e100_rx_clean", "e100_tx_clean", "napi_complete_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_intr",
+    "callees": ["__builtin_expect", "__napi_schedule", "e100_disable_irq", "ioread8", "iowrite8", "napi_schedule_prep", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_rx_alloc_list",
+    "callees": ["dma_sync_single_for_device", "e100_rx_alloc_skb", "e100_rx_clean_list", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_rx_clean_list",
+    "callees": ["consume_skb", "dma_unmap_page_attrs", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_rx_indicate",
+    "callees": ["__builtin_expect", "dev_kfree_skb_any_reason", "dma_sync_single_for_cpu", "dma_sync_single_for_device", "dma_unmap_page_attrs", "eth_type_trans", "ioread8", "netdev_printk", "netif_receive_skb", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_rx_alloc_skb",
+    "callees": ["__builtin_expect", "__netdev_alloc_skb", "dev_kfree_skb_any_reason", "dma_map_single_attrs", "dma_sync_single_for_device", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_start_receiver",
+    "callees": ["e100_exec_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_alloc_cbs",
+    "callees": ["dma_pool_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_clean_cbs",
+    "callees": ["consume_skb", "dma_pool_free", "dma_unmap_page_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_xmit_frame",
+    "callees": ["__const_udelay", "e100_exec_cb", "e100_exec_cmd", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_xmit_prepare",
+    "callees": ["__builtin_expect", "dma_map_single_attrs", "skb_tx_timestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_watchdog",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "e100_adjust_adaptive_ifs", "e100_set_multicast_list", "e100_update_stats", "ioread8", "iowrite8", "mii_check_link", "mii_ethtool_gset", "mii_link_ok", "mod_timer", "netdev_info", "netdev_printk", "netif_carrier_ok", "round_jiffies"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_adjust_adaptive_ifs",
+    "callees": ["e100_exec_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_update_stats",
+    "callees": ["e100_exec_cmd", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_set_multicast_list",
+    "callees": ["e100_exec_cb", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_multi",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_hw_init",
+    "callees": ["e100_hw_init.part.0", "e100_hw_reset", "e100_phy_init", "e100_self_test", "netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_phy_init",
+    "callees": ["e100_phy_check_without_mii", "netdev_err", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_phy_check_without_mii",
+    "callees": ["netdev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_dump",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_setup_iaaddr",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_load_ucode_wait",
+    "callees": ["__builtin_expect", "__const_udelay", "e100_exec_cb", "e100_request_firmware", "ioread8", "iowrite8", "msleep", "netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_setup_ucode",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_request_firmware",
+    "callees": ["netdev_err", "netdev_info", "release_firmware", "request_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_configure",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "memset", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_get_defaults",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_ctrl_phy_mii_emulated",
+    "callees": ["netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_ctrl_phy_82552_v",
+    "callees": ["mdio_ctrl_hw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_ctrl_hw",
+    "callees": ["__builtin_expect", "__const_udelay", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread32", "iowrite32", "netdev_err", "netdev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mdio_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_exec_cb",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "e100_exec_cmd", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_exec_cmd",
+    "callees": ["__builtin_expect", "__const_udelay", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite32", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_eeprom_save",
+    "callees": ["e100_eeprom_read", "e100_eeprom_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_eeprom_load",
+    "callees": ["e100_eeprom_read", "netdev_err"],
+    "global_reads": ["eeprom_bad_csum_allow"],
+    "global_writes": []
+  },
+  {
+    "name": "e100_eeprom_read",
+    "callees": ["__const_udelay", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_eeprom_write",
+    "callees": ["__const_udelay", "ioread8", "iowrite8", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_self_test",
+    "callees": ["e100_disable_irq", "ioread8", "iowrite32", "msleep", "netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_hw_reset",
+    "callees": ["__const_udelay", "e100_disable_irq", "ioread8", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_disable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e100_enable_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioread8", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_tx_timestamp",
+    "callees": ["skb_tstamp_tx"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

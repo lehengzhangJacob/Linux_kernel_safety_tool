@@ -1,0 +1,44 @@
+[
+  {
+    "name": "clear_feature.part.0",
+    "callees": ["__builtin_constant_p", "do_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_feature",
+    "callees": ["__builtin_constant_p", "clear_feature.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_feature.part.0",
+    "callees": ["__builtin_constant_p", "do_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_clear_cpu_cap",
+    "callees": ["do_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_cpu_cap",
+    "callees": ["do_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_clear_cpu_cap",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "clear_feature", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_feature",
+    "callees": ["__builtin_constant_p", "clear_feature.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

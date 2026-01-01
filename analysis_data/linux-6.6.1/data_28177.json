@@ -1,0 +1,50 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpu__init_system",
+    "callees": ["fpstate_reset", "fpu__init_cpu_generic", "fpu__init_cpu_xstate", "fpu__init_system_early_generic", "fpu__init_system_generic", "fpu__init_system_xstate", "fpu__init_system_xstate_size_legacy"],
+    "global_reads": [],
+    "global_writes": ["arch_task_struct_size"]
+  },
+  {
+    "name": "fpu__init_system_xstate_size_legacy",
+    "callees": ["fpstate_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpu__init_system_generic",
+    "callees": ["fpstate_init_user"],
+    "global_reads": ["mxcsr_feature_mask"],
+    "global_writes": ["mxcsr_feature_mask"]
+  },
+  {
+    "name": "fpu__init_system_early_generic",
+    "callees": ["__builtin_constant_p", "_printk", "fpu__probe_without_cpuid", "setup_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpu__probe_without_cpuid",
+    "callees": ["_printk", "native_write_cr0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpu__init_cpu",
+    "callees": ["fpu__init_cpu_generic", "fpu__init_cpu_xstate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpu__init_cpu_generic",
+    "callees": ["cr4_set_bits", "native_write_cr0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "hsu_dma_start_transfer",
+    "callees": ["hsu_dma_chan_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_get_all_descriptors",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_desc_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_remove",
+    "callees": ["dma_async_device_unregister", "tasklet_kill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_probe",
+    "callees": ["_dev_info", "devm_kmalloc", "dma_async_device_register", "vchan_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_synchronize",
+    "callees": ["vchan_synchronize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_free_chan_resources",
+    "callees": ["vchan_free_chan_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_terminate_all",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hsu_dma_desc_free", "vchan_dma_desc_free_list", "vchan_get_all_descriptors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_resume",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_pause",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_slave_config",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_tx_status",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_cookie_status", "hsu_dma_active_desc_size", "vchan_find_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_active_desc_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_issue_pending",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hsu_dma_start_transfer", "vchan_issue_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_prep_slave_sg",
+    "callees": ["hsu_dma_alloc_desc", "sg_next", "vchan_tx_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_desc_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_alloc_desc",
+    "callees": ["kfree", "kmalloc_array", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_do_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hsu_dma_chan_start", "hsu_dma_start_transfer", "vchan_cookie_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_get_status",
+    "callees": ["__const_udelay", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_start_transfer",
+    "callees": ["hsu_dma_chan_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsu_dma_chan_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_synchronize",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tasklet_kill", "vchan_dma_desc_free_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_free_chan_resources",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "vchan_dma_desc_free_list", "vchan_get_all_descriptors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_get_all_descriptors",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_cookie_complete",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_issue_pending",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_tx_prep",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dma_async_tx_descriptor_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_schedule",
+    "callees": ["__tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_async_is_complete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

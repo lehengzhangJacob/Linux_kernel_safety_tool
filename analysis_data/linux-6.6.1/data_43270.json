@@ -1,0 +1,20 @@
+[
+  {
+    "name": "dql_init",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dql_reset",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dql_completed",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  }
+]

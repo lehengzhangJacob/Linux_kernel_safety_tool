@@ -1,0 +1,32 @@
+[
+  {
+    "name": "gov_attr_set_put",
+    "callees": ["kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gov_attr_set_get",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gov_attr_set_init",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "governor_store",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "governor_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "get_phy_reg",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_phy_reg",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_ohci1394_dma",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["init_ohci1394_dma_early"]
+  },
+  {
+    "name": "init_ohci1394_controller",
+    "callees": ["_printk", "cachemode2protval", "init_ohci1394_reset_and_init_dma", "native_set_fixmap", "read_pci_config"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "init_ohci1394_wait_for_busresets",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_ohci1394_initialize",
+    "callees": ["get_phy_reg", "set_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_phy_reg",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_phy_reg",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_ohci1394_dma_on_all_controllers",
+    "callees": ["_printk", "early_pci_allowed", "init_ohci1394_controller", "read_pci_config"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

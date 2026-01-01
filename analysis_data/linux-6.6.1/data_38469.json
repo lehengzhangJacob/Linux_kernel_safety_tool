@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_readdir",
+    "callees": ["__get_free_pages", "do_isofs_readdir", "free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_isofs_readdir",
+    "callees": ["__brelse", "_printk", "dir_emit_dot", "dir_emit_dotdot", "get_acorn_filename", "get_joliet_filename", "get_rock_ridge_filename", "isofs_bread", "isofs_name_translate", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_acorn_filename",
+    "callees": ["isofs_name_translate", "sprintf", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "isofs_name_translate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parent_ino",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

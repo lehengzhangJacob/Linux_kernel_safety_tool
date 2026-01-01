@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_cmp",
+    "callees": ["nf_ct_ext_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_masq_schedule.part.0",
+    "callees": ["kzalloc", "maybe_get_net", "module_put", "put_net", "schedule_work", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_cmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_masquerade_inet_unregister_notifiers",
+    "callees": ["mutex_lock", "mutex_unlock", "unregister_inet6addr_notifier", "unregister_inetaddr_notifier", "unregister_netdevice_notifier"],
+    "global_reads": ["masq_refcnt"],
+    "global_writes": ["masq_refcnt"]
+  },
+  {
+    "name": "nf_nat_masquerade_inet_register_notifiers",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "register_inet6addr_notifier", "register_inetaddr_notifier", "register_netdevice_notifier", "unregister_inetaddr_notifier", "unregister_netdevice_notifier"],
+    "global_reads": ["masq_refcnt"],
+    "global_writes": ["masq_refcnt"]
+  },
+  {
+    "name": "masq_inet6_event",
+    "callees": ["nf_nat_masq_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_masquerade_ipv6",
+    "callees": ["__builtin_expect", "ipv6_dev_get_saddr", "nf_ct_nat_ext_add", "nf_nat_setup_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "masq_inet_event",
+    "callees": ["memset", "nf_nat_masq_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_cmp",
+    "callees": ["device_cmp", "inet_cmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "masq_device_event",
+    "callees": ["nf_nat_masq_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_cmp",
+    "callees": ["nf_ct_ext_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iterate_cleanup_work",
+    "callees": ["kfree", "module_put", "nf_ct_iterate_cleanup_net", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_masquerade_ipv4",
+    "callees": ["__builtin_expect", "_printk", "inet_select_addr", "memset", "nf_ct_nat_ext_add", "nf_nat_setup_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

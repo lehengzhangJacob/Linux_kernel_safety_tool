@@ -1,0 +1,566 @@
+[
+  {
+    "name": "dmar_platform_optin",
+    "callees": ["acpi_get_table", "acpi_put_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_find_dmaru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_find_dmaru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_find_dmaru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_table_detect",
+    "callees": ["_printk", "acpi_get_table"],
+    "global_reads": ["dmar_tbl"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_remove_dev_scope.part.0",
+    "callees": ["put_device", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmap_iommu",
+    "callees": ["__release_region", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_handler_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_set_interrupt.part.0",
+    "callees": ["_printk", "dmar_alloc_hwirq", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_remove_dev_scope.part.0",
+    "callees": ["put_device", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_platform_optin",
+    "callees": ["acpi_get_table", "acpi_put_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_device_remove",
+    "callees": ["dmar_device_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_device_add",
+    "callees": ["dmar_device_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_device_hotplug",
+    "callees": ["_printk", "acpi_check_dsm", "acpi_walk_namespace", "dmar_hotplug_insert", "dmar_hotplug_remove", "down_write", "up_write"],
+    "global_reads": ["intel_iommu_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_get_dsm_handle",
+    "callees": ["acpi_check_dsm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_hotplug_remove",
+    "callees": ["__builtin_expect", "dmar_walk_dsm_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_hotplug_insert",
+    "callees": ["_printk", "dmar_walk_dsm_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_hp_release_drhd",
+    "callees": ["dmar_find_dmaru", "dmar_free_drhd", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_hp_remove_drhd",
+    "callees": ["dmar_find_dmaru", "dmar_iommu_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_hp_add_drhd",
+    "callees": ["dmar_find_dmaru", "dmar_iommu_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_walk_dsm_resource",
+    "callees": ["acpi_check_dsm", "acpi_evaluate_dsm_typed", "dmar_walk_remapping_entries", "kfree", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_free_unused_resources",
+    "callees": ["bus_unregister_notifier", "dmar_free_drhd", "down_write", "up_write"],
+    "global_reads": ["dmar_dev_scope_status", "intel_iommu_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_ir_support",
+    "callees": [],
+    "global_reads": ["dmar_tbl"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_reenable_qi",
+    "callees": ["__dmar_enable_qi", "dmar_disable_qi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_drhd_fault_handling",
+    "callees": ["_printk", "dmar_fault", "dmar_set_interrupt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_set_interrupt",
+    "callees": ["dmar_set_interrupt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_fault",
+    "callees": ["___ratelimit", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dmar_fault_do_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_msi_read",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "irq_get_handler_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_msi_write",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "irq_get_handler_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_msi_mask",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_msi_unmask",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_get_fault_reason",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_enable_qi",
+    "callees": ["__alloc_pages_node", "__builtin_return_address", "__dmar_enable_qi", "free_pages", "kfree", "kmalloc_array", "kmalloc_trace"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__dmar_enable_qi",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "panic"],
+    "global_reads": ["page_offset_base", "phys_base", "tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_disable_qi",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "panic"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_pasid_cache",
+    "callees": ["qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_dev_iotlb_pasid",
+    "callees": ["___ratelimit", "_printk", "qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_piotlb",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "_printk", "qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_dev_iotlb",
+    "callees": ["qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_iotlb",
+    "callees": ["qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_flush_context",
+    "callees": ["qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_global_iec",
+    "callees": ["qi_submit_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_submit_sync",
+    "callees": ["_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "memcpy", "qi_check_fault", "reclaim_free_desc", "trace_qi_submit"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "qi_check_fault",
+    "callees": ["_printk", "memcpy", "qi_dump_fault"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "qi_dump_fault",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reclaim_free_desc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_iommu",
+    "callees": ["dmar_free_hwirq", "free_iommu_pmu", "free_irq", "free_pages", "ida_free", "iommu_device_sysfs_remove", "iommu_device_unregister", "iommu_pmu_unregister", "kfree", "unmap_iommu"],
+    "global_reads": ["intel_iommu_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_iommu",
+    "callees": ["_printk", "alloc_iommu_pmu", "free_iommu_pmu", "ida_alloc_range", "ida_free", "iommu_calculate_agaw", "iommu_calculate_max_sagaw", "iommu_device_register", "iommu_device_sysfs_add", "iommu_device_sysfs_remove", "iommu_pmu_register", "kfree", "kzalloc", "map_iommu", "sprintf", "unmap_iommu", "warn_invalid_dmar"],
+    "global_reads": ["intel_iommu_enabled", "intel_iommu_sm"],
+    "global_writes": []
+  },
+  {
+    "name": "map_iommu",
+    "callees": ["__release_region", "__request_region", "_printk", "ioremap", "iounmap", "warn_invalid_dmar"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmap_iommu",
+    "callees": ["__release_region", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detect_intel_iommu",
+    "callees": ["acpi_put_table", "dmar_platform_optin", "dmar_table_detect", "dmar_walk_dmar_table", "down_write", "pci_request_acs", "up_write"],
+    "global_reads": ["dmar_disabled", "dmar_tbl", "iommu_detected", "no_iommu"],
+    "global_writes": ["dmar_tbl", "iommu_detected"]
+  },
+  {
+    "name": "dmar_validate_one_drhd",
+    "callees": ["_printk", "early_ioremap", "early_iounmap", "ioremap", "iounmap", "warn_invalid_dmar"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_invalid_dmar",
+    "callees": ["__builtin_expect", "_printk", "add_taint", "dmi_get_system_info"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "dmar_table_init",
+    "callees": ["_printk", "parse_dmar_table"],
+    "global_reads": ["dmar_table_initialized"],
+    "global_writes": ["dmar_table_initialized"]
+  },
+  {
+    "name": "dmar_register_bus_notifier",
+    "callees": ["bus_register_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_dev_scope_init",
+    "callees": ["dmar_acpi_dev_scope_init", "dmar_alloc_pci_notify_info", "dmar_pci_bus_add_dev", "kfree", "pci_dev_put", "pci_get_device"],
+    "global_reads": ["dmar_dev_scope_status"],
+    "global_writes": ["dmar_dev_scope_status"]
+  },
+  {
+    "name": "dmar_acpi_insert_dev_scope",
+    "callees": ["__builtin_unreachable", "_printk", "get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_find_matched_drhd_unit",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "dmar_pci_device_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_pci_device_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_dmar_table",
+    "callees": ["_printk", "dmar_table_detect", "dmar_walk_dmar_table"],
+    "global_reads": ["dmar_tbl"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_walk_remapping_entries",
+    "callees": ["_printk", "dmar_table_print_dmar_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_table_detect",
+    "callees": ["_printk", "acpi_get_table"],
+    "global_reads": ["dmar_tbl"],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_table_print_dmar_entry",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_parse_one_rhsa",
+    "callees": ["_printk", "add_taint", "dmi_get_system_info", "node_state", "pxm_to_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_parse_one_andd",
+    "callees": ["_printk", "add_taint", "dmi_get_system_info", "strnlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_free_drhd",
+    "callees": ["dmar_free_dev_scope", "free_iommu", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_parse_one_drhd",
+    "callees": ["alloc_iommu", "dmar_alloc_dev_scope", "dmar_find_dmaru", "dmar_free_dev_scope", "dmar_register_drhd_unit", "kfree", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_find_dmaru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_pci_bus_notifier",
+    "callees": ["dmar_alloc_pci_notify_info", "dmar_pci_bus_add_dev", "dmar_pci_bus_del_dev", "down_write", "kfree", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_pci_bus_del_dev",
+    "callees": ["dmar_iommu_notify_scope_dev", "dmar_remove_dev_scope.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_remove_dev_scope",
+    "callees": ["dmar_remove_dev_scope.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_insert_dev_scope",
+    "callees": ["_printk", "dmar_match_pci_path", "get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_match_pci_path",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_alloc_pci_notify_info",
+    "callees": ["__builtin_expect", "kzalloc"],
+    "global_reads": ["dmar_dev_scope_status"],
+    "global_writes": ["dmar_dev_scope_status"]
+  },
+  {
+    "name": "dmar_free_dev_scope",
+    "callees": ["kfree", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_alloc_dev_scope",
+    "callees": ["_printk", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmar_register_drhd_unit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_qi_submit",
+    "callees": ["__SCT__tp_func_qi_submit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_get_handler_data",
+    "callees": ["irq_get_irq_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

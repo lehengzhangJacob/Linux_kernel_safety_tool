@@ -1,0 +1,266 @@
+[
+  {
+    "name": "parse_strings",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_strings",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_cis_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_cis_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_get_first_tuple",
+    "callees": ["pccard_get_next_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_get_first_tuple",
+    "callees": ["pccard_get_next_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_store_cis.part.0",
+    "callees": ["pcmcia_parse_uevents", "pcmcia_replace_cis"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_store_cis",
+    "callees": ["pccard_store_cis.part.0", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_show_cis",
+    "callees": ["pccard_extract_cis", "pccard_validate_cis"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_extract_cis",
+    "callees": ["kfree", "kmalloc_array", "memset", "pccard_get_first_tuple", "pccard_get_next_tuple", "pccard_get_tuple_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_validate_cis",
+    "callees": ["__builtin_return_address", "_dev_warn", "destroy_cis_cache", "kfree", "kmalloc_trace", "mutex_lock", "mutex_unlock", "pccard_get_first_tuple", "pccard_get_next_tuple", "pccard_read_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_parse_tuple",
+    "callees": ["parse_altstr", "parse_cftable_entry", "parse_config", "parse_device", "parse_device_geo", "parse_funce", "parse_jedec", "parse_longlink_mfc", "parse_org", "parse_vers_1", "parse_vers_2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_vers_2",
+    "callees": ["parse_strings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_mem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_timing",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_power",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_funce",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_strings",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_longlink_mfc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_get_tuple_data",
+    "callees": ["read_cis_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_get_next_tuple",
+    "callees": ["follow_link", "read_cis_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follow_link",
+    "callees": ["read_cis_cache", "remove_cis_cache", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pccard_get_first_tuple",
+    "callees": ["pccard_get_next_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_replace_cis",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "_dev_info", "_dev_warn", "kfree", "kmalloc_trace", "memcpy", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_cis_cache",
+    "callees": ["__builtin_return_address", "_dev_warn", "kfree", "kmalloc_trace", "memcmp", "mutex_lock", "mutex_unlock", "pcmcia_read_cis_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_cis_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_cis_cache",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy", "memset", "mutex_lock", "mutex_unlock", "pcmcia_read_cis_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_write_cis_mem",
+    "callees": ["set_cis_map"],
+    "global_reads": ["cis_width"],
+    "global_writes": []
+  },
+  {
+    "name": "pcmcia_read_cis_mem",
+    "callees": ["memset", "set_cis_map"],
+    "global_reads": ["cis_width"],
+    "global_writes": []
+  },
+  {
+    "name": "set_cis_map",
+    "callees": ["_dev_notice", "ioremap", "iounmap", "pcmcia_find_mem_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_cis_mem",
+    "callees": ["iounmap", "kfree", "mutex_lock", "mutex_unlock", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

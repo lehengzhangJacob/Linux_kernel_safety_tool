@@ -1,0 +1,260 @@
+[
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "should_stop_iteration",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unmapped_area_zero.part.0",
+    "callees": ["shmem_get_unmapped_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chr_dev_init",
+    "callees": ["__register_chrdev", "_printk", "class_register", "device_create", "tty_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem_devnode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "open_port",
+    "callees": ["capable", "open_port.part.0", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_lseek",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "null_lseek",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_full",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unmapped_area_zero",
+    "callees": ["get_unmapped_area_zero.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_zero",
+    "callees": ["shmem_zero_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_zero",
+    "callees": ["__SCT__cond_resched", "__access_ok", "__builtin_expect", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_iter_zero",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "iov_iter_zero", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uring_cmd_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "splice_write_null",
+    "callees": ["splice_from_pipe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pipe_to_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_iter_null",
+    "callees": ["iov_iter_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_iter_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_port",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_port",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_mem",
+    "callees": ["phys_mem_access_prot", "phys_mem_access_prot_allowed", "range_is_allowed", "remap_pfn_range", "valid_mmap_phys_addr_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phys_mem_access_prot_allowed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_mem",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "copy_overflow", "devmem_is_allowed", "should_stop_iteration", "unxlate_dev_mem_ptr", "valid_phys_addr_range", "xlate_dev_mem_ptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_mem",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__copy_overflow", "_copy_to_user", "copy_from_kernel_nofault", "devmem_is_allowed", "kfree", "kmalloc_trace", "should_stop_iteration", "unxlate_dev_mem_ptr", "valid_phys_addr_range", "xlate_dev_mem_ptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "should_stop_iteration",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "range_is_allowed",
+    "callees": ["devmem_is_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__access_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

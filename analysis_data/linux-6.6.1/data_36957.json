@@ -1,0 +1,164 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_max_show.part.0",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_events_show",
+    "callees": ["of_css", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_peak_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_current_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_max_show",
+    "callees": ["of_css", "pids_max_show.part.0", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_max_write",
+    "callees": ["kstrtoll", "of_css", "strcmp", "strim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_release",
+    "callees": ["pids_uncharge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_cancel_fork",
+    "callees": ["pids_uncharge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_can_fork",
+    "callees": ["_printk", "cgroup_file_notify", "pids_try_charge", "pr_cont_kernfs_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_cancel_attach",
+    "callees": ["cgroup_taskset_first", "cgroup_taskset_next", "pids_charge", "pids_uncharge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_can_attach",
+    "callees": ["cgroup_taskset_first", "cgroup_taskset_next", "pids_charge", "pids_uncharge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_css_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pids_css_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

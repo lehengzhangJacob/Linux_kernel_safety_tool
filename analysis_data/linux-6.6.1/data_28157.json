@@ -1,0 +1,38 @@
+[
+  {
+    "name": "iomap_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_seek_data",
+    "callees": ["iomap_iter", "iomap_seek_data_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_seek_data_iter",
+    "callees": ["iomap_length", "mapping_seek_hole_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_seek_hole",
+    "callees": ["iomap_iter", "iomap_seek_hole_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_seek_hole_iter",
+    "callees": ["iomap_length", "mapping_seek_hole_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

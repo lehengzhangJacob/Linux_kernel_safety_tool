@@ -1,0 +1,44 @@
+[
+  {
+    "name": "__devm_irq_alloc_descs",
+    "callees": ["__devres_alloc_node", "__irq_alloc_descs", "devres_add", "devres_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_irq_desc_release",
+    "callees": ["irq_free_descs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_free_irq",
+    "callees": ["__builtin_expect", "devres_destroy", "free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_request_any_context_irq",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "request_any_context_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_request_threaded_irq",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_irq_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_irq_release",
+    "callees": ["free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

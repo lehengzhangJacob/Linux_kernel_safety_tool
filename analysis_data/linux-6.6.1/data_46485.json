@@ -1,0 +1,32 @@
+[
+  {
+    "name": "gss_krb5_unwrap_v2",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__builtin_unreachable", "ktime_get_real_seconds", "memcmp", "memmove", "read_bytes_from_xdr_buf", "rotate_left", "xdr_buf_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gss_krb5_wrap_v2",
+    "callees": ["__builtin_bswap64", "ktime_get_real_seconds", "xdr_extend_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rotate_left",
+    "callees": ["_rotate_left", "xdr_buf_subsegment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_rotate_left",
+    "callees": ["rotate_buf_a_little"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rotate_buf_a_little",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "read_bytes_from_xdr_buf", "write_bytes_to_xdr_buf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

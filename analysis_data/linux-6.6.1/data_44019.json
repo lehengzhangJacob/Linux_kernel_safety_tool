@@ -1,0 +1,110 @@
+[
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmpv6_init_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpv6_nlattr_tuple_size",
+    "callees": ["nla_policy_len"],
+    "global_reads": ["size"],
+    "global_writes": ["size"]
+  },
+  {
+    "name": "icmpv6_nlattr_to_tuple",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpv6_tuple_to_nlattr",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmpv6_error",
+    "callees": ["memcpy", "nf_conntrack_icmpv6_redirect", "nf_conntrack_inet_error", "nf_ip6_checksum", "nf_l4proto_log_invalid", "skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmpv6_redirect",
+    "callees": ["__ipv6_addr_type", "memcpy", "nf_conntrack_inet_error", "nf_l4proto_log_invalid", "skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmpv6_packet",
+    "callees": ["__nf_ct_refresh_acct", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_invert_icmpv6_tuple",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpv6_pkt_to_tuple",
+    "callees": ["skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

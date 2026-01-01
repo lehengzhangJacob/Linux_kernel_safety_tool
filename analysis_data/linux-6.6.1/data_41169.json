@@ -1,0 +1,158 @@
+[
+  {
+    "name": "acpi_get_gpe_device",
+    "callees": ["acpi_ev_walk_gpe_list"],
+    "global_reads": ["acpi_current_gpe_count"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_gpe_block.part.0",
+    "callees": ["acpi_ev_delete_gpe_block", "acpi_ns_get_attached_object", "acpi_ns_validate_handle", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_all_wakeup_gpes.part.0",
+    "callees": ["acpi_hw_enable_all_wakeup_gpes", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_all_runtime_gpes.part.0",
+    "callees": ["acpi_hw_enable_all_runtime_gpes", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_disable_all_gpes.part.0",
+    "callees": ["acpi_hw_disable_all_gpes", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_gpe_device",
+    "callees": ["acpi_ev_walk_gpe_list"],
+    "global_reads": ["acpi_current_gpe_count"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_remove_gpe_block",
+    "callees": ["acpi_remove_gpe_block.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_install_gpe_block",
+    "callees": ["acpi_ev_create_gpe_block", "acpi_ns_attach_object", "acpi_ns_get_attached_object", "acpi_ns_validate_handle", "acpi_ut_acquire_mutex", "acpi_ut_create_internal_object_dbg", "acpi_ut_release_mutex", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_any_gpe_status_set",
+    "callees": ["acpi_get_gpe_device", "acpi_hw_check_all_gpes", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_all_wakeup_gpes",
+    "callees": ["acpi_enable_all_wakeup_gpes.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_all_runtime_gpes",
+    "callees": ["acpi_enable_all_runtime_gpes.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_disable_all_gpes",
+    "callees": ["acpi_disable_all_gpes.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_finish_gpe",
+    "callees": ["acpi_ev_finish_gpe", "acpi_ev_get_gpe_event_info", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dispatch_gpe",
+    "callees": ["acpi_ev_detect_gpe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_gpe_status",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_hw_get_gpe_status", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_clear_gpe",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_hw_clear_gpe", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_set_gpe_wake_mask",
+    "callees": ["acpi_error", "acpi_ev_get_gpe_event_info", "acpi_hw_get_gpe_register_bit", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_setup_gpe_for_wake",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_ev_remove_gpe_reference", "acpi_os_acquire_lock", "acpi_os_allocate_zeroed", "acpi_os_release_lock", "kfree"],
+    "global_reads": ["acpi_gbl_gpe_lock", "acpi_gbl_root_node"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_mark_gpe_for_wake",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_mask_gpe",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_ev_mask_gpe", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_set_gpe",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_hw_low_set_gpe", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_disable_gpe",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_ev_remove_gpe_reference", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_enable_gpe",
+    "callees": ["acpi_ev_add_gpe_reference", "acpi_ev_detect_gpe", "acpi_ev_get_gpe_event_info", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_update_all_gpes",
+    "callees": ["acpi_ev_gpe_detect", "acpi_ev_walk_gpe_list", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex"],
+    "global_reads": ["acpi_gbl_all_gpes_initialized", "acpi_gbl_gpe_xrupt_list_head"],
+    "global_writes": ["acpi_gbl_all_gpes_initialized"]
+  }
+]

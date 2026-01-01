@@ -1,0 +1,86 @@
+[
+  {
+    "name": "__do_sys_name_to_handle_at",
+    "callees": ["do_sys_name_to_handle", "path_put", "user_path_at_empty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_open_by_handle_at",
+    "callees": ["do_handle_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_open_by_handle_at",
+    "callees": ["do_handle_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_open_by_handle_at",
+    "callees": ["do_handle_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_handle_open",
+    "callees": ["__builtin_expect", "fd_install", "file_open_root", "get_unused_fd_flags", "handle_to_path", "path_put", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_to_path",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__copy_overflow", "__kmalloc", "_copy_from_user", "capable", "do_handle_to_path", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_handle_to_path",
+    "callees": ["__builtin_expect", "exportfs_decode_fh", "get_vfsmount_from_fd", "mntput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dentry_acceptable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_vfsmount_from_fd",
+    "callees": ["__fdget", "_raw_spin_lock", "_raw_spin_unlock", "fput", "mntget"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_name_to_handle_at",
+    "callees": ["do_sys_name_to_handle", "path_put", "user_path_at_empty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_name_to_handle_at",
+    "callees": ["__do_sys_name_to_handle_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_name_to_handle_at",
+    "callees": ["__do_sys_name_to_handle_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_sys_name_to_handle",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__kmalloc", "_copy_from_user", "_copy_to_user", "copy_overflow", "exportfs_encode_fh", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

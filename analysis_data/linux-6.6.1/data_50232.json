@@ -1,0 +1,632 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_check_bandwidth",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hc_died",
+    "callees": ["finish_reset", "uhci_get_current_frame_number.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "configure_hc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_schedule",
+    "callees": ["uhci_scan_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_schedule",
+    "callees": ["uhci_scan_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "start_rh",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_schedule",
+    "callees": ["uhci_scan_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_set_next_interrupt",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "check_and_reset_hc",
+    "callees": ["finish_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_alloc_qh",
+    "callees": ["dma_pool_alloc", "dma_pool_free", "uhci_alloc_td", "usb_calc_bus_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_schedule.part.0",
+    "callees": ["mod_timer", "uhci_advance_check", "uhci_get_current_frame_number.part.0", "uhci_scan_qh", "uhci_set_next_interrupt", "uhci_urbp_wants_fsbr"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_urbp_wants_fsbr.part.0",
+    "callees": ["timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_get_current_frame_number.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_map_status.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hcd_cleanup",
+    "callees": ["debugfs_remove", "kmem_cache_destroy", "pci_unregister_driver"],
+    "global_reads": ["uhci_debugfs_root", "uhci_up_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hcd_init",
+    "callees": ["__pci_register_driver", "kmem_cache_create", "kmem_cache_destroy", "usb_disabled"],
+    "global_reads": ["uhci_up_cachep"],
+    "global_writes": ["uhci_up_cachep"]
+  },
+  {
+    "name": "uhci_pci_probe",
+    "callees": ["usb_hcd_pci_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_resume",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "check_and_reset_hc", "configure_hc", "finish_reset", "usb_hcd_poll_rh_status", "usb_root_hub_lost_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_suspend",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "pci_write_config_byte", "pci_write_config_word", "synchronize_irq", "uhci_pci_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_shutdown",
+    "callees": ["uhci_hc_died"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_init",
+    "callees": ["check_and_reset_hc", "device_set_wakeup_capable", "uhci_count_ports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_global_suspend_mode_is_broken",
+    "callees": ["dmi_get_system_info", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_resume_detect_interrupts_are_broken",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_configure_hc",
+    "callees": ["pci_write_config_byte", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_check_and_reset_hc",
+    "callees": ["uhci_check_and_reset_hc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_pci_reset_hc",
+    "callees": ["uhci_reset_hc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_count_ports",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hcd_get_frame_number",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hcd_endpoint_disable",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule", "uhci_free_qh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_rh_resume",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "wakeup_rh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_rh_suspend",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "suspend_rh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_stop",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "release_uhci", "synchronize_irq", "timer_delete_sync", "uhci_hc_died", "uhci_scan_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_start",
+    "callees": ["__init_waitqueue_head", "_dev_err", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "configure_hc", "debugfs_lookup_and_remove", "dma_alloc_attrs", "dma_free_attrs", "dma_pool_create", "dma_pool_destroy", "init_timer_key", "kfree", "kmalloc_array", "start_rh", "uhci_alloc_qh", "uhci_alloc_td", "uhci_frame_skel_link", "uhci_free_qh", "uhci_free_td"],
+    "global_reads": ["uhci_debugfs_root"],
+    "global_writes": []
+  },
+  {
+    "name": "release_uhci",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "debugfs_lookup_and_remove", "dma_free_attrs", "dma_pool_destroy", "kfree", "uhci_free_qh", "uhci_free_td"],
+    "global_reads": ["uhci_debugfs_root"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_irq",
+    "callees": ["__builtin_expect", "_dev_err", "_raw_spin_lock", "_raw_spin_unlock", "mod_timer", "uhci_hc_died", "uhci_scan_schedule", "usb_hc_died", "usb_hcd_poll_rh_status"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_rh",
+    "callees": ["__const_udelay", "_dev_warn", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mod_timer", "msleep", "start_rh"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "start_rh",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "suspend_rh",
+    "callees": ["__const_udelay", "_dev_warn", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "msleep", "resume_detect_interrupts_are_broken", "uhci_get_current_frame_number.part.0", "uhci_scan_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resume_detect_interrupts_are_broken",
+    "callees": [],
+    "global_reads": ["ignore_oc"],
+    "global_writes": []
+  },
+  {
+    "name": "configure_hc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_and_reset_hc",
+    "callees": ["finish_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hc_died",
+    "callees": ["finish_reset", "uhci_get_current_frame_number.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finish_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hub_control",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memcpy", "uhci_check_ports", "uhci_finish_suspend"],
+    "global_reads": ["ignore_oc", "jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_hub_status_data",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "any_ports_active", "get_hub_status_data", "suspend_rh", "uhci_check_ports", "uhci_scan_schedule", "usb_hcd_resume_root_hub", "wakeup_rh"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_check_ports",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__const_udelay", "mod_timer", "uhci_finish_suspend", "usb_hcd_start_port_resume", "wait_for_HP"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_HP",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_finish_suspend",
+    "callees": ["__builtin_constant_p", "__const_udelay", "usb_hcd_end_port_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_hub_status_data",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["ignore_oc"],
+    "global_writes": []
+  },
+  {
+    "name": "any_ports_active",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_schedule",
+    "callees": ["uhci_scan_schedule.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_advance_check",
+    "callees": ["uhci_unlink_qh", "uhci_urbp_wants_fsbr"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_scan_qh",
+    "callees": ["uhci_activate_qh", "uhci_cleanup_queue", "uhci_fixup_toggles", "uhci_giveback_urb", "uhci_make_qh_idle", "uhci_result_common", "uhci_result_isochronous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_giveback_urb",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "uhci_free_urb_priv", "uhci_release_bandwidth", "uhci_unlink_qh", "usb_hcd_giveback_urb", "usb_hcd_unlink_urb_from_ep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_urb_dequeue",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "uhci_get_current_frame_number.part.0", "uhci_unlink_isochronous_tds", "uhci_unlink_qh", "usb_hcd_check_unlink_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_urb_enqueue",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "uhci_activate_qh", "uhci_alloc_qh", "uhci_alloc_urb_priv", "uhci_free_urb_priv", "uhci_make_qh_idle", "uhci_submit_bulk", "uhci_submit_control", "uhci_submit_interrupt", "uhci_submit_isochronous", "uhci_urbp_wants_fsbr", "usb_hcd_link_urb_to_ep", "usb_hcd_unlink_urb_from_ep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_result_isochronous",
+    "callees": ["uhci_free_td", "uhci_map_status", "uhci_remove_tds_from_frame"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_result_common",
+    "callees": ["uhci_fixup_short_transfer", "uhci_free_td", "uhci_map_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_fixup_short_transfer",
+    "callees": ["__builtin_expect", "uhci_fixup_toggles", "uhci_free_td"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_submit_interrupt",
+    "callees": ["uhci_check_bandwidth", "uhci_reserve_bandwidth", "uhci_submit_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_submit_bulk",
+    "callees": ["uhci_submit_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_submit_common",
+    "callees": ["sg_next", "uhci_alloc_td"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_submit_control",
+    "callees": ["uhci_alloc_td"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_map_status",
+    "callees": ["uhci_map_status.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_free_urb_priv",
+    "callees": ["__warn_printk", "dev_driver_string", "kmem_cache_free", "uhci_free_td"],
+    "global_reads": ["uhci_up_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_release_bandwidth",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_reserve_bandwidth",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_check_bandwidth",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_make_qh_idle",
+    "callees": ["__builtin_expect", "__wake_up", "uhci_free_td"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_unlink_qh",
+    "callees": ["__builtin_expect", "uhci_get_current_frame_number.part.0", "uhci_set_next_interrupt", "unlink_async"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_activate_qh",
+    "callees": ["__builtin_expect", "link_async", "link_interrupt"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "link_async",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "link_interrupt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_cleanup_queue",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_free_qh",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "dma_pool_free", "uhci_free_td"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_alloc_qh",
+    "callees": ["dma_pool_alloc", "dma_pool_free", "uhci_alloc_td", "usb_calc_bus_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_unlink_isochronous_tds",
+    "callees": ["uhci_remove_td_from_frame_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_remove_tds_from_frame",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_remove_td_from_frame_list",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_insert_td_in_frame_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_free_td",
+    "callees": ["__warn_printk", "dev_driver_string", "dma_pool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_fsbr_timeout",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_urbp_wants_fsbr",
+    "callees": ["uhci_urbp_wants_fsbr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_set_next_interrupt",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uhci_frame_skel_link",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

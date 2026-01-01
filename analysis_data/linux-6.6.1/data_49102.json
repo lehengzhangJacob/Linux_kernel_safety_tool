@@ -1,0 +1,248 @@
+[
+  {
+    "name": "drm_is_current_master_locked",
+    "callees": ["drm_lease_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_is_current_master_locked",
+    "callees": ["drm_lease_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_is_current_master_locked",
+    "callees": ["drm_lease_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drop_master",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_set_master",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_internal_release",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_internal_acquire",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_put",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_destroy",
+    "callees": ["drm_lease_destroy", "idr_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_file_get_master",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_get",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_release",
+    "callees": ["drm_drop_master", "drm_is_current_master_locked", "drm_lease_revoke", "idr_remove", "kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_open",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "drm_new_set_master", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dropmaster_ioctl",
+    "callees": ["__drm_dev_dbg", "drm_drop_master", "drm_is_current_master_locked", "drm_master_check_perm", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drop_master",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_setmaster_ioctl",
+    "callees": ["__drm_dev_dbg", "drm_is_current_master_locked", "drm_master_check_perm", "drm_new_set_master", "drm_set_master", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_new_set_master",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "drm_master_create", "drm_set_master", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_set_master",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_master_create",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_authmagic",
+    "callees": ["__drm_dev_dbg", "idr_find", "idr_replace", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_getmagic",
+    "callees": ["__drm_dev_dbg", "idr_alloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_is_current_master",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "drm_is_current_master_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_is_current_master_locked",
+    "callees": ["drm_lease_owner"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

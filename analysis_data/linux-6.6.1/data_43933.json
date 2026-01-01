@@ -1,0 +1,122 @@
+[
+  {
+    "name": "rpc_set_port",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_set_port",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_replace_transport",
+    "callees": ["__get_free_pages", "free_pages", "nfs4_try_replacing_one_location"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_submount",
+    "callees": ["__builtin_expect", "dget_parent", "dput", "nfs4_proc_lookup_mountpoint", "nfs_do_refmount", "nfs_do_submount", "rpc_shutdown_client"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_do_refmount",
+    "callees": ["__free_pages", "alloc_pages", "dget_parent", "dput", "kfree", "kmalloc_large", "nfs4_proc_fs_locations", "nfs_alloc_fattr", "nfs_follow_referral"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_follow_referral",
+    "callees": ["nfs4_validate_fspath", "try_location"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_location",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "memchr", "memcpy", "nfs4_get_referral_tree", "nfs4_pathname_string", "nfs_parse_server_name", "rpc_set_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_negotiate_security",
+    "callees": ["alloc_pages", "nfs4_proc_secinfo", "nfs_find_best_sec", "put_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_find_best_sec",
+    "callees": ["__builtin_expect", "nfs_auth_info_match", "put_rpccred", "rpc_clone_client_set_auth", "rpc_shutdown_client", "rpcauth_get_pseudoflavor", "rpcauth_lookupcred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_parse_server_name",
+    "callees": ["nfs_dns_resolve_name", "rpc_pton", "rpc_set_port", "rpc_uaddr2sockaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_path_component",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_pathname_string",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy", "nfs4_pathname_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_pathname_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_set_port",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

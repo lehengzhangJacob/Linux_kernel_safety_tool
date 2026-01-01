@@ -1,0 +1,284 @@
+[
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_microcode_amd",
+    "callees": ["__load_microcode_amd", "free_cache", "free_equiv_cpu_table", "load_microcode_amd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_equivalence_table.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_equiv_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_microcode_amd.part.0",
+    "callees": ["find_first_bit", "find_next_bit", "find_patch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_equivalence_table.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_amd_microcode",
+    "callees": ["free_cache", "free_equiv_cpu_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_amd_microcode",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done", "ucode_new_rev"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "microcode_fini_cpu_amd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "request_microcode_amd",
+    "callees": ["load_microcode_amd", "release_firmware", "request_firmware_direct", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_microcode_amd",
+    "callees": ["__load_microcode_amd", "free_cache", "free_equiv_cpu_table", "load_microcode_amd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__load_microcode_amd",
+    "callees": ["_printk", "free_equiv_cpu_table", "install_equiv_cpu_table", "verify_and_add_patch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_equiv_cpu_table",
+    "callees": ["memset", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "install_equiv_cpu_table",
+    "callees": ["_printk", "memcpy", "verify_equivalence_table", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "apply_microcode_amd",
+    "callees": ["__apply_microcode_amd", "__builtin_expect", "__builtin_unreachable", "_printk", "find_patch", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "collect_cpu_info_amd",
+    "callees": ["_printk", "find_patch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reload_ucode_amd",
+    "callees": ["__apply_microcode_amd", "_printk", "find_patch", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": ["ucode_new_rev"]
+  },
+  {
+    "name": "find_patch",
+    "callees": ["find_equiv_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_microcode_in_initrd_amd",
+    "callees": ["find_microcode_in_initrd", "load_microcode_amd", "scan_containers", "x86_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_ucode_amd_early",
+    "callees": ["apply_ucode_from_containers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "apply_ucode_from_containers",
+    "callees": ["early_apply_microcode", "find_blobs_in_containers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_blobs_in_containers",
+    "callees": ["find_microcode_in_initrd", "get_builtin_microcode", "x86_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_builtin_microcode",
+    "callees": ["firmware_request_builtin", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__apply_microcode_amd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scan_containers",
+    "callees": ["parse_container"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_container",
+    "callees": ["find_equiv_id", "verify_equivalence_table", "verify_patch", "x86_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_patch",
+    "callees": ["__verify_patch_size", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__verify_patch_size",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_equiv_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

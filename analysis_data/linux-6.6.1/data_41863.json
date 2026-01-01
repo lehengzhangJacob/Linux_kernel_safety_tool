@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "start_periodic_check_for_corruption",
+    "callees": ["_printk", "schedule_delayed_work"],
+    "global_reads": ["corruption_check_period", "memory_corruption_check", "num_scan_areas"],
+    "global_writes": []
+  },
+  {
+    "name": "check_corruption",
+    "callees": ["check_for_bios_corruption", "round_jiffies_relative", "schedule_delayed_work"],
+    "global_reads": ["corruption_check_period"],
+    "global_writes": []
+  },
+  {
+    "name": "check_for_bios_corruption",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk"],
+    "global_reads": ["__already_done", "memory_corruption_check", "num_scan_areas", "page_offset_base", "phys_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "setup_bios_corruption_check",
+    "callees": ["__next_mem_range", "_printk", "memblock_reserve", "memset"],
+    "global_reads": ["corruption_check_size", "memory_corruption_check", "num_scan_areas", "page_offset_base"],
+    "global_writes": ["corruption_check_size", "memory_corruption_check", "num_scan_areas"]
+  },
+  {
+    "name": "set_corruption_check_size",
+    "callees": ["_printk", "memparse"],
+    "global_reads": ["corruption_check_size"],
+    "global_writes": ["corruption_check_size"]
+  },
+  {
+    "name": "set_corruption_check_period",
+    "callees": ["_printk", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": ["corruption_check_period"]
+  },
+  {
+    "name": "set_corruption_check",
+    "callees": ["_printk", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": ["memory_corruption_check"]
+  }
+]

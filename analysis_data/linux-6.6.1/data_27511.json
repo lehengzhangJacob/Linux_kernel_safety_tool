@@ -1,0 +1,62 @@
+[
+  {
+    "name": "copy_from_kernel_nofault.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__copy_overflow",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strnlen_user_nofault",
+    "callees": ["strnlen_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncpy_from_user_nofault",
+    "callees": ["__builtin_expect", "strncpy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_to_user_nofault",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_from_user_nofault",
+    "callees": ["__builtin_constant_p", "nmi_uaccess_okay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strncpy_from_kernel_nofault",
+    "callees": ["__builtin_expect", "copy_from_kernel_nofault_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_to_kernel_nofault",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_from_kernel_nofault",
+    "callees": ["copy_from_kernel_nofault.part.0", "copy_from_kernel_nofault_allowed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_from_kernel_nofault_allowed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

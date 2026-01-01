@@ -1,0 +1,200 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "managed_dentry_clear_managed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "managed_dentry_set_managed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_root_compat_ioctl",
+    "callees": ["autofs_root_ioctl_unlocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_root_ioctl",
+    "callees": ["autofs_root_ioctl_unlocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_root_ioctl_unlocked",
+    "callees": ["__builtin_expect", "autofs_catatonic_mode", "autofs_compat_get_set_timeout", "autofs_expire_multi", "autofs_expire_run", "autofs_get_set_timeout", "autofs_wait_release", "capable", "may_umount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_autofs_dentry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_get_set_timeout",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_compat_get_set_timeout",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_mkdir",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "autofs_clean_ino", "autofs_del_active", "autofs_get_inode", "autofs_set_leaf_automount_flags", "d_add", "inc_nlink", "inode_set_ctime_current", "lockref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_rmdir",
+    "callees": ["__autofs_add_expiring", "_raw_spin_lock", "_raw_spin_unlock", "autofs_clear_leaf_automount_flags", "clear_nlink", "d_drop", "dput", "drop_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_clear_leaf_automount_flags",
+    "callees": ["managed_dentry_clear_managed", "managed_dentry_set_managed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_set_leaf_automount_flags",
+    "callees": ["managed_dentry_clear_managed", "managed_dentry_set_managed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_unlink",
+    "callees": ["__autofs_add_expiring", "_raw_spin_lock", "_raw_spin_unlock", "clear_nlink", "d_drop", "dput", "inode_set_ctime_current"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_symlink",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__builtin_unreachable", "__kmalloc", "autofs_clean_ino", "autofs_del_active", "autofs_get_inode", "d_add", "inode_set_ctime_current", "kfree", "kmalloc_large", "kmalloc_trace", "lockref_get", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_permission",
+    "callees": ["generic_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_lookup",
+    "callees": ["autofs_lookup.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_d_manage",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "autofs_mount_wait", "do_expire_wait", "path_is_mountpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_d_automount",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "autofs_mount_wait", "autofs_mountpoint_changed", "do_expire_wait", "path_has_submounts", "path_is_mountpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_mountpoint_changed",
+    "callees": ["d_lookup", "dput"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "do_expire_wait",
+    "callees": ["__builtin_expect", "autofs_del_expiring", "autofs_expire_wait", "autofs_lookup_expiring", "dput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_mount_wait",
+    "callees": ["autofs_wait"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_lookup_expiring",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_lookup_active",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dentry_release",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "autofs_free_ino"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_dir_open",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dcache_dir_open", "path_is_mountpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "managed_dentry_clear_managed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "managed_dentry_set_managed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

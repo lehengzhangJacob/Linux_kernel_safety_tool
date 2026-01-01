@@ -1,0 +1,50 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmi_id_init",
+    "callees": ["class_register", "class_unregister", "dev_set_name", "device_register", "dmi_id_init_attr_table", "kzalloc", "put_device"],
+    "global_reads": ["dmi_available", "dmi_dev"],
+    "global_writes": ["dmi_dev"]
+  },
+  {
+    "name": "dmi_id_init_attr_table",
+    "callees": ["dmi_get_system_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmi_dev_uevent",
+    "callees": ["add_uevent_var", "get_modalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sys_dmi_modalias_show",
+    "callees": ["get_modalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_modalias",
+    "callees": ["__builtin_constant_p", "__builtin_memcpy", "__builtin_return_address", "__kmalloc", "ascii_filter", "dmi_get_system_info", "kfree", "kmalloc_large", "kmalloc_trace", "scnprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ascii_filter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sys_dmi_field_show",
+    "callees": ["dmi_get_system_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

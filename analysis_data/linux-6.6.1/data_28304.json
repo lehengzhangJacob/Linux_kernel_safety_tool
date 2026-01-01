@@ -1,0 +1,422 @@
+[
+  {
+    "name": "bd_clear_claiming",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "wake_up_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_abort_claiming",
+    "callees": ["bd_clear_claiming", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_clear_claiming",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "wake_up_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_abort_claiming",
+    "callees": ["bd_clear_claiming", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_by_dev",
+    "callees": ["blkdev_get_by_dev.part.0", "devcgroup_check_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "invalidate_bdev",
+    "callees": ["invalidate_bh_lrus", "invalidate_mapping_pages", "lru_add_drain_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__order_base_2",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blksize_bits",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__order_base_2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__order_base_2",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blksize_bits",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__order_base_2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_clear_claiming",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "wake_up_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_by_dev.part.0",
+    "callees": ["__builtin_expect", "bd_abort_claiming", "bd_finish_claiming", "bd_prepare_to_claim", "blkdev_get_no_open", "blkdev_get_part", "blkdev_get_whole", "disk_block_events", "disk_unblock_events", "module_put", "mutex_lock", "mutex_unlock", "put_device", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sb_set_blocksize.part.0",
+    "callees": ["blksize_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_statx_dioalign",
+    "callees": ["blkdev_get_no_open", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_bdevs",
+    "callees": ["__iget", "_raw_spin_lock", "_raw_spin_unlock", "filemap_fdatawait_keep_errors", "filemap_fdatawrite", "iput", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["blockdev_superblock"],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_mark_dead",
+    "callees": ["invalidate_bdev", "mutex_lock", "mutex_unlock", "sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_bdev",
+    "callees": ["kern_path", "may_open_dev", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_put",
+    "callees": ["bd_end_claim", "blkdev_put_part", "blkdev_put_whole", "disk_flush_events", "module_put", "mutex_lock", "mutex_unlock", "put_device", "sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_by_path",
+    "callees": ["__builtin_expect", "bdev_read_only", "blkdev_get_by_dev", "blkdev_put", "lookup_bdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_by_dev",
+    "callees": ["blkdev_get_by_dev.part.0", "devcgroup_check_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_put_no_open",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_no_open",
+    "callees": ["___ratelimit", "_printk", "blk_request_module", "ilookup", "iput", "kobject_get_unless_zero"],
+    "global_reads": ["blockdev_superblock"],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_put_part",
+    "callees": ["blkdev_flush_mapping", "blkdev_put_whole"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_part",
+    "callees": ["blkdev_get_whole", "blkdev_put_whole", "set_init_blocksize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_put_whole",
+    "callees": ["blkdev_flush_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_whole",
+    "callees": ["__builtin_constant_p", "bdev_disk_changed", "set_init_blocksize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_flush_mapping",
+    "callees": ["__builtin_expect", "bdev_write_inode", "kill_bdev", "sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_end_claim",
+    "callees": ["__builtin_expect", "disk_unblock_events", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_abort_claiming",
+    "callees": ["bd_clear_claiming", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_finish_claiming",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bd_clear_claiming", "bd_may_claim", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_clear_claiming",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "wake_up_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_prepare_to_claim",
+    "callees": ["__builtin_expect", "bd_may_claim", "bit_waitqueue", "finish_wait", "mutex_lock", "mutex_unlock", "prepare_to_wait", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bd_may_claim",
+    "callees": ["bd_may_claim.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nr_blockdev_pages",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["blockdev_superblock"],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_add",
+    "callees": ["__insert_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_set_nr_sectors",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_alloc",
+    "callees": ["__alloc_percpu", "__mutex_init", "iput", "new_inode"],
+    "global_reads": ["blockdev_superblock"],
+    "global_writes": []
+  },
+  {
+    "name": "bd_init_fs_context",
+    "callees": ["init_pseudo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_evict_inode",
+    "callees": ["clear_inode", "invalidate_inode_buffers", "truncate_inode_pages_final"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_once",
+    "callees": ["inode_init_once"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_free_inode",
+    "callees": ["bdi_put", "blk_free_ext_minor", "free_percpu", "kfree", "kmem_cache_free"],
+    "global_reads": ["bdev_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_alloc_inode",
+    "callees": ["kmem_cache_alloc_lru", "memset"],
+    "global_reads": ["bdev_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "thaw_bdev",
+    "callees": ["mutex_lock", "mutex_unlock", "thaw_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freeze_bdev",
+    "callees": ["deactivate_super", "freeze_super", "get_active_super", "mutex_lock", "mutex_unlock", "sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_blockdev_range",
+    "callees": ["filemap_write_and_wait_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_blockdev",
+    "callees": ["sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_blockdev_nowait",
+    "callees": ["sync_blockdev_nowait.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sb_min_blocksize",
+    "callees": ["sb_set_blocksize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sb_set_blocksize",
+    "callees": ["sb_set_blocksize.part.0", "set_blocksize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_blocksize",
+    "callees": ["blksize_bits", "kill_bdev", "sync_blockdev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "truncate_bdev_range",
+    "callees": ["bd_abort_claiming", "bd_prepare_to_claim", "invalidate_inode_pages2_range", "truncate_inode_pages_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "invalidate_bdev",
+    "callees": ["invalidate_bh_lrus", "invalidate_mapping_pages", "lru_add_drain_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_write_inode",
+    "callees": ["___ratelimit", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "write_inode_now"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "I_BDEV",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdev_cache_init",
+    "callees": ["__builtin_expect", "kern_mount", "kmem_cache_create", "panic", "register_filesystem"],
+    "global_reads": [],
+    "global_writes": ["bd_mnt", "bdev_cachep", "blockdev_superblock"]
+  },
+  {
+    "name": "blksize_bits",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__order_base_2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_disk_ro",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__order_base_2",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

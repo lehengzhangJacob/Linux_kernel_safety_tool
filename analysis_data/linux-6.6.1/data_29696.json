@@ -1,0 +1,26 @@
+[
+  {
+    "name": "register_nmi_cpu_backtrace_handler",
+    "callees": ["__register_nmi_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_cpu_backtrace_handler",
+    "callees": ["nmi_cpu_backtrace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_trigger_cpumask_backtrace",
+    "callees": ["nmi_trigger_cpumask_backtrace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_raise_cpu_backtrace",
+    "callees": ["__SCT__apic_call_send_IPI_mask"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,836 @@
+[
+  {
+    "name": "create_vma_coredump",
+    "callees": ["i915_vma_coredump_create", "i915_vma_resource_hold", "i915_vma_resource_unhold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_vma_coredump",
+    "callees": ["i915_vma_coredump_create", "i915_vma_resource_hold", "i915_vma_resource_unhold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_capture_prepare",
+    "callees": ["__builtin_return_address", "compress_init", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_vma_coredump",
+    "callees": ["i915_vma_coredump_create", "i915_vma_resource_hold", "i915_vma_resource_unhold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_guc_ctb",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump.part.0",
+    "callees": ["__i915_gpu_coredump", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump",
+    "callees": ["i915_gpu_coredump.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_set_buf",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capture_vma",
+    "callees": ["__builtin_expect", "capture_vma_snapshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_fini",
+    "callees": ["__folio_batch_release", "kfree", "pool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_vma_coredump",
+    "callees": ["create_vma_coredump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_capture_finish.part.0",
+    "callees": ["compress_fini", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump.part.0",
+    "callees": ["__i915_gpu_coredump", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_capture_finish.part.0",
+    "callees": ["compress_fini", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_error_puts.part.0",
+    "callees": ["__i915_error_grow", "memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_disable_error_state",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_reset_error_state",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "i915_gpu_coredump_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_first_error_state",
+    "callees": ["__builtin_expect", "__refcount_add", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_capture_error_state",
+    "callees": ["__builtin_expect", "i915_error_state_store", "i915_gpu_coredump", "i915_gpu_coredump_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_error_state_store",
+    "callees": ["__builtin_expect", "__refcount_add", "_dev_info", "_printk", "error_msg", "ktime_get_real_seconds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump",
+    "callees": ["i915_gpu_coredump.part.0", "mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gpu_coredump",
+    "callees": ["__builtin_expect", "gt_record_engines", "gt_record_info", "gt_record_uc", "i915_gpu_coredump_alloc", "i915_vma_capture_finish.part.0", "i915_vma_capture_prepare", "intel_gt_coredump_alloc", "intel_overlay_capture_error_state", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_capture_finish",
+    "callees": ["i915_vma_capture_finish.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_capture_prepare",
+    "callees": ["__builtin_return_address", "compress_init", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_coredump_alloc",
+    "callees": ["gt_record_display_regs", "gt_record_fences", "gt_record_global_nonguc_regs", "gt_record_global_regs", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump_alloc",
+    "callees": ["capture_gen", "ktime_get", "ktime_get_with_offset", "kzalloc"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "capture_gen",
+    "callees": ["i915_params_copy", "i915_vtd_active", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_msg",
+    "callees": ["scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_info",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_global_regs",
+    "callees": ["intel_gt_mcr_read_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_global_nonguc_regs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_display_regs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_uc",
+    "callees": ["create_vma_coredump", "gt_record_guc_ctb", "kstrdup", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_engines",
+    "callees": ["capture_engine", "intel_guc_capture_free_node", "kfree", "pool_refill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capture_engine",
+    "callees": ["_dev_info", "dma_fence_put.part.0", "engine_coredump_add_context", "i915_request_started", "intel_engine_coredump_add_request", "intel_engine_coredump_add_vma", "intel_engine_coredump_alloc", "intel_engine_get_hung_entity", "intel_guc_capture_get_matching_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_coredump_add_vma",
+    "callees": ["add_vma_coredump", "dma_fence_put.part.0", "i915_vma_coredump_create", "i915_vma_resource_unhold", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_coredump_add_request",
+    "callees": ["capture_user", "capture_vma_snapshot", "engine_coredump_add_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engine_coredump_add_context",
+    "callees": ["capture_vma", "record_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_coredump_alloc",
+    "callees": ["engine_record_execlists", "engine_record_registers", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_vma_coredump",
+    "callees": ["create_vma_coredump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_vma_coredump",
+    "callees": ["i915_vma_coredump_create", "i915_vma_resource_hold", "i915_vma_resource_unhold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capture_vma",
+    "callees": ["__builtin_expect", "capture_vma_snapshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capture_vma_snapshot",
+    "callees": ["__builtin_expect", "__builtin_return_address", "dma_fence_get", "i915_vma_resource_hold", "kfree", "kmalloc_trace", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "record_context",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add_not_zero", "i915_gem_context_no_error_capture", "intel_context_get_avg_runtime_ns", "intel_context_get_total_runtime_ns", "kref_put", "pid_task", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engine_record_execlists",
+    "callees": ["record_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "record_request",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "intel_context_is_closed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engine_record_registers",
+    "callees": ["__warn_printk", "intel_engine_get_active_head", "intel_engine_get_instdone", "intel_gt_mcr_read_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gt_record_fences",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_coredump_create",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "compress_flush", "compress_page", "compress_start", "drm_clflush_pages", "i915_gem_get_pat_index", "kfree", "kmalloc_trace", "mutex_lock", "mutex_unlock", "pool_free", "strcpy", "zlib_deflateEnd"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gpu_coredump_free",
+    "callees": ["cleanup_gt", "err_free_sgl", "i915_params_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_gt",
+    "callees": ["cleanup_uc", "i915_vma_coredump_free", "intel_guc_capture_free_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_uc",
+    "callees": ["i915_vma_coredump_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_coredump_free",
+    "callees": ["__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gpu_coredump_copy_to_buffer",
+    "callees": ["err_print_to_sgl", "memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_to_sgl",
+    "callees": ["__builtin_expect", "__err_print_to_sgl", "__sg_set_buf", "err_free_sgl", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__err_print_to_sgl",
+    "callees": ["err_print_capabilities", "err_print_gt_display", "err_print_gt_engines", "err_print_gt_fences", "err_print_gt_global", "err_print_gt_global_nonguc", "err_print_gt_info", "err_print_params", "err_print_pciid", "err_print_uc", "i915_error_printf", "intel_dmc_print_error_state", "intel_overlay_print_error_state", "intel_platform_name", "jiffies_to_msecs", "ns_to_timespec64"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_engines",
+    "callees": ["error_print_context", "error_print_engine", "i915_error_printf", "intel_gpu_error_print_vma", "intel_guc_capture_print_engine_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_fences",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_global",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_global_nonguc",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_display",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_gt_info",
+    "callees": ["intel_gt_info_print", "intel_sseu_print_topology"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_free_sgl",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_uc",
+    "callees": ["err_print_guc_ctb", "i915_error_printf", "intel_gpu_error_print_vma", "intel_uc_fw_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_guc_ctb",
+    "callees": ["i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_params",
+    "callees": ["i915_params_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_print_capabilities",
+    "callees": ["intel_device_info_print", "intel_display_device_info_print", "intel_driver_caps_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gpu_error_print_vma",
+    "callees": ["ascii85_encode", "err_compression_marker", "i915_error_printf", "i915_error_puts", "i915_error_puts.part.0"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_error_printf",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "i915_error_vprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_print_engine",
+    "callees": ["__find_vma", "error_print_instdone", "error_print_request", "i915_error_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gpu_error_find_batch",
+    "callees": ["__find_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "error_print_instdone",
+    "callees": ["i915_error_printf", "intel_gt_mcr_get_ss_steering", "intel_sseu_has_subslice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_compression_marker",
+    "callees": ["i915_error_puts.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_fini",
+    "callees": ["__folio_batch_release", "kfree", "pool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_flush",
+    "callees": ["__builtin_expect", "compress_next_page", "memset", "zlib_deflate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_page",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "compress_next_page", "i915_memcpy_from_wc", "zlib_deflate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_next_page",
+    "callees": ["pool_alloc"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "compress_start",
+    "callees": ["memset", "zlib_deflateInit2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compress_init",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__folio_batch_release", "__kmalloc", "i915_memcpy_from_wc", "kmalloc_large", "kmalloc_trace", "pool_alloc", "pool_init", "zlib_deflate_workspacesize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pool_free",
+    "callees": ["folio_put", "virt_to_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_printfn_error",
+    "callees": ["i915_error_vprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_error_puts",
+    "callees": ["i915_error_puts.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_error_vprintf",
+    "callees": ["__builtin_va_copy", "__builtin_va_end", "__i915_error_grow", "vscnprintf", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_error_grow",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__get_free_pages", "__kmalloc", "__sg_set_buf", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_set_buf",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_context_no_error_capture",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_is_closed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_started",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sseu_has_subslice",
+    "callees": ["intel_sseu_has_subslice.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_folio",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ascii85_encode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

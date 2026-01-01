@@ -1,0 +1,926 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_memory_bitmap",
+    "callees": ["memory_bm_next_pfn", "memory_bm_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_memory_bitmap",
+    "callees": ["memory_bm_next_pfn", "memory_bm_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_memory_bitmap",
+    "callees": ["memory_bm_next_pfn", "memory_bm_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_forbidden",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_free",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_free",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_forbidden",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_forbidden",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_forbidden",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_num_physpages",
+    "callees": ["find_first_bit", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_additional_pages",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_forbidden",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_forbidden",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_mem_extents",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_forbidden",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_free",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_rtree_node",
+    "callees": ["chain_alloc", "get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_rtree_node",
+    "callees": ["chain_alloc", "get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_safe_page.part.0",
+    "callees": ["get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_safe_page",
+    "callees": ["__get_safe_page.part.0", "memset"],
+    "global_reads": ["safe_pages_list"],
+    "global_writes": ["safe_pages_list"]
+  },
+  {
+    "name": "free_zone_bm_rtree",
+    "callees": ["free_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_image_page",
+    "callees": ["alloc_pages", "swsusp_set_page_forbidden", "swsusp_set_page_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernate_restore_protect_page.part.0",
+    "callees": ["set_memory_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mark_free_pages.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pfn_valid", "swsusp_page_is_forbidden", "swsusp_set_page_free", "swsusp_unset_page_free"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__get_safe_page.part.0",
+    "callees": ["get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernate_restore_protect_page.part.0",
+    "callees": ["set_memory_ro"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_image_loaded",
+    "callees": [],
+    "global_reads": ["nr_copy_pages", "nr_meta_pages", "nr_zero_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_write_finalize",
+    "callees": ["hibernate_restore_protect_page.part.0", "memory_bm_recycle"],
+    "global_reads": ["hibernate_restore_protection_active", "nr_copy_pages", "nr_meta_pages", "nr_zero_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_write_next",
+    "callees": ["__builtin_expect", "get_buffer", "get_image_page", "hibernate_restore_protect_page.part.0", "load_header", "memory_bm_create", "memory_bm_test_bit", "memset", "prepare_image", "unpack_orig_pfns"],
+    "global_reads": ["buffer", "hibernate_restore_protection", "hibernate_restore_protection_active", "nr_copy_pages", "nr_meta_pages", "nr_zero_pages"],
+    "global_writes": ["buffer", "hibernate_restore_protection_active", "nr_zero_pages", "restore_pblist", "safe_pages_list"]
+  },
+  {
+    "name": "load_header",
+    "callees": ["check_header"],
+    "global_reads": [],
+    "global_writes": ["nr_copy_pages", "nr_meta_pages", "restore_pblist"]
+  },
+  {
+    "name": "check_header",
+    "callees": ["_printk", "arch_hibernation_header_restore", "get_num_physpages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duplicate_memory_bitmap",
+    "callees": ["memory_bm_next_pfn", "memory_bm_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_read_next",
+    "callees": ["get_image_page", "init_header", "memory_bm_next_pfn", "pack_pfns"],
+    "global_reads": ["buffer", "nr_copy_pages", "nr_meta_pages", "page_offset_base", "vmemmap_base"],
+    "global_writes": ["buffer"]
+  },
+  {
+    "name": "init_header",
+    "callees": ["arch_hibernation_header_save", "get_num_physpages", "memset"],
+    "global_reads": ["nr_copy_pages", "nr_meta_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_get_image_size",
+    "callees": [],
+    "global_reads": ["nr_copy_pages", "nr_meta_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_save",
+    "callees": ["_printk", "copy_data_pages", "count_data_pages", "drain_local_pages", "enough_free_mem", "swsusp_alloc"],
+    "global_reads": [],
+    "global_writes": ["nr_copy_pages", "nr_meta_pages", "nr_zero_pages"]
+  },
+  {
+    "name": "hibernate_preallocate_memory",
+    "callees": ["_printk", "count_data_pages", "first_online_pgdat", "free_unnecessary_pages", "ktime_get", "memory_bm_create", "minimum_image_size", "next_zone", "preallocate_image_memory", "shrink_all_memory", "snapshot_additional_pages", "swsusp_free", "swsusp_show_speed"],
+    "global_reads": ["image_size", "reserved_size", "totalreserve_pages"],
+    "global_writes": ["alloc_highmem", "alloc_normal", "nr_zero_pages"]
+  },
+  {
+    "name": "minimum_image_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_unnecessary_pages",
+    "callees": ["__free_pages", "count_data_pages", "memory_bm_clear_bit", "memory_bm_next_pfn", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["alloc_highmem", "alloc_normal", "vmemmap_base"],
+    "global_writes": ["alloc_normal"]
+  },
+  {
+    "name": "preallocate_image_memory",
+    "callees": ["preallocate_image_pages"],
+    "global_reads": ["alloc_normal"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_free",
+    "callees": ["__free_pages", "hibernate_restore_unprotect_page", "memory_bm_clear_current", "memory_bm_next_pfn", "pfn_valid"],
+    "global_reads": ["forbidden_pages_map", "free_pages_map", "page_offset_base", "vmemmap_base"],
+    "global_writes": ["alloc_highmem", "alloc_normal", "buffer", "hibernate_restore_protection_active", "nr_copy_pages", "nr_meta_pages", "nr_zero_pages", "restore_pblist"]
+  },
+  {
+    "name": "copy_data_page",
+    "callees": ["safe_copy_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "safe_copy_page",
+    "callees": ["hibernate_map_page", "hibernate_unmap_page", "kernel_page_present"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "count_data_pages",
+    "callees": ["first_online_pgdat", "mark_free_pages.part.0", "next_zone", "saveable_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "saveable_page",
+    "callees": ["kernel_page_present", "pfn_is_nosave", "pfn_valid", "swsusp_page_is_forbidden", "swsusp_page_is_free"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_additional_pages",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_or_poison_free_pages",
+    "callees": ["__builtin_expect", "_printk", "clear_or_poison_free_page", "memory_bm_next_pfn", "pfn_valid"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "clear_or_poison_free_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_basic_memory_bitmaps",
+    "callees": ["__builtin_expect", "kfree", "memory_bm_free"],
+    "global_reads": ["forbidden_pages_map", "free_pages_map"],
+    "global_writes": ["forbidden_pages_map", "free_pages_map"]
+  },
+  {
+    "name": "create_basic_memory_bitmaps",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kfree", "kzalloc", "mark_nosave_pages", "memory_bm_create", "memory_bm_free"],
+    "global_reads": ["forbidden_pages_map", "free_pages_map"],
+    "global_writes": ["forbidden_pages_map", "free_pages_map"]
+  },
+  {
+    "name": "mark_nosave_pages",
+    "callees": ["mem_bm_set_bit_check", "pfn_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_forbidden",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_forbidden",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_forbidden",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["forbidden_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_unset_page_free",
+    "callees": ["memory_bm_clear_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_page_is_free",
+    "callees": ["memory_bm_test_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_set_page_free",
+    "callees": ["memory_bm_set_bit"],
+    "global_reads": ["free_pages_map", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "register_nosave_region",
+    "callees": ["_printk", "memblock_alloc_try_nid", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recycle_zone_bm_rtree",
+    "callees": [],
+    "global_reads": ["safe_pages_list"],
+    "global_writes": ["safe_pages_list"]
+  },
+  {
+    "name": "memory_bm_next_pfn",
+    "callees": ["find_next_bit", "rtree_next_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtree_next_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "memory_bm_find_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_clear_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "memory_bm_find_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_set_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "memory_bm_find_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_find_bit",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_free",
+    "callees": ["free_image_page", "free_zone_bm_rtree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_bm_create",
+    "callees": ["create_mem_extents", "create_zone_bm_rtree", "free_mem_extents", "memory_bm_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_mem_extents",
+    "callees": ["first_online_pgdat", "free_mem_extents", "kfree", "kzalloc", "next_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_mem_extents",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_zone_bm_rtree",
+    "callees": ["free_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_zone_bm_rtree",
+    "callees": ["add_rtree_block", "chain_alloc", "free_zone_bm_rtree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_rtree_block",
+    "callees": ["alloc_rtree_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_rtree_node",
+    "callees": ["chain_alloc", "get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chain_alloc",
+    "callees": ["__get_safe_page", "get_image_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_image_page",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__free_pages", "__virt_addr_valid", "swsusp_unset_page_forbidden", "swsusp_unset_page_free"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_image_page",
+    "callees": ["alloc_pages", "swsusp_set_page_forbidden", "swsusp_set_page_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_safe_page",
+    "callees": ["__get_safe_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_safe_page",
+    "callees": ["__get_safe_page.part.0", "memset"],
+    "global_reads": ["safe_pages_list"],
+    "global_writes": ["safe_pages_list"]
+  },
+  {
+    "name": "get_image_page",
+    "callees": ["get_zeroed_page", "swsusp_page_is_free", "swsusp_set_page_forbidden", "swsusp_set_page_free"],
+    "global_reads": ["allocated_unsafe_pages", "page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": ["allocated_unsafe_pages"]
+  },
+  {
+    "name": "hibernate_unmap_page",
+    "callees": ["__builtin_expect", "_printk", "flush_tlb_kernel_range", "set_direct_map_invalid_noflush"],
+    "global_reads": ["__already_done", "page_offset_base", "vmemmap_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "hibernate_map_page",
+    "callees": ["__builtin_expect", "_printk", "set_direct_map_default_noflush"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "hibernate_restore_unprotect_page",
+    "callees": ["set_memory_rw"],
+    "global_reads": ["hibernate_restore_protection_active"],
+    "global_writes": []
+  },
+  {
+    "name": "enable_restore_image_protection",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["hibernate_restore_protection"]
+  },
+  {
+    "name": "hibernate_image_size_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["image_size"]
+  },
+  {
+    "name": "hibernate_reserved_size_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["reserved_size"]
+  },
+  {
+    "name": "get_num_physpages",
+    "callees": ["find_first_bit", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

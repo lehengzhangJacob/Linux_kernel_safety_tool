@@ -1,0 +1,62 @@
+[
+  {
+    "name": "public_key_free.part.0",
+    "callees": ["kfree", "kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_free.part.0",
+    "callees": ["kfree", "kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_verify_signature_2",
+    "callees": ["public_key_verify_signature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_verify_signature",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__builtin_unreachable", "__kmalloc", "crypto_alloc_sig", "crypto_destroy_tfm", "crypto_sig_set_privkey", "crypto_sig_set_pubkey", "crypto_sig_verify", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "memcpy", "software_key_determine_akcipher", "strcmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "software_key_eds_op",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__builtin_unreachable", "__kmalloc", "crypto_akcipher_sync_decrypt", "crypto_akcipher_sync_encrypt", "crypto_alloc_akcipher", "crypto_alloc_sig", "crypto_destroy_tfm", "crypto_sig_maxsize", "crypto_sig_set_privkey", "crypto_sig_set_pubkey", "crypto_sig_sign", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "memcpy", "software_key_determine_akcipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "software_key_query",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "crypto_alloc_akcipher", "crypto_alloc_sig", "crypto_destroy_tfm", "crypto_sig_maxsize", "crypto_sig_set_privkey", "crypto_sig_set_pubkey", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "memcpy", "software_key_determine_akcipher", "strcmp", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "software_key_determine_akcipher",
+    "callees": ["snprintf", "strcmp", "strncmp", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_destroy",
+    "callees": ["public_key_free.part.0", "public_key_signature_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_free",
+    "callees": ["public_key_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "public_key_describe",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

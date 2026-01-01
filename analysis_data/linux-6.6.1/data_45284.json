@@ -1,0 +1,248 @@
+[
+  {
+    "name": "tcp_fastopen_active_disable",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_active_disable",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_reset_cipher",
+    "callees": ["__builtin_return_address", "call_rcu", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_no_cookie",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_add_skb.part.0",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "refdst_drop", "sk_forced_mem_schedule", "skb_clone", "skb_set_owner_r", "tcp_fin", "tcp_segs_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_active_detect_blackhole",
+    "callees": ["tcp_fastopen_active_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_active_disable_ofo_check",
+    "callees": ["dst_release", "rb_first", "rb_next", "sk_dst_get", "tcp_fastopen_active_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_active_should_disable",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_active_disable",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_defer_connect",
+    "callees": ["kzalloc", "tcp_fastopen_cookie_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_cookie_check",
+    "callees": ["tcp_fastopen_active_should_disable", "tcp_fastopen_cache_get", "tcp_fastopen_no_cookie"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_try_fastopen",
+    "callees": ["tcp_fastopen_cookie_gen", "tcp_fastopen_cookie_gen_check", "tcp_fastopen_create_child", "tcp_fastopen_no_cookie", "tcp_fastopen_queue_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_no_cookie",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_queue_check",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "reqsk_put"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_create_child",
+    "callees": ["__builtin_bswap16", "_raw_spin_lock", "_raw_spin_unlock", "inet_csk_reset_xmit_timer", "tcp_fastopen_add_skb.part.0", "tcp_init_transfer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_cookie_gen_check",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__tcp_fastopen_cookie_gen_cipher", "tcp_fastopen_cookie_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_add_skb",
+    "callees": ["tcp_fastopen_add_skb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_cookie_gen",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__tcp_fastopen_cookie_gen_cipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_get_cipher",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_reset_cipher",
+    "callees": ["__builtin_return_address", "call_rcu", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_ctx_destroy",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_destroy_cipher",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_ctx_free",
+    "callees": ["kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_init_key_once",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "get_random_bytes", "tcp_fastopen_reset_cipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_cookie_match",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_put",
+    "callees": ["__refcount_sub_and_test", "reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_free",
+    "callees": ["__builtin_expect", "__reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_set_owner_r",
+    "callees": ["skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_dst_get",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

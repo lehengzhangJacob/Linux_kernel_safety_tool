@@ -1,0 +1,26 @@
+[
+  {
+    "name": "sbf_init",
+    "callees": ["_printk", "sbf_read", "sbf_value_valid", "sbf_write"],
+    "global_reads": ["sbf_port"],
+    "global_writes": []
+  },
+  {
+    "name": "sbf_value_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sbf_read",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rtc_cmos_read"],
+    "global_reads": ["sbf_port"],
+    "global_writes": []
+  },
+  {
+    "name": "sbf_write",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rtc_cmos_write"],
+    "global_reads": ["sbf_port"],
+    "global_writes": []
+  }
+]

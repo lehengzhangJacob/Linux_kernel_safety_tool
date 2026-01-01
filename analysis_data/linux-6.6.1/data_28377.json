@@ -1,0 +1,392 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_default_get_root_pointer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_default_set_root_pointer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_reserve_mem_area",
+    "callees": ["e820__range_add", "e820__update_table_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_release_global_lock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_acquire_global_lock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_acpi_sci",
+    "callees": ["strcmp"],
+    "global_reads": ["acpi_sci_flags"],
+    "global_writes": ["acpi_sci_flags"]
+  },
+  {
+    "name": "parse_acpi_use_timer_override",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_use_timer_override"]
+  },
+  {
+    "name": "parse_acpi_skip_timer_override",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_skip_timer_override"]
+  },
+  {
+    "name": "acpi_mps_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_pci",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["acpi_noirq", "acpi_pci_disabled"]
+  },
+  {
+    "name": "parse_acpi_bgrt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_nobgrt"]
+  },
+  {
+    "name": "parse_acpi",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["acpi_disable_cmcff", "acpi_disabled", "acpi_force", "acpi_gbl_copy_dsdt_locally", "acpi_gbl_do_not_use_xsdt", "acpi_noirq", "acpi_pci_disabled", "acpi_strict"]
+  },
+  {
+    "name": "acpi_boot_init",
+    "callees": ["acpi_parse_spcr", "acpi_process_madt", "acpi_table_parse", "dmi_check_system"],
+    "global_reads": ["acpi_disabled", "acpi_nobgrt", "acpi_noirq", "earlycon_acpi_spcr_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "early_acpi_boot_init",
+    "callees": ["_printk", "acpi_blacklisted", "acpi_table_init_complete", "acpi_table_parse", "early_acpi_process_madt"],
+    "global_reads": ["acpi_disabled", "acpi_force", "acpi_gbl_reduced_hardware"],
+    "global_writes": ["acpi_disabled", "acpi_noirq", "acpi_pci_disabled"]
+  },
+  {
+    "name": "acpi_boot_table_init",
+    "callees": ["acpi_locate_initial_tables", "acpi_reserve_initial_tables", "dmi_check_system"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": ["acpi_disabled", "acpi_noirq", "acpi_pci_disabled"]
+  },
+  {
+    "name": "acpi_generic_reduced_hw_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["legacy_pic"]
+  },
+  {
+    "name": "dmi_ignore_irq0_timer_override",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_skip_timer_override"],
+    "global_writes": ["acpi_skip_timer_override"]
+  },
+  {
+    "name": "dmi_disable_acpi",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_force"],
+    "global_writes": ["acpi_disabled", "acpi_noirq", "acpi_pci_disabled"]
+  },
+  {
+    "name": "disable_acpi_xsdt",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_force"],
+    "global_writes": ["acpi_gbl_do_not_use_xsdt"]
+  },
+  {
+    "name": "disable_acpi_pci",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_force"],
+    "global_writes": ["acpi_noirq", "acpi_pci_disabled"]
+  },
+  {
+    "name": "disable_acpi_irq",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_force"],
+    "global_writes": ["acpi_noirq"]
+  },
+  {
+    "name": "acpi_process_madt",
+    "callees": ["_printk", "acpi_parse_madt_ioapic_entries", "acpi_parse_madt_lapic_entries", "acpi_table_parse", "acpi_table_parse_madt", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["acpi_ioapic", "acpi_lapic", "smp_found_config"],
+    "global_writes": ["__acpi_register_gsi", "__acpi_unregister_gsi", "acpi_disabled", "acpi_ioapic", "acpi_irq_model", "acpi_lapic", "acpi_noirq", "acpi_pci_disabled", "smp_found_config"]
+  },
+  {
+    "name": "early_acpi_process_madt",
+    "callees": ["_printk", "acpi_table_parse", "early_acpi_parse_madt_lapic_addr_ovr"],
+    "global_reads": [],
+    "global_writes": ["acpi_disabled", "acpi_lapic", "acpi_noirq", "acpi_pci_disabled", "smp_found_config"]
+  },
+  {
+    "name": "acpi_parse_madt_ioapic_entries",
+    "callees": ["_printk", "acpi_sci_ioapic_setup", "acpi_table_parse_madt", "mp_config_acpi_legacy_irqs"],
+    "global_reads": ["acpi_disabled", "acpi_gbl_reduced_hardware", "acpi_noirq", "acpi_sci_override_gsi", "ioapic_is_disabled", "nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_config_acpi_legacy_irqs",
+    "callees": ["mp_find_ioapic", "mp_find_ioapic_pin", "mp_save_irq", "mpc_ioapic_id"],
+    "global_reads": ["legacy_pic", "mp_irq_entries"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_mp_wake",
+    "callees": ["__static_call_update", "_printk", "acpi_table_print_madt_entry"],
+    "global_reads": ["apic"],
+    "global_writes": ["acpi_mp_wake_mailbox_paddr"]
+  },
+  {
+    "name": "acpi_parse_madt_lapic_entries",
+    "callees": ["_printk", "acpi_table_parse_entries_array", "acpi_table_parse_madt", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_acpi_parse_madt_lapic_addr_ovr",
+    "callees": ["_printk", "acpi_table_parse_madt", "register_lapic_address"],
+    "global_reads": ["acpi_lapic_addr"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_fadt",
+    "callees": ["_printk"],
+    "global_reads": ["pmtmr_ioport"],
+    "global_writes": ["pmtmr_ioport"]
+  },
+  {
+    "name": "hpet_insert_resource",
+    "callees": ["insert_resource"],
+    "global_reads": ["hpet_res"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_hpet",
+    "callees": ["_printk", "memblock_alloc_try_nid", "panic", "snprintf"],
+    "global_reads": ["hpet_address", "hpet_force_user", "hpet_res"],
+    "global_writes": ["hpet_address", "hpet_blockid", "hpet_res"]
+  },
+  {
+    "name": "acpi_parse_sbf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["sbf_port"]
+  },
+  {
+    "name": "acpi_ioapic_registered",
+    "callees": ["mp_ioapic_registered", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_unregister_ioapic",
+    "callees": ["mp_unregister_ioapic", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_ioapic",
+    "callees": ["acpi_evaluate_integer", "acpi_get_ioapic_id", "acpi_handle_printk", "mp_register_ioapic", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_unmap_cpu",
+    "callees": ["set_cpu_present"],
+    "global_reads": ["num_processors"],
+    "global_writes": ["num_processors"]
+  },
+  {
+    "name": "acpi_map_cpu",
+    "callees": ["_printk", "acpi_map_cpu2node", "acpi_processor_set_pdc", "acpi_register_lapic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_unregister_gsi",
+    "callees": [],
+    "global_reads": ["__acpi_unregister_gsi"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_gsi",
+    "callees": [],
+    "global_reads": ["__acpi_register_gsi"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_unregister_gsi_ioapic",
+    "callees": ["mp_map_gsi_to_irq", "mp_unmap_irq", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_gsi_ioapic",
+    "callees": ["ioapic_set_alloc_attr", "mp_config_acpi_gsi", "mp_map_gsi_to_irq", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["enable_update_mptable"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_gsi_pic",
+    "callees": ["elcr_set_level_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_isa_irq_to_gsi",
+    "callees": [],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_gsi_to_irq",
+    "callees": ["acpi_get_override_irq"],
+    "global_reads": ["__acpi_register_gsi", "acpi_irq_model"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pic_sci_set_trigger",
+    "callees": ["_printk"],
+    "global_reads": ["acpi_noirq"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_nmi_src",
+    "callees": ["acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_int_src_ovr",
+    "callees": ["_printk", "acpi_sci_ioapic_setup", "acpi_table_print_madt_entry", "mp_override_legacy_irq"],
+    "global_reads": ["acpi_fix_pin2_polarity", "acpi_skip_timer_override"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_sci_ioapic_setup",
+    "callees": ["acpi_penalize_sci_irq", "mp_override_legacy_irq", "mp_register_ioapic_irq"],
+    "global_reads": ["acpi_sci_flags"],
+    "global_writes": ["acpi_sci_override_gsi"]
+  },
+  {
+    "name": "acpi_parse_ioapic",
+    "callees": ["acpi_table_print_madt_entry", "mp_register_ioapic"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_config_acpi_gsi",
+    "callees": ["mp_find_ioapic", "mp_find_ioapic_pin", "mp_save_irq", "mpc_ioapic_id"],
+    "global_reads": ["acpi_ioapic"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_override_legacy_irq",
+    "callees": ["_printk", "mp_register_ioapic_irq"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_register_ioapic_irq",
+    "callees": ["_printk", "mp_find_ioapic", "mp_find_ioapic_pin", "mp_save_irq", "mpc_ioapic_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_wakeup_cpu",
+    "callees": ["memremap"],
+    "global_reads": ["acpi_mp_wake_mailbox", "acpi_mp_wake_mailbox_paddr"],
+    "global_writes": ["acpi_mp_wake_mailbox"]
+  },
+  {
+    "name": "acpi_parse_lapic_nmi",
+    "callees": ["_printk", "acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_x2apic_nmi",
+    "callees": ["_printk", "acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_lapic_addr_ovr",
+    "callees": ["acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": ["acpi_lapic_addr"]
+  },
+  {
+    "name": "acpi_parse_sapic",
+    "callees": ["acpi_register_lapic", "acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_lapic",
+    "callees": ["acpi_register_lapic", "acpi_table_print_madt_entry"],
+    "global_reads": ["acpi_support_online_capable"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_parse_x2apic",
+    "callees": ["_printk", "acpi_table_print_madt_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_register_lapic",
+    "callees": ["_printk", "generic_processor_info"],
+    "global_reads": ["disabled_cpus", "x86_cpu_to_acpiid_early_ptr"],
+    "global_writes": ["disabled_cpus"]
+  },
+  {
+    "name": "acpi_parse_madt",
+    "callees": ["_printk", "default_acpi_madt_oem_check", "legacy_pic_pcat_compat"],
+    "global_reads": [],
+    "global_writes": ["acpi_lapic_addr", "acpi_support_online_capable"]
+  },
+  {
+    "name": "__acpi_unmap_table",
+    "callees": ["early_memunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_map_table",
+    "callees": ["early_memremap"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

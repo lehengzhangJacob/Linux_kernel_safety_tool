@@ -1,0 +1,152 @@
+[
+  {
+    "name": "__tty_buffer_request_room",
+    "callees": ["tty_buffer_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_unlock_exclusive.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_flush_work",
+    "callees": ["flush_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_cancel_work",
+    "callees": ["cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_restart_work",
+    "callees": ["queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_set_lock_subclass",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_set_limit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_init",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_insert_flip_string_and_push_buffer",
+    "callees": ["__tty_insert_flip_string_flags", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "tty_flip_buffer_push",
+    "callees": ["queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "flush_to_ldisc",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "lookahead_bufs", "mutex_lock", "mutex_unlock", "receive_buf", "tty_buffer_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "receive_buf",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookahead_bufs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_ldisc_receive_buf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_prepare_flip_string",
+    "callees": ["__builtin_expect", "__tty_buffer_request_room", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tty_insert_flip_string_flags",
+    "callees": ["__builtin_expect", "__tty_buffer_request_room", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_request_room",
+    "callees": ["__tty_buffer_request_room"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tty_buffer_request_room",
+    "callees": ["tty_buffer_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_flush",
+    "callees": ["mutex_lock", "mutex_unlock", "tty_buffer_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_free",
+    "callees": ["__builtin_expect", "kfree", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_alloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "llist_del_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_free_all",
+    "callees": ["__builtin_expect", "__warn_printk", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_space_avail",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_unlock_exclusive",
+    "callees": ["mutex_unlock", "tty_buffer_unlock_exclusive.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_buffer_lock_exclusive",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "list_lru_walk_one",
+    "callees": ["__list_lru_walk_one", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__list_lru_init",
+    "callees": ["find_first_bit", "find_next_bit", "kmalloc_array"],
+    "global_reads": ["nr_node_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_walk_node",
+    "callees": ["list_lru_walk_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_walk_one_irq",
+    "callees": ["__list_lru_walk_one", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_walk_one",
+    "callees": ["__list_lru_walk_one", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_count_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_count_one",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_isolate_move",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_isolate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_del",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "list_lru_add",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

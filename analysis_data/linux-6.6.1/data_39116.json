@@ -1,0 +1,260 @@
+[
+  {
+    "name": "nfs_sb_deactive",
+    "callees": ["deactivate_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_sb_deactive",
+    "callees": ["deactivate_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "param_set_portnr",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_kill_super",
+    "callees": ["kill_anon_super", "nfs_free_server", "nfs_sysfs_move_sb_to_server"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_get_tree_common",
+    "callees": ["__builtin_expect", "deactivate_locked_super", "logfc", "nfs_fill_super", "nfs_free_server", "nfs_get_root", "sget_fc", "super_setup_bdi_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_compare_super",
+    "callees": ["memcmp", "nfs_compare_mount_options", "nfs_compare_super_address", "nfs_compare_userns", "security_sb_mnt_opts_compat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_set_super",
+    "callees": ["set_anon_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fill_super",
+    "callees": ["nfs_block_bits", "nfs_sysfs_move_server_to_sb", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_reconfigure",
+    "callees": ["nfs_compare_remount_data", "nfs_probe_server", "sync_filesystem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_compare_remount_data",
+    "callees": ["rpc_cmp_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_try_get_tree",
+    "callees": ["nfs_get_tree_common", "nfs_try_mount_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_try_mount_request",
+    "callees": ["__builtin_expect", "nfs_request_mount", "nfs_verify_authflavors", "rpcauth_get_gssinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_verify_authflavors",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_auth_info_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_umount_begin",
+    "callees": ["__builtin_expect", "rpc_killall_tasks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_stats",
+    "callees": ["__builtin_expect", "find_next_bit", "nfs_show_mount_options", "rpc_clnt_show_stats", "seq_printf", "seq_putc", "seq_puts", "show_lease"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_path",
+    "callees": ["seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_devname",
+    "callees": ["__builtin_expect", "__get_free_pages", "free_pages", "nfs_path", "seq_escape_str"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_options",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "nfs_show_mount_options", "rpc_peeraddr2str", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_mount_options",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "nfs_show_mountd_options", "nfs_show_nfs_version", "rpc_peeraddr2str", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_nfs_version",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_mountd_options",
+    "callees": ["nfs_show_mountd_netid", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_show_mountd_netid",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_statfs",
+    "callees": ["__builtin_expect", "dget_parent", "dput", "kfree", "nfs_alloc_fattr", "nfs_zap_caches"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_client_for_each_server",
+    "callees": ["__nfs_list_for_each_server"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nfs_list_for_each_server",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "nfs_sb_active", "nfs_sb_deactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_sb_deactive",
+    "callees": ["deactivate_super"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_sb_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_nfs_fs",
+    "callees": ["nfs_unregister_sysctl", "unregister_filesystem", "unregister_shrinker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_nfs_fs",
+    "callees": ["nfs_register_sysctl", "nfs_unregister_sysctl", "register_filesystem", "register_shrinker", "unregister_filesystem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr",
+    "callees": ["rpc_cmp_addr6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr6",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_set_port",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

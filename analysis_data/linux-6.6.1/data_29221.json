@@ -1,0 +1,26 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virt_addr_valid",
+    "callees": ["__builtin_expect", "pfn_valid"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  }
+]

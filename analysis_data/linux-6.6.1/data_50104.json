@@ -1,0 +1,206 @@
+[
+  {
+    "name": "intel_rps_is_active",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_get.part.0",
+    "callees": ["intel_gt_perf_limit_reasons_reg", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_clear.part.0",
+    "callees": ["intel_gt_perf_limit_reasons_reg", "intel_runtime_pm_put_unchecked", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_pm_debugfs_register",
+    "callees": ["intel_gt_debugfs_register_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_fops_open",
+    "callees": ["simple_attr_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_eval",
+    "callees": ["intel_gt_perf_limit_reasons_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_clear",
+    "callees": ["intel_runtime_pm_get", "perf_limit_reasons_clear.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_limit_reasons_get",
+    "callees": ["intel_runtime_pm_get", "perf_limit_reasons_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rps_boost_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rps_eval",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rps_boost_show",
+    "callees": ["__builtin_constant_p", "intel_gpu_freq", "intel_gt_get_awake_time", "intel_rps_is_active", "intel_rps_read_actual_frequency", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "llc_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "llc_eval",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "llc_show",
+    "callees": ["intel_gpu_freq", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "seq_printf", "seq_puts", "snb_pcode_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "frequency_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "frequency_show",
+    "callees": ["intel_gt_pm_frequency_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_pm_frequency_dump",
+    "callees": ["drm_printf", "drm_puts", "gen6_rps_frequency_dump", "intel_gpu_freq", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "vlv_iosf_sb_get", "vlv_iosf_sb_put", "vlv_punit_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drpc_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drpc_show",
+    "callees": ["gen6_drpc", "ilk_drpc", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "mtl_drpc", "vlv_drpc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtl_drpc",
+    "callees": ["__warn_printk", "fw_domains_show", "intel_rc6_print_residency", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_drpc",
+    "callees": ["seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_drpc",
+    "callees": ["fw_domains_show", "intel_rc6_print_residency", "seq_printf", "seq_puts", "snb_pcode_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vlv_drpc",
+    "callees": ["fw_domains_show", "intel_rc6_print_residency", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_domains_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_domains_show",
+    "callees": ["__builtin_constant_p", "__builtin_ctz", "intel_uncore_forcewake_domain_to_str", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "forcewake_user_release",
+    "callees": ["intel_gt_pm_debugfs_forcewake_user_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "forcewake_user_open",
+    "callees": ["intel_gt_pm_debugfs_forcewake_user_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_pm_debugfs_forcewake_user_release",
+    "callees": ["__SCT__might_resched", "__intel_wakeref_put", "intel_uncore_forcewake_user_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_pm_debugfs_forcewake_user_open",
+    "callees": ["intel_gt_pm_debugfs_forcewake_user_open.part.0", "intel_wakeref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_rps_is_active",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

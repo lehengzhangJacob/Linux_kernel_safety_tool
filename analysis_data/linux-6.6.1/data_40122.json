@@ -1,0 +1,62 @@
+[
+  {
+    "name": "page_counter_cancel",
+    "callees": ["__builtin_expect", "__warn_printk", "propagate_protected_usage"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "page_counter_memparse",
+    "callees": ["memparse", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_low",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_min",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_max",
+    "callees": ["__SCT__cond_resched"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_uncharge",
+    "callees": ["page_counter_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_try_charge",
+    "callees": ["page_counter_cancel", "propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_charge",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_cancel",
+    "callees": ["__builtin_expect", "__warn_printk", "propagate_protected_usage"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "propagate_protected_usage",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "pnp_release_card_device",
+    "callees": ["device_release_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_remove_card_device",
+    "callees": ["__pnp_remove_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_card_driver.part.0",
+    "callees": ["card_probe", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_unregister_card_driver",
+    "callees": ["mutex_lock", "mutex_unlock", "pnp_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_card_driver",
+    "callees": ["pnp_register_card_driver.part.0", "pnp_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_release_card_device",
+    "callees": ["device_release_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_request_card_device",
+    "callees": ["compare_pnp_id", "device_bind_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_remove_card_device",
+    "callees": ["__pnp_remove_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_card_device",
+    "callees": ["dev_set_name", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_remove_card",
+    "callees": ["device_unregister", "mutex_lock", "mutex_unlock", "pnp_remove_card_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_card",
+    "callees": ["__pnp_add_device", "_dev_err", "card_probe", "device_register", "mutex_lock", "mutex_unlock", "pnp_interface_attach_card", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_id_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "name_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_alloc_card",
+    "callees": ["dev_set_name", "kfree", "kzalloc", "pnp_add_card_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_release_card",
+    "callees": ["kfree", "pnp_free_card_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_remove_first",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_remove",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

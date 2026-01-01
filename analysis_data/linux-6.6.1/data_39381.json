@@ -1,0 +1,482 @@
+[
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_dma_alloc_pages",
+    "callees": ["__builtin_expect", "snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_free",
+    "callees": ["dma_free_noncontiguous", "dma_vunmap_noncontiguous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_free_pages",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_dma_alloc_pages",
+    "callees": ["__builtin_expect", "snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_alloc_dir_pages",
+    "callees": ["__builtin_expect", "__snd_dma_alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_continuous_mmap",
+    "callees": ["remap_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_free_pages",
+    "callees": ["free_pages_exact", "set_memory_wb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_free_pages",
+    "callees": ["free_pages_exact", "set_memory_wb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_iram_alloc.part.0",
+    "callees": ["__snd_dma_alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_sync.part.0",
+    "callees": ["dma_sync_sg_for_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_alloc.part.0",
+    "callees": ["dma_need_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_sync.part.0",
+    "callees": ["dma_sync_single_for_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_buffer_sync.part.0",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_get_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_sync",
+    "callees": ["dma_sync_single_for_device", "snd_dma_noncoherent_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_mmap",
+    "callees": ["dma_mmap_pages", "vm_get_page_prot"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_free",
+    "callees": ["dma_free_noncoherent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncoherent_alloc",
+    "callees": ["dma_alloc_noncoherent", "snd_dma_noncoherent_alloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_fallback_mmap",
+    "callees": ["pgprot_writecombine", "vm_map_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_fallback_get_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_fallback_free",
+    "callees": ["__snd_dma_sg_fallback_free", "set_pages_array_wb", "vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_fallback_alloc",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "__snd_dma_sg_fallback_free", "dma_alloc_attrs", "do_alloc_pages", "kvmalloc_node", "kzalloc", "set_pages_array_wc", "vmap"],
+    "global_reads": ["__default_kernel_pte_mask", "page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_dma_sg_fallback_free",
+    "callees": ["__builtin_expect", "dma_free_attrs", "do_free_pages", "kfree", "kvfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_wc_mmap",
+    "callees": ["dma_mmap_noncontiguous", "pgprot_writecombine"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_wc_free",
+    "callees": ["__sg_page_iter_next", "__sg_page_iter_start", "set_memory_wb", "snd_dma_noncontig_free"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_sg_wc_alloc",
+    "callees": ["__sg_page_iter_next", "__sg_page_iter_start", "set_memory_wc", "snd_dma_noncontig_alloc"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_get_chunk_size",
+    "callees": ["__sg_page_iter_dma_next", "snd_dma_noncontig_iter_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_get_page",
+    "callees": ["__sg_page_iter_next", "snd_dma_noncontig_iter_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_get_addr",
+    "callees": ["__sg_page_iter_dma_next", "snd_dma_noncontig_iter_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_sync",
+    "callees": ["dma_sync_sg_for_device", "snd_dma_noncontig_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_mmap",
+    "callees": ["dma_mmap_noncontiguous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_free",
+    "callees": ["dma_free_noncontiguous", "dma_vunmap_noncontiguous"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_noncontig_alloc",
+    "callees": ["dma_alloc_noncontiguous", "dma_free_noncontiguous", "dma_need_sync", "dma_vmap_noncontiguous", "snd_dma_sg_fallback_alloc", "snd_sgbuf_get_addr"],
+    "global_reads": ["dma_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_wc_mmap",
+    "callees": ["pgprot_writecombine", "snd_dma_continuous_mmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_wc_free",
+    "callees": ["do_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_wc_alloc",
+    "callees": ["do_alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_dev_mmap",
+    "callees": ["dma_mmap_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_dev_free",
+    "callees": ["dma_free_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_dev_alloc",
+    "callees": ["dma_alloc_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_iram_mmap",
+    "callees": ["pgprot_writecombine", "remap_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_iram_free",
+    "callees": ["gen_pool_free_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_iram_alloc",
+    "callees": ["gen_pool_dma_alloc_align", "snd_dma_iram_alloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_get_chunk_size",
+    "callees": ["vmalloc_to_page"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_get_page",
+    "callees": ["vmalloc_to_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_get_addr",
+    "callees": ["vmalloc_to_page"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_mmap",
+    "callees": ["remap_vmalloc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_free",
+    "callees": ["vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_vmalloc_alloc",
+    "callees": ["vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_continuous_mmap",
+    "callees": ["remap_pfn_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_continuous_free",
+    "callees": ["do_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_continuous_alloc",
+    "callees": ["do_alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_free_pages",
+    "callees": ["free_pages_exact", "set_memory_wb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_alloc_pages",
+    "callees": ["alloc_pages_exact", "set_memory_wc"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_sgbuf_get_chunk_size",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_sgbuf_get_page",
+    "callees": ["snd_dma_get_ops", "snd_sgbuf_get_page.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_sgbuf_get_addr",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_buffer_sync",
+    "callees": ["snd_dma_buffer_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_buffer_mmap",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_devm_alloc_dir_pages",
+    "callees": ["__builtin_expect", "__devres_alloc_node", "devres_add", "devres_free", "snd_dma_alloc_dir_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_release_pages",
+    "callees": ["snd_dma_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_free_pages",
+    "callees": ["snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_alloc_pages_fallback",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "snd_dma_alloc_dir_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_alloc_dir_pages",
+    "callees": ["__builtin_expect", "__snd_dma_alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_dma_alloc_pages",
+    "callees": ["__builtin_expect", "snd_dma_get_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_free_noncoherent",
+    "callees": ["dma_free_pages"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

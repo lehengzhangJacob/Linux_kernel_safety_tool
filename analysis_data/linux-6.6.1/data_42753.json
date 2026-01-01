@@ -1,0 +1,380 @@
+[
+  {
+    "name": "lookup_rules_ops",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_rules_ops",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_rules_ops",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_rules_ops",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_get_port_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detach_rules",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib_rule_notifiers",
+    "callees": ["call_fib_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_put.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_put",
+    "callees": ["__refcount_sub_and_test", "fib_rule_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_put_string",
+    "callees": ["nla_put", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_unregister.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_put.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_matchall.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_init",
+    "callees": ["register_netdevice_notifier", "register_pernet_subsys", "rtnl_register", "rtnl_unregister", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_net_exit",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_net_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_event",
+    "callees": ["__builtin_expect", "__warn_printk", "attach_rules", "detach_rules", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "detach_rules",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "attach_rules",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notify_rule_change",
+    "callees": ["__builtin_expect", "fib_nl_fill_rule", "kfree_skb_reason", "nlmsg_new", "rtnl_notify", "rtnl_set_sk_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_nl_dumprule",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "dump_rules", "fib_valid_dumprule_req", "lookup_rules_ops", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_valid_dumprule_req",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_rules",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "fib_nl_fill_rule", "rules_ops_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_nl_fill_rule",
+    "callees": ["nla_put", "nla_put_64bit", "nla_put_string", "nla_put_uid_range", "nlmsg_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_nl_delrule",
+    "callees": ["__nlmsg_parse", "call_fib_rule_notifiers", "do_trace_netlink_extack", "fib_nl2rule", "fib_rule_put", "ip_tunnel_unneed_metadata", "kfree", "lookup_rules_ops", "notify_rule_change", "rule_find", "rules_ops_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_nl_newrule",
+    "callees": ["__nlmsg_parse", "call_fib_rule_notifiers", "do_trace_netlink_extack", "fib_nl2rule", "ip_tunnel_need_metadata", "kfree", "lookup_rules_ops", "notify_rule_change", "rule_exists", "rules_ops_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rule_exists",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rule_find",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_seq_read",
+    "callees": ["__builtin_expect", "__warn_printk", "lookup_rules_ops", "rtnl_is_locked", "rules_ops_put.part.0"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "fib_rules_dump",
+    "callees": ["call_fib_notifier", "lookup_rules_ops", "rules_ops_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_fib_rule_notifiers",
+    "callees": ["call_fib_notifiers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_lookup",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add_not_zero", "fib4_rule_action", "fib4_rule_suppress", "fib_rule_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_get_port_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_unregister",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "fib_rules_cleanup_ops", "fib_rules_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_cleanup_ops",
+    "callees": ["fib_rule_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rules_register",
+    "callees": ["__fib_rules_register", "kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fib_rules_register",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_rules_ops",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_default_rule_pref",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_default_rule_add",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_matchall",
+    "callees": ["fib_rule_matchall.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib_rule_put",
+    "callees": ["__refcount_sub_and_test", "fib_rule_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_put_string",
+    "callees": ["nla_put", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

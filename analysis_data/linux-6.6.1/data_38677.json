@@ -1,0 +1,308 @@
+[
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_first_folio",
+    "callees": ["__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_io_submit",
+    "callees": ["submit_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error",
+    "callees": ["__builtin_expect", "__filemap_set_wb_err", "errseq_set", "mapping_set_error.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_clear_io_unwritten_flag",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_put_io_end_defer.part.0",
+    "callees": ["ext4_add_complete_io", "ext4_release_io_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_bio_write_folio",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__folio_start_writeback", "bh_offset", "folio_redirty_for_writepage", "io_submit_add_bh", "zero_user_segments"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_submit_init_bio",
+    "callees": ["__refcount_add", "bio_alloc_bioset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_io_submit_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_io_submit",
+    "callees": ["submit_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_end_bio",
+    "callees": ["__builtin_expect", "__ext4_warning", "__warn_printk", "bio_put", "blk_status_to_errno", "ext4_finish_bio", "ext4_put_io_end_defer", "mapping_set_error"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ext4_get_io_end",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_put_io_end",
+    "callees": ["__refcount_sub_and_test", "ext4_clear_io_unwritten_flag", "ext4_convert_unwritten_io_end_vec", "ext4_release_io_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_put_io_end_defer",
+    "callees": ["__refcount_sub_and_test", "ext4_put_io_end_defer.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_init_io_end",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["io_end_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_end_io_rsv_work",
+    "callees": ["ext4_do_flush_completed_IO"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_add_complete_io",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_end_io_end",
+    "callees": ["__ext4_msg", "ext4_clear_io_unwritten_flag", "ext4_convert_unwritten_io_end_vec", "ext4_release_io_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_release_io_end",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_put", "ext4_finish_bio", "ext4_free_io_end_vec", "kmem_cache_free"],
+    "global_reads": ["io_end_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_finish_bio",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "bh_offset", "bio_first_folio", "bio_next_folio", "blk_status_to_errno", "buffer_io_error", "folio_end_writeback", "mapping_set_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "buffer_io_error",
+    "callees": ["___ratelimit", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_last_io_end_vec",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_free_io_end_vec",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["io_end_vec_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_alloc_io_end_vec",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["io_end_vec_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_exit_pageio",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["io_end_cachep", "io_end_vec_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_clear_io_unwritten_flag",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_init_pageio",
+    "callees": ["kmem_cache_create", "kmem_cache_destroy"],
+    "global_reads": ["io_end_cachep"],
+    "global_writes": ["io_end_cachep", "io_end_vec_cachep"]
+  },
+  {
+    "name": "bio_next_folio",
+    "callees": ["bio_first_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_first_folio",
+    "callees": ["__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error",
+    "callees": ["__builtin_expect", "__filemap_set_wb_err", "errseq_set", "mapping_set_error.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_nr",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

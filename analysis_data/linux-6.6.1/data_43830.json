@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_get_next_object.part.0",
+    "callees": ["acpi_ns_get_next_node_typed", "acpi_ns_validate_handle", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_parent.part.0",
+    "callees": ["acpi_ns_validate_handle", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_next_object",
+    "callees": ["acpi_get_next_object.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_parent",
+    "callees": ["acpi_get_parent.part.0", "acpi_ut_acquire_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_type",
+    "callees": ["acpi_ns_validate_handle", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

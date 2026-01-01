@@ -1,0 +1,146 @@
+[
+  {
+    "name": "pte_to_swp_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_pte_marker",
+    "callees": ["pte_to_swp_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pte_to_swp_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mincore",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__get_free_pages", "_copy_to_user", "copy_overflow", "do_mincore", "free_pages", "mmap_read_lock", "mmap_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mincore",
+    "callees": ["__do_sys_mincore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mincore",
+    "callees": ["__do_sys_mincore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mincore",
+    "callees": ["can_do_mincore", "memset", "mtree_load", "walk_page_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_do_mincore",
+    "callees": ["file_permission", "inode_owner_or_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mincore_pte_range",
+    "callees": ["__SCT__cond_resched", "__mincore_unmapped_range", "__pte_offset_map_lock", "__rcu_read_unlock", "_raw_spin_unlock", "is_pte_marker", "mincore_page", "pte_to_swp_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mincore_unmapped_range",
+    "callees": ["__mincore_unmapped_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mincore_unmapped_range",
+    "callees": ["linear_page_index", "mincore_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mincore_page",
+    "callees": ["__builtin_expect", "filemap_get_incore_folio", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mincore_hugetlb",
+    "callees": ["is_pte_marker"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_pte_marker",
+    "callees": ["pte_to_swp_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pte_to_swp_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_page_index",
+    "callees": ["__builtin_expect", "linear_hugepage_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,560 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unlink_urb_from_ep",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unlink_urb_from_ep",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unlink_urb_from_ep",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_check_unlink_urb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_deregister_bus",
+    "callees": ["_dev_info", "idr_remove", "mutex_lock", "mutex_unlock", "usb_notify_remove_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_schedule",
+    "callees": ["__tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_hi_schedule",
+    "callees": ["__tasklet_hi_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmap_urb_for_dma",
+    "callees": ["usb_hcd_unmap_urb_for_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_alloc_coherent",
+    "callees": ["hcd_buffer_alloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_invalidate_rhdev",
+    "callees": ["mutex_lock", "mutex_unlock", "usb_put_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_free_coherent",
+    "callees": ["hcd_buffer_free", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_remove_hcd.part.0",
+    "callees": ["_dev_info", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "cancel_work_sync", "free_irq", "hcd_buffer_destroy", "mutex_lock", "mutex_unlock", "usb_deregister_bus", "usb_disconnect", "usb_get_dev", "usb_phy_roothub_exit", "usb_phy_roothub_power_off", "usb_put_invalidate_rhdev", "usb_stop_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_mon_deregister.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_hcd.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_hcd.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_mon_deregister",
+    "callees": ["usb_mon_deregister.part.0"],
+    "global_reads": ["mon_ops"],
+    "global_writes": ["mon_ops"]
+  },
+  {
+    "name": "usb_mon_register",
+    "callees": [],
+    "global_reads": ["mon_ops"],
+    "global_writes": ["mon_ops"]
+  },
+  {
+    "name": "usb_hcd_setup_local_mem",
+    "callees": ["__builtin_expect", "_dev_err", "devm_gen_pool_create", "devm_memremap", "dmam_alloc_attrs", "gen_pool_add_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_platform_shutdown",
+    "callees": ["__pm_runtime_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_remove_hcd",
+    "callees": ["usb_remove_hcd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_add_hcd",
+    "callees": ["__builtin_expect", "_dev_err", "_dev_info", "device_set_wakeup_capable", "free_irq", "hcd_buffer_create", "hcd_buffer_destroy", "mutex_lock", "mutex_unlock", "register_root_hub", "tasklet_setup", "usb_alloc_dev", "usb_deregister_bus", "usb_hcd_poll_rh_status", "usb_hcd_request_irqs", "usb_phy_roothub_alloc", "usb_phy_roothub_calibrate", "usb_phy_roothub_exit", "usb_phy_roothub_init", "usb_phy_roothub_power_off", "usb_phy_roothub_power_on", "usb_phy_roothub_set_mode", "usb_put_invalidate_rhdev", "usb_register_bus", "usb_stop_hcd"],
+    "global_reads": ["authorized_default"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stop_hcd",
+    "callees": ["timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_invalidate_rhdev",
+    "callees": ["mutex_lock", "mutex_unlock", "usb_put_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_request_irqs",
+    "callees": ["_dev_err", "_dev_info", "request_threaded_irq", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_find_raw_port_number",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_is_primary_hcd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_hcd",
+    "callees": ["usb_put_hcd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_hcd",
+    "callees": ["usb_get_hcd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_release",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_create_hcd",
+    "callees": ["__usb_create_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_create_shared_hcd",
+    "callees": ["__usb_create_hcd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__usb_create_hcd",
+    "callees": ["__builtin_return_address", "__mutex_init", "init_timer_key", "kfree", "kmalloc_trace", "kzalloc", "mutex_lock", "mutex_unlock", "usb_bus_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hc_died",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "schedule_work", "usb_kick_hub_wq", "usb_set_device_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_died_work",
+    "callees": ["kobject_uevent_env"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_irq",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_resume_root_hub",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pm_wakeup_dev_event", "queue_work_on"],
+    "global_reads": ["pm_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_resume_work",
+    "callees": ["usb_remote_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_bus_resume",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "usb_hc_died", "usb_hub_find_child", "usb_phy_roothub_calibrate", "usb_phy_roothub_resume", "usb_phy_roothub_suspend", "usb_set_device_state", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_bus_suspend",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "hcd_bus_resume", "usb_phy_roothub_suspend", "usb_set_device_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_get_frame_number",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_synchronize_unlinks",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_free_streams",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_alloc_streams",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_reset_endpoint",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_disable_endpoint",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_alloc_bandwidth",
+    "callees": ["usb_altnum_to_altsetting", "usb_find_alt_setting", "usb_ifnum_to_if"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_flush_endpoint",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "unlink1", "usb_free_urb", "usb_get_urb", "usb_kill_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_giveback_urb",
+    "callees": ["__builtin_expect", "__usb_hcd_giveback_urb", "_raw_spin_lock", "_raw_spin_unlock", "tasklet_hi_schedule", "tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_giveback_urb_bh",
+    "callees": ["__usb_hcd_giveback_urb", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "tasklet_hi_schedule", "tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__usb_hcd_giveback_urb",
+    "callees": ["__builtin_expect", "__wake_up", "unmap_urb_for_dma", "usb_anchor_resume_wakeups", "usb_anchor_suspend_wakeups", "usb_free_urb", "usb_unanchor_urb", "usbmon_urb_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unlink_urb",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "unlink1", "usb_get_dev", "usb_put_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unlink1",
+    "callees": ["usb_rh_urb_dequeue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_submit_urb",
+    "callees": ["__builtin_expect", "__wake_up", "map_urb_for_dma", "rh_urb_enqueue", "unmap_urb_for_dma", "usb_free_urb", "usb_get_urb", "usbmon_urb_submit", "usbmon_urb_submit_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_map_urb_for_dma",
+    "callees": ["__builtin_expect", "__warn_printk", "dma_map_page_attrs", "dma_map_sg_attrs", "dma_map_single_attrs", "hcd_alloc_coherent", "usb_hcd_unmap_urb_for_dma"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "map_urb_for_dma",
+    "callees": ["usb_hcd_map_urb_for_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unmap_urb_for_dma",
+    "callees": ["dma_unmap_page_attrs", "dma_unmap_sg_attrs", "hcd_free_coherent", "usb_hcd_unmap_urb_setup_for_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmap_urb_for_dma",
+    "callees": ["usb_hcd_unmap_urb_for_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unmap_urb_setup_for_dma",
+    "callees": ["dma_unmap_page_attrs", "hcd_free_coherent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_free_coherent",
+    "callees": ["hcd_buffer_free", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hcd_alloc_coherent",
+    "callees": ["hcd_buffer_alloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_unlink_urb_from_ep",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_check_unlink_urb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_link_urb_to_ep",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_calc_bus_time",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_end_port_resume",
+    "callees": ["pm_runtime_put_noidle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_start_port_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_root_hub",
+    "callees": ["__builtin_expect", "_dev_err", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kfree", "mutex_lock", "mutex_unlock", "usb_device_supports_lpm", "usb_get_bos_descriptor", "usb_get_device_descriptor", "usb_hc_died", "usb_new_device", "usb_set_device_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_deregister_bus",
+    "callees": ["_dev_info", "idr_remove", "mutex_lock", "mutex_unlock", "usb_notify_remove_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_register_bus",
+    "callees": ["_dev_info", "_printk", "idr_alloc", "mutex_lock", "mutex_unlock", "usb_notify_add_bus"],
+    "global_reads": ["usbcore_name"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_bus_init",
+    "callees": ["__mutex_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_rh_urb_dequeue",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "timer_delete", "usb_hcd_check_unlink_urb", "usb_hcd_giveback_urb", "usb_hcd_unlink_urb_from_ep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rh_urb_enqueue",
+    "callees": ["rh_call_control", "rh_queue_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rh_queue_status",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mod_timer", "usb_hcd_link_urb_to_ep"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rh_timer_func",
+    "callees": ["usb_hcd_poll_rh_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_hcd_poll_rh_status",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memcpy", "mod_timer", "usb_hcd_giveback_urb", "usb_hcd_unlink_urb_from_ep"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rh_call_control",
+    "callees": ["__SCT__might_resched", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "device_set_wakeup_enable", "kfree", "kzalloc", "memcpy", "rh_string", "usb_hcd_giveback_urb", "usb_hcd_link_urb_to_ep", "usb_hcd_unlink_urb_from_ep", "usb_hub_adjust_deviceremovable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rh_string",
+    "callees": ["ascii2desc", "memcpy", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ascii2desc",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usbmon_urb_complete",
+    "callees": [],
+    "global_reads": ["mon_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "usbmon_urb_submit_error",
+    "callees": [],
+    "global_reads": ["mon_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "usbmon_urb_submit",
+    "callees": [],
+    "global_reads": ["mon_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_hi_schedule",
+    "callees": ["__tasklet_hi_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_schedule",
+    "callees": ["__tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_runtime_put_noidle",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

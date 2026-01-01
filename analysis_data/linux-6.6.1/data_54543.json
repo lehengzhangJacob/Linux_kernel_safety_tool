@@ -1,0 +1,116 @@
+[
+  {
+    "name": "gsc_uc_get_fw_status",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_fw_init_done",
+    "callees": ["gsc_uc_get_fw_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_uc_get_fw_status",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_fw_upload",
+    "callees": ["__builtin_expect", "_dev_info", "gsc_fw_load", "gsc_fw_load_prepare", "gsc_fw_query_compatibility_version", "gsc_fw_wait", "gsc_is_in_reset", "intel_gsc_uc_fw_init_done", "intel_uc_check_file_version", "intel_uc_fw_mark_load_failed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_fw_query_compatibility_version",
+    "callees": ["_dev_err", "i915_vma_unpin_and_release", "intel_gsc_uc_heci_cmd_emit_mtl_header", "intel_gsc_uc_heci_cmd_submit_packet", "intel_guc_allocate_and_map_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_fw_load_prepare",
+    "callees": ["__builtin_expect", "i915_gem_object_pin_map_unlocked", "intel_gt_coherent_map_type", "intel_guc_write_barrier", "memcpy_toio", "memset_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_fw_load",
+    "callees": ["__builtin_expect", "_dev_err", "emit_gsc_fw_load", "i915_request_add", "i915_request_create", "i915_request_get", "i915_request_set_error_once", "i915_request_wait", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_gsc_fw_load",
+    "callees": ["__builtin_expect", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_fw_get_binary_info",
+    "callees": ["_dev_err", "intel_uc_fw_version_from_gsc_manifest", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_fw_init_done",
+    "callees": ["gsc_uc_get_fw_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_fw_proxy_get_status",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_fw_proxy_init_done",
+    "callees": ["gsc_uc_get_fw_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_uc_get_fw_status",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_is_in_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

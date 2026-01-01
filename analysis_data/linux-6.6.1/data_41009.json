@@ -1,0 +1,164 @@
+[
+  {
+    "name": "sock_gen_cookie",
+    "callees": ["__builtin_expect", "__sock_gen_cookie.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sock_gen_cookie.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_rcv_msg.part.0",
+    "callees": ["mutex_lock", "mutex_unlock", "sock_load_diag_module"],
+    "global_reads": ["inet_rcv_compat"],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_bind.part.0",
+    "callees": ["sock_load_diag_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_put_filterinfo.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "memcpy", "nla_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_init",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "alloc_workqueue", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": ["broadcast_wq"]
+  },
+  {
+    "name": "diag_net_exit",
+    "callees": ["netlink_kernel_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "diag_net_init",
+    "callees": ["__netlink_kernel_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_destroy",
+    "callees": ["ns_capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_bind",
+    "callees": ["sock_diag_bind.part.0", "sock_load_diag_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_rcv",
+    "callees": ["mutex_lock", "mutex_unlock", "netlink_rcv_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_rcv_msg",
+    "callees": ["__sock_diag_cmd", "sock_diag_rcv_msg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sock_diag_cmd",
+    "callees": ["mutex_lock", "mutex_unlock", "sock_load_diag_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_unregister",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_register",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_unregister_inet_compat",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": ["inet_rcv_compat"]
+  },
+  {
+    "name": "sock_diag_register_inet_compat",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": ["inet_rcv_compat"]
+  },
+  {
+    "name": "sock_diag_broadcast_destroy",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "queue_work_on", "sk_destruct"],
+    "global_reads": ["broadcast_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_broadcast_destroy_work",
+    "callees": ["__builtin_expect", "kfree", "kfree_skb_reason", "mutex_lock", "mutex_unlock", "netlink_broadcast", "nlmsg_new", "sk_destruct", "sock_diag_destroy_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_put_filterinfo",
+    "callees": ["nla_reserve", "sock_diag_put_filterinfo.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_put_meminfo",
+    "callees": ["nla_put", "sk_get_meminfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_save_cookie",
+    "callees": ["sock_gen_cookie"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_check_cookie",
+    "callees": ["sock_gen_cookie"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sock_gen_cookie",
+    "callees": ["__sock_gen_cookie.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_diag_destroy_group",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_gen_cookie",
+    "callees": ["__builtin_expect", "__sock_gen_cookie.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "name": "jbd2_journal_free_reserved",
+    "callees": ["__jbd2_journal_unreserve_handle", "_raw_read_lock", "_raw_read_unlock", "kmem_cache_free"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "sub_reserved_credits",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_free_reserved",
+    "callees": ["__jbd2_journal_unreserve_handle", "_raw_read_lock", "_raw_read_unlock", "kmem_cache_free"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_unfile_buffer",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__jbd2_journal_temp_unlink_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_free_transaction",
+    "callees": ["__builtin_expect", "kmem_cache_free"],
+    "global_reads": ["transaction_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_free_transaction",
+    "callees": ["__builtin_expect", "kmem_cache_free"],
+    "global_reads": ["transaction_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_unfile_buffer",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__jbd2_journal_temp_unlink_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_unfile_buffer",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__jbd2_journal_temp_unlink_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_start.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_start",
+    "callees": ["__SCT__tp_func_jbd2_handle_start", "cpu_online", "trace_jbd2_handle_start.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_buffer_frozen_trigger",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sub_reserved_credits",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "new_handle",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dispose_buffer.part.0",
+    "callees": ["__jbd2_journal_unfile_buffer", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_start.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_begin_ordered_truncate",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "filemap_fdatawrite_range", "jbd2_journal_abort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_inode_ranged_wait",
+    "callees": ["jbd2_journal_file_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_inode_ranged_write",
+    "callees": ["jbd2_journal_file_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_file_inode",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_refile_buffer",
+    "callees": ["__jbd2_journal_refile_buffer", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_refile_buffer",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_file_buffer", "__jbd2_journal_temp_unlink_buffer", "__jbd2_journal_unfile_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_file_buffer",
+    "callees": ["__jbd2_journal_file_buffer", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_file_buffer",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_temp_unlink_buffer", "_printk", "jbd2_journal_grab_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_invalidate_folio",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "journal_unmap_buffer", "lock_buffer", "try_to_free_buffers", "unlock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "journal_unmap_buffer",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__dispose_buffer", "__jbd2_journal_remove_checkpoint", "_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock", "_raw_write_unlock", "jbd2_journal_grab_journal_head", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dispose_buffer",
+    "callees": ["__dispose_buffer.part.0", "__jbd2_journal_file_buffer", "__jbd2_journal_temp_unlink_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_try_to_free_buffers",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_journal_grab_journal_head", "jbd2_journal_put_journal_head", "jbd2_journal_try_remove_checkpoint", "try_to_free_buffers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_unfile_buffer",
+    "callees": ["__brelse", "__jbd2_journal_unfile_buffer", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_unfile_buffer",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__jbd2_journal_temp_unlink_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_temp_unlink_buffer",
+    "callees": ["__blist_del_buffer", "__builtin_expect", "__builtin_unreachable", "mark_buffer_dirty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blist_del_buffer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_stop",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "jbd2_log_start_commit", "jbd2_log_wait_commit", "kmem_cache_free", "ktime_get", "schedule_hrtimeout", "stop_this_handle", "trace_jbd2_handle_stats"],
+    "global_reads": ["jbd2_handle_cache", "jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_forget",
+    "callees": ["__bforget", "__brelse", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_file_buffer", "__jbd2_journal_temp_unlink_buffer", "__jbd2_journal_unfile_buffer", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_journal_grab_journal_head", "jbd2_journal_put_journal_head", "jbd2_journal_try_remove_checkpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_dirty_metadata",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_file_buffer", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_handle_buffer_credits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_buffer_abort_trigger",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_buffer_frozen_trigger",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_set_triggers",
+    "callees": ["__builtin_expect", "jbd2_journal_grab_journal_head", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_get_undo_access",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "do_get_write_access", "jbd2_alloc", "jbd2_free", "jbd2_journal_add_journal_head", "jbd2_journal_put_journal_head", "jbd2_write_access_granted", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_get_create_access",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_file_buffer", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_journal_add_journal_head", "jbd2_journal_cancel_revoke", "jbd2_journal_put_journal_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_get_write_access",
+    "callees": ["do_get_write_access", "jbd2_journal_add_journal_head", "jbd2_journal_put_journal_head", "jbd2_write_access_granted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_write_access_granted",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_get_write_access",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__jbd2_journal_file_buffer", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "jbd2_alloc", "jbd2_free", "jbd2_freeze_jh_data", "jbd2_journal_cancel_revoke", "jiffies_to_msecs", "lock_buffer", "trace_jbd2_lock_buffer_stall", "unlock_buffer", "wait_on_bit_io"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_freeze_jh_data",
+    "callees": ["__builtin_constant_p", "_printk", "bh_offset", "jbd2_buffer_frozen_trigger", "memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_unlock_updates",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__wake_up", "_raw_write_lock", "_raw_write_unlock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_lock_updates",
+    "callees": ["__SCT__might_resched", "_raw_write_lock", "_raw_write_unlock", "finish_wait", "init_wait_entry", "jbd2_journal_wait_updates", "mutex_lock", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_wait_updates",
+    "callees": ["_raw_write_lock", "_raw_write_unlock", "finish_wait", "prepare_to_wait", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_restart",
+    "callees": ["jbd2__journal_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2__journal_restart",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "jbd2_log_start_commit", "start_this_handle", "stop_this_handle", "trace_jbd2_handle_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stop_this_handle",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__jbd2_journal_unreserve_handle", "__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_extend",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "trace_jbd2_handle_extend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_start_reserved",
+    "callees": ["__builtin_expect", "jbd2_journal_free_reserved", "jbd2_journal_stop", "start_this_handle", "trace_jbd2_handle_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_free_reserved",
+    "callees": ["__jbd2_journal_unreserve_handle", "_raw_read_lock", "_raw_read_unlock", "kmem_cache_free"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "__jbd2_journal_unreserve_handle",
+    "callees": ["__builtin_expect", "sub_reserved_credits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_start",
+    "callees": ["jbd2__journal_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2__journal_start",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kmem_cache_free", "new_handle", "start_this_handle", "trace_jbd2_handle_start"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "new_handle",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["jbd2_handle_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "start_this_handle",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__builtin_unreachable", "_printk", "_raw_read_lock", "_raw_read_unlock", "_raw_write_lock", "_raw_write_unlock", "add_transaction_credits", "finish_wait", "init_wait_entry", "jbd2_get_transaction", "jbd2_journal_free_transaction", "kmem_cache_alloc", "prepare_to_wait_event", "schedule", "sub_reserved_credits", "update_t_max_wait", "wait_transaction_switching"],
+    "global_reads": ["jiffies", "transaction_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "add_transaction_credits",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__jbd2_log_wait_for_space", "_raw_read_unlock", "_raw_write_lock", "_raw_write_unlock", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule", "sub_reserved_credits", "wait_transaction_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sub_reserved_credits",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_transaction_switching",
+    "callees": ["__builtin_expect", "_raw_read_unlock", "finish_wait", "prepare_to_wait_exclusive", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_transaction_locked",
+    "callees": ["_raw_read_unlock", "finish_wait", "jbd2_log_start_commit", "prepare_to_wait_exclusive", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_t_max_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_get_transaction",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "add_timer", "jbd2_descriptor_blocks_per_trans", "ktime_get", "round_jiffies_up"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_descriptor_blocks_per_trans",
+    "callees": ["jbd2_journal_has_csum_v2or3", "journal_tag_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_free_transaction",
+    "callees": ["__builtin_expect", "kmem_cache_free"],
+    "global_reads": ["transaction_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_destroy_transaction_cache",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["transaction_cache"],
+    "global_writes": ["transaction_cache"]
+  },
+  {
+    "name": "trace_jbd2_lock_buffer_stall",
+    "callees": ["__SCT__tp_func_jbd2_lock_buffer_stall", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_stats",
+    "callees": ["__SCT__tp_func_jbd2_handle_stats", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_extend",
+    "callees": ["__SCT__tp_func_jbd2_handle_extend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_restart",
+    "callees": ["__SCT__tp_func_jbd2_handle_restart", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_jbd2_handle_start",
+    "callees": ["__SCT__tp_func_jbd2_handle_start", "cpu_online", "trace_jbd2_handle_start.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_handle_buffer_credits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_has_csum_v2or3",
+    "callees": ["__builtin_expect", "jbd2_journal_has_csum_v2or3_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jbd2_journal_init_transaction_cache",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "kmem_cache_create"],
+    "global_reads": ["transaction_cache"],
+    "global_writes": ["transaction_cache"]
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

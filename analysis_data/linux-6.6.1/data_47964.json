@@ -1,0 +1,92 @@
+[
+  {
+    "name": "__dma_fence_unwrap_array",
+    "callees": ["dma_fence_array_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_is_signaled",
+    "callees": ["__builtin_constant_p", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_unwrap_next.part.0",
+    "callees": ["__dma_fence_unwrap_array", "dma_fence_chain_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dma_fence_unwrap_merge",
+    "callees": ["dma_fence_allocate_private_stub", "dma_fence_array_create", "dma_fence_context_alloc", "dma_fence_get.part.0", "dma_fence_is_later", "dma_fence_is_signaled", "dma_fence_timestamp", "dma_fence_unwrap_first", "dma_fence_unwrap_next", "kfree", "kmalloc_array", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_unwrap_next",
+    "callees": ["dma_fence_array_next", "dma_fence_unwrap_next.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_unwrap_first",
+    "callees": ["__dma_fence_unwrap_array", "dma_fence_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dma_fence_unwrap_array",
+    "callees": ["dma_fence_array_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_timestamp",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_is_later",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_is_signaled",
+    "callees": ["__builtin_constant_p", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

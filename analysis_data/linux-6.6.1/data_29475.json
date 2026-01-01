@@ -1,0 +1,50 @@
+[
+  {
+    "name": "crypto_sha256_final",
+    "callees": ["sha224_final", "sha256_final"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sha256_generic_mod_fini",
+    "callees": ["crypto_unregister_shashes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sha256_generic_mod_init",
+    "callees": ["crypto_register_shashes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sha256_finup",
+    "callees": ["crypto_sha256_final", "sha256_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sha256_final",
+    "callees": ["sha224_final", "sha256_final"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_sha256_update",
+    "callees": ["sha256_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sha256_base_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sha224_base_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,374 @@
+[
+  {
+    "name": "pde_free",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["proc_dir_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "pde_free",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["proc_dir_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "_proc_mkdir",
+    "callees": ["__proc_create", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_proc_mkdir",
+    "callees": ["__proc_create", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_proc_mkdir",
+    "callees": ["__proc_create", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_data",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_alloc_inum",
+    "callees": ["ida_alloc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_match.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_match",
+    "callees": ["proc_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_remove.part.0",
+    "callees": ["remove_proc_subtree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pde_put.part.0",
+    "callees": ["ida_free", "pde_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_lookup.part.0",
+    "callees": ["proc_lookup_de"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__xlate_proc_name.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_match.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_simple_write",
+    "callees": ["__builtin_expect", "kfree", "memdup_user_nul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_remove",
+    "callees": ["proc_remove.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_get_parent_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_proc_subtree",
+    "callees": ["__builtin_expect", "__warn_printk", "__xlate_proc_name", "_raw_write_lock", "_raw_write_unlock", "pde_put", "pde_subdir_find", "proc_entry_rundown", "rb_erase", "rb_first", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_proc_entry",
+    "callees": ["__builtin_expect", "__warn_printk", "__xlate_proc_name", "_raw_write_lock", "_raw_write_unlock", "pde_put", "pde_subdir_find", "proc_entry_rundown", "rb_erase", "rb_first", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pde_put",
+    "callees": ["__refcount_sub_and_test", "pde_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_set_user",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_set_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_single_data",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_single_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_seq_private",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_seq_release",
+    "callees": ["seq_release", "seq_release_private"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_seq_open",
+    "callees": ["seq_open", "seq_open_private"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create",
+    "callees": ["proc_create_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_data",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_reg",
+    "callees": ["__builtin_expect", "__proc_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_mount_point",
+    "callees": ["__proc_create", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_mkdir",
+    "callees": ["_proc_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_mkdir_mode",
+    "callees": ["_proc_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_mkdir_data",
+    "callees": ["_proc_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_proc_mkdir",
+    "callees": ["__proc_create", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_symlink",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "__proc_create", "kmalloc_large", "kmalloc_trace", "pde_free", "proc_register", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__proc_create",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "__warn_printk", "kmalloc_large", "kmalloc_trace", "kmem_cache_alloc", "memcpy", "name_to_int", "pde_free", "strlen", "xlate_proc_name"],
+    "global_reads": ["proc_dir_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_register",
+    "callees": ["__warn_printk", "_raw_write_lock", "_raw_write_unlock", "ida_free", "pde_free", "pde_subdir_insert", "proc_alloc_inum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_net_d_revalidate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_readdir",
+    "callees": ["proc_readdir_de"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_readdir_de",
+    "callees": ["__refcount_add", "_raw_read_lock", "_raw_read_unlock", "dir_emit_dots", "pde_put", "rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_lookup",
+    "callees": ["proc_lookup.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_lookup_de",
+    "callees": ["__refcount_add", "_raw_read_lock", "_raw_read_unlock", "d_set_d_op", "d_splice_alias", "pde_subdir_find", "proc_get_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_misc_d_delete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_misc_d_revalidate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_free_inum",
+    "callees": ["ida_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_alloc_inum",
+    "callees": ["ida_alloc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xlate_proc_name",
+    "callees": ["__xlate_proc_name", "_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__xlate_proc_name",
+    "callees": ["__xlate_proc_name.part.0", "pde_subdir_find", "strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_getattr",
+    "callees": ["generic_fillattr", "set_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_notify_change",
+    "callees": ["setattr_copy", "setattr_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pde_subdir_insert",
+    "callees": ["proc_match", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pde_subdir_find",
+    "callees": ["proc_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_match",
+    "callees": ["proc_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pde_free",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["proc_dir_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "dir_emit_dots",
+    "callees": ["dir_emit_dot", "dir_emit_dotdot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parent_ino",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

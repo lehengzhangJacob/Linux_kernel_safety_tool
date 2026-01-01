@@ -1,0 +1,380 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported.part.0",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported",
+    "callees": ["cmci_supported.part.0", "lapic_get_maxlvt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported.part.0",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported",
+    "callees": ["cmci_supported.part.0", "lapic_get_maxlvt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported.part.0",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported",
+    "callees": ["cmci_supported.part.0", "lapic_get_maxlvt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_init_cmci",
+    "callees": ["__SCT__apic_call_write", "cmci_discover", "cmci_recheck", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": ["mc_poll_banks", "mce_threshold_vector"]
+  },
+  {
+    "name": "lmce_supported",
+    "callees": ["__builtin_expect", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_clear_lmce.part.0",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_clear_lmce",
+    "callees": ["intel_clear_lmce.part.0", "lmce_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_clear_lmce.part.0",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_init_lmce.part.0",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_recheck.part.0",
+    "callees": ["machine_check_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_threshold_interrupt.part.0",
+    "callees": ["machine_check_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported.part.0",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_filter_mce",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_intel_feature_clear",
+    "callees": ["intel_clear_lmce"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_intel_feature_init",
+    "callees": ["intel_imc_init", "intel_init_cmci", "intel_init_lmce"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_clear_lmce",
+    "callees": ["intel_clear_lmce.part.0", "lmce_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_init_lmce",
+    "callees": ["intel_init_lmce.part.0", "lmce_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_init_cmci",
+    "callees": ["__SCT__apic_call_write", "cmci_discover", "cmci_recheck", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": ["mc_poll_banks", "mce_threshold_vector"]
+  },
+  {
+    "name": "cmci_mc_poll_banks",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "machine_check_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_disable_bank",
+    "callees": ["__cmci_disable_bank", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_reenable",
+    "callees": ["cmci_discover", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_rediscover",
+    "callees": ["cmci_supported", "on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_rediscover_work_func",
+    "callees": ["cmci_discover", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_clear",
+    "callees": ["__cmci_disable_bank", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cmci_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cmci_disable_bank",
+    "callees": ["__builtin_constant_p", "native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_recheck",
+    "callees": ["cmci_recheck.part.0", "cmci_supported", "mce_available"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_discover",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "native_read_msr", "native_write_msr"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "intel_threshold_interrupt",
+    "callees": ["cmci_storm_detect", "intel_threshold_interrupt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_storm_detect",
+    "callees": ["_printk", "cmci_toggle_interrupt_mode", "mce_timer_kick"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_intel_adjust_timer",
+    "callees": ["_printk", "cmci_recheck", "cmci_toggle_interrupt_mode", "mce_notify_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_toggle_interrupt_mode",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_next_bit", "native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_intel_hcpu_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mce_intel_cmci_poll",
+    "callees": ["machine_check_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lmce_supported",
+    "callees": ["__builtin_expect", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmci_supported",
+    "callees": ["cmci_supported.part.0", "lapic_get_maxlvt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

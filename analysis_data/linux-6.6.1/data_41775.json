@@ -1,0 +1,74 @@
+[
+  {
+    "name": "vchan_vdesc_fini",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmaengine_desc_callback_invoke",
+    "callees": ["dmaengine_desc_callback_invoke.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_init",
+    "callees": ["tasklet_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_dma_desc_free_list",
+    "callees": ["vchan_vdesc_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_complete",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dmaengine_desc_callback_invoke", "memset", "vchan_vdesc_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_find_desc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_tx_desc_free",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_tx_submit",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vchan_vdesc_fini",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmaengine_desc_callback_invoke",
+    "callees": ["dmaengine_desc_callback_invoke.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

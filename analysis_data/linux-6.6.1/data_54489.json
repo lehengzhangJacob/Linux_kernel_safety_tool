@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_duplicate_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_duplicate_state", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_begin_shadow_fb_access",
+    "callees": ["drm_gem_fb_vmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_end_shadow_fb_access",
+    "callees": ["drm_gem_fb_vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_destroy_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_destroy_state", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_simple_kms_destroy_shadow_plane_state",
+    "callees": ["drm_gem_destroy_shadow_plane_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_simple_kms_duplicate_shadow_plane_state",
+    "callees": ["drm_gem_duplicate_shadow_plane_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_simple_kms_reset_shadow_plane",
+    "callees": ["drm_gem_reset_shadow_plane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_simple_kms_end_shadow_fb_access",
+    "callees": ["drm_gem_end_shadow_fb_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_simple_kms_begin_shadow_fb_access",
+    "callees": ["drm_gem_begin_shadow_fb_access"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_end_shadow_fb_access",
+    "callees": ["drm_gem_fb_vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_begin_shadow_fb_access",
+    "callees": ["drm_gem_fb_vmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_reset_shadow_plane",
+    "callees": ["__drm_atomic_helper_plane_destroy_state", "__drm_atomic_helper_plane_reset", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_gem_reset_shadow_plane",
+    "callees": ["__drm_atomic_helper_plane_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_destroy_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_destroy_state", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_gem_destroy_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_destroy_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_duplicate_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_duplicate_state", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_gem_duplicate_shadow_plane_state",
+    "callees": ["__drm_atomic_helper_plane_duplicate_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_plane_helper_prepare_fb",
+    "callees": ["__refcount_add", "dma_fence_chain_alloc", "dma_fence_chain_init", "dma_fence_put.part.0", "dma_resv_get_singleton", "drm_gem_fb_get_obj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_chain_alloc",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

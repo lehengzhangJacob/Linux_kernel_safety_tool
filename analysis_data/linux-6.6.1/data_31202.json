@@ -1,0 +1,38 @@
+[
+  {
+    "name": "__efi_memmap_free",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "free_pages", "memblock_free_late", "memblock_phys_free", "slab_is_available"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__efi_memmap_alloc_late",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "alloc_pages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_insert",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_split_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_install",
+    "callees": ["__builtin_constant_p", "__efi_memmap_init", "efi_memmap_unmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_alloc",
+    "callees": ["__builtin_expect", "__efi_memmap_alloc_late", "memblock_phys_alloc_range", "slab_is_available"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

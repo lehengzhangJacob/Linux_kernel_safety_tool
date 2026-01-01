@@ -1,0 +1,152 @@
+[
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "cea_set_pte",
+    "callees": ["pfn_pte", "set_pte_vaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "cea_set_pte",
+    "callees": ["pfn_pte", "set_pte_vaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_cpu_entry_areas",
+    "callees": ["find_next_bit", "init_cea_offsets", "setup_cpu_entry_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_cpu_entry_area",
+    "callees": ["cea_map_percpu_pages", "cea_set_pte", "get_cpu_entry_area", "get_cpu_gdt_paddr", "percpu_setup_debug_store", "percpu_setup_exception_stacks"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_setup_exception_stacks",
+    "callees": ["cea_map_percpu_pages", "get_cpu_entry_area"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_setup_debug_store",
+    "callees": ["cea_map_percpu_pages", "cea_set_pte", "get_cpu_entry_area"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "cea_map_percpu_pages",
+    "callees": ["cea_set_pte", "per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cea_set_pte",
+    "callees": ["pfn_pte", "set_pte_vaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_entry_area",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_cea_offsets",
+    "callees": ["find_next_bit", "get_random_u32_below"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_gdt_paddr",
+    "callees": ["per_cpu_ptr_to_phys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "name": "cstate_cleanup.part.0",
+    "callees": ["perf_pmu_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_cleanup",
+    "callees": ["__cpuhp_remove_state", "cstate_cleanup.part.0", "perf_pmu_unregister"],
+    "global_reads": ["has_cstate_core", "has_cstate_pkg"],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_update",
+    "callees": ["__builtin_expect", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_update",
+    "callees": ["__builtin_expect", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_cleanup.part.0",
+    "callees": ["perf_pmu_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_cleanup",
+    "callees": ["__cpuhp_remove_state", "cstate_cleanup.part.0", "perf_pmu_unregister"],
+    "global_reads": ["has_cstate_core", "has_cstate_pkg"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cstate_core_event_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_stop",
+    "callees": ["cstate_pmu_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_cleanup.part.0",
+    "callees": ["perf_pmu_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_get_attr_cpumask.part.0",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_add.part.0",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_exit",
+    "callees": ["cstate_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_init",
+    "callees": ["cstate_init", "cstate_probe", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_init",
+    "callees": ["__cpuhp_setup_state", "_printk", "cstate_cleanup", "perf_pmu_register"],
+    "global_reads": ["__max_die_per_package", "has_cstate_core", "has_cstate_pkg"],
+    "global_writes": ["has_cstate_core", "has_cstate_pkg"]
+  },
+  {
+    "name": "cstate_cleanup",
+    "callees": ["__cpuhp_remove_state", "cstate_cleanup.part.0", "perf_pmu_unregister"],
+    "global_reads": ["has_cstate_core", "has_cstate_pkg"],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_probe",
+    "callees": ["perf_msr_probe"],
+    "global_reads": ["core_msr_mask"],
+    "global_writes": ["core_msr_mask", "has_cstate_core", "has_cstate_pkg", "pkg_msr_mask"]
+  },
+  {
+    "name": "cstate_cpu_init",
+    "callees": ["__builtin_constant_p", "find_first_and_bit"],
+    "global_reads": ["has_cstate_core", "has_cstate_pkg", "nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_cpu_exit",
+    "callees": ["__builtin_constant_p", "cpumask_any_but", "perf_pmu_migrate_context"],
+    "global_reads": ["has_cstate_core", "has_cstate_pkg", "nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_add",
+    "callees": ["cstate_pmu_event_add.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_del",
+    "callees": ["cstate_pmu_event_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_stop",
+    "callees": ["cstate_pmu_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_start",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_update",
+    "callees": ["__builtin_expect", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_pmu_event_init",
+    "callees": ["find_first_and_bit"],
+    "global_reads": ["core_msr_mask", "nr_cpu_ids", "pkg_msr_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "cstate_get_attr_cpumask",
+    "callees": ["bitmap_print_to_pagebuf", "cstate_get_attr_cpumask.part.0"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "__cstate_pkg_event_show",
+    "callees": ["__cstate_core_event_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cstate_core_event_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_msr",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

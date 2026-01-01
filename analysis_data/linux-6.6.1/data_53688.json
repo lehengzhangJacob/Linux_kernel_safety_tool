@@ -1,0 +1,98 @@
+[
+  {
+    "name": "firmware_map_find_entry_in_list",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_find_entry_in_list",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_add_entry",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "kobject_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_memmap_init",
+    "callees": ["add_sysfs_fw_map_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memmap_attr_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "type_show",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "end_show",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "start_show",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_remove",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "firmware_map_find_entry_in_list", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_add_early",
+    "callees": ["__builtin_expect", "firmware_map_add_entry", "memblock_alloc_try_nid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_add_hotplug",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "add_sysfs_fw_map_entry", "firmware_map_add_entry", "firmware_map_find_entry_in_list", "kzalloc", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_find_entry_in_list",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_map_add_entry",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "kobject_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_firmware_map_entry",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kfree"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "auxiliary_bus_init",
+    "callees": ["__builtin_expect", "bus_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_driver_unregister",
+    "callees": ["driver_unregister", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__auxiliary_driver_register",
+    "callees": ["__builtin_expect", "driver_register", "kasprintf", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_find_device",
+    "callees": ["bus_find_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__auxiliary_device_add",
+    "callees": ["_dev_err", "dev_set_name", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_device_init",
+    "callees": ["_printk", "device_initialize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_bus_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_bus_remove",
+    "callees": ["dev_pm_domain_detach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_bus_probe",
+    "callees": ["_dev_warn", "auxiliary_match_id", "dev_pm_domain_attach", "dev_pm_domain_detach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_uevent",
+    "callees": ["add_uevent_var", "strrchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_match",
+    "callees": ["auxiliary_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auxiliary_match_id",
+    "callees": ["strlen", "strncmp", "strrchr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

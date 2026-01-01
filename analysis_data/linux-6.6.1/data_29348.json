@@ -1,0 +1,152 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_read_counter.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_read_counter.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_stop",
+    "callees": ["msr_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_add.part.0",
+    "callees": ["msr_read_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_read_counter.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_intel.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_init",
+    "callees": ["_printk", "perf_msr_probe", "perf_pmu_register"],
+    "global_reads": [],
+    "global_writes": ["msr_mask"]
+  },
+  {
+    "name": "msr_event_add",
+    "callees": ["msr_event_add.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_del",
+    "callees": ["msr_event_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_stop",
+    "callees": ["msr_event_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_start",
+    "callees": ["msr_read_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_update",
+    "callees": ["__builtin_expect", "msr_read_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msr_event_init",
+    "callees": [],
+    "global_reads": ["msr_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "event_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_intel",
+    "callees": ["test_intel.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_therm_status",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_irperf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ptsc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_aperfmperf",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

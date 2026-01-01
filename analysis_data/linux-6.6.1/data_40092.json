@@ -1,0 +1,38 @@
+[
+  {
+    "name": "acpi_ds_init_object_from_op",
+    "callees": ["acpi_ds_method_data_get_node", "acpi_error", "acpi_ex_truncate_for32bit_table", "acpi_ps_get_opcode_info", "acpi_warning", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_create_node",
+    "callees": ["acpi_ds_build_internal_object", "acpi_ns_attach_object", "acpi_ns_get_attached_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_build_internal_buffer_obj",
+    "callees": ["acpi_error", "acpi_os_allocate_zeroed", "acpi_ut_create_internal_object_dbg", "acpi_ut_delete_object_desc", "acpi_ut_remove_reference", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_build_internal_object",
+    "callees": ["acpi_ds_init_object_from_op", "acpi_ns_lookup", "acpi_ps_get_opcode_info", "acpi_ut_create_internal_object_dbg", "acpi_ut_prefixed_namespace_error", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "name": "trace_regcache_sync.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync",
+    "callees": ["__SCT__tp_func_regcache_sync", "cpu_online", "trace_regcache_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync",
+    "callees": ["__SCT__tp_func_regcache_sync", "cpu_online", "trace_regcache_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync",
+    "callees": ["__SCT__tp_func_regcache_sync", "cpu_online", "trace_regcache_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_lookup_reg",
+    "callees": ["bsearch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_present.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_present",
+    "callees": ["__builtin_constant_p", "regcache_reg_present.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_present.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_block",
+    "callees": ["regcache_sync_block_raw", "regcache_sync_block_single", "regmap_can_raw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_block_raw",
+    "callees": ["regcache_get_val", "regcache_reg_needs_sync", "regcache_reg_present", "regcache_sync_block_raw_flush", "regmap_writeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_block_raw_flush",
+    "callees": ["_dev_err", "_regmap_raw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_block_single",
+    "callees": ["regcache_get_val", "regcache_reg_present", "regcache_sync_val", "regmap_writeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_val",
+    "callees": ["_dev_err", "_regmap_write", "regcache_reg_needs_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_present",
+    "callees": ["__builtin_constant_p", "regcache_reg_present.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_lookup_reg",
+    "callees": ["bsearch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_default_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_get_val",
+    "callees": ["regcache_get_val.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_set_val",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_cached",
+    "callees": ["regcache_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_cache_bypass",
+    "callees": ["__builtin_expect", "trace_regmap_cache_bypass"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_mark_dirty",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_cache_only",
+    "callees": ["__builtin_expect", "trace_regmap_cache_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_drop_region",
+    "callees": ["trace_regcache_drop_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync_region",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "regcache_default_sync", "regmap_async_complete", "trace_regcache_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_sync",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_dev_err", "_regmap_write", "regcache_default_sync", "regmap_async_complete", "trace_regcache_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_default_sync",
+    "callees": ["_dev_err", "_regmap_write", "regcache_read", "regcache_reg_needs_sync", "regmap_volatile", "regmap_writeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_reg_needs_sync",
+    "callees": ["regcache_lookup_reg", "regmap_writeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_write",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "regmap_volatile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_read",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "regmap_volatile", "trace_regmap_reg_read_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_exit",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_init",
+    "callees": ["_dev_err", "_dev_warn", "kfree", "kmemdup", "regcache_hw_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_drop_region",
+    "callees": ["__SCT__tp_func_regcache_drop_region", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regmap_cache_bypass",
+    "callees": ["__SCT__tp_func_regmap_cache_bypass", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regmap_cache_only",
+    "callees": ["__SCT__tp_func_regmap_cache_only", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regcache_sync",
+    "callees": ["__SCT__tp_func_regcache_sync", "cpu_online", "trace_regcache_sync.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_regmap_reg_read_cache",
+    "callees": ["__SCT__tp_func_regmap_reg_read_cache", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

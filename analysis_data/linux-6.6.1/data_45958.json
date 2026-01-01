@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_trace_notify.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["pm_trace_rtc_abused"]
+  },
+  {
+    "name": "late_resume_init",
+    "callees": ["_printk", "show_dev_hash", "show_file_hash"],
+    "global_reads": ["hash_value_early_read"],
+    "global_writes": []
+  },
+  {
+    "name": "early_resume_init",
+    "callees": ["read_magic_time", "register_pm_notifier"],
+    "global_reads": [],
+    "global_writes": ["hash_value_early_read"]
+  },
+  {
+    "name": "pm_trace_notify",
+    "callees": ["pm_trace_notify.part.0"],
+    "global_reads": ["pm_trace_rtc_abused"],
+    "global_writes": []
+  },
+  {
+    "name": "show_trace_dev_match",
+    "callees": ["dev_driver_string", "device_pm_lock", "device_pm_unlock", "snprintf"],
+    "global_reads": ["hash_value_early_read"],
+    "global_writes": []
+  },
+  {
+    "name": "generate_pm_trace",
+    "callees": ["set_magic_time"],
+    "global_reads": ["dev_hash_value"],
+    "global_writes": []
+  },
+  {
+    "name": "set_trace_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["dev_hash_value"]
+  },
+  {
+    "name": "read_magic_time",
+    "callees": ["_printk", "mc146818_get_time"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

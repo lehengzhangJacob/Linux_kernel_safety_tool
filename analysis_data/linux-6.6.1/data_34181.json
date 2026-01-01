@@ -1,0 +1,152 @@
+[
+  {
+    "name": "insn_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_length",
+    "callees": ["insn_get_immediate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_last_prefix_id",
+    "callees": ["inat_get_last_prefix_id", "insn_get_prefixes", "insn_last_prefix_id.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_decode",
+    "callees": ["insn_complete", "insn_get_length", "insn_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_complete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_length",
+    "callees": ["insn_get_immediate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_immediate",
+    "callees": ["__builtin_expect", "__get_immptr", "__get_immv", "__get_immv32", "__get_moffset", "insn_get_displacement"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_immptr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_immv",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_immv32",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_moffset",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_displacement",
+    "callees": ["__builtin_expect", "insn_get_sib"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_sib",
+    "callees": ["__builtin_expect", "insn_get_modrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_rip_relative",
+    "callees": ["insn_get_modrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_modrm",
+    "callees": ["__builtin_expect", "inat_get_group_attribute", "insn_get_opcode", "insn_get_prefixes", "insn_last_prefix_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_opcode",
+    "callees": ["__builtin_expect", "inat_get_avx_attribute", "inat_get_escape_attribute", "inat_get_opcode_attribute", "insn_get_prefixes", "insn_last_prefix_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_prefixes",
+    "callees": ["__builtin_expect", "inat_get_opcode_attribute", "insn_get_emulate_prefix"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_emulate_prefix",
+    "callees": ["__insn_get_emulate_prefix"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_last_prefix_id",
+    "callees": ["inat_get_last_prefix_id", "insn_get_prefixes", "insn_last_prefix_id.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

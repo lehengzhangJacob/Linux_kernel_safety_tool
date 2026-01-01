@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vdso_update_end",
+    "callees": ["_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vdso_update_begin",
+    "callees": ["_raw_spin_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_vsyscall_tz",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_vsyscall",
+    "callees": ["update_vdso_data"],
+    "global_reads": ["hrtimer_resolution"],
+    "global_writes": []
+  }
+]

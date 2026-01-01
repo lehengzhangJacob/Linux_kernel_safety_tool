@@ -1,0 +1,104 @@
+[
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_io_space_region_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_initialize_region",
+    "callees": ["acpi_ev_attach_region", "acpi_ev_execute_reg_method", "acpi_ev_find_region_handler", "acpi_ex_enter_interpreter", "acpi_ex_exit_interpreter", "acpi_ns_get_attached_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_default_region_setup",
+    "callees": ["acpi_ev_io_space_region_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_data_table_region_setup",
+    "callees": ["acpi_os_allocate_zeroed", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_cmos_region_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_pci_bar_region_setup",
+    "callees": ["acpi_ev_cmos_region_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_is_pci_root_bridge",
+    "callees": ["acpi_ut_execute_CID", "acpi_ut_execute_HID", "acpi_ut_is_pci_root_bridge", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_pci_config_region_setup",
+    "callees": ["acpi_ev_is_pci_root_bridge", "acpi_exception", "acpi_hw_derive_pci_id", "acpi_install_address_space_handler", "acpi_os_allocate_zeroed", "acpi_ut_evaluate_numeric_object", "acpi_ut_get_node_name", "kfree"],
+    "global_reads": ["acpi_gbl_root_node"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_io_space_region_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_system_memory_region_setup",
+    "callees": ["acpi_os_allocate_zeroed", "acpi_os_unmap_memory", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "early_initrdmem",
+    "callees": ["memparse"],
+    "global_reads": [],
+    "global_writes": ["phys_initrd_size", "phys_initrd_start"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_initrd",
+    "callees": ["early_initrdmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_initrdmem",
+    "callees": ["memparse"],
+    "global_reads": [],
+    "global_writes": ["phys_initrd_size", "phys_initrd_start"]
+  },
+  {
+    "name": "no_initrd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["mount_initrd"]
+  },
+  {
+    "name": "kernel_do_mounts_initrd_sysctls_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "initrd_load",
+    "callees": ["create_dev", "init_unlink"],
+    "global_reads": ["mount_initrd"],
+    "global_writes": []
+  }
+]

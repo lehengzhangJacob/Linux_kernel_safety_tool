@@ -1,0 +1,20 @@
+[
+  {
+    "name": "blake2s_mod_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blake2s_final",
+    "callees": ["blake2s_compress", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blake2s_update",
+    "callees": ["__builtin_expect", "blake2s_compress", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

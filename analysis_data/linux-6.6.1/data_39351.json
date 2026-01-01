@@ -1,0 +1,464 @@
+[
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "sched_clock",
+    "callees": ["__builtin_expect", "sched_clock_noinstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_calibrate_cpu_early.part.0",
+    "callees": ["quick_pit_calibrate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_calibrate_cpu_early",
+    "callees": ["cpu_khz_from_msr", "native_calibrate_cpu_early.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sched_clock",
+    "callees": ["__builtin_expect", "sched_clock_noinstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_cyc2ns_scale",
+    "callees": ["__set_cyc2ns_scale", "sched_clock_idle_sleep_event", "sched_clock_idle_wakeup_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pit_expect_msb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calc_hpet_ref",
+    "callees": ["hpet_readl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_cs_mark_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "tsc_cs_tick_stable.part.0",
+    "callees": ["sched_clock_tick_stable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "time_cpufreq_notifier.part.0",
+    "callees": ["mark_tsc_unstable.part.0", "set_cyc2ns_scale"],
+    "global_reads": ["loops_per_jiffy_ref", "ref_freq", "tsc_khz", "tsc_khz_ref", "tsc_unstable"],
+    "global_writes": ["loops_per_jiffy_ref", "ref_freq", "tsc_khz", "tsc_khz_ref"]
+  },
+  {
+    "name": "mark_tsc_unstable.part.0",
+    "callees": ["_printk", "clear_sched_clock_stable", "clocksource_mark_unstable"],
+    "global_reads": [],
+    "global_writes": ["tsc_unstable"]
+  },
+  {
+    "name": "native_calibrate_cpu_early.part.0",
+    "callees": ["quick_pit_calibrate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calibrate_delay_is_known",
+    "callees": ["cpumask_any_but"],
+    "global_reads": ["nr_cpu_ids", "tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_init",
+    "callees": ["__clocksource_register_scale", "check_system_tsc_reliable", "cyc2ns_init_secondary_cpus", "detect_art", "determine_cpu_tsc_frequencies", "mark_tsc_unstable.part.0", "setup_clear_cpu_cap", "tsc_enable_sched_clock", "unsynchronized_tsc"],
+    "global_reads": ["no_tsc_watchdog", "tsc_clocksource_reliable", "tsc_khz", "tsc_unstable"],
+    "global_writes": ["lpj_fine"]
+  },
+  {
+    "name": "tsc_early_init",
+    "callees": ["determine_cpu_tsc_frequencies", "tsc_enable_sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_enable_sched_clock",
+    "callees": ["cyc2ns_init_boot_cpu", "static_key_enable", "tsc_store_and_check_tsc_adjust", "use_tsc_delay"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": ["loops_per_jiffy"]
+  },
+  {
+    "name": "determine_cpu_tsc_frequencies",
+    "callees": ["__builtin_expect", "_printk", "pit_hpet_ptimer_calibrate_cpu"],
+    "global_reads": ["cpu_khz", "tsc_early_khz", "tsc_khz"],
+    "global_writes": ["cpu_khz", "tsc_khz"]
+  },
+  {
+    "name": "init_tsc_clocksource",
+    "callees": ["__clocksource_register_scale", "clocksource_unregister", "schedule_delayed_work"],
+    "global_reads": ["tsc_force_recalibrate", "tsc_khz", "tsc_unstable"],
+    "global_writes": ["art_related_clocksource"]
+  },
+  {
+    "name": "tsc_refine_calibration_work",
+    "callees": ["__clocksource_register_scale", "_printk", "calc_hpet_ref", "clocksource_unregister", "find_next_bit", "is_hpet_enabled", "lapic_update_tsc_freq", "schedule_delayed_work", "set_cyc2ns_scale", "tsc_read_refs"],
+    "global_reads": ["hpet", "ref_start", "tsc_khz", "tsc_start", "tsc_unstable"],
+    "global_writes": ["art_related_clocksource", "hpet", "tsc_khz", "tsc_start"]
+  },
+  {
+    "name": "convert_art_ns_to_tsc",
+    "callees": [],
+    "global_reads": ["art_related_clocksource", "tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "convert_art_to_tsc",
+    "callees": [],
+    "global_reads": ["art_related_clocksource", "art_to_tsc_denominator", "art_to_tsc_numerator", "art_to_tsc_offset"],
+    "global_writes": []
+  },
+  {
+    "name": "unsynchronized_tsc",
+    "callees": ["apic_is_clustered_box", "cpumask_weight"],
+    "global_reads": ["tsc_clocksource_reliable", "tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "check_system_tsc_reliable",
+    "callees": [],
+    "global_reads": ["nr_online_nodes"],
+    "global_writes": ["tsc_clocksource_reliable"]
+  },
+  {
+    "name": "tsc_clocksource_watchdog_disabled",
+    "callees": [],
+    "global_reads": ["no_tsc_watchdog", "tsc_as_watchdog"],
+    "global_writes": []
+  },
+  {
+    "name": "mark_tsc_unstable",
+    "callees": ["mark_tsc_unstable.part.0"],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_cs_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_cs_tick_stable",
+    "callees": ["tsc_cs_tick_stable.part.0"],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_cs_mark_unstable",
+    "callees": ["tsc_cs_mark_unstable.part.0"],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "read_tsc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_resume",
+    "callees": ["tsc_verify_tsc_adjust"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detect_art",
+    "callees": ["native_read_msr"],
+    "global_reads": ["art_to_tsc_denominator", "tsc_async_resets"],
+    "global_writes": ["art_to_tsc_denominator", "art_to_tsc_offset"]
+  },
+  {
+    "name": "cpufreq_register_tsc_scaling",
+    "callees": ["cpufreq_register_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "time_cpufreq_notifier",
+    "callees": ["mark_tsc_unstable.part.0", "time_cpufreq_notifier.part.0"],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_restore_sched_clock_state",
+    "callees": ["find_next_bit", "sched_clock", "sched_clock_stable"],
+    "global_reads": ["cyc2ns_suspend"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_save_sched_clock_state",
+    "callees": ["sched_clock", "sched_clock_stable"],
+    "global_reads": [],
+    "global_writes": ["cyc2ns_suspend"]
+  },
+  {
+    "name": "recalibrate_cpu_khz",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_calibrate_cpu",
+    "callees": ["native_calibrate_cpu_early", "pit_hpet_ptimer_calibrate_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_calibrate_cpu_early",
+    "callees": ["cpu_khz_from_msr", "native_calibrate_cpu_early.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pit_hpet_ptimer_calibrate_cpu",
+    "callees": ["_printk", "calc_hpet_ref", "is_hpet_enabled", "pit_calibrate_tsc", "tsc_read_refs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_calibrate_tsc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["lapic_timer_period"]
+  },
+  {
+    "name": "quick_pit_calibrate",
+    "callees": ["_printk", "pit_expect_msb"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "pit_expect_msb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pit_calibrate_tsc",
+    "callees": ["__const_udelay"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "calc_hpet_ref",
+    "callees": ["hpet_readl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_read_refs",
+    "callees": ["acpi_pm_read_early", "hpet_readl"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_setup",
+    "callees": ["_printk", "mark_tsc_unstable.part.0", "strcmp", "strncmp"],
+    "global_reads": ["no_tsc_watchdog", "tsc_as_watchdog", "tsc_unstable"],
+    "global_writes": ["no_sched_irq_time", "no_tsc_watchdog", "tsc_as_watchdog", "tsc_clocksource_reliable", "tsc_force_recalibrate"]
+  },
+  {
+    "name": "notsc_setup",
+    "callees": ["mark_tsc_unstable.part.0"],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "check_tsc_unstable",
+    "callees": [],
+    "global_reads": ["tsc_unstable"],
+    "global_writes": []
+  },
+  {
+    "name": "sched_clock",
+    "callees": ["__builtin_expect", "sched_clock_noinstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "using_native_sched_clock",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sched_clock_noinstr",
+    "callees": ["__SCT__pv_sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_sched_clock_from_tsc",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_sched_clock",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies_64"],
+    "global_writes": []
+  },
+  {
+    "name": "cyc2ns_init_secondary_cpus",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cyc2ns_init_boot_cpu",
+    "callees": ["__set_cyc2ns_scale"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "set_cyc2ns_scale",
+    "callees": ["__set_cyc2ns_scale", "sched_clock_idle_sleep_event", "sched_clock_idle_wakeup_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_cyc2ns_scale",
+    "callees": ["__builtin_expect", "clocks_calc_mult_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cyc2ns_read_end",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cyc2ns_read_begin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cyc2ns_read",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_early_khz_setup",
+    "callees": ["kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pm_read_early",
+    "callees": ["acpi_pm_read_verified"],
+    "global_reads": ["pmtmr_ioport"],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

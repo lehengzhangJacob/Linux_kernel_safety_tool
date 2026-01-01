@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ip6table_filter_fini",
+    "callees": ["kfree", "unregister_pernet_subsys", "xt_unregister_template"],
+    "global_reads": ["filter_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_filter_init",
+    "callees": ["__builtin_expect", "kfree", "register_pernet_subsys", "xt_hook_ops_alloc", "xt_register_template", "xt_unregister_template"],
+    "global_reads": ["filter_ops"],
+    "global_writes": ["filter_ops"]
+  },
+  {
+    "name": "ip6table_filter_net_exit",
+    "callees": ["ip6t_unregister_table_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_filter_net_pre_exit",
+    "callees": ["ip6t_unregister_table_pre_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_filter_net_init",
+    "callees": ["ip6table_filter_table_init"],
+    "global_reads": ["forward"],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_filter_table_init",
+    "callees": ["ip6t_alloc_initial_table", "ip6t_register_table", "kfree"],
+    "global_reads": ["filter_ops", "forward"],
+    "global_writes": []
+  }
+]

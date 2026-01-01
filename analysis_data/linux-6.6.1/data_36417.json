@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_mul_barrett",
+    "callees": ["mpi_mod_barrett", "mpi_mul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_mod_barrett",
+    "callees": ["mpi_add", "mpi_alloc", "mpi_cmp", "mpi_fdiv_r", "mpi_lshift_limbs", "mpi_mul", "mpi_normalize", "mpi_rshift_limbs", "mpi_set", "mpi_set_ui", "mpi_sub"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_barrett_free",
+    "callees": ["kfree", "mpi_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_barrett_init",
+    "callees": ["kmalloc_array", "mpi_alloc", "mpi_copy", "mpi_fdiv_q", "mpi_lshift_limbs", "mpi_normalize", "mpi_set_ui"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_mod",
+    "callees": ["mpi_fdiv_r"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

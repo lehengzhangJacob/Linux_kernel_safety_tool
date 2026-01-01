@@ -1,0 +1,26 @@
+[
+  {
+    "name": "pnp_system_init",
+    "callees": ["pnp_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "system_pnp_probe",
+    "callees": ["reserve_resources_of_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_resources_of_dev",
+    "callees": ["pnp_get_resource", "reserve_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_range",
+    "callees": ["__builtin_return_address", "__request_region", "_dev_info", "kfree", "kmalloc_trace", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

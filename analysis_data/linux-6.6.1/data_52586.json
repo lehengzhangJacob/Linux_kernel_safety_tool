@@ -1,0 +1,56 @@
+[
+  {
+    "name": "dm_linear_exit",
+    "callees": ["dm_unregister_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_linear_init",
+    "callees": ["_printk", "dm_register_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_iterate_devices",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_prepare_ioctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_status",
+    "callees": ["scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_map",
+    "callees": ["bio_set_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_dtr",
+    "callees": ["dm_put_device", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linear_ctr",
+    "callees": ["__builtin_return_address", "dm_get_device", "dm_table_get_mode", "kfree", "kmalloc_trace", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_set_dev",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

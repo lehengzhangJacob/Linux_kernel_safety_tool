@@ -1,0 +1,254 @@
+[
+  {
+    "name": "cpuidle_remove_s2idle_attr_group",
+    "callees": ["sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_free_state_kobj",
+    "callees": ["cpuidle_remove_s2idle_attr_group", "kfree", "kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_desc.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_desc.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_remove_sysfs",
+    "callees": ["kfree", "kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_add_sysfs",
+    "callees": ["__init_swait_queue_head", "get_cpu_device", "kfree", "kobject_init_and_add", "kobject_put", "kobject_uevent", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_remove_device_sysfs",
+    "callees": ["cpuidle_remove_state_sysfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_add_device_sysfs",
+    "callees": ["cpuidle_add_state_sysfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_remove_state_sysfs",
+    "callees": ["cpuidle_free_state_kobj", "cpuidle_get_cpu_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_add_state_sysfs",
+    "callees": ["__init_swait_queue_head", "cpuidle_add_s2idle_attr_group", "cpuidle_free_state_kobj", "cpuidle_get_cpu_driver", "kfree", "kobject_init_and_add", "kobject_put", "kobject_uevent", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_free_state_kobj",
+    "callees": ["cpuidle_remove_s2idle_attr_group", "kfree", "kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_state_sysfs_release",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_state_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_state_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_remove_s2idle_attr_group",
+    "callees": ["sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_add_s2idle_attr_group",
+    "callees": ["sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_s2idle_time",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_s2idle_usage",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_default_status",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_state_disable",
+    "callees": ["capable", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_disable",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_time",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_below",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_above",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_desc",
+    "callees": ["show_state_desc.part.0", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_name",
+    "callees": ["show_state_name.part.0", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_rejected",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_usage",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_power_usage",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_target_residency",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state_exit_latency",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_sysfs_release",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_store",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_show",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_remove_interface",
+    "callees": ["sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuidle_add_interface",
+    "callees": ["bus_get_dev_root", "put_device", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_current_governor",
+    "callees": ["cpuidle_switch_governor", "mutex_lock", "mutex_unlock", "sscanf", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_current_governor",
+    "callees": ["mutex_lock", "mutex_unlock", "sprintf"],
+    "global_reads": ["cpuidle_curr_governor"],
+    "global_writes": []
+  },
+  {
+    "name": "show_current_driver",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "cpuidle_get_driver", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_available_governors",
+    "callees": ["mutex_lock", "mutex_unlock", "scnprintf", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

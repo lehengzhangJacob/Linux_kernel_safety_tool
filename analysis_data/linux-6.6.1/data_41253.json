@@ -1,0 +1,350 @@
+[
+  {
+    "name": "dwc_dostart_first_queued.part.0",
+    "callees": ["dwc_dostart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_get_sent",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dostart_first_queued.part.0",
+    "callees": ["dwc_dostart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_get_sent",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_initialize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_filter.part.0",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_filter",
+    "callees": ["dw_dma_filter.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_do_single_block",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_async_is_complete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dump_lli",
+    "callees": ["_dev_crit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_interrupt.part.0",
+    "callees": ["_dev_err", "tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dostart_first_queued.part.0",
+    "callees": ["dwc_dostart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_filter.part.0",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dw_dma_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dw_dma_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dma_remove",
+    "callees": ["__pm_runtime_resume", "__pm_runtime_suspend", "dma_async_device_unregister", "do_dw_dma_off", "free_irq", "tasklet_kill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dma_probe",
+    "callees": ["__pm_runtime_resume", "__pm_runtime_suspend", "_dev_err", "_dev_info", "devm_kmalloc", "dma_async_device_register", "dmam_pool_create", "free_irq", "memcpy", "request_threaded_irq", "tasklet_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_caps",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_free_chan_resources",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "do_dw_dma_off", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_alloc_chan_resources",
+    "callees": ["_dev_warn", "dw_dma_filter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dw_dma_on",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dw_dma_off",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_issue_pending",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_dostart_first_queued.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_tx_status",
+    "callees": ["dma_cookie_status", "dwc_get_residue_and_status", "dwc_scan_descriptors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_get_residue_and_status",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_get_sent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_terminate_all",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_chan_disable", "dwc_chan_pause", "dwc_chan_resume", "dwc_descriptor_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_resume",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_chan_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_pause",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_chan_pause"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_pause",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_config",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_filter",
+    "callees": ["dw_dma_filter.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_prep_slave_sg",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_dev_err", "dwc_desc_get", "dwc_desc_put", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_prep_dma_memcpy",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "dwc_desc_get", "dwc_desc_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_interrupt",
+    "callees": ["dw_dma_interrupt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dw_dma_tasklet",
+    "callees": ["__builtin_constant_p", "dwc_handle_error", "dwc_scan_descriptors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_handle_error",
+    "callees": ["__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dev_driver_string", "dwc_descriptor_complete", "dwc_dostart", "dwc_dump_lli", "dwc_scan_descriptors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dump_lli",
+    "callees": ["_dev_crit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_scan_descriptors",
+    "callees": ["__builtin_constant_p", "_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_chan_disable", "dwc_complete_all", "dwc_descriptor_complete", "dwc_do_single_block", "dwc_dostart_first_queued.part.0", "dwc_get_sent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_get_sent",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_complete_all",
+    "callees": ["_dev_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dwc_chan_disable", "dwc_descriptor_complete", "dwc_dostart_first_queued.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_descriptor_complete",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dmaengine_desc_callback_invoke", "dwc_desc_put", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dostart",
+    "callees": ["_dev_err", "dwc_do_single_block", "dwc_dump_chan_regs", "dwc_initialize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_do_single_block",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_chan_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_dump_chan_regs",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_initialize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_desc_put",
+    "callees": ["__builtin_expect", "dma_pool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_desc_get",
+    "callees": ["dma_async_tx_descriptor_init", "dma_pool_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dwc_tx_submit",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tasklet_schedule",
+    "callees": ["__tasklet_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_async_is_complete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

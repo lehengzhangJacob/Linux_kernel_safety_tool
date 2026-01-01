@@ -1,0 +1,272 @@
+[
+  {
+    "name": "nf_nat_ipv4_fn",
+    "callees": ["nf_nat_icmp_reply_translation", "nf_nat_inet_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_fn",
+    "callees": ["nf_nat_icmp_reply_translation", "nf_nat_inet_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_fn",
+    "callees": ["nf_nat_icmp_reply_translation", "nf_nat_inet_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_unregister_fn",
+    "callees": ["nf_nat_unregister_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_local_fn.part.0",
+    "callees": ["ip6_route_me_harder", "nf_xfrm_me_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_out.part.0",
+    "callees": ["nf_xfrm_me_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_pre_routing.part.0",
+    "callees": ["refdst_drop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_out.part.0",
+    "callees": ["nf_xfrm_me_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_local_fn.part.0",
+    "callees": ["ip_route_me_harder", "nf_xfrm_me_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_unregister_fn",
+    "callees": ["nf_nat_ipv4_unregister_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_register_fn",
+    "callees": ["nf_nat_register_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_local_fn",
+    "callees": ["nf_nat_ipv6_fn", "nf_nat_ipv6_local_fn.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_out",
+    "callees": ["nf_nat_ipv6_fn", "nf_nat_ipv6_out.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_in",
+    "callees": ["memcmp", "nf_nat_ipv6_fn", "refdst_drop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_fn",
+    "callees": ["ipv6_skip_exthdr", "nf_nat_icmpv6_reply_translation", "nf_nat_inet_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_icmpv6_reply_translation",
+    "callees": ["__builtin_expect", "csum_ipv6_magic", "nf_ct_invert_tuple", "nf_ip6_checksum", "nf_nat_ipv6_manip_pkt", "skb_checksum", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_unregister_fn",
+    "callees": ["nf_nat_unregister_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_register_fn",
+    "callees": ["nf_nat_register_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_local_fn",
+    "callees": ["nf_nat_ipv4_fn", "nf_nat_ipv4_local_fn.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_out",
+    "callees": ["nf_nat_ipv4_fn", "nf_nat_ipv4_out.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_local_in",
+    "callees": ["nf_nat_ipv4_fn", "skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_xfrm_me_harder",
+    "callees": ["__builtin_expect", "__xfrm_decode_session", "pskb_expand_head", "rcuref_get", "refdst_drop", "xfrm_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_pre_routing",
+    "callees": ["nf_nat_ipv4_fn", "nf_nat_ipv4_pre_routing.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_fn",
+    "callees": ["nf_nat_icmp_reply_translation", "nf_nat_inet_fn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_icmp_reply_translation",
+    "callees": ["__builtin_expect", "nf_ct_invert_tuple", "nf_ip_checksum", "nf_nat_ipv4_manip_pkt", "skb_checksum", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_csum_recalc",
+    "callees": ["nf_nat_ipv4_csum_recalc", "nf_nat_ipv6_csum_recalc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_csum_recalc",
+    "callees": ["__builtin_bswap16", "csum_ipv6_magic", "inet_proto_csum_replace4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_csum_recalc",
+    "callees": ["__builtin_bswap16", "inet_proto_csum_replace4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_csum_update",
+    "callees": ["nf_nat_ipv4_csum_update", "nf_nat_ipv6_csum_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_csum_update",
+    "callees": ["inet_proto_csum_replace16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_csum_update",
+    "callees": ["inet_proto_csum_replace4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_manip_pkt",
+    "callees": ["nf_ct_invert_tuple", "nf_nat_ipv4_manip_pkt", "nf_nat_ipv6_manip_pkt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_manip_pkt",
+    "callees": ["ipv6_skip_exthdr", "l4proto_manip_pkt", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_manip_pkt",
+    "callees": ["l4proto_manip_pkt", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "l4proto_manip_pkt",
+    "callees": ["icmp_manip_pkt", "icmpv6_manip_pkt", "tcp_manip_pkt", "udp_manip_pkt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmpv6_manip_pkt",
+    "callees": ["inet_proto_csum_replace4", "nf_csum_update", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_manip_pkt",
+    "callees": ["inet_proto_csum_replace4", "nf_csum_update", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_manip_pkt",
+    "callees": ["__udp_manip_pkt", "skb_ensure_writable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udp_manip_pkt",
+    "callees": ["inet_proto_csum_replace4", "nf_csum_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

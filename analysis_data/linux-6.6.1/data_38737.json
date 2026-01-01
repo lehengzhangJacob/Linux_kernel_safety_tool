@@ -1,0 +1,38 @@
+[
+  {
+    "name": "dump_stack",
+    "callees": ["dump_stack_lvl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_stack_lvl",
+    "callees": ["__dump_stack", "__printk_cpu_sync_put", "__printk_cpu_sync_try_get", "__printk_cpu_sync_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dump_stack",
+    "callees": ["dump_stack_print_info", "show_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_regs_print_info",
+    "callees": ["dump_stack_print_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_stack_print_info",
+    "callees": ["_printk", "kexec_crash_loaded", "print_stop_info", "print_tainted", "print_worker_info", "strcspn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_stack_set_arch_desc",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

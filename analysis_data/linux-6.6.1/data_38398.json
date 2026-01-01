@@ -1,0 +1,98 @@
+[
+  {
+    "name": "get_dma_residue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma",
+    "callees": ["disable_dma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma",
+    "callees": ["disable_dma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_devm_request_dma",
+    "callees": ["__devres_alloc_node", "devres_add", "free_dma", "request_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_release_dma",
+    "callees": ["free_dma", "snd_dma_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_pointer",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_dma", "get_dma_residue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_disable",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_dma_program",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_dma", "set_dma_addr", "set_dma_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_dma_residue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dma_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dma_addr",
+    "callees": ["set_dma_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dma_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_dma",
+    "callees": ["disable_dma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

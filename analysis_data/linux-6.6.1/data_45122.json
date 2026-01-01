@@ -1,0 +1,230 @@
+[
+  {
+    "name": "ttm_resource_compatible",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_pos_tail",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_usage",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_create_debugfs",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_show",
+    "callees": ["ttm_resource_manager_debug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_linear_io_fini",
+    "callees": ["iounmap", "memunmap", "ttm_mem_io_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_linear_io_init",
+    "callees": ["ioremap", "ioremap_wc", "memremap", "memset", "ttm_mem_io_free", "ttm_mem_io_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_linear_io_map_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_iomap_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_iomap_unmap_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_iomap_map_local",
+    "callees": ["sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_first",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_debug",
+    "callees": ["drm_printf", "ttm_resource_manager_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_usage",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_evict_all",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "dma_fence_wait_timeout", "kref_put", "ttm_mem_evict_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_set_bo",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_compat",
+    "callees": ["ttm_resource_places_compat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_places_compat",
+    "callees": ["ttm_resource_compatible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_compatible",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_intersects",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_free",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291", "_raw_spin_lock", "_raw_spin_unlock", "ttm_resource_del_bulk_move"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_alloc",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291", "_raw_spin_lock", "_raw_spin_unlock", "ttm_resource_add_bulk_move"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_fini",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_init",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_move_to_lru_tail",
+    "callees": ["__builtin_constant_p", "__compiletime_assert_291", "ttm_lru_bulk_move_pos_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_del_bulk_move",
+    "callees": ["ttm_lru_bulk_move_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_add_bulk_move",
+    "callees": ["ttm_lru_bulk_move_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_del",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_add",
+    "callees": ["ttm_lru_bulk_move_pos_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_pos_tail",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_tail",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_lru_bulk_move_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "init_menu",
+    "callees": ["cpuidle_register_governor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "menu_enable_device",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "menu_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "menu_reflect",
+    "callees": ["tick_nohz_idle_got_tick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "menu_select",
+    "callees": ["__builtin_expect", "cpuidle_governor_latency_req", "get_typical_interval", "menu_update", "nr_iowait_cpu", "tick_nohz_get_sleep_length", "tick_nohz_tick_stopped", "which_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_typical_interval",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "which_bucket",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

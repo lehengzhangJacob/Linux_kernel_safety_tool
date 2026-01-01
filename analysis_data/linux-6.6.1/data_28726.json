@@ -1,0 +1,62 @@
+[
+  {
+    "name": "kpp_register_instance",
+    "callees": ["__builtin_expect", "crypto_register_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_kpp",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_kpp",
+    "callees": ["crypto_register_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_has_kpp",
+    "callees": ["crypto_type_has_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_grab_kpp",
+    "callees": ["crypto_grab_spawn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alloc_kpp",
+    "callees": ["crypto_alloc_tfm_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_kpp_free_instance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_kpp_init_tfm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_kpp_exit_tfm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_kpp_show",
+    "callees": ["seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

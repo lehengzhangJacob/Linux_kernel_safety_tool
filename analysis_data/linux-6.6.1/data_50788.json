@@ -1,0 +1,254 @@
+[
+  {
+    "name": "e1000e_put_hw_semaphore",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_set_fc_watermarks",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_update_adaptive",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_reset_adaptive",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_disable_pcie_master",
+    "callees": ["__ew32", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_set_pcie_no_snoop",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_led_off_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_led_on_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_blink_led_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_cleanup_led_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_setup_led_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_id_led_init_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_valid_led_default",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_auto_rd_done",
+    "callees": ["usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_put_hw_semaphore",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_hw_semaphore",
+    "callees": ["__const_udelay", "__ew32", "e1000e_put_hw_semaphore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_speed_and_duplex_fiber_serdes",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_speed_and_duplex_copper",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_config_fc_after_link_up",
+    "callees": ["__ew32", "e1000e_force_mac_fc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_force_mac_fc",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_set_fc_watermarks",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_config_collision_dist_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_setup_fiber_serdes_link",
+    "callees": ["__ew32", "e1000_commit_fc_settings_generic", "e1000_poll_fiber_serdes_link_generic", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_poll_fiber_serdes_link_generic",
+    "callees": ["usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_commit_fc_settings_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_setup_link_generic",
+    "callees": ["__ew32", "e1000_set_default_fc_generic", "e1000e_set_fc_watermarks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_default_fc_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_for_serdes_link",
+    "callees": ["__ew32", "e1000e_config_fc_after_link_up", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_for_fiber_link",
+    "callees": ["__ew32", "e1000e_config_fc_after_link_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_for_copper_link",
+    "callees": ["e1000e_check_downshift", "e1000e_config_fc_after_link_up", "e1000e_phy_has_link_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_clear_hw_cntrs_base",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_update_mc_addr_list_generic",
+    "callees": ["__ew32", "e1000_hash_mc_addr", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_rar_set_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_rar_get_count_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_check_alt_mac_addr_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_init_rx_addrs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_write_vfta_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_clear_vfta_generic",
+    "callees": ["__ew32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_lan_id_single_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_lan_id_multi_port_pcie",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_get_bus_info_pcie",
+    "callees": ["pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

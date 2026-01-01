@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_probe.part.0",
+    "callees": ["hid_hw_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_report_fixup.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_input_mapping.part.0",
+    "callees": ["hid_map_usage_clear"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_driver_exit",
+    "callees": ["hid_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_driver_init",
+    "callees": ["__hid_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_probe",
+    "callees": ["hid_open_report", "ite_probe.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_event",
+    "callees": ["input_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_input_mapping",
+    "callees": ["ite_input_mapping.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ite_report_fixup",
+    "callees": ["ite_report_fixup.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "intel_dsi_dcs_init_backlight_funcs",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcs_setup_backlight",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcs_enable_backlight",
+    "callees": ["dcs_set_backlight", "mipi_dsi_dcs_read", "mipi_dsi_dcs_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcs_disable_backlight",
+    "callees": ["dcs_set_backlight", "mipi_dsi_dcs_read", "mipi_dsi_dcs_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcs_set_backlight",
+    "callees": ["mipi_dsi_dcs_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dcs_get_backlight",
+    "callees": ["mipi_dsi_dcs_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

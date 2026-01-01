@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_kallsyms_on_each_symbol",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_kallsyms_symbol_value",
+    "callees": ["__builtin_expect", "__find_kallsyms_symbol_value"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_kallsyms_lookup_name",
+    "callees": ["__builtin_expect", "__module_kallsyms_lookup_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__module_kallsyms_lookup_name",
+    "callees": ["__find_kallsyms_symbol_value", "find_module_all", "strnchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_kallsyms_symbol_value",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_get_kallsym",
+    "callees": ["__builtin_expect", "is_exported", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_module_symbol_name",
+    "callees": ["__builtin_expect", "find_kallsyms_symbol", "strscpy", "within_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_address_lookup",
+    "callees": ["__builtin_expect", "__module_address", "find_kallsyms_symbol", "strncpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dereference_module_function_descriptor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_kallsyms_symbol",
+    "callees": ["is_mapping_symbol", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_build_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_kallsyms",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "elf_type", "is_core_symbol", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "layout_symtab",
+    "callees": ["is_core_symbol", "module_get_offset_and_type", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elf_type",
+    "callees": ["strstarts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_exported",
+    "callees": ["bsearch", "lookup_exported_symbol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lookup_exported_symbol",
+    "callees": ["bsearch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_mapping_symbol",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module",
+    "callees": ["within_module_core", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

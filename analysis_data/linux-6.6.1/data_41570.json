@@ -1,0 +1,302 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_poke_n",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_poke_n",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_out_finish_r",
+    "callees": ["__kfifo_peek_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_sgl_buf",
+    "callees": ["setup_sgl_buf.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_out_copy_r",
+    "callees": ["__kfifo_peek_n", "kfifo_copy_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_sgl_buf.part.0",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "sg_next"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out_r.part.0",
+    "callees": ["kfifo_out_copy_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out_peek_r.part.0",
+    "callees": ["kfifo_out_copy_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_in_r.part.0",
+    "callees": ["__kfifo_poke_n", "kfifo_copy_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_out_finish_r",
+    "callees": ["__kfifo_peek_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_out_prepare_r",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "setup_sgl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_in_finish_r",
+    "callees": ["__kfifo_poke_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_in_prepare_r",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "setup_sgl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_to_user_r",
+    "callees": ["__builtin_expect", "__kfifo_peek_n", "kfifo_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_from_user_r",
+    "callees": ["__builtin_expect", "__kfifo_poke_n", "kfifo_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_skip_r",
+    "callees": ["__kfifo_dma_out_finish_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out_r",
+    "callees": ["__kfifo_out_r.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out_peek_r",
+    "callees": ["__kfifo_out_peek_r.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_out_copy_r",
+    "callees": ["__kfifo_peek_n", "kfifo_copy_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_in_r",
+    "callees": ["__kfifo_in_r.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_len_r",
+    "callees": ["__kfifo_peek_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_poke_n",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_max_r",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_out_prepare",
+    "callees": ["setup_sgl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_dma_in_prepare",
+    "callees": ["setup_sgl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_sgl",
+    "callees": ["setup_sgl_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_sgl_buf",
+    "callees": ["setup_sgl_buf.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_to_user",
+    "callees": ["__builtin_expect", "kfifo_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_copy_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_from_user",
+    "callees": ["__builtin_expect", "kfifo_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_copy_from_user",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out",
+    "callees": ["kfifo_copy_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_out_peek",
+    "callees": ["kfifo_copy_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_copy_out",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_in",
+    "callees": ["kfifo_copy_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kfifo_copy_in",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_init",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kfifo_alloc",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

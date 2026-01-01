@@ -1,0 +1,110 @@
+[
+  {
+    "name": "ptp_vclock_gettime",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "ns_to_timespec64", "timecounter_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_getcrosststamp.part.0",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "timecounter_cyc2time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_convert_timestamp",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mutex_lock_interruptible", "mutex_unlock", "timecounter_cyc2time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_get_vclocks_index",
+    "callees": ["class_find_device", "kzalloc", "memcpy", "mutex_lock_interruptible", "mutex_unlock", "put_device", "snprintf"],
+    "global_reads": ["ptp_class"],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_unregister",
+    "callees": ["kfree", "ptp_clock_unregister", "ptp_vclock_hash_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_register",
+    "callees": ["__builtin_expect", "__mutex_init", "kfree", "kzalloc", "ptp_clock_register", "ptp_schedule_worker", "ptp_vclock_hash_add", "snprintf", "timecounter_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_refresh",
+    "callees": ["ptp_vclock_gettime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_getcrosststamp",
+    "callees": ["ptp_vclock_getcrosststamp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_settime",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "timecounter_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_gettimex",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "ns_to_timespec64", "timecounter_cyc2time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_gettime",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "ns_to_timespec64", "timecounter_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_adjtime",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_adjfine",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock", "timecounter_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_hash_del",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_hash_add",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

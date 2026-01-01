@@ -1,0 +1,404 @@
+[
+  {
+    "name": "hibernation_debug_sleep",
+    "callees": ["__const_udelay", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_debug_sleep",
+    "callees": ["__const_udelay", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_debug_sleep",
+    "callees": ["__const_udelay", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_debug_sleep",
+    "callees": ["__const_udelay", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_suspend_resume.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_begin.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_finish.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_end.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pre_snapshot.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_show.part.0",
+    "callees": ["sprintf"],
+    "global_reads": ["hibernation_mode", "hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_suspend_resume.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_finish.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pre_snapshot.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_end.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_begin.part.0",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "nohibernate_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["nohibernate", "noresume"]
+  },
+  {
+    "name": "resumedelay_setup",
+    "callees": ["_printk", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resumewait_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["resume_wait"]
+  },
+  {
+    "name": "noresume_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["noresume"]
+  },
+  {
+    "name": "hibernate_setup",
+    "callees": ["enable_restore_image_protection", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["nocompress", "nohibernate", "noresume"]
+  },
+  {
+    "name": "resume_offset_setup",
+    "callees": ["sscanf"],
+    "global_reads": ["noresume"],
+    "global_writes": ["swsusp_resume_block"]
+  },
+  {
+    "name": "resume_setup",
+    "callees": ["strncpy"],
+    "global_reads": ["noresume"],
+    "global_writes": []
+  },
+  {
+    "name": "pm_disk_init",
+    "callees": ["sysfs_create_group"],
+    "global_reads": ["power_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "reserved_size_store",
+    "callees": ["sscanf"],
+    "global_reads": [],
+    "global_writes": ["reserved_size"]
+  },
+  {
+    "name": "reserved_size_show",
+    "callees": ["sprintf"],
+    "global_reads": ["reserved_size"],
+    "global_writes": []
+  },
+  {
+    "name": "image_size_store",
+    "callees": ["sscanf"],
+    "global_reads": [],
+    "global_writes": ["image_size"]
+  },
+  {
+    "name": "image_size_show",
+    "callees": ["sprintf"],
+    "global_reads": ["image_size"],
+    "global_writes": []
+  },
+  {
+    "name": "resume_offset_store",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": ["swsusp_resume_block"]
+  },
+  {
+    "name": "resume_offset_show",
+    "callees": ["sprintf"],
+    "global_reads": ["swsusp_resume_block"],
+    "global_writes": []
+  },
+  {
+    "name": "resume_store",
+    "callees": ["_printk", "hibernation_available", "kfree", "kstrndup", "lock_system_sleep", "lookup_bdev", "pm_debug_messages_should_print", "simple_strtoul", "software_resume", "sscanf", "unlock_system_sleep"],
+    "global_reads": ["swsusp_resume_device"],
+    "global_writes": ["noresume", "swsusp_resume_device"]
+  },
+  {
+    "name": "resume_show",
+    "callees": ["sprintf"],
+    "global_reads": ["swsusp_resume_device"],
+    "global_writes": []
+  },
+  {
+    "name": "disk_store",
+    "callees": ["_printk", "hibernation_available", "lock_system_sleep", "memchr", "pm_debug_messages_should_print", "strlen", "strncmp", "unlock_system_sleep"],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": ["hibernation_mode"]
+  },
+  {
+    "name": "disk_show",
+    "callees": ["disk_show.part.0", "hibernation_available", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "software_resume_initcall",
+    "callees": ["find_resume_device", "hibernation_available", "software_resume"],
+    "global_reads": ["noresume", "swsusp_resume_device"],
+    "global_writes": []
+  },
+  {
+    "name": "software_resume",
+    "callees": ["_printk", "freeze_kernel_threads", "freeze_processes", "hibernate_acquire", "load_image_and_restore", "mutex_lock", "mutex_unlock", "pm_debug_messages_should_print", "pm_notifier_call_chain", "pm_notifier_call_chain_robust", "pm_prepare_console", "pm_restore_console", "swsusp_check", "swsusp_close", "thaw_processes"],
+    "global_reads": ["swsusp_resume_device"],
+    "global_writes": []
+  },
+  {
+    "name": "find_resume_device",
+    "callees": ["_printk", "async_synchronize_full", "early_lookup_bdev", "msleep", "pm_debug_messages_should_print", "wait_for_device_probe"],
+    "global_reads": ["resume_delay", "resume_wait"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernate_quiet_exec",
+    "callees": ["dpm_complete", "dpm_prepare", "dpm_resume", "dpm_resume_start", "dpm_suspend", "dpm_suspend_end", "freeze_kernel_threads", "freeze_processes", "hibernate_acquire", "lock_device_hotplug", "lock_system_sleep", "platform_begin.part.0", "platform_end.part.0", "platform_finish.part.0", "platform_pre_snapshot.part.0", "pm_notifier_call_chain", "pm_notifier_call_chain_robust", "pm_prepare_console", "pm_restore_console", "resume_console", "suspend_console", "thaw_kernel_threads", "thaw_processes", "unlock_device_hotplug", "unlock_system_sleep"],
+    "global_reads": [],
+    "global_writes": ["pm_suspend_global_flags"]
+  },
+  {
+    "name": "hibernate",
+    "callees": ["_printk", "create_basic_memory_bitmaps", "free_basic_memory_bitmaps", "freeze_processes", "hibernate_acquire", "hibernation_available", "hibernation_snapshot", "ksys_sync_helper", "load_image_and_restore", "lock_device_hotplug", "lock_system_sleep", "pm_debug_messages_should_print", "pm_notifier_call_chain", "pm_notifier_call_chain_robust", "pm_prepare_console", "pm_restore_console", "pm_restore_gfp_mask", "power_down", "swsusp_check", "swsusp_free", "swsusp_write", "thaw_processes", "unlock_device_hotplug", "unlock_system_sleep"],
+    "global_reads": ["freezer_test_done", "hibernation_mode", "in_suspend", "nocompress"],
+    "global_writes": ["freezer_test_done", "in_suspend"]
+  },
+  {
+    "name": "load_image_and_restore",
+    "callees": ["_printk", "create_basic_memory_bitmaps", "free_basic_memory_bitmaps", "hibernation_restore", "lock_device_hotplug", "pm_debug_messages_should_print", "swsusp_close", "swsusp_free", "swsusp_read", "unlock_device_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_down",
+    "callees": ["_printk", "hibernation_platform_enter", "kernel_can_power_off", "kernel_halt", "kernel_power_off", "kernel_restart", "suspend_devices_and_enter", "swsusp_unmark"],
+    "global_reads": ["hibernation_mode", "hibernation_ops", "mem_sleep_current"],
+    "global_writes": ["hibernation_mode"]
+  },
+  {
+    "name": "hibernation_platform_enter",
+    "callees": ["cpuidle_pause", "cpuidle_resume", "dpm_resume_end", "dpm_resume_start", "dpm_suspend_end", "dpm_suspend_start", "freeze_secondary_cpus", "pm_wakeup_pending", "resume_console", "suspend_console", "syscore_resume", "syscore_suspend", "thaw_secondary_cpus"],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": ["entering_platform_hibernation", "system_state"]
+  },
+  {
+    "name": "hibernation_restore",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dpm_resume_end", "dpm_suspend_start", "pm_prepare_console", "pm_restore_console", "pm_restore_gfp_mask", "pm_restrict_gfp_mask", "resume_console", "resume_target_kernel", "suspend_console"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resume_target_kernel",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "cpuidle_pause", "cpuidle_resume", "dpm_resume_start", "dpm_suspend_end", "hibernate_resume_nonboot_cpu_disable", "platform_pre_restore", "platform_restore_cleanup", "restore_processor_state", "save_processor_state", "swsusp_arch_resume", "swsusp_free", "syscore_resume", "syscore_suspend", "thaw_secondary_cpus"],
+    "global_reads": [],
+    "global_writes": ["system_state"]
+  },
+  {
+    "name": "hibernate_resume_nonboot_cpu_disable",
+    "callees": ["freeze_secondary_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_snapshot",
+    "callees": ["create_image", "dpm_complete", "dpm_prepare", "dpm_resume", "dpm_suspend", "freeze_kernel_threads", "hibernate_preallocate_memory", "hibernation_debug_sleep", "platform_begin.part.0", "platform_end.part.0", "platform_recover", "pm_restore_gfp_mask", "pm_restrict_gfp_mask", "resume_console", "suspend_console", "swsusp_free", "thaw_kernel_threads"],
+    "global_reads": ["in_suspend", "pm_test_level"],
+    "global_writes": ["freezer_test_done", "pm_suspend_global_flags"]
+  },
+  {
+    "name": "create_image",
+    "callees": ["_printk", "arch_resume_nosmt", "clear_or_poison_free_pages", "cpuidle_pause", "cpuidle_resume", "dpm_resume_start", "dpm_suspend_end", "freeze_secondary_cpus", "hibernation_debug_sleep", "platform_finish.part.0", "platform_leave", "platform_pre_snapshot.part.0", "pm_wakeup_pending", "restore_processor_state", "save_processor_state", "swsusp_arch_suspend", "syscore_resume", "syscore_suspend", "thaw_secondary_cpus", "trace_suspend_resume"],
+    "global_reads": ["___tp_str", "in_suspend", "pm_test_level"],
+    "global_writes": ["events_check_enabled", "in_suspend", "system_state"]
+  },
+  {
+    "name": "arch_resume_nosmt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_show_speed",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_recover",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_restore_cleanup",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pre_restore",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "platform_leave",
+    "callees": [],
+    "global_reads": ["hibernation_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_debug_sleep",
+    "callees": ["__const_udelay", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "system_entering_hibernation",
+    "callees": [],
+    "global_reads": ["entering_platform_hibernation"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernation_set_ops",
+    "callees": ["lock_system_sleep", "unlock_system_sleep"],
+    "global_reads": ["hibernation_mode"],
+    "global_writes": ["hibernation_mode", "hibernation_ops"]
+  },
+  {
+    "name": "hibernation_available",
+    "callees": ["secretmem_active", "security_locked_down"],
+    "global_reads": ["nohibernate"],
+    "global_writes": []
+  },
+  {
+    "name": "hibernate_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hibernate_acquire",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

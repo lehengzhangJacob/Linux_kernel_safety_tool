@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_s4_sigcheck",
+    "callees": [],
+    "global_reads": ["acpi_check_s4_hw_signature", "x86_hyper_type"],
+    "global_writes": ["acpi_check_s4_hw_signature"]
+  },
+  {
+    "name": "acpi_sleep_setup",
+    "callees": ["acpi_nvs_nosave", "acpi_nvs_nosave_s3", "acpi_old_suspend_ordering", "acpi_sleep_no_blacklist", "strchr", "strncmp", "strspn"],
+    "global_reads": ["acpi_realmode_flags"],
+    "global_writes": ["acpi_check_s4_hw_signature", "acpi_realmode_flags"]
+  },
+  {
+    "name": "x86_acpi_suspend_lowlevel",
+    "callees": ["_printk", "do_suspend_lowlevel", "native_read_msr_safe", "native_write_msr_safe"],
+    "global_reads": ["acpi_realmode_flags", "page_offset_base", "real_mode_header", "saved_video_mode", "smpboot_control"],
+    "global_writes": ["initial_code", "saved_magic", "smpboot_control"]
+  },
+  {
+    "name": "x86_acpi_enter_sleep_state",
+    "callees": ["acpi_enter_sleep_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_wakeup_address",
+    "callees": [],
+    "global_reads": ["real_mode_header"],
+    "global_writes": []
+  }
+]

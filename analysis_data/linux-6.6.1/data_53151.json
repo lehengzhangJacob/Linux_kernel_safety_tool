@@ -1,0 +1,170 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_disconnect",
+    "callees": ["__wake_up", "hid_hw_close", "kfree", "mutex_lock", "mutex_unlock", "usb_deregister_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_connect",
+    "callees": ["__init_waitqueue_head", "__mutex_init", "_dev_err", "kfree", "kzalloc", "usb_register_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_devnode",
+    "callees": ["kasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_ioctl",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "_copy_to_user", "copy_overflow", "hid_hw_request", "hiddev_ioctl_string", "hiddev_ioctl_usage", "hiddev_lookup_report", "memset", "mutex_lock", "mutex_unlock", "strlen", "usbhid_init_reports"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_poll",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_read",
+    "callees": ["__bad_copy_from", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "finish_wait", "mutex_lock_interruptible", "mutex_unlock", "prepare_to_wait", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_open",
+    "callees": ["__hiddev_open", "mutex_lock", "mutex_unlock", "usbhid_find_interface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__hiddev_open",
+    "callees": ["__mutex_init", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "hid_hw_open", "hid_hw_power", "vfree", "vzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_release",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "hid_hw_close", "hid_hw_power", "kfree", "mutex_lock", "mutex_unlock", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_fasync",
+    "callees": ["fasync_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_report_event",
+    "callees": ["hiddev_send_event", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_hid_event",
+    "callees": ["hiddev_send_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_lookup_usage",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hiddev_lookup_report",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

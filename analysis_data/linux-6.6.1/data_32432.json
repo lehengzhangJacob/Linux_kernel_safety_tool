@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_free_pages",
+    "callees": ["dma_free_contiguous"],
+    "global_reads": ["dma_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_alloc_pages",
+    "callees": ["__alloc_pages_node", "__builtin_clzll", "__builtin_constant_p", "dma_free_contiguous", "memset"],
+    "global_reads": ["dma_ops", "page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_mmap",
+    "callees": ["dma_common_vaddr_to_page", "dma_pgprot", "remap_pfn_range"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_get_sgtable",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dma_common_vaddr_to_page", "sg_alloc_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_vaddr_to_page",
+    "callees": ["is_vmalloc_addr", "vmalloc_to_page"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_node",
+    "callees": ["__alloc_pages", "warn_if_node_offline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

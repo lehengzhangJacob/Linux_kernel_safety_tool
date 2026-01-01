@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_put_zero",
+    "callees": ["memset", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_rx_ba_timer_expired",
+    "callees": ["__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "ieee80211_queue_work", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_manage_rx_ba_offl",
+    "callees": ["__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "ieee80211_queue_work", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_process_addba_request",
+    "callees": ["__ieee80211_start_rx_ba_session", "ieee802_11_parse_elems_crc", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "___ieee80211_start_rx_ba_session",
+    "callees": ["___ieee80211_stop_rx_ba_session", "__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "__usecs_to_jiffies", "_ieee80211_hw_check", "drv_ampdu_action", "ieee80211_send_addba_resp", "init_timer_key", "jiffies_to_usecs", "kfree", "kmalloc_array", "kzalloc", "mod_timer", "test_sta_flag"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "sta_rx_agg_reorder_timer_expired",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ieee80211_release_reorder_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sta_rx_agg_session_timer_expired",
+    "callees": ["__builtin_constant_p", "__usecs_to_jiffies", "ieee80211_queue_work", "jiffies_to_usecs", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_stop_rx_ba_session",
+    "callees": ["__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "ieee80211_queue_work", "sta_info_get_bss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_stop_rx_ba_session",
+    "callees": ["___ieee80211_stop_rx_ba_session", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "___ieee80211_stop_rx_ba_session",
+    "callees": ["__builtin_constant_p", "_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "call_rcu", "drv_ampdu_action", "ieee80211_send_delba", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_tid_rx",
+    "callees": ["__skb_queue_purge_reason", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_put_zero",
+    "callees": ["memset", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_dequeue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

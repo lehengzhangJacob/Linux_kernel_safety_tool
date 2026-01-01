@@ -1,0 +1,170 @@
+[
+  {
+    "name": "strset_cleanup_data",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_include.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_include.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_include.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_fill_reply",
+    "callees": ["nla_nest_start_noflag", "nlmsg_trim", "strset_fill_set", "strset_include"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_fill_set",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nlmsg_trim", "strset_fill_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_reply_size",
+    "callees": ["strset_include", "strset_set_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_set_size",
+    "callees": ["strnlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_prepare_data",
+    "callees": ["do_trace_netlink_extack", "ethnl_ops_begin", "ethnl_ops_complete", "memcpy", "strset_cleanup_data", "strset_include", "strset_prepare_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_prepare_set",
+    "callees": ["kmalloc_array"],
+    "global_reads": ["ethtool_phy_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "strset_cleanup_data",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "strset_parse_request",
+    "callees": ["__builtin_expect", "__nla_validate_nested", "__warn_printk", "do_trace_netlink_extack", "strset_get_id"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "strset_get_id",
+    "callees": ["nla_parse_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "i915_ioc32_compat_ioctl",
+    "callees": ["drm_compat_ioctl", "drm_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_i915_getparam",
+    "callees": ["_copy_from_user", "drm_ioctl_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_free_block",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_buddy_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_module_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["slab_blocks"]
+  },
+  {
+    "name": "drm_buddy_module_exit",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["slab_blocks"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_print",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_block_print",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_alloc_blocks",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__drm_buddy_alloc_range", "alloc_from_freelist", "alloc_range_bias", "drm_buddy_free_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_block_trim",
+    "callees": ["__alloc_range", "__builtin_expect", "list_insert_sorted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_buddy_alloc_range",
+    "callees": ["__alloc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_range",
+    "callees": ["__builtin_expect", "__drm_buddy_free", "drm_buddy_free_list", "split_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_from_freelist",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_buddy_free", "get_maxblock", "split_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_range_bias",
+    "callees": ["__builtin_expect", "__drm_buddy_free", "split_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_free_list",
+    "callees": ["__SCT__cond_resched", "drm_buddy_free_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_free_block",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drm_buddy_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_buddy_free",
+    "callees": ["kmem_cache_free", "list_insert_sorted"],
+    "global_reads": ["slab_blocks"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_get_buddy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "split_block",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drm_block_alloc", "kmem_cache_free", "list_insert_sorted"],
+    "global_reads": ["slab_blocks"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_fini",
+    "callees": ["__builtin_expect", "kfree", "kmem_cache_free"],
+    "global_reads": ["slab_blocks"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_buddy_init",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "drm_block_alloc", "kfree", "kmalloc_array", "kmem_cache_free", "list_insert_sorted"],
+    "global_reads": ["slab_blocks"],
+    "global_writes": []
+  }
+]

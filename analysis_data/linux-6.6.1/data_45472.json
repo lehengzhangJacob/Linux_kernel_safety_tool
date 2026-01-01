@@ -1,0 +1,68 @@
+[
+  {
+    "name": "tcp_ulp_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ulp_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_set_ulp",
+    "callees": ["__tcp_set_ulp", "__tcp_ulp_find_autoload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_set_ulp",
+    "callees": ["module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_cleanup_ulp",
+    "callees": ["module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_update_ulp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_get_available_ulp",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_unregister_ulp",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_register_ulp",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "tcp_ulp_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_ulp_find_autoload",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__request_module", "capable", "tcp_ulp_find", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ulp_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

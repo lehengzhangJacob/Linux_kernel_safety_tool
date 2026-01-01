@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_plb_update_state_upon_rto",
+    "callees": ["get_random_u32_below"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_plb_check_rehash",
+    "callees": ["sk_rethink_txhash"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_plb_update_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_135", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

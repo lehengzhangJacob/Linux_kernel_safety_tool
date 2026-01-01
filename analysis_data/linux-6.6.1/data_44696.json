@@ -1,0 +1,170 @@
+[
+  {
+    "name": "copy_highpage",
+    "callees": ["copy_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_unpopulate.part.0",
+    "callees": ["ttm_pool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_pages_limit",
+    "callees": [],
+    "global_reads": ["ttm_pages_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_tt_init",
+    "callees": ["ttm_prot_from_caching"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_tt_unmap_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_kmap_iter_tt_map_local",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_mgr_init",
+    "callees": ["debugfs_create_file"],
+    "global_reads": ["ttm_debugfs_root", "ttm_dma32_pages_limit", "ttm_pages_limit"],
+    "global_writes": ["ttm_dma32_pages_limit", "ttm_pages_limit"]
+  },
+  {
+    "name": "ttm_tt_debugfs_shrink_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_debugfs_shrink_show",
+    "callees": ["seq_printf", "ttm_global_swapout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_unpopulate",
+    "callees": ["ttm_tt_unpopulate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_populate",
+    "callees": ["__builtin_expect", "ttm_global_swapout", "ttm_pool_alloc", "ttm_tt_swapin", "ttm_tt_unpopulate"],
+    "global_reads": ["ttm_dma32_pages_limit", "ttm_pages_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_swapout",
+    "callees": ["__builtin_expect", "_printk", "copy_highpage", "fput", "mark_page_accessed", "put_page", "set_page_dirty", "shmem_file_setup", "shmem_read_mapping_page_gfp", "ttm_tt_unpopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_swapin",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "copy_highpage", "fput", "put_page", "shmem_read_mapping_page_gfp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_sg_tt_init",
+    "callees": ["_printk", "ttm_dma_tt_alloc_page_directory", "ttm_sg_tt_alloc_page_directory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_fini",
+    "callees": ["__builtin_expect", "fput", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_init",
+    "callees": ["_printk", "ttm_tt_alloc_page_directory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_destroy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_tt_create",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_highpage",
+    "callees": ["copy_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

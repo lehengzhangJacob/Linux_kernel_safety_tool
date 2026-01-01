@@ -1,0 +1,56 @@
+[
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_datagram_release_cb",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "dst_release", "ip_route_output_ports", "sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_datagram_connect",
+    "callees": ["__ip4_datagram_connect", "lock_sock_nested", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ip4_datagram_connect",
+    "callees": ["__builtin_expect", "dst_release", "get_random_u16", "get_random_u32", "ip_route_connect", "reuseport_has_conns_set", "sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_route_connect",
+    "callees": ["__builtin_expect", "dst_release", "ip_route_connect_init", "ip_route_output_flow", "ip_route_output_key_hash", "security_sk_classify_flow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_route_connect_init",
+    "callees": ["sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_route_output_ports",
+    "callees": ["ip_route_output_flow", "security_sk_classify_flow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

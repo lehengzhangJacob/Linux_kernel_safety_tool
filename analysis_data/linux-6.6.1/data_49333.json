@@ -1,0 +1,458 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_insert_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_release_guc_top",
+    "callees": ["__builtin_constant_p", "drm_mm_remove_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aliasing_gtt_unbind_vma.part.0",
+    "callees": ["ppgtt_unbind_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_color_adjust.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_ggtt_invalidate.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_resume",
+    "callees": ["__builtin_constant_p", "i915_ggtt_resume_vm", "intel_ggtt_restore_fences", "intel_gt_check_and_clear_faults", "wbinvd_on_all_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_resume_vm",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "i915_gem_get_pat_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_enable_hw",
+    "callees": ["intel_ggtt_gmch_enable_hw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_create",
+    "callees": ["drmm_kmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_probe_hw",
+    "callees": ["_dev_info", "ggtt_probe_hw", "i915_vtd_active", "intel_gt_assign_ggtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_probe_hw",
+    "callees": ["__drm_dev_dbg", "_dev_err", "dma_resv_fini", "dma_resv_init", "gen6_gmch_probe", "gen8_gmch_probe", "intel_ggtt_gmch_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_gmch_probe",
+    "callees": ["_dev_err", "ggtt_probe_common", "i915_pci_resource_valid", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iris_pte_encode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hsw_pte_encode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byt_pte_encode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivb_pte_encode",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snb_pte_encode",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_gmch_probe",
+    "callees": ["ggtt_probe_common", "i915_pci_resource_valid", "intel_vm_no_concurrent_access_wa", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_gmch_remove",
+    "callees": ["free_scratch", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_probe_common",
+    "callees": ["__px_dma", "_dev_err", "i915_gem_get_pat_index", "i915_gem_object_is_lmem", "ioremap", "ioremap_wc", "iounmap", "setup_scratch_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_driver_late_release",
+    "callees": ["dma_resv_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_driver_release",
+    "callees": ["fini_aliasing_ppgtt", "ggtt_cleanup_hw", "intel_ggtt_fini_fences"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_cleanup_hw",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__flush_workqueue", "__i915_vma_unbind", "__warn_flushing_systemwide_wq", "arch_phys_wc_del", "drm_mm_remove_node", "ggtt_release_guc_top", "i915_address_space_fini", "i915_gem_drain_freed_objects", "i915_gem_object_trylock.part.0", "i915_gem_object_unlock", "intel_vgt_deballoon", "iounmap", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_init_ggtt",
+    "callees": ["cleanup_init_ggtt", "init_aliasing_ppgtt", "init_ggtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fini_aliasing_ppgtt",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_aliasing_ppgtt",
+    "callees": ["__builtin_expect", "__i915_gem_object_lock", "i915_gem_object_unlock", "i915_ppgtt_create", "i915_vm_alloc_pt_stash", "i915_vm_free_pt_stash", "i915_vm_map_pt_stash", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aliasing_gtt_unbind_vma",
+    "callees": ["aliasing_gtt_unbind_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aliasing_gtt_bind_vma",
+    "callees": ["ppgtt_bind_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_ggtt",
+    "callees": ["__builtin_constant_p", "__drm_dev_dbg", "__mutex_init", "cleanup_init_ggtt", "drm_mm_insert_node_in_range", "drm_mm_reserve_node", "ggtt_reserve_guc_top", "intel_vgt_balloon"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_init_ggtt",
+    "callees": ["__builtin_constant_p", "drm_mm_remove_node", "ggtt_release_guc_top"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_release_guc_top",
+    "callees": ["__builtin_constant_p", "drm_mm_remove_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_reserve_guc_top",
+    "callees": ["__drm_dev_dbg", "i915_gem_gtt_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_unbind_vma",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_bind_vma",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ggtt_clear_range",
+    "callees": ["__builtin_expect", "__warn_printk", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bxt_vtd_ggtt_insert_entries__BKL",
+    "callees": ["stop_machine"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bxt_vtd_ggtt_insert_entries__cb",
+    "callees": ["gen8_ggtt_insert_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bxt_vtd_ggtt_insert_page__BKL",
+    "callees": ["stop_machine"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bxt_vtd_ggtt_insert_page__cb",
+    "callees": ["gen8_ggtt_insert_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nop_clear_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ggtt_insert_entries",
+    "callees": ["__builtin_expect", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ggtt_insert_page",
+    "callees": ["iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_clear_range",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_insert_entries",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_insert_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_pte_encode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtl_ggtt_pte_encode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_ggtt_invalidate",
+    "callees": ["guc_ggtt_invalidate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_ggtt_invalidate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ggtt_invalidate",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_suspend",
+    "callees": ["i915_ggtt_suspend_vm", "intel_gt_check_and_clear_faults"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_suspend_vm",
+    "callees": ["__builtin_expect", "__i915_gem_object_lock", "__i915_vma_evict", "__refcount_add", "__warn_printk", "dev_driver_string", "drm_mm_remove_node", "i915_gem_drain_freed_objects", "i915_gem_object_trylock.part.0", "i915_gem_object_unlock", "i915_vma_unbind", "i915_vma_wait_for_bind", "kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_init_hw",
+    "callees": ["ggtt_init_hw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ggtt_init_hw",
+    "callees": ["arch_phys_wc_add", "i915_address_space_init", "intel_ggtt_init_fences", "io_mapping_init_wc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ggtt_color_adjust",
+    "callees": ["i915_ggtt_color_adjust.part.0", "i915_node_color_differs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_node_color_differs",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_mapping_init_wc",
+    "callees": ["ioremap_wc", "pgprot_writecombine"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_eht_cap_ie_to_sta_eht_cap",
+    "callees": ["ieee80211_eht_mcs_nss_size", "ieee80211_eht_ppe_size", "ieee80211_get_eht_iftype_cap_vif", "ieee80211_sta_cap_rx_bw", "ieee80211_sta_cur_vht_bw", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_eht_iftype_cap_vif",
+    "callees": ["ieee80211_get_eht_iftype_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_eht_iftype_cap",
+    "callees": ["ieee80211_get_sband_iftype_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_sband_iftype_data",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_eht_ppe_size",
+    "callees": ["__arch_hweight16", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__arch_hweight16",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

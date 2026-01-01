@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_quirk_list",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["quirk_list"],
+    "global_writes": ["quirk_list"]
+  },
+  {
+    "name": "usb_detect_interface_quirks",
+    "callees": ["usb_detect_static_quirks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_detect_quirks",
+    "callees": ["usb_detect_dynamic_quirks", "usb_detect_static_quirks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_detect_static_quirks",
+    "callees": ["usb_match_any_interface", "usb_match_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_match_any_interface",
+    "callees": ["usb_match_one_id_intf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_endpoint_is_ignored",
+    "callees": ["usb_match_device", "usb_match_one_id_intf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirks_param_set",
+    "callees": ["kfree", "kmalloc_array", "kstrdup", "kstrtou16", "mutex_lock", "mutex_unlock", "param_set_copystring", "strsep"],
+    "global_reads": ["quirk_count", "quirk_list"],
+    "global_writes": ["quirk_count", "quirk_list"]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ttm_agp_unbind",
+    "callees": ["agp_free_memory", "agp_unbind_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_agp_tt_create",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "ttm_tt_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_agp_destroy",
+    "callees": ["kfree", "ttm_agp_unbind", "ttm_tt_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_agp_is_bound",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_agp_unbind",
+    "callees": ["agp_free_memory", "agp_unbind_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_agp_bind",
+    "callees": ["__builtin_expect", "_printk", "agp_allocate_memory", "agp_bind_memory"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

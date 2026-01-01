@@ -1,0 +1,50 @@
+[
+  {
+    "name": "force_valid_ss",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sigaction_compat_abi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_rt_sigreturn",
+    "callees": ["__builtin_expect", "restore_altstack", "restore_sigcontext", "set_current_blocked", "signal_fault"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x64_setup_rt_frame",
+    "callees": ["__builtin_expect", "copy_siginfo_to_user", "force_valid_ss", "get_sigframe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "restore_sigcontext",
+    "callees": ["__builtin_expect", "_copy_from_user", "force_valid_ss", "fpu__restore_sig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "force_valid_ss",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

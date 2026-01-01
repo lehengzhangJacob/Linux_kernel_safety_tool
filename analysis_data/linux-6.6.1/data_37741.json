@@ -1,0 +1,356 @@
+[
+  {
+    "name": "tick_nohz_activate.part.0",
+    "callees": ["timers_update_nohz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_start_idle",
+    "callees": ["ktime_get", "sched_clock_idle_sleep_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_restart_sched_tick",
+    "callees": ["calc_load_nohz_stop", "tick_do_update_jiffies64", "tick_nohz_restart", "timer_clear_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_account_idle_time",
+    "callees": ["account_idle_ticks"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_activate.part.0",
+    "callees": ["timers_update_nohz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_do_update_jiffies64.part.0",
+    "callees": ["__builtin_expect", "_raw_spin_unlock", "calc_global_load", "update_wall_time"],
+    "global_reads": ["jiffies_64", "last_jiffies_update", "tick_next_period"],
+    "global_writes": ["jiffies_64", "last_jiffies_update"]
+  },
+  {
+    "name": "get_cpu_sleep_time_us.part.0",
+    "callees": ["__builtin_expect", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_check_oneshot_change",
+    "callees": ["tick_is_oneshot_available", "tick_nohz_switch_to_nohz", "timekeeping_valid_for_hres"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_oneshot_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_clock_notify",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_cancel_sched_timer",
+    "callees": ["hrtimer_cancel", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_setup_sched_timer",
+    "callees": ["cpumask_weight", "hrtimer_forward", "hrtimer_init", "hrtimer_start_expires", "ktime_get", "tick_init_jiffy_update", "tick_nohz_activate.part.0"],
+    "global_reads": ["sched_skew_tick", "tick_nohz_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "skew_tick",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_sched_timer",
+    "callees": ["__builtin_expect", "hrtimer_forward", "ktime_get", "tick_sched_do_timer", "tick_sched_handle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_irq_enter",
+    "callees": ["tick_check_oneshot_broadcast_this_cpu", "tick_nohz_irq_enter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_irq_enter",
+    "callees": ["ktime_get", "tick_nohz_stop_idle", "tick_nohz_update_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_switch_to_nohz",
+    "callees": ["hrtimer_forward_now", "hrtimer_init", "tick_init_jiffy_update", "tick_nohz_activate.part.0", "tick_program_event", "tick_switch_to_oneshot"],
+    "global_reads": ["tick_nohz_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_handler",
+    "callees": ["__builtin_expect", "hrtimer_forward", "ktime_get", "tick_program_event", "tick_sched_do_timer", "tick_sched_handle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_exit",
+    "callees": ["__builtin_expect", "ktime_get", "tick_nohz_idle_update_tick", "tick_nohz_stop_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_update_tick",
+    "callees": ["tick_nohz_account_idle_time", "tick_nohz_restart_sched_tick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_restart_tick",
+    "callees": ["ktime_get", "tick_nohz_account_idle_time", "tick_nohz_restart_sched_tick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_account_idle_time",
+    "callees": ["account_idle_ticks"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_get_idle_calls",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_get_idle_calls_cpu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_get_sleep_length",
+    "callees": ["__builtin_expect", "can_stop_idle_tick", "hrtimer_next_event_without", "tick_nohz_next_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_get_next_hrtimer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_got_tick",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_irq_exit",
+    "callees": ["tick_nohz_start_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_enter",
+    "callees": ["__builtin_expect", "tick_nohz_start_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_retain_tick",
+    "callees": ["timer_clear_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_idle_stop_tick",
+    "callees": ["can_stop_idle_tick", "nohz_balance_enter_idle", "tick_nohz_next_event", "tick_nohz_stop_tick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "can_stop_idle_tick",
+    "callees": ["__builtin_expect", "cpu_online", "report_idle_softirq"],
+    "global_reads": ["tick_do_timer_cpu"],
+    "global_writes": ["tick_do_timer_cpu"]
+  },
+  {
+    "name": "report_idle_softirq",
+    "callees": ["__builtin_expect", "_printk", "cpu_active"],
+    "global_reads": ["ratelimit"],
+    "global_writes": ["ratelimit"]
+  },
+  {
+    "name": "tick_nohz_restart_sched_tick",
+    "callees": ["calc_load_nohz_stop", "tick_do_update_jiffies64", "tick_nohz_restart", "timer_clear_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_stop_tick",
+    "callees": ["__builtin_expect", "_printk", "calc_load_nohz_start", "hrtimer_active", "hrtimer_cancel", "hrtimer_start_range_ns", "quiet_vmstat", "tick_program_event", "trace_tick_stop"],
+    "global_reads": ["__already_done", "tick_do_timer_cpu"],
+    "global_writes": ["__already_done", "tick_do_timer_cpu"]
+  },
+  {
+    "name": "tick_nohz_next_event",
+    "callees": ["__builtin_expect", "get_next_timer_interrupt", "irq_work_needs_cpu", "rcu_needs_cpu", "timekeeping_max_deferment", "timer_clear_idle"],
+    "global_reads": ["jiffies", "last_jiffies_update", "tick_do_timer_cpu"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_restart",
+    "callees": ["hrtimer_cancel", "hrtimer_forward", "hrtimer_start_expires", "tick_program_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_iowait_time_us",
+    "callees": ["get_cpu_sleep_time_us.part.0", "nr_iowait_cpu"],
+    "global_reads": ["tick_nohz_active"],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_idle_time_us",
+    "callees": ["get_cpu_sleep_time_us.part.0", "nr_iowait_cpu"],
+    "global_reads": ["tick_nohz_active"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_start_idle",
+    "callees": ["ktime_get", "sched_clock_idle_sleep_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_stop_idle",
+    "callees": ["__builtin_expect", "nr_iowait_cpu", "sched_clock_idle_wakeup_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_update_jiffies",
+    "callees": ["tick_do_update_jiffies64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_tick_stopped_cpu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_nohz_tick_stopped",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_tick_nohz",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_sched_handle",
+    "callees": ["profile_tick", "update_process_times"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_sched_do_timer",
+    "callees": ["__builtin_expect", "tick_do_update_jiffies64"],
+    "global_reads": ["jiffies", "tick_do_timer_cpu"],
+    "global_writes": ["tick_do_timer_cpu"]
+  },
+  {
+    "name": "tick_init_jiffy_update",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["last_jiffies_update", "tick_next_period"],
+    "global_writes": ["last_jiffies_update", "tick_next_period"]
+  },
+  {
+    "name": "tick_do_update_jiffies64",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "tick_do_update_jiffies64.part.0"],
+    "global_reads": ["tick_next_period"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_tick_sched",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_active",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "scsicam_bios_param.part.0",
+    "callees": ["setsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsicam_bios_param",
+    "callees": ["scsi_partsize", "scsicam_bios_param.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setsize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_partsize",
+    "callees": ["kfree", "scsi_bios_ptable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_bios_ptable",
+    "callees": ["__builtin_expect", "folio_put", "kmemdup", "read_cache_folio"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

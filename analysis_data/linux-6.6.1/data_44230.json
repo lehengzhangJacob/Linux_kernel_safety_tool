@@ -1,0 +1,230 @@
+[
+  {
+    "name": "cdev_del",
+    "callees": ["kobj_unmap", "kobject_put"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_get",
+    "callees": ["kobject_get_unless_zero", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_del",
+    "callees": ["kobj_unmap", "kobject_put"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_del",
+    "callees": ["kobj_unmap", "kobject_put"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_get",
+    "callees": ["kobject_get_unless_zero", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_purge",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_put.part.0",
+    "callees": ["kobject_put", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_put.part.0",
+    "callees": ["kobject_put", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_put.part.0",
+    "callees": ["kobject_put", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "base_probe",
+    "callees": ["__request_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_init",
+    "callees": ["kobject_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_alloc",
+    "callees": ["kobject_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_dynamic_release",
+    "callees": ["cdev_purge", "kfree", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_default_release",
+    "callees": ["cdev_purge", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_del",
+    "callees": ["kobj_unmap", "kobject_put"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_device_del",
+    "callees": ["cdev_del", "device_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_device_add",
+    "callees": ["__builtin_expect", "cdev_add", "cdev_del", "device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_set_parent",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_add",
+    "callees": ["__builtin_expect", "kfree_const", "kobj_map", "kobject_get"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "exact_lock",
+    "callees": ["cdev_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exact_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_purge",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cd_forget",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chrdev_open",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "cdev_get", "cdev_put.part.0", "kobj_lookup", "module_put", "try_module_get"],
+    "global_reads": ["cdev_map"],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_put",
+    "callees": ["cdev_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cdev_get",
+    "callees": ["kobject_get_unless_zero", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unregister_chrdev",
+    "callees": ["__unregister_chrdev_region", "cdev_del", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_chrdev_region",
+    "callees": ["__unregister_chrdev_region", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__register_chrdev",
+    "callees": ["__builtin_expect", "__register_chrdev_region", "__unregister_chrdev_region", "cdev_add", "cdev_alloc", "kfree", "kobject_put", "kobject_set_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_chrdev_region",
+    "callees": ["__builtin_expect", "__register_chrdev_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_chrdev_region",
+    "callees": ["__builtin_expect", "__register_chrdev_region", "__unregister_chrdev_region", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unregister_chrdev_region",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__register_chrdev_region",
+    "callees": ["_printk", "find_dynamic_major", "kfree", "kzalloc", "mutex_lock", "mutex_unlock", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_dynamic_major",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chrdev_show",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chrdev_init",
+    "callees": ["kobj_map_init"],
+    "global_reads": [],
+    "global_writes": ["cdev_map"]
+  }
+]

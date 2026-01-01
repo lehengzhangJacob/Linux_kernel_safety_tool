@@ -1,0 +1,488 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush",
+    "callees": ["__SCT__tp_func_tlb_flush", "cpu_online", "trace_tlb_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush",
+    "callees": ["__SCT__tp_func_tlb_flush", "cpu_online", "trace_tlb_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush",
+    "callees": ["__SCT__tp_func_tlb_flush", "cpu_online", "trace_tlb_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "indirect_branch_prediction_barrier",
+    "callees": [],
+    "global_reads": ["x86_pred_cmd"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush",
+    "callees": ["__SCT__tp_func_tlb_flush", "cpu_online", "trace_tlb_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_multi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_one_user",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_update_pce_mm.part.0",
+    "callees": ["cr4_update_irqsoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_update_pce_mm",
+    "callees": ["cr4_update_irqsoff", "cr4_update_pce_mm.part.0", "perf_clear_dirty_counters"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_one_user",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_mm",
+    "callees": ["switch_mm_irqs_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_multi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_update_pce_mm.part.0",
+    "callees": ["cr4_update_irqsoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "invalidate_user_asid.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_tlb_single_page_flush_ceiling",
+    "callees": ["debugfs_create_file"],
+    "global_reads": ["arch_debugfs_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "tlbflush_write_file",
+    "callees": ["_copy_from_user", "kstrtoint"],
+    "global_reads": [],
+    "global_writes": ["tlb_single_page_flush_ceiling"]
+  },
+  {
+    "name": "tlbflush_read_file",
+    "callees": ["simple_read_from_buffer", "sprintf"],
+    "global_reads": ["tlb_single_page_flush_ceiling"],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_uaccess_okay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_tlbbatch_flush",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__flush_tlb_multi", "cpumask_any_but", "flush_tlb_func"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_all",
+    "callees": ["__flush_tlb_global", "__flush_tlb_local"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_local",
+    "callees": ["__flush_tlb_local"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_flush_tlb_local",
+    "callees": ["__builtin_expect", "invalidate_user_asid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_flush_tlb_global",
+    "callees": ["__native_tlb_flush_global"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_one_user",
+    "callees": ["__flush_tlb_one_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_flush_tlb_one_user",
+    "callees": ["invalidate_user_asid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_one_kernel",
+    "callees": ["__flush_tlb_one_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_current_cr3_fast",
+    "callees": ["build_cr3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_kernel_range",
+    "callees": ["__builtin_expect", "on_each_cpu_cond_mask"],
+    "global_reads": ["tlb_single_page_flush_ceiling"],
+    "global_writes": []
+  },
+  {
+    "name": "do_kernel_range_flush",
+    "callees": ["flush_tlb_one_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_all",
+    "callees": ["on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_flush_tlb_all",
+    "callees": ["__flush_tlb_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_mm_range",
+    "callees": ["__builtin_expect", "__flush_tlb_multi", "__mmu_notifier_arch_invalidate_secondary_tlbs", "cpumask_any_but", "flush_tlb_func"],
+    "global_reads": ["nr_cpu_ids", "tlb_single_page_flush_ceiling"],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_multi",
+    "callees": ["__flush_tlb_multi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_flush_tlb_multi",
+    "callees": ["on_each_cpu_cond_mask", "trace_tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tlb_is_not_lazy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_tlb_func",
+    "callees": ["__builtin_expect", "__flush_tlb_local", "__flush_tlb_one_user", "switch_mm_irqs_off", "trace_tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "initialize_tlbstate_and_flush",
+    "callees": ["__builtin_expect", "build_cr3", "cr4_read_shadow"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "enter_lazy_tlb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_mm_irqs_off",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "choose_new_asid", "cond_mitigation", "cr4_update_pce_mm", "load_new_mm_cr3", "switch_ldt", "trace_tlb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_update_pce",
+    "callees": ["cr4_update_pce_mm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_update_pce_mm",
+    "callees": ["cr4_update_irqsoff", "cr4_update_pce_mm.part.0", "perf_clear_dirty_counters"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cond_mitigation",
+    "callees": ["__builtin_expect", "indirect_branch_prediction_barrier", "l1d_flush_evaluate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "l1d_flush_evaluate",
+    "callees": ["__builtin_expect", "native_write_msr", "task_work_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "l1d_flush_force_sigbus",
+    "callees": ["force_sig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_mm",
+    "callees": ["switch_mm_irqs_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "leave_mm",
+    "callees": ["__builtin_expect", "switch_mm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "invalidate_user_asid",
+    "callees": ["invalidate_user_asid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "choose_new_asid",
+    "callees": ["clear_asid_other"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_asid_other",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tlb_flush",
+    "callees": ["__SCT__tp_func_tlb_flush", "cpu_online", "trace_tlb_flush.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__native_tlb_flush_global",
+    "callees": ["native_write_cr4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_multi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_one_user",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_global",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__flush_tlb_local",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "indirect_branch_prediction_barrier",
+    "callees": [],
+    "global_reads": ["x86_pred_cmd"],
+    "global_writes": []
+  }
+]

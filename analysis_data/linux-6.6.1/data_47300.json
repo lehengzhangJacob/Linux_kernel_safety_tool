@@ -1,0 +1,176 @@
+[
+  {
+    "name": "virtio_gpu_array_unlock_resv.part.0",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_unlock_resv",
+    "callees": ["drm_gem_unlock_reservations", "virtio_gpu_array_unlock_resv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_put_free.part.0",
+    "callees": ["drm_gem_object_put.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_unlock_resv.part.0",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_put_free_work",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "virtio_gpu_array_put_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_put_free_delayed",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_put_free",
+    "callees": ["virtio_gpu_array_put_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_add_fence",
+    "callees": ["dma_resv_add_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_unlock_resv",
+    "callees": ["drm_gem_unlock_reservations", "virtio_gpu_array_unlock_resv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_lock_resv",
+    "callees": ["dma_resv_reserve_fences", "drm_gem_lock_reservations", "virtio_gpu_array_unlock_resv", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_add_obj",
+    "callees": ["__builtin_expect", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_from_handles",
+    "callees": ["drm_gem_object_lookup", "virtio_gpu_array_alloc", "virtio_gpu_array_put_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_array_alloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_gem_object_close",
+    "callees": ["virtio_gpu_array_add_obj", "virtio_gpu_array_alloc", "virtio_gpu_cmd_context_detach_resource", "virtio_gpu_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_gem_object_open",
+    "callees": ["virtio_gpu_array_add_obj", "virtio_gpu_array_alloc", "virtio_gpu_cmd_context_attach_resource", "virtio_gpu_create_context", "virtio_gpu_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_mode_dumb_mmap",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "drm_gem_object_lookup", "drm_gem_object_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_mode_dumb_create",
+    "callees": ["virtio_gpu_gem_create", "virtio_gpu_translate_format"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

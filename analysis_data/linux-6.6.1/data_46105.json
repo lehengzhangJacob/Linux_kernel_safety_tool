@@ -1,0 +1,116 @@
+[
+  {
+    "name": "gssp_free_receive_pages",
+    "callees": ["__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_hostbased_service.part.0",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_free_upcall_data",
+    "callees": ["free_svc_cred", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_accept_sec_context_upcall",
+    "callees": ["gssp_alloc_receive_pages", "gssp_call", "gssp_free_receive_pages", "gssp_hostbased_service", "kfree", "kmemdup_nul", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_hostbased_service",
+    "callees": ["gssp_hostbased_service.part.0", "strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_alloc_receive_pages",
+    "callees": ["alloc_pages", "gssp_free_receive_pages", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_free_receive_pages",
+    "callees": ["__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_call",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "get_gssp_clnt", "rpc_call_sync", "rpc_release_client", "signal_pending"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "get_gssp_clnt",
+    "callees": ["__refcount_add", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_gssp_clnt",
+    "callees": ["mutex_lock", "mutex_unlock", "rpc_shutdown_client"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_gssp_clnt",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "gssp_rpc_create", "mutex_lock", "mutex_unlock", "rpc_shutdown_client"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "init_gssp_clnt",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssp_rpc_create",
+    "callees": ["__builtin_expect", "rpc_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_svc_cred",
+    "callees": ["groups_free", "gss_mech_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

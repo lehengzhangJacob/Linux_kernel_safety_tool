@@ -1,0 +1,392 @@
+[
+  {
+    "name": "check_empty_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_slot_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_slot_from_bitmask",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_when_closed.part.0",
+    "callees": ["put_device", "snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free",
+    "callees": ["snd_card_free_when_closed.part.0", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_when_closed.part.0",
+    "callees": ["put_device", "snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free",
+    "callees": ["snd_card_free_when_closed.part.0", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_unref.part.0",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_unref",
+    "callees": ["snd_power_unref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_id_ok.part.0",
+    "callees": ["strcmp"],
+    "global_reads": ["snd_ecards_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_when_closed.part.0",
+    "callees": ["put_device", "snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_id_ok",
+    "callees": ["card_id_ok.part.0", "snd_info_check_reserved_words"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_set_id.part.0",
+    "callees": ["mutex_lock", "mutex_unlock", "snd_card_set_id_no_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_on_error.part.0",
+    "callees": ["devres_find", "snd_card_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_when_closed.part.0",
+    "callees": ["put_device", "snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_disconnect.part.0",
+    "callees": ["__builtin_constant_p", "__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "device_del", "mutex_lock", "mutex_unlock", "snd_device_disconnect_all", "snd_info_card_disconnect", "snd_power_sync_ref", "synchronize_irq", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_unref.part.0",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_id_ok.part.0",
+    "callees": ["strcmp"],
+    "global_reads": ["snd_ecards_limit"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_wait",
+    "callees": ["snd_power_ref_and_wait", "snd_power_unref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_ref_and_wait",
+    "callees": ["finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule", "snd_power_unref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_file_remove",
+    "callees": ["__wake_up", "_dev_err", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "module_put", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_file_add",
+    "callees": ["__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "get_device", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_component_add",
+    "callees": ["__builtin_memcpy", "strcat", "strlen", "strstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_info_init",
+    "callees": ["snd_info_create_module_entry", "snd_info_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_info_read",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_register",
+    "callees": ["__builtin_expect", "__devm_add_action", "device_add", "devm_remove_action", "mutex_lock", "mutex_unlock", "retrieve_id_from_card_name", "snd_card_set_id_no_lock", "snd_device_register_all", "snd_info_card_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trigger_card_free",
+    "callees": ["snd_card_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_add_dev_attr",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "number_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "id_store",
+    "callees": ["card_id_ok", "memcpy", "mutex_lock", "mutex_unlock", "snd_info_card_id_change", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "id_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_set_id",
+    "callees": ["snd_card_set_id.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_set_id_no_lock",
+    "callees": ["__builtin_memcpy", "_dev_err", "card_id_ok", "copy_valid_id_string", "sprintf", "strcpy", "strlen", "strncmp", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_valid_id_string",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "card_id_ok",
+    "callees": ["card_id_ok.part.0", "snd_info_check_reserved_words"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "retrieve_id_from_card_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free",
+    "callees": ["snd_card_free_when_closed.part.0", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_free_when_closed",
+    "callees": ["snd_card_free_when_closed.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_disconnect_sync",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule", "snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_disconnect",
+    "callees": ["snd_card_disconnect.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_fasync",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_mmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_ioctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_poll",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_release",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_write",
+    "callees": ["snd_disconnect_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_disconnect_llseek",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_locked",
+    "callees": ["__builtin_constant_p", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_ref",
+    "callees": ["get_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_init",
+    "callees": ["__builtin_constant_p", "__init_rwsem", "__init_waitqueue_head", "__mutex_init", "_dev_err", "dev_driver_string", "device_initialize", "get_slot_from_bitmask", "kfree", "kobject_set_name", "mutex_lock", "mutex_unlock", "put_device", "snd_ctl_create", "snd_device_free_all", "snd_info_card_create", "snprintf", "strscpy"],
+    "global_reads": ["snd_ecards_limit"],
+    "global_writes": ["snd_ecards_limit"]
+  },
+  {
+    "name": "snd_card_free_on_error",
+    "callees": ["snd_card_free_on_error.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_devm_card_new",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "snd_card_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__snd_card_release",
+    "callees": ["snd_card_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_card_new",
+    "callees": ["__builtin_expect", "kzalloc", "snd_card_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_card_device",
+    "callees": ["snd_card_do_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_device_alloc",
+    "callees": ["device_initialize", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_release_alloc",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_slot_from_bitmask",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_sync_ref",
+    "callees": ["__SCT__might_resched", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_power_unref",
+    "callees": ["snd_power_unref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

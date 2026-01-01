@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nsm_string",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nsm_string",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nsm_string",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_my_id",
+    "callees": ["__builtin_bswap32", "encode_nsm_string", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_mon_id",
+    "callees": ["encode_my_id", "encode_nsm_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_xdr_dec_stat",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_xdr_dec_stat_res",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_xdr_enc_unmon",
+    "callees": ["encode_mon_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_xdr_enc_mon",
+    "callees": ["encode_mon_id", "encode_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_priv",
+    "callees": ["xdr_encode_opaque_fixed", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_mon_id",
+    "callees": ["encode_my_id", "encode_nsm_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_my_id",
+    "callees": ["__builtin_bswap32", "encode_nsm_string", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_nsm_string",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_release",
+    "callees": ["_raw_spin_unlock", "kfree", "refcount_dec_and_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_reboot_lookup",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "nsm_lookup_priv"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_get_handle",
+    "callees": ["__builtin_expect", "__printk_ratelimit", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "memchr", "nsm_create_handle", "nsm_lookup_addr", "nsm_lookup_hostname"],
+    "global_reads": ["lockd_net_id", "nsm_use_hostnames"],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_create_handle",
+    "callees": ["__builtin_expect", "ktime_get", "kzalloc", "memcpy", "rpc_ntop", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_lookup_priv",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_lookup_addr",
+    "callees": ["rpc_cmp_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_lookup_hostname",
+    "callees": ["memcmp", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_unmonitor",
+    "callees": ["_printk", "nsm_mon_unmon"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_monitor",
+    "callees": ["___ratelimit", "__builtin_expect", "_printk", "nsm_mon_unmon"],
+    "global_reads": ["nsm_local_state", "nsm_use_hostnames"],
+    "global_writes": ["nsm_local_state"]
+  },
+  {
+    "name": "nsm_mon_unmon",
+    "callees": ["__builtin_expect", "memset", "nsm_create", "rpc_call_sync", "rpc_force_rebind", "rpc_shutdown_client"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nsm_create",
+    "callees": ["rpc_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr",
+    "callees": ["rpc_cmp_addr6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr6",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

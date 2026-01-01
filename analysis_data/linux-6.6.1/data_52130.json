@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_exit",
+    "callees": ["input_unregister_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_init",
+    "callees": ["input_register_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_disconnect",
+    "callees": ["input_close_device", "input_unregister_handle", "kfree", "led_classdev_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_connect",
+    "callees": ["__builtin_expect", "_dev_err", "find_next_bit", "input_close_device", "input_leds_get_count", "input_open_device", "input_register_handle", "input_unregister_handle", "kasprintf", "kfree", "kzalloc", "led_classdev_register_ext", "led_classdev_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_get_count",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_event",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_brightness_set",
+    "callees": ["input_inject_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_leds_brightness_get",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

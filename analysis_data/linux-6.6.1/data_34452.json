@@ -1,0 +1,14 @@
+[
+  {
+    "name": "intel_pconfig_init",
+    "callees": [],
+    "global_reads": ["targets_supported"],
+    "global_writes": ["targets_supported"]
+  },
+  {
+    "name": "pconfig_target_supported",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["targets_supported"],
+    "global_writes": []
+  }
+]

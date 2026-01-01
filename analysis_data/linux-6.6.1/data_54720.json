@@ -1,0 +1,20 @@
+[
+  {
+    "name": "intel_uc_debugfs_register",
+    "callees": ["__builtin_expect", "debugfs_create_dir", "intel_gsc_uc_debugfs_register", "intel_gt_debugfs_register_files", "intel_guc_debugfs_register", "intel_huc_debugfs_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_usage_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_usage_show",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

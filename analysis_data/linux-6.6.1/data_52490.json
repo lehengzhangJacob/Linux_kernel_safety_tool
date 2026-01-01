@@ -1,0 +1,128 @@
+[
+  {
+    "name": "_drm_lease_held_master.part.0",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_lease_held_master.part.0",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_lease_held_master.part.0",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_lease_held_master.part.0",
+    "callees": ["idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_revoke_lease_ioctl",
+    "callees": ["__drm_dev_dbg", "_drm_lease_revoke", "drm_file_get_master", "drm_master_put", "idr_find", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_get_lease_ioctl",
+    "callees": ["___drm_dbg", "__builtin_expect", "__drm_dev_dbg", "drm_file_get_master", "drm_master_put", "idr_get_next", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_list_lessees_ioctl",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_file_get_master", "drm_master_put", "idr_is_empty", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_create_lease_ioctl",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "dentry_open", "drm_file_get_master", "drm_lease_create", "drm_master_put", "fd_install", "fill_object_idr", "get_unused_fd_flags", "idr_destroy", "kfree", "memdup_user", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_object_idr",
+    "callees": ["___drm_dbg", "__drm_dev_dbg", "drm_mode_object_find", "drm_mode_object_lease_required", "drm_mode_object_put", "idr_alloc", "kfree", "kmalloc_array", "validate_lease"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_revoke",
+    "callees": ["_drm_lease_revoke", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_lease_revoke",
+    "callees": ["__drm_dev_dbg", "idr_get_next", "idr_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_destroy",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_master_put", "drm_sysfs_lease_event", "idr_remove", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_create",
+    "callees": ["__drm_dev_dbg", "_drm_has_leased", "drm_master_create", "drm_master_get", "drm_master_put", "idr_alloc", "idr_find", "idr_get_next", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_filter_crtcs",
+    "callees": ["_drm_lease_held_master.part.0", "drm_file_get_master", "drm_master_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_held",
+    "callees": ["_drm_lease_held_master.part.0", "drm_file_get_master", "drm_master_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_lease_held",
+    "callees": ["_drm_lease_held_master.part.0", "drm_file_get_master", "drm_master_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_drm_has_leased",
+    "callees": ["_drm_lease_held_master.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_lease_owner",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_is_empty",
+    "callees": ["radix_tree_tagged"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,1004 @@
+[
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_uninit_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_set_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_uninit_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_uninit_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sbitmap_put",
+    "callees": ["__builtin_expect", "sbitmap_deferred_clear_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_uninit_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sbitmap_put",
+    "callees": ["__builtin_expect", "sbitmap_deferred_clear_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sbitmap_put",
+    "callees": ["__builtin_expect", "sbitmap_deferred_clear_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_start_queue.part.0",
+    "callees": ["blk_mq_unquiesce_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_start_queue",
+    "callees": ["scsi_start_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_resume",
+    "callees": ["blk_clear_pm_only", "mutex_lock", "mutex_unlock", "scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_send",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_run_host_queues",
+    "callees": ["__scsi_iterate_devices", "scsi_run_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue.part.0",
+    "callees": ["blk_mq_quiesce_queue_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue",
+    "callees": ["scsi_stop_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_initialize_rq",
+    "callees": ["memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_alloc_request",
+    "callees": ["__builtin_expect", "blk_mq_alloc_request", "scsi_initialize_rq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good",
+    "callees": ["scsi_status_is_good.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue.part.0",
+    "callees": ["blk_mq_quiesce_queue_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue",
+    "callees": ["scsi_stop_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait.part.0",
+    "callees": ["scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait",
+    "callees": ["__scsi_internal_device_block_nowait.part.0", "scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_internal_device_block_nowait",
+    "callees": ["__scsi_internal_device_block_nowait", "scsi_stop_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good",
+    "callees": ["scsi_status_is_good.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait.part.0",
+    "callees": ["scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait",
+    "callees": ["__scsi_internal_device_block_nowait.part.0", "scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_initialize_rq",
+    "callees": ["memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_internal_device_unblock",
+    "callees": ["mutex_lock", "mutex_unlock", "scsi_internal_device_unblock_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_start_queue.part.0",
+    "callees": ["blk_mq_unquiesce_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "target_unblock.part.0",
+    "callees": ["starget_for_each_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "target_block.part.0",
+    "callees": ["starget_for_each_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue.part.0",
+    "callees": ["blk_mq_quiesce_queue_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_send_simple.part.0",
+    "callees": ["sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_run_queue_async.part.0",
+    "callees": ["blk_mq_run_hw_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_cleanup_rq.part.0",
+    "callees": ["scsi_free_sgtables", "scsi_uninit_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_kick_sdev_queue.part.0",
+    "callees": ["blk_mq_run_hw_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait.part.0",
+    "callees": ["scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_result_to_blk_status.part.0",
+    "callees": ["scsi_status_is_good"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_build_sense",
+    "callees": ["scsi_build_sense_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_vpd_tpg_id",
+    "callees": ["__builtin_bswap16", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_vpd_lun_id",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "designator_prio", "memcpy", "memset", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "designator_prio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_enable_disk_events",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_disable_disk_events",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_kunmap_atomic_sg",
+    "callees": ["__kunmap_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_kmap_atomic_sg",
+    "callees": ["__builtin_expect", "_printk", "kmap_atomic", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_unblock",
+    "callees": ["__scsi_iterate_devices", "scsi_device_put", "scsi_internal_device_unblock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_host_block",
+    "callees": ["__scsi_iterate_devices", "blk_mq_wait_quiesce_done", "mutex_lock", "mutex_unlock", "scsi_device_put", "scsi_internal_device_block_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_target_unblock",
+    "callees": ["device_for_each_child", "scsi_is_target_device", "starget_for_each_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "target_unblock",
+    "callees": ["scsi_is_target_device", "target_unblock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unblock",
+    "callees": ["scsi_internal_device_unblock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_block_targets",
+    "callees": ["__builtin_expect", "blk_mq_wait_quiesce_done", "device_for_each_child", "scsi_is_target_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "target_block",
+    "callees": ["scsi_is_target_device", "target_block.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_internal_device_unblock",
+    "callees": ["mutex_lock", "mutex_unlock", "scsi_internal_device_unblock_nowait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_internal_device_unblock_nowait",
+    "callees": ["scsi_start_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_block",
+    "callees": ["__builtin_expect", "__scsi_internal_device_block_nowait", "__warn_printk", "mutex_lock", "mutex_unlock", "scsi_stop_queue"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "scsi_internal_device_block_nowait",
+    "callees": ["__scsi_internal_device_block_nowait", "scsi_stop_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_stop_queue",
+    "callees": ["scsi_stop_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_start_queue",
+    "callees": ["scsi_start_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_internal_device_block_nowait",
+    "callees": ["__scsi_internal_device_block_nowait.part.0", "scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_target_resume",
+    "callees": ["starget_for_each_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_resume_fn",
+    "callees": ["scsi_device_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_target_quiesce",
+    "callees": ["starget_for_each_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_quiesce_fn",
+    "callees": ["scsi_device_quiesce"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_resume",
+    "callees": ["blk_clear_pm_only", "mutex_lock", "mutex_unlock", "scsi_device_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_quiesce",
+    "callees": ["__builtin_expect", "blk_clear_pm_only", "blk_mq_freeze_queue", "blk_mq_unfreeze_queue", "blk_set_pm_only", "mutex_lock", "mutex_unlock", "scsi_device_set_state", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_send_simple",
+    "callees": ["sdev_evt_alloc", "sdev_evt_send", "sdev_evt_send_simple.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdev_evt_send",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_evt_thread",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "scsi_evt_emit", "sdev_evt_send_simple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_set_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_test_unit_ready",
+    "callees": ["scsi_execute_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mode_sense",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "memset", "scsi_execute_cmd", "scsi_status_is_good"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mode_select",
+    "callees": ["__builtin_bswap16", "__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy", "memset", "scsi_execute_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_exit_queue",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["scsi_sense_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_unblock_requests",
+    "callees": ["scsi_run_host_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_block_requests",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_from_queue",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_free_tags",
+    "callees": ["blk_mq_free_tag_set", "complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_setup_tags",
+    "callees": ["blk_mq_alloc_tag_set", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_commit_rqs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_init_queue",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "blk_queue_dma_alignment", "blk_queue_max_hw_sectors", "blk_queue_max_segment_size", "blk_queue_max_segments", "blk_queue_segment_boundary", "blk_queue_virt_boundary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_map_queues",
+    "callees": ["blk_mq_map_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_init_hctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_poll",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_exit_request",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["scsi_sense_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_init_request",
+    "callees": ["kmem_cache_alloc_node", "kmem_cache_free"],
+    "global_reads": ["scsi_sense_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_queue_rq",
+    "callees": ["__builtin_expect", "blk_mq_start_request", "memset", "sbitmap_put", "scsi_dec_host_busy", "scsi_device_state_check", "scsi_dispatch_cmd", "scsi_free_sgtables", "scsi_host_queue_ready", "scsi_prepare_cmd", "scsi_run_queue_async", "scsi_set_blocked", "scsi_target_queue_ready", "scsi_uninit_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_get_rq_budget_token",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_set_rq_budget_token",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_get_budget",
+    "callees": ["__builtin_expect", "blk_mq_delay_run_hw_queues", "sbitmap_weight", "scsi_dev_queue_ready"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_put_budget",
+    "callees": ["sbitmap_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_done_direct",
+    "callees": ["scsi_done_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_done",
+    "callees": ["scsi_done_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_done_internal",
+    "callees": ["__builtin_expect", "blk_mq_complete_request", "scsi_complete", "scsi_eh_done", "trace_scsi_dispatch_cmd_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_prepare_cmd",
+    "callees": ["__builtin_constant_p", "memset", "scsi_init_command", "scsi_setup_scsi_cmnd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dispatch_cmd",
+    "callees": ["__builtin_expect", "scsi_done_internal", "trace_scsi_dispatch_cmd_error", "trace_scsi_dispatch_cmd_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_complete",
+    "callees": ["__scsi_queue_insert", "scsi_cmd_runtime_exceeced", "scsi_decide_disposition", "scsi_eh_scmd_add", "scsi_finish_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_lld_busy",
+    "callees": ["__builtin_constant_p", "scsi_device_is_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_target_queue_ready",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_state_check",
+    "callees": ["__builtin_expect", "sdev_prefix_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_init_command",
+    "callees": ["init_timer_key", "scsi_initialize_rq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_cleanup_rq",
+    "callees": ["scsi_cleanup_rq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_alloc_request",
+    "callees": ["__builtin_expect", "blk_mq_alloc_request", "scsi_initialize_rq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_initialize_rq",
+    "callees": ["memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_alloc_sgtables",
+    "callees": ["__blk_rq_map_sg", "__builtin_expect", "__builtin_unreachable", "scsi_cmd_needs_dma_drain", "sg_alloc_table_chained", "sg_next", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_cmd_needs_dma_drain",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_io_completion",
+    "callees": ["__builtin_expect", "__warn_printk", "scsi_end_request", "scsi_io_completion_action", "scsi_io_completion_nz_result", "scsi_mq_requeue_cmd", "scsi_noretry_cmd"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "scsi_io_completion_action",
+    "callees": ["___ratelimit", "__scsi_queue_insert", "scsi_cmd_runtime_exceeced", "scsi_command_normalize_sense", "scsi_end_request", "scsi_mq_requeue_cmd", "scsi_print_command", "scsi_print_result", "scsi_print_sense", "scsi_result_to_blk_status", "scsi_rq_err_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_cmd_runtime_exceeced",
+    "callees": ["scmd_printk"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_rq_err_bytes",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_result_to_blk_status",
+    "callees": ["scsi_result_to_blk_status.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_end_request",
+    "callees": ["__blk_mq_end_request", "__builtin_constant_p", "__builtin_expect", "add_disk_randomness", "blk_update_request", "percpu_ref_get_many", "percpu_ref_put_many", "scsi_free_sgtables", "scsi_run_queue_async", "scsi_uninit_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_run_queue_async",
+    "callees": ["kblockd_schedule_work", "scsi_run_queue_async.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_free_sgtables",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_uninit_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_run_host_queues",
+    "callees": ["__scsi_iterate_devices", "scsi_run_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_requeue_run_queue",
+    "callees": ["scsi_run_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_run_queue",
+    "callees": ["blk_mq_kick_requeue_list", "scsi_single_lun_run", "scsi_starved_list_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_starved_list_run",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_get_queue", "blk_mq_run_hw_queues", "blk_put_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_is_busy",
+    "callees": ["sbitmap_weight"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_single_lun_run",
+    "callees": ["__starget_for_each_device", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_mq_run_hw_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_kick_sdev_queue",
+    "callees": ["scsi_kick_sdev_queue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_device_unbusy",
+    "callees": ["sbitmap_put", "scsi_dec_host_busy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_dec_host_busy",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "scsi_eh_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_execute_cmd",
+    "callees": ["__builtin_expect", "blk_execute_rq", "blk_mq_free_request", "blk_rq_map_kern", "memcpy", "memset", "scsi_alloc_request", "scsi_normalize_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_queue_insert",
+    "callees": ["__scsi_queue_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__scsi_queue_insert",
+    "callees": ["blk_mq_requeue_request", "scsi_device_unbusy", "scsi_set_blocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_mq_requeue_cmd",
+    "callees": ["blk_mq_delay_kick_requeue_list", "blk_mq_requeue_request", "scsi_free_sgtables", "scsi_uninit_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_init_sense_cache",
+    "callees": ["kmem_cache_create_usercopy", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["scsi_sense_cache"],
+    "global_writes": ["scsi_sense_cache"]
+  },
+  {
+    "name": "trace_scsi_dispatch_cmd_done",
+    "callees": ["__SCT__tp_func_scsi_dispatch_cmd_done", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_scsi_dispatch_cmd_error",
+    "callees": ["__SCT__tp_func_scsi_dispatch_cmd_error", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_scsi_dispatch_cmd_start",
+    "callees": ["__SCT__tp_func_scsi_dispatch_cmd_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scsi_status_is_good",
+    "callees": ["scsi_status_is_good.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "sbitmap_put",
+    "callees": ["__builtin_expect", "sbitmap_deferred_clear_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

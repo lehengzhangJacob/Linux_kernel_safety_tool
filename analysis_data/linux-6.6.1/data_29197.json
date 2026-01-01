@@ -1,0 +1,1706 @@
+[
+  {
+    "name": "security_cred_free",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_cred_free",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_free",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["lsm_file_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_msg_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_inode_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["lsm_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_ipc_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_ipc_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_cred_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_cred_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_task_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_real_path",
+    "callees": ["__builtin_expect", "backing_file_real_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_file.part.0",
+    "callees": ["file_real_path", "fsnotify_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_file",
+    "callees": ["fsnotify_file.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_perm.part.0",
+    "callees": ["fsnotify_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_file.part.0",
+    "callees": ["file_real_path", "fsnotify_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_uring_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_uring_sqpoll",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_uring_override_creds",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_perf_event_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_perf_event_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_perf_event_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_perf_event_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_perf_event_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_locked_down",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_audit_rule_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_audit_rule_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_audit_rule_known",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_audit_rule_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_key_getsecurity",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_key_permission",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_key_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_key_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_mptcp_add_subflow",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sctp_assoc_established",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sctp_sk_clone",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sctp_bind_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sctp_assoc_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_attach",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_attach_queue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_free_security",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_tun_dev_alloc_security",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_secmark_refcount_dec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_secmark_refcount_inc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_secmark_relabel_packet",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inet_conn_established",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inet_csk_clone",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inet_conn_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sock_graft",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_req_classify_flow",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sk_classify_flow",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sk_clone",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sk_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sk_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_getpeersec_dgram",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_getpeersec_stream",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sock_rcv_skb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_setsockopt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_getsockopt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_getpeername",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_getsockname",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_recvmsg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_sendmsg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_accept",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_listen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_bind",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_socketpair",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_post_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_socket_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_unix_may_send",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_unix_stream_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_getsecctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_setsecctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_notifysecctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_invalidate_secctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_release_secctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_secctx_to_secid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_secid_to_secctx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_ismaclabel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_netlink_send",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_setprocattr",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_getprocattr",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_d_instantiate",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_semop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_semctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_associate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sem_alloc",
+    "callees": ["__builtin_expect", "lsm_ipc_alloc", "security_sem_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_shmat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_shmctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_associate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_shm_alloc",
+    "callees": ["__builtin_expect", "lsm_ipc_alloc", "security_shm_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_msgrcv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_msgsnd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_msgctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_associate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_queue_alloc",
+    "callees": ["__builtin_expect", "lsm_ipc_alloc", "security_msg_queue_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_msg_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_msg_msg_alloc",
+    "callees": ["__builtin_expect", "lsm_msg_msg_alloc", "security_msg_msg_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_ipc_getsecid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_ipc_permission",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_create_user_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_to_inode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_prctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_kill",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_movememory",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_getscheduler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_setscheduler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_setrlimit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_prlimit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_getioprio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_setioprio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_setnice",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_getsecid_obj",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_current_getsecid_subj",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_getsid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_getpgid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_setpgid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_fix_setgroups",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_fix_setgid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_fix_setuid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_post_load_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_load_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_post_read_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_read_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_module_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_create_files_as",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernel_act_as",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_cred_getsecid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_transfer_creds",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_prepare_creds",
+    "callees": ["__builtin_expect", "lsm_cred_alloc", "security_cred_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_cred_free",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_cred_alloc_blank",
+    "callees": ["__builtin_expect", "lsm_cred_alloc", "security_cred_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_task_alloc",
+    "callees": ["__builtin_expect", "lsm_task_alloc", "security_task_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_truncate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_open",
+    "callees": ["fsnotify_perm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_receive",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_send_sigiotask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_set_fowner",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_fcntl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_lock",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_mprotect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_mmap_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_mmap_file",
+    "callees": ["mmap_prot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_prot",
+    "callees": ["path_noexec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_ioctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_free",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["lsm_file_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_alloc",
+    "callees": ["__builtin_expect", "lsm_file_alloc", "security_file_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_file_permission",
+    "callees": ["fsnotify_perm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_kernfs_init_security",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_copy_up_xattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_copy_up",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_getsecid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_listsecurity",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_setsecurity",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_getsecurity",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_killpriv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_need_killpriv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_removexattr",
+    "callees": ["__builtin_expect", "cap_inode_removexattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_listxattr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_getxattr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_post_setxattr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_remove_acl",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_get_acl",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_set_acl",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_setxattr",
+    "callees": ["__builtin_expect", "cap_inode_setxattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_getattr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_setattr",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_permission",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_follow_link",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_readlink",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_rename",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_mknod",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_rmdir",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_mkdir",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_symlink",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_unlink",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_link",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_create",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_init_security_anon",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_init_security",
+    "callees": ["__builtin_expect", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_dentry_create_files_as",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_dentry_init_security",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_free",
+    "callees": ["call_rcu", "integrity_inode_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inode_free_by_rcu",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["lsm_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "security_inode_alloc",
+    "callees": ["__builtin_expect", "lsm_inode_alloc", "security_inode_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_path_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_move_mount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_clone_mnt_opts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_set_mnt_opts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_pivotroot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_umount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_mount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_statfs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_show_options",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_kern_mount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_remount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_mnt_opts_compat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_eat_lsm_opts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_free_mnt_opts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_delete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_sb_alloc",
+    "callees": ["__builtin_expect", "lsm_superblock_alloc", "security_sb_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_fs_context_parse_param",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_fs_context_dup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_fs_context_submount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_bprm_committed_creds",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_bprm_committing_creds",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_bprm_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_bprm_creds_from_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_bprm_creds_for_exec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_vm_enough_memory_mm",
+    "callees": ["__vm_enough_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_settime64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_syslog",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_quota_on",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_quotactl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_capable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_capset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_capget",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_ptrace_traceme",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_ptrace_access_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_binder_transfer_file",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_binder_transfer_binder",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_binder_transaction",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_binder_set_context_mgr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_superblock_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_msg_msg_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_ipc_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_task_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_inode_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["lsm_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_file_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["lsm_file_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_cred_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_blocking_lsm_notifier",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_blocking_lsm_notifier",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_blocking_lsm_notifier",
+    "callees": ["blocking_notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "security_add_hooks",
+    "callees": ["hlist_add_tail_rcu", "lsm_append", "panic", "slab_is_available"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_last_lsm",
+    "callees": ["__builtin_expect", "strcmp", "strrchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_debug",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["debug"]
+  },
+  {
+    "name": "choose_lsm_order",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["chosen_lsm_order"]
+  },
+  {
+    "name": "choose_major_lsm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["chosen_major_lsm"]
+  },
+  {
+    "name": "security_init",
+    "callees": ["_printk", "lsm_append", "ordered_lsm_init"],
+    "global_reads": ["chosen_lsm_order", "chosen_major_lsm", "debug"],
+    "global_writes": []
+  },
+  {
+    "name": "early_security_init",
+    "callees": ["initialize_lsm", "prepare_lsm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ordered_lsm_init",
+    "callees": ["_printk", "initialize_lsm", "kfree", "kmalloc_array", "kmem_cache_create", "lsm_early_cred", "lsm_early_task", "ordered_lsm_parse", "prepare_lsm", "report_lsm_order"],
+    "global_reads": ["chosen_lsm_order", "chosen_major_lsm", "debug", "ordered_lsms"],
+    "global_writes": ["chosen_major_lsm", "lsm_file_cache", "lsm_inode_cache", "ordered_lsms"]
+  },
+  {
+    "name": "report_lsm_order",
+    "callees": ["_printk"],
+    "global_reads": ["ordered_lsms"],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_early_task",
+    "callees": ["lsm_task_alloc", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_early_cred",
+    "callees": ["lsm_cred_alloc", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ordered_lsm_parse",
+    "callees": ["_printk", "append_ordered_lsm", "kfree", "kstrdup", "set_enabled", "strcmp", "strsep"],
+    "global_reads": ["chosen_major_lsm", "debug", "ordered_lsms"],
+    "global_writes": []
+  },
+  {
+    "name": "initialize_lsm",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk"],
+    "global_reads": ["debug"],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_lsm",
+    "callees": ["_printk", "lsm_allowed", "lsm_set_blob_sizes", "set_enabled"],
+    "global_reads": ["debug", "exclusive"],
+    "global_writes": ["exclusive"]
+  },
+  {
+    "name": "lsm_set_blob_sizes",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lsm_allowed",
+    "callees": ["_printk"],
+    "global_reads": ["debug", "exclusive"],
+    "global_writes": []
+  },
+  {
+    "name": "append_ordered_lsm",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk"],
+    "global_reads": ["debug", "last_lsm", "ordered_lsms"],
+    "global_writes": ["last_lsm"]
+  },
+  {
+    "name": "set_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_file",
+    "callees": ["fsnotify_file.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_real_path",
+    "callees": ["__builtin_expect", "backing_file_real_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hlist_add_tail_rcu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

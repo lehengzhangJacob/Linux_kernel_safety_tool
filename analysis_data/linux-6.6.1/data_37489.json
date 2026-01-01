@@ -1,0 +1,50 @@
+[
+  {
+    "name": "snd_seq_system_client_done",
+    "callees": ["snd_seq_delete_kernel_client"],
+    "global_reads": ["sysclient"],
+    "global_writes": ["announce_port", "sysclient"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_system_client_done",
+    "callees": ["snd_seq_delete_kernel_client"],
+    "global_reads": ["sysclient"],
+    "global_writes": ["announce_port", "sysclient"]
+  },
+  {
+    "name": "snd_seq_system_client_init",
+    "callees": ["__builtin_memcpy", "kfree", "kzalloc", "memset", "snd_seq_create_kernel_client", "snd_seq_kernel_client_ctl", "snd_seq_system_client_done"],
+    "global_reads": ["sysclient"],
+    "global_writes": ["announce_port", "sysclient"]
+  },
+  {
+    "name": "event_input_timer",
+    "callees": ["snd_seq_control_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_system_notify",
+    "callees": ["snd_seq_kernel_client_dispatch"],
+    "global_reads": ["announce_port", "sysclient"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_system_broadcast",
+    "callees": ["setheader", "snd_seq_kernel_client_dispatch"],
+    "global_reads": ["sysclient"],
+    "global_writes": []
+  },
+  {
+    "name": "setheader",
+    "callees": ["memset"],
+    "global_reads": ["announce_port", "sysclient"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "name": "dd_depth_updated",
+    "callees": ["sbitmap_queue_min_shallow_depth"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_remove_request",
+    "callees": ["elv_rb_del", "elv_rqhash_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_from_pos",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_exit",
+    "callees": ["elv_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_init",
+    "callees": ["elv_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch2_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch2_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch2_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch1_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch1_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch1_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch0_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch0_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_dispatch0_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_owned_by_driver_show",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_queued_show",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_async_depth_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_starved_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_batching_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write2_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write2_fifo_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write2_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write2_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read2_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read2_fifo_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read2_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read2_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write1_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write1_fifo_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write1_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write1_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read1_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read1_fifo_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read1_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read1_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write0_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write0_fifo_stop",
+    "callees": ["deadline_read0_fifo_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write0_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write0_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read0_next_rq_show",
+    "callees": ["__blk_mq_debugfs_rq_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read0_fifo_stop",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read0_fifo_next",
+    "callees": ["seq_list_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read0_fifo_start",
+    "callees": ["_raw_spin_lock", "seq_list_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_fifo_batch_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_async_depth_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_front_merges_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_writes_starved_store",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_prio_aging_expire_store",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write_expire_store",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read_expire_store",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_fifo_batch_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_async_depth_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_front_merges_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_writes_starved_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_prio_aging_expire_show",
+    "callees": ["jiffies_to_msecs", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_write_expire_show",
+    "callees": ["jiffies_to_msecs", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_read_expire_show",
+    "callees": ["jiffies_to_msecs", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_has_work",
+    "callees": ["dd_has_work_for_prio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_has_work_for_prio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_finish_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_prepare_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_insert_requests",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "blk_mq_free_requests", "dd_insert_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_bio_merge",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "blk_mq_free_request", "blk_mq_sched_try_merge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_request_merge",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "elv_bio_merge_ok", "elv_rb_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_init_sched",
+    "callees": ["blk_queue_flag_set", "elevator_alloc", "kobject_put", "kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_exit_sched",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock", "_raw_spin_unlock", "kfree"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "dd_init_hctx",
+    "callees": ["dd_depth_updated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_depth_updated",
+    "callees": ["sbitmap_queue_min_shallow_depth"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_limit_depth",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_dispatch_request",
+    "callees": ["__dd_dispatch_request", "_raw_spin_lock", "_raw_spin_unlock", "dd_dispatch_prio_aged_requests"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dd_dispatch_prio_aged_requests",
+    "callees": ["__dd_dispatch_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dd_dispatch_request",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "deadline_from_pos", "deadline_remove_request"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dd_merged_requests",
+    "callees": ["deadline_remove_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dd_request_merged",
+    "callees": ["elv_rb_add", "elv_rb_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_remove_request",
+    "callees": ["elv_rb_del", "elv_rqhash_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deadline_from_pos",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rq_mergeable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_free_requests",
+    "callees": ["blk_mq_free_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_block_rq_insert",
+    "callees": ["__SCT__tp_func_block_rq_insert", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

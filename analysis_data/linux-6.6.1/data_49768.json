@@ -1,0 +1,230 @@
+[
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_irq_handler",
+    "callees": ["__builtin_expect", "intel_guc_ct_event_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_update_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_update_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_irq_handler",
+    "callees": ["__builtin_expect", "intel_guc_ct_event_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_irq_postinstall",
+    "callees": ["gen3_irq_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_irq_reset",
+    "callees": ["gen3_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_disable_irq",
+    "callees": ["gen5_gt_update_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_enable_irq",
+    "callees": ["gen5_gt_update_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_update_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_gt_irq_postinstall",
+    "callees": ["gen3_irq_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_gt_irq_reset",
+    "callees": ["gen3_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_gt_irq_handler",
+    "callees": ["__builtin_expect", "gen6_rps_irq_handler", "guc_irq_handler", "intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_gt_irq_handler",
+    "callees": ["__drm_dev_dbg", "gen7_parity_error_irq_handler", "intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_parity_error_irq_handler",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "gen5_gt_update_irq", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen5_gt_irq_handler",
+    "callees": ["intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_irq_postinstall",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_irq_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_reset_one_iir",
+    "callees": ["gen11_gt_engine_identity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_irq_handler",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "gen11_gt_bank_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_bank_handler",
+    "callees": ["find_next_bit", "gen11_gt_engine_identity", "gen11_gt_identity_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_gt_identity_handler",
+    "callees": ["__builtin_expect", "__warn_printk", "gen11_other_irq_handler", "intel_engine_cs_irq.part.0", "pick_gt"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "pick_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_other_irq_handler",
+    "callees": ["__builtin_expect", "__warn_printk", "gen11_rps_irq_handler", "guc_irq_handler", "intel_gsc_irq_handler", "intel_gsc_proxy_irq_handler"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "gen11_gt_engine_identity",
+    "callees": ["__builtin_expect", "_dev_err", "local_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_irq_handler",
+    "callees": ["__builtin_expect", "intel_guc_ct_event_handler"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

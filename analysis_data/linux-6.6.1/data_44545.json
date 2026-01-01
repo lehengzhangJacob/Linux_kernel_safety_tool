@@ -1,0 +1,332 @@
+[
+  {
+    "name": "nf_nat_packet",
+    "callees": ["nf_nat_manip_pkt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_cleanup_conntrack",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "hash_by_src"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_used_tuple",
+    "callees": ["nf_conntrack_tuple_taken", "nf_ct_invert_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_used_tuple",
+    "callees": ["nf_conntrack_tuple_taken", "nf_ct_invert_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_used_tuple",
+    "callees": ["nf_conntrack_tuple_taken", "nf_ct_invert_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_proto_clean.part.0",
+    "callees": ["nf_nat_cleanup_conntrack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_nat_ext_add.part.0",
+    "callees": ["nf_ct_ext_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_cleanup",
+    "callees": ["kvfree", "nf_ct_helper_expectfn_unregister", "nf_ct_iterate_destroy", "synchronize_net", "unregister_pernet_subsys"],
+    "global_reads": ["nf_nat_bysource"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_init",
+    "callees": ["__builtin_expect", "kvfree", "nf_ct_alloc_hashtable", "nf_ct_helper_expectfn_register", "register_pernet_subsys"],
+    "global_reads": ["nf_conntrack_htable_size", "nf_nat_bysource", "nf_nat_hook"],
+    "global_writes": ["nf_nat_bysource", "nf_nat_htable_size"]
+  },
+  {
+    "name": "nf_nat_unregister_fn",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "kfree", "kvfree_call_rcu", "mutex_lock", "mutex_unlock", "nf_hook_entries_delete_raw", "nf_unregister_net_hooks"],
+    "global_reads": ["nat_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_register_fn",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "kfree", "kmemdup", "kzalloc", "mutex_lock", "mutex_unlock", "nf_hook_entries_insert_raw", "nf_register_net_hooks"],
+    "global_reads": ["nat_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnetlink_parse_nat_setup",
+    "callees": ["__builtin_expect", "__nf_nat_alloc_null_binding", "nf_nat_setup_info", "nfnetlink_parse_nat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnetlink_parse_nat",
+    "callees": ["memset", "nf_nat_ipv4_nlattr_to_range", "nf_nat_ipv6_nlattr_to_range", "nfnetlink_parse_nat_proto", "nla_parse_nested_deprecated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv6_nlattr_to_range",
+    "callees": ["nla_memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_ipv4_nlattr_to_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_l4proto_nlattr_to_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_proto_clean",
+    "callees": ["nf_nat_proto_clean.part.0", "nf_nat_proto_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_cleanup_conntrack",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "hash_by_src"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_proto_remove",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_inet_fn",
+    "callees": ["__builtin_expect", "__nf_nat_alloc_null_binding", "nf_ct_ext_find", "nf_ct_kill_acct", "nf_nat_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_packet",
+    "callees": ["nf_nat_manip_pkt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_alloc_null_binding",
+    "callees": ["__nf_nat_alloc_null_binding"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_nat_alloc_null_binding",
+    "callees": ["nf_nat_setup_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_setup_info",
+    "callees": ["__builtin_expect", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "get_unique_tuple", "hash_by_src", "nf_conntrack_alter_reply", "nf_ct_ext_add", "nf_ct_ext_find", "nf_ct_invert_tuple", "nf_ct_is_confirmed", "nf_ct_tuple_equal"],
+    "global_reads": ["nf_nat_bysource"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_nat_ext_add",
+    "callees": ["nf_ct_ext_find", "nf_ct_is_confirmed", "nf_ct_nat_ext_add.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unique_tuple",
+    "callees": ["find_appropriate_src", "find_best_ips_proto", "l4proto_in_range", "nf_in_range", "nf_nat_l4proto_unique_tuple", "nf_nat_used_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_l4proto_unique_tuple",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "get_random_u16", "nf_nat_used_tuple_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "same_src",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_in_range",
+    "callees": ["nf_in_range.part.0", "nf_nat_inet_in_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_inet_in_range",
+    "callees": ["__builtin_bswap32", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_used_tuple_harder",
+    "callees": ["__builtin_expect", "nf_conntrack_find_get", "nf_conntrack_tuple_taken", "nf_ct_delete", "nf_ct_invert_tuple", "nf_ct_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_used_tuple",
+    "callees": ["nf_conntrack_tuple_taken", "nf_ct_invert_tuple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_nat_decode_session",
+    "callees": ["nf_nat_ipv4_decode_session", "nf_nat_ipv6_decode_session"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_put",
+    "callees": ["__refcount_sub_and_test", "nf_ct_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_tuple_equal",
+    "callees": ["__nf_ct_tuple_dst_equal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_ct_tuple_dst_equal",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

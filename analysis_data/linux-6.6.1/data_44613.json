@@ -1,0 +1,332 @@
+[
+  {
+    "name": "tcp_write_err",
+    "callees": ["sk_error_report", "tcp_done", "tcp_write_queue_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_err",
+    "callees": ["sk_error_report", "tcp_done", "tcp_write_queue_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_err",
+    "callees": ["sk_error_report", "tcp_done", "tcp_write_queue_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_err",
+    "callees": ["sk_error_report", "tcp_done", "tcp_write_queue_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dst_negative_advice",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_timer_handler.part.0",
+    "callees": ["tcp_mstamp_refresh", "tcp_probe_timer", "tcp_rack_reo_timeout", "tcp_retransmit_timer", "tcp_send_loss_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_delack_timer_handler.part.0",
+    "callees": ["sk_reset_timer", "tcp_mstamp_refresh", "tcp_send_ack"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_set_keepalive.part.0",
+    "callees": ["inet_csk_reset_keepalive_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "retransmits_timed_out.part.0",
+    "callees": ["__builtin_expect", "tcp_model_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_init_xmit_timers",
+    "callees": ["hrtimer_init", "inet_csk_init_xmit_timers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_compressed_ack_kick",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "sock_put", "tcp_send_ack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_keepalive_timer",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "inet_csk_reset_keepalive_timer", "sock_flag", "sock_put", "tcp_done", "tcp_mstamp_refresh", "tcp_send_active_reset", "tcp_time_wait", "tcp_write_err", "tcp_write_wakeup"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_set_keepalive",
+    "callees": ["inet_csk_delete_keepalive_timer", "sock_flag", "tcp_set_keepalive.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_syn_ack_timeout",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_timer",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "sock_put", "tcp_write_timer_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_timer_handler",
+    "callees": ["sk_reset_timer", "tcp_write_timer_handler.part.0"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_retransmit_timer",
+    "callees": ["__builtin_expect", "__tcp_set_rto", "dst_release", "inet_csk_reset_xmit_timer", "rb_first", "retransmits_timed_out.part.0", "sk_reset_timer", "sock_flag", "tcp_clamp_rto_to_user_timeout", "tcp_enter_loss", "tcp_fastopen_synack_timer", "tcp_retransmit_skb", "tcp_rto_min", "tcp_rtx_probe0_timed_out", "tcp_write_err", "tcp_write_timeout"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rtx_probe0_timed_out",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_fastopen_synack_timer",
+    "callees": ["inet_csk_reset_xmit_timer", "inet_rtx_syn_ack", "tcp_enter_loss", "tcp_write_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_delack_timer",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "sock_put", "tcp_delack_timer_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_delack_timer_handler",
+    "callees": ["tcp_delack_timer_handler.part.0", "tcp_mstamp_refresh", "tcp_sack_compress_send_ack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_timeout",
+    "callees": ["__dst_negative_advice", "retransmits_timed_out.part.0", "sk_rethink_txhash", "sock_flag", "tcp_call_bpf", "tcp_fastopen_active_detect_blackhole", "tcp_mtu_probing", "tcp_out_of_resources", "tcp_write_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_mtu_probing",
+    "callees": ["tcp_mss_to_mtu", "tcp_mtu_to_mss", "tcp_sync_mss"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_out_of_resources",
+    "callees": ["tcp_check_oom", "tcp_done", "tcp_send_active_reset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_write_err",
+    "callees": ["sk_error_report", "tcp_done", "tcp_write_queue_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_clamp_probe0_to_user_timeout",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__msecs_to_jiffies"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_clamp_rto_to_user_timeout",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_rto_min",
+    "callees": ["dst_metric_rtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dst_negative_advice",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_rethink_txhash",
+    "callees": ["get_random_u32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

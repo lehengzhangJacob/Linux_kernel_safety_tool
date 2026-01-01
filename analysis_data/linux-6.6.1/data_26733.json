@@ -1,0 +1,26 @@
+[
+  {
+    "name": "to_compat_ipc_perm",
+    "callees": [],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "to_compat_ipc64_perm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_ipc_perm",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_ipc64_perm",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

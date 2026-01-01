@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ethnl_set_eee",
+    "callees": ["ethnl_update_bitset32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_eee_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eee_fill_reply",
+    "callees": ["ethnl_put_bitset32", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eee_reply_size",
+    "callees": ["ethnl_bitset32_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eee_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerqueue_iterate_next",
+    "callees": ["rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerqueue_del",
+    "callees": ["__builtin_expect", "rb_erase_cached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerqueue_add",
+    "callees": ["__builtin_expect", "rb_insert_color_cached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rb_insert_color_cached",
+    "callees": ["rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

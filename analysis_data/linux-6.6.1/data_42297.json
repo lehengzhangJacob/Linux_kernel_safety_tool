@@ -1,0 +1,32 @@
+[
+  {
+    "name": "sched_set_itmt_core_prio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_asym_cpu_priority",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sched_clear_itmt_support",
+    "callees": ["mutex_lock", "mutex_unlock", "rebuild_sched_domains", "unregister_sysctl_table"],
+    "global_reads": ["itmt_sysctl_header", "sched_itmt_capable", "sysctl_sched_itmt_enabled"],
+    "global_writes": ["itmt_sysctl_header", "sched_itmt_capable", "sysctl_sched_itmt_enabled", "x86_topology_update"]
+  },
+  {
+    "name": "sched_set_itmt_support",
+    "callees": ["mutex_lock", "mutex_unlock", "rebuild_sched_domains", "register_sysctl_sz"],
+    "global_reads": ["sched_itmt_capable"],
+    "global_writes": ["itmt_sysctl_header", "sched_itmt_capable", "sysctl_sched_itmt_enabled", "x86_topology_update"]
+  },
+  {
+    "name": "sched_itmt_update_handler",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_dointvec_minmax", "rebuild_sched_domains"],
+    "global_reads": ["sched_itmt_capable", "sysctl_sched_itmt_enabled"],
+    "global_writes": ["x86_topology_update"]
+  }
+]

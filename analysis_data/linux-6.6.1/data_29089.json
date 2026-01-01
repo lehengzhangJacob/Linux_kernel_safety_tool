@@ -1,0 +1,116 @@
+[
+  {
+    "name": "sysfs_remove_groups.part.0",
+    "callees": ["sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_groups_change_owner",
+    "callees": ["sysfs_group_change_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_group_change_owner",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "kernfs_setattr", "sysfs_group_attrs_change_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_group_attrs_change_owner",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "kernfs_setattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_only_sysfs_link_entry_to_kobj",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "kernfs_create_link", "kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "sysfs_warn_dup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_remove_link_from_group",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "kernfs_remove_by_name_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_add_link_to_group",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "sysfs_create_link_sd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_unmerge_group",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "kernfs_remove_by_name_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_merge_group",
+    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "kernfs_remove_by_name_ns", "kobject_get_ownership", "sysfs_add_file_mode_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_remove_groups",
+    "callees": ["sysfs_remove_groups.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_remove_group",
+    "callees": ["__warn_printk", "kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "kernfs_remove", "remove_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_update_group",
+    "callees": ["internal_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_update_groups",
+    "callees": ["internal_create_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_create_groups",
+    "callees": ["internal_create_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_create_groups",
+    "callees": ["internal_create_group", "sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_create_group",
+    "callees": ["internal_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "internal_create_group",
+    "callees": ["__builtin_expect", "_printk", "create_files", "kernfs_create_dir_ns", "kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "kernfs_remove", "kobject_get_ownership", "sysfs_warn_dup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_files",
+    "callees": ["__builtin_expect", "__warn_printk", "kernfs_remove_by_name_ns", "remove_files", "sysfs_add_bin_file_mode_ns", "sysfs_add_file_mode_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_files",
+    "callees": ["kernfs_remove_by_name_ns"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

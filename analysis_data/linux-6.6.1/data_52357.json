@@ -1,0 +1,200 @@
+[
+  {
+    "name": "pkg_temp_thermal_get_dev",
+    "callees": [],
+    "global_reads": ["max_id", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_get_dev",
+    "callees": [],
+    "global_reads": ["max_id", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_get_dev",
+    "callees": [],
+    "global_reads": ["max_id", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_thermal_schedule_work",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "queue_delayed_work_on"],
+    "global_reads": ["notify_delay_ms", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_exit",
+    "callees": ["__cpuhp_remove_state", "debugfs_remove", "kfree"],
+    "global_reads": ["debugfs", "pkg_thermal_hp_state", "zones"],
+    "global_writes": ["platform_thermal_package_notify", "platform_thermal_package_rate_control"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_init",
+    "callees": ["__cpuhp_setup_state", "kfree", "kmalloc_array", "pkg_temp_debugfs_init", "x86_match_cpu"],
+    "global_reads": ["__max_die_per_package", "__max_logical_packages", "zones"],
+    "global_writes": ["max_id", "pkg_thermal_hp_state", "platform_thermal_package_notify", "platform_thermal_package_rate_control", "zones"]
+  },
+  {
+    "name": "pkg_thermal_cpu_online",
+    "callees": ["__builtin_constant_p", "pkg_temp_thermal_device_add", "pkg_temp_thermal_get_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_thermal_cpu_offline",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "cancel_delayed_work_sync", "cpumask_any_but", "kfree", "mutex_lock", "mutex_unlock", "native_write_msr", "pkg_temp_thermal_get_dev", "pkg_thermal_schedule_work", "thermal_zone_device_unregister"],
+    "global_reads": ["nr_cpu_ids", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_device_add",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "init_timer_key", "intel_tcc_get_tjmax", "kfree", "kzalloc", "native_read_msr", "pkg_temp_thermal_trips_init", "thermal_zone_device_enable", "thermal_zone_device_register_with_trips", "thermal_zone_device_unregister"],
+    "global_reads": ["max_id", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_trips_init",
+    "callees": ["kfree", "kzalloc", "rdmsr_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_thermal_notify",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_pkg_thres_interrupt", "pkg_temp_thermal_get_dev", "pkg_thermal_schedule_work"],
+    "global_reads": ["pkg_interrupt_cnt"],
+    "global_writes": ["pkg_interrupt_cnt"]
+  },
+  {
+    "name": "pkg_thermal_schedule_work",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "queue_delayed_work_on"],
+    "global_reads": ["notify_delay_ms", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_threshold_work_fn",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "enable_pkg_thres_interrupt", "mutex_lock", "mutex_unlock", "pkg_temp_thermal_get_dev", "thermal_clear_package_intr_status", "thermal_zone_device_update"],
+    "global_reads": ["pkg_work_cnt"],
+    "global_writes": ["pkg_work_cnt"]
+  },
+  {
+    "name": "disable_pkg_thres_interrupt",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_pkg_thres_interrupt",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_thermal_rate_control",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sys_set_trip_temp",
+    "callees": ["intel_tcc_get_tjmax", "rdmsr_on_cpu", "thermal_zone_device_priv", "wrmsr_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sys_get_curr_temp",
+    "callees": ["intel_tcc_get_temp", "thermal_zone_device_priv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_thermal_get_dev",
+    "callees": [],
+    "global_reads": ["max_id", "zones"],
+    "global_writes": []
+  },
+  {
+    "name": "pkg_temp_debugfs_init",
+    "callees": ["debugfs_create_dir", "debugfs_create_u32"],
+    "global_reads": ["debugfs"],
+    "global_writes": ["debugfs"]
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "crc32c_mod_fini",
+    "callees": ["crypto_unregister_shash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32c_mod_init",
+    "callees": ["crypto_register_shash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32c_cra_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_digest",
+    "callees": ["__crc32c_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_finup",
+    "callees": ["__crc32c_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_final",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_update",
+    "callees": ["__crc32c_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_setkey",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chksum_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

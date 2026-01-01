@@ -1,0 +1,194 @@
+[
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_cancel.part.0",
+    "callees": ["nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_cancel.part.0",
+    "callees": ["nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_genl_init",
+    "callees": ["genl_register_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_version",
+    "callees": ["__alloc_skb", "genlmsg_put", "genlmsg_reply", "kfree_skb_reason", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_protocols",
+    "callees": ["netlbl_mgmt_protocols_cb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_listdef",
+    "callees": ["__alloc_skb", "__rcu_read_lock", "__rcu_read_unlock", "genlmsg_put", "genlmsg_reply", "kfree_skb_reason", "netlbl_domhsh_getentry", "netlbl_mgmt_listentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_removedef",
+    "callees": ["netlbl_domhsh_remove_default", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_adddef",
+    "callees": ["netlbl_mgmt_add_common", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_listall",
+    "callees": ["netlbl_domhsh_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_listall_cb",
+    "callees": ["genlmsg_cancel.part.0", "genlmsg_put", "netlbl_mgmt_listentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_remove",
+    "callees": ["netlbl_domhsh_remove", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_add",
+    "callees": ["netlbl_mgmt_add_common", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_listentry",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nla_put_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_mgmt_add_common",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "calipso_doi_getdef", "calipso_doi_putdef", "cipso_v4_doi_getdef", "cipso_v4_doi_putdef", "kfree", "kmalloc_large", "kmalloc_trace", "kzalloc", "netlbl_af4list_add", "netlbl_af6list_add", "netlbl_domhsh_add", "nla_strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

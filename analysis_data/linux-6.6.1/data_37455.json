@@ -1,0 +1,20 @@
+[
+  {
+    "name": "get_stack_info",
+    "callees": ["__builtin_expect", "_printk_deferred", "get_stack_info_noinstr"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "get_stack_info_noinstr",
+    "callees": ["in_entry_stack", "in_task_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_type_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

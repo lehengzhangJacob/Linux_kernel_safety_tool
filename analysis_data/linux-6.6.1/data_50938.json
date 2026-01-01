@@ -1,0 +1,338 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin.part.0",
+    "callees": ["__intel_context_do_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin",
+    "callees": ["__builtin_expect", "intel_context_unpin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scatter_list_length",
+    "callees": ["sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_no_arbitration",
+    "callees": ["__builtin_expect", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_ww",
+    "callees": ["__builtin_expect", "__intel_context_do_pin_ww", "intel_context_pin_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin.part.0",
+    "callees": ["__intel_context_do_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_migrate_fini",
+    "callees": ["intel_engine_destroy_pinned_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_migrate_clear",
+    "callees": ["__builtin_expect", "__refcount_add", "intel_context_migrate_clear", "intel_context_pin_ww", "intel_context_unpin", "intel_migrate_create_context", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_migrate_copy",
+    "callees": ["__builtin_expect", "__refcount_add", "intel_context_migrate_copy", "intel_context_pin_ww", "intel_context_unpin", "intel_migrate_create_context", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_migrate_clear",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "emit_clear", "emit_copy_ccs", "emit_no_arbitration", "emit_pte", "i915_request_add", "i915_request_await_deps", "i915_request_create", "i915_request_get.part.0", "i915_request_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_clear",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_636", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_migrate_copy",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "emit_copy", "emit_copy_ccs", "emit_no_arbitration", "emit_pte", "get_ccs_sg_sgt", "i915_request_add", "i915_request_await_deps", "i915_request_create", "i915_request_get.part.0", "i915_request_put.part.0", "scatter_list_length"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_ccs_sg_sgt",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "scatter_list_length",
+    "callees": ["sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_copy",
+    "callees": ["__builtin_expect", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_copy_ccs",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_624", "__compiletime_assert_629", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_pte",
+    "callees": ["__builtin_expect", "intel_ring_begin", "intel_ring_update_space", "max_pte_pkt_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_no_arbitration",
+    "callees": ["__builtin_expect", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_migrate_create_context",
+    "callees": ["__builtin_expect", "__migrate_engines", "__refcount_add", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__migrate_engines",
+    "callees": ["get_random_u32", "intel_context_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_migrate_init",
+    "callees": ["__builtin_expect", "memset", "pinned_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pinned_context",
+    "callees": ["__builtin_expect", "intel_engine_create_pinned_context", "kref_put", "migrate_vm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "migrate_vm",
+    "callees": ["__builtin_expect", "__i915_gem_ww_fini", "i915_gem_ww_ctx_init", "i915_ppgtt_create", "i915_vm_alloc_pt_stash", "i915_vm_free_pt_stash", "i915_vm_lock_objects", "i915_vm_map_pt_stash", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insert_pte",
+    "callees": ["__px_dma", "i915_gem_get_pat_index", "i915_gem_object_is_lmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xehpsdv_insert_pte",
+    "callees": ["__px_dma", "i915_gem_get_pat_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xehpsdv_toggle_pdes",
+    "callees": ["i915_gem_get_pat_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin",
+    "callees": ["__builtin_expect", "intel_context_unpin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_ww",
+    "callees": ["__builtin_expect", "__intel_context_do_pin_ww", "intel_context_pin_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_ww_fini",
+    "callees": ["i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

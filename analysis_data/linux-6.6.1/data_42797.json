@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ethnl_set_rings",
+    "callees": ["_printk", "do_trace_netlink_extack", "net_ratelimit", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_rings_validate",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rings_fill_reply",
+    "callees": ["__builtin_expect", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rings_reply_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rings_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_gso_segment.part.0",
+    "callees": ["__builtin_expect", "__tcp_v6_send_check", "tcp_gso_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_offload_init",
+    "callees": ["inet6_add_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_gso_segment",
+    "callees": ["pskb_may_pull_reason", "tcp6_gso_segment.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_gro_complete",
+    "callees": ["csum_ipv6_magic", "tcp_gro_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_gro_receive",
+    "callees": ["__skb_gro_checksum_validate_complete", "__skb_gro_checksum_validate_needed", "ip6_gro_compute_pseudo", "skb_gro_incr_csum_unnecessary", "tcp_gro_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_incr_csum_unnecessary",
+    "callees": ["__skb_incr_checksum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_gro_checksum_validate_complete",
+    "callees": ["__skb_gro_checksum_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_v6_send_check",
+    "callees": ["csum_ipv6_magic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_incr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

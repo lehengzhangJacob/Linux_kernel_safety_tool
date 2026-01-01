@@ -1,0 +1,884 @@
+[
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic",
+    "callees": ["_printk"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic",
+    "callees": ["_printk"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_IO_APIC",
+    "callees": ["clear_IO_APIC_pin"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic_pin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pin_2_irq",
+    "callees": ["_printk", "mp_map_pin_to_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_pin_to_irq_node.part.0",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic_pin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ioapic_write_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_register_handler",
+    "callees": ["__irq_set_handler", "irq_modify_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_modify_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_sync",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_modify_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pin_2_irq",
+    "callees": ["_printk", "mp_map_pin_to_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_find_mapping",
+    "callees": ["__irq_resolve_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__eoi_ioapic_pin.part.0",
+    "callees": ["__ioapic_read_entry", "__ioapic_write_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__eoi_ioapic_pin",
+    "callees": ["__eoi_ioapic_pin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_apic_id",
+    "callees": ["__SCT__apic_call_read"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_find_mapping",
+    "callees": ["__irq_resolve_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_set_fixmap",
+    "callees": ["cachemode2protval", "native_set_fixmap"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "add_pin_to_irq_node",
+    "callees": ["__add_pin_to_irq_node", "add_pin_to_irq_node.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__eoi_ioapic_pin.part.0",
+    "callees": ["__ioapic_read_entry", "__ioapic_write_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_pin_to_irq_node.part.0",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_ioapic_saved_registers.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_ioapic_idx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_deactivate",
+    "callees": ["ioapic_mask_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_activate",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioapic_configure_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_free",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__remove_pin_from_irq", "irq_domain_free_irqs_top", "irq_domain_get_irq_data", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_alloc",
+    "callees": ["_printk", "add_pin_to_irq_node", "irq_domain_alloc_irqs_parent", "irq_domain_get_irq_data", "irq_find_mapping", "kfree", "kzalloc", "mp_irqdomain_get_attr", "mp_preconfigure_entry", "mp_register_handler"],
+    "global_reads": ["apic_verbosity", "legacy_pic", "x86_vector_domain"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_preconfigure_entry",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_get_attr",
+    "callees": ["__acpi_get_override_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_ioapic_registered",
+    "callees": [],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_unregister_ioapic",
+    "callees": ["_printk", "free_ioapic_saved_registers", "ioapic_destroy_irqdomain", "irq_get_irq_data", "memset", "mp_map_gsi_to_irq", "native_set_fixmap", "release_resource"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_register_ioapic",
+    "callees": ["_printk", "alloc_ioapic_saved_registers", "bad_ioapic_register", "io_apic_get_redir_entries", "io_apic_get_version", "io_apic_set_fixmap", "io_apic_unique_id", "mp_irqdomain_create", "native_set_fixmap"],
+    "global_reads": ["gsi_top", "ioapic_initialized", "nr_ioapics"],
+    "global_writes": ["gsi_top", "nr_ioapics"]
+  },
+  {
+    "name": "bad_ioapic_register",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic_pin",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_find_ioapic",
+    "callees": ["_printk"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_insert_resources",
+    "callees": ["_printk", "insert_resource"],
+    "global_reads": ["ioapic_resources", "nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_set_fixmap",
+    "callees": ["cachemode2protval", "native_set_fixmap"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_setup_resources",
+    "callees": ["memblock_alloc_try_nid", "panic", "snprintf"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": ["ioapic_resources"]
+  },
+  {
+    "name": "io_apic_get_version",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_unique_id",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "_find_first_zero_bit", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "memset"],
+    "global_reads": ["apic_verbosity", "nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_dynirq_lower_bound",
+    "callees": [],
+    "global_reads": ["gsi_top", "ioapic_dynirq_base"],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_get_redir_entries",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_init_ops",
+    "callees": ["register_syscore_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_resume",
+    "callees": ["restore_ioapic_entries", "resume_ioapic_id"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "resume_ioapic_id",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_IO_APIC",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "check_timer", "init_IO_APIC_traps", "mp_irqdomain_create", "setup_IO_APIC_irqs", "sync_Arb_IDs"],
+    "global_reads": ["apic_verbosity", "ioapic_is_disabled", "legacy_pic", "nr_ioapics"],
+    "global_writes": ["io_apic_irqs", "ioapic_initialized"]
+  },
+  {
+    "name": "ioapic_destroy_irqdomain",
+    "callees": ["irq_domain_free_fwnode", "irq_domain_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_irqdomain_create",
+    "callees": ["__irq_domain_alloc_fwnode", "irq_domain_create_hierarchy", "irq_domain_free_fwnode", "irq_find_matching_fwspec"],
+    "global_reads": ["ioapic_dynirq_base"],
+    "global_writes": ["ioapic_dynirq_base"]
+  },
+  {
+    "name": "check_timer",
+    "callees": ["__SCT__apic_call_write", "_printk", "apic_is_x2apic_enabled", "clear_IO_APIC_pin", "find_irq_entry", "find_isa_irq_apic", "find_isa_irq_pin", "irq_domain_activate_irq", "irq_domain_deactivate_irq", "irq_get_irq_data", "irq_is_level", "irqd_cfg", "lapic_register_intr", "mp_alloc_timer_irq", "panic", "replace_pin_at_irq_node", "timer_irq_works", "unlock_ExtINT_logic", "unmask_ioapic_irq"],
+    "global_reads": ["apic_verbosity", "disable_timer_pin_1", "global_clock_event", "legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "disable_timer_pin_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["disable_timer_pin_1"]
+  },
+  {
+    "name": "unlock_ExtINT_logic",
+    "callees": ["__const_udelay", "clear_IO_APIC_pin", "find_isa_irq_apic", "find_isa_irq_pin", "ioapic_read_entry", "ioapic_write_entry", "memset", "read_apic_id", "rtc_cmos_read", "rtc_cmos_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ack_lapic_irq",
+    "callees": ["__SCT__apic_call_eoi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmask_lapic_irq",
+    "callees": ["__SCT__apic_call_read", "__SCT__apic_call_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mask_lapic_irq",
+    "callees": ["__SCT__apic_call_read", "__SCT__apic_call_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_IO_APIC_traps",
+    "callees": ["irq_cfg", "irq_get_next_irq", "irq_set_chip"],
+    "global_reads": ["io_apic_irqs", "legacy_pic", "nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_irq_get_chip_state",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_set_affinity",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioapic_configure_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_configure_entry",
+    "callees": ["__ioapic_write_entry", "ioapic_setup_msg_from_msi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_setup_msg_from_msi",
+    "callees": ["irq_chip_compose_msi_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_ir_ack_level",
+    "callees": ["apic_ack_irq", "eoi_ioapic_pin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_ack_level",
+    "callees": ["__SCT__apic_call_eoi", "__SCT__apic_call_read", "eoi_ioapic_pin", "ioapic_finish_move", "ioapic_prepare_move", "irq_complete_move", "irqd_cfg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_finish_move",
+    "callees": ["__builtin_expect", "io_apic_level_ack_pending", "irq_move_masked_irq", "unmask_ioapic_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_prepare_move",
+    "callees": ["__builtin_expect", "mask_ioapic_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_level_ack_pending",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "startup_ioapic_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "io_apic_modify_irq"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "timer_irq_works",
+    "callees": ["delay_with_tsc", "delay_without_tsc"],
+    "global_reads": ["jiffies", "no_timer_check"],
+    "global_writes": []
+  },
+  {
+    "name": "delay_without_tsc",
+    "callees": ["__delay"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "delay_with_tsc",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "notimercheck",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["no_timer_check"]
+  },
+  {
+    "name": "restore_boot_irq_mode",
+    "callees": [],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "native_restore_boot_irq_mode",
+    "callees": ["disconnect_bsp_APIC", "ioapic_write_entry", "memset", "read_apic_id"],
+    "global_reads": ["apic_is_disabled", "smp_found_config"],
+    "global_writes": []
+  },
+  {
+    "name": "enable_IO_APIC",
+    "callees": ["_printk", "clear_IO_APIC", "find_isa_irq_apic", "find_isa_irq_pin", "ioapic_read_entry"],
+    "global_reads": ["ioapic_is_disabled", "legacy_pic", "nr_ioapics"],
+    "global_writes": ["nr_ioapics"]
+  },
+  {
+    "name": "print_IO_APICs",
+    "callees": ["_printk", "irq_get_irq_data", "irq_get_next_irq", "print_IO_APIC"],
+    "global_reads": ["mp_irq_entries", "nr_ioapics", "nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "print_IO_APIC",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "io_apic_print_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_print_entries",
+    "callees": ["_printk", "ioapic_read_entry", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_zap_locks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_IO_APIC_irqs",
+    "callees": ["_printk", "find_irq_entry", "pin_2_irq"],
+    "global_reads": ["apic_verbosity", "nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "IO_APIC_get_PCI_irq_vector",
+    "callees": ["__builtin_constant_p", "_printk", "pin_2_irq"],
+    "global_reads": ["apic_verbosity", "io_apic_irqs", "mp_irq_entries", "nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_unmap_irq",
+    "callees": ["irq_domain_free_irqs", "irq_get_irq_data", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_map_gsi_to_irq",
+    "callees": ["find_irq_entry", "mp_find_ioapic", "mp_find_ioapic_pin", "mp_map_pin_to_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pin_2_irq",
+    "callees": ["_printk", "mp_map_pin_to_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_map_pin_to_irq",
+    "callees": ["__builtin_constant_p", "alloc_irq_from_domain", "alloc_isa_irq_from_domain", "ioapic_copy_alloc_attr", "irq_find_mapping", "irq_get_irq_data", "mp_check_pin_attr", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_irq_from_domain",
+    "callees": ["__irq_domain_alloc_irqs", "__warn_printk"],
+    "global_reads": ["ioapic_initialized", "legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_check_pin_attr",
+    "callees": ["irq_get_irq_data", "mp_register_handler"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "mp_register_handler",
+    "callees": ["__irq_set_handler", "irq_modify_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_copy_alloc_attr",
+    "callees": ["__acpi_get_override_irq", "copy_irq_alloc_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_set_alloc_attr",
+    "callees": ["init_irq_alloc_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_override_irq",
+    "callees": ["__acpi_get_override_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_get_override_irq",
+    "callees": ["find_irq_entry", "irq_active_low", "irq_is_level", "mp_find_ioapic", "mp_find_ioapic_pin"],
+    "global_reads": ["ioapic_is_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_is_level",
+    "callees": ["__builtin_constant_p", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_active_low",
+    "callees": ["__builtin_constant_p", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_isa_irq_apic",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["mp_irq_entries", "nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "find_isa_irq_pin",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["mp_irq_entries"],
+    "global_writes": []
+  },
+  {
+    "name": "restore_ioapic_entries",
+    "callees": ["ioapic_write_entry"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "mask_ioapic_entries",
+    "callees": ["ioapic_write_entry"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "save_ioapic_entries",
+    "callees": ["ioapic_read_entry"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "clear_IO_APIC",
+    "callees": ["clear_IO_APIC_pin"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "clear_IO_APIC_pin",
+    "callees": ["__eoi_ioapic_pin", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ioapic_mask_entry", "ioapic_read_entry", "ioapic_write_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eoi_ioapic_pin",
+    "callees": ["__eoi_ioapic_pin", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__eoi_ioapic_pin",
+    "callees": ["__eoi_ioapic_pin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unmask_ioapic_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "io_apic_modify_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mask_ioapic_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "io_apic_modify_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_sync",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_modify_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "replace_pin_at_irq_node",
+    "callees": ["add_pin_to_irq_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_pin_to_irq_node",
+    "callees": ["__add_pin_to_irq_node", "add_pin_to_irq_node.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__remove_pin_from_irq",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__add_pin_to_irq_node",
+    "callees": ["_printk", "kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_mask_entry",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_write_entry",
+    "callees": ["__ioapic_write_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ioapic_write_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioapic_read_entry",
+    "callees": ["__ioapic_read_entry", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ioapic_read_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_io_apic_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_early_ioapic_init",
+    "callees": ["alloc_ioapic_saved_registers"],
+    "global_reads": ["legacy_pic", "nr_ioapics"],
+    "global_writes": ["io_apic_irqs"]
+  },
+  {
+    "name": "free_ioapic_saved_registers",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_ioapic_saved_registers",
+    "callees": ["alloc_ioapic_saved_registers.part.0", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mp_save_irq",
+    "callees": ["_printk", "memcmp", "panic"],
+    "global_reads": ["apic_verbosity", "mp_irq_entries"],
+    "global_writes": ["mp_irq_entries"]
+  },
+  {
+    "name": "parse_noapic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["ioapic_is_disabled", "noioapicquirk", "noioapicreroute"]
+  },
+  {
+    "name": "disable_ioapic_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["ioapic_is_disabled", "noioapicquirk", "noioapicreroute"]
+  },
+  {
+    "name": "mpc_ioapic_addr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpc_ioapic_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_apic_id",
+    "callees": ["__SCT__apic_call_read"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "apic_is_x2apic_enabled",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_apic_init_mappings",
+    "callees": ["_printk", "io_apic_set_fixmap", "ioapic_setup_resources", "memblock_alloc_try_nid", "panic"],
+    "global_reads": ["apic_verbosity", "nr_ioapics", "page_offset_base", "phys_base", "smp_found_config"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_find_mapping",
+    "callees": ["__irq_resolve_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

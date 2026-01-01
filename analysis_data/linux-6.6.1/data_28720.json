@@ -1,0 +1,212 @@
+[
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_alloc_common",
+    "callees": ["kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_destroy.part.0",
+    "callees": ["kmem_cache_free", "kvfree"],
+    "global_reads": ["avtab_node_cachep", "avtab_xperms_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_cache_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["avtab_node_cachep", "avtab_xperms_cachep"]
+  },
+  {
+    "name": "avtab_write",
+    "callees": ["avtab_write_item", "put_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_write_item",
+    "callees": ["put_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_read",
+    "callees": ["_printk", "avtab_alloc", "avtab_destroy.part.0", "avtab_read_item", "next_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_insertf",
+    "callees": ["avtab_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_read_item",
+    "callees": ["_printk", "memset", "next_entry", "policydb_class_isvalid", "policydb_type_isvalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_alloc_dup",
+    "callees": ["avtab_alloc_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_alloc",
+    "callees": ["avtab_alloc_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_alloc_common",
+    "callees": ["kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_destroy",
+    "callees": ["avtab_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_search_node_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_search_node",
+    "callees": ["avtab_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_insert_nonunique",
+    "callees": ["avtab_hash", "avtab_insert_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_insert",
+    "callees": ["avtab_hash", "avtab_insert_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "avtab_insert_node",
+    "callees": ["kmem_cache_alloc", "kmem_cache_free"],
+    "global_reads": ["avtab_node_cachep", "avtab_xperms_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "put_entry",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_entry",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

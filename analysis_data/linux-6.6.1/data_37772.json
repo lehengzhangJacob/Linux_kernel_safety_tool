@@ -1,0 +1,146 @@
+[
+  {
+    "name": "io_check_error.part.0",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unknown_nmi_error.part.0",
+    "callees": ["_printk", "nmi_panic"],
+    "global_reads": ["panic_on_unrecovered_nmi", "unknown_nmi_panic"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_serr_error.part.0",
+    "callees": ["_printk", "nmi_panic"],
+    "global_reads": ["panic_on_unrecovered_nmi"],
+    "global_writes": []
+  },
+  {
+    "name": "local_touch_nmi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "restart_nmi",
+    "callees": [],
+    "global_reads": ["ignore_nmis"],
+    "global_writes": ["ignore_nmis"]
+  },
+  {
+    "name": "stop_nmi",
+    "callees": [],
+    "global_reads": ["ignore_nmis"],
+    "global_writes": ["ignore_nmis"]
+  },
+  {
+    "name": "exc_nmi",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "default_do_nmi", "irqentry_nmi_enter", "irqentry_nmi_exit"],
+    "global_reads": ["ignore_nmis"],
+    "global_writes": []
+  },
+  {
+    "name": "default_do_nmi",
+    "callees": ["__builtin_constant_p", "_raw_spin_trylock", "_raw_spin_unlock", "io_check_error", "nmi_handle", "pci_serr_error", "run_crash_ipi_callback", "unknown_nmi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unknown_nmi_error",
+    "callees": ["__builtin_constant_p", "nmi_handle", "unknown_nmi_error.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_check_error",
+    "callees": ["_printk", "io_check_error.part.0", "nmi_handle", "nmi_panic", "show_regs"],
+    "global_reads": ["panic_on_io_nmi"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_serr_error",
+    "callees": ["nmi_handle", "pci_serr_error.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_nmi_handler",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "strcmp", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__register_nmi_handler",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_handle",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "nmi_check_duration", "sched_clock", "trace_nmi_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_check_duration",
+    "callees": ["___ratelimit", "_printk"],
+    "global_reads": ["nmi_longest_ns"],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_warning_debugfs",
+    "callees": ["debugfs_create_u64"],
+    "global_reads": ["arch_debugfs_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "setup_unknown_nmi_panic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["unknown_nmi_panic"]
+  },
+  {
+    "name": "perf_trace_nmi_handler",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_nmi_handler",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_nmi_handler",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_nmi_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_nmi_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nmi_handler",
+    "callees": ["__SCT__tp_func_nmi_handler", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

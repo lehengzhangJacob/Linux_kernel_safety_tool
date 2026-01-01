@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_init",
+    "callees": ["__builtin_expect", "_printk", "alloc_chrdev_region", "class_create", "class_destroy"],
+    "global_reads": ["pps_class"],
+    "global_writes": ["pps_class"]
+  },
+  {
+    "name": "pps_exit",
+    "callees": ["class_destroy", "unregister_chrdev_region"],
+    "global_reads": ["pps_class", "pps_devt"],
+    "global_writes": []
+  },
+  {
+    "name": "pps_lookup_dev",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "idr_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_unregister_cdev",
+    "callees": ["device_destroy"],
+    "global_reads": ["pps_class"],
+    "global_writes": []
+  },
+  {
+    "name": "pps_register_cdev",
+    "callees": ["__builtin_expect", "_printk", "cdev_add", "cdev_del", "cdev_init", "device_create", "idr_alloc", "idr_remove", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["pps_class", "pps_devt"],
+    "global_writes": []
+  },
+  {
+    "name": "pps_device_destruct",
+    "callees": ["cdev_del", "idr_remove", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_release",
+    "callees": ["kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_open",
+    "callees": ["kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_compat_ioctl",
+    "callees": ["_copy_from_user", "_copy_to_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "memcpy", "pps_cdev_ioctl", "pps_cdev_pps_fetch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_ioctl",
+    "callees": ["__builtin_expect", "_copy_from_user", "_copy_to_user", "_dev_err", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "capable", "pps_cdev_pps_fetch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_fasync",
+    "callees": ["fasync_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_cdev_poll",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

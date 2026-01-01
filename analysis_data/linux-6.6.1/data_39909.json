@@ -1,0 +1,146 @@
+[
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_step.part.0",
+    "callees": ["set_task_blockstep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_step",
+    "callees": ["enable_single_step", "enable_step.part.0", "set_task_blockstep", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_step.part.0",
+    "callees": ["set_task_blockstep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_disable_single_step",
+    "callees": ["clear_ti_thread_flag", "set_task_blockstep", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_enable_block_step",
+    "callees": ["enable_step"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_enable_single_step",
+    "callees": ["enable_step"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_step",
+    "callees": ["enable_single_step", "enable_step.part.0", "set_task_blockstep", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_task_blockstep",
+    "callees": ["clear_ti_thread_flag", "native_read_msr", "native_write_msr", "set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_single_step",
+    "callees": ["__builtin_expect", "clear_ti_thread_flag", "is_setting_trap_flag", "set_ti_thread_flag", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_setting_trap_flag",
+    "callees": ["access_process_vm", "convert_ip_to_linear"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "convert_ip_to_linear",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

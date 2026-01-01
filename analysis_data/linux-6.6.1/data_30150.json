@@ -1,0 +1,56 @@
+[
+  {
+    "name": "setup_init_pkru",
+    "callees": ["kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_init_pkru_value",
+    "callees": ["debugfs_create_file"],
+    "global_reads": ["arch_debugfs_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "init_pkru_write_file",
+    "callees": ["_copy_from_user", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_pkru_read_file",
+    "callees": ["simple_read_from_buffer", "sprintf"],
+    "global_reads": ["init_pkru_value"],
+    "global_writes": []
+  },
+  {
+    "name": "__arch_override_mprotect_pkey",
+    "callees": ["execute_only_pkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__execute_only_pkey",
+    "callees": ["arch_set_user_pkey_access", "mm_pkey_alloc", "read_pkru"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mm_pkey_alloc",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "execute_only_pkey",
+    "callees": ["__execute_only_pkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_pkru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,284 @@
+[
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_retrieve_args",
+    "callees": ["cast_to_nlm", "lock_to_openmode", "nlm_lookup_file", "nlmsvc_locks_init_private", "nlmsvc_lookup_host", "nlmsvc_release_host", "nsm_monitor"],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_granted",
+    "callees": ["nlmclnt_grant"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback",
+    "callees": ["nlm_alloc_call", "nlm_async_reply", "nlmsvc_lookup_host", "nlmsvc_release_call", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback",
+    "callees": ["nlm_alloc_call", "nlm_async_reply", "nlmsvc_lookup_host", "nlmsvc_release_call", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback",
+    "callees": ["nlm_alloc_call", "nlm_async_reply", "nlmsvc_lookup_host", "nlmsvc_release_call", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback",
+    "callees": ["nlm_alloc_call", "nlm_async_reply", "nlmsvc_lookup_host", "nlmsvc_release_call", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_granted",
+    "callees": ["nlmclnt_grant"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_release_call.part.0",
+    "callees": ["kfree", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_sm_notify.part.0",
+    "callees": ["_printk", "svc_print_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_unused",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_granted_res",
+    "callees": ["nlmsvc_grant_reply"],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_sm_notify",
+    "callees": ["nlm_host_rebooted", "nlm_privileged_requester", "nlmsvc_proc_sm_notify.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_free_all",
+    "callees": ["nlmsvc_free_host_resources", "nlmsvc_release_host", "nlmsvc_retrieve_args"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_nm_lock",
+    "callees": ["__nlmsvc_proc_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_unshare",
+    "callees": ["cast_to_nlm", "locks_in_grace", "nlm_release_file", "nlmsvc_release_host", "nlmsvc_release_lockowner", "nlmsvc_retrieve_args", "nlmsvc_unshare_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_share",
+    "callees": ["cast_to_nlm", "locks_in_grace", "nlm_release_file", "nlmsvc_release_host", "nlmsvc_release_lockowner", "nlmsvc_retrieve_args", "nlmsvc_share_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_granted_msg",
+    "callees": ["nlmsvc_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_unlock_msg",
+    "callees": ["nlmsvc_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_cancel_msg",
+    "callees": ["nlmsvc_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_lock_msg",
+    "callees": ["nlmsvc_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_test_msg",
+    "callees": ["nlmsvc_callback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback",
+    "callees": ["nlm_alloc_call", "nlm_async_reply", "nlmsvc_lookup_host", "nlmsvc_release_call", "nlmsvc_release_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback_release",
+    "callees": ["nlmsvc_release_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_release_call",
+    "callees": ["__refcount_sub_and_test", "nlmsvc_release_call.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_callback_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_granted",
+    "callees": ["__nlmsvc_proc_granted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_unlock",
+    "callees": ["__nlmsvc_proc_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_unlock",
+    "callees": ["cast_to_nlm", "locks_in_grace", "nlm_release_file", "nlmsvc_release_host", "nlmsvc_release_lockowner", "nlmsvc_retrieve_args", "nlmsvc_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_cancel",
+    "callees": ["__nlmsvc_proc_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_cancel",
+    "callees": ["cast_to_nlm", "locks_in_grace", "nlm_release_file", "nlmsvc_cancel_blocked", "nlmsvc_release_host", "nlmsvc_release_lockowner", "nlmsvc_retrieve_args"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_lock",
+    "callees": ["__nlmsvc_proc_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_lock",
+    "callees": ["cast_to_nlm", "nlm_release_file", "nlmsvc_lock", "nlmsvc_release_host", "nlmsvc_release_lockowner", "nlmsvc_retrieve_args"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_test",
+    "callees": ["__nlmsvc_proc_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsvc_proc_test",
+    "callees": ["cast_to_nlm", "nlm_release_file", "nlmsvc_put_lockowner", "nlmsvc_release_host", "nlmsvc_retrieve_args", "nlmsvc_testlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_proc_null",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_retrieve_args",
+    "callees": ["cast_to_nlm", "lock_to_openmode", "nlm_lookup_file", "nlmsvc_locks_init_private", "nlmsvc_lookup_host", "nlmsvc_release_host", "nsm_monitor"],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "cast_to_nlm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_privileged_requester",
+    "callees": ["__builtin_bswap16", "__nlm_privileged_request6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlm_privileged_request6",
+    "callees": ["__builtin_bswap16", "__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "name": "create_lockd_listener.part.0",
+    "callees": ["svc_xprt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_lockd_listener",
+    "callees": ["create_lockd_listener.part.0", "svc_find_xprt", "svc_xprt_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_put.part.0",
+    "callees": ["__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_lockd_family.part.0",
+    "callees": ["create_lockd_listener"],
+    "global_reads": ["nlm_tcpport"],
+    "global_writes": []
+  },
+  {
+    "name": "create_lockd_listener.part.0",
+    "callees": ["svc_xprt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_dispatch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_nlm",
+    "callees": ["lockd_remove_procfs", "nlm_shutdown_hosts", "unregister_pernet_subsys", "unregister_sysctl_table"],
+    "global_reads": ["nlm_sysctl_table"],
+    "global_writes": []
+  },
+  {
+    "name": "init_nlm",
+    "callees": ["lockd_create_procfs", "register_pernet_subsys", "register_sysctl_sz", "unregister_pernet_subsys", "unregister_sysctl_table"],
+    "global_reads": ["nlm_sysctl_table"],
+    "global_writes": ["nlm_sysctl_table"]
+  },
+  {
+    "name": "lockd_exit_net",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__warn_printk"],
+    "global_reads": ["__already_done", "lockd_net_id"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "lockd_init_net",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "init_timer_key"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "param_set_timeout",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "param_set_grace_period",
+    "callees": ["simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "param_set_port",
+    "callees": ["simple_strtol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_authenticate",
+    "callees": ["lockd_authenticate.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_callback",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_down",
+    "callees": ["lockd_down_net", "lockd_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["nlmsvc_serv"],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_up",
+    "callees": ["lockd_get", "lockd_put", "lockd_up_net", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["nlmsvc_serv"],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_put",
+    "callees": ["__builtin_expect", "lockd_put.part.0", "svc_set_num_threads", "timer_delete_sync", "unregister_inet6addr_notifier", "unregister_inetaddr_notifier"],
+    "global_reads": ["nlmsvc_serv", "nlmsvc_users"],
+    "global_writes": ["nlmsvc_serv", "nlmsvc_users"]
+  },
+  {
+    "name": "lockd_get",
+    "callees": ["_printk", "kref_put", "register_inet6addr_notifier", "register_inetaddr_notifier", "svc_create", "svc_set_num_threads"],
+    "global_reads": ["nlm_max_connections", "nlm_timeout", "nlmsvc_serv", "nlmsvc_users"],
+    "global_writes": ["nlm_timeout", "nlmsvc_serv", "nlmsvc_timeout", "nlmsvc_users"]
+  },
+  {
+    "name": "lockd_inet6addr_event",
+    "callees": ["__ipv6_addr_type", "svc_age_temp_xprts_now"],
+    "global_reads": ["nlmsvc_serv"],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_inetaddr_event",
+    "callees": ["svc_age_temp_xprts_now"],
+    "global_reads": ["nlmsvc_serv"],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_down_net",
+    "callees": ["__builtin_unreachable", "__rcu_read_lock", "__rcu_read_unlock", "_printk", "cancel_delayed_work_sync", "locks_end_grace", "nlm_shutdown_hosts_net", "svc_rpcb_cleanup", "svc_xprt_destroy_all"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_up_net",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "make_socks", "set_grace_period", "svc_bind"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "make_socks",
+    "callees": ["_printk", "create_lockd_family", "svc_rpcb_cleanup", "svc_xprt_destroy_all"],
+    "global_reads": ["warned"],
+    "global_writes": ["warned"]
+  },
+  {
+    "name": "create_lockd_family",
+    "callees": ["create_lockd_family.part.0", "create_lockd_listener"],
+    "global_reads": ["nlm_udpport"],
+    "global_writes": []
+  },
+  {
+    "name": "create_lockd_listener",
+    "callees": ["create_lockd_listener.part.0", "svc_find_xprt", "svc_xprt_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockd",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cancel_delayed_work_sync", "kthread_should_stop", "locks_end_grace", "nlm_shutdown_hosts", "nlmsvc_invalidate_all", "nlmsvc_retry_blocked", "set_freezable", "svc_exit_thread", "svc_recv"],
+    "global_reads": ["lockd_net_id", "nlm_max_connections", "nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "set_grace_period",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cancel_delayed_work_sync", "get_lockd_grace_period", "locks_start_grace", "schedule_delayed_work"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "grace_ender",
+    "callees": ["locks_end_grace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_lockd_grace_period",
+    "callees": [],
+    "global_reads": ["nlm_grace_period", "nlm_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_request_retry",
+    "callees": ["svc_wake_up"],
+    "global_reads": ["nlmsvc_serv"],
+    "global_writes": []
+  }
+]

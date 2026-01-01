@@ -1,0 +1,128 @@
+[
+  {
+    "name": "propagate_one",
+    "callees": ["is_subdir", "propagate_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "umount_one",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagate_one.part.0",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "copy_tree", "count_mounts", "mnt_set_mountpoint"],
+    "global_reads": ["dest_master", "first_source", "last_dest", "last_source", "list"],
+    "global_writes": ["last_dest", "last_source"]
+  },
+  {
+    "name": "propagate_umount",
+    "callees": ["__lookup_mnt", "__propagate_umount", "cleanup_umount_visitations", "propagation_next", "restore_mounts", "umount_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_umount_visitations",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "restore_mounts",
+    "callees": ["mnt_change_mountpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "umount_list",
+    "callees": ["umount_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__propagate_umount",
+    "callees": ["umount_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "umount_one",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagate_mount_unlock",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__lookup_mnt", "propagation_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagate_mount_busy",
+    "callees": ["__lookup_mnt", "find_topper", "mnt_get_count", "propagation_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagation_would_overmount",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_topper",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagate_mnt",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "next_group", "propagate_one"],
+    "global_reads": [],
+    "global_writes": ["dest_master", "first_source", "last_dest", "last_source", "list"]
+  },
+  {
+    "name": "propagate_one",
+    "callees": ["is_subdir", "propagate_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_group",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "propagation_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "change_mnt_propagation",
+    "callees": ["do_make_slave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_dominating_id",
+    "callees": ["get_peer_under_root"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_peer_under_root",
+    "callees": ["is_path_reachable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

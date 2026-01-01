@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_disable",
+    "callees": ["acpi_pci_irq_lookup", "acpi_pci_link_free_irq", "acpi_unregister_gsi", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_enable",
+    "callees": ["_dev_warn", "acpi_pci_irq_lookup", "acpi_pci_irq_valid", "acpi_pci_link_allocate_irq", "acpi_register_gsi", "kfree", "snprintf"],
+    "global_reads": ["acpi_irq_model"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_valid",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_lookup",
+    "callees": ["_dev_warn", "acpi_pci_irq_find_prt_entry", "acpi_reroute_boot_interrupt", "pci_swizzle_interrupt_pin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bridge_has_boot_interrupt_variant",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_find_prt_entry",
+    "callees": ["acpi_get_irq_routing_table", "acpi_pci_irq_check_entry", "is_acpi_device_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_check_entry",
+    "callees": ["acpi_get_handle", "do_prt_fixups", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_prt_fixups",
+    "callees": ["_printk", "dmi_check_system", "strcmp", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

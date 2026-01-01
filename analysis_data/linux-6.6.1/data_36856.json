@@ -1,0 +1,182 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_handle_is_aborted.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_handle_is_aborted.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_ind_remove_space",
+    "callees": ["__brelse", "__builtin_expect", "__builtin_unreachable", "ext4_block_to_path", "ext4_find_shared", "ext4_free_branches", "ext4_free_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_ind_truncate",
+    "callees": ["__brelse", "ext4_block_to_path", "ext4_es_remove_extent", "ext4_find_shared", "ext4_free_branches", "ext4_free_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_free_branches",
+    "callees": ["__brelse", "__builtin_expect", "__ext4_error_inode", "__ext4_handle_dirty_metadata", "__ext4_journal_get_write_access", "ext4_free_blocks", "ext4_free_branches", "ext4_free_data", "ext4_handle_is_aborted.part.0", "ext4_ind_truncate_ensure_credits", "ext4_inode_block_valid", "ext4_sb_bread"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_free_data",
+    "callees": ["__ext4_error_inode", "__ext4_handle_dirty_metadata", "__ext4_journal_get_write_access", "ext4_clear_blocks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_clear_blocks",
+    "callees": ["__ext4_error_inode", "__ext4_std_error", "ext4_free_blocks", "ext4_free_data_revoke_credits", "ext4_ind_truncate_ensure_credits", "ext4_inode_block_valid", "ext4_inode_journal_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_ind_truncate_ensure_credits",
+    "callees": ["__builtin_expect", "__ext4_journal_ensure_credits", "__ext4_journal_get_write_access", "down_write", "ext4_blocks_for_truncate", "ext4_ind_trunc_restart_fn", "jbd2__journal_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_ind_trans_blocks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_ind_map_blocks",
+    "callees": ["__brelse", "__builtin_expect", "__builtin_unreachable", "__ext4_error_inode", "_printk", "ext4_alloc_branch", "ext4_blks_to_allocate", "ext4_block_to_path", "ext4_da_update_reserve_space", "ext4_find_near", "ext4_get_branch", "ext4_splice_branch", "ext4_update_inode_fsync_trans", "memset", "trace_ext4_ind_map_blocks_enter", "trace_ext4_ind_map_blocks_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_splice_branch",
+    "callees": ["__builtin_expect", "__ext4_handle_dirty_metadata", "__ext4_journal_get_write_access", "__ext4_mark_inode_dirty", "ext4_free_blocks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_alloc_branch",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__ext4_handle_dirty_metadata", "__ext4_journal_get_create_access", "__getblk_gfp", "ext4_free_blocks", "ext4_mb_new_blocks", "ext4_new_meta_blocks", "lock_buffer", "memset", "unlock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_blks_to_allocate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_get_branch",
+    "callees": ["__builtin_expect", "__getblk_gfp", "bh_uptodate_or_lock", "ext4_check_blockref", "ext4_read_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_block_to_path",
+    "callees": ["__ext4_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_ind_map_blocks_exit",
+    "callees": ["__SCT__tp_func_ext4_ind_map_blocks_exit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_ind_map_blocks_enter",
+    "callees": ["__SCT__tp_func_ext4_ind_map_blocks_enter", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_free_data_revoke_credits",
+    "callees": ["ext4_inode_journal_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

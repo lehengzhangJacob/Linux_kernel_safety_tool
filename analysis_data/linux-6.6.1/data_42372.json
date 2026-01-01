@@ -1,0 +1,170 @@
+[
+  {
+    "name": "kstrtoull_from_user",
+    "callees": ["_copy_from_user", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoll_from_user",
+    "callees": ["_copy_from_user", "kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtos8_from_user",
+    "callees": ["_copy_from_user", "kstrtos8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtou8_from_user",
+    "callees": ["_copy_from_user", "kstrtou8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtos16_from_user",
+    "callees": ["_copy_from_user", "kstrtos16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtou16_from_user",
+    "callees": ["_copy_from_user", "kstrtou16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoint_from_user",
+    "callees": ["_copy_from_user", "kstrtoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtouint_from_user",
+    "callees": ["_copy_from_user", "kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtol_from_user",
+    "callees": ["kstrtoll_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoul_from_user",
+    "callees": ["kstrtoull_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoll_from_user",
+    "callees": ["_copy_from_user", "kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoull_from_user",
+    "callees": ["_copy_from_user", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtobool_from_user",
+    "callees": ["_copy_from_user", "kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtobool",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtos8",
+    "callees": ["kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtou8",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtos16",
+    "callees": ["kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtou16",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoint",
+    "callees": ["kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtouint",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_kstrtol",
+    "callees": ["kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_kstrtoul",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoll",
+    "callees": ["_kstrtoull", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kstrtoull",
+    "callees": ["_kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_kstrtoull",
+    "callees": ["_parse_integer", "_parse_integer_fixup_radix"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_parse_integer",
+    "callees": ["_parse_integer_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_parse_integer_limit",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_parse_integer_fixup_radix",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

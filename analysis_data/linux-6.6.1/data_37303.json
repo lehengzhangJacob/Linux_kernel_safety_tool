@@ -1,0 +1,74 @@
+[
+  {
+    "name": "tracing_sched_unregister",
+    "callees": ["tracepoint_probe_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_stop_sched_switch",
+    "callees": ["mutex_lock", "mutex_unlock", "tracing_sched_unregister"],
+    "global_reads": ["sched_cmdline_ref", "sched_tgid_ref"],
+    "global_writes": ["sched_cmdline_ref", "sched_tgid_ref"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_stop_tgid_record",
+    "callees": ["tracing_stop_sched_switch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_start_tgid_record",
+    "callees": ["tracing_start_sched_switch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_stop_cmdline_record",
+    "callees": ["tracing_stop_sched_switch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_start_cmdline_record",
+    "callees": ["tracing_start_sched_switch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_stop_sched_switch",
+    "callees": ["mutex_lock", "mutex_unlock", "tracing_sched_unregister"],
+    "global_reads": ["sched_cmdline_ref", "sched_tgid_ref"],
+    "global_writes": ["sched_cmdline_ref", "sched_tgid_ref"]
+  },
+  {
+    "name": "tracing_start_sched_switch",
+    "callees": ["mutex_lock", "mutex_unlock", "tracing_sched_register"],
+    "global_reads": ["sched_cmdline_ref", "sched_tgid_ref"],
+    "global_writes": ["sched_cmdline_ref", "sched_tgid_ref"]
+  },
+  {
+    "name": "tracing_sched_unregister",
+    "callees": ["tracepoint_probe_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "probe_sched_wakeup",
+    "callees": ["tracing_record_taskinfo_sched_switch"],
+    "global_reads": ["sched_cmdline_ref", "sched_tgid_ref"],
+    "global_writes": []
+  },
+  {
+    "name": "probe_sched_switch",
+    "callees": ["tracing_record_taskinfo_sched_switch"],
+    "global_reads": ["sched_cmdline_ref", "sched_tgid_ref"],
+    "global_writes": []
+  }
+]

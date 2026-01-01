@@ -1,0 +1,56 @@
+[
+  {
+    "name": "udplite_sk_init.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "udplite4_register",
+    "callees": ["_printk", "inet_add_protocol", "inet_register_protosw", "proto_register", "proto_unregister", "register_pernet_subsys", "udp_table_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite4_proc_exit_net",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite4_proc_init_net",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite_err",
+    "callees": ["__udp4_lib_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite_rcv",
+    "callees": ["__udp4_lib_rcv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite_sk_init",
+    "callees": ["__builtin_expect", "udp_init_sock", "udplite_sk_init.part.0"],
+    "global_reads": ["__already_done"],
+    "global_writes": []
+  },
+  {
+    "name": "udp_lib_close",
+    "callees": ["sk_common_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_lib_hash",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

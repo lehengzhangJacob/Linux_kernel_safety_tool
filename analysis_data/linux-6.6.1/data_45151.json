@@ -1,0 +1,188 @@
+[
+  {
+    "name": "sip_sprintf_addr.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_sprintf_addr.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_sprintf_addr.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_sprintf_addr_port.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_sprintf_addr_port.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_sprintf_addr.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip_init",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "nf_ct_helper_expectfn_register", "nf_nat_helper_register"],
+    "global_reads": ["nf_nat_sip_hooks"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip_fini",
+    "callees": ["nf_ct_helper_expectfn_unregister", "nf_nat_helper_unregister", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sdp_media",
+    "callees": ["__builtin_bswap16", "nf_ct_expect_related_report", "nf_ct_helper_log", "nf_ct_unexpect_related", "nf_nat_sdp_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sdp_session",
+    "callees": ["mangle_content_len", "mangle_sdp_packet", "sip_sprintf_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sdp_port",
+    "callees": ["mangle_content_len", "mangle_packet", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sdp_addr",
+    "callees": ["mangle_content_len", "mangle_sdp_packet", "sip_sprintf_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mangle_sdp_packet",
+    "callees": ["ct_sip_get_sdp_header", "mangle_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mangle_content_len",
+    "callees": ["ct_sip_get_header", "ct_sip_get_sdp_header", "mangle_packet", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip_expect",
+    "callees": ["__builtin_bswap16", "mangle_packet", "nf_ct_ext_find", "nf_ct_helper_log", "nf_ct_unexpect_related", "nf_nat_exp_find_port", "sip_sprintf_addr_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip_expected",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "nf_ct_ext_find", "nf_nat_setup_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip_seq_adjust",
+    "callees": ["nf_ct_seqadj_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_sip",
+    "callees": ["__builtin_bswap16", "ct_sip_parse_address_param", "ct_sip_parse_header_uri", "ct_sip_parse_numerical_param", "ct_sip_parse_request", "mangle_packet", "map_addr", "map_sip_addr", "nf_ct_ext_find", "nf_ct_helper_log", "nf_nat_mangle_udp_packet", "sip_sprintf_addr", "skb_ensure_writable", "sprintf", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_sip_addr",
+    "callees": ["ct_sip_parse_header_uri", "map_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_addr",
+    "callees": ["__builtin_bswap16", "mangle_packet", "nf_ct_ext_find", "sip_sprintf_addr_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mangle_packet",
+    "callees": ["__nf_nat_mangle_tcp_packet", "nf_nat_mangle_udp_packet"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

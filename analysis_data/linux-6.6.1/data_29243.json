@@ -1,0 +1,116 @@
+[
+  {
+    "name": "crypto_xor.part.0",
+    "callees": ["__crypto_xor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor",
+    "callees": ["__builtin_constant_p", "crypto_xor.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor.part.0",
+    "callees": ["__crypto_xor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor",
+    "callees": ["__builtin_constant_p", "crypto_xor.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor.part.0",
+    "callees": ["__crypto_xor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor",
+    "callees": ["__builtin_constant_p", "crypto_xor.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor.part.0",
+    "callees": ["__crypto_xor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_module_exit",
+    "callees": ["crypto_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_module_init",
+    "callees": ["crypto_register_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmac_create",
+    "callees": ["crypto_attr_alg_name", "crypto_check_attr_type", "crypto_grab_spawn", "crypto_inst_setname", "kzalloc", "shash_free_singlespawn_instance", "shash_register_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmac_exit_tfm",
+    "callees": ["crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmac_clone_tfm",
+    "callees": ["__builtin_expect", "crypto_clone_cipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmac_init_tfm",
+    "callees": ["__builtin_expect", "crypto_spawn_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_digest_final",
+    "callees": ["crypto_cipher_encrypt_one", "crypto_xor", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_digest_update",
+    "callees": ["crypto_cipher_encrypt_one", "crypto_xor", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_digest_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cmac_digest_setkey",
+    "callees": ["__builtin_bswap64", "crypto_cipher_encrypt_one", "crypto_cipher_setkey", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_xor",
+    "callees": ["__builtin_constant_p", "crypto_xor.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

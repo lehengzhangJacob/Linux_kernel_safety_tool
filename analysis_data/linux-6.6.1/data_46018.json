@@ -1,0 +1,140 @@
+[
+  {
+    "name": "regmap_printable",
+    "callees": ["regmap_cached", "regmap_precious", "regmap_readable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_calc_tot_len.part.0",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_debugfs_free_dump_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_debugfs_get_dump_start.part.0",
+    "callees": ["__builtin_expect", "kzalloc", "mutex_lock", "mutex_unlock", "regmap_debugfs_free_dump_cache", "regmap_printable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_calc_tot_len.part.0",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_debugfs_initcall",
+    "callees": ["debugfs_create_dir", "kfree", "mutex_lock", "mutex_unlock", "regmap_debugfs_init"],
+    "global_reads": [],
+    "global_writes": ["regmap_debugfs_root"]
+  },
+  {
+    "name": "regmap_debugfs_exit",
+    "callees": ["debugfs_remove", "kfree", "mutex_lock", "mutex_unlock", "regmap_debugfs_free_dump_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_debugfs_init",
+    "callees": ["__mutex_init", "debugfs_create_bool", "debugfs_create_dir", "debugfs_create_file", "kasprintf", "kfree", "kzalloc", "mutex_lock", "mutex_unlock", "rb_first", "rb_next", "regmap_readable", "strcmp"],
+    "global_reads": ["dummy_index", "regmap_debugfs_root"],
+    "global_writes": ["dummy_index"]
+  },
+  {
+    "name": "regmap_cache_bypass_write_file",
+    "callees": ["_dev_warn", "add_taint", "debugfs_file_get", "debugfs_file_put", "kstrtobool_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_cache_only_write_file",
+    "callees": ["_dev_err", "_dev_warn", "add_taint", "debugfs_file_get", "debugfs_file_put", "kstrtobool_from_user", "regcache_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_access_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_access_show",
+    "callees": ["regmap_precious", "regmap_readable", "regmap_volatile", "regmap_writeable", "seq_printf", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_reg_ranges_read_file",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__copy_overflow", "__kmalloc", "_copy_to_user", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy", "mutex_lock", "mutex_unlock", "regmap_calc_tot_len.part.0", "regmap_debugfs_get_dump_start.part.0", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_range_read_file",
+    "callees": ["regmap_read_debugfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_map_read_file",
+    "callees": ["regmap_read_debugfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_read_debugfs",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__builtin_return_address", "__kmalloc", "_copy_to_user", "copy_overflow", "kfree", "kmalloc_large", "kmalloc_trace", "memset", "regmap_calc_tot_len.part.0", "regmap_debugfs_get_dump_start.part.0", "regmap_next_readable_reg", "regmap_read", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_next_readable_reg",
+    "callees": ["mutex_lock", "mutex_unlock", "regmap_printable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_printable",
+    "callees": ["regmap_cached", "regmap_precious", "regmap_readable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_debugfs_free_dump_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regmap_name_read_file",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "simple_read_from_buffer", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

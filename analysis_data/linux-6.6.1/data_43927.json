@@ -1,0 +1,320 @@
+[
+  {
+    "name": "audit_free_lsm_field",
+    "callees": ["kfree", "security_audit_rule_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_rule",
+    "callees": ["audit_free_lsm_field", "audit_put_watch", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_lsm_field",
+    "callees": ["kfree", "security_audit_rule_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_rule",
+    "callees": ["audit_free_lsm_field", "audit_put_watch", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_lsm_field",
+    "callees": ["kfree", "security_audit_rule_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_rule",
+    "callees": ["audit_free_lsm_field", "audit_put_watch", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_class_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_class_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_class_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_pack_string",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_pack_string",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_pack_string",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_pack_string",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_unpack_string.part.0",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_log_rule_change.part.0",
+    "callees": ["audit_log_end", "audit_log_format", "audit_log_key", "audit_log_session_info", "audit_log_start", "audit_log_task_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_update_lsm_rules",
+    "callees": ["mutex_lock", "mutex_unlock", "update_lsm_rule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_lsm_rule",
+    "callees": ["__builtin_expect", "audit_dupe_rule", "audit_panic", "audit_remove_mark", "call_rcu", "security_audit_rule_known"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_filter",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "audit_comparator", "audit_exe_compare", "audit_gid_comparator", "audit_uid_comparator", "security_audit_rule_match", "security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_compare_dname_path",
+    "callees": ["parent_len", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parent_len",
+    "callees": ["strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_gid_comparator",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_uid_comparator",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_comparator",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_list_rules_send",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__refcount_add", "audit_list_rules", "kfree", "kmalloc_trace", "kthread_create_on_node", "mutex_lock", "mutex_unlock", "put_net", "skb_queue_purge_reason", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_rule_change",
+    "callees": ["__builtin_expect", "audit_add_rule", "audit_data_to_entry", "audit_del_rule", "audit_free_rule", "audit_log_rule_change.part.0", "audit_remove_mark"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "audit_list_rules",
+    "callees": ["__builtin_expect", "audit_krule_to_data", "audit_make_reply", "kfree", "skb_queue_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_del_rule",
+    "callees": ["audit_find_rule", "audit_match_signal", "audit_put_tree", "audit_remove_mark_rule", "audit_remove_tree_rule", "audit_remove_watch_rule", "call_rcu", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["audit_n_rules", "audit_signals"],
+    "global_writes": ["audit_n_rules", "audit_signals"]
+  },
+  {
+    "name": "audit_add_rule",
+    "callees": ["audit_add_tree_rule", "audit_add_watch", "audit_find_rule", "audit_match_signal", "audit_put_tree", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["audit_n_rules", "audit_signals", "prio_high", "prio_low"],
+    "global_writes": ["audit_n_rules", "audit_signals", "prio_high", "prio_low"]
+  },
+  {
+    "name": "audit_find_rule",
+    "callees": ["audit_compare_rule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_dupe_rule",
+    "callees": ["__builtin_expect", "audit_dupe_exe", "audit_dupe_lsm_field", "audit_free_rule", "audit_get_watch", "audit_init_entry", "audit_remove_mark", "kstrdup", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_compare_rule",
+    "callees": ["audit_mark_path", "audit_tree_path", "audit_watch_path", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_krule_to_data",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "audit_mark_path", "audit_pack_string", "audit_tree_path", "audit_watch_path", "kmalloc_large", "kmalloc_trace", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_pack_string",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_data_to_entry",
+    "callees": ["__builtin_expect", "_printk", "audit_alloc_mark", "audit_field_valid", "audit_free_rule", "audit_make_tree", "audit_put_tree", "audit_remove_mark", "audit_to_entry_common", "audit_to_inode", "audit_to_watch", "audit_unpack_string", "kfree", "security_audit_rule_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_to_entry_common",
+    "callees": ["__builtin_expect", "_printk", "audit_init_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_signal",
+    "callees": ["audit_classify_arch", "audit_match_class_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_class_bits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_match_class",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_to_inode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_unpack_string",
+    "callees": ["audit_unpack_string.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_init_entry",
+    "callees": ["__builtin_expect", "kfree", "kmalloc_array", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_rule_rcu",
+    "callees": ["audit_free_rule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_rule",
+    "callees": ["audit_free_lsm_field", "audit_put_watch", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_free_lsm_field",
+    "callees": ["kfree", "security_audit_rule_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_register_class",
+    "callees": ["kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

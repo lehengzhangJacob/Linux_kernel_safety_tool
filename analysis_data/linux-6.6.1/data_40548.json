@@ -1,0 +1,116 @@
+[
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_number",
+    "callees": ["match_strlcpy", "simple_strtol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_number",
+    "callees": ["match_strlcpy", "simple_strtol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strdup",
+    "callees": ["kmemdup_nul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_strlcpy",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_wildcard",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_hex",
+    "callees": ["match_number"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_octal",
+    "callees": ["match_number"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_u64",
+    "callees": ["match_u64int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_uint",
+    "callees": ["kstrtouint", "match_strlcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_int",
+    "callees": ["match_number"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_number",
+    "callees": ["match_strlcpy", "simple_strtol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_token",
+    "callees": ["match_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_one",
+    "callees": ["simple_strtol", "simple_strtoul", "strchr", "strcmp", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

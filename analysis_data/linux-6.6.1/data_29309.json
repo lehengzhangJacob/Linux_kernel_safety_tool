@@ -1,0 +1,314 @@
+[
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_low",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_low",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_range_set",
+    "callees": ["ebitmap_cpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_low",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_isvalid",
+    "callees": ["ebitmap_contains", "symtab_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_high",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_range_isvalid",
+    "callees": ["mls_level_dom", "mls_level_isvalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_start_positive",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_start_positive",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive.part.0",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive",
+    "callees": ["_find_next_bit", "ebitmap_next_positive.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive.part.0",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive",
+    "callees": ["_find_next_bit", "ebitmap_next_positive.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_eq",
+    "callees": ["ebitmap_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive.part.0",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_import_netlbl_cat",
+    "callees": ["ebitmap_destroy", "ebitmap_netlbl_import", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_export_netlbl_cat",
+    "callees": ["ebitmap_netlbl_export"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_import_netlbl_lvl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_export_netlbl_lvl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_compute_sid",
+    "callees": ["mls_context_cpy", "mls_context_cpy_high", "mls_context_cpy_low", "mls_context_glblub", "mls_range_set", "policydb_rangetr_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_convert_context",
+    "callees": ["ebitmap_next_positive", "ebitmap_set_bit", "ebitmap_start_positive", "symtab_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_setup_user_range",
+    "callees": ["mls_level_dom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_range_set",
+    "callees": ["ebitmap_cpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_from_string",
+    "callees": ["kfree", "kstrdup", "mls_context_to_sid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_to_sid",
+    "callees": ["ebitmap_cpy", "ebitmap_set_bit", "mls_context_cpy", "sidtab_search_entry", "strchr", "symtab_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_isvalid",
+    "callees": ["mls_level_dom", "mls_range_isvalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_range_isvalid",
+    "callees": ["mls_level_dom", "mls_level_isvalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_isvalid",
+    "callees": ["ebitmap_contains", "symtab_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_sid_to_context",
+    "callees": ["ebitmap_next_positive", "ebitmap_start_positive", "mls_level_eq", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_compute_context_len",
+    "callees": ["ebitmap_next_positive", "ebitmap_start_positive", "mls_level_eq", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_glblub",
+    "callees": ["ebitmap_and"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_high",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy_low",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_dom",
+    "callees": ["ebitmap_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_level_eq",
+    "callees": ["ebitmap_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_next_positive",
+    "callees": ["_find_next_bit", "ebitmap_next_positive.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ebitmap_start_positive",
+    "callees": ["_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

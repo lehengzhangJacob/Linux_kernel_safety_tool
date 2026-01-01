@@ -1,0 +1,170 @@
+[
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand_var_event",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "copy_overflow", "dump_var_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_mark_closing",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_done.part.0",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kvfree", "schedule_timeout_uninterruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_info_pool",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_delete",
+    "callees": ["kfree", "snd_seq_pool_done", "snd_seq_pool_mark_closing"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_new",
+    "callees": ["__init_waitqueue_head", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_done",
+    "callees": ["__builtin_expect", "__wake_up", "snd_seq_pool_done.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_mark_closing",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_init",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kvfree", "kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_pool_poll_wait",
+    "callees": ["poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_event_dup",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "memcpy", "snd_seq_cell_alloc", "snd_seq_cell_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_cell_free",
+    "callees": ["__builtin_expect", "__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_expand_var_event_at",
+    "callees": ["expand_var_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_expand_var_event",
+    "callees": ["__builtin_constant_p", "expand_var_event", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand_var_event",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "copy_overflow", "dump_var_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_copy_in_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_copy_in_kernel",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_dump_var_event",
+    "callees": ["dump_var_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dump_var_event",
+    "callees": ["_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

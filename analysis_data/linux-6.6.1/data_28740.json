@@ -1,0 +1,140 @@
+[
+  {
+    "name": "find_next_ancestor",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_init",
+    "callees": ["kernfs_lock_init", "kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["kernfs_iattrs_cache", "kernfs_node_cache"]
+  },
+  {
+    "name": "kernfs_lock_init",
+    "callees": ["__builtin_expect", "kernfs_mutex_init", "kmalloc_large"],
+    "global_reads": [],
+    "global_writes": ["kernfs_locks"]
+  },
+  {
+    "name": "kernfs_mutex_init",
+    "callees": ["__mutex_init"],
+    "global_reads": ["kernfs_locks"],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_kill_sb",
+    "callees": ["down_write", "kfree", "kill_anon_super", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_free_fs_context",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_get_tree",
+    "callees": ["__builtin_expect", "deactivate_locked_super", "down_write", "kernfs_fill_super", "kzalloc", "lockref_get", "sget_fc", "up_write", "uuid_gen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_super_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_set_super",
+    "callees": ["set_anon_super_fc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_test_super",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_node_dentry",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dput", "find_next_ancestor", "lockref_get", "lookup_positive_unlocked", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_ancestor",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "kernfs_root_from_sb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_get_parent_dentry",
+    "callees": ["d_obtain_alias", "kernfs_get_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_fh_to_parent",
+    "callees": ["__kernfs_fh_to_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_fh_to_dentry",
+    "callees": ["__kernfs_fh_to_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__kernfs_fh_to_dentry",
+    "callees": ["d_obtain_alias", "kernfs_find_and_get_node_by_id", "kernfs_get_inode", "kernfs_get_parent", "kernfs_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_encode_fh",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_statfs",
+    "callees": ["simple_statfs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_sop_show_path",
+    "callees": ["seq_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_sop_show_options",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

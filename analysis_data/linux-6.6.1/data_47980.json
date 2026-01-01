@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ipv6_sysctl_unregister",
+    "callees": ["unregister_net_sysctl_table", "unregister_pernet_subsys"],
+    "global_reads": ["ip6_header"],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_sysctl_register",
+    "callees": ["register_net_sysctl_sz", "register_pernet_subsys", "unregister_net_sysctl_table"],
+    "global_reads": ["ip6_header"],
+    "global_writes": ["ip6_header"]
+  },
+  {
+    "name": "ipv6_sysctl_net_exit",
+    "callees": ["kfree", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_sysctl_net_init",
+    "callees": ["ipv6_icmp_sysctl_init", "ipv6_icmp_sysctl_table_size", "ipv6_route_sysctl_init", "ipv6_route_sysctl_table_size", "kfree", "kmemdup", "register_net_sysctl_sz", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_rt6_multipath_hash_fields",
+    "callees": ["call_netevent_notifiers", "proc_douintvec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_rt6_multipath_hash_policy",
+    "callees": ["call_netevent_notifiers", "proc_dou8vec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

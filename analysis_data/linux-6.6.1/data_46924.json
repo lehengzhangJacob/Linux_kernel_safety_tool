@@ -1,0 +1,122 @@
+[
+  {
+    "name": "rfkill_schedule_evsw_rfkillall.part.0",
+    "callees": ["rfkill_schedule_global_op"],
+    "global_reads": ["rfkill_master_switch_op"],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_evsw_rfkillall",
+    "callees": ["rfkill_schedule_evsw_rfkillall.part.0", "rfkill_schedule_global_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_event.part.0",
+    "callees": ["rfkill_schedule_toggle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_toggle.part.0",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rfkill_schedule_ratelimited"],
+    "global_reads": ["rfkill_op_pending"],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_evsw_rfkillall.part.0",
+    "callees": ["rfkill_schedule_global_op"],
+    "global_reads": ["rfkill_master_switch_op"],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_ratelimited.part.0",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": ["rfkill_last_scheduled"]
+  },
+  {
+    "name": "rfkill_handler_exit",
+    "callees": ["cancel_delayed_work_sync", "input_unregister_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_handler_init",
+    "callees": ["input_register_handler"],
+    "global_reads": ["jiffies", "rfkill_master_switch_mode"],
+    "global_writes": ["rfkill_last_scheduled", "rfkill_master_switch_op"]
+  },
+  {
+    "name": "rfkill_disconnect",
+    "callees": ["input_close_device", "input_unregister_handle", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_start",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "rfkill_schedule_evsw_rfkillall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_connect",
+    "callees": ["input_open_device", "input_register_handle", "input_unregister_handle", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_event",
+    "callees": ["rfkill_event.part.0", "rfkill_schedule_evsw_rfkillall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_evsw_rfkillall",
+    "callees": ["rfkill_schedule_evsw_rfkillall.part.0", "rfkill_schedule_global_op"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_toggle",
+    "callees": ["rfkill_is_epo_lock_active", "rfkill_schedule_toggle.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_schedule_global_op",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mod_delayed_work_on", "rfkill_is_epo_lock_active", "rfkill_schedule_ratelimited"],
+    "global_reads": ["jiffies", "system_wq"],
+    "global_writes": ["rfkill_last_scheduled", "rfkill_op", "rfkill_op_pending"]
+  },
+  {
+    "name": "rfkill_schedule_ratelimited",
+    "callees": ["queue_delayed_work_on", "rfkill_schedule_ratelimited.part.0"],
+    "global_reads": ["jiffies", "rfkill_last_scheduled", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "rfkill_op_handler",
+    "callees": ["__builtin_constant_p", "__rfkill_handle_global_op", "__rfkill_handle_normal_op", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "rfkill_is_epo_lock_active"],
+    "global_reads": ["rfkill_op", "rfkill_op_pending"],
+    "global_writes": ["rfkill_op_pending"]
+  },
+  {
+    "name": "__rfkill_handle_normal_op",
+    "callees": ["rfkill_get_global_sw_state", "rfkill_switch_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rfkill_handle_global_op",
+    "callees": ["__warn_printk", "rfkill_epo", "rfkill_remove_epo_lock", "rfkill_restore_states", "rfkill_switch_all"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

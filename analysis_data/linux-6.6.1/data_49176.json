@@ -1,0 +1,380 @@
+[
+  {
+    "name": "__ieee80211_set_default_key",
+    "callees": ["drv_set_default_unicast_key", "ieee80211_check_fast_xmit_iface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_set_default_key",
+    "callees": ["drv_set_default_unicast_key", "ieee80211_check_fast_xmit_iface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_free_unused",
+    "callees": ["__builtin_expect", "ieee80211_key_free_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_key_destroy",
+    "callees": ["decrease_tailroom_need_count", "ieee80211_key_free_common", "schedule_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_vlan_tailroom_need_count.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_destroy.part.0",
+    "callees": ["__ieee80211_key_destroy", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_destroy.part.0",
+    "callees": ["__ieee80211_key_destroy", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_disable_hw_accel.part.0",
+    "callees": ["_printk", "drv_set_key", "increment_tailroom_need_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_vlan_tailroom_need_count.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_mic_failure.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_iter_keys_rcu.part.0",
+    "callees": ["_ieee80211_iter_keys_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_switch_links",
+    "callees": ["__builtin_expect", "ieee80211_key_disable_hw_accel", "ieee80211_key_enable_hw_accel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_replay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_mic_failure",
+    "callees": ["ieee80211_key_mic_failure.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_gtk_rekey_add",
+    "callees": ["__builtin_expect", "ieee80211_key_alloc", "ieee80211_key_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_remove_key",
+    "callees": ["ieee80211_key_free", "increment_tailroom_need_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_key_rx_seq",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_get_key_rx_seq",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_gtk_rekey_notify",
+    "callees": ["cfg80211_gtk_rekey_notify", "trace_api_gtk_rekey_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_delayed_tailroom_dec",
+    "callees": ["decrease_tailroom_need_count", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_sta_keys",
+    "callees": ["__ieee80211_key_destroy", "ieee80211_key_replace", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_keys",
+    "callees": ["__builtin_expect", "__ieee80211_key_destroy", "cancel_delayed_work_sync", "ieee80211_free_keys_iface", "mutex_lock", "mutex_unlock", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_key_list",
+    "callees": ["__ieee80211_key_destroy", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_remove_link_keys",
+    "callees": ["ieee80211_key_replace", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_free_keys_iface",
+    "callees": ["decrease_tailroom_need_count", "ieee80211_key_replace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_iter_keys_rcu",
+    "callees": ["_ieee80211_iter_keys_rcu", "ieee80211_iter_keys_rcu.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_iter_keys_rcu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_iter_keys",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_reenable_keys",
+    "callees": ["__builtin_constant_p", "ieee80211_key_enable_hw_accel", "increment_tailroom_need_count", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_free",
+    "callees": ["ieee80211_key_destroy.part.0", "ieee80211_key_replace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_link",
+    "callees": ["ieee80211_key_destroy.part.0", "ieee80211_key_free", "ieee80211_key_free_unused", "ieee80211_key_identical", "ieee80211_key_replace", "increment_tailroom_need_count", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_identical",
+    "callees": ["__crypto_memneq", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_free_unused",
+    "callees": ["__builtin_expect", "ieee80211_key_free_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_key_destroy",
+    "callees": ["decrease_tailroom_need_count", "ieee80211_key_free_common", "schedule_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_free_common",
+    "callees": ["aead_key_free", "ieee80211_aes_cmac_key_free", "ieee80211_aes_gmac_key_free", "kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_alloc",
+    "callees": ["__builtin_expect", "aead_key_setup_encrypt", "ieee80211_aes_cmac_key_setup", "ieee80211_aes_gmac_key_setup", "kfree", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_replace",
+    "callees": ["__builtin_expect", "__ieee80211_set_default_key", "__warn_printk", "_ieee80211_set_tx_key", "ieee80211_check_fast_rx", "ieee80211_key_disable_hw_accel", "ieee80211_key_enable_hw_accel", "ieee80211_pairwise_rekey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_default_beacon_key",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_default_mgmt_key",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_default_key",
+    "callees": ["__ieee80211_set_default_key", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_set_default_key",
+    "callees": ["drv_set_default_unicast_key", "ieee80211_check_fast_xmit_iface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_pairwise_rekey",
+    "callees": ["___ieee80211_stop_tx_ba_session", "___ratelimit", "_ieee80211_hw_check", "_printk", "ieee80211_clear_fast_xmit", "ieee80211_flush_queues", "ieee80211_sta_tear_down_BA_sessions", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_tx_key",
+    "callees": ["_ieee80211_set_tx_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_set_tx_key",
+    "callees": ["_ieee80211_hw_check", "ieee80211_check_fast_xmit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_disable_hw_accel",
+    "callees": ["__SCT__might_resched", "ieee80211_key_disable_hw_accel.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_key_enable_hw_accel",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "_ieee80211_hw_check", "_printk", "decrease_tailroom_need_count", "drv_set_key", "increment_tailroom_need_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decrease_tailroom_need_count",
+    "callees": ["__builtin_expect", "update_vlan_tailroom_need_count.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "increment_tailroom_need_count",
+    "callees": ["synchronize_net", "update_vlan_tailroom_need_count.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_set_default_unicast_key",
+    "callees": ["__builtin_expect", "__warn_printk", "trace_drv_return_void", "trace_drv_set_default_unicast_key"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "trace_api_gtk_rekey_notify",
+    "callees": ["__SCT__tp_func_api_gtk_rekey_notify", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_set_default_unicast_key",
+    "callees": ["__SCT__tp_func_drv_set_default_unicast_key", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_void",
+    "callees": ["__SCT__tp_func_drv_return_void", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ieee80211_hw_check",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

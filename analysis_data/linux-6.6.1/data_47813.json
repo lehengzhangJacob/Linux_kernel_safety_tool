@@ -1,0 +1,62 @@
+[
+  {
+    "name": "i915_debugfs_params",
+    "callees": ["__builtin_expect", "debugfs_create_bool", "debugfs_create_dir", "debugfs_create_file", "debugfs_create_file_unsafe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_charp_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_charp_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_uint_write",
+    "callees": ["kstrtobool_from_user", "kstrtouint_from_user", "notify_guc", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_uint_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_uint_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_int_write",
+    "callees": ["kstrtobool_from_user", "kstrtoint_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notify_guc",
+    "callees": ["intel_guc_global_policies_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_int_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_param_int_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

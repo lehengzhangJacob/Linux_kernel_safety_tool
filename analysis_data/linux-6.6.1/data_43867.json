@@ -1,0 +1,98 @@
+[
+  {
+    "name": "trace_nfs4_cb_getattr.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_getattr",
+    "callees": ["__SCT__tp_func_nfs4_cb_getattr", "cpu_online", "trace_nfs4_cb_getattr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_getattr.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_recall",
+    "callees": ["__SCT__tp_func_nfs4_cb_recall", "cpu_online", "trace_nfs4_cb_recall.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_getattr.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_iput_and_deactive.part.0",
+    "callees": ["iput", "nfs_sb_deactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_iput_and_deactive.part.0",
+    "callees": ["iput", "nfs_sb_deactive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_getattr.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_callback_recall",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "nfs_async_inode_return_delegation", "nfs_delegation_find_inode", "nfs_iput_and_deactive.part.0", "trace_nfs4_cb_recall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs4_callback_getattr",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "nfs4_get_valid_delegation", "nfs_delegation_find_inode", "nfs_iput_and_deactive.part.0", "trace_nfs4_cb_getattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_recall",
+    "callees": ["__SCT__tp_func_nfs4_cb_recall", "cpu_online", "trace_nfs4_cb_recall.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_cb_getattr",
+    "callees": ["__SCT__tp_func_nfs4_cb_getattr", "cpu_online", "trace_nfs4_cb_getattr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

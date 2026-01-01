@@ -1,0 +1,266 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_bus_notify.part.0",
+    "callees": ["usb_create_sysfs_dev_files", "usb_create_sysfs_intf_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__each_dev.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_interface.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_exit",
+    "callees": ["bus_unregister", "bus_unregister_notifier", "class_unregister", "debugfs_lookup_and_remove", "idr_destroy", "usb_acpi_unregister", "usb_deregister", "usb_deregister_device_driver", "usb_devio_cleanup", "usb_hub_cleanup", "usb_major_cleanup", "usb_release_quirk_list"],
+    "global_reads": ["nousb", "usb_debug_root"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_init",
+    "callees": ["_printk", "bus_register", "bus_register_notifier", "bus_unregister", "bus_unregister_notifier", "class_register", "class_unregister", "debugfs_lookup_and_remove", "usb_acpi_register", "usb_acpi_unregister", "usb_debugfs_init", "usb_deregister", "usb_devio_cleanup", "usb_devio_init", "usb_hub_cleanup", "usb_hub_init", "usb_init_pool_max", "usb_major_cleanup", "usb_major_init", "usb_register_device_driver", "usb_register_driver"],
+    "global_reads": ["nousb", "usb_debug_root", "usbcore_name"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_debugfs_init",
+    "callees": ["debugfs_create_file"],
+    "global_reads": ["usb_debug_root"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_bus_notify",
+    "callees": ["usb_bus_notify.part.0", "usb_remove_sysfs_dev_files", "usb_remove_sysfs_intf_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_free_coherent",
+    "callees": ["hcd_buffer_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_alloc_coherent",
+    "callees": ["hcd_buffer_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__usb_get_extra_descriptor",
+    "callees": ["_printk"],
+    "global_reads": ["usbcore_name"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_current_frame_number",
+    "callees": ["usb_hcd_get_frame_number"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_lock_device_for_reset",
+    "callees": ["msleep", "mutex_trylock"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_intf_get_dma_device",
+    "callees": ["get_device", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_intf",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_intf",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_put_dev",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_dev",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_alloc_dev",
+    "callees": ["__builtin_expect", "dev_set_name", "device_initialize", "device_set_of_node_from_dev", "kfree", "kzalloc", "pm_runtime_set_autosuspend_delay", "snprintf", "usb_dev_authorized", "usb_enable_endpoint", "usb_get_hcd", "usb_hcd_find_raw_port_number", "usb_put_hcd"],
+    "global_reads": ["jiffies", "usb_autosuspend_delay"],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_authorized",
+    "callees": ["usb_hub_to_struct_hub"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_devnode",
+    "callees": ["kasprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_restore",
+    "callees": ["usb_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_poweroff",
+    "callees": ["usb_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_thaw",
+    "callees": ["usb_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_freeze",
+    "callees": ["usb_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_resume",
+    "callees": ["usb_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_suspend",
+    "callees": ["usb_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_complete",
+    "callees": ["usb_resume_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_prepare",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dev_uevent",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_dev",
+    "callees": ["kfree", "usb_destroy_configuration", "usb_put_hcd", "usb_release_bos_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_for_each_dev",
+    "callees": ["bus_for_each_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__each_dev",
+    "callees": ["__each_dev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_find_interface",
+    "callees": ["bus_find_device", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_interface",
+    "callees": ["__find_interface.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_altnum_to_altsetting",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_ifnum_to_if",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_find_alt_setting",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_check_int_endpoints",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_check_bulk_endpoints",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_find_common_endpoints_reverse",
+    "callees": ["match_endpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_find_common_endpoints",
+    "callees": ["match_endpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_endpoint",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_disabled",
+    "callees": [],
+    "global_reads": ["nousb"],
+    "global_writes": []
+  }
+]

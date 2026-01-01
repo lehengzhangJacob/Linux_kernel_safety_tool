@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_bos_descriptor",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_interface_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_bos_descriptor",
+    "callees": ["_dev_notice", "kfree", "kzalloc", "usb_get_descriptor", "usb_release_bos_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_bos_descriptor",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_get_configuration",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "_dev_err", "_dev_notice", "kfree", "kmalloc_large", "kmalloc_trace", "kzalloc", "msleep", "usb_get_descriptor", "usb_parse_configuration"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_destroy_configuration",
+    "callees": ["kfree", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_parse_configuration",
+    "callees": ["__builtin_expect", "_dev_notice", "kzalloc", "memcpy", "usb_parse_interface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_parse_interface",
+    "callees": ["_dev_notice", "kzalloc", "memcpy", "usb_parse_endpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_release_interface_cache",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_parse_endpoint",
+    "callees": ["_dev_notice", "config_endpoint_is_duplicate", "memcpy", "usb_endpoint_is_ignored", "usb_parse_ss_endpoint_companion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "config_endpoint_is_duplicate",
+    "callees": ["endpoint_is_duplicate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "endpoint_is_duplicate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_parse_ss_endpoint_companion",
+    "callees": ["_dev_notice", "memcpy", "usb_parse_ssp_isoc_endpoint_companion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_parse_ssp_isoc_endpoint_companion",
+    "callees": ["_dev_notice"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

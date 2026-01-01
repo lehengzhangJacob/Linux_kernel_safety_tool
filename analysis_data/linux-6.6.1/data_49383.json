@@ -1,0 +1,596 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_scr_write",
+    "callees": ["ahci_scr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_enable_ahci",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_scr_write",
+    "callees": ["ahci_scr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_enable_ahci",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_fill_cmd_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_scr_read",
+    "callees": ["ahci_scr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_fill_cmd_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_srst_pmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_deinit_port.part.0",
+    "callees": ["ahci_stop_fis_rx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_host_activate",
+    "callees": ["_dev_err", "_dev_warn", "ahci_host_activate_multi_irqs", "ata_host_activate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_host_activate_multi_irqs",
+    "callees": ["ata_host_register", "ata_host_start", "ata_port_desc", "devm_request_threaded_irq", "disable_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_set_em_messages",
+    "callees": [],
+    "global_reads": ["ahci_em_messages"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_print_info",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_stop",
+    "callees": ["__pm_runtime_idle", "_printk", "ahci_deinit_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_start",
+    "callees": ["_dev_info", "_dev_warn", "ahci_port_resume", "dev_driver_string", "devm_kfree", "devm_kmalloc", "dmam_alloc_attrs", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_suspend",
+    "callees": ["__pm_runtime_idle", "_printk", "acpi_storage_d3", "ahci_deinit_port", "ahci_handle_s2idle", "ahci_power_down", "ata_port_freeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_handle_s2idle",
+    "callees": ["ata_msleep"],
+    "global_reads": ["devslp_idle_timeout", "pm_suspend_global_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_resume",
+    "callees": ["__pm_runtime_resume", "ahci_pmp_attach", "ahci_pmp_detach", "ahci_power_up", "ahci_start_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pmp_detach",
+    "callees": ["ahci_disable_fbs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pmp_attach",
+    "callees": ["ahci_enable_fbs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_disable_fbs",
+    "callees": ["_dev_err", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_enable_fbs",
+    "callees": ["_dev_err", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_set_aggressive_devslp",
+    "callees": ["_dev_info", "_printk", "ata_dev_set_feature"],
+    "global_reads": ["devslp_idle_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_post_internal_cmd",
+    "callees": ["ahci_kick_engine"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_error_handler",
+    "callees": ["ata_class_enabled", "sata_pmp_error_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_thaw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_freeze",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_qc_ncq_fill_rtf",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_qc_fill_rtf",
+    "callees": ["ata_tf_from_fis"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_qc_issue",
+    "callees": ["ahci_sw_activity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_single_level_irq_intr",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ahci_handle_port_intr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_handle_port_intr",
+    "callees": ["_dev_warn", "ahci_port_intr", "ata_ratelimit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_multi_irqs_intr_hard",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ahci_handle_port_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_intr",
+    "callees": ["ahci_handle_port_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_handle_port_interrupt",
+    "callees": ["__builtin_expect", "ahci_error_intr", "ahci_qc_complete", "ahci_scr_write", "sata_async_notification", "sata_lpm_ignore_phy_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_qc_complete",
+    "callees": ["__builtin_expect", "ata_port_freeze", "ata_qc_complete_multiple"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_error_intr",
+    "callees": ["__builtin_expect", "ahci_fbs_dec_intr", "ahci_scr_read", "ahci_scr_write", "ata_ehi_clear_desc", "ata_ehi_push_desc", "ata_link_abort", "ata_link_next", "ata_port_abort", "ata_port_freeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_fbs_dec_intr",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__const_udelay", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_qc_prep",
+    "callees": ["ahci_fill_cmd_slot", "ahci_fill_sg", "ata_tf_to_fis", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pmp_qc_defer",
+    "callees": ["ata_std_qc_defer", "sata_pmp_qc_defer_cmd_switch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_fill_sg",
+    "callees": ["sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_postreset",
+    "callees": ["ata_std_postreset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_hardreset",
+    "callees": ["ahci_do_hardreset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_do_hardreset",
+    "callees": ["ahci_dev_classify", "ahci_port_clear_pending_irq", "ata_tf_init", "ata_tf_to_fis", "sata_link_hardreset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pmp_retry_softreset",
+    "callees": ["_printk", "ahci_do_softreset", "sata_srst_pmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_bad_pmp_check_ready",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_softreset",
+    "callees": ["ahci_do_softreset", "sata_srst_pmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_check_ready",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_do_softreset",
+    "callees": ["_printk", "ahci_dev_classify", "ahci_disable_fbs", "ahci_enable_fbs", "ahci_exec_polled_cmd", "ahci_kick_engine", "ata_msleep", "ata_tf_init", "ata_wait_after_reset", "jiffies_to_msecs"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_kick_engine",
+    "callees": ["ata_wait_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_fill_cmd_slot",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_dev_classify",
+    "callees": ["ata_port_classify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_dev_config",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_init_controller",
+    "callees": ["ahci_port_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_port_clear_pending_irq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_activity_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_activity_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_led_store",
+    "callees": ["kstrtouint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_led_show",
+    "callees": ["ata_link_next", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_transmit_led_message",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_reset_em",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_init_sw_activity",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_sw_activity_blink",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_reset_controller",
+    "callees": ["_dev_err", "_dev_info", "ahci_enable_ahci", "ahci_restore_initial_config", "ata_wait_register"],
+    "global_reads": ["ahci_skip_host_reset"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_start_port",
+    "callees": ["ahci_init_sw_activity", "ahci_start_fis_rx", "ata_link_next", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_set_lpm",
+    "callees": ["ahci_set_aggressive_devslp", "ata_msleep", "sata_link_scr_lpm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_stop_fis_rx",
+    "callees": ["ata_wait_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_start_fis_rx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_stop_engine",
+    "callees": ["_dev_err", "ahci_set_lpm", "ata_wait_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_start_engine",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_scr_write",
+    "callees": ["ahci_scr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_scr_read",
+    "callees": ["ahci_scr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_restore_initial_config",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_save_initial_config",
+    "callees": ["_dev_info", "_dev_warn", "ahci_enable_ahci", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_show_em_supported",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_store_em_buffer",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_read_em_buffer",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "__printk_ratelimit", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_show_port_cmd",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_show_host_version",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_show_host_cap2",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_show_host_caps",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_enable_ahci",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_class_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_srst_pmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

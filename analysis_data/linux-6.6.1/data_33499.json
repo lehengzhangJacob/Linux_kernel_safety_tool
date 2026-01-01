@@ -1,0 +1,68 @@
+[
+  {
+    "name": "zlib_adler32",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_adler32",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflateIncomp",
+    "callees": ["zlib_adler32", "zlib_updatewindow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflateEnd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflate",
+    "callees": ["inflate_fast", "memcpy", "zlib_adler32", "zlib_inflateSyncPacket", "zlib_inflate_table", "zlib_updatewindow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflateSyncPacket",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_updatewindow",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflateInit2",
+    "callees": ["zlib_inflateReset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflateReset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_inflate_workspacesize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_adler32",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

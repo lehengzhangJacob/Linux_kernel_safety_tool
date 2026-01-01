@@ -1,0 +1,32 @@
+[
+  {
+    "name": "mpi_tdiv_qr",
+    "callees": ["mpi_alloc_limb_space", "mpi_free_limb_space", "mpi_resize", "mpihelp_divmod_1", "mpihelp_divrem", "mpihelp_lshift", "mpihelp_mod_1", "mpihelp_rshift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_tdiv_r",
+    "callees": ["mpi_tdiv_qr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_fdiv_qr",
+    "callees": ["mpi_add", "mpi_copy", "mpi_free", "mpi_sub_ui", "mpi_tdiv_qr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_fdiv_q",
+    "callees": ["mpi_alloc", "mpi_fdiv_qr", "mpi_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mpi_fdiv_r",
+    "callees": ["mpi_add", "mpi_copy", "mpi_free", "mpi_tdiv_qr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

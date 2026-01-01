@@ -1,0 +1,14 @@
+[
+  {
+    "name": "netlbl_audit_start_common",
+    "callees": ["audit_log_format", "audit_log_start", "security_release_secctx", "security_secid_to_secctx"],
+    "global_reads": ["audit_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_init",
+    "callees": ["netlbl_calipso_genl_init", "netlbl_cipsov4_genl_init", "netlbl_mgmt_genl_init", "netlbl_unlabel_genl_init"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

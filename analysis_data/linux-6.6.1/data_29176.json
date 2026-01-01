@@ -1,0 +1,374 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_cache_disable.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_init_l3_cache.part.0",
+    "callees": ["amd_calc_l3_indices", "node_to_amd_nb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_cache_disable.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_ap_register",
+    "callees": ["__builtin_constant_p", "__cpuhp_setup_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_aps_init",
+    "callees": ["stop_machine"],
+    "global_reads": ["cache_aps_delayed_init", "memory_caching_control"],
+    "global_writes": ["cache_aps_delayed_init"]
+  },
+  {
+    "name": "cache_ap_offline",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_ap_online",
+    "callees": ["__builtin_constant_p", "stop_machine_from_inactive_cpu"],
+    "global_reads": ["cache_aps_delayed_init", "memory_caching_control"],
+    "global_writes": []
+  },
+  {
+    "name": "cache_bp_restore",
+    "callees": ["cache_cpu_init"],
+    "global_reads": ["memory_caching_control"],
+    "global_writes": []
+  },
+  {
+    "name": "cache_bp_init",
+    "callees": ["cache_cpu_init", "mtrr_bp_init", "pat_bp_init"],
+    "global_reads": ["memory_caching_control"],
+    "global_writes": []
+  },
+  {
+    "name": "cache_rendezvous_handler",
+    "callees": ["cache_cpu_init", "cpu_online"],
+    "global_reads": ["cache_aps_delayed_init"],
+    "global_writes": []
+  },
+  {
+    "name": "get_cache_aps_delayed_init",
+    "callees": [],
+    "global_reads": ["cache_aps_delayed_init"],
+    "global_writes": []
+  },
+  {
+    "name": "set_cache_aps_delayed_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["cache_aps_delayed_init"]
+  },
+  {
+    "name": "cache_cpu_init",
+    "callees": ["cache_disable", "cache_enable", "mtrr_generic_set_state", "pat_cpu_init"],
+    "global_reads": ["memory_caching_control"],
+    "global_writes": []
+  },
+  {
+    "name": "cache_enable",
+    "callees": ["_raw_spin_unlock", "flush_tlb_local", "mtrr_enable", "native_write_cr0", "native_write_cr4"],
+    "global_reads": ["saved_cr4"],
+    "global_writes": []
+  },
+  {
+    "name": "cache_disable",
+    "callees": ["_raw_spin_lock", "flush_tlb_local", "mtrr_disable", "native_write_cr0", "native_write_cr4"],
+    "global_reads": [],
+    "global_writes": ["saved_cr4"]
+  },
+  {
+    "name": "populate_cache_leaves",
+    "callees": ["__cache_cpumap_setup", "ci_leaf_init", "cpuid4_cache_lookup_regs", "get_cache_id", "get_cpu_cacheinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cache_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_cache_level",
+    "callees": ["get_cpu_cacheinfo"],
+    "global_reads": ["num_cache_leaves"],
+    "global_writes": []
+  },
+  {
+    "name": "ci_leaf_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cache_cpumap_setup",
+    "callees": ["__builtin_constant_p", "__cache_amd_cpumap_setup", "find_next_bit", "get_cpu_cacheinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cache_amd_cpumap_setup",
+    "callees": ["__builtin_constant_p", "cpu_online", "find_next_bit", "get_cpu_cacheinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_intel_cacheinfo",
+    "callees": ["cpu_detect_cache_sizes", "cpuid4_cache_lookup_regs", "find_num_cache_leaves"],
+    "global_reads": ["is_initialized", "num_cache_leaves"],
+    "global_writes": ["is_initialized", "num_cache_leaves"]
+  },
+  {
+    "name": "init_hygon_cacheinfo",
+    "callees": ["find_num_cache_leaves"],
+    "global_reads": [],
+    "global_writes": ["num_cache_leaves"]
+  },
+  {
+    "name": "init_amd_cacheinfo",
+    "callees": ["find_num_cache_leaves"],
+    "global_reads": [],
+    "global_writes": ["num_cache_leaves"]
+  },
+  {
+    "name": "cacheinfo_hygon_init_llc_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cacheinfo_amd_init_llc_id",
+    "callees": ["find_num_cache_leaves"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpuid4_cache_lookup_regs",
+    "callees": ["amd_cpuid4", "amd_init_l3_cache.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_get_priv_group",
+    "callees": ["init_amd_l3_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_amd_l3_attrs",
+    "callees": ["amd_nb_has_feature", "kmalloc_array"],
+    "global_reads": ["amd_l3_attrs"],
+    "global_writes": ["amd_l3_attrs"]
+  },
+  {
+    "name": "cache_private_attrs_is_visible",
+    "callees": ["amd_nb_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subcaches_store",
+    "callees": ["amd_set_subcaches", "capable", "find_first_bit", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subcaches_show",
+    "callees": ["amd_get_subcaches", "find_first_bit", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_disable_1_store",
+    "callees": ["store_cache_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_disable_0_store",
+    "callees": ["store_cache_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_cache_disable",
+    "callees": ["_printk", "amd_set_l3_disable_slot", "capable", "find_first_bit", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_set_l3_disable_slot",
+    "callees": ["amd_get_l3_disable_slot", "amd_l3_disable_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_l3_disable_index",
+    "callees": ["pci_write_config_dword", "wbinvd_on_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_disable_1_show",
+    "callees": ["show_cache_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_disable_0_show",
+    "callees": ["show_cache_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_calc_l3_indices",
+    "callees": ["pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_cpuid4",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

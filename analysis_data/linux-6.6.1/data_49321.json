@@ -1,0 +1,20 @@
+[
+  {
+    "name": "cb_free",
+    "callees": ["pci_lock_rescan_remove", "pci_stop_and_remove_bus_device", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cb_alloc",
+    "callees": ["cardbus_config_irq_and_cls", "pci_bus_add_devices", "pci_bus_assign_resources", "pci_bus_size_bridges", "pci_fixup_cardbus", "pci_lock_rescan_remove", "pci_scan_bridge", "pci_scan_slot", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cardbus_config_irq_and_cls",
+    "callees": ["cardbus_config_irq_and_cls", "pci_read_config_byte", "pci_set_cacheline_size", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

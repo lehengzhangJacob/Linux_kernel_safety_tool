@@ -1,0 +1,122 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_plane_unpin_fb",
+    "callees": ["intel_dpt_unpin", "intel_fb_uses_dpt", "intel_unpin_fb_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_plane_pin_fb",
+    "callees": ["__builtin_expect", "intel_dpt_pin", "intel_dpt_unpin", "intel_fb_uses_dpt", "intel_pin_and_fence_fb_obj", "intel_pin_fb_obj_dpt", "intel_plane_uses_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_unpin_fb_vma",
+    "callees": ["i915_vma_unpin_fence", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_pin_and_fence_fb_obj",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__refcount_add", "__warn_printk", "dev_driver_string", "i915_gem_object_attach_phys", "i915_gem_object_lock", "i915_gem_object_migrate", "i915_gem_object_pin_pages", "i915_gem_object_pin_to_display_plane", "i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init", "i915_vma_pin_fence", "intel_cursor_alignment", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_scanout_needs_vtd_wa", "intel_surf_alignment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_pin_pages",
+    "callees": ["__builtin_expect", "__i915_gem_object_get_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_ww_fini",
+    "callees": ["i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

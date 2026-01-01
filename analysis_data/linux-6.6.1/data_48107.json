@@ -1,0 +1,446 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_rc6",
+    "callees": ["intel_rc6_residency_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_get_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_rc6",
+    "callees": ["intel_rc6_residency_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_get_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "other_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read.part.0",
+    "callees": ["__i915_pmu_event_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read",
+    "callees": ["i915_pmu_event_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read.part.0",
+    "callees": ["__i915_pmu_event_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read",
+    "callees": ["i915_pmu_event_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_pmu_maybe_start_timer.part.0",
+    "callees": ["hrtimer_start_range_ns", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_pmu_maybe_start_timer",
+    "callees": ["__i915_pmu_maybe_start_timer.part.0", "pmu_needs_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "other_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_stop",
+    "callees": ["i915_pmu_disable", "i915_pmu_event_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_start.part.0",
+    "callees": ["i915_pmu_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_sample.part.0",
+    "callees": ["engines_sample", "frequency_sample", "hrtimer_forward", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_start.part.0",
+    "callees": ["i915_pmu_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read.part.0",
+    "callees": ["__i915_pmu_event_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_cpu_online.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_pmu_maybe_start_timer.part.0",
+    "callees": ["hrtimer_start_range_ns", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_unregister",
+    "callees": ["__cpuhp_state_remove_instance", "free_event_attributes", "hrtimer_cancel", "is_igp", "kfree", "perf_pmu_unregister", "synchronize_rcu"],
+    "global_reads": ["cpuhp_slot"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_register",
+    "callees": ["_dev_info", "_dev_notice", "create_event_attributes", "free_event_attributes", "hrtimer_init", "i915_pmu_register_cpuhp_state", "init_rc6", "is_igp", "kasprintf", "kfree", "kmemdup", "perf_pmu_register", "perf_pmu_unregister", "strreplace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_register_cpuhp_state",
+    "callees": ["__cpuhp_state_add_instance"],
+    "global_reads": ["cpuhp_slot"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_exit",
+    "callees": ["__cpuhp_remove_state"],
+    "global_reads": ["cpuhp_slot"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_init",
+    "callees": ["__cpuhp_setup_state", "_printk"],
+    "global_reads": [],
+    "global_writes": ["cpuhp_slot"]
+  },
+  {
+    "name": "i915_pmu_cpu_offline",
+    "callees": ["__builtin_constant_p", "cpumask_any_but", "perf_pmu_migrate_context"],
+    "global_reads": ["i915_pmu_target_cpu", "nr_cpu_ids"],
+    "global_writes": ["i915_pmu_target_cpu"]
+  },
+  {
+    "name": "i915_pmu_cpu_online",
+    "callees": ["i915_pmu_cpu_online.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_event_attributes",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_event_attributes",
+    "callees": ["config_status", "kasprintf", "kfree", "kmalloc_array", "kstrdup", "rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_show",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_format_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_event_idx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_del",
+    "callees": ["i915_pmu_event_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_add",
+    "callees": ["i915_pmu_event_start.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_stop",
+    "callees": ["i915_pmu_disable", "i915_pmu_event_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_start",
+    "callees": ["i915_pmu_event_start.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_disable",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "event_bit", "intel_engine_lookup_user", "pmu_needs_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_enable",
+    "callees": ["__i915_pmu_event_read", "__i915_pmu_maybe_start_timer", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "event_bit", "intel_engine_lookup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_read",
+    "callees": ["i915_pmu_event_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_init",
+    "callees": ["__builtin_constant_p", "config_status", "drm_dev_get", "engine_event_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engine_event_init",
+    "callees": ["intel_engine_lookup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "config_status",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_event_destroy",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_dev_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_sample",
+    "callees": ["i915_sample.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "frequency_sample",
+    "callees": ["__intel_wakeref_put", "config_mask", "frequency_sampling_enabled", "intel_gpu_freq", "intel_rps_get_requested_frequency", "intel_rps_read_actual_frequency_fw", "intel_wakeref_get_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engines_sample",
+    "callees": ["__intel_wakeref_put", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "engine_sample", "intel_wakeref_get_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "engine_sample",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_gt_unparked",
+    "callees": ["__i915_pmu_maybe_start_timer", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pmu_gt_parked",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "park_rc6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_pmu_maybe_start_timer",
+    "callees": ["__i915_pmu_maybe_start_timer.part.0", "pmu_needs_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "park_rc6",
+    "callees": ["__get_rc6", "ktime_get_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_rc6",
+    "callees": ["__get_rc6", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "ktime_get_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_rc6",
+    "callees": ["__get_rc6", "__intel_wakeref_put", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "intel_wakeref_get_if_active", "ktime_get_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_rc6",
+    "callees": ["intel_rc6_residency_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmu_needs_timer",
+    "callees": ["frequency_enabled_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "frequency_enabled_mask",
+    "callees": ["config_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "config_mask",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_442", "other_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "other_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wakeref_get_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_any_but",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

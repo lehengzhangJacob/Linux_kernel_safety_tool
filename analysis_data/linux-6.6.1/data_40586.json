@@ -1,0 +1,68 @@
+[
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_initialize_gpe_block",
+    "callees": ["acpi_ev_add_gpe_reference", "acpi_exception", "acpi_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_create_gpe_block",
+    "callees": ["acpi_error", "acpi_ev_create_gpe_info_blocks", "acpi_ev_install_gpe_block", "acpi_hw_validate_io_block", "acpi_ns_walk_namespace", "acpi_os_allocate_zeroed", "kfree"],
+    "global_reads": ["acpi_current_gpe_count"],
+    "global_writes": ["acpi_current_gpe_count", "acpi_gbl_all_gpes_initialized"]
+  },
+  {
+    "name": "acpi_ev_delete_gpe_block",
+    "callees": ["acpi_ev_delete_gpe_xrupt", "acpi_hw_disable_gpe_block", "acpi_os_acquire_lock", "acpi_os_release_lock", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex", "kfree"],
+    "global_reads": ["acpi_current_gpe_count", "acpi_gbl_gpe_lock"],
+    "global_writes": ["acpi_current_gpe_count"]
+  },
+  {
+    "name": "acpi_ev_install_gpe_block",
+    "callees": ["acpi_ev_get_gpe_xrupt_block", "acpi_os_acquire_lock", "acpi_os_release_lock", "acpi_ut_acquire_mutex", "acpi_ut_release_mutex"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

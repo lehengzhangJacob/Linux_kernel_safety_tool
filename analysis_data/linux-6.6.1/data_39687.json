@@ -1,0 +1,14 @@
+[
+  {
+    "name": "nmi_cpu_backtrace",
+    "callees": ["__builtin_constant_p", "__printk_cpu_sync_put", "__printk_cpu_sync_try_get", "__printk_cpu_sync_wait", "_printk", "cpu_in_idle", "dump_stack", "show_regs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_trigger_cpumask_backtrace",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__const_udelay", "_printk", "nmi_cpu_backtrace", "printk_trigger_flush"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "parse_build_id",
+    "callees": ["parse_build_id_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_vmlinux_build_id",
+    "callees": ["parse_build_id_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_id_parse_buf",
+    "callees": ["parse_build_id_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_id_parse",
+    "callees": ["__kunmap_atomic", "get_build_id_32", "get_build_id_64", "kmap_atomic", "memcmp", "pagecache_get_page", "put_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_build_id_64",
+    "callees": ["parse_build_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_build_id_32",
+    "callees": ["parse_build_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_build_id",
+    "callees": ["parse_build_id_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_build_id_buf",
+    "callees": ["memcpy", "memset", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

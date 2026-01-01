@@ -1,0 +1,248 @@
+[
+  {
+    "name": "snd_hdac_stop_streams",
+    "callees": ["snd_hdac_stream_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stop_streams_and_chip.part.0",
+    "callees": ["snd_hdac_bus_stop_chip", "snd_hdac_stop_streams"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_set_lpib",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_set_dpibr",
+    "callees": ["snd_hdac_stream_set_dpibr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_wait_drsm",
+    "callees": ["__SCT__might_resched", "ktime_get", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_drsm_enable",
+    "callees": ["snd_hdac_stream_drsm_enable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_get_spbmaxfifo",
+    "callees": ["snd_hdac_stream_get_spbmaxfifo.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_set_spib",
+    "callees": ["snd_hdac_stream_set_spib.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_spbcap_enable",
+    "callees": ["snd_hdac_stream_spbcap_enable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_sync",
+    "callees": ["snd_hdac_stream_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_sync_trigger",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_timecounter_init",
+    "callees": ["azx_timecounter_init", "snd_pcm_gettime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "azx_timecounter_init",
+    "callees": ["clocks_calc_mult_shift", "timecounter_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "azx_cc_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_set_params",
+    "callees": ["snd_hdac_stream_setup_periods"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_setup_periods",
+    "callees": ["__warn_printk", "_dev_err", "_dev_warn", "setup_bdle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_bdle",
+    "callees": ["snd_sgbuf_get_addr", "snd_sgbuf_get_chunk_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_get_stream",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_release",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_release_locked",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_assign",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_cleanup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_setup",
+    "callees": ["snd_hdac_stream_clear"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_reset",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__udelay", "snd_hdac_stream_clear"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stop_streams_and_chip",
+    "callees": ["snd_hdac_stop_streams_and_chip.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stop_streams",
+    "callees": ["snd_hdac_stream_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_stop",
+    "callees": ["snd_hdac_stream_clear", "trace_snd_hdac_stream_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_clear",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_start",
+    "callees": ["snd_hdac_get_stream_stripe_ctl", "trace_snd_hdac_stream_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_stream_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_get_stream_stripe_ctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_snd_hdac_stream_stop",
+    "callees": ["__SCT__tp_func_snd_hdac_stream_stop", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_snd_hdac_stream_start",
+    "callees": ["__SCT__tp_func_snd_hdac_stream_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

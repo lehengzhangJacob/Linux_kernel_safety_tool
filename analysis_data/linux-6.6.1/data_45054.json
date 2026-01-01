@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_delete_address_lists",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_check_address_range",
+    "callees": ["acpi_ns_get_normalized_pathname", "acpi_ut_get_region_name", "acpi_warning", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_remove_address_range",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_add_address_range",
+    "callees": ["acpi_os_allocate"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

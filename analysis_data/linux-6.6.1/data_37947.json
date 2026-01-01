@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_remove_root_bus.part.0",
+    "callees": ["device_del", "pci_remove_bus", "pci_remove_bus_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_root_bus.part.0",
+    "callees": ["device_release_driver", "pci_stop_bus_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_remove_root_bus",
+    "callees": ["pci_remove_root_bus.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_root_bus",
+    "callees": ["pci_stop_root_bus.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_and_remove_bus_device_locked",
+    "callees": ["pci_lock_rescan_remove", "pci_remove_bus_device", "pci_stop_bus_device", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_and_remove_bus_device",
+    "callees": ["pci_remove_bus_device", "pci_stop_bus_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_remove_bus_device",
+    "callees": ["pci_destroy_dev", "pci_remove_bus", "pci_remove_bus_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_bus_device",
+    "callees": ["pci_stop_bus_device", "pci_stop_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_remove_bus",
+    "callees": ["device_unregister", "down_write", "pci_bus_release_busn_res", "pci_proc_detach_bus", "pcibios_remove_bus", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_destroy_dev",
+    "callees": ["device_del", "down_write", "pci_bridge_d3_update", "pci_free_resources", "pcie_aspm_exit_link_state", "put_device", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_stop_dev",
+    "callees": ["__builtin_constant_p", "device_release_driver", "pci_dev_assign_added", "pci_pme_active", "pci_proc_detach_device", "pci_remove_sysfs_dev_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_free_resources",
+    "callees": ["release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

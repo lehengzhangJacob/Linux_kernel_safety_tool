@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sierra_get_swoc_info",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sierra_ms_init",
+    "callees": ["__builtin_return_address", "device_create_file", "kfree", "kmalloc_trace", "schedule_timeout_uninterruptible", "sierra_get_swoc_info", "sierra_set_ms_mode"],
+    "global_reads": ["swi_tru_install"],
+    "global_writes": []
+  },
+  {
+    "name": "truinst_show",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "sierra_get_swoc_info", "snprintf"],
+    "global_reads": ["swi_tru_install"],
+    "global_writes": []
+  },
+  {
+    "name": "sierra_get_swoc_info",
+    "callees": ["usb_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

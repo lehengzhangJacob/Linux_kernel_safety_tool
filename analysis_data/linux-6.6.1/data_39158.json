@@ -1,0 +1,116 @@
+[
+  {
+    "name": "bus_speed_read",
+    "callees": ["pci_speed_string", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_slot_init",
+    "callees": ["_printk", "bus_get_kset", "kset_create_and_add"],
+    "global_reads": [],
+    "global_writes": ["pci_slots_kset"]
+  },
+  {
+    "name": "pci_hp_remove_module_link",
+    "callees": ["sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_hp_create_module_link",
+    "callees": ["_dev_err", "kobject_put", "kset_find_obj", "sysfs_create_link"],
+    "global_reads": ["module_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_destroy_slot",
+    "callees": ["kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_create_slot",
+    "callees": ["down_read", "get_slot", "kfree", "kobject_init_and_add", "kobject_put", "kzalloc", "make_slot_name", "mutex_lock", "mutex_unlock", "rename_slot", "up_read"],
+    "global_reads": ["pci_slots_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "get_slot",
+    "callees": ["kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_assign_slot",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rename_slot",
+    "callees": ["kfree", "kobject_rename", "make_slot_name", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "make_slot_name",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "kobject_put", "kset_find_obj", "kstrdup", "sprintf", "strlen"],
+    "global_reads": ["pci_slots_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_slot_release",
+    "callees": ["down_read", "kfree", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cur_speed_read_file",
+    "callees": ["bus_speed_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_speed_read_file",
+    "callees": ["bus_speed_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bus_speed_read",
+    "callees": ["pci_speed_string", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "address_read_file",
+    "callees": ["address_read_file.part.0", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_slot_attr_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_slot_attr_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

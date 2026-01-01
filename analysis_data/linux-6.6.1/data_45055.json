@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_fini_nocheck",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_270", "__compiletime_assert_271", "_raw_spin_lock", "_raw_spin_unlock", "drm_mm_takedown", "kfree", "ttm_resource_manager_cleanup", "ttm_resource_manager_evict_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_init_nocheck",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_271", "drm_mm_init", "kzalloc", "ttm_resource_manager_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_debug",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "drm_mm_print"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_compatible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_intersects",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_free",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "drm_mm_remove_node", "kfree", "ttm_resource_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_range_man_alloc",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "drm_mm_insert_node_in_range", "kfree", "kzalloc", "ttm_resource_fini", "ttm_resource_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ttm_resource_manager_cleanup",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

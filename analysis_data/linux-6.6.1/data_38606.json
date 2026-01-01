@@ -1,0 +1,20 @@
+[
+  {
+    "name": "parse_header",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unlzo",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "kfree", "kmalloc_large", "lzo1x_decompress_safe", "memcpy", "parse_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_header",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

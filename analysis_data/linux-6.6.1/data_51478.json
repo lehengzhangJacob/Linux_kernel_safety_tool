@@ -1,0 +1,74 @@
+[
+  {
+    "name": "pci_rebar_bytes_to_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_setup_lmem",
+    "callees": ["setup_lmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_lmem",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "_dev_err", "_dev_info", "i915_pci_resource_valid", "i915_resize_lmem_bar", "intel_gt_mcr_read_any", "intel_memory_region_create", "intel_memory_region_destroy", "reserve_lowmem_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_lowmem_region",
+    "callees": ["_dev_err", "get_legacy_lowmem_region", "intel_memory_region_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_legacy_lowmem_region",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "region_lmem_init",
+    "callees": ["intel_region_ttm_init", "io_mapping_init_wc", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "region_lmem_release",
+    "callees": ["intel_region_ttm_fini", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_resize_lmem_bar",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "_dev_info", "_resize_bar", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put", "pci_assign_unassigned_bus_resources", "pci_bus_resource_n", "pci_read_config_dword", "pci_rebar_bytes_to_size", "pci_rebar_get_possible_sizes", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_release_bars",
+    "callees": ["pci_release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_mapping_init_wc",
+    "callees": ["ioremap_wc", "pgprot_writecombine"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_rebar_bytes_to_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

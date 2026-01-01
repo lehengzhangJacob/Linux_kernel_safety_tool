@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_params_from_link_mode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_set_ethtool_phy_ops",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done", "ethtool_phy_ops"]
+  },
+  {
+    "name": "ethtool_get_phc_vclocks",
+    "callees": ["__ethtool_get_ts_info", "ptp_get_vclocks_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ethtool_get_ts_info",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_check_ops",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_get_max_rxfh_channel",
+    "callees": ["kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_get_max_rxnfc_channel",
+    "callees": ["__builtin_expect", "ethtool_get_rxnfc_rule_count", "kvfree", "kvmalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_get_rxnfc_rule_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ethtool_get_link",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "convert_legacy_settings_to_link_ksettings",
+    "callees": ["ethtool_convert_legacy_u32_to_link_mode", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

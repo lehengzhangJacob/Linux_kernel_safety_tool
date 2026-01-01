@@ -1,0 +1,14 @@
+[
+  {
+    "name": "e1000e_check_options",
+    "callees": ["_dev_err", "_dev_info", "_dev_notice", "e1000_validate_option", "e1000e_set_kmrn_lock_loss_workaround_ich8lan", "kfree", "kstrdup"],
+    "global_reads": ["num_CrcStripping", "num_IntMode", "num_InterruptThrottleRate", "num_KumeranLockLoss", "num_RxAbsIntDelay", "num_RxIntDelay", "num_SmartPowerDownEnable", "num_TxAbsIntDelay", "num_TxIntDelay", "num_WriteProtectNVM"],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_validate_option",
+    "callees": ["__builtin_unreachable", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "ptp_find_pin",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_in_use",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_in_use",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_getcycles64.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_init",
+    "callees": ["__builtin_expect", "_printk", "alloc_chrdev_region", "class_create", "class_destroy"],
+    "global_reads": ["ptp_class"],
+    "global_writes": ["ptp_class"]
+  },
+  {
+    "name": "ptp_exit",
+    "callees": ["class_destroy", "ida_destroy", "unregister_chrdev_region"],
+    "global_reads": ["ptp_class", "ptp_devt"],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_cancel_worker_sync",
+    "callees": ["kthread_cancel_delayed_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_schedule_worker",
+    "callees": ["kthread_mod_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_find_pin_unlocked",
+    "callees": ["mutex_lock", "mutex_unlock", "ptp_find_pin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_find_pin",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_event",
+    "callees": ["__wake_up", "enqueue_external_timestamp", "pps_event", "pps_get_ts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_unregister",
+    "callees": ["__wake_up", "device_for_each_child", "kthread_cancel_delayed_work_sync", "kthread_destroy_worker", "posix_clock_unregister", "pps_unregister_source", "ptp_vclock_in_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_vclock",
+    "callees": ["ptp_vclock_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_register",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__mutex_init", "_printk", "dev_set_name", "device_initialize", "ida_alloc_range", "ida_free", "init_timer_key", "kfree", "kthread_create_worker", "kthread_destroy_worker", "kzalloc", "memset", "posix_clock_register", "pps_register_source", "pps_unregister_source", "ptp_cleanup_pin_groups", "ptp_populate_pin_groups", "put_device", "snprintf", "strcmp"],
+    "global_reads": ["ptp_class", "ptp_clock_ops", "ptp_devt"],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_aux_kworker",
+    "callees": ["kthread_queue_delayed_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_getcycles64",
+    "callees": ["ptp_getcycles64.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_release",
+    "callees": ["ida_free", "kfree", "ptp_cleanup_pin_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_adjtime",
+    "callees": ["__builtin_expect", "_printk", "ptp_vclock_in_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_gettime",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_settime",
+    "callees": ["_printk", "ptp_vclock_in_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_clock_getres",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enqueue_external_timestamp",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptp_vclock_in_use",
+    "callees": ["mutex_lock_interruptible", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_get_ts",
+    "callees": ["ktime_get_snapshot", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_destroy",
+    "callees": ["kfree", "mls_context_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_lookup",
+    "callees": ["sidtab_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_search_core",
+    "callees": ["sidtab_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_cpy",
+    "callees": ["kfree", "kstrdup", "mls_context_cpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_destroy",
+    "callees": ["kfree", "mls_context_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_destroy",
+    "callees": ["kfree", "mls_context_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_destroy_entry",
+    "callees": ["context_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_sid2str_put.part.0",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kmalloc_large", "kmalloc_trace", "kvfree_call_rcu", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_sid2str_get",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kmemdup", "sidtab_sid2str_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_sid2str_put",
+    "callees": ["sidtab_sid2str_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_destroy",
+    "callees": ["sidtab_destroy_entry", "sidtab_destroy_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_destroy_tree",
+    "callees": ["kfree", "sidtab_destroy_entry", "sidtab_destroy_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_destroy_entry",
+    "callees": ["context_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_freeze_end",
+    "callees": ["_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_freeze_begin",
+    "callees": ["_raw_spin_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_cancel_convert",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_convert",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "sidtab_convert_hashtable", "sidtab_convert_tree", "sidtab_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_convert_tree",
+    "callees": ["__SCT__cond_resched", "kzalloc", "services_convert_context", "sidtab_convert_tree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_convert_hashtable",
+    "callees": ["context_compute_hash", "sidtab_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_context_to_sid",
+    "callees": ["__builtin_expect", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "context_compute_hash", "context_cpy", "context_destroy", "context_to_sid", "services_convert_context", "sidtab_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_search_entry_force",
+    "callees": ["sidtab_search_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_search_entry",
+    "callees": ["sidtab_search_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_search_core",
+    "callees": ["sidtab_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_lookup",
+    "callees": ["sidtab_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_do_lookup",
+    "callees": ["kzalloc", "sidtab_alloc_roots"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_alloc_roots",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_hash_stats",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_set_initial",
+    "callees": ["context_compute_hash", "context_cpy", "context_to_sid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_to_sid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "context_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sidtab_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_cmp",
+    "callees": ["mls_context_cmp", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_destroy",
+    "callees": ["kfree", "mls_context_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "context_cpy",
+    "callees": ["kfree", "kstrdup", "mls_context_cpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cmp",
+    "callees": ["ebitmap_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mls_context_cpy",
+    "callees": ["ebitmap_cpy", "ebitmap_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

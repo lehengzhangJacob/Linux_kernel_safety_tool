@@ -1,0 +1,314 @@
+[
+  {
+    "name": "nfs_idmap_lookup_id",
+    "callees": ["kstrtoll", "nfs_idmap_get_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_complete_pipe_upcall",
+    "callees": ["complete_request_key", "key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_complete_pipe_upcall",
+    "callees": ["complete_request_key", "key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_complete_pipe_upcall",
+    "callees": ["complete_request_key", "key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_abort_pipe_upcall",
+    "callees": ["nfs_idmap_complete_pipe_upcall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_lookup_name",
+    "callees": ["nfs_idmap_get_key", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_free_group_name",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_free_owner_name",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_map_gid_to_group",
+    "callees": ["nfs_idmap_lookup_name", "snprintf", "trace_nfs4_map_gid_to_group"],
+    "global_reads": ["overflowgid"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_map_uid_to_name",
+    "callees": ["nfs_idmap_lookup_name", "snprintf", "trace_nfs4_map_uid_to_name"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_map_group_to_gid",
+    "callees": ["nfs_idmap_lookup_id", "nfs_map_string_to_numeric", "trace_nfs4_map_group_to_gid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_map_name_to_uid",
+    "callees": ["nfs_idmap_lookup_id", "nfs_map_string_to_numeric", "trace_nfs4_map_name_to_uid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idmap_release_pipe",
+    "callees": ["nfs_idmap_complete_pipe_upcall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idmap_pipe_destroy_msg",
+    "callees": ["nfs_idmap_abort_pipe_upcall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idmap_pipe_downcall",
+    "callees": ["_copy_from_user", "key_set_timeout", "nfs_idmap_complete_pipe_upcall", "nfs_idmap_read_and_verify_message", "strnlen"],
+    "global_reads": ["nfs_idmap_cache_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_read_and_verify_message",
+    "callees": ["key_instantiate_and_link", "snprintf", "strcmp", "strlen"],
+    "global_reads": ["id_resolver_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_legacy_upcall",
+    "callees": ["__refcount_add", "complete_request_key", "kfree", "kzalloc", "nfs_idmap_abort_pipe_upcall", "nfs_idmap_prepare_message", "rpc_queue_upcall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_abort_pipe_upcall",
+    "callees": ["nfs_idmap_complete_pipe_upcall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_complete_pipe_upcall",
+    "callees": ["complete_request_key", "key_put", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_delete",
+    "callees": ["kfree", "rpc_destroy_pipe_data", "rpc_remove_pipe_dir_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_new",
+    "callees": ["__builtin_expect", "__mutex_init", "kfree", "kzalloc", "rpc_add_pipe_dir_object", "rpc_destroy_pipe_data", "rpc_init_pipe_dir_object", "rpc_mkpipe_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_pipe_create",
+    "callees": ["__builtin_expect", "rpc_mkpipe_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_pipe_destroy",
+    "callees": ["rpc_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_lookup_id",
+    "callees": ["kstrtoll", "nfs_idmap_get_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_lookup_name",
+    "callees": ["nfs_idmap_get_key", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_get_key",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "key_put", "key_validate", "memcpy", "nfs_idmap_request_key", "override_creds", "revert_creds"],
+    "global_reads": ["id_resolver_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_request_key",
+    "callees": ["__builtin_expect", "kfree", "mutex_lock", "mutex_unlock", "nfs_idmap_get_desc", "request_key_tag", "request_key_with_auxdata", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_get_desc",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_quit",
+    "callees": ["key_revoke", "put_cred", "unregister_key_type"],
+    "global_reads": ["id_resolver_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_idmap_init",
+    "callees": ["__builtin_expect", "_printk", "key_put", "keyring_alloc", "prepare_kernel_cred", "put_cred", "register_key_type", "unregister_key_type"],
+    "global_reads": [],
+    "global_writes": ["id_resolver_cache"]
+  },
+  {
+    "name": "nfs_map_string_to_numeric",
+    "callees": ["kstrtoull", "memchr", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_map_and_free_names",
+    "callees": ["nfs_fattr_free_group_name", "nfs_fattr_free_owner_name", "nfs_fattr_map_group_name", "nfs_fattr_map_owner_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_free_names",
+    "callees": ["nfs_fattr_free_group_name", "nfs_fattr_free_owner_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_map_group_name",
+    "callees": ["nfs_map_group_to_gid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_map_owner_name",
+    "callees": ["nfs_map_name_to_uid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_free_group_name",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_free_owner_name",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_fattr_init_names",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_map_gid_to_group",
+    "callees": ["__SCT__tp_func_nfs4_map_gid_to_group", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_map_uid_to_name",
+    "callees": ["__SCT__tp_func_nfs4_map_uid_to_name", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_map_group_to_gid",
+    "callees": ["__SCT__tp_func_nfs4_map_group_to_gid", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_nfs4_map_name_to_uid",
+    "callees": ["__SCT__tp_func_nfs4_map_name_to_uid", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

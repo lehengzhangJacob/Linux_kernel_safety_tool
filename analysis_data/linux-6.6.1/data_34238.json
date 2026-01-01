@@ -1,0 +1,32 @@
+[
+  {
+    "name": "__request_module",
+    "callees": ["___ratelimit", "__builtin_expect", "__builtin_return_address", "__builtin_va_end", "__builtin_va_start", "_printk", "call_modprobe", "current_is_async", "down_timeout", "security_kernel_module_request", "trace_module_request", "up", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_modprobe",
+    "callees": ["__builtin_return_address", "call_usermodehelper_exec", "call_usermodehelper_setup", "kfree", "kmalloc_trace", "kstrdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_modprobe_argv",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_module_request",
+    "callees": ["__SCT__tp_func_module_request", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

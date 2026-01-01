@@ -1,0 +1,14 @@
+[
+  {
+    "name": "i915_reg_read_ioctl",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_uncore_read64_2x32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uncore_read64_2x32",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "intel_uncore_forcewake_for_reg", "intel_uncore_forcewake_get__locked", "intel_uncore_forcewake_put__locked"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

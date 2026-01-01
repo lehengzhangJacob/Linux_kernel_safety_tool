@@ -1,0 +1,8 @@
+[
+  {
+    "name": "efi_bgrt_init",
+    "callees": ["__builtin_constant_p", "_printk", "early_memremap", "early_memunmap", "efi_mem_reserve", "efi_mem_type", "memset"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": ["bgrt_image_size", "bgrt_tab"]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "rtl_fw_request_firmware",
+    "callees": ["_dev_err", "release_firmware", "request_firmware", "rtl_fw_data_ok", "rtl_fw_format_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_fw_release_firmware",
+    "callees": ["release_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_fw_write_firmware",
+    "callees": ["msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_fw_data_ok",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtl_fw_format_ok",
+    "callees": ["strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_opcode_3A_1T_1R",
+    "callees": ["acpi_error", "acpi_ex_store", "acpi_os_allocate_zeroed", "acpi_ut_create_internal_object_dbg", "acpi_ut_remove_reference", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_opcode_3A_0T_0R",
+    "callees": ["acpi_error", "acpi_os_allocate", "acpi_os_signal", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

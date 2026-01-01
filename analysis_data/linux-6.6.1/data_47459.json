@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_enc_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_user_framebuffer_create.part.0",
+    "callees": ["drm_gem_object_lookup", "drm_gem_object_put.part.0", "kfree", "kzalloc", "virtio_gpu_framebuffer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_modeset_fini",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_modeset_init",
+    "callees": ["drm_mode_config_reset", "drmm_mode_config_init", "vgdev_output_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_user_framebuffer_create",
+    "callees": ["virtio_gpu_user_framebuffer_create.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_conn_destroy",
+    "callees": ["drm_connector_cleanup", "drm_connector_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_conn_detect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_conn_mode_valid",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_conn_get_modes",
+    "callees": ["___drm_dbg", "drm_add_edid_modes", "drm_add_modes_noedid", "drm_cvt_mode", "drm_mode_probed_add", "drm_set_preferred_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_enc_disable",
+    "callees": ["virtio_gpu_enc_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_enc_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_enc_mode_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_crtc_atomic_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_crtc_atomic_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_crtc_atomic_disable",
+    "callees": ["virtio_gpu_cmd_set_scanout", "virtio_gpu_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_crtc_atomic_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_crtc_mode_set_nofb",
+    "callees": ["virtio_gpu_cmd_set_scanout", "virtio_gpu_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_framebuffer_init",
+    "callees": ["drm_framebuffer_init", "drm_helper_mode_fill_fb_struct"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

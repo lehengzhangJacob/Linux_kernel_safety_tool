@@ -1,0 +1,32 @@
+[
+  {
+    "name": "copy_mc_to_kernel.part.0",
+    "callees": ["copy_mc_enhanced_fast_string", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_mc_to_user",
+    "callees": ["copy_mc_enhanced_fast_string", "copy_mc_fragile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_mc_to_kernel",
+    "callees": ["copy_mc_fragile", "copy_mc_to_kernel.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_mc_fragile_handle_tail",
+    "callees": ["copy_mc_fragile"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_copy_mc_fragile",
+    "callees": ["static_key_slow_inc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

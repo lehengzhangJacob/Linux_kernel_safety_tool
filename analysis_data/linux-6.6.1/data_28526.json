@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hashtab_cache_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["hashtab_node_cachep"]
+  },
+  {
+    "name": "hashtab_duplicate",
+    "callees": ["kfree", "kmalloc_array", "kmem_cache_alloc", "kmem_cache_free", "memset"],
+    "global_reads": ["hashtab_node_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "hashtab_map",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hashtab_destroy",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["hashtab_node_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "__hashtab_insert",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["hashtab_node_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "hashtab_init",
+    "callees": ["hashtab_compute_size", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hashtab_compute_size",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

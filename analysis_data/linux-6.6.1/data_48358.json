@@ -1,0 +1,74 @@
+[
+  {
+    "name": "acpi_processor_notifier.part.0",
+    "callees": ["acpi_processor_ppc_exit", "acpi_thermal_cpufreq_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_notify.part.0",
+    "callees": ["acpi_bus_generate_netlink_event", "acpi_processor_power_state_has_changed", "acpi_processor_ppc_has_changed", "acpi_processor_tstate_has_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_driver_exit",
+    "callees": ["__cpuhp_remove_state", "cpufreq_unregister_notifier", "driver_unregister"],
+    "global_reads": ["acpi_disabled", "acpi_processor_cpufreq_init", "hp_online"],
+    "global_writes": ["acpi_processor_cpufreq_init"]
+  },
+  {
+    "name": "acpi_processor_driver_init",
+    "callees": ["__cpuhp_setup_state", "acpi_processor_ignore_ppc_init", "acpi_processor_throttling_init", "cpufreq_register_notifier", "driver_register", "driver_unregister"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": ["acpi_processor_cpufreq_init", "hp_online"]
+  },
+  {
+    "name": "acpi_processor_notifier",
+    "callees": ["acpi_processor_notifier.part.0", "acpi_processor_ppc_init", "acpi_thermal_cpufreq_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_stop",
+    "callees": ["acpi_cppc_processor_exit", "acpi_processor_power_exit", "acpi_processor_thermal_exit", "acpi_remove_notify_handler", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_start",
+    "callees": ["__acpi_processor_start", "cpu_hotplug_disable", "cpu_hotplug_enable", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_processor_start",
+    "callees": ["acpi_cppc_processor_probe", "acpi_install_notify_handler", "acpi_processor_power_exit", "acpi_processor_power_init", "acpi_processor_thermal_exit", "acpi_processor_thermal_init", "acpi_pss_perf_init", "cpuidle_get_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pss_perf_init",
+    "callees": ["acpi_processor_get_throttling_info", "acpi_processor_ppc_has_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_soft_cpu_dead",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_processor_reevaluate_tstate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_soft_cpu_online",
+    "callees": ["__acpi_processor_start", "__builtin_expect", "__warn_printk", "_printk", "acpi_fetch_acpi_dev", "acpi_processor_hotplug", "acpi_processor_ppc_has_changed", "acpi_processor_reevaluate_tstate", "acpi_processor_tstate_has_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_notify",
+    "callees": ["acpi_processor_notify.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

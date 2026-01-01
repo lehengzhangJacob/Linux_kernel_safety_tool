@@ -1,0 +1,38 @@
+[
+  {
+    "name": "i915_gem_gtt_reserve",
+    "callees": ["drm_mm_reserve_node", "i915_gem_evict_for_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_gtt_insert",
+    "callees": ["__builtin_expect", "drm_mm_insert_node_in_range", "i915_gem_evict_something", "i915_gem_gtt_reserve", "random_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "random_offset",
+    "callees": ["get_random_u64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_gtt_reserve",
+    "callees": ["drm_mm_reserve_node", "i915_gem_evict_for_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_gtt_finish_pages",
+    "callees": ["__builtin_expect", "dma_unmap_sg_attrs", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_gtt_prepare_pages",
+    "callees": ["dma_map_sg_attrs", "i915_gem_shrink"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

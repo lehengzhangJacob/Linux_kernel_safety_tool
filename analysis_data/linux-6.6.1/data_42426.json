@@ -1,0 +1,200 @@
+[
+  {
+    "name": "get_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_reg",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_reg",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_reg",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_recover_rethook.part.0",
+    "callees": ["rethook_find_ret_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_recover_rethook.part.0",
+    "callees": ["rethook_find_ret_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unwind_start.part.0",
+    "callees": ["get_stack_info", "on_stack", "unwind_next_frame"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_recover_rethook.part.0",
+    "callees": ["rethook_find_ret_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__unwind_start",
+    "callees": ["__unwind_start.part.0", "memset"],
+    "global_reads": ["orc_init"],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_next_frame",
+    "callees": ["__builtin_expect", "_printk_deferred", "deref_stack_iret_regs", "deref_stack_reg", "deref_stack_regs", "get_reg", "on_stack", "orc_find", "unwind_dump", "unwind_recover_rethook.part.0"],
+    "global_reads": ["__already_done", "dumped_before", "unwind_debug"],
+    "global_writes": ["__already_done", "dumped_before"]
+  },
+  {
+    "name": "get_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_iret_regs",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_regs",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deref_stack_reg",
+    "callees": ["stack_access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stack_access_ok",
+    "callees": ["get_stack_info", "on_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_get_return_address_ptr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_get_return_address",
+    "callees": ["__kernel_text_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_init",
+    "callees": ["__builtin_expect", "__orc_find", "_printk_deferred"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done", "lookup_num_blocks", "orc_init"]
+  },
+  {
+    "name": "unwind_module_init",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "sort"],
+    "global_reads": [],
+    "global_writes": ["cur_orc_ip_table", "cur_orc_table"]
+  },
+  {
+    "name": "orc_sort_cmp",
+    "callees": [],
+    "global_reads": ["cur_orc_ip_table", "cur_orc_table"],
+    "global_writes": []
+  },
+  {
+    "name": "orc_sort_swap",
+    "callees": [],
+    "global_reads": ["cur_orc_ip_table", "cur_orc_table"],
+    "global_writes": []
+  },
+  {
+    "name": "orc_find",
+    "callees": ["__builtin_expect", "__orc_find", "_printk_deferred", "orc_module_find"],
+    "global_reads": ["__already_done", "lookup_num_blocks"],
+    "global_writes": ["__already_done", "orc"]
+  },
+  {
+    "name": "orc_module_find",
+    "callees": ["__module_address", "__orc_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__orc_find",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unwind_dump",
+    "callees": ["__builtin_frame_address", "_printk_deferred", "get_stack_info"],
+    "global_reads": ["dumped_before"],
+    "global_writes": ["dumped_before"]
+  },
+  {
+    "name": "unwind_debug_cmdline",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["unwind_debug"]
+  },
+  {
+    "name": "on_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

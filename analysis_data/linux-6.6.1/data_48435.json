@@ -1,0 +1,320 @@
+[
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "combine_lpi_states",
+    "callees": ["strlcat", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__lapic_timer_propagate_broadcast.part.0",
+    "callees": ["tick_broadcast_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_max_cstate.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["max_cstate"]
+  },
+  {
+    "name": "acpi_cst_latency_swap.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cst_latency_cmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_power_exit",
+    "callees": ["cpuidle_unregister_device", "cpuidle_unregister_driver"],
+    "global_reads": ["acpi_processor_registered", "boot_option_idle_override"],
+    "global_writes": ["acpi_processor_registered"]
+  },
+  {
+    "name": "acpi_processor_power_init",
+    "callees": ["acpi_processor_cstate_first_run_checks", "acpi_processor_get_power_info", "acpi_processor_setup_cpuidle_dev", "acpi_processor_setup_cpuidle_states", "cpuidle_register_device", "cpuidle_register_driver", "cpuidle_unregister_driver", "kzalloc"],
+    "global_reads": ["acpi_processor_registered", "boot_option_idle_override"],
+    "global_writes": ["acpi_processor_registered"]
+  },
+  {
+    "name": "acpi_processor_power_state_has_changed",
+    "callees": ["acpi_processor_get_power_info", "acpi_processor_setup_cpuidle_dev", "acpi_processor_setup_cpuidle_states", "cpuidle_disable_device", "cpuidle_enable_device", "cpuidle_get_driver", "cpuidle_pause_and_lock", "cpuidle_resume_and_unlock", "cpus_read_lock", "cpus_read_unlock", "find_next_bit"],
+    "global_reads": ["boot_option_idle_override"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_hotplug",
+    "callees": ["acpi_processor_get_power_info", "acpi_processor_setup_cpuidle_dev", "cpuidle_disable_device", "cpuidle_enable_device", "cpuidle_pause_and_lock", "cpuidle_resume_and_unlock"],
+    "global_reads": ["boot_option_idle_override"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_power_info",
+    "callees": ["acpi_processor_get_cstate_info", "acpi_processor_get_lpi_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_idle_lpi_enter",
+    "callees": ["__builtin_expect", "acpi_processor_ffh_lpi_enter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ffh_lpi_enter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_lpi_info",
+    "callees": ["acpi_device_hid", "acpi_fetch_acpi_dev", "acpi_get_parent", "acpi_has_method", "acpi_processor_evaluate_lpi", "acpi_processor_ffh_lpi_probe", "flatten_lpi_states", "strcmp"],
+    "global_reads": ["flat_state_cnt", "osc_pc_lpi_support_confirmed"],
+    "global_writes": ["flat_state_cnt"]
+  },
+  {
+    "name": "acpi_processor_ffh_lpi_probe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "combine_lpi_states",
+    "callees": ["strlcat", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_evaluate_lpi",
+    "callees": ["acpi_evaluate_object", "kfree", "kmalloc_array", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_cstate_first_run_checks",
+    "callees": ["_printk", "acpi_processor_claim_cst_control", "acpi_processor_cstate_check", "dmi_check_system"],
+    "global_reads": ["first_run", "max_cstate", "nocst"],
+    "global_writes": ["first_run", "max_cstate"]
+  },
+  {
+    "name": "acpi_idle_enter_s2idle",
+    "callees": ["__builtin_expect", "acpi_idle_do_entry", "acpi_idle_enter_bm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_idle_enter",
+    "callees": ["__builtin_expect", "acpi_idle_do_entry", "acpi_idle_enter_bm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_idle_enter_bm",
+    "callees": ["__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "acpi_idle_bm_check", "acpi_idle_do_entry", "acpi_write_bit_register", "ct_idle_enter", "ct_idle_exit"],
+    "global_reads": ["c3_cpu_count"],
+    "global_writes": ["c3_cpu_count"]
+  },
+  {
+    "name": "acpi_idle_play_dead",
+    "callees": ["__builtin_expect", "io_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_idle_do_entry",
+    "callees": ["acpi_processor_ffh_cstate_enter", "acpi_safe_halt", "io_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_idle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_idle_bm_check",
+    "callees": ["acpi_read_bit_register", "acpi_write_bit_register", "slow_down_io"],
+    "global_reads": ["bm_check_disable"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_cstate_info",
+    "callees": ["acpi_processor_get_power_info_cst", "acpi_processor_get_power_info_default", "acpi_processor_get_power_info_fadt", "acpi_processor_power_verify", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_power_verify",
+    "callees": ["_printk", "acpi_processor_power_verify_c3", "lapic_timer_check_state", "lapic_timer_propagate_broadcast", "sort", "tsc_check_state"],
+    "global_reads": ["max_cstate"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cst_latency_swap",
+    "callees": ["acpi_cst_latency_swap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cst_latency_cmp",
+    "callees": ["acpi_cst_latency_cmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_power_verify_c3",
+    "callees": ["acpi_processor_power_init_bm_check", "acpi_write_bit_register"],
+    "global_reads": ["bm_check_flag", "bm_control_flag"],
+    "global_writes": ["bm_check_flag", "bm_control_flag"]
+  },
+  {
+    "name": "acpi_processor_get_power_info_cst",
+    "callees": ["acpi_processor_evaluate_cst"],
+    "global_reads": ["nocst"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_power_info_fadt",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tsc_check_state",
+    "callees": ["mark_tsc_unstable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lapic_timer_propagate_broadcast",
+    "callees": ["smp_call_function_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__lapic_timer_propagate_broadcast",
+    "callees": ["__lapic_timer_propagate_broadcast.part.0", "tick_broadcast_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lapic_timer_check_state",
+    "callees": [],
+    "global_reads": ["local_apic_timer_c2_ok"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_safe_halt",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_max_cstate",
+    "callees": ["set_max_cstate.part.0"],
+    "global_reads": ["max_cstate"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_cstate_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

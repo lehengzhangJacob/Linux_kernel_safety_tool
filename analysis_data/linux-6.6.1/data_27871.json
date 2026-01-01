@@ -1,0 +1,356 @@
+[
+  {
+    "name": "crypto_get_attr_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_template",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_put.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_put",
+    "callees": ["__refcount_sub_and_test", "crypto_alg_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_alg",
+    "callees": ["__builtin_expect", "crypto_remove_spawns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_lookup_template.part.0",
+    "callees": ["__crypto_lookup_template", "__request_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_put.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_instance.part.0",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_attr_alg_name.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_algapi_exit",
+    "callees": ["crypto_exit_proc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_algapi_init",
+    "callees": ["crypto_init_proc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_type_has_alg",
+    "callees": ["__builtin_expect", "crypto_find_alg", "crypto_mod_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_extsize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_inc",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "crypto_inc_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_inc_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_dequeue_request",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_enqueue_request_head",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_enqueue_request",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_init_queue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_inst_setname",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_attr_alg_name",
+    "callees": ["crypto_attr_alg_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_check_attr_type",
+    "callees": ["__builtin_expect", "crypto_get_attr_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_get_attr_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_notifier",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_notifier",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_spawn_tfm2",
+    "callees": ["__builtin_expect", "crypto_create_tfm_node", "crypto_mod_put", "crypto_spawn_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_spawn_tfm",
+    "callees": ["__builtin_expect", "__crypto_alloc_tfm", "crypto_mod_put", "crypto_spawn_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_spawn_alg",
+    "callees": ["__refcount_add", "crypto_alg_put", "crypto_mod_get", "crypto_shoot_alg", "down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_drop_spawn",
+    "callees": ["crypto_drop_spawn.part.0", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_grab_spawn",
+    "callees": ["__builtin_expect", "crypto_find_alg", "crypto_mod_put", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_instance",
+    "callees": ["crypto_remove_final", "crypto_remove_instance", "crypto_remove_spawns", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_instance",
+    "callees": ["__builtin_expect", "__crypto_register_alg", "crypto_check_alg", "crypto_mod_put", "crypto_remove_final", "crypto_wait_for_test", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_lookup_template",
+    "callees": ["__crypto_lookup_template", "crypto_lookup_template.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__crypto_lookup_template",
+    "callees": ["__builtin_expect", "down_read", "strcmp", "try_module_get", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_templates",
+    "callees": ["crypto_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_template",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "crypto_remove_alg", "crypto_remove_final", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_templates",
+    "callees": ["crypto_register_template", "crypto_unregister_template"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_template",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_algs",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_algs",
+    "callees": ["crypto_register_alg", "crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_alg",
+    "callees": ["__builtin_expect", "__warn_printk", "crypto_remove_alg", "crypto_remove_final", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_alg",
+    "callees": ["__builtin_expect", "crypto_remove_spawns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_alg",
+    "callees": ["__builtin_expect", "__crypto_register_alg", "crypto_check_alg", "crypto_remove_final", "crypto_wait_for_test", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_final",
+    "callees": ["crypto_alg_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_tested",
+    "callees": ["_printk", "complete_all", "crypto_alg_finish_registration", "crypto_remove_final", "down_write", "strcmp", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__crypto_register_alg",
+    "callees": ["crypto_alg_finish_registration", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_finish_registration",
+    "callees": ["blocking_notifier_call_chain", "crypto_mod_get", "crypto_remove_spawns", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_spawns",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "crypto_more_spawns", "crypto_remove_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_remove_instance",
+    "callees": ["crypto_remove_instance.part.0", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_destroy_instance",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_destroy_instance_workfn",
+    "callees": ["module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_check_alg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alg_put",
+    "callees": ["__refcount_sub_and_test", "crypto_alg_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

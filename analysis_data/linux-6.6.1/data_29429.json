@@ -1,0 +1,20 @@
+[
+  {
+    "name": "proc_self_init",
+    "callees": ["proc_alloc_inum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_setup_self",
+    "callees": ["_printk", "d_add", "d_alloc_name", "down_write", "dput", "inode_set_ctime_current", "new_inode", "up_write"],
+    "global_reads": ["self_inum"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_self_get_link",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__task_pid_nr_ns", "kmalloc_trace", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "agp_put_bridge",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": ["agp_bridge"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_setup",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["agp_off", "agp_try_unsupported_boot"]
+  },
+  {
+    "name": "agp_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_init",
+    "callees": ["_printk"],
+    "global_reads": ["agp_off"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_remove_bridge",
+    "callees": ["agp_backend_cleanup", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_add_bridge",
+    "callees": ["_dev_info", "_printk", "agp_backend_initialize", "agp_put_bridge", "module_put", "try_module_get"],
+    "global_reads": ["agp_off"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_put_bridge",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": ["agp_bridge"]
+  },
+  {
+    "name": "agp_alloc_bridge",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": ["agp_bridge"]
+  },
+  {
+    "name": "agp_backend_cleanup",
+    "callees": ["vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_backend_initialize",
+    "callees": ["_dev_err", "agp_find_max", "vfree", "vzalloc"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "agp_find_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_backend_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "agp_backend_acquire",
+    "callees": [],
+    "global_reads": ["agp_find_bridge"],
+    "global_writes": []
+  }
+]

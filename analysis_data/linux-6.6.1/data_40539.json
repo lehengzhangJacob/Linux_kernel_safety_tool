@@ -1,0 +1,56 @@
+[
+  {
+    "name": "user_epoll_alloc",
+    "callees": ["__percpu_counter_init_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uid_cache_init",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kmem_cache_create", "panic", "user_epoll_alloc"],
+    "global_reads": [],
+    "global_writes": ["uid_cachep"]
+  },
+  {
+    "name": "alloc_uid",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "kmem_cache_alloc", "kmem_cache_free", "memset", "percpu_counter_destroy_many", "uid_hash_find", "user_epoll_alloc"],
+    "global_reads": ["uid_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "free_uid",
+    "callees": ["free_user", "refcount_dec_and_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_user",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "uid_hash_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_user",
+    "callees": ["_raw_spin_unlock_irqrestore", "kmem_cache_free", "percpu_counter_destroy_many"],
+    "global_reads": ["uid_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "user_epoll_alloc",
+    "callees": ["__percpu_counter_init_many"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

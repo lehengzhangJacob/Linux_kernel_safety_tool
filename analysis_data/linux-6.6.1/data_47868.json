@@ -1,0 +1,68 @@
+[
+  {
+    "name": "virtio_gpu_resource_assign_uuid",
+    "callees": ["virtio_gpu_array_add_obj", "virtio_gpu_array_alloc", "virtio_gpu_cmd_resource_assign_uuid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_gem_prime_import_sg_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_gem_prime_import",
+    "callees": ["__refcount_add", "drm_gem_prime_import"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_gem_prime_export",
+    "callees": ["__builtin_expect", "__refcount_add", "drm_dev_get", "virtio_dma_buf_export", "virtio_gpu_notify", "virtio_gpu_resource_assign_uuid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_resource_assign_uuid",
+    "callees": ["virtio_gpu_array_add_obj", "virtio_gpu_array_alloc", "virtio_gpu_cmd_resource_assign_uuid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_gem_unmap_dma_buf",
+    "callees": ["drm_gem_unmap_dma_buf", "virtgpu_gem_unmap_dma_buf.part.0", "virtio_gpu_is_vram"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_gem_map_dma_buf",
+    "callees": ["drm_gem_map_dma_buf", "virtio_gpu_is_vram", "virtio_gpu_vram_map_dma_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtgpu_virtio_get_uuid",
+    "callees": ["__SCT__might_resched", "finish_wait", "init_wait_entry", "memcpy", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "__guc_action_get_hwconfig",
+    "callees": ["intel_guc_send_mmio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_fini_hwconfig",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_hwconfig",
+    "callees": ["guc_hwconfig_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_hwconfig_init",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "guc_hwconfig_discover_size", "guc_hwconfig_fill_buffer", "has_table", "kfree", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_hwconfig_fill_buffer",
+    "callees": ["__guc_action_get_hwconfig", "i915_vma_unpin_and_release", "intel_guc_allocate_and_map_vma", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_hwconfig_discover_size",
+    "callees": ["__guc_action_get_hwconfig"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__guc_action_get_hwconfig",
+    "callees": ["intel_guc_send_mmio"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "intel_guc_debugfs_register",
+    "callees": ["intel_gt_debugfs_register_files", "intel_guc_log_debugfs_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_gucid_threshold_fops_open",
+    "callees": ["simple_attr_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_gucid_threshold_set",
+    "callees": ["intel_guc_sched_disable_gucid_threshold_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_gucid_threshold_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_delay_ms_fops_open",
+    "callees": ["simple_attr_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_delay_ms_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_sched_disable_delay_ms_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_eval_slpc_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_slpc_info_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_slpc_info_show",
+    "callees": ["intel_guc_slpc_print_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_registered_contexts_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_registered_contexts_show",
+    "callees": ["intel_guc_submission_print_context_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_info_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_info_show",
+    "callees": ["drm_puts", "intel_guc_ads_print_policy_info", "intel_guc_ct_print_info", "intel_guc_load_status", "intel_guc_log_info", "intel_guc_submission_print_info"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

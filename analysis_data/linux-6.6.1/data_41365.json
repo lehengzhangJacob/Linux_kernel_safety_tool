@@ -1,0 +1,128 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_direct_busy",
+    "callees": ["autofs_can_expire", "may_umount_tree"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_expire_multi",
+    "callees": ["__builtin_expect", "autofs_do_expire_multi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_do_expire_multi",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "autofs_expire_direct", "autofs_expire_indirect", "autofs_wait", "complete_all", "dput"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_expire_run",
+    "callees": ["_copy_to_user", "_raw_spin_lock", "_raw_spin_unlock", "autofs_expire_indirect", "complete_all", "dput", "memcpy", "memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_expire_wait",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "autofs_wait", "schedule_timeout_uninterruptible", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "should_expire",
+    "callees": ["autofs_can_expire", "autofs_check_leaves", "autofs_mount_busy", "autofs_tree_busy", "dput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_check_leaves",
+    "callees": ["autofs_can_expire", "autofs_mount_busy", "get_next_positive_dentry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_tree_busy",
+    "callees": ["autofs_can_expire", "autofs_mount_busy", "dput", "get_next_positive_dentry"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_direct_busy",
+    "callees": ["autofs_can_expire", "may_umount_tree"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "get_next_positive_dentry",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dput", "lockref_get", "positive_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_next_positive_subdir",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dput", "positive_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "positive_after",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_mount_busy",
+    "callees": ["follow_down_one", "is_autofs_dentry", "may_umount_tree", "path_get", "path_put"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  }
+]

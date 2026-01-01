@@ -1,0 +1,176 @@
+[
+  {
+    "name": "free_pt_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pt_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pt_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pgtable_page",
+    "callees": ["__alloc_pages_node"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_sub_pt",
+    "callees": ["__builtin_unreachable", "free_pt_lvl", "free_pt_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v1_alloc_pgtable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v1_free_pgtable",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "amd_iommu_domain_update", "free_sub_pt", "put_pages_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iommu_v1_iova_to_phys",
+    "callees": ["fetch_pte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iommu_v1_unmap_pages",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "__builtin_unreachable", "fetch_pte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iommu_v1_map_pages",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alloc_pte", "amd_iommu_domain_flush_complete", "amd_iommu_domain_flush_tlb_pde", "free_clear_pte", "put_pages_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_clear_pte",
+    "callees": ["__builtin_expect", "_printk", "free_sub_pt"],
+    "global_reads": ["page_offset_base"],
+    "global_writes": []
+  },
+  {
+    "name": "fetch_pte",
+    "callees": ["first_pte_l7"],
+    "global_reads": ["page_offset_base"],
+    "global_writes": []
+  },
+  {
+    "name": "increase_address_space",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alloc_pgtable_page", "amd_iommu_domain_flush_complete", "amd_iommu_update_and_flush_device_table", "free_pages"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "amd_iommu_domain_set_pgtable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sub_pt",
+    "callees": ["__builtin_unreachable", "free_pt_lvl", "free_pt_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_pt_lvl",
+    "callees": ["free_pt_lvl", "free_pt_page"],
+    "global_reads": ["page_offset_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pt_page",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "first_pte_l7",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v1_tlb_add_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v1_tlb_flush_walk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v1_tlb_flush_all",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pgtable_page",
+    "callees": ["__alloc_pages_node"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

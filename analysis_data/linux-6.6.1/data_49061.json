@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_reset_pinned_contexts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_init__pm",
+    "callees": ["__intel_wakeref_init", "intel_engine_init_heartbeat", "intel_gsc_idle_msg_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__engine_park",
+    "callees": ["__intel_wakeref_put", "call_idle_barriers", "intel_breadcrumbs_park", "intel_engine_park_heartbeat", "switch_to_kernel_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_idle_barriers",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_to_kernel_context",
+    "callees": ["__builtin_expect", "__i915_request_commit", "__i915_request_create", "__queue_and_release_pm", "dma_fence_add_callback", "i915_request_add_active_barriers", "intel_gt_is_wedged", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__queue_and_release_pm",
+    "callees": ["__i915_request_queue_bh", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "duration",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__engine_unpark",
+    "callees": ["__builtin_expect", "__intel_engine_flush_submission", "intel_engine_unpark_heartbeat", "intel_wakeref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_idle_msg_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_is_wedged",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_breadcrumbs_park",
+    "callees": ["__intel_breadcrumbs_park"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]
