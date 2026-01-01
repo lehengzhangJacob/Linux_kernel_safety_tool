@@ -414,6 +414,9 @@ sequenceDiagram
 
 完成后，请访问 **http://localhost:7474** 查看可视化结果。
 
+* **连接地址**: `bolt://localhost:7687`
+* **认证方式**: 选择 **"No Authentication"** (无需用户名/密码)
+
 ### 2. 分析其他内核版本 (进阶)
 
 本项目根目录下提供了多个版本的 Linux 内核源码包（如 `linux-5.15.145.tar.xz`, `linux-6.11.10.tar.xz` 等）。您可以按照以下步骤分析其他版本：
