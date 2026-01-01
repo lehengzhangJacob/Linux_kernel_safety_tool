@@ -16,6 +16,8 @@ MATCH (n) RETURN count(n) as Nodes, count((n)-[]->()) as Relationships
 
 随机展示 50 条函数调用路径，用于检查数据是否导入成功。
 
+![调用关系概览](graphs/graphA.png)
+
 ```cypher
 MATCH path = (f1:Function)-[:CALLS]->(f2:Function)
 RETURN path
@@ -30,6 +32,8 @@ LIMIT 50
 
 查看所有最终**读取**或**写入**了指定全局变量（例如 `vc_class`）的函数调用路径（深度最多 5 层）。
 这是分析竞态条件最直观的视图。
+
+![全局变量调用链](graphs/graphB.png)
 
 ```cypher
 // 将 'vc_class' 替换为你感兴趣的变量名
@@ -83,6 +87,8 @@ RETURN path
 ### 查找可能存在竞态的变量（简单启发式）
 
 查找同时被多个不同函数写入的全局变量。
+
+![潜在竞态变量可视化](graphs/graphC.png)
 
 ```cypher
 MATCH (f:Function)-[:WRITES]->(g:GlobalVariable)

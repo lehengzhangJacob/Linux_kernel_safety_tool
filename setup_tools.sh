@@ -10,8 +10,10 @@ JDK_TAR="$TOOLS_DIR/openjdk-${JDK_VERSION}_linux-x64_bin.tar.gz"
 JDK_URL="https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz"
 
 if [ ! -d "$JDK_DIR" ]; then
-    echo "JDK $JDK_VERSION not found. Downloading..."
-    if [ ! -f "$JDK_TAR" ]; then
+    if [ -f "$JDK_TAR" ]; then
+        echo "Found local JDK archive: $JDK_TAR"
+    else
+        echo "JDK $JDK_VERSION not found. Downloading..."
         wget -O "$JDK_TAR" "$JDK_URL"
     fi
     echo "Extracting JDK..."
@@ -28,8 +30,10 @@ NEO4J_TAR="$TOOLS_DIR/neo4j-community-$NEO4J_VERSION-unix.tar.gz"
 NEO4J_URL="https://neo4j.com/artifact.php?name=neo4j-community-$NEO4J_VERSION-unix.tar.gz"
 
 if [ ! -d "$NEO4J_DIR" ]; then
-    echo "Neo4j $NEO4J_VERSION not found. Downloading..."
-    if [ ! -f "$NEO4J_TAR" ]; then
+    if [ -f "$NEO4J_TAR" ]; then
+        echo "Found local Neo4j archive: $NEO4J_TAR"
+    else
+        echo "Neo4j $NEO4J_VERSION not found. Downloading..."
         wget -O "$NEO4J_TAR" "$NEO4J_URL"
     fi
     echo "Extracting Neo4j..."
