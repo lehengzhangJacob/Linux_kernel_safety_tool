@@ -1,5 +1,7 @@
 # 操作系统设计赛道 - Linux 内核静态分析器 (GCC 插件)
 
+> **演示视频**: [“不知道”队演示视频.mp4](https://pan.baidu.com/s/1qR7CWexEsFd-eRYKq1cHiQ?pwd=oscp) (提取码: oscp)
+
 ## 1. 目标描述
 
 本项目旨在构建一个针对 Lin2.  **实现过程间分析**：从最初只能分析单个函数内部的锁状态，进化到能够追踪跨函数调用的锁传递（如 `wrapper` 函数），显著降低了漏报率。
@@ -241,6 +243,19 @@ gantt
        CC      certs/system_keyring.o
      Analyzer Plugin Loaded! (IPA Mode)
      Analyzer Plugin Loaded! (IPA Mode)
+       CC      arch/x86/kernel/asm-offsets.s
+     Analyzer Plugin Loaded! (IPA Mode)
+       CC      arch/x86/kernel/entry.o
+       CC      arch/x86/kernel/irq.o
+       CC      arch/x86/kernel/time.o
+       CC      arch/x86/kernel/traps.o
+       CC      arch/x86/kernel/tsc.o
+       CC      arch/x86/kernel/stacktrace.o
+       CC      arch/x86/kernel/smp.o
+       CC      arch/x86/kernel/process.o
+       CC      arch/x86/kernel/pm.o
+       CC      arch/x86/kernel/irq_64.o
+       CC      arch/x86/kernel/entry_64.o
        CC      arch/x86/kernel/asm-offsets.s
      Analyzer Plugin Loaded! (IPA Mode)
      ```

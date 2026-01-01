@@ -16,7 +16,6 @@ MATCH (n) RETURN count(n) as Nodes, count((n)-[]->()) as Relationships
 
 随机展示 50 条函数调用路径，用于检查数据是否导入成功。
 
-![调用关系概览](graphs/graphA.png)
 
 ```cypher
 MATCH path = (f1:Function)-[:CALLS]->(f2:Function)
@@ -33,7 +32,7 @@ LIMIT 50
 查看所有最终**读取**或**写入**了指定全局变量（例如 `vc_class`）的函数调用路径（深度最多 5 层）。
 这是分析竞态条件最直观的视图。
 
-![全局变量调用链](graphs/graphB.png)
+![全局变量调用链](graphs/graphA.png)
 
 ```cypher
 // 将 'vc_class' 替换为你感兴趣的变量名
@@ -45,6 +44,8 @@ LIMIT 50
 ### 场景 B：可视化“最热门”的全局变量
 
 找出被读取或写入次数最多的前 10 个全局变量，并直接展示它们与调用函数的连接图。这些变量通常是系统的核心状态。
+
+![最热门全局变量](graphs/graphB.png)
 
 ```cypher
 // 1. 先聚合统计，找出前 10 名
@@ -62,6 +63,8 @@ LIMIT 100
 ### 场景 C：只看“写入”操作
 
 写入操作通常比读取操作更危险。此查询只展示修改了变量的路径。
+
+![只看写入](graphs/graphC.png)
 
 ```cypher
 MATCH path = (start:Function)-[:CALLS*1..5]->(end:Function)-[:WRITES]->(g:GlobalVariable {name: 'vc_class'})
@@ -88,7 +91,7 @@ RETURN path
 
 查找同时被多个不同函数写入的全局变量。
 
-![潜在竞态变量可视化](graphs/graphC.png)
+
 
 ```cypher
 MATCH (f:Function)-[:WRITES]->(g:GlobalVariable)
