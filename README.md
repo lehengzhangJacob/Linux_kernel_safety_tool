@@ -38,21 +38,21 @@
 
 ```mermaid
 graph TD
-    subgraph "Frontend: Static Analysis"
-        K[Linux Kernel Source] -->|make| G[GCC Compiler]
-        P[Analyzer Plugin] -.->|Load| G
-        G -->|Output| J[JSON Data]
-        G -->|Output| L[Analysis Logs]
+    subgraph "前端：静态分析"
+        K[Linux 内核源码] -->|make| G[GCC 编译器]
+        P[分析插件] -.->|加载| G
+        G -->|输出| J[JSON 数据]
+        G -->|输出| L[分析日志]
     end
 
-    subgraph "Middleware: ETL"
-        J -->|Parse| E[Python ETL Script]
-        E -->|Transform| C[CSV Files]
+    subgraph "中间件：ETL"
+        J -->|解析| E[Python ETL 脚本]
+        E -->|转换| C[CSV 文件]
     end
 
-    subgraph "Backend: Storage & Viz"
-        C -->|Import| N[Neo4j Database]
-        N -->|Query| U[Browser / User]
+    subgraph "后端：存储与可视化"
+        C -->|导入| N[Neo4j 数据库]
+        N -->|查询| U[浏览器 / 用户]
     end
 
     style P fill:#f9f,stroke:#333,stroke-width:2px
@@ -326,17 +326,14 @@ gantt
    系统生成的 Neo4j 图谱能够直观展示复杂的内核调用关系与变量访问模式：
 
 
-     ![随机浏览](graphs/graph1.png)
 
 
-     ![全局变量调用链](graphs/graph2A.png)
+
 
 
      ![最热门全局变量](graphs/graph2B.png)
 
-     ![只看写入](graphs/graph2C.png)
 
-     ![最短路径](graphs/graph3.png)
 
 ---
 
