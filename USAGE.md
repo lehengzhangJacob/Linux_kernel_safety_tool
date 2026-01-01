@@ -30,6 +30,8 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 * **JDK 17**: `tools/openjdk-17.0.2_linux-x64_bin.tar.gz`
 * **Neo4j 4.4**: `tools/neo4j-community-4.4.34-unix.tar.gz`
 
+> **注意**：如果 `tools/` 目录下的文件夹运行不正常，您可以尝试手动解压上述压缩包。
+
 只需运行一次初始化脚本即可就绪：
 
 ```bash

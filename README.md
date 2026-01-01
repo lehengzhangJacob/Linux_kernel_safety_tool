@@ -4,9 +4,7 @@
 
 ## 1. 目标描述
 
-本项目旨在构建一个针对 Lin2.  **实现过程间分析**：从最初只能分析单个函数内部的锁状态，进化到能够追踪跨函数调用的锁传递（如 `wrapper` 函数），显著降低了漏报率。
-3.  **分析算法优化**：引入了**函数摘要缓存 (Function Summary Cache)** 机制。在过程间分析中，利用记忆化搜索（Memoization）技术对已计算的函数锁副作用进行缓存，避免了对同一函数的重复递归遍历，将分析复杂度大幅降低，有效支撑了千万行级内核代码的快速扫描。
-4.  **可视化性能突破**：放弃前端渲染方案，转向后端图数据库方案，成功实现了对完整内核模块调用关系的秒级查询。 内核 (v6.6.1) 的**高精度静态分析与可视化系统**。针对操作系统内核代码量大、并发逻辑复杂的特点，项目确立了以下核心目标：
+本项目旨在构建一个针对 Linux 内核 (v6.6.1) 的**高精度静态分析与可视化系统**。针对操作系统内核代码量大、并发逻辑复杂的特点，项目确立了以下核心目标：
 
 1. **语义级静态分析**：开发 GCC 插件，深入编译器中间表示（GIMPLE）层，实现对变量作用域的精准识别（解决 Shadowing 问题）和函数调用关系的精确提取。
 2. **并发安全检测**：基于静态锁集分析（Lockset Analysis）理论，实现过程间（Inter-procedural）的锁状态追踪，自动检测未受保护的全局变量访问，识别潜在竞态条件（Race Condition）。
@@ -71,21 +69,21 @@ graph TD
 
 ```mermaid
 stateDiagram-v2
-    [*] --> 无锁持有
-    
-    无锁持有 --> 持有锁 : spin_lock(L)
-    持有锁 --> 持有锁 : spin_lock(L2)
-    持有锁 --> 无锁持有 : spin_unlock(L) (若是最后一个锁)
-    持有锁 --> 持有锁 : spin_unlock(L2) (若仍有其他锁)
-    
-    state 检查访问 {
-        [*] --> 验证锁集
-        验证锁集 --> 安全 : 锁集非空
-        验证锁集 --> 警告 : 锁集为空
+    [*] --> Unlocked
+  
+    Unlocked --> Locked : spin_lock(L)
+    Locked --> Locked : spin_lock(L2)
+    Locked --> Unlocked : spin_unlock(L) (if last lock)
+    Locked --> Locked : spin_unlock(L2) (if other locks held)
+  
+    state CheckAccess {
+        [*] --> VerifyLockset
+        VerifyLockset --> Safe : Lockset not empty
+        VerifyLockset --> Warning : Lockset empty
     }
 
-    无锁持有 --> 检查访问 : 访问全局变量
-    持有锁 --> 检查访问 : 访问全局变量
+    Unlocked --> CheckAccess : Access Global Var
+    Locked --> CheckAccess : Access Global Var
 ```
 
 ### 3.2 中间处理层 (ETL Middleware)
@@ -104,25 +102,25 @@ stateDiagram-v2
 
 ```mermaid
 erDiagram
-    FUNCTION ||--o{ CALLS : 调用
-    FUNCTION ||--o{ ACCESS : 读写
-    GLOBAL_VAR ||--o{ ACCESS : 被访问
+    FUNCTION ||--o{ CALLS : calls
+    FUNCTION ||--o{ ACCESS : reads_writes
+    GLOBAL_VAR ||--o{ ACCESS : accessed_by
 
     FUNCTION {
-        string name "名称"
-        string file "文件"
-        int line "行号"
+        string name
+        string file
+        int line
     }
 
     GLOBAL_VAR {
-        string name "名称"
-        string file "文件"
-        int line "行号"
+        string name
+        string file
+        int line
     }
 
     ACCESS {
-        string type "读/写"
-        string lock_status "受保护/未受保护"
+        string type
+        string lock_status
     }
 ```
 
@@ -132,42 +130,42 @@ erDiagram
 
 ```mermaid
 graph LR
-    subgraph "源代码"
-        S1[C 源文件]
-        S2[头文件]
+    subgraph "Source Code"
+        S1[C Source Files]
+        S2[Header Files]
     end
 
-    subgraph "GCC 编译"
-        G1[解析器]
-        G2[GIMPLE 中间表示]
-        P1[插件：分析器]
+    subgraph "GCC Compilation"
+        G1[Parser]
+        G2[GIMPLE IR]
+        P1[Plugin: Analyzer]
     end
 
-    subgraph "中间数据"
-        D1[原始 JSON 日志]
-        D2[AST 日志]
+    subgraph "Intermediate Data"
+        D1[Raw JSON Logs]
+        D2[AST Logs]
     end
 
-    subgraph "ETL 处理"
-        E1[去重]
-        E2[实体映射]
-        D3[CSV: 节点]
-        D4[CSV: 边]
+    subgraph "ETL Process"
+        E1[Deduplication]
+        E2[Entity Mapping]
+        D3[CSV: Nodes]
+        D4[CSV: Edges]
     end
 
-    subgraph "知识图谱"
-        N1((函数))
-        N2((全局变量))
-        R1[调用]
-        R2[访问]
+    subgraph "Knowledge Graph"
+        N1((Function))
+        N2((GlobalVar))
+        R1[CALLS]
+        R2[ACCESS]
     end
 
     S1 --> G1
     S2 --> G1
     G1 --> G2
     G2 --> P1
-    P1 -->|提取| D1
-    P1 -->|记录| D2
+    P1 -->|Extract| D1
+    P1 -->|Log| D2
     D1 --> E1
     E1 --> E2
     E2 --> D3
@@ -176,8 +174,8 @@ graph LR
     D3 --> N2
     D4 --> R1
     D4 --> R2
-    N1 -->|调用| N1
-    N1 -->|访问| N2
+    N1 -->|CALLS| N1
+    N1 -->|ACCESS| N2
 ```
 
 ## 4. 开发计划
@@ -187,19 +185,19 @@ gantt
     title 项目开发时间轴
     dateFormat  YYYY-MM-DD
     axisFormat  %m-%d
-    
+  
     section 阶段 1：原型
     环境搭建       :done,    p1, 2025-11-16, 3d
     插件原型        :done,    p2, after p1, 4d
-    
+  
     section 阶段 2：核心逻辑
     核心分析逻辑     :active,  p3, after p2, 10d
     变量消歧 :         p4, after p3, 5d
-    
+  
     section 阶段 3：集成
     Neo4j 集成       :         p5, after p4, 7d
     可视化           :         p6, after p5, 5d
-    
+  
     section 阶段 4：优化
     系统优化     :         p7, after p6, 7d
     最终测试           :         p8, after p7, 4d
@@ -214,7 +212,8 @@ gantt
 
 1. **攻克内核构建集成**：成功将自定义 GCC 插件无缝嵌入 Linux Kbuild 系统，无需修改内核源码即可进行分析。
 2. **实现过程间分析**：从最初只能分析单个函数内部的锁状态，进化到能够追踪跨函数调用的锁传递（如 `wrapper` 函数），显著降低了漏报率。
-3. **可视化性能突破**：放弃前端渲染方案，转向后端图数据库方案，成功实现了对完整内核模块调用关系的秒级查询。
+3. **分析算法优化**：引入了**函数摘要缓存 (Function Summary Cache)** 机制。在过程间分析中，利用记忆化搜索（Memoization）技术对已计算的函数锁副作用进行缓存，避免了对同一函数的重复递归遍历，将分析复杂度大幅降低，有效支撑了千万行级内核代码的快速扫描。
+4. **可视化性能突破**：放弃前端渲染方案，转向后端图数据库方案，成功实现了对完整内核模块调用关系的秒级查询。
 
 ## 6. 系统测试情况
 
@@ -233,6 +232,7 @@ gantt
    * **数据量**：生成节点数 > 80,000，边数 > 200,000。
    * **性能**：全量分析耗时增加可控，Neo4j 查询响应迅速。
 3. **典型输出示例**
+
    * **构建日志 (Build Log)**
      系统无缝集成于 Kbuild 构建过程，以下是部分编译日志（截取自 `analysis_linux-6.6.1.log`），可以看到插件被成功加载：
 
@@ -320,20 +320,11 @@ gantt
      [RACE_WARNING] Function 'update_process_times': Unprotected Write to global variable 'jiffies_64' (No locks held)
      [RACE_WARNING] Function 'update_process_times': Unprotected Write to global variable 'jiffies_64' (No locks held)
      ```
-
 4. **可视化效果展示 (Visualization Showcase)**
 
    系统生成的 Neo4j 图谱能够直观展示复杂的内核调用关系与变量访问模式：
 
-
-
-
-
-
-
-     ![最热门全局变量](graphs/graph2B.png)
-
-
+   ![最热门全局变量](graphs/graph2B.png)
 
 ---
 
@@ -368,6 +359,8 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 
 * **JDK 17**: `tools/openjdk-17.0.2_linux-x64_bin.tar.gz`
 * **Neo4j 4.4**: `tools/neo4j-community-4.4.34-unix.tar.gz`
+
+> **注意**：如果 `tools/` 目录下的文件夹运行不正常，您可以尝试手动解压上述压缩包。
 
 只需运行一次初始化脚本即可就绪：
 
@@ -696,7 +689,6 @@ MATCH (n) RETURN count(n) as Nodes, count((n)-[]->()) as Relationships
 ### 随机浏览调用关系
 
 随机展示 50 条函数调用路径，用于检查数据是否导入成功。
-
 
 ```cypher
 MATCH path = (f1:Function)-[:CALLS]->(f2:Function)
