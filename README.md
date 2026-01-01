@@ -71,21 +71,21 @@ graph TD
 
 ```mermaid
 stateDiagram-v2
-    [*] --> NoLocksHeld
+    [*] --> 无锁持有
     
-    NoLocksHeld --> LocksHeld : spin_lock(L)
-    LocksHeld --> LocksHeld : spin_lock(L2)
-    LocksHeld --> NoLocksHeld : spin_unlock(L) (if last lock)
-    LocksHeld --> LocksHeld : spin_unlock(L2) (if others remain)
+    无锁持有 --> 持有锁 : spin_lock(L)
+    持有锁 --> 持有锁 : spin_lock(L2)
+    持有锁 --> 无锁持有 : spin_unlock(L) (若是最后一个锁)
+    持有锁 --> 持有锁 : spin_unlock(L2) (若仍有其他锁)
     
-    state CheckAccess {
-        [*] --> VerifyLockset
-        VerifyLockset --> Safe : Lockset not empty
-        VerifyLockset --> Warning : Lockset empty
+    state 检查访问 {
+        [*] --> 验证锁集
+        验证锁集 --> 安全 : 锁集非空
+        验证锁集 --> 警告 : 锁集为空
     }
 
-    NoLocksHeld --> CheckAccess : Access Global Var
-    LocksHeld --> CheckAccess : Access Global Var
+    无锁持有 --> 检查访问 : 访问全局变量
+    持有锁 --> 检查访问 : 访问全局变量
 ```
 
 ### 3.2 中间处理层 (ETL Middleware)
@@ -104,25 +104,25 @@ stateDiagram-v2
 
 ```mermaid
 erDiagram
-    FUNCTION ||--o{ CALLS : invokes
-    FUNCTION ||--o{ ACCESS : reads_writes
-    GLOBAL_VAR ||--o{ ACCESS : is_accessed_by
+    FUNCTION ||--o{ CALLS : 调用
+    FUNCTION ||--o{ ACCESS : 读写
+    GLOBAL_VAR ||--o{ ACCESS : 被访问
 
     FUNCTION {
-        string name
-        string file
-        int line
+        string name "名称"
+        string file "文件"
+        int line "行号"
     }
 
     GLOBAL_VAR {
-        string name
-        string file
-        int line
+        string name "名称"
+        string file "文件"
+        int line "行号"
     }
 
     ACCESS {
-        string type "READ/WRITE"
-        string lock_status "Protected/Unprotected"
+        string type "读/写"
+        string lock_status "受保护/未受保护"
     }
 ```
 
@@ -132,42 +132,42 @@ erDiagram
 
 ```mermaid
 graph LR
-    subgraph "Source Code"
-        S1[C Source Files]
-        S2[Header Files]
+    subgraph "源代码"
+        S1[C 源文件]
+        S2[头文件]
     end
 
-    subgraph "GCC Compilation"
-        G1[Parser]
-        G2[GIMPLE IR]
-        P1[Plugin: Analyzer]
+    subgraph "GCC 编译"
+        G1[解析器]
+        G2[GIMPLE 中间表示]
+        P1[插件：分析器]
     end
 
-    subgraph "Intermediate Data"
-        D1[Raw JSON Logs]
-        D2[AST Logs]
+    subgraph "中间数据"
+        D1[原始 JSON 日志]
+        D2[AST 日志]
     end
 
-    subgraph "ETL Process"
-        E1[Deduplication]
-        E2[Entity Mapping]
-        D3[CSV: Nodes]
-        D4[CSV: Edges]
+    subgraph "ETL 处理"
+        E1[去重]
+        E2[实体映射]
+        D3[CSV: 节点]
+        D4[CSV: 边]
     end
 
-    subgraph "Knowledge Graph"
-        N1((Function))
-        N2((GlobalVar))
-        R1[CALLS]
-        R2[ACCESS]
+    subgraph "知识图谱"
+        N1((函数))
+        N2((全局变量))
+        R1[调用]
+        R2[访问]
     end
 
     S1 --> G1
     S2 --> G1
     G1 --> G2
     G2 --> P1
-    P1 -->|Extract| D1
-    P1 -->|Log| D2
+    P1 -->|提取| D1
+    P1 -->|记录| D2
     D1 --> E1
     E1 --> E2
     E2 --> D3
@@ -176,33 +176,33 @@ graph LR
     D3 --> N2
     D4 --> R1
     D4 --> R2
-    N1 -->|CALLS| N1
-    N1 -->|ACCESS| N2
+    N1 -->|调用| N1
+    N1 -->|访问| N2
 ```
 
 ## 4. 开发计划
 
 ```mermaid
 gantt
-    title Project Development Timeline
+    title 项目开发时间轴
     dateFormat  YYYY-MM-DD
     axisFormat  %m-%d
     
-    section Phase 1 Prototype
-    Environment Setup       :done,    p1, 2025-11-16, 3d
-    Prototype Plugin        :done,    p2, after p1, 4d
+    section 阶段 1：原型
+    环境搭建       :done,    p1, 2025-11-16, 3d
+    插件原型        :done,    p2, after p1, 4d
     
-    section Phase 2 Core Logic
-    Core Analysis Logic     :active,  p3, after p2, 10d
-    Variable Disambiguation :         p4, after p3, 5d
+    section 阶段 2：核心逻辑
+    核心分析逻辑     :active,  p3, after p2, 10d
+    变量消歧 :         p4, after p3, 5d
     
-    section Phase 3 Integration
-    Neo4j Integration       :         p5, after p4, 7d
-    Visualization           :         p6, after p5, 5d
+    section 阶段 3：集成
+    Neo4j 集成       :         p5, after p4, 7d
+    可视化           :         p6, after p5, 5d
     
-    section Phase 4 Optimization
-    System Optimization     :         p7, after p6, 7d
-    Final Testing           :         p8, after p7, 4d
+    section 阶段 4：优化
+    系统优化     :         p7, after p6, 7d
+    最终测试           :         p8, after p7, 4d
 ```
 
 1. **环境搭建与原型验证**：配置 Linux 6.6.1 构建环境，开发最小化 GCC 插件验证编译回调。
@@ -391,27 +391,27 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 
 ```mermaid
 sequenceDiagram
-    participant User
+    participant User as 用户
     participant Script as full_run.sh
-    participant Build as Build System
-    participant Plugin as GCC Plugin
-    participant ETL as ETL Tool
+    participant Build as 构建系统
+    participant Plugin as GCC 插件
+    participant ETL as ETL 工具
     participant DB as Neo4j
 
     User->>Script: ./full_run.sh
-    Script->>DB: Stop Service
-    Script->>Build: Clean & Config
-    Script->>Build: make (with -fplugin)
-    loop Every Source File
-        Build->>Plugin: Invoke Plugin
-        Plugin->>Plugin: Analyze GIMPLE
-        Plugin-->>Build: Continue
+    Script->>DB: 停止服务
+    Script->>Build: 清理与配置
+    Script->>Build: make (带 -fplugin)
+    loop 每个源文件
+        Build->>Plugin: 调用插件
+        Plugin->>Plugin: 分析 GIMPLE
+        Plugin-->>Build: 继续
     end
-    Script->>ETL: Run export_to_neo4j.py
-    ETL->>ETL: Generate CSVs
-    Script->>DB: Import CSVs
-    Script->>DB: Start Service
-    Script-->>User: Ready (localhost:7474)
+    Script->>ETL: 运行 export_to_neo4j.py
+    ETL->>ETL: 生成 CSV
+    Script->>DB: 导入 CSV
+    Script->>DB: 启动服务
+    Script-->>User: 就绪 (localhost:7474)
 ```
 
 ```bash
@@ -589,17 +589,17 @@ GCC 编译过程分为多个 Pass (GIMPLE, RTL, IPA 等)。静态分析通常在
 
 ```mermaid
 flowchart LR
-    A[Plugin Init] --> B{Check Version}
-    B -- Yes --> C[Register Pass]
-    B -- No --> D[Error]
-    C --> E[Execute Pass]
-    E --> F[Iterate Functions]
-    F --> G[Iterate Basic Blocks]
-    G --> H[Iterate Statements]
-    H --> I{Match Pattern?}
-    I -- SpinLock --> J[Update Lockset]
-    I -- GlobalVar --> K[Record Access]
-    I -- Call --> L[Update CallGraph]
+    A[插件初始化] --> B{检查版本}
+    B -- 是 --> C[注册 Pass]
+    B -- 否 --> D[报错]
+    C --> E[执行 Pass]
+    E --> F[遍历函数]
+    F --> G[遍历基本块]
+    G --> H[遍历语句]
+    H --> I{匹配模式?}
+    I -- 自旋锁 --> J[更新锁集]
+    I -- 全局变量 --> K[记录访问]
+    I -- 调用 --> L[更新调用图]
 ```
 
 ### 定义 Pass
