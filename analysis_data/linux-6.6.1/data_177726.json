@@ -1,0 +1,32 @@
+[
+  {
+    "name": "i915_check_nomodeset.part.0",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_exit",
+    "callees": [],
+    "global_reads": ["init_progress"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_init",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": ["init_progress"]
+  },
+  {
+    "name": "i915_check_nomodeset",
+    "callees": ["i915_check_nomodeset.part.0", "video_firmware_drivers_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_mock_selftests",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

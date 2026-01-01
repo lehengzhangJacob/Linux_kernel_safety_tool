@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_pnp_init",
+    "callees": ["acpi_scan_add_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_is_pnp_device",
+    "callees": ["acpi_match_device_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pnp_attach",
+    "callees": ["acpi_match_device_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pnp_match",
+    "callees": ["matching_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "matching_id",
+    "callees": ["memcmp", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_register_board_info",
+    "callees": ["down_write", "kfree", "kmemdup", "kzalloc", "up_write"],
+    "global_reads": ["__i2c_first_dynamic_bus_num"],
+    "global_writes": ["__i2c_first_dynamic_bus_num"]
+  }
+]

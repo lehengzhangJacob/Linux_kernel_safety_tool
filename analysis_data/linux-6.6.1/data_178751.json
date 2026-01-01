@@ -1,0 +1,974 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_offload",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_input_state",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_free",
+    "callees": ["__builtin_expect", "__reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_put",
+    "callees": ["__refcount_sub_and_test", "reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_offload",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_input_state",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_checksum_complete",
+    "callees": ["__skb_checksum_complete", "skb_csum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_bad_csum.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_bad_csum",
+    "callees": ["__SCT__tp_func_tcp_bad_csum", "cpu_online", "trace_tcp_bad_csum.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_checksum_complete",
+    "callees": ["__skb_checksum_complete", "skb_csum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_set_owner_r",
+    "callees": ["skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_rmem_schedule",
+    "callees": ["__builtin_expect", "__sk_mem_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_clone_and_charge_r",
+    "callees": ["__kfree_skb", "sk_rmem_schedule", "skb_clone", "skb_set_owner_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_checksum_complete",
+    "callees": ["__skb_checksum_complete", "skb_csum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_v6_send_check",
+    "callees": ["csum_ipv6_magic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rt6_get_cookie.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_listendrop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_v6_send_check",
+    "callees": ["csum_ipv6_magic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rt6_get_cookie.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rt6_get_cookie.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_mtu_reduced.part.0",
+    "callees": ["dst_mtu", "inet6_csk_update_pmtu", "tcp_mtu_to_mss", "tcp_simple_retransmit", "tcp_sync_mss"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_bad_csum.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_exit",
+    "callees": ["inet6_del_protocol", "inet6_unregister_protosw", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_init",
+    "callees": ["inet6_add_protocol", "inet6_del_protocol", "inet6_register_protosw", "inet6_unregister_protosw", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_net_exit_batch",
+    "callees": ["tcp_twsk_purge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_net_exit",
+    "callees": ["sock_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv6_net_init",
+    "callees": ["inet_ctl_sock_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_proc_exit",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_proc_init",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp6_seq_show",
+    "callees": ["get_openreq6", "get_tcp6_sock", "get_timewait6_sock", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_timewait6_sock",
+    "callees": ["__builtin_bswap16", "jiffies_to_clock_t", "seq_printf"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "get_tcp6_sock",
+    "callees": ["__builtin_bswap16", "jiffies_to_clock_t", "seq_printf", "sock_i_ino", "sock_i_uid"],
+    "global_reads": ["jiffies", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "get_openreq6",
+    "callees": ["__builtin_bswap16", "jiffies_to_clock_t", "seq_printf", "sock_i_uid"],
+    "global_reads": ["jiffies", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_init_sock",
+    "callees": ["tcp_init_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_send_check",
+    "callees": ["__tcp_v6_send_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_early_demux",
+    "callees": ["__builtin_bswap16", "__inet6_lookup_established", "dst_check", "pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_rcv",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__builtin_memcpy", "__inet6_lookup_skb", "__refcount_add", "__skb_checksum_validate_complete", "__skb_checksum_validate_needed", "__xfrm_policy_check2", "_raw_spin_lock", "_raw_spin_unlock", "inet6_lookup_listener", "inet_csk_reqsk_queue_drop_and_put", "inet_twsk_deschedule_put", "inet_twsk_put", "ip6_compute_pseudo", "kfree_skb_reason", "nf_conntrack_put", "pskb_may_pull_reason", "reqsk_put", "reuseport_migrate_sock", "sk_drops_add", "sock_put", "tcp_add_backlog", "tcp_check_req", "tcp_checksum_complete", "tcp_child_process", "tcp_filter", "tcp_inbound_md5_hash", "tcp_segs_in", "tcp_timewait_state_process", "tcp_v6_do_rcv", "tcp_v6_fill_cb", "tcp_v6_send_reset", "tcp_v6_timewait_ack", "trace_tcp_bad_csum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_fill_cb",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_do_rcv",
+    "callees": ["__builtin_expect", "__builtin_memcpy", "__kfree_skb", "consume_skb", "dst_release", "ip6_dst_check", "ipv6_opt_accepted", "kfree_skb_reason", "sk_mark_napi_id", "skb_clone_and_charge_r", "tcp_checksum_complete", "tcp_child_process", "tcp_rcv_established", "tcp_rcv_state_process", "tcp_v4_do_rcv", "tcp_v6_cookie_check", "tcp_v6_send_reset", "trace_tcp_bad_csum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_syn_recv_sock",
+    "callees": ["__builtin_memcpy", "__inet_inherit_port", "_raw_spin_unlock", "consume_skb", "dst_metric_advmss", "dst_mtu", "dst_release", "inet6_csk_route_req", "inet6_sk_rx_dst_set", "inet_csk_prepare_forced_close", "inet_ehash_nolisten", "ip6_dst_store", "ipv6_dup_options", "memcpy", "skb_clone_and_charge_r", "sock_put", "tcp_ca_openreq_child", "tcp_create_openreq_child", "tcp_done", "tcp_initialize_rcv_mss", "tcp_listendrop", "tcp_md5_do_lookup", "tcp_md5_key_copy", "tcp_sync_mss", "tcp_v4_syn_recv_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_conn_request",
+    "callees": ["tcp_conn_request", "tcp_listendrop", "tcp_v4_conn_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_get_syncookie",
+    "callees": ["__cookie_v6_init_sequence", "tcp_get_syncookie_mss", "tcp_synq_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_cookie_check",
+    "callees": ["cookie_v6_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_reqsk_send_ack",
+    "callees": ["__builtin_bswap16", "ktime_get", "tcp_md5_do_lookup", "tcp_v6_send_response"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_timewait_ack",
+    "callees": ["__builtin_bswap32", "inet_twsk_put", "ktime_get", "tcp_v6_send_response"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_send_reset",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__rcu_read_lock", "__rcu_read_unlock", "inet6_lookup_listener", "memcmp", "tcp_md5_do_lookup", "tcp_parse_md5sig_option", "tcp_v6_md5_hash_skb", "tcp_v6_send_response", "trace_tcp_send_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_send_response",
+    "callees": ["__alloc_skb", "__builtin_bswap16", "__builtin_bswap32", "__builtin_expect", "__ipv6_addr_type", "__tcp_v6_send_check", "ip6_dst_lookup_flow", "ip6_xmit", "kfree_skb_reason", "memset", "skb_push", "tcp_transmit_time", "tcp_v6_md5_hash_hdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_route_req",
+    "callees": ["inet6_csk_route_req", "security_inet_conn_request", "tcp_v6_init_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_init_req",
+    "callees": ["__ipv6_addr_type", "__refcount_add", "ipv6_opt_accepted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_md5_hash_skb",
+    "callees": ["__local_bh_enable_ip", "crypto_ahash_final", "crypto_ahash_init", "memset", "tcp_get_md5sig_pool", "tcp_md5_hash_key", "tcp_md5_hash_skb_data", "tcp_v6_md5_hash_headers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_parse_md5_keys",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "copy_from_sockptr_offset", "dev_get_by_index_rcu", "tcp_md5_do_add", "tcp_md5_do_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_md5_lookup",
+    "callees": ["tcp_md5_do_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_reqsk_destructor",
+    "callees": ["consume_skb", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_send_synack",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__tcp_v6_send_check", "inet6_csk_route_req", "ip6_xmit", "tcp_make_synack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_err",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_expect", "__inet6_lookup_established", "__refcount_add", "__sk_dst_check", "_raw_spin_lock", "_raw_spin_unlock", "icmpv6_err_convert", "inet_twsk_put", "ip6_sk_accept_pmtu", "ipv6_icmp_error", "sk_error_report", "sock_put", "tcp_done", "tcp_ld_RTO_revert", "tcp_req_err", "tcp_v6_mtu_reduced"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_mtu_reduced",
+    "callees": ["tcp_v6_mtu_reduced.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_connect",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "__ipv6_addr_type", "fl6_sock_lookup", "fl6_sock_release", "fl6_update_dst", "get_random_u32", "inet6_hash_connect", "inet_bhash2_reset_saddr", "inet_bhash2_update_saddr", "ip6_dst_lookup_flow", "ip6_dst_store", "memset", "secure_tcpv6_seq", "secure_tcpv6_ts_off", "security_sk_classify_flow", "tcp_connect", "tcp_fastopen_defer_connect", "tcp_set_state", "tcp_v4_connect"],
+    "global_reads": ["in6addr_loopback"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_pre_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_init_ts_off",
+    "callees": ["secure_tcpv6_ts_off"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v6_init_seq",
+    "callees": ["secure_tcpv6_seq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_sk_rx_dst_set",
+    "callees": ["rcuref_get", "rt6_get_cookie.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_bad_csum",
+    "callees": ["__SCT__tp_func_tcp_bad_csum", "cpu_online", "trace_tcp_bad_csum.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_send_reset",
+    "callees": ["__SCT__tp_func_tcp_send_reset", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_ahash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_mark_napi_id",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_offload",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_input_state",
+    "callees": ["skb_sec_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tcp_v6_send_check",
+    "callees": ["csum_ipv6_magic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6_sk_accept_pmtu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_transmit_time",
+    "callees": ["ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_listendrop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_segs_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_checksum_complete",
+    "callees": ["__skb_checksum_complete", "skb_csum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_synq_overflow",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "fl6_sock_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fl6_sock_lookup",
+    "callees": ["__fl6_sock_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_put",
+    "callees": ["__refcount_sub_and_test", "reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_free",
+    "callees": ["__builtin_expect", "__reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_steal_sock",
+    "callees": ["sk_is_refcounted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_is_refcounted",
+    "callees": ["sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_clone_and_charge_r",
+    "callees": ["__kfree_skb", "sk_rmem_schedule", "skb_clone", "skb_set_owner_r"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_set_owner_r",
+    "callees": ["skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_rmem_schedule",
+    "callees": ["__builtin_expect", "__sk_mem_schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_check",
+    "callees": ["__builtin_expect", "ip6_dst_check", "ipv4_dst_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_metric_advmss",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_sec_path",
+    "callees": ["skb_sec_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_decr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_csum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_put",
+    "callees": ["__refcount_sub_and_test", "nf_conntrack_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

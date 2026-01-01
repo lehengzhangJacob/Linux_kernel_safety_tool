@@ -1,0 +1,314 @@
+[
+  {
+    "name": "atomic_notifier_chain_unregister",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "notifier_chain_unregister", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_chain_register",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notifier_call_chain_robust",
+    "callees": ["notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blocking_notifier_chain_register",
+    "callees": ["__builtin_expect", "down_write", "notifier_chain_register", "up_write"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_call_chain",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "srcu_notifier_chain_register.part.0",
+    "callees": ["notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_call_chain.part.0",
+    "callees": ["down_read", "notifier_call_chain", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_call_chain_robust.part.0",
+    "callees": ["down_read", "notifier_call_chain_robust", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_die_notifier",
+    "callees": ["atomic_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_die_notifier",
+    "callees": ["atomic_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notify_die",
+    "callees": ["atomic_notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "srcu_init_notifier_head",
+    "callees": ["__builtin_unreachable", "__mutex_init", "init_srcu_struct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "srcu_notifier_call_chain",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "srcu_notifier_chain_unregister",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "notifier_chain_unregister", "synchronize_srcu"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "srcu_notifier_chain_register",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "notifier_chain_register", "srcu_notifier_chain_register.part.0"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "raw_notifier_call_chain",
+    "callees": ["notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "raw_notifier_call_chain_robust",
+    "callees": ["notifier_call_chain_robust"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "raw_notifier_chain_unregister",
+    "callees": ["notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "raw_notifier_chain_register",
+    "callees": ["notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_call_chain",
+    "callees": ["blocking_notifier_call_chain.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_call_chain_robust",
+    "callees": ["blocking_notifier_call_chain_robust.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_chain_unregister",
+    "callees": ["__builtin_expect", "down_write", "notifier_chain_unregister", "up_write"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_chain_register_unique_prio",
+    "callees": ["__blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blocking_notifier_chain_register",
+    "callees": ["__blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blocking_notifier_chain_register",
+    "callees": ["__builtin_expect", "down_write", "notifier_chain_register", "up_write"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_call_chain_is_empty",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_call_chain",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_chain_unregister",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "notifier_chain_unregister", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_chain_register_unique_prio",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_notifier_chain_register",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notifier_call_chain_robust",
+    "callees": ["notifier_call_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notifier_call_chain",
+    "callees": ["trace_notifier_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notifier_chain_unregister",
+    "callees": ["trace_notifier_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "notifier_chain_register",
+    "callees": ["__builtin_expect", "notifier_chain_register.part.0", "trace_notifier_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_notifier_info",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_notifier_info",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_notifier_info",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_notifier_run",
+    "callees": ["__probestub_notifier_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_notifier_run",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_notifier_unregister",
+    "callees": ["__probestub_notifier_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_notifier_unregister",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_notifier_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_notifier_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_notifier_run",
+    "callees": ["__SCT__tp_func_notifier_run", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_notifier_unregister",
+    "callees": ["__SCT__tp_func_notifier_unregister", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_notifier_register",
+    "callees": ["__SCT__tp_func_notifier_register", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

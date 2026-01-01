@@ -1,0 +1,548 @@
+[
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue.part.0",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue",
+    "callees": ["alarmtimer_dequeue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue.part.0",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_init",
+    "callees": ["__platform_driver_register", "class_interface_register", "class_interface_unregister", "rtc_timer_init"],
+    "global_reads": ["rtc_class"],
+    "global_writes": []
+  },
+  {
+    "name": "get_boottime_timespec",
+    "callees": ["ktime_get_boottime_ts64", "timens_add_boottime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_nsleep",
+    "callees": ["__builtin_expect", "alarm_init_on_stack", "alarmtimer_do_nsleep", "alarmtimer_get_rtcdev", "capable", "ktime_add_safe", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_nsleep_restart",
+    "callees": ["alarm_init_on_stack", "alarmtimer_do_nsleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_do_nsleep",
+    "callees": ["__builtin_expect", "alarm_cancel", "alarm_start", "alarmtimer_freezerset", "freezing", "nanosleep_copyout", "ns_to_timespec64", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_nsleep_wakeup",
+    "callees": ["wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_create",
+    "callees": ["alarm_init", "alarmtimer_get_rtcdev", "capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_get_ktime",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_get_timespec",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_getres",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": ["hrtimer_resolution"],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_arm",
+    "callees": ["alarm_start", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_wait_running",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_try_to_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_forward",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_rearm",
+    "callees": ["__alarm_forward_now", "alarm_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_handle_timer",
+    "callees": ["__alarm_forward_now", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "posix_timer_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_freezerset",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["__already_done", "freezer_delta"],
+    "global_writes": ["__already_done", "freezer_alarmtype", "freezer_delta", "freezer_expires"]
+  },
+  {
+    "name": "alarm_forward_now",
+    "callees": ["__alarm_forward_now"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_try_to_cancel",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_dequeue", "hrtimer_try_to_cancel", "trace_alarmtimer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_restart",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_enqueue", "hrtimer_start_expires"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_start_relative",
+    "callees": ["alarm_start", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_start",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_enqueue", "hrtimer_start_range_ns", "trace_alarmtimer_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_resume",
+    "callees": ["alarmtimer_get_rtcdev", "rtc_timer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_suspend",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_get_rtcdev", "pm_wakeup_dev_event", "rtc_read_time", "rtc_timer_cancel", "rtc_timer_start", "rtc_tm_to_ktime", "trace_alarmtimer_suspend"],
+    "global_reads": ["freezer_alarmtype", "freezer_delta", "freezer_expires"],
+    "global_writes": ["freezer_delta"]
+  },
+  {
+    "name": "alarm_expires_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_fired",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_dequeue", "alarmtimer_enqueue", "trace_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue",
+    "callees": ["alarmtimer_dequeue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_rtc_add_device",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_init_wakeup", "get_device", "platform_device_register_resndata", "platform_device_unregister", "try_module_get"],
+    "global_reads": ["rtcdev"],
+    "global_writes": ["rtcdev"]
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_alarm_class",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_alarmtimer_suspend",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_alarm_class",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_alarmtimer_suspend",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_alarm_class",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_flags_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_alarmtimer_suspend",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_flags_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_cancel",
+    "callees": ["__probestub_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_cancel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_start",
+    "callees": ["__probestub_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_fired",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_fired",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_cancel",
+    "callees": ["__SCT__tp_func_alarmtimer_cancel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_start",
+    "callees": ["__SCT__tp_func_alarmtimer_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_fired",
+    "callees": ["__SCT__tp_func_alarmtimer_fired", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_suspend",
+    "callees": ["__SCT__tp_func_alarmtimer_suspend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_ktime_to_host",
+    "callees": ["__builtin_expect", "do_timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_add_boottime",
+    "callees": ["set_normalized_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_boottime_ts64",
+    "callees": ["ktime_get_with_offset", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_boottime",
+    "callees": ["ktime_get_with_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_real",
+    "callees": ["ktime_get_with_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

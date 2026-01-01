@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_pin_pages",
+    "callees": ["__builtin_expect", "__i915_gem_object_get_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_pin_pages",
+    "callees": ["__builtin_expect", "__i915_gem_object_get_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_prime_import",
+    "callees": ["__builtin_expect", "__refcount_add", "dma_buf_attach", "dma_buf_detach", "dma_buf_put", "drm_gem_private_object_init", "i915_gem_object_alloc", "i915_gem_object_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_put_pages_dmabuf",
+    "callees": ["dma_buf_unmap_attachment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_pages_dmabuf",
+    "callees": ["__builtin_expect", "__i915_gem_object_set_pages", "dma_buf_map_attachment", "i915_gem_object_can_bypass_llc", "wbinvd_on_all_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_prime_export",
+    "callees": ["drm_gem_dmabuf_export"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_dmabuf_detach",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_dmabuf_attach",
+    "callees": ["__i915_gem_ww_fini", "i915_gem_object_can_migrate", "i915_gem_object_lock", "i915_gem_object_migrate", "i915_gem_object_pin_pages", "i915_gem_object_wait_migration", "i915_gem_ww_ctx_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_end_cpu_access",
+    "callees": ["i915_gem_object_lock", "i915_gem_object_pin_pages", "i915_gem_object_set_to_gtt_domain", "i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_begin_cpu_access",
+    "callees": ["i915_gem_object_lock", "i915_gem_object_pin_pages", "i915_gem_object_set_to_cpu_domain", "i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_dmabuf_mmap",
+    "callees": ["drm_gem_prime_mmap", "vma_set_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_dmabuf_vunmap",
+    "callees": ["__i915_gem_object_flush_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_dmabuf_vmap",
+    "callees": ["__builtin_expect", "i915_gem_object_pin_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_map_dma_buf",
+    "callees": ["__builtin_return_address", "dma_map_sgtable", "kfree", "kmalloc_trace", "sg_alloc_table", "sg_free_table", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_pin_pages",
+    "callees": ["__builtin_expect", "__i915_gem_object_get_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_ww_fini",
+    "callees": ["i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

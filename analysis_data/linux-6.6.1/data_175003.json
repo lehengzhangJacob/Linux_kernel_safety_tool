@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_modern_find_vqs.part.0",
+    "callees": ["vp_modern_set_queue_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_pci_modern_remove",
+    "callees": ["vp_modern_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_pci_modern_probe",
+    "callees": ["vp_modern_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get_shm_region",
+    "callees": ["_dev_err", "virtio_pci_find_shm_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_pci_find_shm_cap",
+    "callees": ["_dev_err", "pci_find_capability", "pci_find_next_capability", "pci_read_config_byte", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_vq",
+    "callees": ["pci_iounmap", "vp_modern_queue_vector", "vring_del_virtqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_modern_find_vqs",
+    "callees": ["vp_find_vqs", "vp_modern_find_vqs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_vq",
+    "callees": ["vp_active_vq", "vp_modern_get_num_queues", "vp_modern_get_queue_enable", "vp_modern_get_queue_size", "vp_modern_map_vq_notify", "vring_create_virtqueue", "vring_del_virtqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_notify_with_data",
+    "callees": ["iowrite32", "vring_notification_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_config_vector",
+    "callees": ["vp_modern_config_vector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_modern_enable_vq_after_reset",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "vp_active_vq", "vp_modern_get_queue_enable", "vp_modern_get_queue_reset", "vp_modern_set_queue_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_modern_disable_vq_and_reset",
+    "callees": ["__virtio_test_bit", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pci_irq_vector", "synchronize_irq", "vp_modern_set_queue_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_active_vq",
+    "callees": ["virtqueue_get_avail_addr", "virtqueue_get_desc_addr", "virtqueue_get_used_addr", "virtqueue_get_vring_size", "vp_modern_queue_address", "vp_modern_queue_vector", "vp_modern_set_queue_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_reset",
+    "callees": ["msleep", "vp_modern_get_status", "vp_modern_set_status", "vp_synchronize_vectors"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_set_status",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "vp_modern_set_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get_status",
+    "callees": ["vp_modern_get_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_generation",
+    "callees": ["vp_modern_generation"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_set",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "iowrite16", "iowrite32", "iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "ioread16", "ioread32", "ioread8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_finalize_features",
+    "callees": ["_dev_err", "vp_modern_set_features", "vp_transport_features", "vring_transport_features"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_transport_features",
+    "callees": ["pci_find_ext_capability"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_get_features",
+    "callees": ["vp_modern_get_features"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

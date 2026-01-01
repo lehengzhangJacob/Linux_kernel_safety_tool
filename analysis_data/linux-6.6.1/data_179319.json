@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udpv6_offload_exit",
+    "callees": ["inet6_del_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udpv6_offload_init",
+    "callees": ["inet6_add_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp6_gro_complete",
+    "callees": ["__builtin_bswap16", "csum_ipv6_magic", "udp_gro_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp6_gro_receive",
+    "callees": ["__builtin_expect", "__skb_gro_checksum_validate_complete", "__skb_gro_checksum_validate_needed", "ip6_gro_compute_pseudo", "skb_gro_incr_csum_unnecessary", "udp6_gro_lookup_skb", "udp_gro_receive", "udp_gro_udphdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp6_gro_lookup_skb",
+    "callees": ["__udp6_lib_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp6_ufo_fragment",
+    "callees": ["__builtin_expect", "__udp_gso_segment", "csum_ipv6_magic", "gso_pskb_expand_head", "ip6_find_1stfragopt", "ipv6_proxy_select_ident", "memmove", "pskb_may_pull_reason", "skb_checksum", "skb_segment", "skb_udp_tunnel_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_udphdr",
+    "callees": ["skb_gro_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_incr_csum_unnecessary",
+    "callees": ["__skb_incr_checksum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_gro_checksum_validate_complete",
+    "callees": ["__skb_gro_checksum_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header",
+    "callees": ["skb_gro_header_slow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header_slow",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_pskb_expand_head",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_incr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

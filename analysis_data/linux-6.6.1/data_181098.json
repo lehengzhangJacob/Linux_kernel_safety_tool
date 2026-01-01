@@ -1,0 +1,218 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_out_fence.part.0",
+    "callees": ["sync_file_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_out_fence",
+    "callees": ["__builtin_expect", "get_unused_fd_flags", "setup_out_fence.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_find",
+    "callees": ["drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_out_fence.part.0",
+    "callees": ["sync_file_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_atomic_ioctl",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "_copy_from_user", "complete_signaling", "drm_atomic_check_only", "drm_atomic_commit", "drm_atomic_nonblocking_commit", "drm_atomic_set_property", "drm_atomic_state_alloc", "drm_atomic_state_clear", "drm_mode_obj_find_prop_id", "drm_mode_object_find", "drm_mode_object_put", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "kref_put", "prepare_signaling"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "complete_signaling",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_event_cancel_free", "fd_install", "fput", "kfree", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_signaling",
+    "callees": ["__drm_dev_dbg", "create_vblank_event", "dma_fence_put.part.0", "drm_crtc_create_fence", "drm_event_reserve_init", "drm_writeback_get_out_fence", "kfree", "krealloc", "memset", "setup_out_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_out_fence",
+    "callees": ["__builtin_expect", "get_unused_fd_flags", "setup_out_fence.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_property",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_connector_set_property", "drm_atomic_crtc_set_property", "drm_atomic_get_connector_state", "drm_atomic_get_crtc_state", "drm_atomic_get_plane_state", "drm_atomic_plane_set_property", "drm_property_change_valid_get", "drm_property_change_valid_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_connector_commit_dpms",
+    "callees": ["__builtin_expect", "drm_atomic_add_affected_connectors", "drm_atomic_commit", "drm_atomic_get_crtc_state", "drm_modeset_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_vblank_event",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_get_property",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_connector_get_property", "drm_atomic_crtc_get_property", "drm_atomic_plane_get_property", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_connector_get_property",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_connector_set_property",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_replace_property_blob_from_id", "drm_atomic_set_crtc_for_connector", "drm_atomic_set_writeback_fb_for_connector", "drm_crtc_find", "drm_framebuffer_lookup", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_writeback_fb_for_connector",
+    "callees": ["__drm_dev_dbg", "drm_writeback_set_fb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_get_property",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_set_property",
+    "callees": ["__drm_dev_dbg", "drm_atomic_replace_property_blob_from_id", "drm_atomic_set_crtc_for_plane", "drm_atomic_set_fb_for_plane", "drm_crtc_find", "drm_framebuffer_lookup", "drm_mode_object_put", "sync_file_get_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_crtc_get_property",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_crtc_set_property",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_replace_property_blob_from_id", "drm_atomic_set_mode_prop_for_crtc", "drm_property_blob_put", "drm_property_lookup_blob"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_crtc_for_connector",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_crtc_state", "drm_mode_object_get", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_fb_for_plane",
+    "callees": ["__drm_dev_dbg", "drm_framebuffer_assign"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_crtc_for_plane",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_crtc_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_mode_prop_for_crtc",
+    "callees": ["__drm_dev_dbg", "drm_get_mode_status_name", "drm_mode_convert_umode", "drm_mode_debug_printmodeline", "drm_property_blob_get", "drm_property_blob_put", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_set_mode_for_crtc",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_mode_convert_to_umode", "drm_mode_copy", "drm_property_blob_put", "drm_property_create_blob", "memcmp", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_assign",
+    "callees": ["drm_mode_object_get", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_crtc_find",
+    "callees": ["drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

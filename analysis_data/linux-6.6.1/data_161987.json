@@ -1,0 +1,248 @@
+[
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putShortMSB",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putShortMSB",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putShortMSB",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putShortMSB",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflate_dfltcc_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflate_workspacesize",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deflate_slow",
+    "callees": ["fill_window", "flush_pending", "longest_match", "zlib_tr_flush_block", "zlib_tr_tally"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deflate_fast",
+    "callees": ["fill_window", "flush_pending", "longest_match", "zlib_tr_flush_block", "zlib_tr_tally"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deflate_stored",
+    "callees": ["fill_window", "flush_pending", "zlib_tr_flush_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_window",
+    "callees": ["memcpy", "read_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "longest_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lm_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_buf",
+    "callees": ["memcpy", "zlib_adler32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflateEnd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflate",
+    "callees": ["flush_pending", "memset", "putShortMSB", "zlib_tr_align", "zlib_tr_stored_block", "zlib_tr_stored_type_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putShortMSB",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflateReset",
+    "callees": ["lm_init", "zlib_tr_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_deflateInit2",
+    "callees": ["zlib_deflateReset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_pending",
+    "callees": ["bi_flush", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bi_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zlib_adler32",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

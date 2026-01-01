@@ -1,0 +1,32 @@
+[
+  {
+    "name": "__memcpy_flushcache",
+    "callees": ["clean_cache_range", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__copy_user_flushcache",
+    "callees": ["__copy_user_nocache", "clean_cache_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_wb_cache_pmem",
+    "callees": ["clean_cache_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clean_cache_range",
+    "callees": ["clwb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clwb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

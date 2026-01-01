@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mnt_xdr_dec_mountres3",
+    "callees": ["__builtin_expect", "decode_auth_flavors", "decode_fhandle3", "decode_fhs_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_fhs_status",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mnt_xdr_dec_mountres",
+    "callees": ["__builtin_expect", "decode_fhandle", "decode_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_status",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mnt_xdr_enc_dirpath",
+    "callees": ["encode_mntdirpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_mntdirpath",
+    "callees": ["strlen", "xdr_encode_opaque", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_umount",
+    "callees": ["__builtin_expect", "rpc_call_sync", "rpc_create", "rpc_shutdown_client", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_mount",
+    "callees": ["__builtin_expect", "nfs_init_timeout_values", "rpc_call_sync", "rpc_create", "rpc_shutdown_client", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

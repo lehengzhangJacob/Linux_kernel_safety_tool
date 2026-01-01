@@ -1,0 +1,398 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_frontbuffer.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add_not_zero", "intel_frontbuffer_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_migrate",
+    "callees": ["__builtin_expect", "i915_gem_object_can_migrate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_get_pat_index",
+    "callees": ["__builtin_expect", "i915_gem_get_pat_index.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_get_pat_index",
+    "callees": ["__builtin_expect", "i915_gem_get_pat_index.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_frontbuffer.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add_not_zero", "intel_frontbuffer_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_has_unknown_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_wait_moving_fence",
+    "callees": ["dma_resv_wait_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_moving_fence",
+    "callees": ["dma_resv_get_singleton"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_objects_module_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["slab_objects"]
+  },
+  {
+    "name": "i915_objects_module_exit",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["slab_objects"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_init__objects",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_needs_ccs_pages",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_placement_possible",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_migrate",
+    "callees": ["__builtin_expect", "i915_gem_object_can_migrate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_migrate",
+    "callees": ["__i915_gem_object_migrate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_can_migrate",
+    "callees": ["i915_gem_object_evictable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_has_iomem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_has_struct_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_migratable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_evictable",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_read_from_page",
+    "callees": ["i915_gem_object_read_from_page_iomap", "i915_gem_object_read_from_page_kmap", "object_has_mappable_iomem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "object_has_mappable_iomem",
+    "callees": ["i915_ttm_resource_mappable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_read_from_page_iomap",
+    "callees": ["__i915_gem_object_get_dma_address", "i915_memcpy_from_wc", "memcpy_fromio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_read_from_page_kmap",
+    "callees": ["__i915_gem_object_get_page", "__kunmap_atomic", "drm_clflush_virt_range", "kmap_atomic", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_invalidate_frontbuffer",
+    "callees": ["__builtin_expect", "i915_gem_object_get_frontbuffer.part.0", "intel_frontbuffer_invalidate", "intel_frontbuffer_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_flush_frontbuffer",
+    "callees": ["__builtin_expect", "i915_gem_object_get_frontbuffer.part.0", "intel_frontbuffer_flush", "intel_frontbuffer_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_free_object",
+    "callees": ["llist_add_batch", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_free_work",
+    "callees": ["i915_gem_flush_free_objects"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_flush_free_objects",
+    "callees": ["__builtin_expect", "__i915_gem_free_objects"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_free_object",
+    "callees": ["bitmap_free", "dma_resv_fini", "drm_gem_free_mmap_offset", "drm_prime_gem_destroy", "kfree", "kref_put", "trace_i915_gem_object_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_pages_fini",
+    "callees": ["__i915_gem_object_free_mmaps", "__i915_gem_object_lock", "__i915_gem_object_put_pages", "_raw_spin_lock", "_raw_spin_unlock", "i915_gem_object_unlock", "i915_vma_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_free_mmaps",
+    "callees": ["drm_vma_offset_remove", "i915_gem_object_release_mmap_gtt", "i915_gem_object_release_mmap_offset", "kfree", "rb_first_postorder", "rb_next_postorder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_free_object_rcu",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["slab_objects"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_close_object",
+    "callees": ["__cond_resched_lock", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "drm_vma_node_revoke", "i915_lut_handle_free", "i915_vma_close", "kref_put", "mutex_lock", "mutex_unlock", "radix_tree_delete", "rb_first_postorder", "rb_next_postorder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_can_bypass_llc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_set_pat_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_set_cache_coherency",
+    "callees": ["i915_gem_get_pat_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_fini",
+    "callees": ["dma_resv_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_init",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_free",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["slab_objects"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["slab_objects"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_has_cache_level",
+    "callees": ["i915_gem_get_pat_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_get_pat_index",
+    "callees": ["__builtin_expect", "i915_gem_get_pat_index.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_i915_gem_object_destroy",
+    "callees": ["__SCT__tp_func_i915_gem_object_destroy", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_unlock",
+    "callees": ["ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_frontbuffer_flush",
+    "callees": ["__intel_fb_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

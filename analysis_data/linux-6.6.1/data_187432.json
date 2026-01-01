@@ -1,0 +1,44 @@
+[
+  {
+    "name": "intel_modeset_verify_disabled",
+    "callees": ["intel_shared_dpll_verify_disabled", "verify_connector_state", "verify_encoder_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_modeset_verify_crtc",
+    "callees": ["intel_c10pll_state_verify", "intel_mpllb_state_verify", "intel_shared_dpll_state_verify", "intel_wm_state_verify", "verify_connector_state", "verify_crtc_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_crtc_state",
+    "callees": ["__builtin_expect", "__drm_atomic_helper_crtc_destroy_state", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string", "intel_crtc_free_hw_state", "intel_crtc_get_pipe_config", "intel_crtc_state_dump", "intel_crtc_state_reset", "intel_encoder_get_config", "intel_master_crtc", "intel_pipe_config_compare", "intel_pipe_config_sanity_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_encoder_state",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_pipe_config_sanity_check",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "intel_dotclock_calculate", "intel_fdi_link_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "verify_connector_state",
+    "callees": ["__builtin_expect", "__warn_printk", "_dev_err", "dev_driver_string", "intel_connector_verify_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_connector_verify_state",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,344 @@
+[
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_confirm",
+    "callees": ["__nf_conntrack_confirm", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_confirm",
+    "callees": ["__nf_conntrack_confirm", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_confirm",
+    "callees": ["__nf_conntrack_confirm", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_confirm",
+    "callees": ["__nf_conntrack_confirm", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put.part.0",
+    "callees": ["nf_ct_netns_do_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put",
+    "callees": ["nf_ct_netns_do_put", "nf_ct_netns_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put.part.0",
+    "callees": ["nf_ct_netns_do_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put",
+    "callees": ["nf_ct_netns_do_put", "nf_ct_netns_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put.part.0",
+    "callees": ["nf_ct_netns_do_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put",
+    "callees": ["nf_ct_netns_do_put", "nf_ct_netns_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_put.part.0",
+    "callees": ["__refcount_sub_and_test", "nf_ct_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_put.part.0",
+    "callees": ["__refcount_sub_and_test", "nf_ct_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_inet_get.part.0",
+    "callees": ["nf_ct_netns_do_get", "nf_ct_netns_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_inet_get",
+    "callees": ["nf_ct_netns_do_get", "nf_ct_netns_inet_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nf_conntrack_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_conntrack_in",
+    "callees": ["nf_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_conntrack_in",
+    "callees": ["nf_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_get.part.0",
+    "callees": ["nf_ct_netns_inet_get", "nf_ct_netns_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_inet_get.part.0",
+    "callees": ["nf_ct_netns_do_get", "nf_ct_netns_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_put.part.0",
+    "callees": ["nf_ct_netns_do_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_conntrack_local.part.0",
+    "callees": ["nf_ct_is_template", "nf_ct_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_put.part.0",
+    "callees": ["__refcount_sub_and_test", "nf_ct_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_tcp_fixup.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_proto_pernet_init",
+    "callees": ["nf_conntrack_generic_init_net", "nf_conntrack_icmp_init_net", "nf_conntrack_icmpv6_init_net", "nf_conntrack_tcp_init_net", "nf_conntrack_udp_init_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_proto_fini",
+    "callees": ["nf_unregister_sockopt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_proto_init",
+    "callees": ["nf_register_sockopt", "nf_unregister_sockopt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_bridge_unregister",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["nf_ct_bridge_info"],
+    "global_writes": ["nf_ct_bridge_info"]
+  },
+  {
+    "name": "nf_ct_bridge_register",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["nf_ct_bridge_info"],
+    "global_writes": ["nf_ct_bridge_info"]
+  },
+  {
+    "name": "nf_ct_netns_put",
+    "callees": ["nf_ct_netns_do_put", "nf_ct_netns_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_get",
+    "callees": ["nf_ct_netns_do_get", "nf_ct_netns_get.part.0", "nf_ct_netns_inet_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_inet_get",
+    "callees": ["nf_ct_netns_do_get", "nf_ct_netns_inet_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_do_put",
+    "callees": ["module_put", "mutex_lock", "mutex_unlock", "nf_ct_pernet", "nf_defrag_ipv4_disable", "nf_defrag_ipv6_disable", "nf_unregister_net_hooks"],
+    "global_reads": ["nf_ct_bridge_info"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_netns_do_get",
+    "callees": ["__request_module", "mutex_lock", "mutex_unlock", "nf_ct_iterate_cleanup_net", "nf_ct_pernet", "nf_defrag_ipv4_enable", "nf_defrag_ipv6_enable", "nf_register_net_hooks", "try_module_get"],
+    "global_reads": ["nf_ct_bridge_info"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_tcp_fixup",
+    "callees": ["nf_ct_tcp_fixup.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_conntrack_local",
+    "callees": ["ipv4_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_conntrack_in",
+    "callees": ["ipv4_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_getorigdst",
+    "callees": ["_copy_to_user", "ipv6_iface_scope_id", "lock_sock_nested", "memcpy", "nf_conntrack_find_get", "nf_ct_put.part.0", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "getorigdst",
+    "callees": ["_copy_to_user", "lock_sock_nested", "memset", "nf_conntrack_find_get", "nf_ct_put.part.0", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_conntrack_local",
+    "callees": ["ipv4_conntrack_local.part.0", "nf_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_conntrack_in",
+    "callees": ["nf_conntrack_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_confirm",
+    "callees": ["__builtin_constant_p", "ipv6_skip_exthdr", "nf_conntrack_confirm", "nf_ct_ext_find", "nf_ct_seq_adjust"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_l4proto_find",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_l4proto_log_invalid",
+    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "nf_l4proto_log_invalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_l4proto_log_invalid",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "nf_log_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_confirm",
+    "callees": ["__nf_conntrack_confirm", "nf_ct_is_confirmed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nf_conntrack_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_template",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_iface_scope_id",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

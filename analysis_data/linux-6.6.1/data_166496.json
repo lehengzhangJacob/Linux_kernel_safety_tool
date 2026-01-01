@@ -1,0 +1,254 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_free",
+    "callees": ["kfree", "snd_pcm_free_stream", "snd_pcm_lib_preallocate_free_for_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_chmap",
+    "callees": ["snd_ctl_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_proc_info_read.part.0",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "seq_printf", "snd_pcm_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alsa_pcm_exit",
+    "callees": ["snd_ctl_unregister_ioctl", "snd_ctl_unregister_ioctl_compat", "snd_info_free_entry"],
+    "global_reads": ["snd_pcm_proc_entry"],
+    "global_writes": []
+  },
+  {
+    "name": "alsa_pcm_init",
+    "callees": ["snd_ctl_register_ioctl", "snd_ctl_register_ioctl_compat", "snd_pcm_proc_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_proc_init",
+    "callees": ["snd_info_create_module_entry", "snd_info_free_entry", "snd_info_register"],
+    "global_reads": [],
+    "global_writes": ["snd_pcm_proc_entry"]
+  },
+  {
+    "name": "snd_pcm_proc_read",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_dev_disconnect",
+    "callees": ["__wake_up", "free_chmap", "mutex_lock", "mutex_unlock", "snd_pcm_stop", "snd_pcm_stream_lock_irq", "snd_pcm_stream_unlock_irq", "snd_pcm_sync_stop", "snd_unregister_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_dev_register",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "snd_pcm_add", "snd_pcm_timer_init", "snd_register_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcm_class_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_detach_substream",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "free_pages_exact", "kfree", "put_pid", "snd_fasync_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_attach_substream",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__mutex_init", "__refcount_add", "alloc_pages_exact", "free_pages_exact", "kfree", "kzalloc", "memset", "snd_ctl_get_preferred_subdevice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_dev_free",
+    "callees": ["snd_pcm_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_free",
+    "callees": ["kfree", "snd_pcm_free_stream", "snd_pcm_lib_preallocate_free_for_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_free_stream",
+    "callees": ["free_chmap", "kfree", "snd_info_free_entry", "snd_pcm_free_stream.part.0", "snd_pcm_timer_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_chmap",
+    "callees": ["snd_ctl_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_new_internal",
+    "callees": ["_snd_pcm_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_new",
+    "callees": ["_snd_pcm_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_snd_pcm_new",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__mutex_init", "kzalloc", "snd_device_new", "snd_pcm_free", "snd_pcm_new_stream", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_new_stream",
+    "callees": ["_dev_err", "dev_set_name", "kfree", "kzalloc", "snd_device_alloc", "snd_pcm_group_init", "snd_pcm_stream_proc_init", "snd_pcm_substream_proc_init", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_pcm_suspend",
+    "callees": ["snd_pcm_suspend_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_substream_proc_init",
+    "callees": ["create_substream_info_entry", "snd_info_create_card_entry", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_stream_proc_init",
+    "callees": ["snd_info_create_card_entry", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_substream_proc_status_read",
+    "callees": ["memset", "mutex_lock", "mutex_unlock", "pid_vnr", "seq_printf", "snd_pcm_status64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_substream_proc_sw_params_read",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_substream_proc_hw_params_read",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_substream_proc_info_read",
+    "callees": ["snd_pcm_proc_info_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_stream_proc_info_read",
+    "callees": ["snd_pcm_proc_info_read.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_format_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_control_ioctl",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock", "snd_pcm_get", "snd_pcm_info_user", "snd_pcm_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_pcm_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

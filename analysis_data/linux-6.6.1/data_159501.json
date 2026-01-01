@@ -1,0 +1,278 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_disk_ro",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_direct_IO.part.0",
+    "callees": ["__blkdev_direct_IO", "__blkdev_direct_IO_async", "__blkdev_direct_IO_simple", "__builtin_expect", "iov_iter_npages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_init",
+    "callees": ["bioset_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_mmap",
+    "callees": ["I_BDEV", "bdev_read_only", "generic_file_mmap", "generic_file_readonly_mmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_fallocate",
+    "callees": ["I_BDEV", "blkdev_issue_discard", "blkdev_issue_zeroout", "down_write", "file_to_blk_mode", "truncate_bdev_range", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_read_iter",
+    "callees": ["I_BDEV", "__builtin_expect", "blkdev_direct_IO.part.0", "file_accessed", "filemap_read", "iov_iter_revert", "kiocb_write_and_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_write_iter",
+    "callees": ["I_BDEV", "bdev_read_only", "blkdev_direct_write", "direct_write_fallback", "file_update_time", "generic_write_sync", "iomap_file_buffered_write", "is_hibernate_resume_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_direct_write",
+    "callees": ["blkdev_direct_IO.part.0", "iov_iter_revert", "kiocb_invalidate_pages", "kiocb_invalidate_post_direct_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_release",
+    "callees": ["I_BDEV", "blkdev_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_open",
+    "callees": ["__builtin_expect", "blkdev_get_by_dev", "errseq_sample", "file_to_blk_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_to_blk_mode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_fsync",
+    "callees": ["I_BDEV", "blkdev_issue_flush", "file_write_and_wait_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_llseek",
+    "callees": ["down_write", "fixed_size_llseek", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_write_end",
+    "callees": ["block_write_end", "put_page", "unlock_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_write_begin",
+    "callees": ["block_write_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_readahead",
+    "callees": ["mpage_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_read_folio",
+    "callees": ["block_read_full_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_writepage",
+    "callees": ["block_write_full_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_get_block",
+    "callees": ["I_BDEV", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_iomap_begin",
+    "callees": ["I_BDEV"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blkdev_direct_IO_async",
+    "callees": ["I_BDEV", "__builtin_expect", "bio_alloc_bioset", "bio_iov_bvec_set", "bio_iov_iter_get_pages", "bio_put", "bio_set_pages_dirty", "blkdev_dio_unaligned", "iocb_is_dsync", "submit_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_bio_end_io_async",
+    "callees": ["__builtin_expect", "bio_check_pages_dirty", "bio_put", "bio_release_pages", "blk_status_to_errno"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_bio_end_io",
+    "callees": ["__builtin_expect", "bio_check_pages_dirty", "bio_put", "bio_release_pages", "blk_status_to_errno", "blk_wake_io_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blkdev_direct_IO_simple",
+    "callees": ["I_BDEV", "__builtin_expect", "bio_init", "bio_iov_iter_get_pages", "bio_release_pages", "bio_uninit", "blk_status_to_errno", "blkdev_dio_unaligned", "iocb_is_dsync", "kfree", "kmalloc_array", "submit_bio_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_wake_io_task",
+    "callees": ["wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_disk_ro",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_write_sync",
+    "callees": ["iocb_is_dsync", "vfs_fsync_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_accessed",
+    "callees": ["touch_atime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

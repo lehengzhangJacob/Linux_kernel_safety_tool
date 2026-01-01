@@ -1,0 +1,74 @@
+[
+  {
+    "name": "refcount_warn_saturate",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_warn_saturate",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_warn_saturate",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec_and_lock_irqsave",
+    "callees": ["__refcount_sub_and_test", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "refcount_dec_not_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec_and_lock",
+    "callees": ["__refcount_sub_and_test", "_raw_spin_lock", "_raw_spin_unlock", "refcount_dec_not_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec_and_mutex_lock",
+    "callees": ["__refcount_sub_and_test", "mutex_lock", "mutex_unlock", "refcount_dec_not_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec_not_one",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "refcount_dec_if_one",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_warn_saturate",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_frag_put",
+    "callees": ["__refcount_sub_and_test", "inet_frag_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_frags_init_net.part.0",
+    "callees": ["fqdir_exit", "ip4_frags_ns_ctl_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipfrag_init",
+    "callees": ["inet_frags_init", "ip4_frags_ctl_register", "panic", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_obj_cmpfn",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_obj_hashfn",
+    "callees": ["jhash2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_key_hashfn",
+    "callees": ["jhash2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_frags_exit_net",
+    "callees": ["fqdir_exit", "ip4_frags_ns_ctl_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_frags_pre_exit_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv4_frags_init_net",
+    "callees": ["fqdir_init", "ipv4_frags_init_net.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_frags_ctl_register",
+    "callees": ["register_net_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_frags_ns_ctl_register",
+    "callees": ["kfree", "kmemdup", "register_net_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_check_defrag",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "ip_defrag", "kfree_skb_reason", "memset", "pskb_may_pull_reason", "pskb_trim_rcsum_slow", "skb_copy_bits", "skb_share_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_defrag",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "inet_frag_put", "ip_find", "ip_frag_queue", "kfree_skb_reason", "skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_frag_queue",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "inet_frag_kill", "inet_frag_queue_insert", "ip_frag_reasm", "ip_frag_reinit", "ip_frag_too_far", "kfree_skb_reason", "pskb_pull", "pskb_trim_rcsum_slow", "refdst_drop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_frag_reinit",
+    "callees": ["__refcount_add", "inet_frag_rbtree_purge", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ip_frag_too_far",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_expire",
+    "callees": ["__icmp_send", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "dev_get_by_index_rcu", "frag_expire_skip_icmp", "inet_frag_kill", "inet_frag_pull_head", "inet_frag_put", "ip_route_input_noref", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "frag_expire_skip_icmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_frag_free",
+    "callees": ["inet_putpeer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip4_frag_init",
+    "callees": ["inet_getpeer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_frag_put",
+    "callees": ["__refcount_sub_and_test", "inet_frag_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_pull",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

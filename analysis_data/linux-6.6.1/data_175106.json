@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_fill_reply.part.0",
+    "callees": ["fec_put_stats", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_fec",
+    "callees": ["do_trace_netlink_extack", "ethnl_update_bitset", "ethtool_fec_to_link_modes", "ethtool_link_modes_to_fecparam"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_fec_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_fill_reply",
+    "callees": ["ethnl_put_bitset", "fec_fill_reply.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_put_stats",
+    "callees": ["nla_nest_start_noflag", "nla_put_64bit", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_reply_size",
+    "callees": ["ethnl_bitset_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_prepare_data",
+    "callees": ["__builtin_expect", "_find_first_bit", "ethnl_ops_begin", "ethnl_ops_complete", "ethtool_fec_to_link_modes", "fec_stats_recalc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fec_stats_recalc",
+    "callees": ["fec_stats_recalc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_link_modes_to_fecparam",
+    "callees": ["__builtin_constant_p", "find_first_bit", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_fec_to_link_modes",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "name": "posix_acl_release.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release",
+    "callees": ["__refcount_sub_and_test", "posix_acl_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_from_nfsacl.part.0",
+    "callees": ["memmove", "sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_stream_decode_acl",
+    "callees": ["posix_acl_from_nfsacl.part.0", "posix_acl_release", "xdr_decode_array2", "xdr_inline_decode", "xdr_stream_decode_u32", "xdr_stream_pos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfsacl_decode",
+    "callees": ["posix_acl_from_nfsacl.part.0", "posix_acl_release", "xdr_decode_array2", "xdr_decode_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmp_acl_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_nfsace_decode",
+    "callees": ["__builtin_bswap32", "posix_acl_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_stream_encode_acl",
+    "callees": ["posix_acl_init", "xdr_encode_array2", "xdr_reserve_space", "xdr_stream_encode_u32", "xdr_stream_pos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfsacl_encode",
+    "callees": ["posix_acl_init", "xdr_encode_array2", "xdr_encode_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_nfsace_encode",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_acl_release",
+    "callees": ["__refcount_sub_and_test", "posix_acl_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_stream_decode_u32",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_inline_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdr_stream_encode_u32",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "xdr_reserve_space"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "name": "release_swap_reader",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_reader",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_reader",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_reader",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_page",
+    "callees": ["__get_free_pages", "copy_page", "hib_submit_io", "hib_wait_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_close",
+    "callees": ["__builtin_expect", "blkdev_put"],
+    "global_reads": ["hib_resume_bdev"],
+    "global_writes": []
+  },
+  {
+    "name": "hib_init_batch",
+    "callees": ["__init_waitqueue_head", "blk_start_plug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_close",
+    "callees": ["__builtin_expect", "blkdev_put"],
+    "global_reads": ["hib_resume_bdev"],
+    "global_writes": []
+  },
+  {
+    "name": "hib_init_batch",
+    "callees": ["__init_waitqueue_head", "blk_start_plug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hib_init_batch",
+    "callees": ["__init_waitqueue_head", "blk_start_plug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_writer",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swap_read_page.part.0",
+    "callees": ["free_pages", "kfree", "release_swap_reader"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_header_init",
+    "callees": ["__get_free_pages", "panic"],
+    "global_reads": [],
+    "global_writes": ["swsusp_header"]
+  },
+  {
+    "name": "swsusp_unmark",
+    "callees": ["_printk", "free_all_swap_pages", "hib_submit_io", "memcmp", "memcpy"],
+    "global_reads": ["root_swap", "swsusp_header", "swsusp_resume_block"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_close",
+    "callees": ["__builtin_expect", "blkdev_put"],
+    "global_reads": ["hib_resume_bdev"],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_check",
+    "callees": ["__builtin_expect", "_printk", "blkdev_get_by_dev", "blkdev_put", "hib_submit_io", "memcmp", "memcpy", "set_blocksize"],
+    "global_reads": ["hib_resume_bdev", "swsusp_hardware_signature", "swsusp_header", "swsusp_resume_block", "swsusp_resume_device"],
+    "global_writes": ["hib_resume_bdev"]
+  },
+  {
+    "name": "swsusp_read",
+    "callees": ["get_swap_reader", "load_image", "load_image_lzo", "memset", "release_swap_reader", "snapshot_write_next", "swap_read_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_image_lzo",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__get_free_pages", "__init_waitqueue_head", "__wake_up", "_printk", "blk_finish_plug", "finish_wait", "free_pages", "hib_init_batch", "hib_wait_io", "init_wait_entry", "kfree", "kthread_create_on_node", "kthread_stop", "ktime_get", "kzalloc", "memcpy", "prepare_to_wait_event", "schedule", "snapshot_get_image_size", "snapshot_image_loaded", "snapshot_write_finalize", "snapshot_write_next", "swap_read_page", "swsusp_show_speed", "vfree", "vmalloc", "vzalloc", "wake_up_process"],
+    "global_reads": ["swsusp_header"],
+    "global_writes": ["clean_pages_on_decompress"]
+  },
+  {
+    "name": "lzo_decompress_threadfn",
+    "callees": ["__SCT__might_resched", "__wake_up", "finish_wait", "init_wait_entry", "kthread_should_stop", "lzo1x_decompress_safe", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_image",
+    "callees": ["_printk", "blk_finish_plug", "hib_init_batch", "hib_wait_io", "ktime_get", "snapshot_image_loaded", "snapshot_write_finalize", "snapshot_write_next", "swap_read_page", "swsusp_show_speed"],
+    "global_reads": [],
+    "global_writes": ["clean_pages_on_read"]
+  },
+  {
+    "name": "swap_read_page",
+    "callees": ["hib_submit_io", "swap_read_page.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_swap_reader",
+    "callees": ["__get_free_pages", "hib_submit_io", "kzalloc", "release_swap_reader"],
+    "global_reads": ["swsusp_header"],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_reader",
+    "callees": ["free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_write",
+    "callees": ["_printk", "enough_swap", "get_swap_writer", "memset", "save_image", "save_image_lzo", "snapshot_get_image_size", "snapshot_read_next", "swap_write_page", "swap_writer_finish"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enough_swap",
+    "callees": ["count_swap_pages"],
+    "global_reads": ["root_swap"],
+    "global_writes": []
+  },
+  {
+    "name": "save_image_lzo",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__get_free_pages", "__init_waitqueue_head", "__wake_up", "_printk", "blk_finish_plug", "finish_wait", "free_pages", "hib_init_batch", "hib_wait_io", "init_wait_entry", "kfree", "kthread_create_on_node", "kthread_stop", "ktime_get", "kzalloc", "memcpy", "prepare_to_wait_event", "schedule", "snapshot_read_next", "swap_write_page", "swsusp_show_speed", "vfree", "vzalloc", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzo_compress_threadfn",
+    "callees": ["__SCT__might_resched", "__wake_up", "finish_wait", "init_wait_entry", "kthread_should_stop", "lzo1x_1_compress", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_threadfn",
+    "callees": ["__SCT__might_resched", "__wake_up", "crc32_le", "finish_wait", "init_wait_entry", "kthread_should_stop", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_image",
+    "callees": ["_printk", "blk_finish_plug", "hib_init_batch", "hib_wait_io", "ktime_get", "snapshot_read_next", "swap_write_page", "swsusp_show_speed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swap_writer_finish",
+    "callees": ["_printk", "flush_swap_writer", "free_all_swap_pages", "mark_swapfiles", "release_swap_writer", "swsusp_close"],
+    "global_reads": ["root_swap"],
+    "global_writes": []
+  },
+  {
+    "name": "swap_write_page",
+    "callees": ["alloc_swapdev_block", "hib_wait_io", "write_page"],
+    "global_reads": ["root_swap"],
+    "global_writes": []
+  },
+  {
+    "name": "get_swap_writer",
+    "callees": ["_printk", "alloc_swapdev_block", "get_zeroed_page", "release_swap_writer", "swsusp_close", "swsusp_swap_check"],
+    "global_reads": ["root_swap"],
+    "global_writes": []
+  },
+  {
+    "name": "release_swap_writer",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_page",
+    "callees": ["__get_free_pages", "copy_page", "hib_submit_io", "hib_wait_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_swap_check",
+    "callees": ["__builtin_expect", "blkdev_get_by_dev", "blkdev_put", "find_first_swap", "set_blocksize", "swap_type_of"],
+    "global_reads": ["hib_resume_bdev", "swsusp_resume_block", "swsusp_resume_device"],
+    "global_writes": ["hib_resume_bdev", "root_swap"]
+  },
+  {
+    "name": "mark_swapfiles",
+    "callees": ["_printk", "hib_submit_io", "memcmp", "memcpy"],
+    "global_reads": ["swsusp_hardware_signature", "swsusp_header", "swsusp_resume_block"],
+    "global_writes": []
+  },
+  {
+    "name": "hib_wait_io",
+    "callees": ["__SCT__might_resched", "blk_status_to_errno", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hib_submit_io",
+    "callees": ["_printk", "bio_add_page", "bio_alloc_bioset", "bio_put", "submit_bio", "submit_bio_wait"],
+    "global_reads": ["hib_resume_bdev", "page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "hib_end_io",
+    "callees": ["__builtin_expect", "__wake_up", "_printk", "bio_put", "put_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hib_init_batch",
+    "callees": ["__init_waitqueue_head", "blk_start_plug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_swap_in_use",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_all_swap_pages",
+    "callees": ["kfree", "rb_erase", "swap_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_swapdev_block",
+    "callees": ["get_swap_page_of_type", "swap_free", "swapdev_block", "swsusp_extents_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "swsusp_extents_insert",
+    "callees": ["kzalloc", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

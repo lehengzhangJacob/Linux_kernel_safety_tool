@@ -1,0 +1,236 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_net_init",
+    "callees": ["proc_symlink", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_net_ns_exit",
+    "callees": ["pde_free", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_net_ns_init",
+    "callees": ["_proc_mkdir", "kmem_cache_alloc", "memcpy", "pde_free", "proc_set_user"],
+    "global_reads": ["proc_dir_entry_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tgid_net_readdir",
+    "callees": ["get_proc_task_net", "proc_readdir_de", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tgid_net_getattr",
+    "callees": ["generic_fillattr", "get_proc_task_net", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tgid_net_lookup",
+    "callees": ["get_proc_task_net", "proc_lookup_de", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_proc_task_net",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_net_single_write",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_net_single",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "single_release_net",
+    "callees": ["put_net", "single_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "single_open_net",
+    "callees": ["maybe_get_net", "put_net", "single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_net_data_write",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_create_net_data",
+    "callees": ["proc_create_reg", "proc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_iter_fini_seq_net",
+    "callees": ["put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bpf_iter_init_seq_net",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_release_net",
+    "callees": ["put_net", "seq_release_private"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_open_net",
+    "callees": ["__builtin_expect", "__seq_open_private", "maybe_get_net", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

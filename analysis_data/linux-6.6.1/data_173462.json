@@ -1,0 +1,116 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_is_ia32",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_align_mask",
+    "callees": ["mmap_is_ia32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_is_ia32",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_align_mask",
+    "callees": ["mmap_is_ia32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mmap",
+    "callees": ["ksys_mmap_pgoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_get_unmapped_area_topdown",
+    "callees": ["arch_get_unmapped_area", "find_vma", "get_align_mask", "get_mmap_base", "mmap_address_hint_valid", "test_ti_thread_flag", "vm_unmapped_area"],
+    "global_reads": ["stack_guard_gap"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_get_unmapped_area",
+    "callees": ["find_start_end", "find_vma", "get_align_mask", "vm_unmapped_area"],
+    "global_reads": ["stack_guard_gap"],
+    "global_writes": []
+  },
+  {
+    "name": "find_start_end",
+    "callees": ["get_mmap_base", "randomize_page", "task_size_32bit", "task_size_64bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_mmap",
+    "callees": ["ksys_mmap_pgoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_mmap",
+    "callees": ["__do_sys_mmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_mmap",
+    "callees": ["__do_sys_mmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "control_va_addr_alignment",
+    "callees": ["_printk", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "align_vdso_addr",
+    "callees": ["get_align_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_align_mask",
+    "callees": ["mmap_is_ia32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_is_ia32",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_make_checksum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_make_checksum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_v4_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header_slow",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header",
+    "callees": ["skb_gro_header_slow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_udphdr",
+    "callees": ["skb_gro_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udpv4_offload_init",
+    "callees": ["inet_add_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp4_gro_complete",
+    "callees": ["__builtin_bswap16", "udp_gro_complete", "udp_v4_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_complete",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "udp4_lib_lookup_skb", "udp6_lib_lookup_skb", "udp_gro_complete_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_complete_segment",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp4_gro_receive",
+    "callees": ["__builtin_expect", "__skb_gro_checksum_validate_complete", "__skb_gro_checksum_validate_needed", "inet_gro_compute_pseudo", "skb_gro_incr_csum_unnecessary", "udp4_gro_lookup_skb", "udp_gro_receive", "udp_gro_udphdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp4_gro_lookup_skb",
+    "callees": ["__udp4_lib_lookup", "inet_get_iif_sdif"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_receive",
+    "callees": ["call_gro_receive", "call_gro_receive_sk", "skb_gro_postpull_rcsum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_receive_segment",
+    "callees": ["__builtin_bswap16", "pskb_may_pull_reason", "skb_gro_postpull_rcsum", "skb_gro_receive", "skb_gro_receive_list", "udp_gro_udphdr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_receive_list",
+    "callees": ["__builtin_expect", "skb_pull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp4_ufo_fragment",
+    "callees": ["__builtin_expect", "__udp_gso_segment", "pskb_may_pull_reason", "skb_checksum", "skb_segment", "skb_udp_tunnel_segment", "udp_v4_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udp_gso_segment",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__refcount_add", "__refcount_sub_and_test", "__udp_gso_segment_list", "gso_make_checksum", "skb_gso_ok", "skb_pull", "skb_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udp_gso_segment_list",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__udpv4_gso_segment_list_csum", "skb_segment_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udpv4_gso_segment_list_csum",
+    "callees": ["__udpv4_gso_segment_csum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__udpv4_gso_segment_csum",
+    "callees": ["inet_proto_csum_replace4"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_udp_tunnel_segment",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__skb_udp_tunnel_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_udp_tunnel_segment",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_expect", "__builtin_unreachable", "gso_make_checksum", "pskb_may_pull_reason", "skb_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_get_iif_sdif",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_gro_udphdr",
+    "callees": ["skb_gro_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_incr_csum_unnecessary",
+    "callees": ["__skb_incr_checksum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_gro_checksum_validate_complete",
+    "callees": ["__skb_gro_checksum_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header",
+    "callees": ["skb_gro_header_slow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header_slow",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "call_gro_receive_sk",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_v4_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_make_checksum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_incr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

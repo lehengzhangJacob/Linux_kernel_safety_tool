@@ -1,0 +1,170 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_px",
+    "callees": ["kfree", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_dma_entry",
+    "callees": ["__px_vaddr", "drm_clflush_virt_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ppgtt_unbind_vma.part.0",
+    "callees": ["vma_invalidate_tlb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ppgtt_init",
+    "callees": ["dma_resv_init", "i915_address_space_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_free_pt_stash",
+    "callees": ["free_px"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_map_pt_stash",
+    "callees": ["map_pt_dma_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_alloc_pt_stash",
+    "callees": ["__builtin_expect", "alloc_pd", "alloc_pt", "i915_vm_free_pt_stash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ppgtt_unbind_vma",
+    "callees": ["ppgtt_unbind_vma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ppgtt_bind_vma",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ppgtt_create",
+    "callees": ["__builtin_expect", "__ppgtt_create", "trace_i915_ppgtt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ppgtt_create",
+    "callees": ["gen6_ppgtt_create", "gen8_ppgtt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ppgtt_init_hw",
+    "callees": ["gen6_ppgtt_enable", "gen7_ppgtt_enable", "gtt_write_workarounds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_pd_entry",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "clear_pd_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_pd_entry",
+    "callees": ["write_dma_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_pd_entry",
+    "callees": ["__px_dma", "write_dma_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_dma_entry",
+    "callees": ["__px_vaddr", "drm_clflush_virt_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_px",
+    "callees": ["kfree", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pd",
+    "callees": ["__alloc_pd", "__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pd",
+    "callees": ["__builtin_expect", "kfree", "kmalloc_array", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pt",
+    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_i915_ppgtt_create",
+    "callees": ["__SCT__tp_func_i915_ppgtt_create", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

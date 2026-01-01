@@ -1,0 +1,1874 @@
+[
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_link_del",
+    "callees": ["device_unregister", "pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devices_kset_move_last",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_link_del",
+    "callees": ["device_unregister", "pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_link_del",
+    "callees": ["device_unregister", "pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_link_del",
+    "callees": ["device_unregister", "pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_link_del",
+    "callees": ["device_unregister", "pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devices_kset_move_last",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtual_device_parent",
+    "callees": ["kobject_create_and_add"],
+    "global_reads": ["devices_kset", "virtual_dir"],
+    "global_writes": ["virtual_dir"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_is_best_effort",
+    "callees": [],
+    "global_reads": ["fw_devlink_best_effort"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_any",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_any",
+    "callees": ["device_match_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_find_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next", "kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_is_best_effort",
+    "callees": [],
+    "global_reads": ["fw_devlink_best_effort"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_del",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_del",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_runtime_put_noidle",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link.part.0",
+    "callees": ["pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link",
+    "callees": ["fw_devlink_relax_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_platform_notify_remove",
+    "callees": ["acpi_device_notify_remove", "software_node_notify_remove"],
+    "global_reads": ["platform_notify_remove"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_device_hotplug_sysfs.part.0",
+    "callees": ["msleep", "set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_device_hotplug_sysfs",
+    "callees": ["lock_device_hotplug_sysfs.part.0", "mutex_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_links_check_suppliers",
+    "callees": [],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_has_sync_state",
+    "callees": ["dev_has_sync_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_del",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_del",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_has_sync_state",
+    "callees": ["dev_has_sync_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_links_supplier_defer_sync",
+    "callees": ["dev_has_sync_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_has_sync_state",
+    "callees": ["dev_has_sync_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link.part.0",
+    "callees": ["pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link",
+    "callees": ["fw_devlink_relax_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_driver_string",
+    "callees": ["dev_bus_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_purge_absent_suppliers",
+    "callees": ["fw_devlink_purge_absent_suppliers.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_read_unlock",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_move_class_links.part.0",
+    "callees": ["sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_move_class_links",
+    "callees": ["device_move_class_links.part.0", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_init_without_drv",
+    "callees": ["fwnode_init_without_drv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dir_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dir_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_offline.part.0",
+    "callees": ["kobject_uevent", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_device_hotplug_sysfs.part.0",
+    "callees": ["msleep", "set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_printk.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_check_offline.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_put_kref.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_glue_dir.part.0",
+    "callees": ["__builtin_expect", "kobject_del", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_links_queue_sync_state.part.0",
+    "callees": ["__builtin_expect", "kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file.part.0",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link.part.0",
+    "callees": ["pm_runtime_drop_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_move_class_links.part.0",
+    "callees": ["sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_purge_absent_suppliers.part.0",
+    "callees": ["fw_devlink_purge_absent_suppliers", "fwnode_get_next_available_child_node", "fwnode_links_purge_consumers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uevent_name.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uevent_filter.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_any",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_acpi_dev",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_devt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_fwnode",
+    "callees": ["__dev_fwnode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_of_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_match_name",
+    "callees": ["sysfs_streq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_set_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_set_of_node_from_dev",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_secondary_fwnode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_primary_fwnode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_err_probe",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_dev_err", "device_set_deferred_probe_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_info",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_notice",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_warn",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_err",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_crit",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_alert",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_emerg",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_dev_printk",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_printk",
+    "callees": ["__dev_printk.part.0", "dev_driver_string", "dev_printk_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_printk_emit",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "dev_vprintk_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_vprintk_emit",
+    "callees": ["set_dev_info", "vprintk_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dev_info",
+    "callees": ["memset", "snprintf", "strcmp", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_shutdown",
+    "callees": ["_dev_info", "_raw_spin_lock", "_raw_spin_unlock", "cpufreq_suspend", "device_block_probing", "kobject_get", "kobject_put", "mutex_lock", "mutex_unlock", "pm_runtime_barrier", "wait_for_device_probe"],
+    "global_reads": ["devices_kset", "initcall_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "device_change_owner",
+    "callees": ["class_to_subsys", "device_attrs_change_owner", "dpm_sysfs_change_owner", "kobject_get", "kobject_put", "sysfs_change_owner", "sysfs_file_change_owner", "sysfs_link_change_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_attrs_change_owner",
+    "callees": ["sysfs_file_change_owner", "sysfs_groups_change_owner"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_move",
+    "callees": ["__builtin_expect", "cleanup_glue_dir", "device_move_class_links", "device_pm_lock", "device_pm_move_after", "device_pm_move_before", "device_pm_move_last", "device_pm_unlock", "devices_kset_move_after", "devices_kset_move_before", "devices_kset_move_last", "get_device_parent", "klist_add_tail", "klist_remove", "kobject_get", "kobject_move", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_move_class_links",
+    "callees": ["device_move_class_links.part.0", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_rename",
+    "callees": ["class_to_subsys", "kfree", "kobject_get", "kobject_namespace", "kobject_put", "kobject_rename", "kstrdup", "sysfs_rename_link_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_destroy",
+    "callees": ["class_find_device", "device_unregister", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_with_groups",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "device_create_groups_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "device_create_groups_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_groups_vargs",
+    "callees": ["__builtin_expect", "device_add", "device_initialize", "kobject_put", "kobject_set_name_vargs", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_release",
+    "callees": ["class_dir_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "root_device_unregister",
+    "callees": ["device_unregister", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__root_device_register",
+    "callees": ["dev_set_name", "device_add", "device_initialize", "device_unregister", "kfree", "kobject_put", "kzalloc", "sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "root_device_release",
+    "callees": ["class_dir_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_online",
+    "callees": ["kobject_uevent", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_offline",
+    "callees": ["device_for_each_child", "device_offline.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_check_offline",
+    "callees": ["device_check_offline.part.0", "device_for_each_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devices_init",
+    "callees": ["kobject_create_and_add", "kobject_put", "kset_create_and_add", "kset_unregister"],
+    "global_reads": ["dev_kobj", "devices_kset", "sysfs_dev_block_kobj"],
+    "global_writes": ["dev_kobj", "devices_kset", "sysfs_dev_block_kobj", "sysfs_dev_char_kobj"]
+  },
+  {
+    "name": "device_find_any_child",
+    "callees": ["device_find_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_find_child_by_name",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next", "kobject_get", "sysfs_streq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_find_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next", "kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child_reverse",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_for_each_child",
+    "callees": ["klist_iter_exit", "klist_iter_init", "klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_get_devnode",
+    "callees": ["kstrdup_and_replace", "strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unregister",
+    "callees": ["device_del", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_del",
+    "callees": ["bus_notify", "bus_remove_device", "class_to_subsys", "cleanup_glue_dir", "device_links_purge", "device_platform_notify_remove", "device_pm_remove", "device_remove_attrs", "device_remove_class_symlinks", "device_remove_file.part.0", "device_remove_sys_dev_entry", "devres_release_all", "devtmpfs_delete_node", "dpm_sysfs_remove", "driver_deferred_probe_del", "klist_del", "kobject_del", "kobject_put", "kobject_uevent", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kill_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_device",
+    "callees": ["kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_device",
+    "callees": ["kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_register",
+    "callees": ["device_add", "device_initialize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_add",
+    "callees": ["__builtin_expect", "bus_add_device", "bus_notify", "bus_probe_device", "bus_remove_device", "class_to_subsys", "cleanup_glue_dir", "dev_set_name", "device_add_attrs", "device_add_class_symlinks", "device_create_file", "device_create_sys_dev_entry", "device_platform_notify", "device_platform_notify_remove", "device_pm_add", "device_pm_remove", "device_private_init", "device_remove_attrs", "device_remove_class_symlinks", "device_remove_file.part.0", "devtmpfs_create_node", "dpm_sysfs_add", "dpm_sysfs_remove", "fw_devlink_link_device", "fw_devlink_unblock_consumers", "get_device_parent", "kfree", "klist_add_tail", "kobject_add", "kobject_del", "kobject_get", "kobject_put", "kobject_uevent", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["fw_devlink_drv_reg_done"],
+    "global_writes": []
+  },
+  {
+    "name": "device_private_init",
+    "callees": ["klist_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_sys_dev_entry",
+    "callees": ["sprintf", "sysfs_create_link"],
+    "global_reads": ["sysfs_dev_block_kobj", "sysfs_dev_char_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_set_name",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "kobject_set_name_vargs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_class_symlinks",
+    "callees": ["class_to_subsys", "kobject_put", "sysfs_delete_link", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_add_class_symlinks",
+    "callees": ["class_to_subsys", "kobject_put", "sysfs_create_link", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_glue_dir",
+    "callees": ["cleanup_glue_dir.part.0", "live_in_glue_dir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "live_in_glue_dir",
+    "callees": ["class_to_subsys", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_device_parent",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "bus_get_dev_root", "class_dir_create_and_add", "class_to_subsys", "kobject_get", "kobject_put", "mutex_lock", "mutex_unlock", "virtual_device_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dir_create_and_add",
+    "callees": ["kobject_add", "kobject_init", "kobject_put", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dir_child_ns_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dir_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtual_device_parent",
+    "callees": ["kobject_create_and_add"],
+    "global_reads": ["devices_kset", "virtual_dir"],
+    "global_writes": ["virtual_dir"]
+  },
+  {
+    "name": "device_initialize",
+    "callees": ["__mutex_init", "device_pm_init", "kobject_init", "swiotlb_dev_init"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "klist_children_put",
+    "callees": ["kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "klist_children_get",
+    "callees": ["kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_bin_file",
+    "callees": ["sysfs_remove_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_bin_file",
+    "callees": ["sysfs_create_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file_self",
+    "callees": ["sysfs_remove_file_self"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_file",
+    "callees": ["device_remove_file.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_create_file",
+    "callees": ["__builtin_expect", "__warn_printk", "sysfs_create_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devices_kset_move_last",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "devices_kset_move_after",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "devices_kset_move_before",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["devices_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_attrs",
+    "callees": ["device_remove_file.part.0", "kfree", "sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_add_attrs",
+    "callees": ["dev_add_physical_location", "device_create_file", "device_remove_file.part.0", "sysfs_create_groups", "sysfs_remove_groups"],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "devm_device_add_groups",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "sysfs_create_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_device_add_group",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_attr_groups_remove",
+    "callees": ["sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_attr_group_remove",
+    "callees": ["sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove_groups",
+    "callees": ["sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_add_groups",
+    "callees": ["sysfs_create_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "removable_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "online_store",
+    "callees": ["device_offline", "device_online", "kstrtobool", "lock_device_hotplug_sysfs", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "online_show",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_store",
+    "callees": ["_dev_err", "kobject_synth_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_show",
+    "callees": ["kfree", "kzalloc", "sysfs_emit_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uevent",
+    "callees": ["add_uevent_var", "device_get_devnode", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uevent_name",
+    "callees": ["dev_uevent_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_uevent_filter",
+    "callees": ["dev_uevent_filter.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_get_ownership",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_namespace",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_release",
+    "callees": ["__warn_printk", "devres_release_all", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_show_bool",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_store_bool",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_show_int",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_store_int",
+    "callees": ["kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_show_ulong",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_store_ulong",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_attr_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_attr_show",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_driver_string",
+    "callees": ["dev_bus_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_platform_notify_remove",
+    "callees": ["acpi_device_notify_remove", "software_node_notify_remove"],
+    "global_reads": ["platform_notify_remove"],
+    "global_writes": []
+  },
+  {
+    "name": "device_platform_notify",
+    "callees": ["acpi_device_notify", "software_node_notify"],
+    "global_reads": ["platform_notify"],
+    "global_writes": []
+  },
+  {
+    "name": "lock_device_hotplug_sysfs",
+    "callees": ["lock_device_hotplug_sysfs.part.0", "mutex_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unlock_device_hotplug",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_device_hotplug",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_link_device",
+    "callees": ["__fw_devlink_link_to_consumers", "__fw_devlink_link_to_suppliers", "fw_devlink_parse_fwtree", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "__fw_devlink_link_to_suppliers",
+    "callees": ["__fw_devlink_link_to_suppliers", "__fwnode_link_del", "fw_devlink_create_devlink", "fwnode_get_next_available_child_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_create_devlink",
+    "callees": ["__fw_devlink_relax_cycles", "_dev_err", "_dev_info", "device_link_add", "fwnode_ancestor_init_without_drv", "fwnode_get_next_parent_dev", "fwnode_init_without_drv", "fwnode_is_ancestor_of", "kobject_get", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "__fw_devlink_relax_cycles",
+    "callees": ["__fw_devlink_relax_cycles", "fw_devlink_relax_link", "fwnode_get_next_parent_dev", "kobject_get", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_ancestor_init_without_drv",
+    "callees": ["fwnode_get_next_parent", "fwnode_get_parent", "fwnode_handle_put", "fwnode_init_without_drv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_init_without_drv",
+    "callees": ["fwnode_init_without_drv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_unblock_consumers",
+    "callees": ["fw_devlink_relax_link", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_probing_done",
+    "callees": ["class_for_each_device", "device_links_flush_sync_list", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_dev_sync_state",
+    "callees": ["_dev_warn", "dev_has_sync_state", "kobject_get"],
+    "global_reads": ["fw_devlink_sync_state"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_drivers_done",
+    "callees": ["class_for_each_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": ["fw_devlink_drv_reg_done"]
+  },
+  {
+    "name": "fw_devlink_no_driver",
+    "callees": ["fw_devlink_relax_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_relax_link",
+    "callees": ["fw_devlink_relax_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_parse_fwtree",
+    "callees": ["fw_devlink_parse_fwnode", "fw_devlink_parse_fwtree", "fwnode_get_next_available_child_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_parse_fwnode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_is_strict",
+    "callees": [],
+    "global_reads": ["fw_devlink_flags", "fw_devlink_strict"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_sync_state_setup",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["fw_devlink_sync_state"]
+  },
+  {
+    "name": "fw_devlink_strict_setup",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_setup",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["fw_devlink_flags"]
+  },
+  {
+    "name": "device_links_purge",
+    "callees": ["__builtin_expect", "__device_link_del", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_unbind_consumers",
+    "callees": ["device_release_driver_internal", "kobject_get", "kobject_put", "mutex_lock", "mutex_unlock", "wait_for_device_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_busy",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_driver_cleanup",
+    "callees": ["__builtin_expect", "__device_links_no_driver", "device_link_drop_managed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_no_driver",
+    "callees": ["__device_links_no_driver", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_links_no_driver",
+    "callees": ["__builtin_expect", "device_link_drop_managed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_driver_bound",
+    "callees": ["__builtin_expect", "__device_links_queue_sync_state", "__device_links_supplier_defer_sync", "__fw_devlink_link_to_consumers", "__fw_devlink_pickup_dangling_consumers", "dev_is_best_effort", "device_link_drop_managed", "device_links_flush_sync_list", "device_remove_file.part.0", "driver_deferred_probe_add", "fwnode_get_next_available_child_node", "fwnode_links_purge_suppliers", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["defer_sync_state_count"],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_force_bind",
+    "callees": ["device_link_drop_managed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "waiting_for_supplier_show",
+    "callees": ["fwnode_links_check_suppliers", "mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_drop_managed",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_links_supplier_defer_sync",
+    "callees": ["dev_has_sync_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_state_resume_initcall",
+    "callees": ["device_links_supplier_sync_state_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_supplier_sync_state_resume",
+    "callees": ["__device_links_queue_sync_state", "__warn_printk", "device_links_flush_sync_list", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["defer_sync_state_count"],
+    "global_writes": ["defer_sync_state_count"]
+  },
+  {
+    "name": "device_links_supplier_sync_state_pause",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": ["defer_sync_state_count"],
+    "global_writes": ["defer_sync_state_count"]
+  },
+  {
+    "name": "device_links_flush_sync_list",
+    "callees": ["dev_sync_state", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_links_queue_sync_state",
+    "callees": ["__device_links_queue_sync_state.part.0", "dev_has_sync_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_check_suppliers",
+    "callees": ["dev_err_probe", "dev_is_best_effort", "device_links_missing_supplier", "fwnode_links_check_suppliers", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_links_check_suppliers",
+    "callees": [],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_is_best_effort",
+    "callees": [],
+    "global_reads": ["fw_devlink_best_effort"],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_missing_supplier",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_remove",
+    "callees": ["__builtin_expect", "device_link_put_kref", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_del",
+    "callees": ["device_link_put_kref", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_put_kref",
+    "callees": ["__device_link_del", "__warn_printk", "device_link_put_kref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_add",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "__refcount_add", "dev_bus_name", "dev_set_name", "device_add", "device_initialize", "device_is_dependent", "device_link_init_status", "device_pm_lock", "device_pm_unlock", "device_reorder_to_tail", "kobject_get", "kobject_put", "kzalloc", "mutex_lock", "mutex_unlock", "pm_runtime_new_link", "pm_runtime_put_noidle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devlink_class_init",
+    "callees": ["class_interface_register", "class_register", "class_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devlink_remove_symlinks",
+    "callees": ["__warn_printk", "dev_bus_name", "kfree", "kzalloc", "snprintf", "strlen", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devlink_add_symlinks",
+    "callees": ["dev_bus_name", "kfree", "kzalloc", "snprintf", "strlen", "sysfs_create_link", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devlink_dev_release",
+    "callees": ["queue_work_on"],
+    "global_reads": ["system_long_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "device_link_release_fn",
+    "callees": ["__pm_runtime_idle", "kfree", "kobject_put", "pm_runtime_put_noidle", "pm_runtime_release_supplier", "synchronize_srcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_state_only_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "runtime_pm_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "auto_remove_on_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "status_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_pm_move_to_tail",
+    "callees": ["__srcu_read_lock", "device_links_read_unlock", "device_pm_lock", "device_pm_unlock", "device_reorder_to_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_reorder_to_tail",
+    "callees": ["device_for_each_child", "device_pm_move_last", "device_reorder_to_tail", "devices_kset_move_last"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_is_dependent",
+    "callees": ["device_for_each_child", "device_is_dependent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_read_lock_held",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_read_unlock",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_links_read_lock",
+    "callees": ["__srcu_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fw_devlink_pickup_dangling_consumers",
+    "callees": ["__fw_devlink_pickup_dangling_consumers", "__fwnode_links_move_consumers", "fwnode_get_next_available_child_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_links_move_consumers",
+    "callees": ["__fwnode_link_add", "__fwnode_link_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_devlink_purge_absent_suppliers",
+    "callees": ["fw_devlink_purge_absent_suppliers.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_links_purge",
+    "callees": ["fwnode_links_purge_consumers", "fwnode_links_purge_suppliers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_links_purge_consumers",
+    "callees": ["__fwnode_link_del", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_links_purge_suppliers",
+    "callees": ["__fwnode_link_del", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_del",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fwnode_link_add",
+    "callees": ["__fwnode_link_add", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fwnode_link_add",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_pm_init",
+    "callees": ["device_pm_sleep_init", "pm_runtime_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_sync_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_runtime_put_noidle",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_has_sync_state",
+    "callees": ["dev_has_sync_state.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_bus_name",
+    "callees": ["dev_bus_name.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_init_devices_probe",
+    "callees": ["_printk", "driver_deferred_probe_trigger", "wait_for_device_probe"],
+    "global_reads": ["fw_devlink_flags"],
+    "global_writes": ["fw_devlink_best_effort"]
+  }
+]

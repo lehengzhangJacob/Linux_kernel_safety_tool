@@ -1,0 +1,224 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "twinhead_reserve_killing_zone.part.0",
+    "callees": ["__request_region", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_post_fixup_toshiba_ohci1394.part.0",
+    "callees": ["pci_read_config_byte", "pci_write_config_dword", "pci_write_config_word"],
+    "global_reads": ["toshiba_line_size"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_pre_fixup_toshiba_ohci1394.part.0",
+    "callees": ["pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sb600_disable_hpet_bar.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_th_dnv.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chromeos_fixup_apl_pci_l1ss_capability",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["l1ss_cap", "l1ss_header", "prev_cap", "prev_header"],
+    "global_writes": []
+  },
+  {
+    "name": "chromeos_save_apl_pci_l1ss_capability",
+    "callees": ["pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": ["l1ss_cap", "l1ss_header", "prev_cap", "prev_header"]
+  },
+  {
+    "name": "quirk_clear_strap_no_soft_reset_dev2_f0",
+    "callees": ["_dev_err", "amd_smn_read", "amd_smn_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rs690_fix_64bit_dma",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["high_memory", "page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_amd_enable_64bit_bar",
+    "callees": ["_dev_info", "add_taint", "kfree", "kzalloc", "pci_bus_add_resource", "pci_dev_put", "pci_get_device", "pci_read_config_dword", "pci_write_config_dword", "request_resource_conflict"],
+    "global_reads": ["name", "pci_probe"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_th_dnv",
+    "callees": ["quirk_intel_th_dnv.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_no_aersid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_apple_mbp_poweroff",
+    "callees": ["__request_region", "_dev_info", "dmi_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_amd_fch_xhci_pme",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_amd_ehci_pme",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_invalid_bar",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "twinhead_reserve_killing_zone",
+    "callees": ["twinhead_reserve_killing_zone.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sb600_hpet_quirk",
+    "callees": ["_dev_info"],
+    "global_reads": ["hpet_address"],
+    "global_writes": []
+  },
+  {
+    "name": "sb600_disable_hpet_bar",
+    "callees": ["pci_read_config_byte", "sb600_disable_hpet_bar.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_siemens_interrupt_controller",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_early_fixup_cyrix_5530",
+    "callees": ["pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_post_fixup_toshiba_ohci1394",
+    "callees": ["dmi_check_system", "pci_post_fixup_toshiba_ohci1394.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_pre_fixup_toshiba_ohci1394",
+    "callees": ["dmi_check_system", "pci_pre_fixup_toshiba_ohci1394.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_msi_k8t_onboard_sound",
+    "callees": ["_dev_info", "dmi_check_system", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_video",
+    "callees": ["_dev_info", "pci_disable_rom", "pci_read_config_word", "release_resource", "vga_default_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_rootport_aspm_quirk",
+    "callees": ["_dev_info", "pci_bus_set_ops"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_pcie_aspm_write",
+    "callees": ["raw_pci_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_pcie_aspm_read",
+    "callees": ["raw_pci_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_nforce2",
+    "callees": ["_dev_warn", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_transparent_bridge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_via_northbridge_bug",
+    "callees": ["_dev_warn", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_piix4_acpi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_latency",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["pcibios_max_latency"]
+  },
+  {
+    "name": "pci_fixup_umc_ide",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_i450gx",
+    "callees": ["_dev_info", "pci_read_config_byte", "pcibios_scan_root"],
+    "global_reads": [],
+    "global_writes": ["pcibios_last_bus"]
+  },
+  {
+    "name": "pci_fixup_i450nx",
+    "callees": ["_dev_warn", "pci_read_config_byte", "pcibios_scan_root"],
+    "global_reads": [],
+    "global_writes": ["pcibios_last_bus"]
+  }
+]

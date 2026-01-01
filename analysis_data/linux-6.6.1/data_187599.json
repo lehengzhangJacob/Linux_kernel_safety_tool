@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_dpms",
+    "callees": ["___drm_dbg", "msleep", "ns2501_writeb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_get_hw_state",
+    "callees": ["ns2501_readb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_mode_set",
+    "callees": ["___drm_dbg", "ns2501_writeb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_mode_valid",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_detect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_init",
+    "callees": ["___drm_dbg", "kfree", "kzalloc", "ns2501_readb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns2501_readb",
+    "callees": ["___drm_dbg", "i2c_transfer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

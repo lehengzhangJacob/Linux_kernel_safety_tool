@@ -1,0 +1,254 @@
+[
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_mapping",
+    "callees": ["__SCT__tp_func_ext4_fsmap_mapping", "cpu_online", "trace_ext4_fsmap_mapping.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_free_fixed_metadata",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key",
+    "callees": ["__SCT__tp_func_ext4_fsmap_low_key", "cpu_online", "trace_ext4_fsmap_low_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_high_key",
+    "callees": ["__SCT__tp_func_ext4_fsmap_high_key", "cpu_online", "trace_ext4_fsmap_high_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap",
+    "callees": ["ext4_getfsmap_check_keys", "ext4_getfsmap_is_valid_device", "memset", "sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_check_keys",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_datadev",
+    "callees": ["ext4_get_group_no_and_offset", "ext4_getfsmap_datadev_helper", "ext4_getfsmap_find_fixed_metadata", "ext4_getfsmap_free_fixed_metadata", "ext4_getfsmap_helper", "ext4_mballoc_query_range", "memset", "trace_ext4_fsmap_high_key", "trace_ext4_fsmap_low_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_find_fixed_metadata",
+    "callees": ["ext4_block_bitmap", "ext4_get_group_desc", "ext4_getfsmap_fill", "ext4_getfsmap_find_sb", "ext4_getfsmap_free_fixed_metadata", "ext4_getfsmap_merge_fixed_metadata", "ext4_inode_bitmap", "ext4_inode_table", "list_sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_free_fixed_metadata",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_merge_fixed_metadata",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_compare",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_find_sb",
+    "callees": ["ext4_bg_has_super", "ext4_bg_num_gdb", "ext4_getfsmap_fill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_fill",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_logdev",
+    "callees": ["ext4_getfsmap_helper", "memset", "trace_ext4_fsmap_high_key", "trace_ext4_fsmap_low_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_datadev_helper",
+    "callees": ["ext4_getfsmap_helper", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_helper",
+    "callees": ["ext4_get_group_no_and_offset", "fatal_signal_pending", "trace_ext4_fsmap_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_getfsmap_dev_compare",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_fsmap_to_internal",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_fsmap_from_internal",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_mapping",
+    "callees": ["__SCT__tp_func_ext4_fsmap_mapping", "cpu_online", "trace_ext4_fsmap_mapping.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_high_key",
+    "callees": ["__SCT__tp_func_ext4_fsmap_high_key", "cpu_online", "trace_ext4_fsmap_high_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_ext4_fsmap_low_key",
+    "callees": ["__SCT__tp_func_ext4_fsmap_low_key", "cpu_online", "trace_ext4_fsmap_low_key.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

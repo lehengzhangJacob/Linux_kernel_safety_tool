@@ -1,0 +1,308 @@
+[
+  {
+    "name": "elevator_exit",
+    "callees": ["blk_mq_exit_sched", "blk_mq_sched_free_rqs", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_exit",
+    "callees": ["blk_mq_exit_sched", "blk_mq_sched_free_rqs", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rqhash_add",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_exit",
+    "callees": ["blk_mq_exit_sched", "blk_mq_sched_free_rqs", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elv_rqhash_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elv_rqhash_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elv_rqhash_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elv_rqhash_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_match",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_unregister.part.0",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_setup",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rb_latter_request",
+    "callees": ["rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rb_former_request",
+    "callees": ["rb_prev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_iosched_show",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_iosched_store",
+    "callees": ["elevator_change", "strim", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_change",
+    "callees": ["__builtin_constant_p", "__request_module", "elevator_disable", "elevator_find_get", "elevator_match", "elevator_switch", "module_put", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_disable",
+    "callees": ["__blk_trace_note_message", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "blk_mq_freeze_queue", "blk_mq_quiesce_queue", "blk_mq_unfreeze_queue", "blk_mq_unquiesce_queue", "blk_queue_flag_clear", "elevator_exit", "elv_unregister_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_switch",
+    "callees": ["__blk_trace_note_message", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "_printk", "blk_mq_freeze_queue", "blk_mq_init_sched", "blk_mq_quiesce_queue", "blk_mq_unfreeze_queue", "blk_mq_unquiesce_queue", "elevator_exit", "elv_register_queue", "elv_unregister_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_init_mq",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "blk_mq_cancel_work_sync", "blk_mq_freeze_queue", "blk_mq_init_sched", "blk_mq_unfreeze_queue", "elevator_get_by_features", "elevator_get_default", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_get_by_features",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_get_default",
+    "callees": ["elevator_find_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_unregister",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "elv_unregister.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_register",
+    "callees": ["__builtin_expect", "__elevator_find", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "kmem_cache_create", "kmem_cache_destroy", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_unregister_queue",
+    "callees": ["kobject_del", "kobject_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_register_queue",
+    "callees": ["kobject_add", "kobject_uevent", "sysfs_create_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_attr_store",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_attr_show",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_former_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_latter_request",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_merge_requests",
+    "callees": ["__elv_rqhash_del", "elv_rqhash_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_merged_request",
+    "callees": ["__elv_rqhash_del", "elv_rqhash_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_attempt_insert_merge",
+    "callees": ["__builtin_constant_p", "blk_attempt_req_merge", "elv_rqhash_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_merge",
+    "callees": ["__builtin_constant_p", "blk_try_merge", "elv_bio_merge_ok", "elv_rqhash_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rb_find",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rb_del",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rb_add",
+    "callees": ["rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rqhash_find",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__elv_rqhash_del", "rq_mergeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rqhash_reposition",
+    "callees": ["__elv_rqhash_del", "elv_rqhash_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rqhash_add",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_rqhash_del",
+    "callees": ["__elv_rqhash_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elv_rqhash_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_exit",
+    "callees": ["blk_mq_exit_sched", "blk_mq_sched_free_rqs", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_release",
+    "callees": ["kfree", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_alloc",
+    "callees": ["__builtin_expect", "__module_get", "__mutex_init", "kobject_init", "kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_find_get",
+    "callees": ["__elevator_find", "_raw_spin_lock", "_raw_spin_unlock", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__elevator_find",
+    "callees": ["elevator_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elevator_match",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_bio_merge_ok",
+    "callees": ["blk_rq_merge_ok", "elv_iosched_allow_bio_merge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "elv_iosched_allow_bio_merge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rq_mergeable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

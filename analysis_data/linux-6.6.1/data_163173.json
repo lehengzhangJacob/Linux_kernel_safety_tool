@@ -1,0 +1,116 @@
+[
+  {
+    "name": "index_update",
+    "callees": ["crc32_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "index_update",
+    "callees": ["crc32_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_reset",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_reset",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_end",
+    "callees": ["kfree", "xz_dec_lzma2_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_reset",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_init",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "xz_dec_bcj_create", "xz_dec_lzma2_create", "xz_dec_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_run",
+    "callees": ["dec_main", "xz_dec_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_main",
+    "callees": ["crc32_validate", "dec_block", "dec_block_header", "dec_index", "dec_stream_footer", "dec_stream_header", "fill_temp", "index_update", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_block_header",
+    "callees": ["crc32_le", "dec_vli", "xz_dec_bcj_reset", "xz_dec_lzma2_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_stream_footer",
+    "callees": ["crc32_le", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_index",
+    "callees": ["crc32_le", "dec_vli", "index_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "index_update",
+    "callees": ["crc32_le"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_block",
+    "callees": ["crc32_le", "xz_dec_bcj_run", "xz_dec_lzma2_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dec_vli",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_temp",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

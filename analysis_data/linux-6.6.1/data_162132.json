@@ -1,0 +1,14 @@
+[
+  {
+    "name": "init_mmap_min_addr",
+    "callees": [],
+    "global_reads": ["dac_mmap_min_addr"],
+    "global_writes": ["mmap_min_addr"]
+  },
+  {
+    "name": "mmap_min_addr_handler",
+    "callees": ["capable", "proc_doulongvec_minmax"],
+    "global_reads": ["dac_mmap_min_addr"],
+    "global_writes": ["mmap_min_addr"]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_crypto_wep_encrypt",
+    "callees": ["ieee80211_tx_set_protected", "wep_encrypt_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wep_encrypt_skb",
+    "callees": ["ieee80211_wep_add_iv", "ieee80211_wep_encrypt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_crypto_wep_decrypt",
+    "callees": ["__pskb_trim", "__skb_linearize", "ieee80211_hdrlen", "ieee80211_wep_decrypt", "ieee80211_wep_remove_iv", "pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_decrypt",
+    "callees": ["ieee80211_hdrlen", "ieee80211_wep_decrypt_data", "memcpy", "memmove", "skb_pull", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_decrypt_data",
+    "callees": ["arc4_crypt", "arc4_setkey", "crc32_le", "memcmp", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_encrypt",
+    "callees": ["__builtin_expect", "ieee80211_wep_add_iv", "ieee80211_wep_encrypt_data", "memcpy", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_encrypt_data",
+    "callees": ["arc4_crypt", "arc4_setkey", "crc32_le", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_add_iv",
+    "callees": ["__builtin_expect", "ieee80211_hdrlen", "ieee80211_wep_get_iv", "memmove", "skb_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_get_iv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_wep_init",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_linearize",
+    "callees": ["__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pskb_trim",
+    "callees": ["___pskb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

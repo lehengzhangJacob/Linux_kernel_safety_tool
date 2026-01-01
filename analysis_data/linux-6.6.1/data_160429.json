@@ -1,0 +1,206 @@
+[
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin",
+    "callees": ["__SCT__tp_func_contention_begin", "cpu_online", "trace_contention_begin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_rwsem_trylock",
+    "callees": ["__percpu_rwsem_trylock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_down_read_trylock.part.0",
+    "callees": ["rcuwait_wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_down_read_trylock",
+    "callees": ["__builtin_expect", "__percpu_down_read_trylock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_rwsem_trylock.part.0",
+    "callees": ["__builtin_expect", "__percpu_down_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_down_read_trylock.part.0",
+    "callees": ["rcuwait_wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_free_rwsem.part.0",
+    "callees": ["free_percpu", "rcu_sync_dtor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_up_write",
+    "callees": ["__wake_up", "rcu_sync_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_down_write",
+    "callees": ["__SCT__might_resched", "finish_rcuwait", "percpu_rwsem_wait", "rcu_sync_enter", "readers_active_check", "schedule", "trace_contention_begin", "trace_contention_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readers_active_check",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_is_read_locked",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_down_read",
+    "callees": ["__builtin_expect", "__percpu_down_read_trylock", "percpu_rwsem_wait", "trace_contention_begin", "trace_contention_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_rwsem_wait",
+    "callees": ["__percpu_rwsem_trylock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_rwsem_wake_function",
+    "callees": ["__percpu_rwsem_trylock", "__refcount_add", "put_task_struct", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_rwsem_trylock",
+    "callees": ["__percpu_rwsem_trylock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_down_read_trylock",
+    "callees": ["__builtin_expect", "__percpu_down_read_trylock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_free_rwsem",
+    "callees": ["percpu_free_rwsem.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__percpu_init_rwsem",
+    "callees": ["__alloc_percpu", "__builtin_expect", "__init_waitqueue_head", "rcu_sync_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin",
+    "callees": ["__SCT__tp_func_contention_begin", "cpu_online", "trace_contention_begin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

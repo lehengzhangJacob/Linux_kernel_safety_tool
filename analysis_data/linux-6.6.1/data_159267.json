@@ -1,0 +1,44 @@
+[
+  {
+    "name": "free_msg",
+    "callees": ["__SCT__cond_resched", "kfree", "security_msg_msg_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_msg",
+    "callees": ["__SCT__cond_resched", "kfree", "security_msg_msg_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_msg",
+    "callees": ["__SCT__cond_resched", "kfree", "security_msg_msg_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_msg",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_msg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "load_msg",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "alloc_msg", "free_msg", "security_msg_msg_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_msg",
+    "callees": ["__SCT__cond_resched", "__builtin_constant_p", "__builtin_return_address", "__kmalloc", "free_msg", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

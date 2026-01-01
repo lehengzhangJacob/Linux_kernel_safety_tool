@@ -1,0 +1,230 @@
+[
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peek_old_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peek_old_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_bit_tree_decode",
+    "callees": ["rc_get_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_byte",
+    "callees": ["peek_old_byte", "write_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unlzma",
+    "callees": ["kfree", "kmalloc_large", "process_bit0", "process_bit1", "rc_init_code", "rc_is_bit_0_helper", "rc_read", "vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_bit1",
+    "callees": ["copy_byte", "copy_bytes", "rc_bit_tree_decode", "rc_direct_bit", "rc_get_bit", "rc_is_bit_0_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_bytes",
+    "callees": ["copy_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_byte",
+    "callees": ["peek_old_byte", "write_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peek_old_byte",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_bit_tree_decode",
+    "callees": ["rc_get_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_direct_bit",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_get_bit",
+    "callees": ["rc_is_bit_0_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_is_bit_0_helper",
+    "callees": ["rc_do_normalize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_do_normalize",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_init_code",
+    "callees": ["rc_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nofill",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

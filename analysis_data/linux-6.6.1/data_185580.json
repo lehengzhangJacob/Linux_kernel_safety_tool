@@ -1,0 +1,92 @@
+[
+  {
+    "name": "efivar_lock",
+    "callees": ["down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_set_variable.part.0",
+    "callees": ["efivar_set_variable_locked", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_query_variable_info",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_set_variable",
+    "callees": ["efivar_lock", "efivar_set_variable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_set_variable_locked",
+    "callees": ["check_var_size", "ucs2_strsize"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_get_next_variable",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_get_variable",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_unlock",
+    "callees": ["up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_trylock",
+    "callees": ["down_trylock", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_lock",
+    "callees": ["down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_supports_writes",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivars_unregister",
+    "callees": ["_printk", "down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": ["__efivars"]
+  },
+  {
+    "name": "efivars_register",
+    "callees": ["_printk", "down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": ["__efivars"]
+  },
+  {
+    "name": "efivar_is_available",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "check_var_size",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  }
+]

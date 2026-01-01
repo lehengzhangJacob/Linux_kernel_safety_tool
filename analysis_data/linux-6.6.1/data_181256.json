@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_rotation_simplify.part.0",
+    "callees": ["__builtin_constant_p", "__builtin_ffs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_plane_create_blend_mode_property",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "drm_object_attach_property", "drm_property_add_enum", "drm_property_create", "drm_property_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_normalize_zpos",
+    "callees": ["drm_atomic_helper_crtc_normalize_zpos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_crtc_normalize_zpos",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_plane_state", "kfree", "kmalloc_array", "sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_state_zpos_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_plane_create_zpos_immutable_property",
+    "callees": ["drm_object_attach_property", "drm_property_create_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_plane_create_zpos_property",
+    "callees": ["drm_object_attach_property", "drm_property_create_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_rotation_simplify",
+    "callees": ["drm_rotation_simplify.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_plane_create_rotation_property",
+    "callees": ["__builtin_expect", "drm_object_attach_property", "drm_property_create_bitmask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_plane_create_alpha_property",
+    "callees": ["drm_object_attach_property", "drm_property_create_range"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

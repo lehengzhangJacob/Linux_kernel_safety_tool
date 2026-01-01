@@ -1,0 +1,104 @@
+[
+  {
+    "name": "__static_call_text_reserved",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_text_reserved",
+    "callees": ["__static_call_mod_text_reserved", "__static_call_text_reserved"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_module_notify",
+    "callees": ["__warn_printk", "cpus_read_lock", "cpus_read_unlock", "mutex_lock", "mutex_unlock", "static_call_add_module", "static_call_del_module"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_del_module",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_add_module",
+    "callees": ["__static_call_init", "_printk", "kernel_text_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_call_mod_text_reserved",
+    "callees": ["__builtin_expect", "__module_text_address", "__static_call_text_reserved", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_call_text_reserved",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_call_init",
+    "callees": ["arch_static_call_transform", "kzalloc", "static_call_sort_entries", "within_module_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__static_call_update",
+    "callees": ["__builtin_expect", "__warn_printk", "arch_static_call_transform", "cpus_read_lock", "cpus_read_unlock", "kernel_text_address", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["__already_done", "static_call_initialized", "system_state"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "static_call_sort_entries",
+    "callees": ["sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_site_swap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_site_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "static_call_force_reinit",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["static_call_initialized"],
+    "global_writes": ["static_call_initialized"]
+  },
+  {
+    "name": "static_call_init",
+    "callees": ["__builtin_unreachable", "__static_call_init", "_printk", "cpus_read_lock", "cpus_read_unlock", "mutex_lock", "mutex_unlock", "register_module_notifier"],
+    "global_reads": ["static_call_initialized"],
+    "global_writes": ["static_call_initialized"]
+  },
+  {
+    "name": "within_module_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

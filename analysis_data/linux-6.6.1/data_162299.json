@@ -1,0 +1,32 @@
+[
+  {
+    "name": "aes_fini",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aes_init",
+    "callees": ["crypto_register_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_aes_decrypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_aes_encrypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_aes_set_key",
+    "callees": ["aes_expandkey"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

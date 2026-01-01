@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_request_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_heci_cmd_submit_nonpriv",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__msecs_to_jiffies", "_dev_err", "_i915_vma_move_to_active", "emit_gsc_heci_pkt_nonpriv", "i915_gem_object_lock", "i915_gem_ww_ctx_backoff", "i915_gem_ww_ctx_fini", "i915_gem_ww_ctx_init", "i915_request_add", "i915_request_create", "i915_request_get.part.0", "i915_request_put.part.0", "i915_request_set_error_once", "i915_request_wait", "intel_context_pin_ww", "intel_context_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_gsc_heci_pkt_nonpriv",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_heci_cmd_emit_mtl_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_uc_heci_cmd_submit_packet",
+    "callees": ["__builtin_expect", "_dev_err", "emit_gsc_heci_pkt", "i915_request_add", "i915_request_create", "i915_request_get.part.0", "i915_request_put.part.0", "i915_request_set_error_once", "i915_request_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "emit_gsc_heci_pkt",
+    "callees": ["__builtin_expect", "intel_ring_begin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_unpin",
+    "callees": ["__builtin_expect", "__intel_context_do_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_ww",
+    "callees": ["__builtin_expect", "__intel_context_do_pin_ww", "intel_context_pin_if_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_context_pin_if_active",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

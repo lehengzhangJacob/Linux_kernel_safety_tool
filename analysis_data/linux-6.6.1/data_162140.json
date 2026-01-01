@@ -1,0 +1,20 @@
+[
+  {
+    "name": "probe_irq_off",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "irq_shutdown_and_deactivate", "irq_to_desc", "mutex_unlock"],
+    "global_reads": ["nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "probe_irq_mask",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "irq_shutdown_and_deactivate", "irq_to_desc", "mutex_unlock"],
+    "global_reads": ["nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "probe_irq_on",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "async_synchronize_full", "irq_activate_and_startup", "irq_shutdown_and_deactivate", "irq_to_desc", "msleep", "mutex_lock"],
+    "global_reads": ["nr_irqs"],
+    "global_writes": []
+  }
+]

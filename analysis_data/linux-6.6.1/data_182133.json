@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_read_file_from_fd",
+    "callees": ["__fdget", "fput", "kernel_read_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_read_file_from_path_initns",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "file_open_root", "fput", "get_fs_root", "kernel_read_file", "path_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_read_file_from_path",
+    "callees": ["__builtin_expect", "filp_open", "fput", "kernel_read_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_read_file",
+    "callees": ["allow_write_access", "deny_write_access", "kernel_read", "security_kernel_post_read_file", "security_kernel_read_file", "vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_fs_root",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "path_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "allow_write_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

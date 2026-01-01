@@ -1,0 +1,104 @@
+[
+  {
+    "name": "rtc_add_group",
+    "callees": ["rtc_add_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_add_groups",
+    "callees": ["__builtin_expect", "devm_kfree", "devm_kmalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_get_dev_attribute_groups",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_attr_is_visible",
+    "callees": ["rtc_does_wakealarm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_does_wakealarm",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "range_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "offset_store",
+    "callees": ["kstrtoll", "rtc_set_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "offset_show",
+    "callees": ["rtc_read_offset", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakealarm_store",
+    "callees": ["kstrtoll", "rtc_read_alarm", "rtc_read_time", "rtc_set_alarm", "rtc_time64_to_tm", "rtc_tm_to_time64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakealarm_show",
+    "callees": ["rtc_read_alarm", "rtc_tm_to_time64", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hctosys_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_user_freq_store",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_user_freq_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "since_epoch_show",
+    "callees": ["rtc_read_time", "rtc_tm_to_time64", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "time_show",
+    "callees": ["rtc_read_time", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "date_show",
+    "callees": ["rtc_read_time", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "name_show",
+    "callees": ["dev_driver_string", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

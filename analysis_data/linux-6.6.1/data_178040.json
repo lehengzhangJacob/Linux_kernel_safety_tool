@@ -1,0 +1,38 @@
+[
+  {
+    "name": "firmware_request_builtin.part.0",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_builtin.part.0",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_is_builtin",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_builtin_buf",
+    "callees": ["firmware_request_builtin.part.0", "fw_copy_to_prealloc_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "firmware_request_builtin",
+    "callees": ["firmware_request_builtin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_copy_to_prealloc_buf",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

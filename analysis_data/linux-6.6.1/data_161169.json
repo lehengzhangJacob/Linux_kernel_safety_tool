@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_get_link.part.0",
+    "callees": ["__builtin_expect", "kernfs_getlink", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_iop_get_link",
+    "callees": ["kernfs_iop_get_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_get_target_path",
+    "callees": ["__builtin_memcpy", "memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernfs_create_link",
+    "callees": ["kernfs_add_one", "kernfs_get", "kernfs_new_node", "kernfs_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kvm_arch_ptp_get_crosststamp",
+    "callees": ["___ratelimit", "__builtin_expect", "_printk", "kvm_hypercall2"],
+    "global_reads": ["clock_pair", "clock_pair_gpa"],
+    "global_writes": []
+  },
+  {
+    "name": "kvm_arch_ptp_get_clock",
+    "callees": ["___ratelimit", "_printk", "kvm_hypercall2"],
+    "global_reads": ["clock_pair", "clock_pair_gpa"],
+    "global_writes": []
+  },
+  {
+    "name": "kvm_arch_ptp_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kvm_arch_ptp_init",
+    "callees": ["kvm_hypercall2", "kvm_para_available", "pvclock_get_pvti_cpu0_va", "slow_virt_to_phys"],
+    "global_reads": ["clock_pair_gpa"],
+    "global_writes": ["clock_pair", "clock_pair_gpa"]
+  }
+]

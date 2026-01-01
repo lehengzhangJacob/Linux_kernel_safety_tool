@@ -1,0 +1,308 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_act_sent",
+    "callees": ["dp_tp_status_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_connector_late_register.part.0",
+    "callees": ["drm_dp_mst_connector_early_unregister", "intel_connector_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_add_topology_state_for_crtc",
+    "callees": ["intel_dp_mst_add_topology_state_for_connector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_is_slave_trans",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_is_master_trans",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_encoder_cleanup",
+    "callees": ["drm_dp_mst_topology_mgr_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_source_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_encoder_init",
+    "callees": ["drm_dp_mst_topology_mgr_init", "intel_dp_create_fake_mst_encoders", "intel_dp_is_edp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_encoder_active_links",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_create_fake_mst_encoder",
+    "callees": ["drm_encoder_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_poll_hpd_irq",
+    "callees": ["intel_hpd_trigger_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_add_mst_connector",
+    "callees": ["__drm_dev_dbg", "drm_connector_attach_encoder", "drm_connector_cleanup", "drm_connector_init", "drm_dp_mst_get_port_malloc", "drm_dp_mst_put_port_malloc", "intel_connector_alloc", "intel_connector_free", "intel_dp_hdcp_init", "intel_dp_mst_add_properties"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_add_properties",
+    "callees": ["drm_connector_attach_max_bpc_property", "drm_connector_set_path_property", "drm_object_attach_property", "intel_attach_broadcast_rgb_property", "intel_attach_force_audio_property"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_get_hw_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_encoder_destroy",
+    "callees": ["drm_encoder_cleanup", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_detect",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_dp_mst_detect_port", "intel_opregion_headless_sku"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_atomic_best_encoder",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_mode_valid_ctx",
+    "callees": ["drm_dp_calc_pbn_mode", "drm_modeset_lock", "intel_dp_dsc_compute_bpp", "intel_dp_dsc_get_output_bpp", "intel_dp_dsc_get_slice_count", "intel_dp_link_required", "intel_dp_max_data_rate", "intel_dp_max_lane_count", "intel_dp_max_link_rate", "intel_dp_need_bigjoiner", "intel_mode_valid_max_plane_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_get_modes",
+    "callees": ["intel_dp_mst_get_ddc_modes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_connector_early_unregister",
+    "callees": ["drm_dp_mst_connector_early_unregister", "intel_connector_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_connector_late_register",
+    "callees": ["drm_dp_mst_connector_late_register", "intel_dp_mst_connector_late_register.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_get_ddc_modes",
+    "callees": ["drm_dp_mst_edid_read", "drm_edid_free", "intel_connector_update_modes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_initial_fastset_check",
+    "callees": ["intel_dp_initial_fastset_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_enc_get_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_enc_get_hw_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_enable_dp",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "clear_act_sent", "dev_driver_string", "drm_atomic_get_mst_payload_state", "drm_atomic_get_new_mst_topology_state", "drm_dp_add_payload_part2", "intel_audio_codec_enable", "intel_crtc_vblank_on", "intel_ddi_enable_transcoder_func", "intel_dp_is_uhbr", "intel_enable_transcoder", "intel_hdcp_enable", "intel_uncore_rmw", "wait_for_act_sent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_pre_enable_dp",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "dev_driver_string", "drm_atomic_get_mst_payload_state", "drm_atomic_get_new_mst_topology_state", "drm_dp_add_payload_part1", "drm_dp_send_power_updown_phy", "intel_ddi_enable_transcoder_clock", "intel_ddi_set_dp_msa", "intel_dp_set_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_pre_pll_enable_dp",
+    "callees": ["intel_ddi_update_active_dpll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_post_pll_disable_dp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_post_disable_dp",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "clear_act_sent", "dev_driver_string", "drm_dp_send_power_updown_phy", "ilk_pfit_disable", "intel_crtc_vblank_off", "intel_ddi_disable_transcoder_clock", "intel_ddi_disable_transcoder_func", "intel_disable_transcoder", "intel_dp_set_infoframes", "intel_uncore_rmw", "skl_scaler_disable", "wait_for_act_sent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_mst_disable_dp",
+    "callees": ["__drm_dev_dbg", "drm_atomic_get_mst_payload_state", "drm_atomic_get_new_mst_topology_state", "drm_atomic_get_old_mst_topology_state", "drm_dp_remove_payload", "intel_audio_codec_disable", "intel_hdcp_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_act_sent",
+    "callees": ["_dev_err", "dp_tp_status_reg", "drm_dp_check_act_status", "intel_de_wait_for_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_act_sent",
+    "callees": ["dp_tp_status_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_atomic_check",
+    "callees": ["drm_dp_atomic_release_time_slots", "intel_digital_connector_atomic_check", "intel_dp_mst_atomic_master_trans_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_atomic_master_trans_check",
+    "callees": ["__builtin_expect", "drm_atomic_add_affected_planes", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "intel_atomic_get_crtc_state", "intel_atomic_get_digital_connector_state", "intel_connector_needs_modeset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_compute_config_late",
+    "callees": ["intel_dp_mst_transcoder_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_transcoder_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_compute_config",
+    "callees": ["__drm_dev_dbg", "bxt_ddi_phy_calc_lane_lat_optim_mask", "intel_audio_compute_config", "intel_ddi_compute_min_voltage_level", "intel_dp_adjust_compliance_config", "intel_dp_dsc_compute_config", "intel_dp_dsc_mst_compute_link_config", "intel_dp_limited_color_range", "intel_dp_max_lane_count", "intel_dp_max_link_rate", "intel_dp_min_bpp", "intel_dp_mst_compute_link_config", "intel_dp_mst_update_slots"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_update_slots",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_mst_topology_state", "drm_dp_mst_update_slots", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_dsc_mst_compute_link_config",
+    "callees": ["__drm_dev_dbg", "drm_dp_dsc_sink_supported_input_bpcs", "intel_dp_dsc_nearest_valid_bpp", "intel_dp_mst_find_vcpi_slots_for_bpp", "intel_link_compute_m_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_compute_link_config",
+    "callees": ["intel_dp_mst_find_vcpi_slots_for_bpp", "intel_link_compute_m_n"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_mst_check_constraints",
+    "callees": ["__drm_dev_dbg", "intel_dp_is_uhbr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

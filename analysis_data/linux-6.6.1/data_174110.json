@@ -1,0 +1,74 @@
+[
+  {
+    "name": "nfs_block_o_direct.part.0",
+    "callees": ["inode_dio_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_o_direct",
+    "callees": ["__builtin_constant_p", "nfs_block_o_direct.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_end_io_read",
+    "callees": ["up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_o_direct.part.0",
+    "callees": ["inode_dio_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_end_io_direct",
+    "callees": ["nfs_end_io_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_start_io_direct",
+    "callees": ["__builtin_constant_p", "down_read", "down_write", "downgrade_write", "nfs_block_buffered", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_buffered",
+    "callees": ["__builtin_constant_p", "nfs_sync_mapping"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_end_io_write",
+    "callees": ["up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_start_io_write",
+    "callees": ["down_write", "nfs_block_o_direct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_end_io_read",
+    "callees": ["up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_start_io_read",
+    "callees": ["__builtin_constant_p", "down_read", "down_write", "downgrade_write", "nfs_block_o_direct", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_block_o_direct",
+    "callees": ["__builtin_constant_p", "nfs_block_o_direct.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

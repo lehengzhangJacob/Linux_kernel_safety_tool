@@ -1,0 +1,164 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "open_kcore.part.0",
+    "callees": ["down_write", "kcore_update_ram", "up_write"],
+    "global_reads": ["kcore_need_update", "proc_root_kcore"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_kcore_init",
+    "callees": ["_printk", "add_modules_range", "kcore_update_ram", "proc_create", "proc_kcore_text_init"],
+    "global_reads": ["vmalloc_base"],
+    "global_writes": ["proc_root_kcore"]
+  },
+  {
+    "name": "add_modules_range",
+    "callees": [],
+    "global_reads": ["vmalloc_base"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_kcore_text_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_kcore",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "open_kcore",
+    "callees": ["__builtin_return_address", "capable", "kmalloc_trace", "open_kcore.part.0", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_kcore_iter",
+    "callees": ["__SCT__cond_resched", "__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_to_iter", "_printk", "append_kcore_note", "copy_from_kernel_nofault", "down_read", "fault_in_iov_iter_writeable", "get_kcore_size", "iov_iter_zero", "is_page_hwpoison", "kfree", "kzalloc", "page_offline_freeze", "page_offline_thaw", "pfn_valid", "strscpy", "up_read", "vread_iter"],
+    "global_reads": ["__already_done", "arch_task_struct_size", "mem_pfn_is_ram", "page_offset_base", "phys_base", "saved_command_line", "vmcoreinfo_data", "vmcoreinfo_size", "vmemmap_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "append_kcore_note",
+    "callees": ["memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kcore_ram_list",
+    "callees": ["find_first_bit", "find_next_bit", "walk_system_ram_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kclist_add_private",
+    "callees": ["__builtin_return_address", "__virt_addr_valid", "get_sparsemem_vmemmap_info", "kfree", "kmalloc_trace", "pfn_valid"],
+    "global_reads": ["page_offset_base", "vmalloc_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "get_kcore_size",
+    "callees": [],
+    "global_reads": ["arch_task_struct_size", "vmcoreinfo_size"],
+    "global_writes": []
+  },
+  {
+    "name": "register_mem_pfn_is_ram",
+    "callees": [],
+    "global_reads": ["mem_pfn_is_ram"],
+    "global_writes": ["mem_pfn_is_ram"]
+  },
+  {
+    "name": "kclist_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "is_page_hwpoison",
+    "callees": ["PageHuge", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

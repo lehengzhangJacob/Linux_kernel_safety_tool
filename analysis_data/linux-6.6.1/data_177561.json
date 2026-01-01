@@ -1,0 +1,386 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cherryview_irq_handler.part.0",
+    "callees": ["__builtin_expect", "gen8_gt_irq_handler", "i9xx_hpd_irq_ack", "i9xx_hpd_irq_handler", "i9xx_pipestat_irq_ack", "intel_lpe_audio_irq_handler", "intel_uncore_rmw", "valleyview_pipestat_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valleyview_irq_handler.part.0",
+    "callees": ["__builtin_expect", "gen6_gt_irq_handler", "gen6_rps_irq_handler", "i9xx_hpd_irq_ack", "i9xx_hpd_irq_handler", "i9xx_pipestat_irq_ack", "intel_lpe_audio_irq_handler", "intel_uncore_rmw", "valleyview_pipestat_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_irq_handler.part.0",
+    "callees": ["i965_pipestat_irq_handler", "i9xx_error_irq_ack", "i9xx_error_irq_handler", "i9xx_hpd_irq_ack", "i9xx_hpd_irq_handler", "i9xx_pipestat_irq_ack", "intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_irq_handler.part.0",
+    "callees": ["__builtin_expect", "i915_pipestat_irq_handler", "i9xx_error_irq_ack", "i9xx_error_irq_handler", "i9xx_hpd_irq_ack", "i9xx_hpd_irq_handler", "i9xx_pipestat_irq_ack", "intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_irq_handler.part.0",
+    "callees": ["__builtin_expect", "i8xx_error_irq_ack", "i8xx_error_irq_handler", "i8xx_pipestat_irq_handler", "i9xx_pipestat_irq_ack", "intel_engine_cs_irq.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cs_irq.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_synchronize_hardirq",
+    "callees": ["synchronize_hardirq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_synchronize_irq",
+    "callees": ["synchronize_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irqs_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_runtime_pm_enable_interrupts",
+    "callees": ["intel_irq_postinstall", "intel_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_runtime_pm_disable_interrupts",
+    "callees": ["intel_irq_reset", "synchronize_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_uninstall",
+    "callees": ["free_irq", "intel_hpd_cancel_work", "intel_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_install",
+    "callees": ["intel_irq_handler", "intel_irq_postinstall", "intel_irq_reset", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_postinstall",
+    "callees": ["cherryview_irq_postinstall", "dg1_irq_postinstall", "gen11_irq_postinstall", "gen5_gt_irq_postinstall", "gen8_irq_postinstall", "i8xx_irq_postinstall", "i915_irq_postinstall", "i965_irq_postinstall", "ilk_de_irq_postinstall", "valleyview_irq_postinstall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_reset",
+    "callees": ["cherryview_irq_reset", "dg1_irq_reset", "gen11_irq_reset", "gen8_irq_reset", "i8xx_irq_reset", "i915_irq_reset", "i965_irq_reset", "ilk_irq_reset", "valleyview_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_fini",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_irq_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_irq_handler",
+    "callees": ["i965_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_irq_postinstall",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen3_irq_init", "i915_enable_asle_pipestat", "i915_enable_pipestat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_irq_reset",
+    "callees": ["gen3_irq_reset", "i915_hotplug_interrupt_update", "i9xx_pipestat_irq_reset", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_irq_handler",
+    "callees": ["i915_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_irq_postinstall",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen3_irq_init", "i915_enable_asle_pipestat", "i915_enable_pipestat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_irq_reset",
+    "callees": ["gen3_irq_reset", "i915_hotplug_interrupt_update", "i9xx_pipestat_irq_reset", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_irq_handler",
+    "callees": ["i8xx_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_error_irq_handler",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_error_irq_ack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_error_irq_handler",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_error_irq_ack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_irq_postinstall",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen2_irq_init", "i915_enable_pipestat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_irq_reset",
+    "callees": ["gen2_irq_reset", "i9xx_pipestat_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cherryview_irq_postinstall",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen8_gt_irq_postinstall", "vlv_display_irq_postinstall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dg1_irq_postinstall",
+    "callees": ["dg1_de_irq_postinstall", "gen11_gt_irq_postinstall", "gen3_irq_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_irq_postinstall",
+    "callees": ["gen11_de_irq_postinstall", "gen11_gt_irq_postinstall", "gen3_irq_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_irq_postinstall",
+    "callees": ["gen8_de_irq_postinstall", "gen8_gt_irq_postinstall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valleyview_irq_postinstall",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen5_gt_irq_postinstall", "vlv_display_irq_postinstall"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cherryview_irq_reset",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen3_irq_reset", "gen8_gt_irq_reset", "vlv_display_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dg1_irq_reset",
+    "callees": ["__builtin_expect", "gen11_display_irq_reset", "gen11_gt_irq_reset", "gen3_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_irq_reset",
+    "callees": ["gen11_display_irq_reset", "gen11_gt_irq_reset", "gen3_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_irq_reset",
+    "callees": ["gen3_irq_reset", "gen8_display_irq_reset", "gen8_gt_irq_reset", "ibx_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valleyview_irq_reset",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "gen5_gt_irq_reset", "vlv_display_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_irq_reset",
+    "callees": ["gen3_irq_reset", "gen5_gt_irq_reset", "ibx_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ibx_irq_reset",
+    "callees": ["gen3_irq_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dg1_irq_handler",
+    "callees": ["__builtin_expect", "_dev_err", "gen11_display_irq_handler", "gen11_gt_irq_handler", "gen11_gu_misc_irq_ack", "gen11_gu_misc_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_irq_handler",
+    "callees": ["gen11_display_irq_handler", "gen11_gt_irq_handler", "gen11_gu_misc_irq_ack", "gen11_gu_misc_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_irq_handler",
+    "callees": ["gen8_de_irq_handler", "gen8_gt_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_irq_handler",
+    "callees": ["__builtin_expect", "gen5_gt_irq_handler", "gen6_gt_irq_handler", "gen6_rps_irq_handler", "ilk_display_irq_handler", "ivb_display_irq_handler"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cherryview_irq_handler",
+    "callees": ["cherryview_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "valleyview_irq_handler",
+    "callees": ["valleyview_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivb_parity_work",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_ffs", "__drm_dev_dbg", "__warn_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dev_driver_string", "gen5_gt_enable_irq", "intel_uncore_rmw", "kasprintf", "kfree", "kobject_uevent_env", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "gen3_irq_init",
+    "callees": ["gen3_assert_iir_is_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen2_assert_iir_is_zero",
+    "callees": ["__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen3_assert_iir_is_zero",
+    "callees": ["__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen2_irq_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen3_irq_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_ops_complete",
+    "callees": ["__pm_runtime_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_bcastmsg_put",
+    "callees": ["genlmsg_put"],
+    "global_reads": ["ethnl_bcast_seq"],
+    "global_writes": ["ethnl_bcast_seq"]
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_netdev_event.part.0",
+    "callees": ["ethtool_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_init",
+    "callees": ["__builtin_expect", "__warn_printk", "genl_register_family", "register_netdevice_notifier"],
+    "global_reads": [],
+    "global_writes": ["ethnl_ok"]
+  },
+  {
+    "name": "ethnl_netdev_event",
+    "callees": ["ethnl_netdev_event.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_notify",
+    "callees": ["__builtin_expect", "__warn_printk", "netdev_name", "rtnl_is_locked"],
+    "global_reads": ["__already_done", "ethnl_ok"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ethnl_default_notify",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__warn_printk", "ethnl_bcastmsg_put", "ethnl_fill_reply_header", "ethnl_multicast", "kfree", "kfree_skb_reason", "kmalloc_large", "kmalloc_trace", "kzalloc", "memset", "nlmsg_new"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ethnl_default_set_doit",
+    "callees": ["__builtin_expect", "__warn_printk", "ethnl_ops_begin", "ethnl_ops_complete", "ethnl_parse_header_dev_get", "ethtool_notify", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ethnl_default_done",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_default_start",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__warn_printk", "ethnl_default_parse", "kfree", "kmalloc_large", "kmalloc_trace", "kzalloc"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ethnl_default_dumpit",
+    "callees": ["__builtin_expect", "ethnl_default_dump_one", "rtnl_lock", "rtnl_unlock", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_default_dump_one",
+    "callees": ["ethnl_fill_reply_header", "genlmsg_put", "memset", "nlmsg_trim", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_default_doit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__warn_printk", "ethnl_default_parse", "ethnl_reply_init", "genlmsg_reply", "kfree", "kfree_skb_reason", "kmalloc_large", "kmalloc_trace", "kzalloc", "memset", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ethnl_default_parse",
+    "callees": ["ethnl_parse_header_dev_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_multicast",
+    "callees": ["genlmsg_multicast_netns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_bcastmsg_put",
+    "callees": ["genlmsg_put"],
+    "global_reads": ["ethnl_bcast_seq"],
+    "global_writes": ["ethnl_bcast_seq"]
+  },
+  {
+    "name": "ethnl_dump_put",
+    "callees": ["genlmsg_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_reply_init",
+    "callees": ["do_trace_netlink_extack", "ethnl_fill_reply_header", "genlmsg_put", "kfree_skb_reason", "nlmsg_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_fill_reply_header",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nla_put_string", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_parse_header_dev_get",
+    "callees": ["do_trace_netlink_extack", "netdev_get_by_index", "netdev_get_by_name", "nla_parse_nested", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_ops_complete",
+    "callees": ["__pm_runtime_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_ops_begin",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "netif_device_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netdev_name",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_device_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

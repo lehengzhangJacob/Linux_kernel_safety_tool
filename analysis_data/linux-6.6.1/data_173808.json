@@ -1,0 +1,74 @@
+[
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip6_check_hbh_len",
+    "callees": ["__builtin_bswap32", "pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_reroute",
+    "callees": ["nf_ip_reroute"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip_reroute",
+    "callees": ["ip_route_me_harder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_route",
+    "callees": ["__nf_ip6_route", "nf_ip_route"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_checksum_partial",
+    "callees": ["nf_ip6_checksum_partial", "nf_ip_checksum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_checksum",
+    "callees": ["nf_ip6_checksum", "nf_ip_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip6_checksum_partial",
+    "callees": ["__skb_checksum_complete_head", "csum_ipv6_magic", "nf_ip6_checksum", "skb_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip6_checksum",
+    "callees": ["__skb_checksum_complete", "csum_ipv6_magic", "skb_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip_checksum_partial",
+    "callees": ["__skb_checksum_complete_head", "nf_ip_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ip_checksum",
+    "callees": ["__skb_checksum_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

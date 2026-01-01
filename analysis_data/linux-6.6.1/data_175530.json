@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ip6table_mangle_fini",
+    "callees": ["kfree", "unregister_pernet_subsys", "xt_unregister_template"],
+    "global_reads": ["mangle_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_mangle_init",
+    "callees": ["__builtin_expect", "kfree", "register_pernet_subsys", "xt_hook_ops_alloc", "xt_register_template", "xt_unregister_template"],
+    "global_reads": ["mangle_ops"],
+    "global_writes": ["mangle_ops"]
+  },
+  {
+    "name": "ip6table_mangle_net_exit",
+    "callees": ["ip6t_unregister_table_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_mangle_net_pre_exit",
+    "callees": ["ip6t_unregister_table_pre_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_mangle_table_init",
+    "callees": ["ip6t_alloc_initial_table", "ip6t_register_table", "kfree"],
+    "global_reads": ["mangle_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "ip6table_mangle_hook",
+    "callees": ["ip6t_do_table", "ip6t_mangle_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6t_mangle_out",
+    "callees": ["ip6_route_me_harder", "ip6t_do_table", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_create",
+    "callees": ["__builtin_expect", "__mutex_init", "gen6_alloc_top_pd", "gen6_ppgtt_init_scratch", "kref_put", "kzalloc", "ppgtt_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_unpin",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_alloc_top_pd",
+    "callees": ["__alloc_pd", "__builtin_expect", "__i915_gem_object_create_internal", "__refcount_add", "free_px", "i915_vma_instance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pd_dummy_obj_put_pages",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pd_dummy_obj_get_pages",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_pin",
+    "callees": ["__builtin_expect", "i915_ggtt_pin", "i915_vm_lock_objects"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pd_vma_unbind",
+    "callees": ["free_px"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pd_vma_bind",
+    "callees": ["gen6_flush_pd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_cleanup",
+    "callees": ["free_px", "free_scratch", "gen6_ppgtt_free_pd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_free_pd",
+    "callees": ["free_px"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_alloc_va_range",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "fill_page_dma", "gen6_flush_pd", "i915_pte_count", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_flush_pd",
+    "callees": ["gen6_ggtt_invalidate", "gen6_write_pde", "ioread32", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_insert_entries",
+    "callees": ["__builtin_expect", "__px_vaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_clear_range",
+    "callees": ["__px_vaddr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_ppgtt_enable",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_ppgtt_enable",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_write_pde",
+    "callees": ["__px_dma", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

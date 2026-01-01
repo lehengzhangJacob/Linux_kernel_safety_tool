@@ -1,0 +1,38 @@
+[
+  {
+    "name": "snd_seq_info_done",
+    "callees": ["snd_info_free_entry"],
+    "global_reads": ["clients_entry", "queues_entry", "timer_entry"],
+    "global_writes": []
+  },
+  {
+    "name": "create_info_entry",
+    "callees": ["snd_info_create_module_entry", "snd_info_free_entry", "snd_info_register"],
+    "global_reads": ["snd_seq_root"],
+    "global_writes": []
+  },
+  {
+    "name": "create_info_entry",
+    "callees": ["snd_info_create_module_entry", "snd_info_free_entry", "snd_info_register"],
+    "global_reads": ["snd_seq_root"],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_info_init",
+    "callees": ["create_info_entry", "snd_seq_info_done"],
+    "global_reads": ["clients_entry", "queues_entry"],
+    "global_writes": ["clients_entry", "queues_entry", "timer_entry"]
+  },
+  {
+    "name": "snd_seq_info_done",
+    "callees": ["snd_info_free_entry"],
+    "global_reads": ["clients_entry", "queues_entry", "timer_entry"],
+    "global_writes": []
+  },
+  {
+    "name": "create_info_entry",
+    "callees": ["snd_info_create_module_entry", "snd_info_free_entry", "snd_info_register"],
+    "global_reads": ["snd_seq_root"],
+    "global_writes": []
+  }
+]

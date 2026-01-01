@@ -1,0 +1,20 @@
+[
+  {
+    "name": "native_init_IRQ",
+    "callees": ["_printk", "idt_setup_apic_and_irq_gates", "lapic_assign_system_vectors", "request_threaded_irq"],
+    "global_reads": ["acpi_ioapic", "legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "init_IRQ",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "irq_init_percpu_irqstack", "irq_to_desc"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  },
+  {
+    "name": "init_ISA_irqs",
+    "callees": ["init_bsp_APIC", "irq_modify_status", "irq_set_chip_and_handler_name"],
+    "global_reads": ["legacy_pic"],
+    "global_writes": []
+  }
+]

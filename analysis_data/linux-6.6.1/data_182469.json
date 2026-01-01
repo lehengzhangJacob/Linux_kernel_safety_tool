@@ -1,0 +1,56 @@
+[
+  {
+    "name": "rtc_month_days",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_tm_to_time64",
+    "callees": ["mktime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_ktime_to_tm",
+    "callees": ["ns_to_timespec64", "rtc_time64_to_tm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_tm_to_ktime",
+    "callees": ["__builtin_expect", "rtc_tm_to_time64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_tm_to_time64",
+    "callees": ["mktime64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_valid_tm",
+    "callees": ["rtc_month_days"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_time64_to_tm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_year_days",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtc_month_days",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

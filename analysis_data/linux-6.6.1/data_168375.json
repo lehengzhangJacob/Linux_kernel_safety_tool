@@ -1,0 +1,26 @@
+[
+  {
+    "name": "acpi_ev_terminate",
+    "callees": ["acpi_disable", "acpi_disable_event", "acpi_error", "acpi_ev_remove_all_sci_handlers", "acpi_ev_remove_global_lock_handler", "acpi_ev_walk_gpe_list", "acpi_exception", "acpi_warning"],
+    "global_reads": ["acpi_gbl_events_initialized", "acpi_gbl_original_mode"],
+    "global_writes": ["acpi_gbl_events_initialized"]
+  },
+  {
+    "name": "acpi_ev_notify_dispatch",
+    "callees": ["acpi_ut_delete_generic_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_queue_notify_request",
+    "callees": ["acpi_ns_get_attached_object", "acpi_os_execute", "acpi_ut_create_generic_state", "acpi_ut_delete_generic_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ev_is_notify_object",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

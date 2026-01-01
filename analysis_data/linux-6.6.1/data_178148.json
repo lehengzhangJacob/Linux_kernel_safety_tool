@@ -1,0 +1,74 @@
+[
+  {
+    "name": "udplitev6_sk_init.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "udplite6_proc_exit",
+    "callees": ["unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite6_proc_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite6_proc_exit_net",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplite6_proc_init_net",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplitev6_exit",
+    "callees": ["inet6_del_protocol", "inet6_unregister_protosw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplitev6_init",
+    "callees": ["inet6_add_protocol", "inet6_del_protocol", "inet6_register_protosw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplitev6_err",
+    "callees": ["__udp6_lib_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplitev6_rcv",
+    "callees": ["__udp6_lib_rcv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udplitev6_sk_init",
+    "callees": ["__builtin_expect", "udplitev6_sk_init.part.0", "udpv6_init_sock"],
+    "global_reads": ["__already_done"],
+    "global_writes": []
+  },
+  {
+    "name": "udp_lib_close",
+    "callees": ["sk_common_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "udp_lib_hash",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

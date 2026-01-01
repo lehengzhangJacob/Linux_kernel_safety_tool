@@ -1,0 +1,38 @@
+[
+  {
+    "name": "nflog_tg_check.part.0",
+    "callees": ["__request_module", "nf_logger_find_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nflog_tg_exit",
+    "callees": ["xt_unregister_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nflog_tg_init",
+    "callees": ["xt_register_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nflog_tg_destroy",
+    "callees": ["nf_logger_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nflog_tg_check",
+    "callees": ["nf_logger_find_get", "nflog_tg_check.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nflog_tg",
+    "callees": ["nf_log_packet"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_parse_fixed_dma.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_simple_xlate",
+    "callees": ["__dma_request_channel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_request_slave_chan_by_name",
+    "callees": ["acpi_dma_request_slave_chan_by_index", "device_property_match_string", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_request_slave_chan_by_index",
+    "callees": ["acpi_dev_free_resource_list", "acpi_dev_get_resources", "acpi_dma_update_dma_spec", "is_acpi_device_node", "memset", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_parse_fixed_dma",
+    "callees": ["acpi_dma_parse_fixed_dma.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_update_dma_spec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_acpi_dma_controller_free",
+    "callees": ["__builtin_expect", "devres_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_acpi_dma_controller_register",
+    "callees": ["__devres_alloc_node", "acpi_dma_controller_register", "devres_add", "devres_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_acpi_dma_release",
+    "callees": ["acpi_dma_controller_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_controller_free",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_controller_register",
+    "callees": ["acpi_dma_parse_csrt", "is_acpi_device_node", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_parse_csrt",
+    "callees": ["_dev_warn", "acpi_dma_parse_resource_group", "acpi_get_table", "acpi_put_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_dma_parse_resource_group",
+    "callees": ["acpi_dev_free_resource_list", "acpi_dev_get_resources", "acpi_register_gsi", "dma_set_mask_and_coherent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_set_mask_and_coherent",
+    "callees": ["dma_set_coherent_mask", "dma_set_mask"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

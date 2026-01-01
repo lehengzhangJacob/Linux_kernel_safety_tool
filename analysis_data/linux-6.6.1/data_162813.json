@@ -1,0 +1,44 @@
+[
+  {
+    "name": "pcibios_bus_to_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcibios_resource_to_bus",
+    "callees": ["resource_contains"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_set_host_bridge_release",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_put_host_bridge_device",
+    "callees": ["kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_get_host_bridge_device",
+    "callees": ["kobject_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_find_host_bridge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource_contains",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

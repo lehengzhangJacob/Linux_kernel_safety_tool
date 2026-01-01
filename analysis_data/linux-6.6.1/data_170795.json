@@ -1,0 +1,32 @@
+[
+  {
+    "name": "trace_clock_counter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_clock_global",
+    "callees": ["__builtin_expect", "sched_clock_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_clock_jiffies",
+    "callees": ["jiffies_64_to_clock_t"],
+    "global_reads": ["jiffies_64"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_clock",
+    "callees": ["local_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_clock_local",
+    "callees": ["__builtin_expect", "sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

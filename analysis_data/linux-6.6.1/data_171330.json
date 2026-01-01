@@ -1,0 +1,170 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hda_codec_proc_new",
+    "callees": ["snd_card_rw_proc_new", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_codec_info",
+    "callees": ["kfree", "kmalloc_array", "print_amp_caps", "print_amp_vals", "print_audio_io", "print_codec_core_info", "print_conn_list", "print_device_list", "print_digital_conv", "print_gpio", "print_nid_array", "print_nid_pcms", "print_pcm_caps", "print_pin_caps", "print_pin_ctls", "print_power_state", "print_proc_caps", "print_unsol_cap", "print_vol_knob", "seq_printf", "snd_hdac_get_connections", "snd_hdac_get_sub_nodes", "snd_hdac_power_down", "snd_hdac_power_up", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_codec_core_info",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_device_list",
+    "callees": ["print_dpmst_connections", "seq_printf", "snd_hda_get_devices", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_dpmst_connections",
+    "callees": ["kfree", "kmalloc_array", "seq_printf", "snd_hda_get_dev_select", "snd_hda_set_dev_select", "snd_hdac_codec_read", "snd_hdac_get_connections"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_gpio",
+    "callees": ["print_nid_array", "seq_printf", "snd_hdac_codec_read", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_conn_list",
+    "callees": ["memcmp", "seq_printf", "snd_hda_get_conn_list", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_proc_caps",
+    "callees": ["seq_printf", "snd_hdac_codec_read", "snd_hdac_codec_write", "snd_hdac_read_parm_uncached"],
+    "global_reads": ["dump_coef"],
+    "global_writes": []
+  },
+  {
+    "name": "print_unsol_cap",
+    "callees": ["seq_printf", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_power_state",
+    "callees": ["seq_printf", "snd_hdac_codec_read", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_digital_conv",
+    "callees": ["seq_printf", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_audio_io",
+    "callees": ["seq_printf", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_vol_knob",
+    "callees": ["seq_printf", "snd_hdac_codec_read", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pin_ctls",
+    "callees": ["seq_printf", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pin_caps",
+    "callees": ["get_jack_location", "seq_printf", "snd_hdac_codec_read", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_jack_location",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pcm_caps",
+    "callees": ["print_pcm_bits", "print_pcm_formats", "print_pcm_rates", "seq_printf", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pcm_formats",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pcm_bits",
+    "callees": ["seq_printf", "snd_print_pcm_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_pcm_rates",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_amp_vals",
+    "callees": ["is_stereo_amps", "seq_printf", "snd_hdac_codec_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_stereo_amps",
+    "callees": ["snd_hdac_get_connections", "snd_hdac_read_parm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_amp_caps",
+    "callees": ["seq_printf", "snd_hdac_read_parm_uncached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_nid_pcms",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

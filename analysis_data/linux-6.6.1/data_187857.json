@@ -1,0 +1,152 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_init",
+    "callees": ["__drm_dev_dbg", "drm_connector_init", "drm_encoder_init", "intel_bios_is_tv_present", "intel_connector_alloc", "intel_connector_attach_encoder", "intel_tv_add_properties", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_add_properties",
+    "callees": ["drm_mode_create_tv_properties_legacy", "drm_object_attach_property"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_atomic_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_get_modes",
+    "callees": ["__drm_dev_dbg", "drm_mode_create", "drm_mode_probed_add", "drm_mode_set_name", "drm_mode_vrefresh", "intel_tv_mode_to_mode", "intel_tv_scale_mode_horiz", "intel_tv_scale_mode_vert", "intel_tv_set_mode_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_set_mode_type",
+    "callees": ["intel_tv_is_preferred_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_detect",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "intel_load_detect_get_pipe", "intel_load_detect_release_pipe", "intel_opregion_headless_sku", "intel_tv_detect_type", "intel_tv_find_better_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_find_better_format",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_pre_enable",
+    "callees": ["assert_transcoder", "set_color_conversion", "set_tv_mode_timings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_color_conversion",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_tv_mode_timings",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_compute_config",
+    "callees": ["__drm_dev_dbg", "drm_mode_set_crtcinfo", "drm_mode_vrefresh", "intel_dpll_crtc_compute_clock", "intel_tv_mode_to_mode", "intel_tv_scale_mode_horiz", "intel_tv_scale_mode_vert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_get_config",
+    "callees": ["__drm_dev_dbg", "drm_mode_vrefresh", "intel_tv_mode_to_mode", "intel_tv_scale_mode_horiz", "intel_tv_scale_mode_vert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_scale_mode_vert",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_scale_mode_horiz",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_mode_to_mode",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_mode_valid",
+    "callees": ["drm_mode_vrefresh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_disable_tv",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_enable_tv",
+    "callees": ["intel_crtc_wait_for_next_vblank", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_get_hw_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tv_connector_duplicate_state",
+    "callees": ["__drm_atomic_helper_connector_duplicate_state", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

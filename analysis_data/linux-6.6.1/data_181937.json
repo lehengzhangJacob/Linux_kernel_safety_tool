@@ -1,0 +1,110 @@
+[
+  {
+    "name": "ethtool_adv_to_mii_adv_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_mii_ioctl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_check_media",
+    "callees": ["mii_link_ok", "mii_nway_result", "netdev_info", "netif_carrier_off", "netif_carrier_ok", "netif_carrier_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_check_link",
+    "callees": ["mii_link_ok", "netif_carrier_off", "netif_carrier_ok", "netif_carrier_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_nway_restart",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_link_ok",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_check_gmii_support",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_ethtool_set_link_ksettings",
+    "callees": ["ethtool_adv_to_mii_adv_t", "ethtool_convert_link_mode_to_legacy_u32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_ethtool_sset",
+    "callees": ["ethtool_adv_to_mii_adv_t"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_ethtool_get_link_ksettings",
+    "callees": ["ethtool_convert_legacy_u32_to_link_mode", "mii_get_an"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_ethtool_gset",
+    "callees": ["mii_get_an"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_get_an",
+    "callees": ["mii_lpa_to_ethtool_lpa_t"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_lpa_to_ethtool_lpa_t",
+    "callees": ["mii_adv_to_ethtool_adv_t"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_adv_to_ethtool_adv_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethtool_adv_to_mii_adv_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mii_nway_result",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

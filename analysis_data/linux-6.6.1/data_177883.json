@@ -1,0 +1,74 @@
+[
+  {
+    "name": "get_compat_sigset",
+    "callees": ["__bad_copy_to", "__builtin_expect", "__builtin_object_size", "_copy_from_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_put_bitmap",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_get_bitmap",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_compat_sigevent",
+    "callees": ["__builtin_expect", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_sched_getaffinity",
+    "callees": ["compat_put_bitmap", "sched_getaffinity"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_sched_getaffinity",
+    "callees": ["__do_compat_sys_sched_getaffinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_sched_setaffinity",
+    "callees": ["compat_get_user_cpu_mask", "sched_setaffinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_sched_setaffinity",
+    "callees": ["__do_compat_sys_sched_setaffinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_get_user_cpu_mask",
+    "callees": ["compat_get_bitmap", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_compat_rusage",
+    "callees": ["_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_sigprocmask",
+    "callees": ["__builtin_expect", "set_current_blocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_sigprocmask",
+    "callees": ["__do_compat_sys_sigprocmask"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

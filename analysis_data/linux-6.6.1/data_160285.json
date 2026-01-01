@@ -1,0 +1,362 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_skcipher",
+    "callees": ["__builtin_expect", "skcipher_walk_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_prepare_alg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_prepare_alg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_skcipher",
+    "callees": ["crypto_register_alg", "skcipher_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_set_needkey.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_set_needkey",
+    "callees": ["skcipher_set_needkey.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_set_needkey.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_alloc_instance_simple",
+    "callees": ["crypto_attr_alg_name", "crypto_check_attr_type", "crypto_drop_spawn", "crypto_grab_spawn", "crypto_inst_setname", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_free_instance_simple",
+    "callees": ["crypto_drop_spawn", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_exit_tfm_simple",
+    "callees": ["crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_init_tfm_simple",
+    "callees": ["__builtin_expect", "crypto_spawn_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_setkey_simple",
+    "callees": ["crypto_cipher_setkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_register_instance",
+    "callees": ["__builtin_expect", "crypto_register_instance", "skcipher_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_skciphers",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_skciphers",
+    "callees": ["crypto_register_skcipher", "crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_unregister_skcipher",
+    "callees": ["crypto_unregister_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_register_skcipher",
+    "callees": ["crypto_register_alg", "skcipher_prepare_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_prepare_alg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_has_skcipher",
+    "callees": ["crypto_type_has_alg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alloc_sync_skcipher",
+    "callees": ["__builtin_expect", "crypto_alloc_tfm_node", "crypto_destroy_tfm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_alloc_skcipher",
+    "callees": ["crypto_alloc_tfm_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_grab_skcipher",
+    "callees": ["crypto_grab_spawn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_free_instance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_init_tfm",
+    "callees": ["skcipher_set_needkey"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_exit_tfm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_decrypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_encrypt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_skcipher_setkey",
+    "callees": ["__builtin_expect", "skcipher_set_needkey", "skcipher_setkey_unaligned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_setkey_unaligned",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_set_needkey",
+    "callees": ["skcipher_set_needkey.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_aead_decrypt",
+    "callees": ["skcipher_walk_aead_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_aead_encrypt",
+    "callees": ["skcipher_walk_aead_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_aead_common",
+    "callees": ["__builtin_expect", "scatterwalk_copychunks", "scatterwalk_done", "skcipher_walk_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_async",
+    "callees": ["skcipher_walk_skcipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_virt",
+    "callees": ["__SCT__might_resched", "skcipher_walk_skcipher"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_skcipher",
+    "callees": ["__builtin_expect", "skcipher_walk_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_first",
+    "callees": ["__builtin_expect", "skcipher_copy_iv", "skcipher_walk_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_next",
+    "callees": ["__builtin_expect", "__get_free_pages", "skcipher_next_copy", "skcipher_next_fast", "skcipher_next_slow", "skcipher_walk_done"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_next_fast",
+    "callees": ["scatterwalk_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_next_copy",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "memcpy", "scatterwalk_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_next_slow",
+    "callees": ["kzalloc", "scatterwalk_copychunks", "skcipher_walk_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_complete",
+    "callees": ["free_pages", "kfree", "memcpy", "scatterwalk_copychunks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_walk_done",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "free_pages", "kfree", "memcpy", "scatterwalk_done", "scatterwalk_map", "skcipher_done_slow", "skcipher_walk_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skcipher_done_slow",
+    "callees": ["scatterwalk_copychunks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

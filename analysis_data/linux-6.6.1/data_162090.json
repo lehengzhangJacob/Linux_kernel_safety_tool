@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_set_dfl_poll_msecs.part.0",
+    "callees": ["disk_flush_events", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_check_media_change.part.0",
+    "callees": ["bdev_mark_dead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_poll_msecs_show.part.0",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_release_events",
+    "callees": ["__builtin_expect", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_del_events",
+    "callees": ["disk_block_events", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_add_events",
+    "callees": ["__disk_unblock_events", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_alloc_events",
+    "callees": ["__mutex_init", "_printk", "init_timer_key", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_set_dfl_poll_msecs",
+    "callees": ["disk_events_set_dfl_poll_msecs.part.0", "param_set_ulong"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_poll_msecs_store",
+    "callees": ["__disk_unblock_events", "disk_block_events", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_poll_msecs_show",
+    "callees": ["disk_events_poll_msecs_show.part.0", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_async_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_show",
+    "callees": ["__disk_events_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__disk_events_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_events_workfn",
+    "callees": ["disk_check_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_force_media_change",
+    "callees": ["bdev_mark_dead", "disk_event_uevent", "inc_diskseq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_check_media_change",
+    "callees": ["disk_check_media_change.part.0", "disk_clear_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_check_events",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "disk_event_uevent", "disk_events_poll_jiffies", "inc_diskseq", "queue_delayed_work_on"],
+    "global_reads": ["system_freezable_power_efficient_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "disk_event_uevent",
+    "callees": ["kobject_uevent_env"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disk_flush_events",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mod_delayed_work_on"],
+    "global_reads": ["system_freezable_power_efficient_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "disk_unblock_events",
+    "callees": ["__disk_unblock_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__disk_unblock_events",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disk_events_poll_jiffies", "queue_delayed_work_on"],
+    "global_reads": ["system_freezable_power_efficient_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "disk_block_events",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cancel_delayed_work_sync", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

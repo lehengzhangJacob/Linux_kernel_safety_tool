@@ -1,0 +1,68 @@
+[
+  {
+    "name": "read_reference_ts_freq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_ns_to_pm_interval",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_ns_to_clock_interval",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_pm_interval_to_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_clock_interval_to_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_clock_frequency",
+    "callees": ["read_clock_frequency"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_clock_frequency",
+    "callees": ["gen11_read_clock_frequency", "gen9_read_clock_frequency"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen9_read_clock_frequency",
+    "callees": ["read_reference_ts_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen11_read_clock_frequency",
+    "callees": ["gen11_get_crystal_clock_freq", "read_reference_ts_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_reference_ts_freq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

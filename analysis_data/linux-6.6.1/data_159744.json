@@ -1,0 +1,998 @@
+[
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bdi_set_min_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": ["bdi_min_ratio"],
+    "global_writes": ["bdi_min_ratio"]
+  },
+  {
+    "name": "__bdi_set_min_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": ["bdi_min_ratio"],
+    "global_writes": ["bdi_min_ratio"]
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_error",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_dirty_limits",
+    "callees": ["__percpu_counter_sum", "__wb_calc_thresh", "wb_stat_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "writeback_set_ratelimit",
+    "callees": ["global_dirty_limits"],
+    "global_reads": [],
+    "global_writes": ["ratelimit_pages"]
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_domain_init",
+    "callees": ["fprop_global_init", "init_timer_key", "memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "folio_index",
+    "callees": ["__page_file_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bdi_set_max_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bdi_set_max_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_error",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_error",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_folio_wait_writeback",
+    "callees": ["__SCT__tp_func_folio_wait_writeback", "cpu_online", "trace_folio_wait_writeback.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_index",
+    "callees": ["__page_file_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages",
+    "callees": ["__SCT__tp_func_balance_dirty_pages", "cpu_online", "trace_balance_dirty_pages.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_dirty_folio.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pos_ratio_polynom",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__wb_writeout_add",
+    "callees": ["wb_domain_writeout_add", "wb_stat_mod"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_use_writeback_tags",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_stat_mod_folio",
+    "callees": ["mod_node_page_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_get_bytes",
+    "callees": ["global_dirty_limits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "filemap_dirty_folio.part.0",
+    "callees": ["__folio_mark_dirty", "__mark_inode_dirty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dirty_poll_interval.part.0",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_dirty_folio.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_wait_stable",
+    "callees": ["folio_wait_writeback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_wait_writeback_killable",
+    "callees": ["folio_mapping", "folio_wait_bit_killable", "trace_folio_wait_writeback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_wait_writeback",
+    "callees": ["folio_mapping", "folio_wait_bit", "trace_folio_wait_writeback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__folio_start_writeback",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "folio_index", "folio_mapping", "inode_to_bdi", "mapping_use_writeback_tags", "mod_lruvec_page_state", "sb_mark_inode_writeback", "wb_stat_mod", "xas_clear_mark", "xas_load", "xas_set_mark", "zone_stat_mod_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__folio_end_writeback",
+    "callees": ["__wb_writeout_add", "__xa_clear_mark", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "folio_index", "folio_mapping", "inode_to_bdi", "mapping_use_writeback_tags", "mod_lruvec_page_state", "node_stat_mod_folio", "sb_clear_inode_writeback", "wb_inode_writeback_end", "wb_stat_mod", "zone_stat_mod_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_inode_writeback_end",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_delayed_work_on"],
+    "global_reads": ["bdi_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "folio_clear_dirty_for_io",
+    "callees": ["folio_mapping", "folio_mark_dirty", "folio_mkclean", "inode_to_bdi", "mod_lruvec_page_state", "wb_stat_mod", "zone_stat_mod_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__folio_cancel_dirty",
+    "callees": ["folio_account_cleaned", "folio_mapping", "inode_to_bdi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_page_dirty_lock",
+    "callees": ["lock_page", "set_page_dirty", "unlock_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_mark_dirty",
+    "callees": ["__builtin_expect", "folio_mapping", "noop_dirty_folio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_redirty_for_writepage",
+    "callees": ["filemap_dirty_folio", "inode_to_bdi", "node_stat_mod_folio", "wb_stat_mod"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "filemap_dirty_folio",
+    "callees": ["filemap_dirty_folio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__folio_mark_dirty",
+    "callees": ["__builtin_expect", "__xa_set_mark", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "folio_account_dirtied", "folio_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_account_cleaned",
+    "callees": ["mod_lruvec_page_state", "wb_stat_mod", "zone_stat_mod_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_account_dirtied",
+    "callees": ["__builtin_constant_p", "__mod_lruvec_page_state", "__node_stat_mod_folio", "__zone_stat_mod_folio", "inode_to_bdi", "trace_writeback_dirty_folio", "wb_stat_mod"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop_dirty_folio",
+    "callees": ["noop_dirty_folio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_writepages",
+    "callees": ["blk_finish_plug", "blk_start_plug", "inode_to_bdi", "reclaim_throttle", "wb_bandwidth_estimate_start", "wb_update_bandwidth", "write_cache_pages"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "writepage_cb",
+    "callees": ["mapping_set_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_cache_pages",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__builtin_unreachable", "__folio_batch_release", "filemap_get_folios_tag", "folio_clear_dirty_for_io", "folio_lock", "folio_unlock", "folio_wait_writeback", "inode_to_bdi", "tag_pages_for_writeback", "trace_wbc_writepage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tag_pages_for_writeback",
+    "callees": ["__SCT__cond_resched", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "xas_find_marked", "xas_next_marked", "xas_pause", "xas_set_mark"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_writeback_init",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__cpuhp_setup_state", "__register_sysctl_init", "wb_domain_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_writeback_cpu_online",
+    "callees": ["writeback_set_ratelimit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "writeback_set_ratelimit",
+    "callees": ["global_dirty_limits"],
+    "global_reads": [],
+    "global_writes": ["ratelimit_pages"]
+  },
+  {
+    "name": "laptop_sync_completion",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "laptop_io_completion",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies", "laptop_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "laptop_mode_timer_fn",
+    "callees": ["wakeup_flusher_threads_bdi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dirty_writeback_centisecs_handler",
+    "callees": ["proc_dointvec", "wakeup_flusher_threads"],
+    "global_reads": ["dirty_writeback_interval"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_over_bg_thresh",
+    "callees": ["__percpu_counter_sum", "domain_dirty_limits", "global_dirtyable_memory", "wb_calc_thresh", "wb_stat_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "balance_dirty_pages_ratelimited",
+    "callees": ["balance_dirty_pages_ratelimited_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "balance_dirty_pages_ratelimited_flags",
+    "callees": ["__builtin_expect", "balance_dirty_pages", "inode_to_bdi"],
+    "global_reads": ["ratelimit_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "balance_dirty_pages",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__wb_update_bandwidth", "dirty_poll_interval.part.0", "domain_dirty_limits", "fatal_signal_pending", "global_dirtyable_memory", "io_schedule_timeout", "trace_balance_dirty_pages", "wb_dirty_limits", "wb_min_pause", "wb_position_ratio", "wb_start_background_writeback", "wb_stat_error"],
+    "global_reads": ["jiffies", "laptop_mode"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_dirty_limits",
+    "callees": ["__percpu_counter_sum", "__wb_calc_thresh", "wb_stat_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_min_pause",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_bandwidth_estimate_start",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_update_bandwidth",
+    "callees": ["__wb_update_bandwidth"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_update_dirty_ratelimit",
+    "callees": ["__builtin_expect", "trace_bdi_dirty_ratelimit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "domain_update_dirty_limit",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "update_dirty_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_update_write_bandwidth",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_position_ratio",
+    "callees": ["__builtin_expect", "pos_ratio_polynom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pos_ratio_polynom",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_calc_thresh",
+    "callees": ["__wb_calc_thresh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__wb_calc_thresh",
+    "callees": ["fprop_fraction_percpu"],
+    "global_reads": ["bdi_min_ratio"],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_strict_limit",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_max_bytes",
+    "callees": ["__bdi_set_max_ratio", "global_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_get_max_bytes",
+    "callees": ["bdi_get_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_min_bytes",
+    "callees": ["__bdi_set_min_ratio", "global_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_get_min_bytes",
+    "callees": ["bdi_get_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_max_ratio",
+    "callees": ["__bdi_set_max_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_min_ratio",
+    "callees": ["__bdi_set_min_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_max_ratio_no_scale",
+    "callees": ["__bdi_set_max_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdi_set_min_ratio_no_scale",
+    "callees": ["__bdi_set_min_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bdi_set_max_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bdi_set_min_ratio",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": ["bdi_min_ratio"],
+    "global_writes": ["bdi_min_ratio"]
+  },
+  {
+    "name": "bdi_get_bytes",
+    "callees": ["global_dirty_limits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_domain_init",
+    "callees": ["fprop_global_init", "init_timer_key", "memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "writeout_period",
+    "callees": ["fprop_new_period", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_writeout_inc",
+    "callees": ["__wb_writeout_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__wb_writeout_add",
+    "callees": ["wb_domain_writeout_add", "wb_stat_mod"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dirty_bytes_handler",
+    "callees": ["proc_doulongvec_minmax", "writeback_set_ratelimit"],
+    "global_reads": ["vm_dirty_bytes"],
+    "global_writes": ["vm_dirty_ratio"]
+  },
+  {
+    "name": "dirty_ratio_handler",
+    "callees": ["proc_dointvec_minmax", "writeback_set_ratelimit"],
+    "global_reads": ["vm_dirty_ratio"],
+    "global_writes": ["vm_dirty_bytes"]
+  },
+  {
+    "name": "dirty_background_bytes_handler",
+    "callees": ["proc_doulongvec_minmax"],
+    "global_reads": [],
+    "global_writes": ["dirty_background_ratio"]
+  },
+  {
+    "name": "dirty_background_ratio_handler",
+    "callees": ["proc_dointvec_minmax"],
+    "global_reads": [],
+    "global_writes": ["dirty_background_bytes"]
+  },
+  {
+    "name": "node_dirty_ok",
+    "callees": ["node_dirty_limit", "node_page_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_dirty_limit",
+    "callees": ["__builtin_expect", "global_dirtyable_memory", "node_dirtyable_memory"],
+    "global_reads": ["vm_dirty_bytes", "vm_dirty_ratio"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirty_limits",
+    "callees": ["domain_dirty_limits", "global_dirtyable_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "domain_dirty_limits",
+    "callees": ["__builtin_expect", "trace_global_dirty_state"],
+    "global_reads": ["dirty_background_bytes", "dirty_background_ratio", "vm_dirty_bytes", "vm_dirty_ratio"],
+    "global_writes": []
+  },
+  {
+    "name": "global_dirtyable_memory",
+    "callees": [],
+    "global_reads": ["totalreserve_pages"],
+    "global_writes": []
+  },
+  {
+    "name": "node_dirtyable_memory",
+    "callees": ["node_page_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_balance_dirty_pages",
+    "callees": ["__SCT__tp_func_balance_dirty_pages", "cpu_online", "trace_balance_dirty_pages.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_bdi_dirty_ratelimit",
+    "callees": ["__SCT__tp_func_bdi_dirty_ratelimit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_global_dirty_state",
+    "callees": ["__SCT__tp_func_global_dirty_state", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_wbc_writepage",
+    "callees": ["__SCT__tp_func_wbc_writepage", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_folio_wait_writeback",
+    "callees": ["__SCT__tp_func_folio_wait_writeback", "cpu_online", "trace_folio_wait_writeback.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_writeback_dirty_folio",
+    "callees": ["__SCT__tp_func_writeback_dirty_folio", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_error",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "wb_stat_mod",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "lock_page",
+    "callees": ["__SCT__might_resched", "__folio_lock", "_compound_head", "folio_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_lock",
+    "callees": ["__SCT__might_resched", "__folio_lock", "folio_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_index",
+    "callees": ["__page_file_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_use_writeback_tags",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mapping_set_error",
+    "callees": ["__builtin_expect", "__filemap_set_wb_err", "errseq_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_stat_mod_folio",
+    "callees": ["mod_node_page_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

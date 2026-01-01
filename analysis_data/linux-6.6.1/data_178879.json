@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_create",
+    "callees": ["drm_gem_create_mmap_offset", "drm_gem_private_object_init", "kfree", "kzalloc", "virtio_gpu_cmd_resource_create_blob", "virtio_gpu_resource_id_get", "virtio_gpu_vram_free", "virtio_gpu_vram_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_map",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "drm_mm_insert_node", "drm_mm_remove_node", "virtio_gpu_array_add_obj", "virtio_gpu_array_alloc", "virtio_gpu_array_put_free", "virtio_gpu_cmd_map"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_is_vram",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_unmap_dma_buf",
+    "callees": ["dma_unmap_resource", "kfree", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_map_dma_buf",
+    "callees": ["__builtin_expect", "dma_map_resource", "is_virtio_device", "kfree", "kzalloc", "sg_alloc_table", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_mmap",
+    "callees": ["__SCT__might_resched", "cachemode2protval", "finish_wait", "init_wait_entry", "pgprot_writecombine", "prepare_to_wait_event", "remap_pfn_range", "schedule", "vm_get_page_prot", "vma_start_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_gpu_vram_free",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock", "_raw_spin_unlock", "virtio_gpu_cmd_unmap", "virtio_gpu_cmd_unref_resource", "virtio_gpu_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_insert_node",
+    "callees": ["drm_mm_insert_node_in_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_start_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

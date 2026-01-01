@@ -1,0 +1,80 @@
+[
+  {
+    "name": "devm_aperture_acquire_release.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_aperture_acquire_release",
+    "callees": ["devm_aperture_acquire_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__aperture_remove_legacy_vga_devices",
+    "callees": ["aperture_detach_devices", "vga_remove_vgacon"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_aperture_acquire_release.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aperture_remove_conflicting_pci_devices",
+    "callees": ["__aperture_remove_legacy_vga_devices", "aperture_detach_devices", "vga_default_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__aperture_remove_legacy_vga_devices",
+    "callees": ["aperture_detach_devices", "vga_remove_vgacon"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aperture_remove_conflicting_devices",
+    "callees": ["aperture_detach_devices"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aperture_detach_devices",
+    "callees": ["__builtin_expect", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_aperture_acquire_for_platform_device",
+    "callees": ["devm_aperture_acquire"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "aperture_detach_platform_device",
+    "callees": ["platform_device_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_aperture_acquire_release",
+    "callees": ["devm_aperture_acquire_release.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

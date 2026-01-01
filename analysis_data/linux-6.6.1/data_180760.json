@@ -1,0 +1,68 @@
+[
+  {
+    "name": "cubictcp_unregister",
+    "callees": ["tcp_unregister_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_register",
+    "callees": ["tcp_register_congestion_control"],
+    "global_reads": ["beta", "bic_scale"],
+    "global_writes": ["beta_scale", "cube_factor", "cube_rtt_scale"]
+  },
+  {
+    "name": "cubictcp_acked",
+    "callees": ["hystart_update"],
+    "global_reads": ["hystart", "hystart_low_window", "jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "hystart_update",
+    "callees": [],
+    "global_reads": ["hystart_ack_delta_us", "hystart_detect"],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_state",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_recalc_ssthresh",
+    "callees": [],
+    "global_reads": ["beta", "fast_convergence"],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_cong_avoid",
+    "callees": ["bictcp_update", "tcp_cong_avoid_ai", "tcp_slow_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bictcp_update",
+    "callees": ["__builtin_constant_p", "__usecs_to_jiffies", "cubic_root", "jiffies_to_usecs"],
+    "global_reads": ["beta_scale", "cube_factor", "cube_rtt_scale", "jiffies", "tcp_friendliness"],
+    "global_writes": []
+  },
+  {
+    "name": "cubic_root",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_cwnd_event",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "cubictcp_init",
+    "callees": ["memset"],
+    "global_reads": ["hystart", "initial_ssthresh"],
+    "global_writes": []
+  }
+]

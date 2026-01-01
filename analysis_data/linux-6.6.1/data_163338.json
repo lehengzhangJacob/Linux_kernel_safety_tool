@@ -1,0 +1,518 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boot_vga_show.part.0",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_show.part.0",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_dev_attrs_are_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_bridge_attrs_are_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_hp_attrs_are_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_attrs_are_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_sysfs_init",
+    "callees": ["pci_create_resource_files", "pci_dev_put", "pci_find_next_bus", "pci_get_device"],
+    "global_reads": ["sysfs_initialized"],
+    "global_writes": ["sysfs_initialized"]
+  },
+  {
+    "name": "pci_remove_sysfs_dev_files",
+    "callees": ["pci_remove_resource_files"],
+    "global_reads": ["sysfs_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_create_sysfs_dev_files",
+    "callees": ["pci_create_resource_files"],
+    "global_reads": ["sysfs_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "resource_resize_is_visible",
+    "callees": ["pci_rebar_get_current_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource5_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource5_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource4_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource4_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource3_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource3_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource2_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource2_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource1_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource1_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource0_resize_store",
+    "callees": ["_dev_warn", "aperture_remove_conflicting_pci_devices", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_assign_unassigned_bus_resources", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_create_resource_files", "pci_read_config_word", "pci_release_resource", "pci_remove_resource_files", "pci_resize_resource", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource0_resize_show",
+    "callees": ["pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_rebar_get_possible_sizes", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_reset_attr_is_visible",
+    "callees": ["pci_reset_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_store",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "kstrtoull", "pci_reset_function"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_rom_attr_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_read_rom",
+    "callees": ["memcpy_fromio", "pci_map_rom", "pci_unmap_rom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_write_rom",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_create_resource_files",
+    "callees": ["pat_enabled", "pci_create_attr", "pci_remove_resource_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_create_attr",
+    "callees": ["kfree", "kzalloc", "sprintf", "sysfs_create_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_remove_resource_files",
+    "callees": ["kfree", "sysfs_remove_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_write_resource_io",
+    "callees": ["pci_write_resource_io.part.0", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_read_resource_io",
+    "callees": ["pci_resource_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmap_resource_wc",
+    "callees": ["pci_mmap_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmap_resource_uc",
+    "callees": ["pci_mmap_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_mmap_fits",
+    "callees": ["pci_resource_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_config_attr_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_write_config",
+    "callees": ["_dev_warn", "add_taint", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_user_write_config_byte", "pci_user_write_config_dword", "pci_user_write_config_word", "resource_is_exclusive", "security_locked_down"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "pci_read_config",
+    "callees": ["__SCT__cond_resched", "file_ns_capable", "pci_config_pm_runtime_get", "pci_config_pm_runtime_put", "pci_user_read_config_byte", "pci_user_read_config_dword", "pci_user_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boot_vga_show",
+    "callees": ["boot_vga_show.part.0", "sysfs_emit", "vga_default_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_override_show",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_override_store",
+    "callees": ["driver_set_override"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "d3cold_allowed_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "d3cold_allowed_store",
+    "callees": ["__pm_runtime_resume", "kstrtoull", "pci_d3cold_disable", "pci_d3cold_enable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bus_rescan_store",
+    "callees": ["kstrtoull", "pci_lock_rescan_remove", "pci_rescan_bus", "pci_rescan_bus_bridge_resize", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_store",
+    "callees": ["device_remove_file_self", "kstrtoull", "pci_stop_and_remove_bus_device_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_rescan_store",
+    "callees": ["kstrtoull", "pci_lock_rescan_remove", "pci_rescan_bus", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rescan_store",
+    "callees": ["kstrtoull", "pci_find_next_bus", "pci_lock_rescan_remove", "pci_rescan_bus", "pci_unlock_rescan_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msi_bus_store",
+    "callees": ["_dev_info", "capable", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msi_bus_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "consistent_dma_mask_bits_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_mask_bits_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_node_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_node_store",
+    "callees": ["_dev_alert", "add_taint", "capable", "kstrtoint", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_store",
+    "callees": ["capable", "kstrtoull", "mutex_lock", "mutex_unlock", "pci_disable_device", "pci_enable_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "modalias_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ari_enabled_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subordinate_bus_number_show",
+    "callees": ["pci_read_config_byte", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "secondary_bus_number_show",
+    "callees": ["pci_read_config_byte", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_link_width_show",
+    "callees": ["pcie_capability_read_word", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_link_speed_show",
+    "callees": ["pci_speed_string", "pcie_capability_read_word", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_link_width_show",
+    "callees": ["pcie_get_width_cap", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_link_speed_show",
+    "callees": ["pci_speed_string", "pcie_get_speed_cap", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource_show",
+    "callees": ["pci_resource_to_user", "sysfs_emit_at"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_state_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpulistaffinity_show",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cpuaffinity_show",
+    "callees": ["bitmap_print_to_pagebuf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "local_cpulist_show",
+    "callees": ["pci_dev_show_local_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "local_cpus_show",
+    "callees": ["pci_dev_show_local_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "broken_parity_status_store",
+    "callees": ["kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "broken_parity_status_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_show",
+    "callees": ["irq_show.part.0", "pci_irq_vector", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "revision_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subsystem_device_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subsystem_vendor_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vendor_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

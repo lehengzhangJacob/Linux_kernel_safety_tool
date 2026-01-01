@@ -1,0 +1,602 @@
+[
+  {
+    "name": "check_rlimit.part.0",
+    "callees": ["_printk", "send_signal_locked"],
+    "global_reads": ["print_fatal_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "check_rlimit.part.0",
+    "callees": ["_printk", "send_signal_locked"],
+    "global_reads": ["print_fatal_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "check_rlimit.part.0",
+    "callees": ["_printk", "send_signal_locked"],
+    "global_reads": ["print_fatal_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clock_sample",
+    "callees": ["task_sched_runtime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clock_sample",
+    "callees": ["task_sched_runtime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__update_gt_cputime",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__update_gt_cputime",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clock_sample",
+    "callees": ["task_sched_runtime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_nsleep",
+    "callees": ["__task_pid_nr_ns", "do_cpu_nanosleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_for_clock",
+    "callees": ["find_vpid", "pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_clock_permissions",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "pid_for_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres",
+    "callees": ["posix_cpu_clock_getres.part.0", "validate_clock_permissions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_for_clock",
+    "callees": ["find_vpid", "pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_clock_permissions",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "pid_for_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres",
+    "callees": ["posix_cpu_clock_getres.part.0", "validate_clock_permissions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_posix_cputimers_work",
+    "callees": ["__mutex_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_process_cpu_timer",
+    "callees": ["__builtin_expect", "cpu_clock_sample_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timers",
+    "callees": ["cleanup_timerqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_clock_permissions",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "pid_for_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_timer_fire.part.0",
+    "callees": ["posix_cpu_timer_rearm", "posix_timer_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_rlimit.part.0",
+    "callees": ["_printk", "send_signal_locked"],
+    "global_reads": ["print_fatal_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "thread_cpu_timer_create",
+    "callees": ["posix_cpu_timer_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thread_cpu_clock_get",
+    "callees": ["posix_cpu_clock_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thread_cpu_clock_getres",
+    "callees": ["posix_cpu_clock_getres"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_cpu_nsleep",
+    "callees": ["posix_cpu_nsleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_cpu_timer_create",
+    "callees": ["posix_cpu_timer_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_cpu_clock_get",
+    "callees": ["posix_cpu_clock_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_cpu_clock_getres",
+    "callees": ["posix_cpu_clock_getres"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_nsleep_restart",
+    "callees": ["do_cpu_nanosleep", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_nsleep",
+    "callees": ["__task_pid_nr_ns", "do_cpu_nanosleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_cpu_nanosleep",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "memset", "nanosleep_copyout", "posix_cpu_timer_create", "posix_cpu_timer_del", "posix_cpu_timer_set", "posix_cpu_timer_wait_running_nsleep", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_process_cpu_timer",
+    "callees": ["__builtin_expect", "cpu_clock_sample_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "run_posix_cpu_timers",
+    "callees": ["__run_posix_cpu_timers", "fastpath_timer_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_posix_cpu_timers",
+    "callees": ["__builtin_expect", "__lock_task_sighand", "_raw_spin_lock", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "check_process_timers", "check_thread_timers", "cpu_timer_fire"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__run_posix_cpu_timers",
+    "callees": ["__builtin_expect", "task_work_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cputimers_init_work",
+    "callees": ["clear_posix_cputimers_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_posix_cputimers_work",
+    "callees": ["__mutex_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_wait_running_nsleep",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "posix_cpu_timer_wait_running"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_wait_running",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "mutex_lock", "mutex_unlock", "put_task_struct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timers_work",
+    "callees": ["handle_posix_cpu_timers", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fastpath_timer_check",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_rearm",
+    "callees": ["__builtin_expect", "__lock_task_sighand", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_unlock_irqrestore", "arm_timer", "bump_cpu_timer", "cpu_clock_sample", "cpu_clock_sample_group", "cpu_timer_task_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_process_timers",
+    "callees": ["check_cpu_itimer", "check_rlimit.part.0", "collect_posix_cputimers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_cpu_itimer",
+    "callees": ["send_signal_locked", "trace_itimer_expire"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_thread_timers",
+    "callees": ["__builtin_expect", "check_dl_overrun", "check_rlimit.part.0", "collect_posix_cputimers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_dl_overrun",
+    "callees": ["send_signal_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "collect_posix_cputimers",
+    "callees": ["collect_timerqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "collect_timerqueue",
+    "callees": ["cpu_timer_dequeue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_get",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cpu_clock_sample", "cpu_clock_sample_group", "cpu_timer_task_rcu", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_set",
+    "callees": ["__builtin_expect", "__lock_task_sighand", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_unlock_irqrestore", "arm_timer", "bump_cpu_timer", "cpu_clock_sample", "cpu_clock_sample_group", "cpu_timer_dequeue", "cpu_timer_fire", "cpu_timer_task_rcu", "ns_to_timespec64", "trigger_base_recalc_expires"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_timer_fire",
+    "callees": ["__builtin_expect", "cpu_timer_fire.part.0", "posix_timer_event", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arm_timer",
+    "callees": ["timerqueue_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timers_exit_group",
+    "callees": ["cleanup_timers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timers_exit",
+    "callees": ["cleanup_timers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timers",
+    "callees": ["cleanup_timerqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_timerqueue",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_del",
+    "callees": ["__builtin_expect", "__lock_task_sighand", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_unlock_irqrestore", "cpu_timer_task_rcu", "disarm_timer", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disarm_timer",
+    "callees": ["timerqueue_del", "trigger_base_recalc_expires"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_timer_create",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "pid_for_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_get",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cpu_clock_sample", "cpu_clock_sample_group", "ns_to_timespec64", "pid_for_clock", "pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clock_sample_group",
+    "callees": ["__thread_group_cputime", "thread_group_start_cputime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__thread_group_cputime",
+    "callees": ["thread_group_cputime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thread_group_start_cputime",
+    "callees": ["thread_group_cputime", "update_gt_cputime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "thread_group_sample_cputime",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_gt_cputime",
+    "callees": ["__update_gt_cputime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__update_gt_cputime",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_clock_sample",
+    "callees": ["task_sched_runtime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_set",
+    "callees": ["validate_clock_permissions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cpu_clock_getres",
+    "callees": ["posix_cpu_clock_getres.part.0", "validate_clock_permissions"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bump_cpu_timer",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_clock_permissions",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "pid_for_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pid_for_clock",
+    "callees": ["find_vpid", "pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_rlimit_cpu",
+    "callees": ["__lock_task_sighand", "_raw_spin_unlock_irqrestore", "set_process_cpu_timer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cputimers_group_init",
+    "callees": ["posix_cputimers_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_itimer_expire",
+    "callees": ["__SCT__tp_func_itimer_expire", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "posix_cputimers_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

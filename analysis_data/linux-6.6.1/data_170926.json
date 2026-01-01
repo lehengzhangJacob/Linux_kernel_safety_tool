@@ -1,0 +1,26 @@
+[
+  {
+    "name": "acpi_ex_get_name_string",
+    "callees": ["acpi_error", "acpi_ex_allocate_name_string", "acpi_ex_name_segment", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_name_segment",
+    "callees": ["acpi_error", "acpi_ut_valid_name_char", "strcat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_allocate_name_string",
+    "callees": ["acpi_error", "acpi_os_allocate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

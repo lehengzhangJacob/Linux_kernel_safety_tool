@@ -1,0 +1,230 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_nat_helper_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_ext_add",
+    "callees": ["nf_ct_ext_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_nat_helper_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helpers_unregister",
+    "callees": ["nf_conntrack_helper_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helper_fini",
+    "callees": ["kvfree"],
+    "global_reads": ["nf_ct_helper_hash"],
+    "global_writes": ["nf_ct_helper_hash"]
+  },
+  {
+    "name": "nf_conntrack_helper_init",
+    "callees": ["nf_ct_alloc_hashtable"],
+    "global_reads": [],
+    "global_writes": ["nf_ct_helper_hash", "nf_ct_helper_hsize"]
+  },
+  {
+    "name": "nf_nat_helper_unregister",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_helper_register",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helpers_unregister",
+    "callees": ["nf_conntrack_helper_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helpers_register",
+    "callees": ["nf_conntrack_helper_register", "nf_conntrack_helpers_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_init",
+    "callees": ["__builtin_bswap16", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helper_unregister",
+    "callees": ["mutex_lock", "mutex_unlock", "nf_ct_expect_iterate_destroy", "nf_ct_iterate_destroy", "synchronize_rcu"],
+    "global_reads": ["nf_ct_helper_count"],
+    "global_writes": ["nf_ct_helper_count"]
+  },
+  {
+    "name": "expect_iter_me",
+    "callees": ["nf_ct_ext_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helper_register",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mutex_lock", "mutex_unlock", "nf_ct_tuple_src_mask_cmp", "strcmp", "strlen"],
+    "global_reads": ["nf_ct_helper_count", "nf_ct_helper_hash", "nf_ct_helper_hsize"],
+    "global_writes": ["nf_ct_helper_count"]
+  },
+  {
+    "name": "nf_ct_helper_log",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "nf_ct_ext_find", "nf_log_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_expectfn_find_by_symbol",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_expectfn_find_by_name",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_expectfn_unregister",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_expectfn_register",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_destroy",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "nf_ct_ext_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unhelp",
+    "callees": ["nf_ct_ext_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_ct_try_assign_helper",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "nf_ct_ext_find", "nf_ct_helper_ext_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_helper_ext_add",
+    "callees": ["nf_ct_ext_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_helper_put",
+    "callees": ["__builtin_expect", "module_put", "nf_conntrack_nat_helper_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_nat_helper_try_module_get",
+    "callees": ["__nf_conntrack_helper_find", "__rcu_read_lock", "__rcu_read_unlock", "__request_module", "nf_conntrack_nat_helper_find", "snprintf", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_nat_helper_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helper_put",
+    "callees": ["__refcount_dec", "module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_helper_try_module_get",
+    "callees": ["__nf_conntrack_helper_find", "__rcu_read_lock", "__rcu_read_unlock", "__refcount_add_not_zero", "__request_module", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nf_conntrack_helper_find",
+    "callees": ["strcmp"],
+    "global_reads": ["nf_ct_helper_hash", "nf_ct_helper_hsize"],
+    "global_writes": []
+  }
+]

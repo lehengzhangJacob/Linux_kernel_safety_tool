@@ -1,0 +1,248 @@
+[
+  {
+    "name": "remap_verify_area",
+    "callees": ["__builtin_expect", "security_file_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remap_verify_area",
+    "callees": ["__builtin_expect", "security_file_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remap_verify_area",
+    "callees": ["__builtin_expect", "security_file_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remap_verify_area",
+    "callees": ["__builtin_expect", "security_file_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_real_path",
+    "callees": ["__builtin_expect", "backing_file_real_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_lock",
+    "callees": ["__SCT__might_resched", "__folio_lock", "folio_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dedupe_get_folio",
+    "callees": ["read_cache_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dedupe_file_range_one.part.0",
+    "callees": ["allow_file_dedupe", "mnt_drop_write_file", "remap_verify_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dedupe_file_range",
+    "callees": ["__fdget", "fatal_signal_pending", "fput", "remap_verify_area", "vfs_dedupe_file_range_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dedupe_file_range_one",
+    "callees": ["__builtin_expect", "mnt_want_write_file", "vfs_dedupe_file_range_one.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "allow_file_dedupe",
+    "callees": ["capable", "inode_permission", "make_vfsuid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_clone_file_range",
+    "callees": ["do_clone_file_range", "file_end_write", "file_start_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_clone_file_range",
+    "callees": ["__builtin_expect", "fsnotify_file", "generic_file_rw_checks", "remap_verify_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "generic_remap_file_range_prep",
+    "callees": ["__generic_remap_file_range_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__generic_remap_file_range_prep",
+    "callees": ["file_modified", "filemap_write_and_wait_range", "generic_remap_check_len", "generic_remap_checks", "inode_dio_wait", "vfs_dedupe_file_range_compare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_unlock_two_folios",
+    "callees": ["folio_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_lock_two_folios",
+    "callees": ["folio_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vfs_dedupe_get_folio",
+    "callees": ["read_cache_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remap_verify_area",
+    "callees": ["__builtin_expect", "security_file_permission"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_lock",
+    "callees": ["__SCT__might_resched", "__folio_lock", "folio_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_real_path",
+    "callees": ["__builtin_expect", "backing_file_real_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_up_read",
+    "callees": ["__builtin_expect", "rcuwait_wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_down_read",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__percpu_down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

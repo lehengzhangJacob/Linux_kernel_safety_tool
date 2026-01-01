@@ -1,0 +1,32 @@
+[
+  {
+    "name": "iomap_swapfile_activate",
+    "callees": ["_printk", "iomap_iter", "iomap_swapfile_add_extent", "iomap_swapfile_iter", "vfs_fsync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_swapfile_iter",
+    "callees": ["iomap_length", "iomap_swapfile_add_extent", "iomap_swapfile_fail", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_swapfile_fail",
+    "callees": ["__builtin_expect", "__builtin_return_address", "_printk", "file_path", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_swapfile_add_extent",
+    "callees": ["__builtin_expect", "add_swap_extent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iomap_length",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

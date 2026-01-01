@@ -1,0 +1,20 @@
+[
+  {
+    "name": "acpi_ut_subsystem_shutdown",
+    "callees": ["acpi_error", "acpi_ev_terminate", "acpi_ns_terminate", "acpi_tb_terminate", "acpi_ut_delete_address_lists", "acpi_ut_delete_caches", "acpi_ut_free_gpe_lists", "acpi_ut_interface_terminate"],
+    "global_reads": ["acpi_gbl_shutdown"],
+    "global_writes": ["acpi_gbl_shutdown", "acpi_gbl_startup_flags"]
+  },
+  {
+    "name": "acpi_ut_init_globals",
+    "callees": ["acpi_ut_create_caches"],
+    "global_reads": [],
+    "global_writes": ["acpi_current_gpe_count", "acpi_gbl_DSDT", "acpi_gbl_acpi_hardware_present", "acpi_gbl_all_gpes_initialized", "acpi_gbl_cm_single_step", "acpi_gbl_debugger_configuration", "acpi_gbl_events_initialized", "acpi_gbl_exception_handler", "acpi_gbl_global_event_handler", "acpi_gbl_global_lock_acquired", "acpi_gbl_global_lock_handle", "acpi_gbl_global_lock_mutex", "acpi_gbl_global_lock_present", "acpi_gbl_global_lock_semaphore", "acpi_gbl_gpe_xrupt_list_head", "acpi_gbl_init_handler", "acpi_gbl_interface_handler", "acpi_gbl_last_owner_id_index", "acpi_gbl_next_owner_id_offset", "acpi_gbl_ns_lookup_count", "acpi_gbl_osi_mutex", "acpi_gbl_ps_find_count", "acpi_gbl_root_node", "acpi_gbl_sci_handler_list", "acpi_gbl_shutdown", "acpi_gbl_system_awake_and_running", "acpi_gbl_table_handler", "acpi_gpe_count", "acpi_method_count", "acpi_sci_count"]
+  },
+  {
+    "name": "acpi_ut_free_gpe_lists",
+    "callees": ["kfree"],
+    "global_reads": ["acpi_gbl_gpe_xrupt_list_head"],
+    "global_writes": []
+  }
+]

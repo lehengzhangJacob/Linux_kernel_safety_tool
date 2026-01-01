@@ -1,0 +1,86 @@
+[
+  {
+    "name": "autofs_free_ino.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_free_ino.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_get_inode",
+    "callees": ["get_next_ino", "inode_set_ctime_current", "new_inode", "set_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_fill_super",
+    "callees": ["__mutex_init", "_printk", "autofs_free_ino.part.0", "autofs_get_inode", "autofs_new_ino", "autofs_prepare_pipe", "d_make_root", "dput", "fget", "find_get_pid", "fput", "get_task_pid", "kfree", "kzalloc", "parse_options", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_evict_inode",
+    "callees": ["clear_inode", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_show_options",
+    "callees": ["pid_vnr", "seq_printf", "seq_puts"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_kill_sb",
+    "callees": ["autofs_catatonic_mode", "kill_litter_super", "kvfree_call_rcu", "put_pid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_free_ino",
+    "callees": ["autofs_free_ino.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_clean_ino",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_new_ino",
+    "callees": ["kzalloc"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "autofs_prepare_pipe",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

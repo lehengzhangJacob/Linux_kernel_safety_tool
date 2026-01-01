@@ -1,0 +1,68 @@
+[
+  {
+    "name": "intel_gt_debugfs_register_files",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_debugfs_reset_show",
+    "callees": ["intel_gt_terminally_wedged"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_debugfs_register_files",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_debugfs_register",
+    "callees": ["__builtin_expect", "debugfs_create_dir", "intel_gt_debugfs_register_files", "intel_gt_engines_debugfs_register", "intel_gt_pm_debugfs_register", "intel_sseu_debugfs_register", "intel_uc_debugfs_register", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "steering_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "steering_show",
+    "callees": ["intel_gt_mcr_report_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_fops_open",
+    "callees": ["simple_attr_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_gt_debugfs_reset_store",
+    "callees": ["intel_gt_debugfs_reset_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_gt_debugfs_reset_show",
+    "callees": ["intel_gt_debugfs_reset_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_debugfs_reset_store",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "finish_wait", "init_wait_entry", "intel_gt_handle_error", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_debugfs_reset_show",
+    "callees": ["intel_gt_terminally_wedged"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_proxy_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_proxy_init",
+    "callees": ["__mutex_init", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_proxy_fini",
+    "callees": ["component_del", "proxy_channel_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proxy_channel_free",
+    "callees": ["i915_vma_unpin_and_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gsc_proxy_component_unbind",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_uncore_rmw", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gsc_proxy_component_bind",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_uncore_rmw", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_proxy_irq_handler",
+    "callees": ["__builtin_expect", "_dev_err", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_proxy_request_handler",
+    "callees": ["__SCT__might_resched", "__assert_rpm_wakelock_held", "_dev_err", "intel_uncore_rmw", "ktime_get_raw", "mutex_lock", "mutex_unlock", "proxy_query", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proxy_query",
+    "callees": ["_dev_err", "intel_gsc_uc_heci_cmd_emit_mtl_header", "memset", "proxy_send_to_csme", "proxy_send_to_gsc", "validate_proxy_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_proxy_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proxy_send_to_gsc",
+    "callees": ["__SCT__might_resched", "_dev_err", "intel_gsc_uc_heci_cmd_submit_packet", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proxy_send_to_csme",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

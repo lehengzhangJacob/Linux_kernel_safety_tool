@@ -1,0 +1,260 @@
+[
+  {
+    "name": "free_init_pages",
+    "callees": ["__builtin_expect", "free_reserved_area", "set_memory_nx", "set_memory_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_mr",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_mr",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_mr",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "save_mr",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_set_bits",
+    "callees": ["cr4_update_irqsoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_set_bits",
+    "callees": ["cr4_update_irqsoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_set_bits_and_update_boot",
+    "callees": ["cr4_set_bits"],
+    "global_reads": ["mmu_cr4_features", "trampoline_cr4_features"],
+    "global_writes": ["mmu_cr4_features"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_max_swapfile_size",
+    "callees": ["generic_max_swapfile_size"],
+    "global_reads": ["l1tf_mitigation"],
+    "global_writes": []
+  },
+  {
+    "name": "update_cache_mode_entry",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_sizes_init",
+    "callees": ["free_area_init", "memset"],
+    "global_reads": ["max_low_pfn"],
+    "global_writes": []
+  },
+  {
+    "name": "memblock_find_dma_reserve",
+    "callees": ["__next_mem_pfn_range", "__next_mem_range", "set_dma_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_initrd_mem",
+    "callees": ["free_init_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_initmem",
+    "callees": ["e820__reallocate_tables", "free_kernel_image_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_kernel_image_pages",
+    "callees": ["free_init_pages", "set_memory_np_noalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_init_pages",
+    "callees": ["__builtin_expect", "free_reserved_area", "set_memory_nx", "set_memory_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devmem_is_allowed",
+    "callees": ["iomem_is_exclusive", "region_intersects"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_mem_mapping",
+    "callees": ["__flush_tlb_all", "init_memory_mapping", "init_trampoline", "memory_map_bottom_up", "memory_map_top_down", "probe_page_size_mask", "pti_check_boottime_disable", "setup_pcid"],
+    "global_reads": ["__default_kernel_pte_mask", "max_low_pfn", "max_pfn", "page_offset_base", "phys_base"],
+    "global_writes": ["max_low_pfn"]
+  },
+  {
+    "name": "init_trampoline",
+    "callees": ["init_trampoline_kaslr"],
+    "global_reads": ["page_offset_base", "pgdir_shift"],
+    "global_writes": ["trampoline_pgd_entry"]
+  },
+  {
+    "name": "memory_map_bottom_up",
+    "callees": ["init_range_memory_mapping"],
+    "global_reads": [],
+    "global_writes": ["min_pfn_mapped"]
+  },
+  {
+    "name": "init_range_memory_mapping",
+    "callees": ["__next_mem_pfn_range", "init_memory_mapping"],
+    "global_reads": ["__default_kernel_pte_mask", "pgt_buf_end", "pgt_buf_top"],
+    "global_writes": ["can_use_brk_pgt"]
+  },
+  {
+    "name": "init_memory_mapping",
+    "callees": ["add_pfn_range_mapped", "kernel_physical_mapping_init", "memset", "split_mem_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_range_is_mapped",
+    "callees": [],
+    "global_reads": ["nr_pfn_mapped"],
+    "global_writes": []
+  },
+  {
+    "name": "add_pfn_range_mapped",
+    "callees": ["add_range_with_merge", "clean_sort_range"],
+    "global_reads": ["max_low_pfn_mapped", "max_pfn_mapped", "nr_pfn_mapped"],
+    "global_writes": ["max_low_pfn_mapped", "max_pfn_mapped", "nr_pfn_mapped"]
+  },
+  {
+    "name": "adjust_range_page_size_mask",
+    "callees": ["memblock_is_region_memory"],
+    "global_reads": ["page_size_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "save_mr",
+    "callees": ["panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_pcid",
+    "callees": ["_printk", "cr4_set_bits", "setup_clear_cpu_cap", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "probe_page_size_mask",
+    "callees": ["_printk", "cr4_set_bits_and_update_boot"],
+    "global_reads": ["__supported_pte_mask", "direct_gbpages", "page_size_mask"],
+    "global_writes": ["__default_kernel_pte_mask", "__supported_pte_mask", "direct_gbpages", "page_size_mask"]
+  },
+  {
+    "name": "cr4_set_bits_and_update_boot",
+    "callees": ["cr4_set_bits"],
+    "global_reads": ["mmu_cr4_features", "trampoline_cr4_features"],
+    "global_writes": ["mmu_cr4_features"]
+  },
+  {
+    "name": "parse_direct_gbpages_off",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["direct_gbpages"]
+  },
+  {
+    "name": "parse_direct_gbpages_on",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["direct_gbpages"]
+  },
+  {
+    "name": "early_alloc_pgt_buf",
+    "callees": ["extend_brk"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": ["pgt_buf_end", "pgt_buf_start", "pgt_buf_top"]
+  },
+  {
+    "name": "alloc_low_pages",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__get_free_pages", "extend_brk", "memblock_phys_alloc_range", "panic"],
+    "global_reads": ["after_bootmem", "can_use_brk_pgt", "max_pfn_mapped", "min_pfn_mapped", "page_offset_base", "pgt_buf_end", "pgt_buf_top", "phys_base"],
+    "global_writes": ["pgt_buf_end"]
+  },
+  {
+    "name": "pgprot2cachemode",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_has_pat_wp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cachemode2protval",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cr4_set_bits",
+    "callees": ["cr4_update_irqsoff"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poking_init",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__get_locked_pte", "__rcu_read_unlock", "_raw_spin_unlock", "kaslr_get_random_long", "mm_alloc", "test_ti_thread_flag"],
+    "global_reads": ["poking_addr", "poking_mm"],
+    "global_writes": ["poking_addr", "poking_mm"]
+  }
+]

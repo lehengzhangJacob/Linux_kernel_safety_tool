@@ -1,0 +1,20 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_hash_free",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "free_pages", "kfree", "vfree"],
+    "global_reads": ["hashdist"],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_hash_alloc",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__get_free_pages", "kzalloc", "vzalloc"],
+    "global_reads": ["hashdist"],
+    "global_writes": []
+  }
+]

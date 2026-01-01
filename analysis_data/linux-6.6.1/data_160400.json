@@ -1,0 +1,26 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quota_init",
+    "callees": ["_printk", "genl_register_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quota_send_warning",
+    "callees": ["_printk", "from_kqid_munged", "genlmsg_multicast_netns", "genlmsg_put", "kfree_skb_reason", "nla_put", "nla_put_64bit", "nlmsg_new"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  }
+]

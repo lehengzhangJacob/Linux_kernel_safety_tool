@@ -1,0 +1,182 @@
+[
+  {
+    "name": "dma_fence_array_set_pending_error.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_first.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_set_pending_error.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_next",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_first",
+    "callees": ["dma_fence_array_first.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_match_context",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_create",
+    "callees": ["__builtin_expect", "dma_fence_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_set_deadline",
+    "callees": ["dma_fence_set_deadline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_release",
+    "callees": ["dma_fence_free", "dma_fence_put.part.0", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_signaled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_enable_signaling",
+    "callees": ["dma_fence_add_callback", "dma_fence_array_set_pending_error.part.0", "dma_fence_get", "dma_fence_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_cb_func",
+    "callees": ["dma_fence_array_set_pending_error.part.0", "dma_fence_put.part.0", "irq_work_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_dma_fence_array_work",
+    "callees": ["dma_fence_put.part.0", "dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_get_timeline_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_array_get_driver_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

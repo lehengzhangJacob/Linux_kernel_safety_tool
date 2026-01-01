@@ -1,0 +1,248 @@
+[
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list",
+    "callees": ["__io_put_kbuf_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_add_list",
+    "callees": ["__builtin_expect", "xa_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list",
+    "callees": ["__io_put_kbuf_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_init_bl_list.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_remove_buffers.part.0",
+    "callees": ["__SCT__cond_resched", "folio_put", "kvfree", "unpin_user_page", "virt_to_folio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_pbuf_get_address",
+    "callees": ["io_buffer_get_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_unregister_pbuf_ring",
+    "callees": ["__io_remove_buffers.part.0", "_copy_from_user", "io_buffer_get_list", "kfree", "xa_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_register_pbuf_ring",
+    "callees": ["__builtin_expect", "_copy_from_user", "io_alloc_pbuf_ring", "io_buffer_add_list", "io_buffer_get_list", "io_init_bl_list", "io_pin_pbuf_ring", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_provide_buffers",
+    "callees": ["__builtin_expect", "io_add_buffers", "io_buffer_add_list", "io_buffer_get_list", "io_init_bl_list", "kfree", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_add_buffers",
+    "callees": ["__SCT__cond_resched", "io_refill_buffer_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_refill_buffer_cache",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "alloc_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "io_provide_buffers_prep",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_remove_buffers",
+    "callees": ["__io_remove_buffers.part.0", "io_buffer_get_list", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_remove_buffers_prep",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_destroy_buffers",
+    "callees": ["__free_pages", "__io_remove_buffers.part.0", "kfree", "xa_erase", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_init_bl_list",
+    "callees": ["io_init_bl_list.part.0", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_select",
+    "callees": ["__builtin_expect", "io_buffer_get_list", "io_provided_buffer_select", "io_ring_buffer_select", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_ring_buffer_select",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "io_provided_buffer_select",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf",
+    "callees": ["__io_put_kbuf_list", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_kbuf_recycle_legacy",
+    "callees": ["io_buffer_get_list", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_add_list",
+    "callees": ["__builtin_expect", "xa_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_buffer_get_list",
+    "callees": ["xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__io_put_kbuf_list",
+    "callees": ["__io_put_kbuf_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_folio",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

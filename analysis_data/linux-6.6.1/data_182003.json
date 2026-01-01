@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ata_timing_find_mode.part.0",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ata_timing_find_mode",
+    "callees": ["ata_timing_find_mode.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_timing_find_mode.part.0",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ata_timing_compute",
+    "callees": ["ata_timing_compute", "ata_timing_find_mode", "ata_timing_merge", "ata_timing_quantize", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_timing_find_mode",
+    "callees": ["ata_timing_find_mode.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_timing_merge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_timing_quantize",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

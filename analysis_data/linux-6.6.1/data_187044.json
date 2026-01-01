@@ -1,0 +1,50 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_guc_fw_upload",
+    "callees": ["guc_prepare_xfer", "guc_wait_ucode", "guc_xfer_rsa", "intel_uc_fw_upload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_wait_ucode",
+    "callees": ["__SCT__might_resched", "__drm_dev_dbg", "_dev_info", "_dev_warn", "guc_load_done", "intel_gt_perf_limit_reasons_reg", "intel_rps_read_actual_frequency", "ktime_get", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_load_done",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_xfer_rsa",
+    "callees": ["guc_xfer_rsa_mmio", "guc_xfer_rsa_vma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_xfer_rsa_mmio",
+    "callees": ["intel_uc_fw_copy_rsa"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "pps_add_offset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_event",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kill_fasync", "pps_add_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_unregister_source",
+    "callees": ["pps_unregister_cdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_register_source",
+    "callees": ["__init_waitqueue_head", "_dev_info", "_printk", "kfree", "kzalloc", "pps_register_cdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_echo_client_default",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pps_add_offset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

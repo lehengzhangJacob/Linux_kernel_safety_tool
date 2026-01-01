@@ -1,0 +1,506 @@
+[
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_end",
+    "callees": ["__SCT__tp_func_contention_end", "cpu_online", "trace_contention_end.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_end",
+    "callees": ["__SCT__tp_func_contention_end", "cpu_online", "trace_contention_end.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_end",
+    "callees": ["__SCT__tp_func_contention_end", "cpu_online", "trace_contention_end.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin",
+    "callees": ["__SCT__tp_func_contention_begin", "cpu_online", "trace_contention_begin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_set_nonspinnable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_set_nonspinnable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_set_nonspinnable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_del_waiter",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_del_wake_waiter",
+    "callees": ["_raw_spin_unlock_irq", "rwsem_del_waiter", "rwsem_mark_wake", "wake_up_q"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock",
+    "callees": ["__builtin_expect", "rwsem_read_trylock.part.0", "rwsem_set_nonspinnable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock",
+    "callees": ["__builtin_expect", "rwsem_read_trylock.part.0", "rwsem_set_nonspinnable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_write_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__down_write_common",
+    "callees": ["__builtin_expect", "rwsem_down_write_slowpath", "rwsem_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending_state",
+    "callees": ["__builtin_expect", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_write_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable",
+    "callees": ["__builtin_expect", "clear_nonspinnable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_cond_wake_waiter.part.0",
+    "callees": ["clear_nonspinnable", "rwsem_mark_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable",
+    "callees": ["__builtin_expect", "clear_nonspinnable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "IS_ERR",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "IS_ERR",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_cond_wake_waiter.part.0",
+    "callees": ["clear_nonspinnable", "rwsem_mark_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "downgrade_write",
+    "callees": ["__downgrade_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "up_write",
+    "callees": ["__up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "up_read",
+    "callees": ["__up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_write_trylock",
+    "callees": ["__down_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_write_killable",
+    "callees": ["__SCT__might_resched", "__down_write_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_write",
+    "callees": ["__SCT__might_resched", "__down_write_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_read_trylock",
+    "callees": ["__down_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_read_killable",
+    "callees": ["IS_ERR", "__SCT__might_resched", "__builtin_expect", "rwsem_down_read_slowpath", "rwsem_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_read_interruptible",
+    "callees": ["IS_ERR", "__SCT__might_resched", "__builtin_expect", "rwsem_down_read_slowpath", "rwsem_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_read",
+    "callees": ["IS_ERR", "__SCT__might_resched", "__builtin_expect", "rwsem_down_read_slowpath", "rwsem_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__downgrade_write",
+    "callees": ["__builtin_expect", "rwsem_downgrade_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__up_write",
+    "callees": ["__builtin_expect", "rwsem_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__up_read",
+    "callees": ["__builtin_expect", "clear_nonspinnable", "rwsem_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__down_write_trylock",
+    "callees": ["__builtin_expect", "rwsem_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__down_write_common",
+    "callees": ["__builtin_expect", "rwsem_down_write_slowpath", "rwsem_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__down_read_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_down_write_slowpath",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "rwsem_can_spin_on_owner", "rwsem_cond_wake_waiter.part.0", "rwsem_del_wake_waiter", "rwsem_optimistic_spin", "rwsem_spin_on_owner", "rwsem_try_write_lock", "schedule_preempt_disabled", "signal_pending_state", "trace_contention_begin", "trace_contention_end", "wake_up_q"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_down_read_slowpath",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "rwsem_cond_wake_waiter.part.0", "rwsem_del_wake_waiter", "rwsem_mark_wake", "schedule_preempt_disabled", "signal_pending_state", "trace_contention_begin", "trace_contention_end", "wake_up_q"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "clear_nonspinnable",
+    "callees": ["__builtin_expect", "clear_nonspinnable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_optimistic_spin",
+    "callees": ["__builtin_expect", "osq_lock", "osq_unlock", "rwsem_rspin_threshold", "rwsem_set_nonspinnable", "rwsem_spin_on_owner", "rwsem_try_write_lock_unqueued", "sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_rspin_threshold",
+    "callees": ["sched_clock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_spin_on_owner",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_can_spin_on_owner",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_try_write_lock_unqueued",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_try_write_lock",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_del_wake_waiter",
+    "callees": ["_raw_spin_unlock_irq", "rwsem_del_waiter", "rwsem_mark_wake", "wake_up_q"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_mark_wake",
+    "callees": ["__builtin_expect", "__refcount_add", "wake_q_add", "wake_q_add_safe"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_del_waiter",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__init_rwsem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_write_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_read_trylock",
+    "callees": ["__builtin_expect", "rwsem_read_trylock.part.0", "rwsem_set_nonspinnable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rwsem_set_nonspinnable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_end",
+    "callees": ["__SCT__tp_func_contention_end", "cpu_online", "trace_contention_end.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_contention_begin",
+    "callees": ["__SCT__tp_func_contention_begin", "cpu_online", "trace_contention_begin.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending_state",
+    "callees": ["__builtin_expect", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "IS_ERR",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

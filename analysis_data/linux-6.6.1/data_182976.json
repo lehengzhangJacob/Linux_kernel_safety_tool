@@ -1,0 +1,56 @@
+[
+  {
+    "name": "e1000_calculate_checksum.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_calculate_checksum.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_enable_mng_pass_thru",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_mng_write_dhcp_info",
+    "callees": ["__ew32", "e1000_mng_enable_host_if", "e1000_mng_host_if_write", "e1000_mng_write_cmd_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_mng_write_cmd_header",
+    "callees": ["__ew32", "e1000_calculate_checksum.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_enable_tx_pkt_filtering",
+    "callees": ["e1000_calculate_checksum.part.0", "e1000_mng_enable_host_if"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_check_mng_mode_generic",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_mng_enable_host_if",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

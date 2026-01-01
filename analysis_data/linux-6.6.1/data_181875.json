@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_clear_bit",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_set_bit",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_mod_bit",
+    "callees": ["linkmode_clear_bit", "linkmode_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_set_pause",
+    "callees": ["linkmode_mod_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_resolve_pause",
+    "callees": ["__bitmap_and", "__builtin_constant_p", "linkmode_test_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_mod_bit",
+    "callees": ["linkmode_clear_bit", "linkmode_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_clear_bit",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_set_bit",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

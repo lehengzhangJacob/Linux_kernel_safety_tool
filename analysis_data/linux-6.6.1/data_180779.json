@@ -1,0 +1,734 @@
+[
+  {
+    "name": "rpc_clntdir_populate",
+    "callees": ["rpc_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cachedir_populate",
+    "callees": ["rpc_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_add_pipe_dir_object_locked.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_clntdir_depopulate",
+    "callees": ["rpc_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cachedir_depopulate",
+    "callees": ["rpc_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_rmdir_depopulate",
+    "callees": ["__rpc_rmdir", "dget_parent", "down_write", "dput", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_create",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_rmpipe",
+    "callees": ["__rpc_unlink", "rpc_close_pipes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_delete",
+    "callees": ["fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_info_open.part.0",
+    "callees": ["__refcount_add_not_zero", "_raw_spin_lock", "_raw_spin_unlock", "single_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_remove_pipe_dir_object.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mutex_lock", "mutex_unlock", "rpc_remove_pipe_dir_object_locked"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_add_pipe_dir_object.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mutex_lock", "mutex_unlock", "rpc_add_pipe_dir_object_locked"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_mkdir.part.0",
+    "callees": ["fsnotify_mkdir", "inc_nlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_purge_list.part.0",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_add_pipe_dir_object_locked.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_rpc_pipefs",
+    "callees": ["kmem_cache_destroy", "rpc_clients_notifier_unregister", "unregister_filesystem"],
+    "global_reads": ["rpc_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "register_rpc_pipefs",
+    "callees": ["kmem_cache_create", "kmem_cache_destroy", "register_filesystem", "rpc_clients_notifier_register", "rpc_clients_notifier_unregister"],
+    "global_reads": ["rpc_inode_cachep"],
+    "global_writes": ["rpc_inode_cachep"]
+  },
+  {
+    "name": "init_once",
+    "callees": ["__init_waitqueue_head", "inode_init_once"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_kill_sb",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "blocking_notifier_call_chain", "kill_litter_super", "mutex_lock", "mutex_unlock", "put_net"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_init_fs_context",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_fs_free_fc",
+    "callees": ["put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_fs_get_tree",
+    "callees": ["__refcount_add", "get_tree_keyed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gssd_running",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_fill_super",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__rpc_depopulate", "blocking_notifier_call_chain", "d_make_root", "mutex_lock", "mutex_unlock", "rpc_get_inode", "rpc_gssd_dummy_depopulate", "rpc_gssd_dummy_populate", "rpc_populate"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_gssd_dummy_depopulate",
+    "callees": ["__rpc_depopulate", "__rpc_rmpipe", "dput", "lockref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_gssd_dummy_populate",
+    "callees": ["__builtin_expect", "__rpc_depopulate", "d_hash_and_lookup", "dput", "rpc_mkpipe_dentry", "rpc_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_dummy_info_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_dummy_info_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dummy_downcall",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_put_sb_net",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "mutex_unlock"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_get_sb_net",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipefs_exit_net",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kfree"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipefs_init_net",
+    "callees": ["__builtin_expect", "__mutex_init", "__rcu_read_lock", "__rcu_read_unlock", "rpc_mkpipe_data"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_d_lookup_sb",
+    "callees": ["d_hash_and_lookup", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_remove_cache_dir",
+    "callees": ["rpc_rmdir_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_create_cache_dir",
+    "callees": ["rpc_mkdir_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cachedir_depopulate",
+    "callees": ["rpc_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cachedir_populate",
+    "callees": ["rpc_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_remove_client_dir",
+    "callees": ["rpc_destroy_pipe_dir_objects", "rpc_rmdir_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_create_client_dir",
+    "callees": ["__builtin_expect", "rpc_create_pipe_dir_objects", "rpc_mkdir_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_clntdir_depopulate",
+    "callees": ["rpc_depopulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_clntdir_populate",
+    "callees": ["rpc_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_destroy_pipe_dir_objects",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_create_pipe_dir_objects",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_find_or_alloc_pipe_dir_object",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mutex_lock", "mutex_unlock", "rpc_add_pipe_dir_object_locked"],
+    "global_reads": ["sunrpc_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_remove_pipe_dir_object",
+    "callees": ["rpc_remove_pipe_dir_object.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_add_pipe_dir_object",
+    "callees": ["rpc_add_pipe_dir_object.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_init_pipe_dir_object",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_init_pipe_dir_head",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_unlink",
+    "callees": ["__rpc_rmpipe", "dget_parent", "down_write", "dput", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_mkpipe_dentry",
+    "callees": ["__builtin_expect", "__rpc_lookup_create_exclusive", "__rpc_mkpipe_dentry", "_printk", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_rmdir_depopulate",
+    "callees": ["__rpc_rmdir", "dget_parent", "down_write", "dput", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_lookup_create_exclusive",
+    "callees": ["d_alloc", "d_hash_and_lookup", "dput", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_rmpipe",
+    "callees": ["__rpc_unlink", "rpc_close_pipes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_unlink",
+    "callees": ["d_drop", "dput", "fsnotify_unlink", "lockref_get", "simple_unlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_rmdir",
+    "callees": ["d_drop", "dput", "fsnotify_rmdir", "lockref_get", "simple_rmdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_mkpipe_data",
+    "callees": ["init_pipe", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_destroy_pipe_data",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_pipe",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_create",
+    "callees": ["__rpc_create_common", "fsnotify_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rpc_create_common",
+    "callees": ["_printk", "d_add", "d_drop", "dput", "iunique", "rpc_get_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_get_inode",
+    "callees": ["get_next_ino", "inc_nlink", "inode_set_ctime_current", "new_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_info_release",
+    "callees": ["rpc_release_client", "single_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_info_open",
+    "callees": ["rpc_info_open.part.0", "single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_show_info",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "rpc_peeraddr2str", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_ioctl",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_poll",
+    "callees": ["down_write", "poll_wait", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_read",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_release",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "down_write", "rpc_purge_list", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_open",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_free_inode",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["rpc_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_alloc_inode",
+    "callees": ["kmem_cache_alloc_lru"],
+    "global_reads": ["rpc_inode_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_close_pipes",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "cancel_delayed_work_sync", "down_write", "rpc_purge_list", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_queue_upcall",
+    "callees": ["__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "dput", "lockref_get", "queue_delayed_work_on"],
+    "global_reads": ["rpciod_workqueue"],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipe_generic_upcall",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_timeout_upcall_queue",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dput", "lockref_get", "rpc_purge_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_purge_list",
+    "callees": ["rpc_purge_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipefs_notifier_unregister",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pipefs_notifier_register",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_rmdir",
+    "callees": ["__builtin_expect", "fsnotify_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_mkdir",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_unlink",
+    "callees": ["__builtin_expect", "fsnotify_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_delete",
+    "callees": ["fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_create",
+    "callees": ["audit_inode_child", "fsnotify_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

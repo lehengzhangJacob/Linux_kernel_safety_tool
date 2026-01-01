@@ -1,0 +1,62 @@
+[
+  {
+    "name": "default_cpu_present_to_apicid.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_init_apic_ldr",
+    "callees": ["__SCT__apic_call_read", "__SCT__apic_call_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_apic_id_registered",
+    "callees": ["__builtin_constant_p", "read_apic_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_cpu_present_to_apicid",
+    "callees": ["cpu_present", "default_cpu_present_to_apicid.part.0"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "default_ioapic_phys_id_map",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_check_apicid_used",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "apic_flat_calc_apicid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "apic_default_calc_apicid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_apic_id",
+    "callees": ["__SCT__apic_call_read"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_present",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

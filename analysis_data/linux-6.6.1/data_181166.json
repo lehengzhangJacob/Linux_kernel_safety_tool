@@ -1,0 +1,86 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pool_free_work.part.0",
+    "callees": ["queue_delayed_work_on", "round_jiffies_up_relative"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_free.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_fini_buffer_pool",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_flush_buffer_pool",
+    "callees": ["cancel_delayed_work_sync", "pool_free_older_than"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_buffer_pool",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_get_buffer_pool",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "i915_active_acquire", "node_create", "node_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_create",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__i915_active_init", "i915_active_fini", "i915_gem_object_create_internal", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_buffer_pool_mark_used",
+    "callees": ["i915_gem_object_make_unshrinkable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pool_retire",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "i915_gem_object_make_purgeable", "queue_delayed_work_on", "round_jiffies_up_relative"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "pool_free_work",
+    "callees": ["pool_free_older_than", "pool_free_work.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pool_free_older_than",
+    "callees": ["_raw_spin_trylock", "_raw_spin_unlock_irq", "node_free"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "node_free",
+    "callees": ["i915_active_fini", "kref_put", "node_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "free_cg_rpool_locked",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cg_rpool_locked",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_all_resource_max_limit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_uncharge.part.0",
+    "callees": ["rdmacg_uncharge_hierarchy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_css_offline",
+    "callees": ["mutex_lock", "mutex_unlock", "set_all_resource_max_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_css_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_css_alloc",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_resource_read",
+    "callees": ["mutex_lock", "mutex_unlock", "of_css", "print_rpool_values", "seq_printf", "seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_rpool_values",
+    "callees": ["seq_printf", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_resource_set_max",
+    "callees": ["__builtin_expect", "find_next_bit", "free_cg_rpool_locked", "get_cg_rpool_locked", "kfree", "kmalloc_array", "mutex_lock", "mutex_unlock", "of_css", "rdmacg_get_device_locked", "rdmacg_parse_limits", "set_resource_limit", "strim", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_get_device_locked",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_parse_limits",
+    "callees": ["parse_resource", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_resource",
+    "callees": ["match_int", "match_string", "strlen", "strncmp", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_unregister_device",
+    "callees": ["free_cg_rpool_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_register_device",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_try_charge",
+    "callees": ["__builtin_expect", "get_cg_rpool_locked", "mutex_lock", "mutex_unlock", "rdmacg_uncharge_hierarchy", "task_get_css"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_uncharge",
+    "callees": ["rdmacg_uncharge.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdmacg_uncharge_hierarchy",
+    "callees": ["css_put", "mutex_lock", "mutex_unlock", "uncharge_cg_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uncharge_cg_locked",
+    "callees": ["__builtin_expect", "_printk", "free_cg_rpool_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cg_rpool_locked",
+    "callees": ["kzalloc", "set_all_resource_max_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cg_rpool_locked",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_all_resource_max_limit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_resource_limit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_put",
+    "callees": ["percpu_ref_put_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "css_tryget",
+    "callees": ["percpu_ref_tryget_many"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

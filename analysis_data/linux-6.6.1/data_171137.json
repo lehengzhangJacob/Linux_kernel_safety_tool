@@ -1,0 +1,74 @@
+[
+  {
+    "name": "nmi_perfctr_msr_to_bit.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_perfctr_msr_to_bit",
+    "callees": ["nmi_perfctr_msr_to_bit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_evntsel_msr_to_bit.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_evntsel_msr_to_bit",
+    "callees": ["nmi_evntsel_msr_to_bit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_evntsel_msr_to_bit.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_perfctr_msr_to_bit.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_evntsel_nmi",
+    "callees": ["__builtin_constant_p", "nmi_evntsel_msr_to_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_evntsel_nmi",
+    "callees": ["nmi_evntsel_msr_to_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_perfctr_nmi",
+    "callees": ["__builtin_constant_p", "nmi_perfctr_msr_to_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_perfctr_nmi",
+    "callees": ["nmi_perfctr_msr_to_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_evntsel_msr_to_bit",
+    "callees": ["nmi_evntsel_msr_to_bit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nmi_perfctr_msr_to_bit",
+    "callees": ["nmi_perfctr_msr_to_bit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

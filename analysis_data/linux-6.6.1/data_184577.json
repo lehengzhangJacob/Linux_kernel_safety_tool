@@ -1,0 +1,230 @@
+[
+  {
+    "name": "drm_framebuffer_lookup",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_lookup",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_lookup",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_lookup",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_unregister_private.part.0",
+    "callees": ["drm_mode_object_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_debugfs_init",
+    "callees": ["drm_debugfs_add_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_info",
+    "callees": ["__builtin_expect", "drm_framebuffer_print_info", "drm_printf", "mutex_is_locked", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_print_info",
+    "callees": ["drm_gem_print_info", "drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_plane_height",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_plane_width",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_remove",
+    "callees": ["__builtin_expect", "__warn_printk", "atomic_remove_fb", "drm_drv_uses_atomic_modeset", "drm_mode_object_put", "legacy_remove_fb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "legacy_remove_fb",
+    "callees": ["__drm_dev_dbg", "__drm_err", "drm_crtc_force_disable", "drm_modeset_lock_all", "drm_modeset_unlock_all", "drm_plane_force_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "atomic_remove_fb",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_add_affected_connectors", "drm_atomic_commit", "drm_atomic_get_plane_state", "drm_atomic_set_crtc_for_connector", "drm_atomic_set_crtc_for_plane", "drm_atomic_set_fb_for_plane", "drm_atomic_set_mode_for_crtc", "drm_atomic_state_alloc", "drm_atomic_state_clear", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_cleanup",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_unregister_private",
+    "callees": ["drm_framebuffer_unregister_private.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_lookup",
+    "callees": ["__drm_mode_object_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_init",
+    "callees": ["__builtin_expect", "__drm_mode_object_add", "drm_mode_object_register", "mutex_lock", "mutex_unlock", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_free",
+    "callees": ["drm_mode_object_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_release",
+    "callees": ["drm_mode_object_put", "flush_work", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_dirtyfb_ioctl",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "drm_framebuffer_lookup", "drm_mode_object_put", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_getfb2_ioctl",
+    "callees": ["__builtin_expect", "capable", "drm_framebuffer_lookup", "drm_gem_handle_create", "drm_gem_handle_delete", "drm_is_current_master", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_getfb",
+    "callees": ["capable", "drm_format_info_bpp", "drm_framebuffer_lookup", "drm_is_current_master", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_rmfb_ioctl",
+    "callees": ["drm_mode_rmfb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_rmfb",
+    "callees": ["drm_framebuffer_lookup", "drm_mode_object_put", "flush_work", "mutex_lock", "mutex_unlock", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_rmfb_work_fn",
+    "callees": ["__drm_dev_dbg", "drm_framebuffer_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_addfb2_ioctl",
+    "callees": ["drm_mode_addfb2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_addfb2",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_internal_framebuffer_create", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_internal_framebuffer_create",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "framebuffer_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "framebuffer_check",
+    "callees": ["__drm_dev_dbg", "__drm_format_info", "drm_format_info_min_pitch", "drm_get_format_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_addfb_ioctl",
+    "callees": ["drm_mode_addfb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_addfb",
+    "callees": ["__drm_dev_dbg", "drm_driver_legacy_fb_format", "drm_mode_addfb2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_framebuffer_check_src_coords",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

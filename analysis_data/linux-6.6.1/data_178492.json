@@ -1,0 +1,110 @@
+[
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_43", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_regions_driver_release",
+    "callees": ["intel_memory_region_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_regions_driver_release",
+    "callees": ["intel_memory_region_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_regions_hw_probe",
+    "callees": ["__builtin_expect", "_dev_err", "i915_gem_shmem_setup", "i915_gem_stolen_lmem_setup", "i915_gem_stolen_smem_setup", "i915_gem_ttm_system_setup", "intel_memory_regions_driver_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_destroy",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_avail",
+    "callees": ["i915_ttm_buddy_man_avail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_set_name",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_create",
+    "callees": ["__builtin_return_address", "__mutex_init", "intel_memory_region_memtest", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_memtest",
+    "callees": ["iomemtest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_debug",
+    "callees": ["drm_printf", "ttm_resource_manager_debug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_reserve",
+    "callees": ["i915_ttm_buddy_man_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_by_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_memory_region_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iopagetest",
+    "callees": ["__iopagetest", "_dev_err", "ioremap_wc", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_43", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "usb_device_read",
+    "callees": ["idr_get_next", "mutex_lock", "mutex_unlock", "usb_device_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_device_dump",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__get_free_pages", "_copy_to_user", "copy_overflow", "free_pages", "mutex_lock", "mutex_unlock", "sprintf", "usb_device_dump", "usb_dump_desc", "usb_hub_find_child"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_desc",
+    "callees": ["usb_dump_config", "usb_dump_device_descriptor", "usb_dump_device_strings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_device_strings",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_device_descriptor",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_config",
+    "callees": ["sprintf", "usb_dump_config_descriptor", "usb_dump_iad_descriptor", "usb_dump_interface"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_config_descriptor",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_iad_descriptor",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_interface",
+    "callees": ["usb_dump_endpoint_descriptor", "usb_dump_interface_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_interface_descriptor",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_dump_endpoint_descriptor",
+    "callees": ["sprintf", "usb_decode_interval"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

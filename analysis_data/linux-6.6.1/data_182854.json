@@ -1,0 +1,74 @@
+[
+  {
+    "name": "lifebook_absolute_mode",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": ["lifebook_use_6byte_proto"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_init",
+    "callees": ["input_set_abs_params", "input_set_capability", "lifebook_absolute_mode", "lifebook_create_relative_device", "memset", "ps2_command"],
+    "global_reads": ["desired_serio_phys", "lifebook_use_6byte_proto"],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_create_relative_device",
+    "callees": ["input_allocate_device", "input_free_device", "input_register_device", "input_set_capability", "kfree", "kzalloc", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_detect",
+    "callees": ["strcmp"],
+    "global_reads": ["desired_serio_phys", "lifebook_present"],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_disconnect",
+    "callees": ["input_unregister_device", "kfree", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_set_resolution",
+    "callees": ["ps2_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_absolute_mode",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": ["lifebook_use_6byte_proto"],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_process_byte",
+    "callees": ["_dev_warn", "input_event", "psmouse_report_standard_buttons", "psmouse_report_standard_motion"],
+    "global_reads": ["lifebook_use_6byte_proto"],
+    "global_writes": []
+  },
+  {
+    "name": "lifebook_module_init",
+    "callees": ["dmi_check_system"],
+    "global_reads": [],
+    "global_writes": ["lifebook_present"]
+  },
+  {
+    "name": "lifebook_set_6byte_proto",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["lifebook_use_6byte_proto"]
+  },
+  {
+    "name": "lifebook_limit_serio3",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["desired_serio_phys"]
+  }
+]

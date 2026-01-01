@@ -1,0 +1,86 @@
+[
+  {
+    "name": "xfrm4_rcv_encap_finish",
+    "callees": ["ip_route_input_noref", "kfree_skb_reason", "xfrm_trans_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_rcv",
+    "callees": ["xfrm_input"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_udp_encap_rcv",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__builtin_unreachable", "kfree_skb_reason", "pskb_may_pull_reason", "skb_unclone", "xfrm4_rcv_encap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_transport_finish",
+    "callees": ["NF_HOOK", "__builtin_bswap16", "ip_send_check", "skb_mac_header_rebuild", "xfrm_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_rcv_encap_finish",
+    "callees": ["ip_route_input_noref", "kfree_skb_reason", "xfrm_trans_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_rcv_encap_finish2",
+    "callees": ["dst_input"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_offload",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_input",
+    "callees": ["__builtin_expect", "ip6_input", "ip_local_deliver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_mac_header_rebuild",
+    "callees": ["memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cloned",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

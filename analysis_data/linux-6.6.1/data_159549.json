@@ -1,0 +1,800 @@
+[
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_page",
+    "callees": ["__bio_add_page", "__builtin_expect", "bvec_try_merge_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_add_page",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_irq_cache_splice",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_inc_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_chain",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_inc_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "biovec_init_pool",
+    "callees": ["mempool_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_iter_advance_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single.part.0",
+    "callees": ["bvec_iter_advance_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single",
+    "callees": ["bio_advance_iter_single.part.0", "bio_no_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_iter_advance_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single.part.0",
+    "callees": ["bvec_iter_advance_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single",
+    "callees": ["bio_advance_iter_single.part.0", "bio_no_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_iter_advance_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single.part.0",
+    "callees": ["bvec_iter_advance_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single",
+    "callees": ["bio_advance_iter_single.part.0", "bio_no_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "biovec_slab",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter",
+    "callees": ["bio_no_advance_iter", "bvec_iter_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter",
+    "callees": ["bio_no_advance_iter", "bvec_iter_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_advance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_next_segment",
+    "callees": ["bvec_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_advance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_next_segment",
+    "callees": ["bvec_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_advance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_next_segment",
+    "callees": ["bvec_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_alloc_cache_prune",
+    "callees": ["bio_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_chain_endio",
+    "callees": ["bio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance.part.0",
+    "callees": ["bio_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_free.part.0",
+    "callees": ["biovec_slab", "kmem_cache_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance.part.0",
+    "callees": ["bio_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_folio.part.0",
+    "callees": ["bio_add_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single.part.0",
+    "callees": ["bvec_iter_advance_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_bio",
+    "callees": ["__cpuhp_setup_state", "bioset_init", "kmem_cache_create", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bioset_init",
+    "callees": ["__alloc_percpu", "__cpuhp_state_add_instance", "alloc_workqueue", "bio_find_or_create_slab", "bioset_exit", "biovec_init_pool", "mempool_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bioset_exit",
+    "callees": ["bio_alloc_cache_destroy", "bio_put_slab", "destroy_workqueue", "mempool_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "biovec_init_pool",
+    "callees": ["mempool_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_trim",
+    "callees": ["__builtin_expect", "bio_advance.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_split",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_advance.part.0", "bio_alloc_clone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_endio",
+    "callees": ["__bio_chain_endio", "bio_remaining_done", "bio_uninit", "rq_qos_done_bio", "trace_block_bio_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_remaining_done",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_check_pages_dirty",
+    "callees": ["__builtin_constant_p", "_compound_head", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "bio_next_segment", "bio_put", "bio_release_pages", "schedule_work"],
+    "global_reads": ["bio_dirty_list"],
+    "global_writes": ["bio_dirty_list"]
+  },
+  {
+    "name": "bio_dirty_fn",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "bio_put", "bio_release_pages"],
+    "global_reads": ["bio_dirty_list"],
+    "global_writes": ["bio_dirty_list"]
+  },
+  {
+    "name": "bio_set_pages_dirty",
+    "callees": ["__builtin_constant_p", "bio_next_segment", "set_page_dirty_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_free_pages",
+    "callees": ["__free_pages", "bio_next_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_copy_data",
+    "callees": ["bio_copy_data_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_copy_data_iter",
+    "callees": ["bio_advance_iter_single", "memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_advance",
+    "callees": ["bio_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "submit_bio_wait",
+    "callees": ["blk_status_to_errno", "submit_bio", "wait_for_completion_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "submit_bio_wait_endio",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_iov_iter_get_pages",
+    "callees": ["__bio_iov_iter_get_pages", "__builtin_expect", "bio_iov_bvec_set", "iov_iter_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_iov_iter_get_pages",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "bio_iov_add_page", "bio_iov_add_zone_append_page", "iov_iter_extract_pages", "iov_iter_revert", "unpin_user_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_iov_add_zone_append_page",
+    "callees": ["bio_add_hw_page", "unpin_user_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_iov_bvec_set",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_release_pages",
+    "callees": ["__builtin_constant_p", "bio_next_segment", "set_page_dirty_lock", "unpin_user_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_folio",
+    "callees": ["bio_add_folio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_folio_nofail",
+    "callees": ["__bio_add_page", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_page",
+    "callees": ["__bio_add_page", "__builtin_expect", "bvec_try_merge_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_add_page",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_zone_append_page",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_pc_page",
+    "callees": ["bio_add_hw_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_add_hw_page",
+    "callees": ["__builtin_expect", "bvec_try_merge_hw_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_try_merge_hw_page",
+    "callees": ["bvec_try_merge_page"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_try_merge_page",
+    "callees": [],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init_clone",
+    "callees": ["__bio_clone", "bio_init", "bio_uninit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_clone",
+    "callees": ["__bio_clone", "bio_alloc_bioset", "bio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_put",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_free", "bio_put_percpu_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_put_percpu_cache",
+    "callees": ["__builtin_expect", "bio_free", "bio_uninit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_cache_destroy",
+    "callees": ["__cpuhp_state_remove_instance", "bio_alloc_cache_prune", "find_next_bit", "free_percpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_cpu_dead",
+    "callees": ["bio_alloc_cache_prune"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_alloc_cache_prune",
+    "callees": ["bio_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guard_bio_eod",
+    "callees": ["__builtin_expect", "bio_truncate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_truncate",
+    "callees": ["bio_advance_iter_single", "zero_user_segments"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zero_fill_bio_iter",
+    "callees": ["bio_advance_iter_single", "memzero_bvec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_kmalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_bioset",
+    "callees": ["__builtin_expect", "bio_alloc_percpu_cache", "bio_init", "bvec_alloc", "mempool_alloc", "mempool_free", "punt_bios_to_rescuer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_irq_cache_splice",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "punt_bios_to_rescuer",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_alloc_rescue",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "submit_bio_noacct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_next_bio",
+    "callees": ["bio_alloc_bioset", "bio_chain", "submit_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_chain",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bio_inc_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_chain_endio",
+    "callees": ["__bio_chain_endio", "bio_endio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bio_chain_endio",
+    "callees": ["bio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_reset",
+    "callees": ["bio_associate_blkg", "bio_uninit", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_init",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_free",
+    "callees": ["__builtin_expect", "bio_uninit", "bvec_free", "mempool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_uninit",
+    "callees": ["percpu_ref_put_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_alloc",
+    "callees": ["__builtin_expect", "biovec_slab", "kmem_cache_alloc", "mempool_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_free",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "bvec_free.part.0", "mempool_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_put_slab",
+    "callees": ["__builtin_expect", "__warn_printk", "kfree", "kmem_cache_destroy", "mutex_lock", "mutex_unlock", "xa_erase", "xa_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_bio_slab",
+    "callees": ["__builtin_expect", "kfree", "kmem_cache_create", "kmem_cache_destroy", "kzalloc", "snprintf", "xa_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "biovec_slab",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rq_qos_done_bio",
+    "callees": ["__rq_qos_done_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_block_bio_complete",
+    "callees": ["__SCT__tp_func_block_bio_complete", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_inc_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_release_pages",
+    "callees": ["__bio_release_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter_single",
+    "callees": ["bio_advance_iter_single.part.0", "bio_no_advance_iter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_advance_iter",
+    "callees": ["bio_no_advance_iter", "bvec_iter_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_next_segment",
+    "callees": ["bvec_advance"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_no_advance_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_advance",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_iter_advance_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memzero_page",
+    "callees": ["memset"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "compound_nr",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

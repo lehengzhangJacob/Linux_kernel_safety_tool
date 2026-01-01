@@ -1,0 +1,152 @@
+[
+  {
+    "name": "__efivar_entry_get",
+    "callees": ["efi_status_to_err", "efivar_get_variable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "variable_matches",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_device_path.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_iter",
+    "callees": ["efivar_lock", "efivar_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_set_get_size",
+    "callees": ["efi_status_to_err", "efivar_get_variable", "efivar_lock", "efivar_set_variable_locked", "efivar_unlock", "efivar_validate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_get",
+    "callees": ["__efivar_entry_get", "efivar_lock", "efivar_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__efivar_entry_get",
+    "callees": ["efi_status_to_err", "efivar_get_variable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_size",
+    "callees": ["efi_status_to_err", "efivar_get_variable", "efivar_lock", "efivar_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_delete",
+    "callees": ["efi_status_to_err", "efivar_lock", "efivar_set_variable_locked", "efivar_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_remove",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__efivar_entry_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_entry_add",
+    "callees": ["efivar_lock", "efivar_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_init",
+    "callees": ["_printk", "dup_variable_bug", "efivar_get_next_variable", "efivar_lock", "efivar_unlock", "kfree", "kzalloc", "variable_is_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dup_variable_bug",
+    "callees": ["_printk", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "variable_is_present",
+    "callees": ["memcmp", "ucs2_strsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_variable_is_removable",
+    "callees": ["memcmp", "variable_matches"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_validate",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "memcmp", "ucs2_as_utf8", "ucs2_utf8size", "variable_matches"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "variable_matches",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_ascii_string",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_uint16",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_load_option",
+    "callees": ["hex_to_bin", "ucs2_strnlen", "ucs2_strsize", "validate_device_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_boot_order",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_device_path",
+    "callees": ["validate_device_path.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

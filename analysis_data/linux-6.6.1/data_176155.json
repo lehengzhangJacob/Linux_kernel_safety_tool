@@ -1,0 +1,128 @@
+[
+  {
+    "name": "early_console_register.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_console_register",
+    "callees": ["early_console_register.part.0", "register_console"],
+    "global_reads": [],
+    "global_writes": ["early_console"]
+  },
+  {
+    "name": "early_console_register.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_console_register",
+    "callees": ["early_console_register.part.0", "register_console"],
+    "global_reads": [],
+    "global_writes": ["early_console"]
+  },
+  {
+    "name": "early_console_register.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_console_register",
+    "callees": ["early_console_register.part.0", "register_console"],
+    "global_reads": [],
+    "global_writes": ["early_console"]
+  },
+  {
+    "name": "early_console_register.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_console_register",
+    "callees": ["early_console_register.part.0", "register_console"],
+    "global_reads": [],
+    "global_writes": ["early_console"]
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_console_register.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_early_printk",
+    "callees": ["early_console_register", "early_dbgp_init", "early_pci_serial_init", "early_serial_init", "strncmp", "strstr"],
+    "global_reads": ["early_console"],
+    "global_writes": ["current_ypos", "max_xpos", "max_ypos"]
+  },
+  {
+    "name": "early_console_register",
+    "callees": ["early_console_register.part.0", "register_console"],
+    "global_reads": [],
+    "global_writes": ["early_console"]
+  },
+  {
+    "name": "early_pci_serial_init",
+    "callees": ["early_ioremap", "early_serial_hw_init", "kstrtoull", "read_pci_config", "simple_strtoul", "strcmp", "strncmp", "write_pci_config"],
+    "global_reads": [],
+    "global_writes": ["early_serial_base", "serial_in", "serial_out"]
+  },
+  {
+    "name": "mem32_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem32_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_serial_init",
+    "callees": ["early_serial_hw_init", "simple_strtoul", "simple_strtoull", "strcspn", "strncmp"],
+    "global_reads": [],
+    "global_writes": ["early_serial_base", "serial_in", "serial_out"]
+  },
+  {
+    "name": "early_serial_hw_init",
+    "callees": [],
+    "global_reads": ["early_serial_base", "serial_in", "serial_out"],
+    "global_writes": []
+  },
+  {
+    "name": "early_serial_write",
+    "callees": ["early_serial_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_vga_write",
+    "callees": [],
+    "global_reads": ["current_xpos", "current_ypos", "max_xpos", "max_ypos", "page_offset_base"],
+    "global_writes": ["current_xpos", "current_ypos"]
+  }
+]

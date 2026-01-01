@@ -1,0 +1,152 @@
+[
+  {
+    "name": "action_arg_word_end",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_uevent_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_exit",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock", "netlink_kernel_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_init",
+    "callees": ["__netlink_kernel_create", "_printk", "kfree", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_rcv",
+    "callees": ["netlink_rcv_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_rcv_skb",
+    "callees": ["do_trace_netlink_extack", "mutex_lock", "mutex_unlock", "netlink_ns_capable", "uevent_net_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_broadcast",
+    "callees": ["do_trace_netlink_extack", "netlink_broadcast", "skb_copy_expand", "skb_pull", "skb_put_data", "snprintf"],
+    "global_reads": ["uevent_seqnum"],
+    "global_writes": ["uevent_seqnum"]
+  },
+  {
+    "name": "add_uevent_var",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "__warn_printk", "vsnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_uevent",
+    "callees": ["kobject_uevent_env"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_uevent_env",
+    "callees": ["add_uevent_var", "kfree", "kobject_get_path", "kobject_uevent_net_broadcast", "kzalloc", "mutex_lock", "mutex_unlock", "zap_modalias_env"],
+    "global_reads": ["uevent_seqnum"],
+    "global_writes": ["uevent_seqnum"]
+  },
+  {
+    "name": "zap_modalias_env",
+    "callees": ["memmove", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_uevent_net_broadcast",
+    "callees": ["kobj_ns_ops", "uevent_net_broadcast_tagged", "uevent_net_broadcast_untagged"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_broadcast_tagged",
+    "callees": ["alloc_uevent_skb", "netlink_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uevent_net_broadcast_untagged",
+    "callees": ["__refcount_add", "alloc_uevent_skb", "consume_skb", "netlink_broadcast", "netlink_has_listeners"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_uevent_skb",
+    "callees": ["__alloc_skb", "skb_put", "skb_put_data", "sprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_synth_uevent",
+    "callees": ["_printk", "kfree", "kobject_action_args", "kobject_action_type", "kobject_get_path", "kobject_uevent_env"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_action_args",
+    "callees": ["action_arg_word_end", "add_uevent_var", "kfree", "kzalloc", "uuid_is_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "action_arg_word_end",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobject_action_type",
+    "callees": ["strnchr", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

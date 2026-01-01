@@ -1,0 +1,26 @@
+[
+  {
+    "name": "acpi_ut_checksum",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_generate_checksum",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_verify_cdat_checksum",
+    "callees": ["acpi_bios_warning"],
+    "global_reads": ["acpi_gbl_CDAT"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ut_verify_checksum",
+    "callees": ["acpi_bios_warning"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

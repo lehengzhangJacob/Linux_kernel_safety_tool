@@ -1,0 +1,98 @@
+[
+  {
+    "name": "acpi_rs_set_resource_length",
+    "callees": ["acpi_ut_get_resource_header_length"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_set_srs_method_data",
+    "callees": ["acpi_ns_evaluate", "acpi_os_allocate_zeroed", "acpi_rs_create_aml_resources", "acpi_ut_create_internal_object_dbg", "acpi_ut_remove_reference", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_method_data",
+    "callees": ["acpi_rs_create_resource_list", "acpi_ut_evaluate_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_aei_method_data",
+    "callees": ["acpi_rs_create_resource_list", "acpi_ut_evaluate_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_prs_method_data",
+    "callees": ["acpi_rs_create_resource_list", "acpi_ut_evaluate_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_crs_method_data",
+    "callees": ["acpi_rs_create_resource_list", "acpi_ut_evaluate_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_prt_method_data",
+    "callees": ["acpi_rs_create_pci_routing_table", "acpi_ut_evaluate_object", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_set_resource_source",
+    "callees": ["strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_get_resource_source",
+    "callees": ["memset", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_set_resource_header",
+    "callees": ["acpi_rs_set_resource_length"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_set_resource_length",
+    "callees": ["acpi_ut_get_resource_header_length"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_move_data",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_encode_bitmask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_decode_bitmask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

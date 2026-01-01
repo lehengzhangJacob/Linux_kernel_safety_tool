@@ -1,0 +1,68 @@
+[
+  {
+    "name": "xt_addr_cmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xt_addr_cmp",
+    "callees": ["xt_addr_cmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xt_addr_cmp.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_mt_exit",
+    "callees": ["xt_unregister_matches"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_mt_init",
+    "callees": ["xt_register_matches"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_mt_check",
+    "callees": ["___ratelimit", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "policy_mt",
+    "callees": ["match_policy_in", "match_policy_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_policy_in",
+    "callees": ["match_xfrm_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_xfrm_state",
+    "callees": ["xt_addr_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xt_addr_cmp",
+    "callees": ["xt_addr_cmp.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

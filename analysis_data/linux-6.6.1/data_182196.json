@@ -1,0 +1,326 @@
+[
+  {
+    "name": "drm_dev_release",
+    "callees": ["drm_managed_release", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_release",
+    "callees": ["drm_managed_release", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_release",
+    "callees": ["drm_managed_release", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_core_exit",
+    "callees": ["__unregister_chrdev", "debugfs_remove", "drm_connector_ida_destroy", "drm_sysfs_destroy", "idr_destroy"],
+    "global_reads": ["drm_debugfs_root"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_enter",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_exit",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_put_dev.part.0",
+    "callees": ["__drm_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_compat_control_link.part.0",
+    "callees": ["kasprintf", "kfree", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_alloc_release.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "idr_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_core_init",
+    "callees": ["___drm_dbg", "__drm_err", "__register_chrdev", "debugfs_create_dir", "drm_connector_ida_init", "drm_core_exit", "drm_memcpy_init_early", "drm_sysfs_init"],
+    "global_reads": [],
+    "global_writes": ["drm_core_init_complete", "drm_debugfs_root"]
+  },
+  {
+    "name": "drm_core_exit",
+    "callees": ["__unregister_chrdev", "debugfs_remove", "drm_connector_ida_destroy", "drm_sysfs_destroy", "idr_destroy"],
+    "global_reads": ["drm_debugfs_root"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_stub_open",
+    "callees": ["___drm_dbg", "__builtin_expect", "drm_dev_put.part.0", "drm_minor_acquire", "module_put", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_unregister",
+    "callees": ["drm_client_dev_unregister", "drm_lastclose", "drm_minor_unregister", "drm_modeset_unregister_all", "remove_compat_control_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_register",
+    "callees": ["__builtin_expect", "_printk", "create_compat_control_link", "drm_dev_needs_global_mutex", "drm_minor_register", "drm_minor_unregister", "drm_mode_config_validate", "drm_modeset_register_all", "mutex_lock", "mutex_unlock", "remove_compat_control_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_compat_control_link",
+    "callees": ["remove_compat_control_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_compat_control_link",
+    "callees": ["kasprintf", "kfree", "sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_put",
+    "callees": ["drm_dev_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_get",
+    "callees": ["drm_dev_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_alloc",
+    "callees": ["drm_dev_init", "drmm_add_final_kfree", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__devm_drm_dev_alloc",
+    "callees": ["devm_drm_dev_init", "drmm_add_final_kfree", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_drm_dev_init",
+    "callees": ["__devm_add_action_or_reset", "drm_dev_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_drm_dev_init_release",
+    "callees": ["drm_dev_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_init",
+    "callees": ["__builtin_expect", "__drm_err", "__drmm_add_action_or_reset", "__mutex_init", "drm_fs_inode_new", "drm_gem_init", "drm_managed_release", "drm_minor_alloc", "drmm_kstrdup", "get_device"],
+    "global_reads": ["drm_core_init_complete"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_init_release",
+    "callees": ["drm_fs_inode_free", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fs_inode_free",
+    "callees": ["iput", "simple_release_fs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fs_inode_new",
+    "callees": ["__builtin_expect", "__drm_err", "alloc_anon_inode", "simple_pin_fs", "simple_release_fs"],
+    "global_reads": ["drm_fs_mnt"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fs_init_fs_context",
+    "callees": ["init_pseudo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_unplug",
+    "callees": ["drm_dev_unregister", "synchronize_srcu", "unmap_mapping_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_exit",
+    "callees": ["__builtin_expect", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_enter",
+    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_put_dev",
+    "callees": ["___drm_dbg", "drm_dev_put.part.0", "drm_dev_unregister", "drm_put_dev.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_release",
+    "callees": ["drm_dev_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_acquire",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "drm_dev_get.part.0", "drm_dev_is_unplugged", "drm_dev_put.part.0", "idr_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_unregister",
+    "callees": ["__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_del", "drm_debugfs_cleanup", "idr_replace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_register",
+    "callees": ["___drm_dbg", "__builtin_unreachable", "__drm_err", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_add", "drm_debugfs_cleanup", "drm_debugfs_init", "idr_replace"],
+    "global_reads": ["drm_debugfs_root"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_alloc",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__drmm_add_action_or_reset", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "drm_sysfs_minor_alloc", "drmm_kmalloc", "idr_alloc", "idr_preload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_minor_alloc_release",
+    "callees": ["__builtin_expect", "drm_minor_alloc_release.part.0", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_dev_is_unplugged",
+    "callees": ["drm_dev_enter", "drm_dev_exit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

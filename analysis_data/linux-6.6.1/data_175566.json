@@ -1,0 +1,362 @@
+[
+  {
+    "name": "i965_adjust_pgetbl_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_adjust_pgetbl_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_cleanup",
+    "callees": ["intel_gtt_teardown_scratch_page", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_clear_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_clear_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_remove.part.0",
+    "callees": ["intel_gtt_teardown_scratch_page", "pci_dev_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_remove_entries.part.0",
+    "callees": ["intel_gtt_unmap_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_remove",
+    "callees": ["intel_gmch_remove.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_probe",
+    "callees": ["_dev_err", "_dev_info", "dma_set_coherent_mask", "dma_set_mask", "find_gmch", "intel_gmch_remove", "intel_gtt_init", "pci_dev_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_gmch",
+    "callees": ["pci_get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_setup",
+    "callees": ["intel_i9xx_setup_flush", "ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_write_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_chipset_flush",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_cleanup",
+    "callees": ["iounmap", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_i9xx_setup_flush",
+    "callees": ["_dev_err", "intel_i915_setup_chipset_flush", "intel_i965_g33_setup_chipset_flush", "ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_i965_g33_setup_chipset_flush",
+    "callees": ["intel_alloc_chipset_flush_resource", "pci_read_config_dword", "pci_write_config_dword", "request_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_i915_setup_chipset_flush",
+    "callees": ["intel_alloc_chipset_flush_resource", "pci_read_config_dword", "pci_write_config_dword", "request_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_alloc_by_type",
+    "callees": ["agp_create_memory", "alloc_agpphysmem_i8xx", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_remove_entries",
+    "callees": ["intel_fake_agp_remove_entries.part.0", "intel_gmch_gtt_clear_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_clear_range",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_insert_entries",
+    "callees": ["global_cache_flush", "i810_insert_dcache_entries", "intel_gmch_gtt_clear_range", "intel_gmch_gtt_insert_pages", "intel_gmch_gtt_insert_sg_entries", "intel_gtt_map_memory"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_insert_pages",
+    "callees": [],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_insert_sg_entries",
+    "callees": ["sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_gtt_insert_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i830_check_flags",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_configure",
+    "callees": ["intel_gmch_enable_gtt"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_free_gatt_table",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_create_gatt_table",
+    "callees": [],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "i830_setup",
+    "callees": ["ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gmch_enable_gtt",
+    "callees": ["_dev_err", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i830_write_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i830_chipset_flush",
+    "callees": ["__const_udelay", "wbinvd_on_all_cpus"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "i830_cleanup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_fetch_size",
+    "callees": [],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_init",
+    "callees": ["_dev_info", "global_cache_flush", "intel_gtt_can_wc", "intel_gtt_cleanup", "intel_gtt_mappable_entries", "intel_gtt_setup_scratch_page", "intel_gtt_stolen_size", "intel_gtt_total_entries", "ioremap", "ioremap_wc", "iounmap", "pcibios_resource_to_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_can_wc",
+    "callees": ["needs_ilk_vtd_wa"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "needs_ilk_vtd_wa",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_cleanup",
+    "callees": ["intel_gtt_teardown_scratch_page", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_teardown_scratch_page",
+    "callees": ["__free_pages", "dma_unmap_page_attrs", "set_pages_wb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_mappable_entries",
+    "callees": ["pci_read_config_dword", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_total_entries",
+    "callees": ["i965_gtt_total_entries"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_gtt_total_entries",
+    "callees": ["_dev_info", "i965_adjust_pgetbl_size", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i965_adjust_pgetbl_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_stolen_size",
+    "callees": ["_dev_info", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i810_write_entry",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_setup_scratch_page",
+    "callees": ["__builtin_expect", "__free_pages", "alloc_pages", "dma_map_page_attrs", "set_pages_uc"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_i810_free_by_type",
+    "callees": ["agp_free_key", "i8xx_destroy_pages", "kfree", "kvfree"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "i810_cleanup",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i810_setup",
+    "callees": ["__get_free_pages", "_dev_info", "ioremap"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_destroy_pages",
+    "callees": ["__free_pages", "set_pages_wb"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "i8xx_alloc_pages",
+    "callees": ["__free_pages", "alloc_pages", "set_pages_uc", "set_pages_wb"],
+    "global_reads": ["agp_bridge"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_fake_agp_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_unmap_memory",
+    "callees": ["dma_unmap_sg_attrs", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gtt_map_memory",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dma_map_sg_attrs", "sg_alloc_table", "sg_free_table", "sg_next"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

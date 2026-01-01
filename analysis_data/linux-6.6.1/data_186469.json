@@ -1,0 +1,68 @@
+[
+  {
+    "name": "drm_vma_node_is_allowed",
+    "callees": ["__builtin_expect", "_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_node_revoke",
+    "callees": ["__builtin_expect", "_raw_write_lock", "_raw_write_unlock", "kfree", "rb_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_node_allow_once",
+    "callees": ["vma_node_allow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_node_allow",
+    "callees": ["vma_node_allow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_node_allow",
+    "callees": ["__builtin_expect", "__builtin_return_address", "_raw_write_lock", "_raw_write_unlock", "kfree", "kmalloc_trace", "rb_insert_color"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_offset_remove",
+    "callees": ["__builtin_constant_p", "_raw_write_lock", "_raw_write_unlock", "drm_mm_remove_node", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_offset_add",
+    "callees": ["__builtin_constant_p", "_raw_write_lock", "_raw_write_unlock", "drm_mm_insert_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_offset_lookup_locked",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_offset_manager_destroy",
+    "callees": ["drm_mm_takedown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_offset_manager_init",
+    "callees": ["drm_mm_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mm_insert_node",
+    "callees": ["drm_mm_insert_node_in_range"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "check_name",
+    "callees": ["strstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_port_start",
+    "callees": ["pnp_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_pnp_exit",
+    "callees": ["pnp_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_pnp_init",
+    "callees": ["pnp_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_pnp_resume",
+    "callees": ["serial8250_resume_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_pnp_suspend",
+    "callees": ["serial8250_suspend_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_pnp_remove",
+    "callees": ["serial8250_unregister_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_pnp_probe",
+    "callees": ["device_property_read_u32_array", "memset", "pnp_get_resource", "pnp_irq", "pnp_irq_flags", "pnp_mem_start", "pnp_port_start", "serial8250_get_port", "serial8250_register_8250_port", "serial_pnp_guess_board"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_pnp_guess_board",
+    "callees": ["check_name", "check_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_resources",
+    "callees": ["pnp_possible_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_name",
+    "callees": ["strstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_port_start",
+    "callees": ["pnp_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

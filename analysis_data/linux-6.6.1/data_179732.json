@@ -1,0 +1,314 @@
+[
+  {
+    "name": "free_cache_attributes",
+    "callees": ["cache_shared_cpu_map_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cache_attributes",
+    "callees": ["cache_shared_cpu_map_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_leaves_are_shared",
+    "callees": ["cache_leaves_are_shared.part.0"],
+    "global_reads": ["use_arch_info"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_leaves_are_shared",
+    "callees": ["cache_leaves_are_shared.part.0"],
+    "global_reads": ["use_arch_info"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_cache_level",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_cache_level",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cacheinfo_cpu_online.part.0",
+    "callees": ["cache_add_dev", "free_cache_attributes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detect_cache_attributes.part.0",
+    "callees": ["_printk", "cache_shared_cpu_map_setup", "free_cache_attributes", "last_level_cache_is_valid", "populate_cache_leaves"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cacheinfo_sysfs_init",
+    "callees": ["__cpuhp_setup_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cacheinfo_cpu_pre_down",
+    "callees": ["cpu_cache_sysfs_exit", "free_cache_attributes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cacheinfo_cpu_online",
+    "callees": ["cacheinfo_cpu_online.part.0", "detect_cache_attributes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_add_dev",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "cache_get_attribute_groups", "cpu_cache_sysfs_exit", "cpu_cache_sysfs_init", "cpu_device_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_cache_sysfs_init",
+    "callees": ["__builtin_expect", "cpu_cache_sysfs_exit", "cpu_device_create", "get_cpu_device", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_cache_sysfs_exit",
+    "callees": ["device_unregister", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_get_attribute_groups",
+    "callees": ["cache_get_priv_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_get_priv_group",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_default_attrs_is_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_policy_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "allocation_policy_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "type_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shared_cpu_list_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "shared_cpu_map_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "size_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ways_of_associativity_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "physical_line_partition_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "number_of_sets_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "coherency_line_size_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "level_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "id_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detect_cache_attributes",
+    "callees": ["detect_cache_attributes.part.0", "init_level_allocate_ci"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_level_allocate_ci",
+    "callees": ["allocate_cache_info", "init_cache_level", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fetch_cache_info",
+    "callees": ["allocate_cache_info", "early_cache_level"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "allocate_cache_info",
+    "callees": ["kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "populate_cache_leaves",
+    "callees": ["early_cache_level.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_cache_level",
+    "callees": ["early_cache_level.localalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_cache_level",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cache_attributes",
+    "callees": ["cache_shared_cpu_map_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_shared_cpu_map_remove",
+    "callees": ["__builtin_constant_p", "cache_leaves_are_shared", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_shared_cpu_map_setup",
+    "callees": ["__builtin_constant_p", "cache_leaves_are_shared", "cache_setup_acpi", "find_next_bit", "last_level_cache_is_valid"],
+    "global_reads": ["acpi_disabled", "coherency_max_size", "use_arch_info"],
+    "global_writes": ["coherency_max_size"]
+  },
+  {
+    "name": "cache_setup_acpi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_of_cache_level",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "last_level_cache_is_shared",
+    "callees": ["cache_leaves_are_shared", "last_level_cache_is_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "last_level_cache_is_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_leaves_are_shared",
+    "callees": ["cache_leaves_are_shared.part.0"],
+    "global_reads": ["use_arch_info"],
+    "global_writes": []
+  },
+  {
+    "name": "get_cpu_cacheinfo",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,404 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_invite_response",
+    "callees": ["flush_expectations", "nf_ct_ext_find", "process_sdp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_invite_response",
+    "callees": ["flush_expectations", "nf_ct_ext_find", "process_sdp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_skip_whitespace",
+    "callees": ["sip_follow_continuation"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdp_parse_addr",
+    "callees": ["__builtin_unreachable", "in4_pton", "in6_pton", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_linearize",
+    "callees": ["__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_sip_init",
+    "callees": ["_printk", "nf_conntrack_helpers_register", "nf_ct_helper_init"],
+    "global_reads": ["ports_c"],
+    "global_writes": ["ports_c"]
+  },
+  {
+    "name": "nf_conntrack_sip_fini",
+    "callees": ["nf_conntrack_helpers_unregister"],
+    "global_reads": ["ports_c"],
+    "global_writes": []
+  },
+  {
+    "name": "sip_help_udp",
+    "callees": ["__builtin_expect", "__nf_ct_refresh_acct", "__skb_linearize", "process_sip_msg"],
+    "global_reads": ["sip_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "sip_help_tcp",
+    "callees": ["__builtin_expect", "__nf_ct_refresh_acct", "__skb_linearize", "ct_sip_get_header", "process_sip_msg", "simple_strtoul", "skb_header_pointer"],
+    "global_reads": ["sip_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "process_sip_msg",
+    "callees": ["nf_ct_helper_log", "process_sip_request", "process_sip_response", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_sip_request",
+    "callees": ["ct_sip_get_header", "ct_sip_parse_header_uri", "nf_ct_ext_find", "nf_ct_helper_log", "simple_strtoul", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_sip_response",
+    "callees": ["ct_sip_get_header", "nf_ct_helper_log", "simple_strtoul", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_register_response",
+    "callees": ["ct_sip_get_header", "ct_sip_parse_header_uri", "ct_sip_parse_numerical_param", "ct_sip_parse_transport", "flush_expectations", "nf_ct_ext_find", "nf_ct_helper_log", "refresh_signalling_expectation", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_register_request",
+    "callees": ["ct_sip_get_header", "ct_sip_parse_header_uri", "ct_sip_parse_numerical_param", "ct_sip_parse_transport", "nf_ct_expect_alloc", "nf_ct_expect_init", "nf_ct_expect_put", "nf_ct_expect_related_report", "nf_ct_ext_find", "nf_ct_helper_log", "simple_strtoul"],
+    "global_reads": ["sip_direct_signalling", "sip_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "process_bye_request",
+    "callees": ["flush_expectations"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_invite_request",
+    "callees": ["flush_expectations", "nf_ct_ext_find", "process_sdp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_prack_response",
+    "callees": ["process_invite_response"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_update_response",
+    "callees": ["process_invite_response"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_invite_response",
+    "callees": ["flush_expectations", "nf_ct_ext_find", "process_sdp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "process_sdp",
+    "callees": ["__builtin_bswap16", "ct_sip_get_sdp_header", "ct_sip_parse_sdp_addr", "nf_ct_helper_log", "sdp_media_type", "set_expected_rtp_rtcp", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdp_media_type",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_expected_rtp_rtcp",
+    "callees": ["__builtin_bswap16", "__nf_ct_expect_find", "__nf_ip6_route", "dst_release", "memset", "nf_ct_expect_alloc", "nf_ct_expect_init", "nf_ct_expect_put", "nf_ct_expect_related_report", "nf_ct_ext_find", "nf_ct_unexpect_related", "nf_ip_route"],
+    "global_reads": ["sip_direct_media", "sip_external_media"],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_get_sdp_header",
+    "callees": ["ct_sdp_header_search", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sdp_header_search",
+    "callees": ["strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdp_addr_len",
+    "callees": ["sdp_parse_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdp_parse_addr",
+    "callees": ["__builtin_unreachable", "in4_pton", "in6_pton", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_parse_transport",
+    "callees": ["ct_sip_parse_param", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_parse_numerical_param",
+    "callees": ["ct_sip_header_search", "simple_strtoul", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_parse_address_param",
+    "callees": ["ct_sip_header_search", "sip_parse_addr", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_parse_header_uri",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "ct_sip_walk_headers", "simple_strtoul", "sip_parse_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_walk_headers",
+    "callees": ["ct_sip_get_header", "ct_sip_next_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_next_header",
+    "callees": ["ct_sip_header_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_get_header",
+    "callees": ["ct_sip_header_search", "sip_skip_whitespace", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_header_search",
+    "callees": ["sip_follow_continuation", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_skip_whitespace",
+    "callees": ["sip_follow_continuation"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_follow_continuation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ct_sip_parse_request",
+    "callees": ["__builtin_bswap16", "simple_strtoul", "sip_parse_addr", "skp_epaddr_len", "strncasecmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skp_epaddr_len",
+    "callees": ["epaddr_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "epaddr_len",
+    "callees": ["sip_parse_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sip_parse_addr",
+    "callees": ["__builtin_unreachable", "in4_pton", "in6_pton", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "media_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "callid_len",
+    "callees": ["word_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "word_len",
+    "callees": ["iswordc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iswordc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "digits_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_linearize",
+    "callees": ["__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

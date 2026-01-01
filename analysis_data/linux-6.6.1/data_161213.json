@@ -1,0 +1,344 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_segment_selector",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_seg_base",
+    "callees": ["get_desc", "get_segment_selector", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_segment_selector",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_effective_ip",
+    "callees": ["insn_get_seg_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_effective_ip",
+    "callees": ["insn_get_seg_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resolve_default_seg.part.0",
+    "callees": ["is_string_insn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_eff_addr_reg.part.0",
+    "callees": ["__builtin_expect", "get_reg_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_desc.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resolve_default_seg.part.0",
+    "callees": ["is_string_insn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_decode_mmio",
+    "callees": ["insn_get_opcode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_decode_from_regs",
+    "callees": ["insn_get_code_seg_params", "insn_get_length", "insn_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_fetch_from_user_inatomic",
+    "callees": ["insn_get_effective_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_fetch_from_user",
+    "callees": ["__bad_copy_to", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "insn_get_effective_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_effective_ip",
+    "callees": ["insn_get_seg_base"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_addr_ref",
+    "callees": ["get_addr_ref_16", "get_addr_ref_32", "get_addr_ref_64", "insn_get_opcode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_addr_ref_64",
+    "callees": ["get_eff_addr_modrm", "get_eff_addr_reg", "get_eff_addr_sib", "get_seg_base_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_addr_ref_32",
+    "callees": ["get_eff_addr_modrm", "get_eff_addr_reg", "get_eff_addr_sib", "get_seg_base_limit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_addr_ref_16",
+    "callees": ["get_eff_addr_modrm_16", "get_eff_addr_reg", "get_seg_base_limit", "insn_get_displacement"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_eff_addr_sib",
+    "callees": ["__builtin_expect", "get_reg_offset", "insn_get_modrm", "insn_get_sib"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_eff_addr_modrm_16",
+    "callees": ["__builtin_expect", "get_reg_offset_16", "insn_get_modrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_eff_addr_modrm",
+    "callees": ["__builtin_expect", "get_reg_offset", "insn_get_modrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_eff_addr_reg",
+    "callees": ["get_eff_addr_reg.part.0", "insn_get_modrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_seg_base_limit",
+    "callees": ["get_seg_limit", "insn_get_seg_base", "resolve_seg_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_modrm_reg_ptr",
+    "callees": ["get_reg_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_modrm_reg_off",
+    "callees": ["get_reg_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_modrm_rm_off",
+    "callees": ["get_reg_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_code_seg_params",
+    "callees": ["get_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_seg_limit",
+    "callees": ["get_desc", "get_segment_selector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_get_seg_base",
+    "callees": ["get_desc", "get_segment_selector", "native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_desc",
+    "callees": ["get_desc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pt_regs_offset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_segment_selector",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resolve_seg_reg",
+    "callees": ["get_seg_reg_override_idx", "is_string_insn", "resolve_default_seg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_seg_reg_override_idx",
+    "callees": ["inat_get_opcode_attribute", "insn_get_prefixes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "insn_has_rep_prefix",
+    "callees": ["insn_get_prefixes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_ext_msg.part.0",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "send_ext_msg_udp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_msg.part.0",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "netpoll_send_udp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_netconsole",
+    "callees": ["console_list_lock", "console_list_unlock", "kfree", "netpoll_cleanup", "unregister_console", "unregister_netdevice_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_netconsole",
+    "callees": ["__builtin_expect", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alloc_param_target", "kfree", "netpoll_cleanup", "register_console", "register_netdevice_notifier", "strnlen", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_msg",
+    "callees": ["write_msg.part.0"],
+    "global_reads": ["oops_in_progress", "oops_only"],
+    "global_writes": []
+  },
+  {
+    "name": "write_ext_msg",
+    "callees": ["write_ext_msg.part.0"],
+    "global_reads": ["oops_in_progress", "oops_only"],
+    "global_writes": []
+  },
+  {
+    "name": "send_ext_msg_udp",
+    "callees": ["__builtin_expect", "memchr", "memcpy", "netpoll_send_udp", "scnprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netconsole_netdev_event",
+    "callees": ["__netpoll_cleanup", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_param_target",
+    "callees": ["_printk", "alloc_and_init", "kfree", "netpoll_parse_options", "netpoll_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_and_init",
+    "callees": ["kzalloc", "memset", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dynamic_netconsole_exit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "option_setup",
+    "callees": ["strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_fib_metrics_init.part.0",
+    "callees": ["__builtin_expect", "ip_metrics_convert", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_fib_metrics_init",
+    "callees": ["ip_fib_metrics_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_metrics_convert",
+    "callees": ["do_trace_netlink_extack", "nla_strscpy", "tcp_ca_get_key_by_name"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

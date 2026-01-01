@@ -1,0 +1,98 @@
+[
+  {
+    "name": "skip_addr.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skip_addr",
+    "callees": ["skip_addr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skip_addr.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "callthunks_patch_module_calls",
+    "callees": ["callthunks_setup", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["thunks_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "callthunks_translate_call_dest",
+    "callees": ["is_coretext", "patch_dest", "skip_addr"],
+    "global_reads": ["thunks_initialized"],
+    "global_writes": []
+  },
+  {
+    "name": "callthunks_patch_builtin_calls",
+    "callees": ["_printk", "callthunks_setup", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": ["thunks_initialized"]
+  },
+  {
+    "name": "callthunks_setup",
+    "callees": ["_printk", "patch_call", "patch_call_sites"],
+    "global_reads": ["debug_callthunks"],
+    "global_writes": []
+  },
+  {
+    "name": "patch_call_sites",
+    "callees": ["patch_call"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "patch_call",
+    "callees": ["__builtin_expect", "_printk", "call_get_dest", "is_coretext", "patch_dest", "text_poke_early"],
+    "global_reads": ["debug_callthunks"],
+    "global_writes": []
+  },
+  {
+    "name": "patch_dest",
+    "callees": ["__builtin_expect", "__builtin_memcmp", "_printk", "memcpy", "text_poke_copy_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "call_get_dest",
+    "callees": ["insn_decode", "skip_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skip_addr",
+    "callees": ["skip_addr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_coretext",
+    "callees": ["within_module_coretext"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "within_module_coretext",
+    "callees": ["__builtin_expect", "__module_address", "within_module_core"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "debug_thunks",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["debug_callthunks"]
+  },
+  {
+    "name": "within_module_core",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

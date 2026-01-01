@@ -1,0 +1,80 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_get_queue_size",
+    "callees": ["ioread16", "iowrite16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_get_queue_enable",
+    "callees": ["ioread32", "iowrite16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_set_queue_address",
+    "callees": ["iowrite16", "iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_config_vector",
+    "callees": ["ioread16", "iowrite16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_queue_vector",
+    "callees": ["ioread16", "iowrite16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_set_status",
+    "callees": ["iowrite8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_get_status",
+    "callees": ["ioread8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_set_features",
+    "callees": ["iowrite32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_get_driver_features",
+    "callees": ["ioread32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_get_features",
+    "callees": ["ioread32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_remove",
+    "callees": ["pci_iounmap", "pci_release_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vp_legacy_probe",
+    "callees": ["_dev_warn", "dma_set_coherent_mask", "dma_set_mask", "dma_set_mask_and_coherent", "pci_iomap", "pci_release_region", "pci_request_region"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

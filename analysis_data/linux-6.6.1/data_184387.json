@@ -1,0 +1,116 @@
+[
+  {
+    "name": "power_supply_hwmon_temp_to_property",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property",
+    "callees": ["power_supply_hwmon_temp_to_property", "power_supply_hwmon_to_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_temp_to_property",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property",
+    "callees": ["power_supply_hwmon_temp_to_property", "power_supply_hwmon_to_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_temp_to_property",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property",
+    "callees": ["power_supply_hwmon_temp_to_property", "power_supply_hwmon_to_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_remove_hwmon_sysfs",
+    "callees": ["devres_release_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_add_hwmon_sysfs",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "devm_bitmap_zalloc", "devm_hwmon_device_register_with_info", "devm_kmalloc", "devm_kstrdup", "devres_close_group", "devres_open_group", "devres_release_group", "strchr", "strreplace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_write",
+    "callees": ["__builtin_expect", "power_supply_hwmon_to_property", "power_supply_set_property"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_read",
+    "callees": ["__builtin_expect", "power_supply_get_property", "power_supply_hwmon_to_property"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_read_string",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_is_visible",
+    "callees": ["__builtin_constant_p", "power_supply_hwmon_has_input", "power_supply_hwmon_is_writable", "power_supply_hwmon_to_property", "power_supply_property_is_writeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_is_writable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_to_property",
+    "callees": ["power_supply_hwmon_temp_to_property", "power_supply_hwmon_to_property.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "power_supply_hwmon_temp_to_property",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

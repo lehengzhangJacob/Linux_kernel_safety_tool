@@ -1,0 +1,152 @@
+[
+  {
+    "name": "esrt_table_exists.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_table_exists",
+    "callees": ["__builtin_constant_p", "esrt_table_exists.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_table_exists.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_table_exists",
+    "callees": ["__builtin_constant_p", "esrt_table_exists.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_table_exists.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_sysfs_init",
+    "callees": ["_printk", "cleanup_entry_list", "kobject_create_and_add", "kobject_put", "kset_create_and_add", "kset_unregister", "memremap", "memunmap", "register_entries", "sysfs_create_group", "sysfs_remove_group"],
+    "global_reads": ["efi_kobj", "esrt", "esrt_data", "esrt_data_size", "esrt_kobj", "esrt_kset"],
+    "global_writes": ["esrt", "esrt_kobj", "esrt_kset"]
+  },
+  {
+    "name": "cleanup_entry_list",
+    "callees": ["kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_entries",
+    "callees": ["_printk", "esre_create_sysfs_entry", "esrt_table_exists"],
+    "global_reads": ["esrt"],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_attr_is_visible",
+    "callees": ["esrt_table_exists"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esrt_table_exists",
+    "callees": ["__builtin_constant_p", "esrt_table_exists.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_resource_version_show",
+    "callees": ["sprintf"],
+    "global_reads": ["esrt"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_resource_count_max_show",
+    "callees": ["sprintf"],
+    "global_reads": ["esrt"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_resource_count_show",
+    "callees": ["sprintf"],
+    "global_reads": ["esrt"],
+    "global_writes": []
+  },
+  {
+    "name": "esre_create_sysfs_entry",
+    "callees": ["kobject_init_and_add", "kobject_put", "kzalloc"],
+    "global_reads": ["esrt", "esrt_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "esre_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "last_attempt_status_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "last_attempt_version_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "capsule_flags_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lowest_supported_fw_version_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_version_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_type_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fw_class_show",
+    "callees": ["sprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "esre_attr_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_esrt_init",
+    "callees": ["__builtin_constant_p", "_printk", "early_memremap", "early_memunmap", "efi_mem_desc_end", "efi_mem_desc_lookup", "efi_mem_reserve", "esrt_table_exists", "memcpy"],
+    "global_reads": ["esrt_data", "esrt_data_size"],
+    "global_writes": ["esrt_data", "esrt_data_size"]
+  }
+]

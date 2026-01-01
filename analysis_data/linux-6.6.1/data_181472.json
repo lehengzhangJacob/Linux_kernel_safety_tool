@@ -1,0 +1,146 @@
+[
+  {
+    "name": "reg_needs_read_steering",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_needs_read_steering",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_unlock.part.0",
+    "callees": ["intel_uncore_forcewake_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_wait_for_reg",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "intel_gt_mcr_read_any", "ktime_get_raw", "local_clock", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_get_ss_steering",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_report_steering",
+    "callees": ["drm_printf", "report_steering_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "report_steering_type",
+    "callees": ["drm_printf", "get_nonterminated_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_read_any",
+    "callees": ["get_nonterminated_steering", "reg_needs_read_steering", "rw_with_mcr_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_read_any_fw",
+    "callees": ["get_nonterminated_steering", "reg_needs_read_steering", "rw_with_mcr_steering_fw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_get_nonterminated_steering",
+    "callees": ["get_nonterminated_steering", "reg_needs_read_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_nonterminated_steering",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__warn_printk", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_needs_read_steering",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_multicast_rmw",
+    "callees": ["intel_gt_mcr_multicast_write", "intel_gt_mcr_read_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_multicast_write_fw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_multicast_write",
+    "callees": ["intel_gt_mcr_lock", "intel_gt_mcr_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_unicast_write",
+    "callees": ["rw_with_mcr_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_read",
+    "callees": ["rw_with_mcr_steering"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_unlock",
+    "callees": ["_raw_spin_unlock_irqrestore", "intel_gt_mcr_unlock.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_lock",
+    "callees": ["__SCT__might_resched", "___ratelimit", "_dev_err", "_raw_spin_lock_irqsave", "add_taint_for_CI", "intel_uncore_forcewake_get", "ktime_get_raw", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rw_with_mcr_steering",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "intel_gt_mcr_lock", "intel_gt_mcr_unlock", "intel_uncore_forcewake_for_reg", "intel_uncore_forcewake_get__locked", "intel_uncore_forcewake_put__locked", "rw_with_mcr_steering_fw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_mcr_init",
+    "callees": ["__builtin_expect", "__warn_printk", "_dev_warn", "dev_driver_string", "find_next_bit", "intel_slicemask_from_xehp_dssmask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

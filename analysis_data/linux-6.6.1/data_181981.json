@@ -1,0 +1,266 @@
+[
+  {
+    "name": "ata_tf_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_gtf_to_tf",
+    "callees": ["ata_tf_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_preset_companion",
+    "callees": ["acpi_find_child_device", "set_primary_fwnode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_class_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_uevent",
+    "callees": ["kobject_uevent_env", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_on_disable",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_on_devcfg",
+    "callees": ["_printk", "ata_acpi_exec_tfs", "ata_acpi_push_id", "ata_dev_acpi_handle", "ata_dev_reread_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_set_state",
+    "callees": ["pata_acpi_set_state", "sata_acpi_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pata_acpi_set_state",
+    "callees": ["acpi_bus_set_power", "ata_dev_acpi_handle", "ata_dev_next", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_acpi_set_state",
+    "callees": ["acpi_bus_set_power", "ata_acpi_choose_suspend_state", "ata_dev_acpi_handle", "ata_dev_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_choose_suspend_state",
+    "callees": ["acpi_pm_device_sleep_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_on_resume",
+    "callees": ["ata_acpi_stm", "ata_class_enabled", "ata_dev_acpi_handle", "ata_dev_get_GTF", "ata_dev_next", "is_acpi_device_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_push_id",
+    "callees": ["_printk", "acpi_evaluate_object", "ata_dev_acpi_handle", "swap_buf_le16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_run_tf",
+    "callees": ["_printk", "ata_acpi_filter_tf", "ata_acpi_gtf_to_tf", "ata_exec_internal", "ata_get_cmd_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_gtf_to_tf",
+    "callees": ["ata_tf_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_cbl_80wire",
+    "callees": ["ata_acpi_gtm_xfermask", "ata_dev_next", "ata_unpack_xfermask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_gtm_xfermask",
+    "callees": ["ata_timing_cycle2mode", "ata_xfer_mode2mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_get_GTF",
+    "callees": ["_printk", "acpi_evaluate_object", "ata_dev_acpi_handle", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_stm",
+    "callees": ["_printk", "acpi_evaluate_object", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_gtm",
+    "callees": ["_printk", "acpi_evaluate_object", "is_acpi_device_node", "kfree", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_dissociate",
+    "callees": ["ata_acpi_stm", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_bind_dev",
+    "callees": ["acpi_initialize_hp_context", "acpi_preset_companion", "is_acpi_device_node", "kzalloc"],
+    "global_reads": ["libata_noacpi"],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_bind_port",
+    "callees": ["acpi_initialize_hp_context", "acpi_preset_companion", "ata_acpi_gtm", "is_acpi_device_node", "kzalloc"],
+    "global_reads": ["libata_noacpi"],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_dev_uevent",
+    "callees": ["ata_acpi_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_ap_uevent",
+    "callees": ["ata_acpi_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_uevent",
+    "callees": ["kobject_uevent_env", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_ap_notify_dock",
+    "callees": ["ata_acpi_handle_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_dev_notify_dock",
+    "callees": ["ata_acpi_handle_hotplug"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_handle_hotplug",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ata_acpi_detach_device", "ata_ehi_push_desc", "ata_port_freeze", "ata_port_wait_eh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_acpi_detach_device",
+    "callees": ["ata_dev_next", "ata_link_next", "ata_port_schedule_eh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_dev_acpi_handle",
+    "callees": ["is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_class_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_preset_companion",
+    "callees": ["acpi_find_child_device", "set_primary_fwnode"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

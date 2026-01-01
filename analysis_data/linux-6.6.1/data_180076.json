@@ -1,0 +1,200 @@
+[
+  {
+    "name": "calipso_doi_walk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_add.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_remove_cb.part.0",
+    "callees": ["netlbl_domhsh_remove_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_cache_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_cache_invalidate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_skbuff_delattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_skbuff_setattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_getattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_optptr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_req_delattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_req_setattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_sock_delattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_sock_setattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_sock_getattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_walk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_putdef",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_getdef",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_remove",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_free",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calipso_doi_add",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_ops_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_genl_init",
+    "callees": ["genl_register_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_remove",
+    "callees": ["netlbl_domhsh_walk", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_remove_cb",
+    "callees": ["netlbl_calipso_remove_cb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_listall",
+    "callees": ["calipso_doi_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_listall_cb",
+    "callees": ["genlmsg_put", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_list",
+    "callees": ["__alloc_skb", "genlmsg_put", "genlmsg_reply", "kfree_skb_reason", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_add",
+    "callees": ["netlbl_calipso_add.part.0", "netlbl_calipso_add_pass", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_calipso_add_pass",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

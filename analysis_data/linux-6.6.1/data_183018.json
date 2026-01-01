@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_report_wowlan_wakeup",
+    "callees": ["cfg80211_report_wowlan_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ieee80211_suspend",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__flush_workqueue", "__warn_flushing_systemwide_wq", "_ieee80211_hw_check", "cancel_work_sync", "drv_remove_interface", "drv_suspend", "flush_delayed_work", "ieee80211_del_virtual_monitor", "ieee80211_dfs_cac_cancel", "ieee80211_flush_queues", "ieee80211_hw_config", "ieee80211_mgd_quiesce", "ieee80211_roc_purge", "ieee80211_scan_cancel", "ieee80211_sched_scan_cancel", "ieee80211_sta_tear_down_BA_sessions", "ieee80211_stop_device", "ieee80211_stop_queues_by_reason", "ieee80211_wake_queues_by_reason", "mutex_lock", "mutex_unlock", "synchronize_net", "timer_delete_sync"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_sched_scan_cancel",
+    "callees": ["cfg80211_sched_scan_stopped_locked", "ieee80211_request_sched_scan_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_suspend",
+    "callees": ["__SCT__might_resched", "trace_drv_return_int", "trace_drv_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_suspend",
+    "callees": ["__SCT__tp_func_drv_suspend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_drv_return_int",
+    "callees": ["__SCT__tp_func_drv_return_int", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

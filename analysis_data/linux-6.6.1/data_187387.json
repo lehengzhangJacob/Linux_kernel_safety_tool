@@ -1,0 +1,152 @@
+[
+  {
+    "name": "intel_hpd_debugfs_register",
+    "callees": ["debugfs_create_bool", "debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_short_storm_ctl_write",
+    "callees": ["__drm_dev_dbg", "_copy_from_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "flush_delayed_work", "kstrtobool", "strchr", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_short_storm_ctl_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_short_storm_ctl_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_storm_ctl_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_storm_ctl_write",
+    "callees": ["__drm_dev_dbg", "_copy_from_user", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "flush_delayed_work", "kstrtouint", "strchr", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_storm_ctl_show",
+    "callees": ["__builtin_constant_p", "flush_delayed_work", "flush_work", "intel_synchronize_irq", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_enable",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_disable",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_cancel_work",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "cancel_delayed_work_sync", "cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_init_early",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_poll_disable",
+    "callees": ["queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_poll_enable",
+    "callees": ["intel_opregion_headless_sku", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_hpd_poll_init_work",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_helper_hpd_irq_event", "drm_kms_helper_poll_reschedule", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_init",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "intel_hpd_irq_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_irq_handler",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_raw_spin_lock", "_raw_spin_unlock", "dev_driver_string", "intel_encoder_has_hpd_pulse", "intel_hpd_irq_setup", "intel_hpd_irq_storm_detect", "queue_delayed_work_on", "queue_work_on"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "i915_hotplug_work_func",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_kms_helper_connector_hotplug_event", "drm_kms_helper_hotplug_event", "drm_mode_object_get", "drm_mode_object_put", "intel_hpd_irq_storm_switch_to_polling", "mod_delayed_work_on", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_trigger_irq",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_digport_work_func",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "intel_encoder_has_hpd_pulse", "queue_delayed_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_encoder_has_hpd_pulse",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_encoder_hotplug",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "drm_get_connector_status_name", "drm_helper_probe_detect", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_irq_storm_reenable_work",
+    "callees": ["__drm_dev_dbg", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "intel_hpd_irq_setup", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_irq_storm_switch_to_polling",
+    "callees": ["_dev_info", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_kms_helper_poll_reschedule", "mod_delayed_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_irq_storm_detect",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hpd_pin_default",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

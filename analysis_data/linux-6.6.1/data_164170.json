@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_kobject_put",
+    "callees": ["kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_kobject_put",
+    "callees": ["kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_usage_links",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_notes_attrs",
+    "callees": ["kfree", "kobject_put", "sysfs_remove_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sect_attrs",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_param_lock",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_sysfs_teardown",
+    "callees": ["del_usage_links", "kobject_put", "mod_sysfs_fini", "module_param_sysfs_remove", "module_remove_modinfo_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_sysfs_fini",
+    "callees": ["mod_kobject_put", "remove_notes_attrs", "remove_sect_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_sysfs_setup",
+    "callees": ["add_notes_attrs", "add_sect_attrs", "add_usage_links", "kobject_create_and_add", "kobject_put", "mod_kobject_put", "mod_sysfs_init", "module_add_modinfo_attrs", "module_param_sysfs_remove", "module_param_sysfs_setup", "module_remove_modinfo_attrs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mod_sysfs_init",
+    "callees": ["_printk", "kobject_init_and_add", "kobject_put", "kset_find_obj", "memset", "mod_kobject_put"],
+    "global_reads": ["module_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "mod_kobject_put",
+    "callees": ["kobject_put", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_add_modinfo_attrs",
+    "callees": ["kfree", "kzalloc", "memcpy", "module_remove_modinfo_attrs", "sysfs_create_file_ns"],
+    "global_reads": ["modinfo_attrs_count"],
+    "global_writes": []
+  },
+  {
+    "name": "module_remove_modinfo_attrs",
+    "callees": ["kfree", "sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_usage_links",
+    "callees": ["del_usage_links", "mutex_lock", "mutex_unlock", "sysfs_create_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_usage_links",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_notes_attrs",
+    "callees": ["__builtin_expect", "free_notes_attrs", "kobject_create_and_add", "kzalloc", "sysfs_create_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_notes_attrs",
+    "callees": ["kfree", "kobject_put", "sysfs_remove_bin_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_notes_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_sect_attrs",
+    "callees": ["free_sect_attrs", "sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_sect_attrs",
+    "callees": ["__builtin_expect", "free_sect_attrs", "kstrdup", "kzalloc", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_sect_attrs",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "module_sect_read",
+    "callees": ["kallsyms_show_value", "memcpy", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

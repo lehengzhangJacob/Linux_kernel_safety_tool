@@ -1,0 +1,152 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_attr_is_visible",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": ["efi_config_table", "efi_fw_vendor", "efi_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "config_table_show",
+    "callees": ["sprintf"],
+    "global_reads": ["efi_config_table"],
+    "global_writes": []
+  },
+  {
+    "name": "runtime_show",
+    "callees": ["sprintf"],
+    "global_reads": ["efi_runtime"],
+    "global_writes": []
+  },
+  {
+    "name": "fw_vendor_show",
+    "callees": ["sprintf"],
+    "global_reads": ["efi_fw_vendor"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_systab_show_arch",
+    "callees": ["sprintf"],
+    "global_reads": ["uga_phys"],
+    "global_writes": []
+  },
+  {
+    "name": "efi_is_table_address",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_enter_virtual_mode",
+    "callees": ["__builtin_constant_p", "__efi_enter_virtual_mode", "efi_dump_pagetable", "kexec_enter_virtual_mode"],
+    "global_reads": ["efi_runtime", "efi_setup"],
+    "global_writes": []
+  },
+  {
+    "name": "__efi_enter_virtual_mode",
+    "callees": ["__builtin_constant_p", "_printk", "efi_alloc_page_tables", "efi_delete_dummy_variable", "efi_free_boot_services", "efi_map_regions", "efi_memmap_init_late", "efi_memmap_unmap", "efi_merge_regions", "efi_native_runtime_setup", "efi_print_memmap", "efi_runtime_update_mappings", "efi_set_virtual_address_map", "efi_setup_page_tables", "efi_sync_low_kernel_mappings", "efi_thunk_runtime_setup"],
+    "global_reads": ["efi_systab_phys", "page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kexec_enter_virtual_mode",
+    "callees": ["__builtin_constant_p", "_printk", "efi_alloc_page_tables", "efi_map_region_fixed", "efi_memmap_init_late", "efi_memmap_unmap", "efi_native_runtime_setup", "efi_setup_page_tables", "efi_sync_low_kernel_mappings"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_map_next_entry",
+    "callees": ["__builtin_constant_p", "efi_map_next_entry_reverse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_map_next_entry_reverse",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "realloc_pages",
+    "callees": ["__get_free_pages", "free_pages", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_merge_regions",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_init",
+    "callees": ["__builtin_constant_p", "_printk", "early_memremap_ro", "early_memunmap", "efi_clean_memmap", "efi_config_init", "efi_memmap_unmap", "efi_print_memmap", "efi_remove_e820_mmio", "efi_reuse_config", "efi_runtime_disabled", "efi_systab_init"],
+    "global_reads": ["efi_config_table", "efi_nr_tables", "prop_phys"],
+    "global_writes": ["efi_systab_phys"]
+  },
+  {
+    "name": "efi_systab_init",
+    "callees": ["__builtin_constant_p", "_printk", "early_memremap_ro", "early_memunmap", "efi_systab_check_header", "efi_systab_report_header"],
+    "global_reads": ["efi_fw_vendor", "efi_setup"],
+    "global_writes": ["efi_config_table", "efi_fw_vendor", "efi_nr_tables", "efi_runtime"]
+  },
+  {
+    "name": "efi_remove_e820_mmio",
+    "callees": ["_printk", "e820__range_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_clean_memmap",
+    "callees": ["_printk", "efi_memmap_entry_valid", "efi_memmap_install", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memmap_entry_valid",
+    "callees": ["__builtin_expect", "_printk", "efi_md_typeattr_format"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "do_add_efi_memmap",
+    "callees": ["__builtin_constant_p", "e820__range_add", "e820__update_table"],
+    "global_reads": ["e820_table"],
+    "global_writes": []
+  },
+  {
+    "name": "setup_add_efi_memmap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["add_efi_memmap"]
+  },
+  {
+    "name": "efi_print_memmap",
+    "callees": ["_printk", "efi_md_typeattr_format"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memblock_x86_reserve_range",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__warn_printk", "do_add_efi_memmap", "efi_memmap_init_early", "memblock_reserve"],
+    "global_reads": ["add_efi_memmap"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,344 @@
+[
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_get_debugreg.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_get_debugreg",
+    "callees": ["ptrace_get_debugreg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigtrap",
+    "callees": ["force_sig_fault"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_fill_bp_fields",
+    "callees": ["arch_bp_generic_fields"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs_set.part.0",
+    "callees": ["__builtin_expect", "putreg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs32_set.part.0",
+    "callees": ["__builtin_expect", "putreg32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_set_debugreg.part.0",
+    "callees": ["ptrace_write_dr7"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_get_debugreg.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_single_step_report",
+    "callees": ["send_sigtrap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "send_sigtrap",
+    "callees": ["force_sig_fault"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_user_regset_view",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_arch_ptrace",
+    "callees": ["ia32_arch_ptrace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ia32_arch_ptrace",
+    "callees": ["__builtin_expect", "arch_ptrace", "compat_ptrace_request", "copy_regset_from_user", "copy_regset_to_user", "getreg32", "putreg32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs32_set",
+    "callees": ["genregs32_set.part.0", "putreg32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs32_get",
+    "callees": ["__builtin_expect", "getreg32", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "getreg32",
+    "callees": ["get_flags", "ptrace_get_debugreg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putreg32",
+    "callees": ["ptrace_set_debugreg", "set_flags", "set_segment_reg", "x86_fsgsbase_read_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_ptrace",
+    "callees": ["__builtin_expect", "copy_regset_from_user", "copy_regset_to_user", "do_arch_prctl_64", "do_get_thread_area", "do_set_thread_area", "getreg", "ptrace_get_debugreg", "ptrace_request", "ptrace_set_debugreg", "putreg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_disable",
+    "callees": ["user_disable_single_step"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioperm_get",
+    "callees": ["membuf_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ioperm_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_set_debugreg",
+    "callees": ["ptrace_set_breakpoint_addr", "ptrace_set_debugreg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_set_breakpoint_addr",
+    "callees": ["__builtin_expect", "modify_user_hw_breakpoint", "ptrace_register_breakpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_get_debugreg",
+    "callees": ["ptrace_get_debugreg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_write_dr7",
+    "callees": ["__builtin_expect", "decode_dr7", "ptrace_get_dr7", "ptrace_modify_breakpoint", "ptrace_register_breakpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_modify_breakpoint",
+    "callees": ["modify_user_hw_breakpoint", "ptrace_fill_bp_fields"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_register_breakpoint",
+    "callees": ["hw_breakpoint_init", "ptrace_fill_bp_fields", "register_user_hw_breakpoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_fill_bp_fields",
+    "callees": ["arch_bp_generic_fields"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_get_dr7",
+    "callees": ["encode_dr7"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptrace_triggered",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs_set",
+    "callees": ["genregs_set.part.0", "putreg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genregs_get",
+    "callees": ["__builtin_expect", "getreg", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "getreg",
+    "callees": ["get_flags", "get_segment_reg", "x86_fsbase_read_task", "x86_gsbase_read_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "putreg",
+    "callees": ["set_flags", "set_segment_reg", "x86_fsbase_write_task", "x86_gsbase_write_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_flags",
+    "callees": ["clear_ti_thread_flag", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_flags",
+    "callees": ["test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_segment_reg",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_segment_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regs_query_register_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regs_query_register_offset",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_regset_xstate_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hw_breakpoint_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

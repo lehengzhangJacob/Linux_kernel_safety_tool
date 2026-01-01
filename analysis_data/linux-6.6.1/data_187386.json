@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_msg_send",
+    "callees": ["__drm_dev_dbg", "_dev_warn", "get_random_bytes", "intel_gsc_send_sync", "intel_gsc_uc_heci_cmd_emit_mtl_header", "memcpy", "memset", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_send_sync",
+    "callees": ["_dev_err", "intel_gsc_uc_heci_cmd_submit_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_fini",
+    "callees": ["intel_hdcp_gsc_free_message", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_init",
+    "callees": ["intel_hdcp_gsc_hdcp2_init", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_hdcp2_init",
+    "callees": ["_dev_err", "intel_hdcp_gsc_initialize_message", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_initialize_message",
+    "callees": ["__builtin_expect", "_dev_err", "i915_gem_object_create_shmem", "i915_gem_object_pin_map_unlocked", "i915_vma_instance", "i915_vma_pin", "intel_gt_coherent_map_type", "kref_put", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_close_session",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_enable_authentication",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_verify_mprime",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send", "kfree", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_repeater_check_flow_prepare_ack",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_get_session_key",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_verify_lprime",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_initiate_locality_check",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_store_pairing_info",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_verify_hprime",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_verify_receiver_cert_prepare_km",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_hdcp_initiate_session",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_hdcp_gsc_msg_send"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_hdcp_gsc_cs_required",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

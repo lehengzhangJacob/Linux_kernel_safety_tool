@@ -1,0 +1,386 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_pack",
+    "callees": ["hdmi_drm_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_pack",
+    "callees": ["hdmi_avi_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check_only",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check_only",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check_only",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check",
+    "callees": ["hdmi_vendor_infoframe_check_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_pack",
+    "callees": ["hdmi_audio_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_pack",
+    "callees": ["hdmi_spd_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_pack_only",
+    "callees": ["hdmi_vendor_infoframe_check_only", "hdmi_vendor_infoframe_pack_only.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_check",
+    "callees": ["hdmi_vendor_infoframe_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_pack_only",
+    "callees": ["hdmi_vendor_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_unpack_only.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_pack_only.part.0",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_infoframe_unpack",
+    "callees": ["hdmi_audio_infoframe_unpack", "hdmi_avi_infoframe_unpack", "hdmi_drm_infoframe_unpack", "hdmi_spd_infoframe_unpack", "hdmi_vendor_any_infoframe_unpack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_unpack",
+    "callees": ["hdmi_drm_infoframe_unpack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_unpack_only",
+    "callees": ["hdmi_drm_infoframe_init", "hdmi_drm_infoframe_unpack_only.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_unpack",
+    "callees": ["hdmi_vendor_infoframe_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_unpack",
+    "callees": ["hdmi_audio_infoframe_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_unpack",
+    "callees": ["hdmi_spd_infoframe_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_unpack",
+    "callees": ["hdmi_avi_infoframe_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_infoframe_log",
+    "callees": ["hdmi_audio_infoframe_log", "hdmi_avi_infoframe_log", "hdmi_drm_infoframe_log", "hdmi_spd_infoframe_log", "hdmi_vendor_any_infoframe_log"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_log",
+    "callees": ["_dev_printk", "hdmi_infoframe_log_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_log",
+    "callees": ["_dev_printk", "hdmi_infoframe_log_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_log",
+    "callees": ["_dev_printk", "hdmi_infoframe_log_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_log",
+    "callees": ["_dev_printk", "hdmi_infoframe_log_header", "memset", "strncpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_log",
+    "callees": ["_dev_printk", "hdmi_infoframe_log_header"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_infoframe_pack",
+    "callees": ["__warn_printk", "hdmi_audio_infoframe_pack", "hdmi_avi_infoframe_pack", "hdmi_drm_infoframe_pack", "hdmi_spd_infoframe_pack", "hdmi_vendor_any_infoframe_pack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_infoframe_pack_only",
+    "callees": ["__warn_printk", "hdmi_audio_infoframe_pack_only", "hdmi_avi_infoframe_pack_only", "hdmi_drm_infoframe_pack_only", "hdmi_spd_infoframe_pack_only", "hdmi_vendor_any_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_infoframe_check",
+    "callees": ["__warn_printk", "hdmi_vendor_any_infoframe_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_pack",
+    "callees": ["hdmi_vendor_any_infoframe_check", "hdmi_vendor_any_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_pack_only",
+    "callees": ["hdmi_vendor_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_any_infoframe_check",
+    "callees": ["hdmi_vendor_infoframe_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_pack",
+    "callees": ["hdmi_drm_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_pack_only",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_drm_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_pack",
+    "callees": ["hdmi_vendor_infoframe_check", "hdmi_vendor_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_pack_only",
+    "callees": ["hdmi_vendor_infoframe_check_only", "hdmi_vendor_infoframe_pack_only.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check",
+    "callees": ["hdmi_vendor_infoframe_check_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_check_only",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_vendor_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_pack_for_dp",
+    "callees": ["hdmi_audio_infoframe_pack_payload", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_pack",
+    "callees": ["hdmi_audio_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_pack_only",
+    "callees": ["hdmi_audio_infoframe_pack_payload", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_pack_payload",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_audio_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_pack",
+    "callees": ["hdmi_spd_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_pack_only",
+    "callees": ["memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_spd_infoframe_init",
+    "callees": ["memcpy", "memset", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_pack",
+    "callees": ["hdmi_avi_infoframe_pack_only"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_pack_only",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_check",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hdmi_avi_infoframe_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

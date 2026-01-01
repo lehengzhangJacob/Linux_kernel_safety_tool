@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ext4_encrypted_get_link.part.0",
+    "callees": ["__brelse", "__builtin_expect", "__ext4_error_inode", "ext4_bread", "ext4_inode_is_fast_symlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_get_link",
+    "callees": ["__builtin_expect", "__ext4_error_inode", "ext4_bread", "ext4_buffer_uptodate", "ext4_getblk", "ext4_read_inline_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_free_link",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_encrypted_symlink_getattr",
+    "callees": ["ext4_getattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_encrypted_get_link",
+    "callees": ["ext4_encrypted_get_link.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_buffer_uptodate",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

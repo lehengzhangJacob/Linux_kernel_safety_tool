@@ -1,0 +1,242 @@
+[
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9stat_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump",
+    "callees": ["__SCT__tp_func_9p_protocol_dump", "cpu_online", "trace_9p_protocol_dump.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump",
+    "callees": ["__SCT__tp_func_9p_protocol_dump", "cpu_online", "trace_9p_protocol_dump.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9dirent_read",
+    "callees": ["kfree", "p9pdu_readf", "strscpy", "trace_9p_protocol_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_finalize",
+    "callees": ["p9pdu_writef", "trace_9p_protocol_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_prepare",
+    "callees": ["p9pdu_writef"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9stat_read",
+    "callees": ["p9pdu_readf", "trace_9p_protocol_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_writef",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "p9pdu_vwritef"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_readf",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "p9pdu_vreadf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_vwritef",
+    "callees": ["__builtin_unreachable", "p9pdu_writef", "pdu_write", "pdu_write_u", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9pdu_vreadf",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__builtin_unreachable", "__kmalloc", "kfree", "kmalloc_array", "kmalloc_large", "kmalloc_trace", "memset", "p9pdu_readf", "p9stat_free", "pdu_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write_u",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_iter", "copy_overflow", "iov_iter_revert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pdu_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9stat_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p9_msg_buf_size",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "strcmp", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_9p_protocol_dump",
+    "callees": ["__SCT__tp_func_9p_protocol_dump", "cpu_online", "trace_9p_protocol_dump.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,344 @@
+[
+  {
+    "name": "tick_broadcast_switch_to_oneshot",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tick_broadcast_setup_oneshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_receive_broadcast",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_device_setup_broadcast_func.part.0",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "tick_device_setup_broadcast_func",
+    "callees": ["tick_device_setup_broadcast_func.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_set_oneshot_wakeup_device",
+    "callees": ["clockevents_exchange_device", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_start_periodic.part.0",
+    "callees": ["tick_setup_periodic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_start_periodic.part.0",
+    "callees": ["tick_setup_periodic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_start_periodic.part.0",
+    "callees": ["tick_setup_periodic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_broadcast.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "tick_device_setup_broadcast_func.part.0",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "tick_broadcast_start_periodic.part.0",
+    "callees": ["tick_setup_periodic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_oneshot_available",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_oneshot_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_oneshot_offline",
+    "callees": ["__builtin_constant_p", "tick_set_oneshot_wakeup_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hotplug_cpu__broadcast_tick_pull",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clockevents_program_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_switch_to_oneshot",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tick_broadcast_setup_oneshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_setup_oneshot",
+    "callees": ["__builtin_constant_p", "tick_broadcast_clear_oneshot", "tick_broadcast_init_next_event", "tick_broadcast_set_event", "tick_get_next_period"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_next_period",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": ["tick_next_period"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_clear_oneshot",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tick_broadcast_oneshot_control",
+    "callees": ["___tick_broadcast_oneshot_control", "tick_oneshot_wakeup_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "broadcast_shutdown_local",
+    "callees": ["clockevents_switch_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_handle_oneshot_broadcast",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "find_next_bit", "ktime_get", "tick_broadcast_set_event", "tick_do_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_check_oneshot_broadcast_this_cpu",
+    "callees": ["__builtin_constant_p", "clockevents_switch_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_set_event",
+    "callees": ["clockevents_program_event", "clockevents_switch_state", "tick_broadcast_set_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_set_affinity",
+    "callees": ["irq_set_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_check_broadcast_expired",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_broadcast_oneshot_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_resume_broadcast",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clockevents_switch_state", "clockevents_tick_resume", "tick_broadcast_start_periodic.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_resume_check_broadcast",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_suspend_broadcast",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clockevents_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_offline",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock", "_raw_spin_unlock", "tick_broadcast_oneshot_offline", "tick_shutdown_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_shutdown_broadcast",
+    "callees": ["clockevents_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_set_periodic_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_control",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clockevents_shutdown", "tick_broadcast_setup_oneshot", "tick_broadcast_start_periodic.part.0", "tick_setup_periodic"],
+    "global_reads": ["tick_broadcast_forced"],
+    "global_writes": ["tick_broadcast_forced"]
+  },
+  {
+    "name": "tick_handle_periodic_broadcast",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "clockevents_program_event", "tick_do_periodic_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_do_periodic_broadcast",
+    "callees": ["tick_do_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_receive_broadcast",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_device_uses_broadcast",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clockevents_shutdown", "tick_broadcast_clear_oneshot", "tick_broadcast_setup_oneshot", "tick_broadcast_start_periodic.part.0", "tick_device_setup_broadcast_func"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_device_setup_broadcast_func",
+    "callees": ["tick_device_setup_broadcast_func.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "err_broadcast",
+    "callees": ["__builtin_expect", "err_broadcast.part.0"],
+    "global_reads": ["__already_done"],
+    "global_writes": []
+  },
+  {
+    "name": "tick_broadcast_update_freq",
+    "callees": ["__clockevents_update_freq", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_is_broadcast_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_install_broadcast_device",
+    "callees": ["clockevents_exchange_device", "tick_broadcast_start_periodic.part.0", "tick_broadcast_switch_to_oneshot", "tick_check_broadcast_device", "tick_clock_notify", "tick_set_oneshot_wakeup_device", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_set_oneshot_wakeup_device",
+    "callees": ["clockevents_exchange_device", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_oneshot_wakeup_handler",
+    "callees": ["tick_receive_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_check_broadcast_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_wakeup_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_broadcast_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tick_get_broadcast_device",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "huc_is_fully_authenticated.part.0",
+    "callees": ["intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_is_fully_authenticated",
+    "callees": ["huc_is_fully_authenticated.part.0", "intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_complete",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_complete",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_init_error",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_complete",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_complete",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_init_error",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_is_fully_authenticated.part.0",
+    "callees": ["intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_delayed_load_timer_callback.part.0",
+    "callees": ["__warn_printk", "_dev_notice", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_load_status",
+    "callees": ["drm_printf", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked", "intel_uc_fw_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_update_auth_status",
+    "callees": ["huc_delayed_load_start", "huc_is_fully_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_check_status",
+    "callees": ["huc_is_fully_authenticated", "intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_is_fully_authenticated",
+    "callees": ["huc_is_fully_authenticated.part.0", "intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_is_authenticated",
+    "callees": ["intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_auth",
+    "callees": ["__warn_printk", "_dev_err", "intel_guc_auth_huc", "intel_huc_fw_auth_via_gsccs", "intel_huc_is_authenticated", "intel_huc_wait_for_auth_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_wait_for_auth_complete",
+    "callees": ["__intel_wait_for_register", "_dev_err", "_dev_info", "delayed_huc_load_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_suspend",
+    "callees": ["delayed_huc_load_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_fini",
+    "callees": ["delayed_huc_load_complete", "i915_vma_unpin_and_release", "intel_uc_fw_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_init",
+    "callees": ["__builtin_expect", "_dev_info", "check_huc_loading_mode", "i915_vma_unpin_and_release", "intel_guc_allocate_vma", "intel_uc_fw_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_huc_loading_mode",
+    "callees": ["__drm_dev_dbg", "_dev_err", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_init_early",
+    "callees": ["delayed_huc_load_init", "intel_uc_fw_init_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_sanitize",
+    "callees": ["delayed_huc_load_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_init",
+    "callees": ["__i915_sw_fence_init", "hrtimer_init", "i915_sw_fence_commit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_unregister_gsc_notifier",
+    "callees": ["bus_unregister_notifier", "delayed_huc_load_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_huc_register_gsc_notifier",
+    "callees": ["_dev_err", "bus_register_notifier", "gsc_init_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_notifier",
+    "callees": ["_dev_info", "gsc_init_done", "gsc_init_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_delayed_load_start",
+    "callees": ["gsc_init_error", "hrtimer_start_range_ns", "i915_sw_fence_await", "i915_sw_fence_commit", "i915_sw_fence_reinit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "huc_delayed_load_timer_callback",
+    "callees": ["huc_delayed_load_timer_callback.part.0", "intel_huc_is_authenticated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_init_done",
+    "callees": ["hrtimer_cancel", "hrtimer_start_range_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_init_error",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_huc_load_complete",
+    "callees": ["hrtimer_cancel", "i915_sw_fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sw_fence_dummy_notify",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

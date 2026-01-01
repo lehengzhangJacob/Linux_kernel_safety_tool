@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cipher_crypt_one",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_clone_cipher",
+    "callees": ["__builtin_expect", "__crypto_alloc_tfmgfp", "crypto_mod_get", "crypto_mod_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cipher_decrypt_one",
+    "callees": ["cipher_crypt_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cipher_encrypt_one",
+    "callees": ["cipher_crypt_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cipher_crypt_one",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_cipher_setkey",
+    "callees": ["setkey_unaligned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setkey_unaligned",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

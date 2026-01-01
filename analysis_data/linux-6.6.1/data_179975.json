@@ -1,0 +1,68 @@
+[
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_dns_resolver",
+    "callees": ["key_revoke", "put_cred", "unregister_key_type"],
+    "global_reads": ["dns_resolver_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "init_dns_resolver",
+    "callees": ["__builtin_expect", "_printk", "key_put", "keyring_alloc", "prepare_kernel_cred", "put_cred", "register_key_type"],
+    "global_reads": ["dns_resolver_debug"],
+    "global_writes": ["dns_resolver_cache"]
+  },
+  {
+    "name": "dns_resolver_read",
+    "callees": ["user_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dns_resolver_describe",
+    "callees": ["dns_resolver_describe.part.0", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dns_resolver_match_preparse",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dns_resolver_cmp",
+    "callees": ["__builtin_expect", "_printk", "strcasecmp", "strlen", "strncasecmp"],
+    "global_reads": ["dns_resolver_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "dns_resolver_free_preparse",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dns_resolver_preparse",
+    "callees": ["___ratelimit", "__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "_printk", "kmalloc_large", "kmalloc_trace", "kstrtoull", "memchr", "memcmp", "memcpy"],
+    "global_reads": ["dns_resolver_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

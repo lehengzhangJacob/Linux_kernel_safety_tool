@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_regset_to_user",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "__regset_get", "_copy_to_user", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_get_alloc",
+    "callees": ["__regset_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_get",
+    "callees": ["__regset_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__regset_get",
+    "callees": ["kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

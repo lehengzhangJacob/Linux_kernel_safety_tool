@@ -1,0 +1,1598 @@
+[
+  {
+    "name": "serial8250_clear_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put_tx",
+    "callees": ["serial8250_rpm_put_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx.part.0",
+    "callees": ["serial8250_clear_THRI", "serial8250_rpm_put_tx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx",
+    "callees": ["__stop_tx.part.0", "__stop_tx_rs485", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put_tx",
+    "callees": ["serial8250_rpm_put_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx.part.0",
+    "callees": ["serial8250_clear_THRI", "serial8250_rpm_put_tx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx",
+    "callees": ["__stop_tx.part.0", "__stop_tx_rs485", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rx_chars",
+    "callees": ["serial8250_read_char", "tty_flip_buffer_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put_tx",
+    "callees": ["serial8250_rpm_put_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx.part.0",
+    "callees": ["serial8250_clear_THRI", "serial8250_rpm_put_tx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx",
+    "callees": ["__stop_tx.part.0", "__stop_tx_rs485", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_get_baud_rate",
+    "callees": ["uart_get_baud_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl.part.0",
+    "callees": ["serial8250_do_set_mctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl",
+    "callees": ["serial8250_set_mctrl.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_get_baud_rate",
+    "callees": ["uart_get_baud_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__start_tx.part.0",
+    "callees": ["serial_icr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__start_tx",
+    "callees": ["__start_tx.part.0", "serial8250_set_THRI", "serial8250_tx_chars", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_io_from_upio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl.part.0",
+    "callees": ["serial8250_do_set_mctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl",
+    "callees": ["serial8250_set_mctrl.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_divisor",
+    "callees": ["serial8250_do_set_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_divisor",
+    "callees": ["serial8250_do_set_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_stop_rx",
+    "callees": ["serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_release_std_resource",
+    "callees": ["__release_region", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl.part.0",
+    "callees": ["serial8250_do_set_mctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl",
+    "callees": ["serial8250_set_mctrl.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_and_reinit_fifos",
+    "callees": ["serial8250_clear_fifos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put_tx",
+    "callees": ["serial8250_rpm_put_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_destroy",
+    "callees": ["hrtimer_cancel", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get_tx",
+    "callees": ["serial8250_rpm_get_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_lsr",
+    "callees": ["__const_udelay", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_xmitr.part.0",
+    "callees": ["__const_udelay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__start_tx.part.0",
+    "callees": ["serial_icr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx.part.0",
+    "callees": ["serial8250_clear_THRI", "serial8250_rpm_put_tx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_pm.part.0",
+    "callees": ["serial8250_set_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_set_ldisc.part.0",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "serial8250_disable_ms"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_enable_ms.part.0",
+    "callees": ["serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put.part.0",
+    "callees": ["__pm_runtime_suspend", "ktime_get_mono_fast_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl.part.0",
+    "callees": ["serial8250_do_set_mctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_IER.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_exit",
+    "callees": ["__pm_runtime_idle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_setup",
+    "callees": ["__pm_runtime_resume", "probe_baud", "uart_parse_options", "uart_set_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "probe_baud",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_write",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__const_udelay", "__udelay", "_raw_spin_lock_irqsave", "_raw_spin_trylock", "_raw_spin_unlock_irqrestore", "serial8250_clear_IER", "serial8250_console_fifo_write", "serial8250_console_restore", "serial8250_modem_status", "uart_console_write", "wait_for_xmitr"],
+    "global_reads": ["oops_in_progress"],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_fifo_write",
+    "callees": ["wait_for_lsr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_restore",
+    "callees": ["serial8250_get_baud_rate", "serial8250_get_divisor", "serial8250_set_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_console_putchar",
+    "callees": ["wait_for_xmitr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_defaults",
+    "callees": ["set_io_from_upio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_init_port",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_verify_port",
+    "callees": [],
+    "global_reads": ["nr_irqs"],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_config_port",
+    "callees": ["autoconfig", "autoconfig_irq", "serial8250_release_std_resource", "serial8250_request_std_resource", "set_io_from_upio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rx_trig_bytes_store",
+    "callees": ["do_serial8250_set_rxtrig", "kstrtou8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_serial8250_set_rxtrig",
+    "callees": ["do_set_rxtrig", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_set_rxtrig",
+    "callees": ["bytes_to_fcr_rxtrig", "serial8250_clear_fifos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rx_trig_bytes_show",
+    "callees": ["do_serial8250_get_rxtrig", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_serial8250_get_rxtrig",
+    "callees": ["do_get_rxtrig", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_get_rxtrig",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_request_port",
+    "callees": ["serial8250_request_std_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_release_port",
+    "callees": ["serial8250_release_std_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_release_std_resource",
+    "callees": ["__release_region", "iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_request_std_resource",
+    "callees": ["__release_region", "__request_region", "ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_pm",
+    "callees": ["serial8250_pm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_pm",
+    "callees": ["serial8250_set_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_ldisc",
+    "callees": ["serial8250_do_set_ldisc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_set_ldisc",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "serial8250_do_set_ldisc.part.0", "serial8250_enable_ms"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_termios",
+    "callees": ["serial8250_do_set_termios"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_set_termios",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serial8250_compute_lcr", "serial8250_get_baud_rate", "serial8250_get_divisor", "serial8250_rpm_get", "serial8250_rpm_put", "serial8250_set_divisor", "serial8250_set_mctrl", "tty_termios_baud_rate", "tty_termios_encode_baud_rate", "uart_update_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_update_uartclk",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "down_write", "mutex_lock", "mutex_unlock", "serial8250_get_baud_rate", "serial8250_get_divisor", "serial8250_rpm_get", "serial8250_rpm_put", "serial8250_set_divisor", "tty_kref_put", "tty_port_tty_get", "uart_update_timeout", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_get_baud_rate",
+    "callees": ["uart_get_baud_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_divisor",
+    "callees": ["serial8250_do_set_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_set_divisor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_get_divisor",
+    "callees": ["serial8250_do_get_divisor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_shutdown",
+    "callees": ["serial8250_do_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_shutdown",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_rsa", "serial8250_clear_fifos", "serial8250_release_dma", "serial8250_rpm_get", "serial8250_rpm_put", "serial8250_set_mctrl", "synchronize_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_startup",
+    "callees": ["serial8250_do_startup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_startup",
+    "callees": ["___ratelimit", "__const_udelay", "_dev_err", "_dev_info", "_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "disable_irq_nosync", "enable_irq", "enable_rsa", "serial8250_clear_fifos", "serial8250_request_dma", "serial8250_rpm_get", "serial8250_rpm_put", "serial8250_set_mctrl", "serial_icr_write", "serial_port_out_sync", "set_io_from_upio", "slow_down_io", "wait_for_xmitr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_xmitr",
+    "callees": ["wait_for_lsr", "wait_for_xmitr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_lsr",
+    "callees": ["__const_udelay", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_break_ctl",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_mctrl",
+    "callees": ["serial8250_set_mctrl.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_set_mctrl",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_get_mctrl",
+    "callees": ["serial8250_do_get_mctrl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_do_get_mctrl",
+    "callees": ["serial8250_MSR_to_TIOCM", "serial8250_modem_status", "serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_tx_empty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serial8250_rpm_get", "serial8250_rpm_put", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_tx_threshold_handle_irq",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serial8250_handle_irq", "serial8250_tx_chars"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_default_handle_irq",
+    "callees": ["serial8250_handle_irq", "serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_handle_irq",
+    "callees": ["__stop_tx", "_raw_spin_lock_irqsave", "handle_rx_dma", "irq_get_irq_data", "pm_wakeup_dev_event", "serial8250_modem_status", "serial8250_rx_chars", "serial8250_tx_chars", "serial_lsr_in", "uart_unlock_and_check_sysrq_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_rx_dma",
+    "callees": ["serial8250_rx_dma_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_modem_status",
+    "callees": ["__wake_up", "uart_handle_cts_change", "uart_handle_dcd_change"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_tx_chars",
+    "callees": ["__stop_tx", "serial8250_stop_tx", "uart_write_wakeup", "uart_xchar_out"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rx_chars",
+    "callees": ["serial8250_read_char", "tty_flip_buffer_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_read_char",
+    "callees": ["__builtin_expect", "uart_handle_break", "uart_insert_char", "uart_prepare_sysrq_char"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_enable_ms",
+    "callees": ["serial8250_enable_ms.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_disable_ms",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_unthrottle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_throttle",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_start_tx",
+    "callees": ["__start_tx", "serial8250_rpm_get_tx", "start_tx_rs485"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_handle_start_tx",
+    "callees": ["__start_tx", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "start_tx_rs485",
+    "callees": ["hrtimer_start_range_ns", "hrtimer_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_start_tx",
+    "callees": ["serial8250_in_MCR", "serial8250_stop_rx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__start_tx",
+    "callees": ["__start_tx.part.0", "serial8250_set_THRI", "serial8250_tx_chars", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_stop_tx",
+    "callees": ["__stop_tx", "serial8250_rpm_get", "serial8250_rpm_put", "serial_icr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx",
+    "callees": ["__stop_tx.part.0", "__stop_tx_rs485", "serial_lsr_in"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__stop_tx_rs485",
+    "callees": ["hrtimer_start_range_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_handle_stop_tx",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_stop_tx",
+    "callees": ["serial8250_clear_and_reinit_fifos", "serial8250_in_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_stop_rx",
+    "callees": ["serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig_irq",
+    "callees": ["__const_udelay", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "console_lock", "console_unlock", "probe_irq_off", "probe_irq_on", "serial8250_in_MCR", "slow_down_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig",
+    "callees": ["__enable_rsa", "_dev_warn", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "autoconfig_16550a", "autoconfig_8250", "serial8250_clear_IER", "serial8250_clear_fifos", "serial8250_in_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig_16550a",
+    "callees": ["autoconfig_has_efr", "broken_efr", "ns16550a_goto_highspeed", "serial8250_in_MCR", "size_fifo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "broken_efr",
+    "callees": ["autoconfig_read_divisor_id", "size_fifo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig_8250",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig_has_efr",
+    "callees": ["autoconfig_read_divisor_id", "serial_icr_read", "size_fifo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "autoconfig_read_divisor_id",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "size_fifo",
+    "callees": ["__const_udelay", "serial8250_in_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_rsa",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "enable_rsa",
+    "callees": ["__enable_rsa", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__enable_rsa",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_IER",
+    "callees": ["serial8250_clear_IER.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_sleep",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "serial8250_rpm_get", "serial8250_rpm_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put_tx",
+    "callees": ["serial8250_rpm_put_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get_tx",
+    "callees": ["serial8250_rpm_get_tx.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_config",
+    "callees": ["serial8250_em485_destroy", "serial8250_em485_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_destroy",
+    "callees": ["hrtimer_cancel", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_em485_init",
+    "callees": ["__builtin_return_address", "hrtimer_init", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_put",
+    "callees": ["serial8250_rpm_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_rpm_get",
+    "callees": ["serial8250_rpm_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_and_reinit_fifos",
+    "callees": ["serial8250_clear_fifos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_fifos",
+    "callees": ["serial8250_clear_fifos.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_io_from_upio",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem32be_serial_in",
+    "callees": ["ioread32be"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem32be_serial_out",
+    "callees": ["iowrite32be"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem32_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem32_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem16_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem16_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mem_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hub6_serial_out",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hub6_serial_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_serial_dl_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_serial_dl_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ns16550a_goto_highspeed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_in_MCR",
+    "callees": ["serial8250_TIOCM_to_MCR"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_MSR_to_TIOCM",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_TIOCM_to_MCR",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_clear_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial8250_set_THRI",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_read",
+    "callees": ["serial_icr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_icr_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_lsr_in",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uart_handle_break",
+    "callees": ["do_SAK"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "uart_unlock_and_check_sysrq_irqrestore",
+    "callees": ["_raw_spin_unlock_irqrestore", "handle_sysrq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uart_prepare_sysrq_char",
+    "callees": ["sysrq_mask", "uart_try_toggle_sysrq"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "slow_down_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

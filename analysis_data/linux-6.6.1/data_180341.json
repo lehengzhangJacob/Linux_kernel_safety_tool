@@ -1,0 +1,62 @@
+[
+  {
+    "name": "rpc_ntop.part.0",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_uaddr2sockaddr",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "kstrtou8", "memcpy", "rpc_pton", "strlen", "strrchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_sockaddr2uaddr",
+    "callees": ["__builtin_bswap16", "kstrdup", "rpc_ntop6_noscopeid", "snprintf", "strlcat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pton",
+    "callees": ["rpc_pton4", "rpc_pton6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pton6",
+    "callees": ["in6_pton", "memset", "rpc_parse_scope_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_parse_scope_id",
+    "callees": ["__ipv6_addr_type", "dev_get_by_name", "kstrtouint", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_pton4",
+    "callees": ["in4_pton", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_ntop",
+    "callees": ["rpc_ntop.part.0", "rpc_ntop6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_ntop6",
+    "callees": ["__builtin_expect", "__ipv6_addr_type", "rpc_ntop6_noscopeid", "snprintf", "strcat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_ntop6_noscopeid",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

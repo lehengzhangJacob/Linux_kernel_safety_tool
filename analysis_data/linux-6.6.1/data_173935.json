@@ -1,0 +1,38 @@
+[
+  {
+    "name": "acpi_rs_create_aml_resources",
+    "callees": ["acpi_rs_convert_resources_to_aml", "acpi_rs_get_aml_length", "acpi_ut_initialize_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_create_pci_routing_table",
+    "callees": ["acpi_error", "acpi_ns_handle_to_pathname", "acpi_rs_get_pci_routing_table_length", "acpi_ut_get_object_type_name", "acpi_ut_initialize_buffer", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_rs_create_resource_list",
+    "callees": ["acpi_rs_get_list_length", "acpi_ut_initialize_buffer", "acpi_ut_walk_aml_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_buffer_to_resource",
+    "callees": ["acpi_os_allocate_zeroed", "acpi_rs_get_list_length", "acpi_ut_walk_aml_resources", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

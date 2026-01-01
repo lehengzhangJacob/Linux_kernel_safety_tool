@@ -1,0 +1,92 @@
+[
+  {
+    "name": "inet4_pton",
+    "callees": ["__builtin_bswap16", "in4_pton", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdigit2bin",
+    "callees": ["hex_to_bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_proto_csum_replace_by_diff.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_proto_csum_replace_by_diff",
+    "callees": ["inet_proto_csum_replace_by_diff.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_proto_csum_replace16",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_proto_csum_replace4",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_addr_is_any",
+    "callees": ["_printk", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_pton_with_scope",
+    "callees": ["_printk", "inet4_pton", "inet6_pton", "kstrtou16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet6_pton",
+    "callees": ["__builtin_bswap16", "__ipv6_addr_type", "dev_get_by_name", "in6_pton", "kstrtouint", "memcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet4_pton",
+    "callees": ["__builtin_bswap16", "in4_pton", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in6_pton",
+    "callees": ["in4_pton", "memset", "strlen", "xdigit2bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in4_pton",
+    "callees": ["strlen", "xdigit2bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xdigit2bin",
+    "callees": ["hex_to_bin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in_aton",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ratelimit",
+    "callees": ["___ratelimit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

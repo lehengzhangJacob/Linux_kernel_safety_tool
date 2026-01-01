@@ -1,0 +1,374 @@
+[
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_disable_receiver",
+    "callees": ["e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_strings.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_wol.part.0",
+    "callees": ["netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_ethtool_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_strings",
+    "callees": ["e1000_get_strings.part.0", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_ethtool_stats",
+    "callees": ["__builtin_expect", "__warn_printk", "e1000_update_stats", "netdev_name", "netdev_reg_state"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "e1000_nway_reset",
+    "callees": ["__builtin_constant_p", "e1000_reinit_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_coalesce",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_coalesce",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_phys_id",
+    "callees": ["e1000_cleanup_led", "e1000_led_off", "e1000_led_on", "e1000_setup_led"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_wol",
+    "callees": ["device_set_wakeup_enable", "e1000_wol_exclusion", "netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_wol",
+    "callees": ["e1000_get_wol.part.0", "e1000_wol_exclusion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_wol_exclusion",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_diag_test",
+    "callees": ["__builtin_constant_p", "e1000_close", "e1000_eeprom_test", "e1000_intr_test", "e1000_link_test", "e1000_loopback_test", "e1000_open", "e1000_power_up_phy", "e1000_reg_test", "e1000_reset", "msleep_interruptible", "netdev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_sset_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_link_test",
+    "callees": ["e1000_check_for_link", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_loopback_test",
+    "callees": ["e1000_free_desc_rings", "e1000_loopback_cleanup", "e1000_run_loopback_test", "e1000_setup_desc_rings", "e1000_setup_loopback_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_run_loopback_test",
+    "callees": ["__builtin_expect", "dma_sync_single_for_cpu", "dma_sync_single_for_device", "e1000_check_lbtest_frame", "e1000_create_lbtest_frame", "msleep"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_loopback_cleanup",
+    "callees": ["e1000_phy_reset", "e1000_read_phy_reg", "e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_setup_loopback_test",
+    "callees": ["e1000_set_phy_loopback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_phy_loopback",
+    "callees": ["e1000_integrated_phy_loopback", "e1000_nonintegrated_phy_loopback", "e1000_read_phy_reg", "e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_integrated_phy_loopback",
+    "callees": ["__const_udelay", "e1000_phy_disable_receiver", "e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_nonintegrated_phy_loopback",
+    "callees": ["__const_udelay", "e1000_phy_disable_receiver", "e1000_phy_reset", "e1000_phy_reset_clk_and_crs", "e1000_read_phy_reg", "e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_reset_clk_and_crs",
+    "callees": ["e1000_read_phy_reg", "e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_phy_disable_receiver",
+    "callees": ["e1000_write_phy_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_setup_desc_rings",
+    "callees": ["__alloc_skb", "__builtin_expect", "dma_alloc_attrs", "dma_map_single_attrs", "e1000_free_desc_rings", "kmalloc_array", "kzalloc", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_free_desc_rings",
+    "callees": ["consume_skb", "dma_free_attrs", "dma_unmap_page_attrs", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_intr_test",
+    "callees": ["free_irq", "msleep", "netdev_info", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_test_intr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_eeprom_test",
+    "callees": ["e1000_read_eeprom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_reg_test",
+    "callees": ["netdev_err", "reg_pattern_test", "reg_set_and_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_set_and_check",
+    "callees": ["netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_pattern_test",
+    "callees": ["netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_ringparam",
+    "callees": ["__builtin_constant_p", "e1000_down", "e1000_free_all_rx_resources", "e1000_free_all_tx_resources", "e1000_setup_all_rx_resources", "e1000_setup_all_tx_resources", "e1000_up", "kfree", "kmalloc_array", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_ringparam",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_drvinfo",
+    "callees": ["strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_eeprom",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "e1000_read_eeprom", "e1000_update_eeprom_checksum", "e1000_write_eeprom", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_eeprom",
+    "callees": ["e1000_read_eeprom", "kfree", "kmalloc_array", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_eeprom_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_regs",
+    "callees": ["e1000_read_phy_reg", "e1000_write_phy_reg", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_regs_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_msglevel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_pauseparam",
+    "callees": ["__builtin_constant_p", "e1000_down", "e1000_force_mac_fc", "e1000_reset", "e1000_setup_link", "e1000_up", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_pauseparam",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_link",
+    "callees": ["e1000_has_link", "netif_carrier_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_set_link_ksettings",
+    "callees": ["__builtin_constant_p", "e1000_down", "e1000_reset", "e1000_set_spd_dplx", "e1000_up", "ethtool_convert_link_mode_to_legacy_u32", "msleep", "netdev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000_get_link_ksettings",
+    "callees": ["e1000_get_speed_and_duplex", "ethtool_convert_legacy_u32_to_link_mode", "netif_carrier_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netdev_reg_state",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "netdev_name",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

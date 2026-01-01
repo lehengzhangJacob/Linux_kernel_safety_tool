@@ -1,0 +1,62 @@
+[
+  {
+    "name": "snapshot_compat_ioctl.part.0",
+    "callees": ["snapshot_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_device_init",
+    "callees": ["misc_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_compat_ioctl",
+    "callees": ["snapshot_compat_ioctl.part.0", "snapshot_ioctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_ioctl",
+    "callees": ["__builtin_expect", "alloc_swapdev_block", "capable", "count_swap_pages", "create_basic_memory_bitmaps", "free_all_swap_pages", "free_basic_memory_bitmaps", "freeze_processes", "hibernation_platform_enter", "hibernation_restore", "hibernation_snapshot", "ksys_sync_helper", "lock_device_hotplug", "memset", "mutex_trylock", "mutex_unlock", "pm_restore_gfp_mask", "snapshot_get_image_size", "snapshot_image_loaded", "snapshot_set_swap_area", "snapshot_write_finalize", "suspend_devices_and_enter", "swsusp_free", "thaw_kernel_threads", "thaw_processes", "unlock_device_hotplug", "wait_for_device_probe"],
+    "global_reads": ["freezer_test_done", "in_suspend", "need_wait"],
+    "global_writes": ["freezer_test_done", "image_size", "need_wait"]
+  },
+  {
+    "name": "snapshot_set_swap_area",
+    "callees": ["_copy_from_user", "swap_type_of", "swsusp_swap_in_use"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_write",
+    "callees": ["lock_system_sleep", "simple_write_to_buffer", "snapshot_write_next", "unlock_system_sleep", "wait_for_device_probe"],
+    "global_reads": ["need_wait"],
+    "global_writes": ["need_wait"]
+  },
+  {
+    "name": "snapshot_read",
+    "callees": ["lock_system_sleep", "simple_read_from_buffer", "snapshot_read_next", "unlock_system_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_release",
+    "callees": ["free_all_swap_pages", "free_basic_memory_bitmaps", "hibernate_release", "lock_system_sleep", "pm_notifier_call_chain", "pm_restore_gfp_mask", "swsusp_free", "thaw_processes", "unlock_system_sleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snapshot_open",
+    "callees": ["create_basic_memory_bitmaps", "hibernate_acquire", "hibernate_release", "hibernation_available", "lock_system_sleep", "memset", "nonseekable_open", "pm_notifier_call_chain_robust", "swap_type_of", "unlock_system_sleep"],
+    "global_reads": ["swsusp_resume_device"],
+    "global_writes": ["need_wait"]
+  },
+  {
+    "name": "is_hibernate_resume_dev",
+    "callees": ["hibernation_available"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

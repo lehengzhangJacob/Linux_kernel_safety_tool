@@ -1,0 +1,188 @@
+[
+  {
+    "name": "delete_and_unsubscribe_port",
+    "callees": ["__delete_and_unsubscribe_port", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_and_unsubscribe_port",
+    "callees": ["__delete_and_unsubscribe_port", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_and_unsubscribe_port",
+    "callees": ["__delete_and_unsubscribe_port", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_subs_info.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "port_subs_info_init",
+    "callees": ["__init_rwsem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_subs_info",
+    "callees": ["match_subs_info.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_subs_info.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_event_port_detach",
+    "callees": ["memset", "snd_seq_kernel_client_ctl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_event_port_attach",
+    "callees": ["memset", "snd_seq_kernel_client_ctl", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_port_get_subscription",
+    "callees": ["down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_port_disconnect",
+    "callees": ["__delete_and_unsubscribe_port", "delete_and_unsubscribe_port", "down_write", "kfree", "match_subs_info", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_port_connect",
+    "callees": ["check_and_subscribe_port", "delete_and_unsubscribe_port", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_and_unsubscribe_port",
+    "callees": ["__delete_and_unsubscribe_port", "down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__delete_and_unsubscribe_port",
+    "callees": ["_raw_write_lock_irq", "_raw_write_unlock_irq", "unsubscribe_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_and_subscribe_port",
+    "callees": ["_raw_write_lock_irq", "_raw_write_unlock_irq", "down_write", "match_subs_info", "subscribe_port", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_subs_info",
+    "callees": ["match_subs_info.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "subscribe_port",
+    "callees": ["module_put", "snd_seq_client_notify_subscription", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_get_port_info",
+    "callees": ["__builtin_expect", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_set_port_info",
+    "callees": ["__builtin_expect", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_delete_all_ports",
+    "callees": ["_raw_write_lock_irq", "_raw_write_unlock_irq", "mutex_lock", "mutex_unlock", "port_delete", "snd_seq_system_broadcast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_delete_port",
+    "callees": ["_raw_write_lock_irq", "_raw_write_unlock_irq", "mutex_lock", "mutex_unlock", "port_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "port_delete",
+    "callees": ["clear_subscriber_list", "kfree", "snd_use_lock_sync_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_subscriber_list",
+    "callees": ["delete_and_unsubscribe_port", "get_client_port", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_client_port",
+    "callees": ["snd_seq_client_use_ptr", "snd_seq_port_use_ptr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_create_port",
+    "callees": ["__builtin_expect", "_printk", "_raw_write_lock_irq", "_raw_write_unlock_irq", "kfree", "kzalloc", "mutex_lock", "mutex_unlock", "port_subs_info_init", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "port_subs_info_init",
+    "callees": ["__init_rwsem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_port_query_nearest",
+    "callees": ["_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_seq_port_use_ptr",
+    "callees": ["_raw_read_lock", "_raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

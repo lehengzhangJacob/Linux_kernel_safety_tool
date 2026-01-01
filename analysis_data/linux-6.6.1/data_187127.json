@@ -1,0 +1,272 @@
+[
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_dump",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_copy_rsa",
+    "callees": ["__builtin_expect", "__kunmap_atomic", "i915_gem_object_has_struct_page", "io_mapping_unmap_atomic", "kmap_atomic", "memcpy", "memcpy_fromio"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_cleanup_fetch",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_resume_mapping",
+    "callees": ["uc_fw_bind_ggtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_fini",
+    "callees": ["i915_vma_unpin_and_release", "uc_fw_unbind_ggtt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_init",
+    "callees": ["____uc_fw_to_gt", "__drm_dev_dbg", "i915_gem_object_pin_pages_unlocked", "uc_fw_bind_ggtt", "uc_fw_rsa_data_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_fw_rsa_data_create",
+    "callees": ["____uc_fw_to_gt", "__builtin_expect", "i915_gem_object_pin_map_unlocked", "i915_vma_unpin_and_release", "intel_gt_coherent_map_type", "intel_guc_allocate_vma", "intel_uc_fw_copy_rsa"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_upload",
+    "callees": ["intel_uc_fw_mark_load_failed", "uc_fw_xfer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_mark_load_failed",
+    "callees": ["____uc_fw_to_gt", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_fw_xfer",
+    "callees": ["____uc_fw_to_gt", "__builtin_constant_p", "__compiletime_assert_525", "__compiletime_assert_526", "__compiletime_assert_528", "__intel_wait_for_register_fw", "_dev_err", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_fw_unbind_ggtt",
+    "callees": ["____uc_fw_to_gt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_fw_bind_ggtt",
+    "callees": ["____uc_fw_to_gt", "drm_clflush_sg", "i915_gem_get_pat_index", "i915_gem_object_has_struct_page", "i915_gem_object_is_lmem", "uc_fw_ggtt_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uc_fw_ggtt_offset",
+    "callees": ["____uc_fw_to_gt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_fetch",
+    "callees": ["____uc_fw_to_gt", "__builtin_expect", "__uc_fw_auto_select", "_dev_err", "_dev_info", "_dev_notice", "check_fw_header", "guc_check_version_range", "i915_gem_object_create_lmem_from_data", "i915_gem_object_create_shmem_from_data", "intel_uc_check_file_version", "memcpy", "release_firmware", "try_firmware_load"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_check_file_version",
+    "callees": ["____uc_fw_to_gt", "_dev_notice", "check_mtl_huc_guc_compatibility"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_mtl_huc_guc_compatibility",
+    "callees": ["_dev_info", "_dev_notice"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_firmware_load",
+    "callees": ["____uc_fw_to_gt", "_dev_err", "firmware_request_nowarn", "release_firmware"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_fw_header",
+    "callees": ["__check_ccs_header", "check_gsc_manifest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_check_version_range",
+    "callees": ["____uc_fw_to_gt", "_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_gsc_manifest",
+    "callees": ["__check_ccs_header", "__warn_printk", "intel_gsc_fw_get_binary_info", "intel_huc_fw_get_binary_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__check_ccs_header",
+    "callees": ["__builtin_expect", "_dev_warn", "guc_read_css_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_read_css_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_init_early",
+    "callees": ["____uc_fw_to_gt", "__uc_fw_auto_select", "__uc_fw_user_override", "validate_fw_table_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_uc_fw_version_from_gsc_manifest",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uc_fw_user_override",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_fw_table_type",
+    "callees": ["_dev_err", "intel_platform_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__uc_fw_auto_select",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "____uc_fw_to_gt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost.part.0",
+    "callees": ["acpi_evaluate_ost"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost",
+    "callees": ["acpi_has_method", "acpi_processor_ppc_ost.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost.part.0",
+    "callees": ["acpi_evaluate_ost"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost",
+    "callees": ["acpi_has_method", "acpi_processor_ppc_ost.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost.part.0",
+    "callees": ["acpi_evaluate_ost"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_unregister_performance",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_register_performance",
+    "callees": ["__builtin_expect", "acpi_processor_get_performance_info", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["acpi_processor_cpufreq_init"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_preregister_performance",
+    "callees": ["__builtin_constant_p", "acpi_processor_get_psd", "find_next_bit", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_psd",
+    "callees": ["_printk", "acpi_evaluate_object", "acpi_extract_package", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_notify_smm",
+    "callees": ["acpi_processor_pstate_control", "module_put", "try_module_get"],
+    "global_reads": ["acpi_processor_cpufreq_init", "acpi_processor_ppc_in_use", "is_done"],
+    "global_writes": ["is_done"]
+  },
+  {
+    "name": "acpi_processor_pstate_control",
+    "callees": ["_printk", "acpi_format_exception", "acpi_os_write_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_performance_info",
+    "callees": ["_printk", "acpi_has_method", "acpi_processor_get_performance_control", "acpi_processor_get_performance_states", "acpi_processor_get_platform_limit"],
+    "global_reads": ["ignore_ppc"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_performance_states",
+    "callees": ["_printk", "acpi_evaluate_object", "acpi_evaluation_failure_warn", "acpi_extract_package", "acpi_format_exception", "acpi_handle_printk", "amd_fixup_frequency", "kfree", "kmalloc_array", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_performance_control",
+    "callees": ["_printk", "acpi_evaluate_object", "acpi_evaluation_failure_warn", "kfree", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_exit",
+    "callees": ["find_next_bit", "freq_qos_remove_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_init",
+    "callees": ["_printk", "find_next_bit", "freq_qos_add_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ignore_ppc_init",
+    "callees": [],
+    "global_reads": ["ignore_ppc"],
+    "global_writes": ["ignore_ppc"]
+  },
+  {
+    "name": "acpi_processor_get_bios_limit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_has_changed",
+    "callees": ["acpi_processor_get_platform_limit", "acpi_processor_ppc_ost", "cpufreq_update_limits"],
+    "global_reads": ["ignore_ppc"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_ppc_ost",
+    "callees": ["acpi_has_method", "acpi_processor_ppc_ost.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_get_platform_limit",
+    "callees": ["__builtin_expect", "_printk", "acpi_evaluate_integer", "acpi_evaluation_failure_warn", "freq_qos_update_request"],
+    "global_reads": [],
+    "global_writes": ["acpi_processor_ppc_in_use"]
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

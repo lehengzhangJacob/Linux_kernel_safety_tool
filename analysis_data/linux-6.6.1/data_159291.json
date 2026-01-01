@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_partition",
+    "callees": ["find_valid_gpt", "is_pte_valid", "kfree", "last_lba", "memcmp", "put_partition", "sprintf", "strlcat", "utf16_le_to_7bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compare_gpts",
+    "callees": ["_printk", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_pte_valid",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_gpt_valid",
+    "callees": ["alloc_read_gpt_entries", "alloc_read_gpt_header", "crc32_le", "kfree", "last_lba"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_read_gpt_header",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "read_lba"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_read_gpt_entries",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "read_lba"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_lba",
+    "callees": ["folio_put", "last_lba", "memcpy", "read_part_sector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "force_gpt_fn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["force_gpt"]
+  },
+  {
+    "name": "put_partition",
+    "callees": ["snprintf", "strlcat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

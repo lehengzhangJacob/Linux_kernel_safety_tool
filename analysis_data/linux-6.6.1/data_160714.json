@@ -1,0 +1,20 @@
+[
+  {
+    "name": "io_statx_cleanup",
+    "callees": ["putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_statx",
+    "callees": ["__builtin_expect", "do_statx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_statx_prep",
+    "callees": ["__builtin_expect", "getname_flags", "getname_statx_lookup_flags"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

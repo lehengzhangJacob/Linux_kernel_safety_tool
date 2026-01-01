@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_reconnect.part.0",
+    "callees": ["_dev_err", "byd_reset_touchpad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_init",
+    "callees": ["__builtin_constant_p", "byd_reset_touchpad", "init_timer_key", "input_alloc_absinfo", "input_set_abs_params", "kzalloc", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_detect",
+    "callees": ["ps2_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_disconnect",
+    "callees": ["kfree", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_reconnect",
+    "callees": ["byd_detect", "byd_reconnect.part.0", "msleep", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_reset_touchpad",
+    "callees": ["memset", "ps2_command", "psmouse_set_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "byd_process_byte",
+    "callees": ["_dev_warn", "byd_report_input", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "byd_clear_touch",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "byd_report_input"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

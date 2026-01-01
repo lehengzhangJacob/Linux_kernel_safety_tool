@@ -1,0 +1,200 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_encoder_for_connector",
+    "callees": ["drm_mode_object_get", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_modeset_setup_hw_state",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_crtc_vblank_reset", "find_first_bit", "get_encoder_power_domains", "intel_crtc_vblank_on", "intel_display_power_get", "intel_display_power_put_unchecked", "intel_dmc_enable_pipe", "intel_dpll_sanitize_state", "intel_early_display_was", "intel_fbc_sanitize", "intel_modeset_get_crtc_power_domains", "intel_modeset_put_crtc_power_domains", "intel_modeset_readout_hw_state", "intel_modeset_update_connector_atomic_state", "intel_pch_sanitize", "intel_power_domains_sanitize_state", "intel_sanitize_all_crtcs", "intel_sanitize_encoder", "intel_sanitize_fifo_underrun_reporting", "intel_sanitize_plane_mapping", "intel_wm_get_hw_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_early_display_was",
+    "callees": ["intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_encoder_power_domains",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_modeset_readout_hw_state",
+    "callees": ["__builtin_expect", "__drm_atomic_helper_crtc_destroy_state", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "intel_bw_crtc_update", "intel_crtc_bigjoiner_slave_pipes", "intel_crtc_compute_min_cdclk", "intel_crtc_copy_hw_to_uapi_state", "intel_crtc_for_pipe", "intel_crtc_free_hw_state", "intel_crtc_get_pipe_config", "intel_crtc_is_bigjoiner_slave", "intel_crtc_state_reset", "intel_crtc_update_active_timings", "intel_dpll_readout_hw_state", "intel_encoder_get_config", "intel_pmdemand_init_pmdemand_params", "intel_pmdemand_update_phys_mask", "intel_pmdemand_update_port_clock", "readout_plane_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "readout_plane_state",
+    "callees": ["__drm_dev_dbg", "intel_crtc_for_pipe", "intel_plane_fixup_bitmasks", "intel_set_plane_visible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sanitize_encoder",
+    "callees": ["__drm_dev_dbg", "has_bogus_dpll_config", "intel_ddi_sanitize_encoder_pll_mapping", "intel_encoder_find_connector", "intel_opregion_notify_encoder", "intel_pmdemand_update_phys_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_bogus_dpll_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sanitize_all_crtcs",
+    "callees": ["intel_crtc_state_dump", "intel_sanitize_crtc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sanitize_crtc",
+    "callees": ["intel_color_commit_arm", "intel_color_commit_noarm", "intel_crtc_disable_noatomic", "intel_crtc_has_encoders", "intel_crtc_is_bigjoiner_slave", "intel_crtc_needs_link_reset", "intel_plane_disable_noatomic", "msleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_encoder_find_connector",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_needs_link_reset",
+    "callees": ["intel_tc_port_link_needs_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_has_encoders",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_sanitize_plane_mapping",
+    "callees": ["__drm_dev_dbg", "intel_crtc_for_pipe", "intel_plane_disable_noatomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_copy_hw_to_uapi_state",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_atomic_set_mode_for_crtc", "drm_property_replace_blob", "intel_crtc_is_bigjoiner_slave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_modeset_update_connector_atomic_state",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "set_encoder_for_connector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_disable_noatomic",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "get_bigjoiner_slave_pipes", "get_portsync_pipes", "intel_crtc_disable_noatomic_begin", "intel_crtc_disable_noatomic_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_bigjoiner_slave_pipes",
+    "callees": ["intel_crtc_bigjoiner_slave_pipes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_portsync_pipes",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_ffs", "__warn_printk", "dev_driver_string", "get_transcoder_pipes", "intel_crtc_for_pipe", "is_trans_port_sync_master", "is_trans_port_sync_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_transcoder_pipes",
+    "callees": ["intel_crtc_is_bigjoiner_slave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_disable_noatomic_complete",
+    "callees": ["__drm_atomic_helper_crtc_destroy_state", "intel_crtc_free_hw_state", "intel_crtc_state_reset", "intel_display_power_put_mask_in_set", "intel_fbc_disable", "intel_pmdemand_update_port_clock", "intel_update_watermarks", "reset_crtc_encoder_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_crtc_encoder_state",
+    "callees": ["reset_encoder_connector_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_encoder_connector_state",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "intel_pmdemand_update_phys_mask", "set_encoder_for_connector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_encoder_for_connector",
+    "callees": ["drm_mode_object_get", "drm_mode_object_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_disable_noatomic_begin",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "drm_atomic_add_affected_connectors", "drm_atomic_state_alloc", "intel_atomic_get_crtc_state", "intel_crtc_bigjoiner_slave_pipes", "intel_plane_disable_noatomic", "intel_unreference_shared_dpll_crtc", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_root_data",
+    "callees": ["_printk", "root_nfs_data"],
+    "global_reads": ["root_server_addr"],
+    "global_writes": ["servaddr"]
+  },
+  {
+    "name": "nfs_root_setup",
+    "callees": ["root_nfs_parse_addr", "sprintf", "strlen", "strscpy"],
+    "global_reads": [],
+    "global_writes": ["ROOT_DEV", "root_server_addr"]
+  }
+]

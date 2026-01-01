@@ -1,0 +1,152 @@
+[
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_cgroup_notify_frozen.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_cgroup_notify_frozen.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_cgroup_notify_frozen.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_cgroup_notify_frozen.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_freeze",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cgroup_do_freeze", "cgroup_file_notify", "css_next_descendant_pre", "kernfs_path_from_node", "trace_cgroup_notify_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_freezer_migrate_task",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "cgroup_freeze_task", "cgroup_update_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_do_freeze",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irq", "_raw_spin_unlock_irqrestore", "cgroup_freeze_task", "cgroup_update_frozen", "css_task_iter_end", "css_task_iter_next", "css_task_iter_start", "kernfs_path_from_node", "trace_cgroup_freeze", "trace_cgroup_unfreeze"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_freeze_task",
+    "callees": ["__lock_task_sighand", "_raw_spin_unlock_irqrestore", "signal_wake_up", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_leave_frozen",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "cgroup_update_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_enter_frozen",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "cgroup_update_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_update_frozen",
+    "callees": ["__builtin_constant_p", "__cgroup_task_count", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cgroup_file_notify", "cgroup_propagate_frozen", "kernfs_path_from_node", "trace_cgroup_notify_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroup_propagate_frozen",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cgroup_file_notify", "kernfs_path_from_node", "trace_cgroup_notify_frozen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

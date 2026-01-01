@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_write_inode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_drop_inode.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_write_inode_dotl",
+    "callees": ["v9fs_write_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_write_inode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_drop_inode",
+    "callees": ["v9fs_drop_inode.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_statfs",
+    "callees": ["__builtin_expect", "p9_client_statfs", "p9_fid_put", "simple_statfs", "v9fs_fid_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_umount_begin",
+    "callees": ["v9fs_session_begin_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_kill_super",
+    "callees": ["kfree", "kill_anon_super", "v9fs_session_cancel", "v9fs_session_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_mount",
+    "callees": ["__builtin_expect", "d_make_root", "deactivate_locked_super", "kfree", "kzalloc", "lockref_get", "p9_client_getattr_dotl", "p9_client_stat", "p9_fid_put", "p9stat_free", "sget", "v9fs_fid_add", "v9fs_fill_super", "v9fs_get_inode", "v9fs_qid2ino", "v9fs_session_close", "v9fs_session_init", "v9fs_stat2inode", "v9fs_stat2inode_dotl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_set_super",
+    "callees": ["set_anon_super"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

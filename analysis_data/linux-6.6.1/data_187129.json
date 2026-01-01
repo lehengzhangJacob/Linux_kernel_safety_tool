@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_irq_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_irq_handler.part.0",
+    "callees": ["___ratelimit", "_dev_err", "_dev_warn", "generic_handle_irq"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "intel_gsc_fini",
+    "callees": ["gsc_destroy_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_init",
+    "callees": ["gsc_init_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gsc_irq_handler",
+    "callees": ["gsc_irq_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_init_one",
+    "callees": ["__auxiliary_device_add", "__drm_dev_dbg", "__i915_gem_object_get_dma_address", "__irq_alloc_descs", "_dev_err", "_dev_warn", "auxiliary_device_init", "gsc_destroy_one", "gsc_ext_om_alloc", "gsc_irq_init", "intel_huc_register_gsc_notifier", "intel_huc_unregister_gsc_notifier", "kfree", "kzalloc", "put_device"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "gsc_release_dev",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_ext_om_destroy",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_ext_om_alloc",
+    "callees": ["__builtin_expect", "_dev_err", "i915_gem_object_create_lmem", "i915_gem_object_pin_pages_unlocked", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_irq_init",
+    "callees": ["irq_set_chip_and_handler_name", "irq_set_chip_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_irq_unmask",
+    "callees": ["gsc_irq_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gsc_irq_mask",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

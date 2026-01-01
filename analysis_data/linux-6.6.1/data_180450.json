@@ -1,0 +1,188 @@
+[
+  {
+    "name": "cookie_tcp_reqsk_alloc",
+    "callees": ["inet_reqsk_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_free",
+    "callees": ["__builtin_expect", "__reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_ecn_ok.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_ecn_ok.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_v4_check",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_constant_p", "__builtin_expect", "__cookie_v4_check", "cookie_ecn_ok.part.0", "cookie_tcp_reqsk_alloc", "cookie_timestamp_decode", "get_random_u32", "ip_route_output_flow", "memset", "reqsk_free", "secure_tcp_ts_off", "security_inet_conn_request", "security_req_classify_flow", "sock_flag", "tcp_get_cookie_sock", "tcp_parse_options", "tcp_select_initial_window", "tcp_synq_no_recent_overflow", "tcp_v4_save_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_tcp_reqsk_alloc",
+    "callees": ["inet_reqsk_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_ecn_ok",
+    "callees": ["cookie_ecn_ok.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_timestamp_decode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_get_cookie_sock",
+    "callees": ["__builtin_expect", "__reqsk_free", "_raw_spin_unlock", "inet_csk_reqsk_queue_add", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cookie_v4_check",
+    "callees": ["__builtin_bswap32", "check_tcp_syn_cookie"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_v4_init_sequence",
+    "callees": ["__cookie_v4_init_sequence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cookie_v4_init_sequence",
+    "callees": ["__builtin_bswap32", "secure_tcp_syn_cookie"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_tcp_syn_cookie",
+    "callees": ["cookie_hash"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "secure_tcp_syn_cookie",
+    "callees": ["cookie_hash"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_init_timestamp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cookie_hash",
+    "callees": ["__builtin_expect", "__do_once_done", "__do_once_start", "get_random_bytes", "siphash_2u64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_v4_save_options",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__ip_options_echo", "__kmalloc", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_synq_no_recent_overflow",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "reqsk_free",
+    "callees": ["__builtin_expect", "__reqsk_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__reqsk_free",
+    "callees": ["kfree", "kmem_cache_free", "sock_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_put",
+    "callees": ["__refcount_sub_and_test", "sk_free"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

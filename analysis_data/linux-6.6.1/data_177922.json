@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_event_init",
+    "callees": ["_printk", "genl_register_family"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_bus_generate_netlink_event",
+    "callees": ["genlmsg_multicast_netns", "genlmsg_put", "kfree_skb_reason", "memset", "nla_reserve", "nlmsg_new", "strscpy"],
+    "global_reads": ["acpi_event_seqnum"],
+    "global_writes": ["acpi_event_seqnum"]
+  },
+  {
+    "name": "unregister_acpi_notifier",
+    "callees": ["blocking_notifier_chain_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_acpi_notifier",
+    "callees": ["blocking_notifier_chain_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_notifier_call_chain",
+    "callees": ["blocking_notifier_call_chain", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

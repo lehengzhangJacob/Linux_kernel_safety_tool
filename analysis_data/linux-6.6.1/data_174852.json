@@ -1,0 +1,182 @@
+[
+  {
+    "name": "nf_conntrack_tcp_established",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_conntrack_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_init_sender",
+    "callees": ["tcp_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_tcp_init_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_nlattr_tuple_size",
+    "callees": ["nla_policy_len"],
+    "global_reads": ["size"],
+    "global_writes": ["size"]
+  },
+  {
+    "name": "nlattr_to_tcp",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "nla_parse_nested_deprecated"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_to_nlattr",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "nla_nest_start_noflag", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_tcp_packet",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_constant_p", "__builtin_expect", "__nf_ct_refresh_acct", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "get_conntrack_index", "nf_conntrack_tcp_established", "nf_ct_delete", "nf_ct_is_confirmed", "nf_ct_kill_acct", "nf_ct_l4proto_log_invalid", "nf_tcp_handle_invalid", "skb_header_pointer", "tcp_error", "tcp_in_window", "tcp_new", "tcp_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_tcp_set_closing",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "nf_ct_is_confirmed"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_can_early_drop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_new",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "get_conntrack_index", "memset", "tcp_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_error",
+    "callees": ["nf_checksum", "nf_l4proto_log_invalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_tcp_handle_invalid",
+    "callees": ["__builtin_constant_p", "nf_ct_l4proto_log_invalid"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_in_window",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "nf_ct_seq_offset", "nf_tcp_log_invalid", "tcp_init_sender", "tcp_sack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_tcp_log_invalid",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "nf_ct_l4proto_log_invalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_init_sender",
+    "callees": ["tcp_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_sack",
+    "callees": ["__builtin_bswap32", "skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_options",
+    "callees": ["skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_conntrack_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_tcp_established",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_is_confirmed",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_pointer",
+    "callees": ["__skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_header_pointer",
+    "callees": ["__builtin_expect", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "xz_dec_bcj_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_bcj_create",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_bcj_run",
+    "callees": ["bcj_apply", "bcj_flush", "memcpy", "xz_dec_lzma2_run"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_flush",
+    "callees": ["memcpy", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_apply",
+    "callees": ["bcj_arm", "bcj_armthumb", "bcj_ia64", "bcj_powerpc", "bcj_sparc", "bcj_x86"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_sparc",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_armthumb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_arm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_ia64",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_powerpc",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bcj_x86",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

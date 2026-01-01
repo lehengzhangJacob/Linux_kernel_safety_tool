@@ -1,0 +1,86 @@
+[
+  {
+    "name": "fat_truncate_atime",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_sync_bhs",
+    "callees": ["__builtin_constant_p", "wait_on_buffer", "write_dirty_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_update_time",
+    "callees": ["__mark_inode_dirty", "fat_truncate_time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_truncate_time",
+    "callees": ["current_time", "fat_truncate_atime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_truncate_mtime",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_truncate_atime",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_time_unix2fat",
+    "callees": ["time64_to_tm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_time_fat2unix",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_chain_add",
+    "callees": ["__fat_fs_error", "__mark_inode_dirty", "fat_cache_inval_inode", "fat_ent_read", "fat_ent_write", "fat_get_cluster", "fat_sync_inode", "fatent_brelse", "inode_needs_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_clusters_flush",
+    "callees": ["__bread_gfp", "__brelse", "_fat_msg", "mark_buffer_dirty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_fat_msg",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fat_fs_error",
+    "callees": ["__builtin_va_end", "__builtin_va_start", "_fat_msg", "panic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatent_brelse",
+    "callees": ["__brelse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wait_on_buffer",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__wait_on_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

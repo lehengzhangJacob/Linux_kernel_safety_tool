@@ -1,0 +1,164 @@
+[
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_make_checksum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header_slow",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp4_gso_segment.part.0",
+    "callees": ["__builtin_expect", "__tcp_v4_send_check", "tcp_gso_segment"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcpv4_offload_init",
+    "callees": ["inet_add_offload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp4_gro_complete",
+    "callees": ["tcp_gro_complete", "tcp_v4_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp4_gro_receive",
+    "callees": ["__skb_gro_checksum_validate_complete", "__skb_gro_checksum_validate_needed", "inet_gro_compute_pseudo", "skb_gro_incr_csum_unnecessary", "tcp_gro_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_gro_complete",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_gro_receive",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "skb_gro_header", "skb_gro_header_slow", "skb_gro_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_gso_segment",
+    "callees": ["__builtin_bswap32", "__builtin_expect", "__builtin_unreachable", "__refcount_add", "__refcount_sub_and_test", "gso_make_checksum", "pskb_may_pull_reason", "skb_gso_ok", "skb_segment", "tcp_gso_tstamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp4_gso_segment",
+    "callees": ["pskb_may_pull_reason", "tcp4_gso_segment.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_gso_tstamp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_incr_csum_unnecessary",
+    "callees": ["__skb_incr_checksum_unnecessary"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_gro_checksum_validate_complete",
+    "callees": ["__skb_gro_checksum_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header",
+    "callees": ["skb_gro_header_slow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_header_slow",
+    "callees": ["pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gso_make_checksum",
+    "callees": ["csum_partial"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_incr_checksum_unnecessary",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

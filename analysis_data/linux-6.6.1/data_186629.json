@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_backup_free",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_restore_region",
+    "callees": ["i915_gem_process_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_restore",
+    "callees": ["i915_gem_obj_copy_ttm", "i915_gem_object_lock", "i915_gem_ww_unlock_single", "i915_ttm_sys_placement", "kref_put", "ttm_bo_validate", "ttm_bo_wait_ctx", "ttm_tt_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_backup_region",
+    "callees": ["i915_gem_process_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_recover_region",
+    "callees": ["i915_gem_process_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_recover",
+    "callees": ["i915_ttm_backup_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_backup",
+    "callees": ["__builtin_expect", "_dev_err", "i915_gem_obj_copy_ttm", "i915_gem_object_create_region", "i915_gem_object_evictable", "i915_gem_object_lock", "i915_gem_object_needs_ccs_pages", "i915_gem_ww_unlock_single", "i915_ttm_sys_placement", "kref_put", "ttm_bo_validate", "ttm_bo_wait_ctx", "ttm_tt_populate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_ttm_backup_free",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

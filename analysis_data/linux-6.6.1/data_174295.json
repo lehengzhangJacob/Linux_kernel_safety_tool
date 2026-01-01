@@ -1,0 +1,170 @@
+[
+  {
+    "name": "nlm_do_fopen",
+    "callees": [],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_is_client.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_unlock_all_by_ip",
+    "callees": ["nlm_traverse_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_match_ip",
+    "callees": ["rpc_cmp_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_unlock_all_by_sb",
+    "callees": ["nlm_traverse_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_match_sb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_invalidate_all",
+    "callees": ["nlm_traverse_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_free_host_resources",
+    "callees": ["__builtin_unreachable", "_printk", "nlm_traverse_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_mark_resources",
+    "callees": ["nlm_traverse_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_is_client",
+    "callees": ["nlmsvc_is_client.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_same_host",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_mark_host",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_release_file",
+    "callees": ["mutex_lock", "mutex_unlock", "nlm_delete_file", "nlm_file_inuse"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_traverse_files",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock", "nlm_close_files", "nlm_inspect_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_file_inuse",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_inspect_file",
+    "callees": ["nlm_traverse_locks", "nlmsvc_traverse_blocks", "nlmsvc_traverse_shares"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsvc_always_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_traverse_locks",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "nlm_unlock_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_unlock_files",
+    "callees": ["_printk", "locks_init_lock", "vfs_lock_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_delete_file",
+    "callees": ["_printk", "kfree"],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_lookup_file",
+    "callees": ["__mutex_init", "kfree", "kzalloc", "memcpy", "mutex_lock", "mutex_unlock", "nfs_compare_fh", "nlm_do_fopen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_do_fopen",
+    "callees": [],
+    "global_reads": ["nlmsvc_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "lock_to_openmode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_compare_fh",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr",
+    "callees": ["rpc_cmp_addr6"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rpc_cmp_addr6",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

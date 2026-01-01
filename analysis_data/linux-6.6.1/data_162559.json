@@ -1,0 +1,128 @@
+[
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_page_init",
+    "callees": ["proc_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kpageflags_read",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "pfn_valid", "stable_page_flags"],
+    "global_reads": ["max_pfn", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "stable_page_flags",
+    "callees": ["PageHuge", "__builtin_constant_p", "__builtin_expect", "_compound_head", "is_free_buddy_page", "page_mapped"],
+    "global_reads": ["vmemmap_base", "zero_pfn"],
+    "global_writes": []
+  },
+  {
+    "name": "kpagecount_read",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "_compound_head", "page_mapcount", "pfn_valid"],
+    "global_reads": ["max_pfn", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "page_mapped",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_mapcount",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

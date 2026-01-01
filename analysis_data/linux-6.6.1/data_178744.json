@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_fan_delete_attributes",
+    "callees": ["sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_fan_create_attributes",
+    "callees": ["snprintf", "sysfs_create_file_ns", "sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_fine_grain_control",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_fan_speed",
+    "callees": ["acpi_fan_get_fst", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_state",
+    "callees": ["scnprintf", "sysfs_emit_at"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

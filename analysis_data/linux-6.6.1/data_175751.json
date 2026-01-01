@@ -1,0 +1,62 @@
+[
+  {
+    "name": "task_work_func_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_work_cancel_match",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_notify_signal",
+    "callees": ["wake_up_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_work_run",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_work_cancel",
+    "callees": ["task_work_cancel_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_work_cancel_match",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_work_add",
+    "callees": ["__builtin_expect", "__set_notify_signal", "set_notify_resume", "set_notify_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_notify_resume",
+    "callees": ["kick_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_notify_signal",
+    "callees": ["__set_notify_signal", "kick_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_notify_signal",
+    "callees": ["wake_up_state"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

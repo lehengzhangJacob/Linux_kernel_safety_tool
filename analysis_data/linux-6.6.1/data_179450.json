@@ -1,0 +1,110 @@
+[
+  {
+    "name": "fence_complete",
+    "callees": ["dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_work_chain",
+    "callees": ["__i915_sw_fence_await_dma_fence"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_work_init",
+    "callees": ["__i915_sw_fence_init", "dma_fence_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fence_release",
+    "callees": ["dma_fence_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_timeline_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_driver_name",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fence_notify",
+    "callees": ["__builtin_constant_p", "dma_fence_get", "dma_fence_put.part.0", "dma_fence_set_error", "fence_complete", "fence_work", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "fence_work",
+    "callees": ["dma_fence_put.part.0", "fence_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fence_complete",
+    "callees": ["dma_fence_signal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_set_error",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

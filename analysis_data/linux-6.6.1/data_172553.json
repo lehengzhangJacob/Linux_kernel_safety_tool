@@ -1,0 +1,326 @@
+[
+  {
+    "name": "alloc_memory_type",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__init_node_memory_type.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__init_node_memory_type",
+    "callees": ["__init_node_memory_type.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_memtype",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_memtype",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_first_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_first_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_first_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__init_node_memory_type.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_init_sysfs",
+    "callees": ["_printk", "kobject_create_and_add", "kobject_put", "sysfs_create_group"],
+    "global_reads": ["mm_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "demotion_enabled_store",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "demotion_enabled_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": ["numa_demotion_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "memory_tier_init",
+    "callees": ["__builtin_expect", "alloc_memory_type", "establish_demotion_targets", "find_first_bit", "find_next_bit", "kmalloc_array", "mutex_lock", "mutex_unlock", "panic", "set_node_memory_tier", "subsys_virtual_register"],
+    "global_reads": ["nr_node_ids"],
+    "global_writes": ["default_dram_type", "node_demotion"]
+  },
+  {
+    "name": "clear_node_memory_type",
+    "callees": ["kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_node_memory_type",
+    "callees": ["__init_node_memory_type", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_memory_type",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_memory_type",
+    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_node_memory_tier",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__init_node_memory_type", "find_create_memory_tier", "node_state"],
+    "global_reads": ["default_dram_type"],
+    "global_writes": []
+  },
+  {
+    "name": "__init_node_memory_type",
+    "callees": ["__init_node_memory_type.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "establish_demotion_targets",
+    "callees": ["__builtin_constant_p", "__node_distance", "bitmap_and", "bitmap_andnot", "bitmap_empty", "bitmap_or", "disable_all_demotion_targets", "find_first_bit", "find_next_best_node", "find_next_bit"],
+    "global_reads": ["node_demotion"],
+    "global_writes": ["top_tier_adistance"]
+  },
+  {
+    "name": "disable_all_demotion_targets",
+    "callees": ["find_first_bit", "find_next_bit", "synchronize_rcu"],
+    "global_reads": ["node_demotion"],
+    "global_writes": []
+  },
+  {
+    "name": "next_demotion_node",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "node_random"],
+    "global_reads": ["node_demotion"],
+    "global_writes": []
+  },
+  {
+    "name": "node_get_allowed_targets",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_is_toptier",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["top_tier_adistance"],
+    "global_writes": []
+  },
+  {
+    "name": "find_create_memory_tier",
+    "callees": ["device_register", "kzalloc", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nodelist_show",
+    "callees": ["__nodes_or", "mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memory_tier_device_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_random",
+    "callees": ["__nodes_weight", "find_first_bit", "find_nth_bit", "get_random_u32_below"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_80", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_first_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fns",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

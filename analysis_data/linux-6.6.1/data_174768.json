@@ -1,0 +1,146 @@
+[
+  {
+    "name": "do_get_thread_area",
+    "callees": ["__builtin_expect", "_copy_to_user", "fill_user_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_get_thread_area",
+    "callees": ["__builtin_expect", "_copy_to_user", "fill_user_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tls_desc_okay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_user_desc",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_set_thread_area",
+    "callees": ["do_set_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_tls_set",
+    "callees": ["set_tls_desc", "tls_desc_okay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_tls_get",
+    "callees": ["fill_user_desc", "membuf_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_tls_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_get_thread_area",
+    "callees": ["do_get_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_get_thread_area",
+    "callees": ["do_get_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_get_thread_area",
+    "callees": ["__builtin_expect", "_copy_to_user", "fill_user_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_user_desc",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_set_thread_area",
+    "callees": ["do_set_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_set_thread_area",
+    "callees": ["__do_sys_set_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_set_thread_area",
+    "callees": ["__do_sys_set_thread_area"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_set_thread_area",
+    "callees": ["__builtin_expect", "__loadsegment_fs", "_copy_from_user", "get_free_idx", "native_load_gs_index", "set_tls_desc", "tls_desc_okay"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_tls_desc",
+    "callees": ["__builtin_expect", "fill_ldt", "memset", "native_load_tls"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tls_desc_okay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_free_idx",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_load_gs_index",
+    "callees": ["asm_load_gs_index"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_load_tls",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_ldt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__loadsegment_fs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

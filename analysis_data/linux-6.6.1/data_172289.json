@@ -1,0 +1,38 @@
+[
+  {
+    "name": "acpi_ns_convert_to_reference",
+    "callees": ["acpi_ns_internalize_name", "acpi_ns_lookup", "acpi_ut_add_reference", "acpi_ut_create_internal_object_dbg", "acpi_ut_prefixed_namespace_error", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_convert_to_resource",
+    "callees": ["acpi_ut_create_buffer_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_convert_to_unicode",
+    "callees": ["acpi_ut_create_buffer_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_convert_to_buffer",
+    "callees": ["acpi_ex_convert_to_buffer", "acpi_ut_create_buffer_object", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_convert_to_string",
+    "callees": ["acpi_ex_convert_to_string", "acpi_ut_create_string_object", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_convert_to_integer",
+    "callees": ["acpi_ut_create_integer_object", "acpi_ut_strtoul64"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

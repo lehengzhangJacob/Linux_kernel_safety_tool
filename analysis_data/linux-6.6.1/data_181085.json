@@ -1,0 +1,350 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_chipset_flush",
+    "callees": ["intel_ggtt_gmch_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_gt_disable",
+    "callees": ["intel_gt_set_wedged_on_fini", "intel_gt_suspend_late", "intel_gt_suspend_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_coherent_map_type",
+    "callees": ["i915_gem_object_is_lmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_info_print",
+    "callees": ["drm_printf", "intel_sseu_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_release_all",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_tiles_init",
+    "callees": ["intel_gt_probe_lmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_probe_all",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__i915_printk", "__warn_printk", "drmm_kmalloc", "intel_gt_tile_setup", "intel_sa_mediagt_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_tile_setup",
+    "callees": ["drmm_kmalloc", "intel_gt_common_init_early", "intel_uncore_init_early", "intel_uncore_setup_mmio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_driver_late_release_all",
+    "callees": ["intel_engines_free", "intel_gt_fini_requests", "intel_gt_fini_reset", "intel_gt_fini_timelines", "intel_gt_fini_tlb", "intel_uc_driver_late_release", "rcu_barrier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_driver_release",
+    "callees": ["i915_vma_unpin_and_release", "intel_gt_fini_buffer_pool", "intel_gt_fini_hwconfig", "intel_gt_pm_fini", "intel_wa_list_free", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_driver_unregister",
+    "callees": ["__intel_gt_reset", "intel_gsc_fini", "intel_gsc_uc_flush_work", "intel_gt_set_wedged_on_fini", "intel_gt_sysfs_unregister", "intel_rps_driver_unregister", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_driver_remove",
+    "callees": ["__intel_gt_disable", "intel_engines_release", "intel_gt_flush_buffer_pool", "intel_migrate_fini", "intel_uc_driver_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init",
+    "callees": ["__engines_record_defaults", "__intel_gt_disable", "_dev_err", "i915_vma_unpin_and_release", "intel_engines_init", "intel_engines_release", "intel_gt_init_hwconfig", "intel_gt_init_scratch", "intel_gt_init_workarounds", "intel_gt_pm_fini", "intel_gt_pm_init", "intel_gt_resume", "intel_gt_set_wedged_on_init", "intel_migrate_init", "intel_set_mocs_index", "intel_uc_init_late", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put", "kernel_vm", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_wait_for_idle",
+    "callees": ["__SCT__cond_resched", "intel_gt_retire_requests_timeout", "intel_guc_wait_for_idle", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_gt_disable",
+    "callees": ["intel_gt_set_wedged_on_fini", "intel_gt_suspend_late", "intel_gt_suspend_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__engines_record_defaults",
+    "callees": ["__builtin_expect", "__refcount_add", "i915_request_add", "i915_request_create", "intel_context_create", "intel_engine_emit_ctx_wa", "intel_gt_set_wedged", "intel_gt_wait_for_idle", "intel_renderstate_emit", "intel_renderstate_fini", "intel_renderstate_init", "kref_put", "shmem_create_from_object"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_vm",
+    "callees": ["__refcount_add", "i915_ppgtt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_scratch",
+    "callees": ["__builtin_expect", "_dev_err", "i915_gem_object_create_internal", "i915_gem_object_create_lmem", "i915_gem_object_create_stolen", "i915_ggtt_pin", "i915_vma_instance", "i915_vma_make_unshrinkable", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_driver_register",
+    "callees": ["intel_gsc_init", "intel_gt_debugfs_register", "intel_gt_sysfs_register", "intel_rps_driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_chipset_flush",
+    "callees": ["intel_ggtt_gmch_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_flush_ggtt_writes",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "intel_gt_chipset_flush", "intel_runtime_pm_get_if_in_use", "intel_runtime_pm_put_unchecked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_check_and_clear_faults",
+    "callees": ["gen6_check_faults", "gen8_check_faults", "intel_gt_clear_error_registers", "xehp_check_faults"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen8_check_faults",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xehp_check_faults",
+    "callees": ["__drm_dev_dbg", "intel_gt_mcr_read_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_check_faults",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_clear_error_registers",
+    "callees": ["__builtin_constant_p", "__builtin_ctz", "__drm_dev_dbg", "gen6_clear_engine_error_register", "intel_gt_mcr_multicast_rmw", "intel_gt_mcr_read_any", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_perf_limit_reasons_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen6_clear_engine_error_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_hw",
+    "callees": ["_dev_err", "i915_ppgtt_init_hw", "init_unused_rings", "intel_gt_apply_workarounds", "intel_gt_init_swizzling", "intel_gt_verify_workarounds", "intel_mocs_init", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put", "intel_uncore_rmw", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_unused_rings",
+    "callees": ["init_unused_ring"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_mmio",
+    "callees": ["intel_engines_init_mmio", "intel_gt_init_clock_frequency", "intel_gt_mcr_init", "intel_sseu_info_init", "intel_uc_init_mmio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_assign_ggtt",
+    "callees": ["__builtin_expect", "i915_ggtt_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_probe_lmem",
+    "callees": ["__builtin_expect", "_dev_err", "intel_gt_setup_lmem", "intel_memory_region_set_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_root_gt_init_early",
+    "callees": ["drmm_kmalloc", "intel_gt_common_init_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_common_init_early",
+    "callees": ["intel_gt_init_buffer_pool", "intel_gt_init_requests", "intel_gt_init_reset", "intel_gt_init_timelines", "intel_gt_init_tlb", "intel_gt_pm_init_early", "intel_rps_init_early", "intel_uc_init_early", "intel_wopcm_init_early"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_wa_list_free",
+    "callees": ["kfree", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

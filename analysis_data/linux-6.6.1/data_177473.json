@@ -1,0 +1,248 @@
+[
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put",
+    "callees": ["acct_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put",
+    "callees": ["acct_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_acct",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "acct_on", "capable", "getname", "mutex_lock", "mutex_unlock", "pin_kill", "putname", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put.part.0",
+    "callees": ["kvfree_call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_process",
+    "callees": ["__builtin_expect", "slow_acct_process", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "slow_acct_process",
+    "callees": ["acct_get", "acct_put", "do_acct_process", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_collect",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mas_find", "mmap_read_lock", "mmap_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_acct_process",
+    "callees": ["__kernel_write", "check_free_space", "file_end_write", "file_start_write_trylock", "fill_ac", "override_creds", "revert_creds"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "fill_ac",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "encode_comp2_t", "encode_comp_t", "ktime_get", "ktime_get_real_seconds", "memset", "strscpy", "tty_devnum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp2_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "encode_comp_t",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_exit_ns",
+    "callees": ["__rcu_read_lock", "pin_kill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_acct",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "acct_on", "capable", "getname", "mutex_lock", "mutex_unlock", "pin_kill", "putname", "task_active_pid_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_acct",
+    "callees": ["__do_sys_acct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_acct",
+    "callees": ["__do_sys_acct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_on",
+    "callees": ["__builtin_expect", "__init_swait_queue_head", "__mnt_drop_write", "__mnt_want_write", "__mutex_init", "__rcu_read_lock", "file_open_name", "filp_close", "init_fs_pin", "kfree", "kzalloc", "mnt_clone_internal", "mntput", "mutex_lock", "mutex_unlock", "pin_insert", "pin_kill", "task_active_pid_ns"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "close_work",
+    "callees": ["__fput_sync", "complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_pin_kill",
+    "callees": ["acct_put", "do_acct_process", "mutex_lock", "mutex_unlock", "pin_remove", "schedule_work", "wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_get",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "acct_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_put",
+    "callees": ["acct_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_free_space",
+    "callees": ["_printk", "vfs_statfs"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_acct_sysctls_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_up_read",
+    "callees": ["__builtin_expect", "rcuwait_wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_down_read_trylock",
+    "callees": ["__builtin_expect", "__percpu_down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

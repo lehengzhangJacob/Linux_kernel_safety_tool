@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_access_region.part.0",
+    "callees": ["acpi_error", "acpi_ev_address_space_dispatch", "acpi_ut_get_region_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_insert_into_field",
+    "callees": ["acpi_ex_write_with_update_rule", "acpi_os_allocate_zeroed", "kfree", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_extract_from_field",
+    "callees": ["acpi_error", "acpi_ex_field_datum_io", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_write_with_update_rule",
+    "callees": ["acpi_error", "acpi_ex_field_datum_io"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_field_datum_io",
+    "callees": ["acpi_ds_get_buffer_field_arguments", "acpi_error", "acpi_ex_access_region", "acpi_ex_extract_from_field", "acpi_ex_insert_into_field", "acpi_ex_register_overflow", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_access_region",
+    "callees": ["acpi_ex_access_region.part.0", "acpi_ex_setup_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_setup_region",
+    "callees": ["acpi_ds_get_region_arguments", "acpi_error", "acpi_is_valid_space_id", "acpi_ut_get_node_name", "acpi_ut_get_object_type_name"],
+    "global_reads": ["acpi_gbl_enable_interpreter_slack"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_os_allocate_zeroed",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

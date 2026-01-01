@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_set_qos_hdr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_select_queue",
+    "callees": ["cfg80211_classify8021d", "ieee80211_downgrade_queue", "skb_get_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_select_queue_80211",
+    "callees": ["ieee80211_downgrade_queue", "skb_get_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ieee80211_downgrade_queue",
+    "callees": ["wme_downgrade_ac"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wme_downgrade_ac",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

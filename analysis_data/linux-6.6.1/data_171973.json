@@ -1,0 +1,308 @@
+[
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": ["p4d_offset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_range",
+    "callees": ["vmemmap_populate_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_range",
+    "callees": ["vmemmap_populate_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_range",
+    "callees": ["vmemmap_populate_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__populate_section_memmap",
+    "callees": ["__builtin_expect", "vmemmap_populate", "vmemmap_populate_compound_pages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_compound_pages",
+    "callees": ["compound_section_tail_page", "reuse_compound_section", "vmemmap_populate_address", "vmemmap_populate_range"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "compound_section_tail_page",
+    "callees": ["pmd_off_k", "pte_offset_kernel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reuse_compound_section",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_hugepages",
+    "callees": ["pmd_offset", "vmemmap_alloc_block_buf", "vmemmap_check_pmd", "vmemmap_p4d_populate", "vmemmap_pgd_populate", "vmemmap_populate_range", "vmemmap_pud_populate", "vmemmap_set_pmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_check_pmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_set_pmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_basepages",
+    "callees": ["vmemmap_populate_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_range",
+    "callees": ["vmemmap_populate_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_populate_address",
+    "callees": ["vmemmap_p4d_populate", "vmemmap_pgd_populate", "vmemmap_pmd_populate", "vmemmap_pte_populate", "vmemmap_pud_populate", "vmemmap_verify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_pgd_populate",
+    "callees": ["pgd_none", "pgd_populate", "vmemmap_alloc_block_zero"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_p4d_populate",
+    "callees": ["p4d_offset", "p4d_populate", "pud_init", "vmemmap_alloc_block_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pud_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_pud_populate",
+    "callees": ["pmd_init", "vmemmap_alloc_block_zero"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_pmd_populate",
+    "callees": ["pmd_offset", "vmemmap_alloc_block_zero"],
+    "global_reads": ["page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_pte_populate",
+    "callees": ["get_page", "pfn_pte", "pte_offset_kernel", "vmemmap_alloc_block_buf"],
+    "global_reads": ["__default_kernel_pte_mask", "page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "vmemmap_verify",
+    "callees": ["__builtin_expect", "__node_distance", "_printk", "early_pfn_to_nid"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "vmemmap_alloc_block_buf",
+    "callees": ["altmap_alloc_block_buf", "sparse_buffer_alloc", "vmemmap_alloc_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "altmap_alloc_block_buf",
+    "callees": ["__builtin_expect", "_printk", "find_first_bit"],
+    "global_reads": ["__already_done", "page_offset_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "vmemmap_alloc_block",
+    "callees": ["__alloc_pages_node", "__builtin_clzll", "__builtin_constant_p", "__earlyonly_bootmem_alloc", "slab_is_available", "warn_alloc"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base", "warned"],
+    "global_writes": ["warned"]
+  },
+  {
+    "name": "__earlyonly_bootmem_alloc",
+    "callees": ["memblock_alloc_try_nid_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_page",
+    "callees": ["_compound_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pmd_off_k",
+    "callees": ["p4d_offset", "pmd_offset"],
+    "global_reads": ["page_offset_base", "pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "pgd_none",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": ["p4d_offset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_set_p4d",
+    "callees": ["pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

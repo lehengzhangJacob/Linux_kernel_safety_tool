@@ -1,0 +1,386 @@
+[
+  {
+    "name": "queued_write_lock",
+    "callees": ["__builtin_expect", "queued_write_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_lock",
+    "callees": ["__builtin_expect", "queued_spin_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_write_lock",
+    "callees": ["__builtin_expect", "queued_write_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_write_lock",
+    "callees": ["__builtin_expect", "queued_write_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_write_lock",
+    "callees": ["__builtin_expect", "queued_write_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_lock",
+    "callees": ["__builtin_expect", "queued_spin_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_lock",
+    "callees": ["__builtin_expect", "queued_spin_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_read_lock",
+    "callees": ["__builtin_expect", "queued_read_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_read_lock",
+    "callees": ["__builtin_expect", "queued_read_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_read_lock",
+    "callees": ["__builtin_expect", "queued_read_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock_irqrestore",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock_irq",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "in_lock_functions",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_unlock_bh",
+    "callees": ["__builtin_return_address", "__local_bh_enable_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_unlock_irq",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_unlock_irqrestore",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_unlock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_write_lock_irqsave",
+    "callees": ["queued_write_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_lock_irqsave",
+    "callees": ["queued_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_write_trylock",
+    "callees": ["__builtin_expect", "queued_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_read_trylock",
+    "callees": ["__builtin_expect", "queued_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_unlock_irqrestore",
+    "callees": ["__raw_write_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_unlock_irqrestore",
+    "callees": ["__raw_read_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_unlock_irq",
+    "callees": ["__raw_write_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_unlock_irq",
+    "callees": ["__raw_read_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_unlock_bh",
+    "callees": ["__builtin_return_address", "__local_bh_enable_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_unlock_bh",
+    "callees": ["__raw_read_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_unlock",
+    "callees": ["__raw_write_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_unlock",
+    "callees": ["__raw_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_trylock",
+    "callees": ["__raw_write_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_trylock",
+    "callees": ["__raw_read_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_lock_irqsave",
+    "callees": ["__raw_write_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_lock_irqsave",
+    "callees": ["__raw_read_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_lock_irq",
+    "callees": ["queued_write_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_lock_irq",
+    "callees": ["queued_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_lock_bh",
+    "callees": ["__builtin_return_address", "queued_write_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_lock_bh",
+    "callees": ["__builtin_return_address", "queued_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_lock_nested",
+    "callees": ["queued_write_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_write_lock",
+    "callees": ["queued_write_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_read_lock",
+    "callees": ["queued_read_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_trylock_bh",
+    "callees": ["__builtin_return_address", "__local_bh_enable_ip", "do_raw_spin_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock_irq",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock_irqrestore",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_unlock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_lock_irqsave",
+    "callees": ["do_raw_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__raw_spin_trylock",
+    "callees": ["__builtin_expect", "do_raw_spin_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_unlock_irqrestore",
+    "callees": ["__raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_unlock_irq",
+    "callees": ["__raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_unlock_bh",
+    "callees": ["__builtin_return_address", "__local_bh_enable_ip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_unlock",
+    "callees": ["__raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_trylock_bh",
+    "callees": ["__raw_spin_trylock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_trylock",
+    "callees": ["__raw_spin_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_lock_irqsave",
+    "callees": ["__raw_spin_lock_irqsave"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_lock_irq",
+    "callees": ["do_raw_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_lock_bh",
+    "callees": ["__builtin_return_address", "do_raw_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_raw_spin_lock",
+    "callees": ["do_raw_spin_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_raw_spin_lock",
+    "callees": ["__builtin_expect", "queued_spin_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_write_lock",
+    "callees": ["__builtin_expect", "queued_write_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_read_lock",
+    "callees": ["__builtin_expect", "queued_read_lock_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_write_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queued_read_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

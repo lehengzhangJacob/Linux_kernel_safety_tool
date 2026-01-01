@@ -1,0 +1,38 @@
+[
+  {
+    "name": "init_trampoline_kaslr",
+    "callees": ["alloc_low_pages", "native_set_p4d", "p4d_offset"],
+    "global_reads": ["page_offset_base", "pgdir_shift", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_randomize_memory",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kaslr_get_random_long", "prandom_bytes_state", "prandom_seed_state"],
+    "global_reads": ["max_pfn"],
+    "global_writes": []
+  },
+  {
+    "name": "p4d_offset",
+    "callees": [],
+    "global_reads": ["page_offset_base", "ptrs_per_p4d"],
+    "global_writes": []
+  },
+  {
+    "name": "native_set_p4d",
+    "callees": ["pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prandom_seed_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_check_all_gpes",
+    "callees": ["acpi_ev_get_gpe_event_info", "acpi_ev_walk_gpe_list", "acpi_os_acquire_lock", "acpi_os_release_lock"],
+    "global_reads": ["acpi_gbl_gpe_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_enable_all_wakeup_gpes",
+    "callees": ["acpi_ev_walk_gpe_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_enable_all_runtime_gpes",
+    "callees": ["acpi_ev_walk_gpe_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_disable_all_gpes",
+    "callees": ["acpi_ev_walk_gpe_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_gpe_block_status",
+    "callees": ["acpi_hw_gpe_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_enable_wakeup_gpe_block",
+    "callees": ["acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_enable_runtime_gpe_block",
+    "callees": ["acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_clear_gpe_block",
+    "callees": ["acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_disable_gpe_block",
+    "callees": ["acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_gpe_status",
+    "callees": ["acpi_hw_gpe_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_clear_gpe",
+    "callees": ["acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_low_set_gpe",
+    "callees": ["acpi_error", "acpi_hw_gpe_read", "acpi_hw_gpe_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_get_gpe_register_bit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_write",
+    "callees": ["acpi_hw_gpe_write.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_hw_gpe_read",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

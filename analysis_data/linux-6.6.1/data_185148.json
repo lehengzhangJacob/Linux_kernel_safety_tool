@@ -1,0 +1,242 @@
+[
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_stop_software_blink",
+    "callees": ["timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_brightness_delayed_set_brightness",
+    "callees": ["set_brightness_delayed_set_brightness.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm.part.0",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_brightness_delayed_set_brightness.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_init_default_state_get",
+    "callees": ["fwnode_property_read_string", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_compose_name",
+    "callees": ["_dev_err", "led_parse_fwnode_props", "snprintf", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_parse_fwnode_props",
+    "callees": ["_dev_err", "fwnode_property_present", "fwnode_property_read_string", "fwnode_property_read_u32_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_sysfs_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_sysfs_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_get_default_pattern",
+    "callees": ["fwnode_property_read_u32_array", "kfree", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_update_brightness",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_sync",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nosleep",
+    "callees": ["led_set_brightness_nopm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness_nopm",
+    "callees": ["led_set_brightness_nopm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_brightness",
+    "callees": ["__builtin_constant_p", "led_set_brightness_nosleep", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_stop_software_blink",
+    "callees": ["timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_blink_set_nosleep",
+    "callees": ["led_blink_set", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_blink_set_oneshot",
+    "callees": ["__builtin_constant_p", "led_blink_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_blink_set",
+    "callees": ["led_blink_setup", "timer_delete_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_init_core",
+    "callees": ["init_timer_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_blink_setup",
+    "callees": ["__builtin_constant_p", "led_set_software_blink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_set_software_blink",
+    "callees": ["led_set_brightness_nosleep", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "set_brightness_delayed",
+    "callees": ["led_blink_set", "led_stop_software_blink", "set_brightness_delayed_set_brightness"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_brightness_delayed_set_brightness",
+    "callees": ["set_brightness_delayed_set_brightness.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "led_timer_function",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "led_set_brightness_nosleep", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  }
+]

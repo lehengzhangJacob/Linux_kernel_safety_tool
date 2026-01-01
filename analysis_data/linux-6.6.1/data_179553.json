@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ipv6_rpl_addr_decompress",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_rpl_srh_compress",
+    "callees": ["ipv6_rpl_srh_calc_cmpri", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_rpl_srh_calc_cmpri",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_rpl_srh_decompress",
+    "callees": ["ipv6_rpl_addr_decompress"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_rpl_addr_decompress",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

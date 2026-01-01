@@ -1,0 +1,332 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sld_update_msr",
+    "callees": ["native_write_msr"],
+    "global_reads": ["msr_test_ctrl_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "sld_update_msr",
+    "callees": ["native_write_msr"],
+    "global_reads": ["msr_test_ctrl_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "sld_update_msr",
+    "callees": ["native_write_msr"],
+    "global_reads": ["msr_test_ctrl_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_this_hybrid_cpu_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sld_state_show",
+    "callees": ["__cpuhp_setup_state", "_printk"],
+    "global_reads": ["sld_state"],
+    "global_writes": []
+  },
+  {
+    "name": "split_lock_setup",
+    "callees": ["__split_lock_setup", "native_read_msr", "x86_match_cpu"],
+    "global_reads": [],
+    "global_writes": ["cpu_model_supports_sld"]
+  },
+  {
+    "name": "handle_bus_lock",
+    "callees": ["___ratelimit", "_printk", "force_sig_fault", "msleep"],
+    "global_reads": ["sld_state"],
+    "global_writes": []
+  },
+  {
+    "name": "handle_user_split_lock",
+    "callees": ["split_lock_warn"],
+    "global_reads": ["sld_state"],
+    "global_writes": []
+  },
+  {
+    "name": "bus_lock_init",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": ["sld_state"],
+    "global_writes": []
+  },
+  {
+    "name": "handle_guest_split_lock",
+    "callees": ["__builtin_expect", "_printk", "force_sig_fault", "split_lock_warn"],
+    "global_reads": ["__already_done", "sld_state"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "split_lock_warn",
+    "callees": ["___ratelimit", "__builtin_expect", "_printk", "down_interruptible", "msleep_interruptible", "queue_delayed_work_on", "sld_update_msr"],
+    "global_reads": ["sysctl_sld_mitigate", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "splitlock_cpu_offline",
+    "callees": ["sld_update_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__split_lock_reenable",
+    "callees": ["sld_update_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__split_lock_reenable_unlock",
+    "callees": ["sld_update_msr", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "split_lock_init",
+    "callees": ["split_lock_verify_msr"],
+    "global_reads": ["cpu_model_supports_sld", "sld_state"],
+    "global_writes": []
+  },
+  {
+    "name": "sld_update_msr",
+    "callees": ["native_write_msr"],
+    "global_reads": ["msr_test_ctrl_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "__split_lock_setup",
+    "callees": ["_printk", "native_read_msr", "native_write_msr", "split_lock_verify_msr"],
+    "global_reads": ["msr_test_ctrl_cache"],
+    "global_writes": ["msr_test_ctrl_cache"]
+  },
+  {
+    "name": "sld_state_setup",
+    "callees": ["cmdline_find_option", "match_option"],
+    "global_reads": [],
+    "global_writes": ["sld_state"]
+  },
+  {
+    "name": "split_lock_verify_msr",
+    "callees": ["native_read_msr", "native_read_msr_safe", "native_write_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_option",
+    "callees": ["memset", "sscanf", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sld_mitigate_sysctl_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_detect_tlb",
+    "callees": ["intel_tlb_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_tlb_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_intel",
+    "callees": ["bus_lock_init", "detect_extended_topology", "detect_num_cpu_cores", "detect_tme", "early_init_intel", "init_ia32_feat_ctl", "init_intel_cacheinfo", "init_intel_misc_features", "intel_init_thermal", "native_read_msr", "split_lock_init", "srat_detect_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_intel_misc_features",
+    "callees": ["init_cpuid_fault", "native_read_msr_safe", "native_write_msr", "probe_xeon_phi_r3mwait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_cpuid_fault",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "detect_tme",
+    "callees": ["__builtin_expect", "_printk", "native_read_msr"],
+    "global_reads": ["__already_done", "mktme_status", "tme_activate_cpu0"],
+    "global_writes": ["__already_done", "mktme_status", "tme_activate_cpu0"]
+  },
+  {
+    "name": "bsp_init_intel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_intel",
+    "callees": ["_printk", "bad_spectre_microcode", "check_memory_type_self_snoop_errata", "clear_cpu_cap", "detect_extended_topology_early", "detect_ht_early", "get_cpu_cap", "intel_get_microcode_revision", "msr_clear_bit", "native_read_msr", "setup_clear_cpu_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_spectre_microcode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "probe_xeon_phi_r3mwait",
+    "callees": [],
+    "global_reads": ["elf_hwcap2", "ring3mwait_disabled"],
+    "global_writes": ["elf_hwcap2"]
+  },
+  {
+    "name": "ring3mwait_disable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["ring3mwait_disabled"]
+  },
+  {
+    "name": "intel_get_microcode_revision",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sld_setup",
+    "callees": ["sld_state_setup", "sld_state_show", "split_lock_setup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "update_static_calls",
+    "callees": ["__static_call_update"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "restore_override_callbacks",
+    "callees": [],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "apic_install_driver",
+    "callees": ["_printk", "restore_override_callbacks", "update_static_calls"],
+    "global_reads": ["apic"],
+    "global_writes": ["apic"]
+  },
+  {
+    "name": "apic_setup_apic_calls",
+    "callees": ["_printk", "update_static_calls"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  }
+]

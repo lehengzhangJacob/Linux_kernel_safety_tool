@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_get_val.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_get_val",
+    "callees": ["follower_get_val.part.0", "follower_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_get_val.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "master_init.part.0",
+    "callees": ["follower_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_init.part.0",
+    "callees": ["__builtin_return_address", "_printk", "follower_update", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_apply_vmaster_followers",
+    "callees": ["master_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_sync_vmaster",
+    "callees": ["master_init.part.0", "sync_followers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_add_vmaster_hook",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_make_virtual_master",
+    "callees": ["kfree", "kzalloc", "memcpy", "memset", "snd_ctl_new1"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "master_free",
+    "callees": ["kfree", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "master_put",
+    "callees": ["master_init.part.0", "sync_followers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sync_followers",
+    "callees": ["__builtin_return_address", "follower_get_val", "follower_put_val", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "master_get",
+    "callees": ["master_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "master_info",
+    "callees": ["master_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_add_followers",
+    "callees": ["_snd_ctl_add_follower", "snd_ctl_find_id_mixer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_snd_ctl_add_follower",
+    "callees": ["__builtin_expect", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_tlv_cmd",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_put",
+    "callees": ["follower_init", "follower_put_val"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_get",
+    "callees": ["follower_get_val"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_put_val",
+    "callees": ["master_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_get_val",
+    "callees": ["follower_get_val.part.0", "follower_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_init",
+    "callees": ["follower_init.part.0", "follower_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "follower_update",
+    "callees": ["kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_ctl_find_id_mixer",
+    "callees": ["snd_ctl_find_id", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

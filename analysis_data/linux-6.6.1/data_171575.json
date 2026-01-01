@@ -1,0 +1,50 @@
+[
+  {
+    "name": "acpi_ex_start_trace_opcode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_interpreter_trace_enabled.part.0",
+    "callees": [],
+    "global_reads": ["acpi_gbl_trace_method_name"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_stop_trace_opcode",
+    "callees": ["acpi_ex_start_trace_opcode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_start_trace_opcode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_stop_trace_method",
+    "callees": ["acpi_ns_get_normalized_pathname", "kfree"],
+    "global_reads": ["acpi_gbl_original_dbg_layer", "acpi_gbl_original_dbg_level", "acpi_gbl_trace_flags", "acpi_gbl_trace_method_object"],
+    "global_writes": ["acpi_dbg_layer", "acpi_dbg_level", "acpi_gbl_trace_method_name", "acpi_gbl_trace_method_object"]
+  },
+  {
+    "name": "acpi_ex_start_trace_method",
+    "callees": ["acpi_ex_interpreter_trace_enabled", "acpi_ns_get_normalized_pathname", "kfree"],
+    "global_reads": ["acpi_dbg_layer", "acpi_dbg_level", "acpi_gbl_trace_dbg_layer", "acpi_gbl_trace_dbg_level", "acpi_gbl_trace_method_object"],
+    "global_writes": ["acpi_dbg_layer", "acpi_dbg_level", "acpi_gbl_original_dbg_layer", "acpi_gbl_original_dbg_level", "acpi_gbl_trace_method_object"]
+  },
+  {
+    "name": "acpi_ex_trace_point",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_interpreter_trace_enabled",
+    "callees": ["acpi_ex_interpreter_trace_enabled.part.0", "strcmp"],
+    "global_reads": ["acpi_gbl_trace_flags", "acpi_gbl_trace_method_name", "acpi_gbl_trace_method_object"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tso_start",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__vlan_get_protocol"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "tso_build_data",
+    "callees": ["tso_build_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tso_build_hdr",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

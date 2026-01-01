@@ -1,0 +1,176 @@
+[
+  {
+    "name": "gen9_blt_get_cmd_length_mask.part.0",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_header_key",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_render_get_cmd_length_mask.part.0",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_bsd_get_cmd_length_mask.part.0",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen9_blt_get_cmd_length_mask.part.0",
+    "callees": ["___drm_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_cmd_parser_get_version",
+    "callees": ["rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cmd_parser",
+    "callees": ["___drm_dbg", "__builtin_constant_p", "__builtin_expect", "__i915_gem_object_flush_map", "alloc_whitelist", "check_bbstart", "check_cmd", "copy_batch", "find_cmd", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_whitelist",
+    "callees": ["bitmap_zalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_bbstart",
+    "callees": ["___drm_dbg", "__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_cmd",
+    "callees": ["___drm_dbg", "find_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__find_reg",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_cmd",
+    "callees": ["find_cmd_in_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_cmd_in_table",
+    "callees": ["cmd_header_key"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_cleanup_cmd_parser",
+    "callees": ["fini_hash_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engine_init_cmd_parser",
+    "callees": ["__warn_printk", "_dev_err", "fini_hash_table", "init_hash_table", "validate_cmds_sorted", "validate_regs_sorted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fini_hash_table",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_hash_table",
+    "callees": ["__builtin_return_address", "cmd_header_key", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cmd_header_key",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_regs_sorted",
+    "callees": ["check_sorted"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_sorted",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_cmds_sorted",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen9_blt_get_cmd_length_mask",
+    "callees": ["gen9_blt_get_cmd_length_mask.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_blt_get_cmd_length_mask",
+    "callees": ["gen7_blt_get_cmd_length_mask.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_bsd_get_cmd_length_mask",
+    "callees": ["gen7_bsd_get_cmd_length_mask.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gen7_render_get_cmd_length_mask",
+    "callees": ["gen7_render_get_cmd_length_mask.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

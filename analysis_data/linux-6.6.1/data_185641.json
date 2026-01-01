@@ -1,0 +1,158 @@
+[
+  {
+    "name": "read_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_chan_reg_read_modify_write",
+    "callees": ["pcc_chan_reg_read", "pcc_chan_reg_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_mbox_request_channel.part.0",
+    "callees": ["__builtin_expect", "_printk", "mbox_bind_client"],
+    "global_reads": ["chan_info"],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_init",
+    "callees": ["__builtin_expect", "__platform_create_bundle", "acpi_pcc_probe"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": ["pcc_chan_count"]
+  },
+  {
+    "name": "pcc_mbox_probe",
+    "callees": ["__builtin_expect", "_printk", "acpi_get_table", "acpi_put_table", "devm_kmalloc", "mbox_controller_register", "pcc_parse_subspace_db_reg", "pcc_parse_subspace_irq", "pcc_parse_subspace_shmem"],
+    "global_reads": ["chan_info", "pcc_chan_count"],
+    "global_writes": ["chan_info"]
+  },
+  {
+    "name": "acpi_pcc_probe",
+    "callees": ["_printk", "acpi_get_table", "acpi_put_table", "acpi_table_parse_entries_array"],
+    "global_reads": [],
+    "global_writes": ["pcc_chan_count"]
+  },
+  {
+    "name": "pcc_parse_subspace_shmem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_parse_subspace_db_reg",
+    "callees": ["pcc_chan_reg_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_parse_subspace_irq",
+    "callees": ["_printk", "pcc_chan_reg_init", "pcc_map_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_chan_reg_init",
+    "callees": ["_printk", "ioremap_cache"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parse_pcc_subspace",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_shutdown",
+    "callees": ["devm_free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_startup",
+    "callees": ["__builtin_expect", "_dev_err", "devm_request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_send_data",
+    "callees": ["pcc_chan_reg_read_modify_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_mbox_free_channel",
+    "callees": ["mbox_free_channel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_mbox_request_channel",
+    "callees": ["pcc_mbox_request_channel.part.0"],
+    "global_reads": ["pcc_chan_count"],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_mbox_irq",
+    "callees": ["mbox_chan_received_data", "pcc_chan_reg_read", "pcc_chan_reg_read_modify_write", "pcc_chan_reg_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_map_interrupt",
+    "callees": ["acpi_register_gsi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcc_chan_reg_read_modify_write",
+    "callees": ["pcc_chan_reg_read", "pcc_chan_reg_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

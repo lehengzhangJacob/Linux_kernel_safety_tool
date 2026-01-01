@@ -1,0 +1,200 @@
+[
+  {
+    "name": "netfs_clear_subrequests",
+    "callees": ["netfs_put_subrequest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref",
+    "callees": ["__SCT__tp_func_netfs_rreq_ref", "cpu_online", "trace_netfs_rreq_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_sreq_ref",
+    "callees": ["__SCT__tp_func_netfs_sreq_ref", "cpu_online", "trace_netfs_sreq_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_put_request.part.0",
+    "callees": ["__builtin_unreachable", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_put_subrequest",
+    "callees": ["__refcount_sub_and_test", "netfs_free_subrequest", "trace_netfs_sreq_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_free_subrequest",
+    "callees": ["kfree", "netfs_put_request", "trace_netfs_sreq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_get_subrequest",
+    "callees": ["__refcount_add", "trace_netfs_sreq_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_alloc_subrequest",
+    "callees": ["kzalloc", "netfs_get_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_put_request",
+    "callees": ["__refcount_sub_and_test", "netfs_free_request", "netfs_put_request.part.0", "trace_netfs_rreq_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_free_request",
+    "callees": ["kfree", "netfs_clear_subrequests", "trace_netfs_rreq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_clear_subrequests",
+    "callees": ["netfs_put_subrequest"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_get_request",
+    "callees": ["__refcount_add", "trace_netfs_rreq_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netfs_alloc_request",
+    "callees": ["__builtin_constant_p", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_sreq_ref",
+    "callees": ["__SCT__tp_func_netfs_sreq_ref", "cpu_online", "trace_netfs_sreq_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_netfs_rreq_ref",
+    "callees": ["__SCT__tp_func_netfs_rreq_ref", "cpu_online", "trace_netfs_rreq_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "common_branch_type",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_type_fused",
+    "callees": ["get_branch_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "branch_type",
+    "callees": ["get_branch_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_branch_type",
+    "callees": ["copy_from_user_nmi", "decode_branch_type", "in_gate_area_no_mm", "insn_get_length", "insn_init", "kernel_text_address"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_branch_type",
+    "callees": ["insn_get_immediate", "insn_get_modrm", "insn_get_opcode"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

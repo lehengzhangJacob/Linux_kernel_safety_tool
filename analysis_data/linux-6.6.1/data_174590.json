@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ethnl_set_channels",
+    "callees": ["do_trace_netlink_extack", "ethtool_get_max_rxfh_channel", "ethtool_get_max_rxnfc_channel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_channels_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "channels_fill_reply",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "channels_reply_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "channels_prepare_data",
+    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

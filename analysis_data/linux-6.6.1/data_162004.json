@@ -1,0 +1,332 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sidlookup_cached.part.0",
+    "callees": ["netlbl_cache_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sidlookup_cached",
+    "callees": ["security_netlbl_secattr_to_sid", "selinux_netlbl_sidlookup_cached.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sidlookup_cached.part.0",
+    "callees": ["netlbl_cache_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_socket_connect",
+    "callees": ["lock_sock_nested", "release_sock", "selinux_netlbl_socket_connect_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_socket_connect_locked",
+    "callees": ["selinux_netlbl_socket_connect_helper"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_socket_connect_helper",
+    "callees": ["netlbl_conn_setattr", "netlbl_sock_delattr", "selinux_netlbl_sock_genattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_socket_setsockopt",
+    "callees": ["lock_sock_nested", "memset", "netlbl_secattr_destroy", "netlbl_sock_getattr", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sock_rcv_skb",
+    "callees": ["avc_has_perm", "memset", "netlbl_enabled", "netlbl_secattr_destroy", "netlbl_skbuff_err", "netlbl_skbuff_getattr", "selinux_netlbl_sidlookup_cached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_socket_post_create",
+    "callees": ["netlbl_sock_setattr", "selinux_netlbl_sock_genattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sctp_sk_clone",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_inet_csk_clone",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_inet_conn_request",
+    "callees": ["memset", "netlbl_req_setattr", "netlbl_secattr_destroy", "security_netlbl_sid_to_secattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sctp_assoc_request",
+    "callees": ["memset", "netlbl_conn_setattr", "netlbl_secattr_destroy", "security_netlbl_sid_to_secattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_skbuff_setsid",
+    "callees": ["memset", "netlbl_secattr_destroy", "netlbl_skbuff_setattr", "security_netlbl_sid_to_secattr", "selinux_netlbl_sock_getattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_skbuff_getsid",
+    "callees": ["memset", "netlbl_enabled", "netlbl_secattr_destroy", "netlbl_skbuff_getattr", "selinux_netlbl_sidlookup_cached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sk_security_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sk_security_free",
+    "callees": ["kfree", "netlbl_secattr_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_err",
+    "callees": ["netlbl_skbuff_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_cache_invalidate",
+    "callees": ["netlbl_cache_invalidate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sock_getattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sock_genattr",
+    "callees": ["kfree", "kzalloc", "netlbl_secattr_destroy", "security_netlbl_sid_to_secattr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "selinux_netlbl_sidlookup_cached",
+    "callees": ["security_netlbl_secattr_to_sid", "selinux_netlbl_sidlookup_cached.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_destroy",
+    "callees": ["kfree", "netlbl_secattr_cache_free", "netlbl_secattr_destroy.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_secattr_cache_free",
+    "callees": ["__refcount_sub_and_test", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

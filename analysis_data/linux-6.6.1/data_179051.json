@@ -1,0 +1,266 @@
+[
+  {
+    "name": "class_dev_iter_init",
+    "callees": ["class_to_subsys", "klist_iter_init_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_exit",
+    "callees": ["klist_iter_exit", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_init",
+    "callees": ["class_to_subsys", "klist_iter_init_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_init",
+    "callees": ["class_to_subsys", "klist_iter_init_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_init",
+    "callees": ["class_to_subsys", "klist_iter_init_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_exit",
+    "callees": ["klist_iter_exit", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_next",
+    "callees": ["klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_exit",
+    "callees": ["klist_iter_exit", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_exit",
+    "callees": ["klist_iter_exit", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_next",
+    "callees": ["klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_next",
+    "callees": ["klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_next",
+    "callees": ["klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_unregister",
+    "callees": ["class_to_subsys", "kobject_put", "kset_unregister", "sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "classes_init",
+    "callees": ["kset_create_and_add"],
+    "global_reads": [],
+    "global_writes": ["class_kset"]
+  },
+  {
+    "name": "class_is_registered",
+    "callees": ["class_to_subsys", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_compat_remove_link",
+    "callees": ["sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_compat_create_link",
+    "callees": ["sysfs_create_link", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_compat_unregister",
+    "callees": ["kfree", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_compat_register",
+    "callees": ["__builtin_return_address", "kfree", "kmalloc_trace", "kobject_create_and_add"],
+    "global_reads": ["class_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "show_class_attr_string",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_interface_unregister",
+    "callees": ["class_dev_iter_exit", "class_dev_iter_init", "class_dev_iter_next", "class_to_subsys", "kobject_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_interface_register",
+    "callees": ["class_dev_iter_exit", "class_dev_iter_init", "class_dev_iter_next", "class_to_subsys", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_find_device",
+    "callees": ["__warn_printk", "class_dev_iter_exit", "class_dev_iter_init", "class_dev_iter_next", "class_to_subsys", "get_device", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_for_each_device",
+    "callees": ["__warn_printk", "class_dev_iter_exit", "class_dev_iter_init", "class_dev_iter_next", "class_to_subsys", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_exit",
+    "callees": ["klist_iter_exit", "kobject_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_next",
+    "callees": ["klist_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_dev_iter_init",
+    "callees": ["class_to_subsys", "klist_iter_init_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_destroy",
+    "callees": ["__builtin_expect", "class_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_create",
+    "callees": ["class_register", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_create_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_unregister",
+    "callees": ["class_to_subsys", "kobject_put", "kset_unregister", "sysfs_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_register",
+    "callees": ["__mutex_init", "kfree", "kfree_const", "klist_init", "kobject_del", "kobject_set_name", "kset_init", "kset_register", "kzalloc", "sysfs_create_groups"],
+    "global_reads": ["class_kset"],
+    "global_writes": []
+  },
+  {
+    "name": "klist_class_dev_put",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "klist_class_dev_get",
+    "callees": ["get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_remove_file_ns",
+    "callees": ["class_to_subsys", "kobject_put", "sysfs_remove_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_create_file_ns",
+    "callees": ["class_to_subsys", "kobject_put", "sysfs_create_file_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_child_ns_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_attr_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_attr_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_to_subsys",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kset_get"],
+    "global_reads": ["class_kset"],
+    "global_writes": []
+  }
+]

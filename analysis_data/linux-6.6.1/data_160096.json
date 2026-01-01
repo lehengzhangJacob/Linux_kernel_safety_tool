@@ -1,0 +1,26 @@
+[
+  {
+    "name": "retire_mq_sysctls",
+    "callees": ["kfree", "retire_sysctl_set", "unregister_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_mq_sysctls",
+    "callees": ["__register_sysctl_table", "kfree", "kmemdup", "retire_sysctl_set", "setup_sysctl_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_is_seen",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

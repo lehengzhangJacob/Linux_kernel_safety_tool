@@ -1,0 +1,812 @@
+[
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data.part.0",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data",
+    "callees": ["virtblk_unmap_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_request_done",
+    "callees": ["__virtio_test_bit", "blk_mq_end_request", "virtblk_cleanup_cmd", "virtblk_unmap_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data.part.0",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data",
+    "callees": ["virtblk_unmap_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_device_ready",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_update_cache_mode",
+    "callees": ["blk_queue_write_cache", "virtblk_get_cache_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data.part.0",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data",
+    "callees": ["virtblk_unmap_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data.part.0",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data",
+    "callees": ["virtblk_unmap_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data.part.0",
+    "callees": ["sg_free_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd.part.0",
+    "callees": ["kfree"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_blk_fini",
+    "callees": ["destroy_workqueue", "unregister_blkdev", "unregister_virtio_driver"],
+    "global_reads": ["major", "virtblk_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_blk_init",
+    "callees": ["__register_blkdev", "alloc_workqueue", "destroy_workqueue", "register_virtio_driver", "unregister_blkdev"],
+    "global_reads": ["major", "virtblk_wq"],
+    "global_writes": ["major", "virtblk_wq"]
+  },
+  {
+    "name": "virtblk_restore",
+    "callees": ["blk_mq_unquiesce_queue", "init_vq", "virtio_device_ready"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_freeze",
+    "callees": ["blk_mq_quiesce_queue", "flush_work", "kfree", "virtio_reset_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_remove",
+    "callees": ["blk_mq_free_tag_set", "del_gendisk", "flush_work", "kfree", "mutex_lock", "mutex_unlock", "put_disk", "virtio_reset_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_probe",
+    "callees": ["__SCT__might_resched", "__blk_mq_alloc_disk", "__builtin_expect", "__builtin_return_address", "__mutex_init", "__virtio_test_bit", "_dev_err", "blk_mq_alloc_tag_set", "blk_mq_free_tag_set", "blk_queue_alignment_offset", "blk_queue_io_min", "blk_queue_io_opt", "blk_queue_logical_block_size", "blk_queue_max_discard_sectors", "blk_queue_max_discard_segments", "blk_queue_max_hw_sectors", "blk_queue_max_secure_erase_sectors", "blk_queue_max_segment_size", "blk_queue_max_segments", "blk_queue_max_write_zeroes_sectors", "blk_queue_physical_block_size", "device_add_disk", "ida_alloc_range", "ida_free", "init_vq", "kfree", "kmalloc_trace", "memset", "put_disk", "set_disk_ro", "virtblk_name_format", "virtblk_probe_zoned_device", "virtblk_update_cache_mode", "virtblk_update_capacity", "virtio_device_ready", "virtio_has_feature", "virtio_max_dma_size"],
+    "global_reads": ["major", "virtblk_queue_depth"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_poll",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_mq_add_to_batch", "blk_mq_complete_request_remote", "blk_mq_start_stopped_hw_queues", "virtblk_request_done", "virtqueue_get_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_complete_batch",
+    "callees": ["blk_mq_end_request_batch", "virtblk_cleanup_cmd", "virtblk_unmap_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_map_queues",
+    "callees": ["blk_mq_map_queues", "blk_mq_virtio_map_queues"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_attrs_are_visible",
+    "callees": ["virtio_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_type_show",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "sysfs_emit", "virtblk_get_cache_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cache_type_store",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__sysfs_match_string", "virtblk_update_cache_mode", "virtio_cwrite8", "virtio_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_update_cache_mode",
+    "callees": ["blk_queue_write_cache", "virtblk_get_cache_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_get_cache_mode",
+    "callees": ["__SCT__might_resched", "virtio_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_vq",
+    "callees": ["__SCT__might_resched", "__virtio_test_bit", "_dev_err", "_dev_info", "kfree", "kmalloc_array", "snprintf", "virtio_has_feature"],
+    "global_reads": ["nr_cpu_ids", "num_request_queues", "poll_queues"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_config_changed",
+    "callees": ["queue_work_on"],
+    "global_reads": ["virtblk_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_config_changed_work",
+    "callees": ["virtblk_update_capacity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_update_capacity",
+    "callees": ["__SCT__might_resched", "__virtio_cread_many", "__virtio_test_bit", "_dev_notice", "set_capacity_and_notify", "string_get_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serial_show",
+    "callees": ["strlen", "virtblk_get_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_free_disk",
+    "callees": ["ida_free", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_getgeo",
+    "callees": ["__SCT__might_resched", "__virtio_test_bit", "mutex_lock", "mutex_unlock", "virtio_has_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_queue_rqs",
+    "callees": ["virtblk_add_req_batch", "virtblk_prep_rq_batch", "virtqueue_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_add_req_batch",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_mq_requeue_request", "virtblk_add_req", "virtblk_cleanup_cmd", "virtblk_unmap_data", "virtqueue_kick_prepare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_prep_rq_batch",
+    "callees": ["virtblk_prep_rq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_queue_rq",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_mq_stop_hw_queue", "virtblk_add_req", "virtblk_fail_to_queue", "virtblk_prep_rq", "virtblk_unmap_data", "virtqueue_kick", "virtqueue_kick_prepare", "virtqueue_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_fail_to_queue",
+    "callees": ["virtblk_cleanup_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_commit_rqs",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "virtqueue_kick_prepare", "virtqueue_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_done",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_mq_complete_request", "blk_mq_start_stopped_hw_queues", "virtqueue_disable_cb", "virtqueue_enable_cb", "virtqueue_get_buf", "virtqueue_is_broken"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_request_done",
+    "callees": ["__virtio_test_bit", "blk_mq_end_request", "virtblk_cleanup_cmd", "virtblk_unmap_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_setup_cmd",
+    "callees": ["__virtio_test_bit", "virtblk_setup_discard_write_zeroes_erase"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_cleanup_cmd",
+    "callees": ["virtblk_cleanup_cmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_map_data",
+    "callees": ["__blk_rq_map_sg", "__builtin_expect", "sg_alloc_table_chained"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_unmap_data",
+    "callees": ["virtblk_unmap_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_setup_discard_write_zeroes_erase",
+    "callees": ["__builtin_expect", "bvec_set_virt", "kmalloc_array"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtblk_add_req",
+    "callees": ["__virtio_test_bit", "sg_init_one", "virtqueue_add_sgs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_device_ready",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_has_feature",
+    "callees": ["__virtio_test_bit", "virtio_check_driver_offered_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__virtio_test_bit",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__compiletime_assert_333"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bvec_set_virt",
+    "callees": [],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

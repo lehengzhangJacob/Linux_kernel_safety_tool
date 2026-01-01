@@ -1,0 +1,20 @@
+[
+  {
+    "name": "efi_memattr_apply_permissions",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "efi_md_typeattr_format", "entry_is_valid", "memremap", "memunmap"],
+    "global_reads": ["efi_mem_attr_table", "tbl_size"],
+    "global_writes": []
+  },
+  {
+    "name": "entry_is_valid",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efi_memattr_init",
+    "callees": ["_printk", "early_memremap", "early_memunmap", "memblock_reserve"],
+    "global_reads": ["efi_mem_attr_table"],
+    "global_writes": ["tbl_size"]
+  }
+]

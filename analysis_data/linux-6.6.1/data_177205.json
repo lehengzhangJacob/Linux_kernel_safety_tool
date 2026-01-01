@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connsecmark_tg_exit",
+    "callees": ["xt_unregister_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connsecmark_tg_init",
+    "callees": ["xt_register_target"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connsecmark_tg_destroy",
+    "callees": ["nf_ct_netns_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connsecmark_tg_check",
+    "callees": ["___ratelimit", "_printk", "nf_ct_netns_get", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connsecmark_tg",
+    "callees": ["__builtin_unreachable", "secmark_restore", "secmark_save"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "secmark_restore",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "lockref_get_not_dead",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_mark_dead",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_put_or_lock",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_put_return",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_put_not_zero",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_get_not_zero",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockref_get",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

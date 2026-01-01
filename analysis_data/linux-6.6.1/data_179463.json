@@ -1,0 +1,896 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_arg_size",
+    "callees": ["add_mm_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_arg_size",
+    "callees": ["add_mm_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "path_noexec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmdrop",
+    "callees": ["__builtin_expect", "__mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_stack_limits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_lock_killable",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write_killable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "allow_write_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_execve",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_execveat",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_execveat",
+    "callees": ["do_execveat", "getname_uflags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_execve",
+    "callees": ["do_execve", "getname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_execve.part.0",
+    "callees": ["__builtin_expect", "acct_update_integrals", "check_unsafe_exec", "do_open_execat", "exec_binprm", "fatal_signal_pending", "force_fatal_sig", "get_close_on_exec", "sched_exec", "sched_mm_cid_after_execve", "sched_mm_cid_before_execve", "security_bprm_creds_for_exec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "count_strings_kernel.part.0",
+    "callees": ["__SCT__cond_resched", "fatal_signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_fs_exec_sysctls",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_dointvec_minmax_coredump",
+    "callees": ["proc_dointvec_minmax", "validate_coredump_safety"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_execveat",
+    "callees": ["compat_do_execveat", "getname_uflags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_execveat",
+    "callees": ["__do_compat_sys_execveat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_compat_sys_execve",
+    "callees": ["compat_do_execve", "getname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_compat_sys_execve",
+    "callees": ["__do_compat_sys_execve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_execveat",
+    "callees": ["do_execveat", "getname_uflags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_execveat",
+    "callees": ["__do_sys_execveat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_execveat",
+    "callees": ["__do_sys_execveat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_execve",
+    "callees": ["do_execve", "getname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_execve",
+    "callees": ["__do_sys_execve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_execve",
+    "callees": ["__do_sys_execve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_dumpable",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_binfmt",
+    "callees": ["module_put", "set_binfmt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_do_execveat",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compat_do_execve",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_execveat",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_execve",
+    "callees": ["do_execveat_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_execve",
+    "callees": ["__builtin_expect", "alloc_bprm", "bprm_execve", "bprm_stack_limits", "copy_string_kernel", "copy_strings_kernel", "count_strings_kernel.part.0", "free_bprm", "getname_kernel", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_execve",
+    "callees": ["bprm_execve.part.0", "prepare_bprm_creds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exec_binprm",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__task_pid_nr_ns", "allow_write_access", "audit_bprm", "fput", "proc_exec_connector", "ptrace_event", "search_binary_handler", "task_active_pid_ns", "trace_sched_process_exec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "search_binary_handler",
+    "callees": ["__request_module", "_raw_read_lock", "_raw_read_unlock", "module_put", "prepare_binprm", "security_bprm_check", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_arg_zero",
+    "callees": ["get_arg_page", "put_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_binprm",
+    "callees": ["kernel_read", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_creds_from_file",
+    "callees": ["bprm_fill_uid", "security_bprm_creds_from_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_fill_uid",
+    "callees": ["__builtin_constant_p", "down_write", "make_vfsgid", "make_vfsuid", "mnt_may_suid", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_unsafe_exec",
+    "callees": ["__builtin_constant_p", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_change_interp",
+    "callees": ["kfree", "kstrdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_bprm",
+    "callees": ["bprm_mm_init", "free_bprm", "kasprintf", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_bprm",
+    "callees": ["abort_creds", "acct_arg_size", "allow_write_access", "fput", "kfree", "mmput", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_bprm_creds",
+    "callees": ["__builtin_expect", "mutex_lock_interruptible", "mutex_unlock", "prepare_exec_creds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "finalize_exec",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_new_exec",
+    "callees": ["arch_pick_mmap_layout", "arch_setup_new_exec", "mutex_unlock", "test_ti_thread_flag", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "would_dump",
+    "callees": ["inode_permission", "privileged_wrt_inode_uidgid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "begin_new_exec",
+    "callees": ["__set_task_comm", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "acct_arg_size", "bprm_creds_from_file", "commit_creds", "de_thread", "do_close_on_exec", "exec_mmap", "exec_task_namespaces", "exit_itimers", "fd_install", "flush_itimer_signals", "flush_signal_handlers", "flush_thread", "get_unused_fd_flags", "io_uring_task_cancel", "kbasename", "perf_event_exec", "perf_event_exit_task", "posix_cpu_timers_exit", "security_bprm_committed_creds", "security_bprm_committing_creds", "set_cred_ucounts", "set_dumpable", "set_mm_exe_file", "unshare_files", "unshare_sighand", "up_write", "would_dump"],
+    "global_reads": ["suid_dumpable"],
+    "global_writes": []
+  },
+  {
+    "name": "__set_task_comm",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "perf_event_comm", "strscpy_pad", "trace_task_rename"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_task_comm",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "strscpy_pad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unshare_sighand",
+    "callees": ["__cleanup_sighand", "_raw_spin_lock", "_raw_spin_unlock", "_raw_write_lock_irq", "_raw_write_unlock_irq", "kmem_cache_alloc", "memcpy"],
+    "global_reads": ["sighand_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "de_thread",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__wake_up_parent", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "_raw_write_lock_irq", "_raw_write_unlock_irq", "exchange_tids", "percpu_down_read", "percpu_up_read", "release_task", "schedule", "transfer_pid", "zap_other_threads"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exec_mmap",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "down_write_killable", "exec_mm_release", "membarrier_exec_mmap", "mm_init_cid", "mmap_read_lock_killable", "mmap_read_unlock", "mmdrop", "mmput", "setmax_mm_hiwater_rss", "switch_mm", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "open_exec",
+    "callees": ["__builtin_expect", "do_open_execat", "getname_kernel", "putname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_open_execat",
+    "callees": ["__builtin_expect", "deny_write_access", "do_filp_open", "fput", "path_noexec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_arg_pages",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "arch_align_stack", "expand_stack_locked", "mas_init", "mmap_write_lock_killable", "mmap_write_unlock", "mprotect_fixup", "shift_arg_pages", "tlb_finish_mmu", "tlb_gather_mmu", "vma_start_write"],
+    "global_reads": ["__already_done", "mmap_min_addr"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "shift_arg_pages",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "free_pgd_range", "lru_add_drain", "mas_find", "mas_prev", "mas_prev_range", "move_page_tables", "tlb_finish_mmu", "tlb_gather_mmu", "vma_expand", "vma_shrink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_strings_kernel",
+    "callees": ["__SCT__cond_resched", "copy_string_kernel", "fatal_signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_string_kernel",
+    "callees": ["get_arg_page", "memcpy_to_page", "put_page", "strnlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_stack_limits",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bprm_mm_init",
+    "callees": ["__bprm_mm_init", "_raw_spin_lock", "_raw_spin_unlock", "mm_alloc", "mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__bprm_mm_init",
+    "callees": ["insert_vm_struct", "mmap_write_lock_killable", "mmap_write_unlock", "vm_area_alloc", "vm_area_free", "vm_get_page_prot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_arg_page",
+    "callees": ["__builtin_expect", "acct_arg_size", "expand_downwards", "get_user_pages_remote", "mmap_read_lock", "mmap_read_unlock", "mmap_write_downgrade", "mmap_write_lock", "mmap_write_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acct_arg_size",
+    "callees": ["add_mm_counter"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "path_noexec",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_binfmt",
+    "callees": ["_raw_write_lock", "_raw_write_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__register_binfmt",
+    "callees": ["_raw_write_lock", "_raw_write_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_sched_process_exec",
+    "callees": ["__SCT__tp_func_sched_process_exec", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_task_rename",
+    "callees": ["__SCT__tp_func_task_rename", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_uring_task_cancel",
+    "callees": ["__io_uring_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_bprm",
+    "callees": ["__audit_bprm", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memcpy_to_page",
+    "callees": ["memcpy"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "setmax_mm_hiwater_rss",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_start_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "allow_write_access",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock_killable",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read_killable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_read_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_downgrade",
+    "callees": ["__mmap_lock_trace_acquire_returned", "downgrade_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_unlock",
+    "callees": ["__mmap_lock_trace_released", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_lock_killable",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write_killable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmap_write_lock",
+    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_released",
+    "callees": ["__mmap_lock_do_trace_released"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_acquire_returned",
+    "callees": ["__mmap_lock_do_trace_acquire_returned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__mmap_lock_trace_start_locking",
+    "callees": ["__mmap_lock_do_trace_start_locking"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmdrop",
+    "callees": ["__builtin_expect", "__mmdrop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mm_init_cid",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mas_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kbasename",
+    "callees": ["strrchr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

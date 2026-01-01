@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ldsem_wake.part.0",
+    "callees": ["__ldsem_wake_readers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ldsem_wake",
+    "callees": ["__ldsem_wake.part.0", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ldsem_wake.part.0",
+    "callees": ["__ldsem_wake_readers"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_up_write",
+    "callees": ["ldsem_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_up_read",
+    "callees": ["ldsem_wake"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_down_write_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_down_write",
+    "callees": ["__SCT__might_resched", "__ldsem_down_write_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_down_read_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_down_read",
+    "callees": ["__SCT__might_resched", "__ldsem_down_read_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_write_failed",
+    "callees": ["__builtin_expect", "__ldsem_wake_readers", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "schedule_timeout", "writer_trylock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "down_read_failed",
+    "callees": ["__builtin_expect", "__ldsem_wake", "__refcount_add", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "put_task_struct", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldsem_wake",
+    "callees": ["__ldsem_wake", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ldsem_wake",
+    "callees": ["__ldsem_wake.part.0", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "writer_trylock",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ldsem_wake_readers",
+    "callees": ["__builtin_expect", "put_task_struct", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__init_ldsem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_task_struct",
+    "callees": ["__put_task_struct", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

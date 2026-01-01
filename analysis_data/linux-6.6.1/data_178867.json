@@ -1,0 +1,62 @@
+[
+  {
+    "name": "find_video.part.0",
+    "callees": ["acpi_get_pci_dev", "acpi_is_video_device", "pci_dev_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__acpi_video_get_backlight_type",
+    "callees": ["acpi_osi_is_win8", "acpi_video_parse_cmdline", "acpi_walk_namespace", "dmi_check_system", "mutex_lock", "mutex_unlock", "nvidia_wmi_ec_supported", "prefer_native_over_acpi_video"],
+    "global_reads": ["acpi_backlight_cmdline", "acpi_backlight_dmi", "apple_gmux_present", "init_done", "native_available", "nvidia_wmi_ec_present", "video_caps"],
+    "global_writes": ["apple_gmux_present", "init_done", "native_available", "nvidia_wmi_ec_present"]
+  },
+  {
+    "name": "prefer_native_over_acpi_video",
+    "callees": ["acpi_osi_is_win8", "google_cros_ec_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "google_cros_ec_present",
+    "callees": ["acpi_dev_found"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "video_detect_force_native",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_backlight_dmi"]
+  },
+  {
+    "name": "video_detect_force_video",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_backlight_dmi"]
+  },
+  {
+    "name": "video_detect_force_vendor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["acpi_backlight_dmi"]
+  },
+  {
+    "name": "nvidia_wmi_ec_supported",
+    "callees": ["wmi_evaluate_method"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_video",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_match_device_ids", "find_video.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_video_parse_cmdline",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": ["acpi_backlight_cmdline"]
+  }
+]

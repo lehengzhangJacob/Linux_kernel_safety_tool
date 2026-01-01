@@ -1,0 +1,44 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_ctrl",
+    "callees": ["usb_decode_ctrl_generic", "usb_decode_ctrl_standard"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_ctrl_standard",
+    "callees": ["snprintf", "usb_decode_ctrl_generic", "usb_decode_get_set_descriptor", "usb_decode_get_status", "usb_decode_set_clear_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_ctrl_generic",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_set_clear_feature",
+    "callees": ["snprintf", "usb_decode_device_feature"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_device_feature",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_decode_get_status",
+    "callees": ["snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

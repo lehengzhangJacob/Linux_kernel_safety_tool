@@ -1,0 +1,146 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cgroup_ns.part.0",
+    "callees": ["__refcount_sub_and_test", "free_cgroup_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_css_set.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "put_css_set_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cgroup_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cgroup_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_css_set",
+    "callees": ["put_css_set.part.0", "refcount_dec_not_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cgroup_ns.part.0",
+    "callees": ["__refcount_sub_and_test", "free_cgroup_ns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cgroup_ns.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_css_set.part.0",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "put_css_set_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroupns_owner",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroupns_put",
+    "callees": ["put_cgroup_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroupns_get",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "get_cgroup_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cgroupns_install",
+    "callees": ["get_cgroup_ns.part.0", "ns_capable", "put_cgroup_ns.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_cgroup_ns",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__refcount_add", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "alloc_cgroup_ns", "dec_ucount", "get_cgroup_ns.part.0", "inc_cgroup_namespaces", "ns_capable", "put_css_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_cgroup_ns",
+    "callees": ["dec_ucount", "kfree", "proc_free_inum", "put_css_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_cgroup_ns",
+    "callees": ["kfree", "kzalloc", "proc_alloc_inum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inc_cgroup_namespaces",
+    "callees": ["inc_ucount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_css_set",
+    "callees": ["put_css_set.part.0", "refcount_dec_not_one"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

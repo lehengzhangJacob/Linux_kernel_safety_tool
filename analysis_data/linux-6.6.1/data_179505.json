@@ -1,0 +1,206 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_set_notify_resume",
+    "callees": ["set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_reset_rseq_cpu_node_id",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_rseq",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "rseq_reset_rseq_cpu_node_id", "rseq_set_notify_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_warn_flags.part.0",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__do_sys_rseq",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "rseq_reset_rseq_cpu_node_id", "rseq_set_notify_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_rseq",
+    "callees": ["__do_sys_rseq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_rseq",
+    "callees": ["__do_sys_rseq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rseq_handle_notify_resume",
+    "callees": ["__builtin_expect", "force_sigsegv", "rseq_ip_fixup", "rseq_update_cpu_node_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_ip_fixup",
+    "callees": ["__builtin_expect", "rseq_get_rseq_cs", "rseq_need_restart", "trace_rseq_ip_fixup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_need_restart",
+    "callees": ["__builtin_expect", "rseq_warn_flags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_get_rseq_cs",
+    "callees": ["___ratelimit", "__bad_copy_to", "__builtin_expect", "__builtin_object_size", "_copy_from_user", "_printk", "memset", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_reset_rseq_cpu_node_id",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_update_cpu_node_id",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "trace_rseq_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_rseq_ip_fixup",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_rseq_update",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_rseq_ip_fixup",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_rseq_update",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_rseq_ip_fixup",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_rseq_update",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_rseq_ip_fixup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_rseq_ip_fixup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_rseq_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_rseq_update",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rseq_ip_fixup",
+    "callees": ["__SCT__tp_func_rseq_ip_fixup", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rseq_update",
+    "callees": ["__SCT__tp_func_rseq_update", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_set_notify_resume",
+    "callees": ["set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

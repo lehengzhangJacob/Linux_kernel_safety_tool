@@ -1,0 +1,266 @@
+[
+  {
+    "name": "__tty_check_change",
+    "callees": ["__tty_check_change.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_clear_tty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_clear_tty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tty_check_change",
+    "callees": ["__tty_check_change.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disassociate_ctty",
+    "callees": ["disassociate_ctty.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disassociate_ctty.part.0",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irq", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irq", "_raw_spin_unlock_irqrestore", "get_current_tty", "kill_pgrp", "put_pid", "session_clear_tty", "tty_get_pgrp", "tty_kref_get.part.0", "tty_kref_put", "tty_lock", "tty_unlock", "tty_vhangup_session"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tty_check_change.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "is_current_pgrp_orphaned", "is_ignored", "kill_pgrp", "tty_driver_name", "tty_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pid.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_jobctrl_ioctl",
+    "callees": ["no_tty", "tiocgpgrp", "tiocgsid", "tiocsctty", "tiocspgrp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tiocgsid",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pid_vnr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tiocgpgrp",
+    "callees": ["__builtin_expect", "pid_vnr", "put_pid", "tty_get_pgrp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "session_of_pgrp",
+    "callees": ["pid_task"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_get_pgrp",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "get_pid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tiocsctty",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "capable", "proc_set_tty", "session_clear_tty", "tty_lock", "tty_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "no_tty",
+    "callees": ["disassociate_ctty", "proc_clear_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disassociate_ctty",
+    "callees": ["disassociate_ctty.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_signal_session_leader",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock", "_raw_spin_lock_irq", "_raw_spin_unlock", "_raw_spin_unlock_irq", "get_pid.part.0", "kill_pgrp", "put_pid", "send_signal_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "session_clear_tty",
+    "callees": ["proc_clear_tty"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_current_tty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_kref_get.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_open_proc_set_tty",
+    "callees": ["__proc_set_tty", "_raw_read_lock", "_raw_read_unlock", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_set_tty",
+    "callees": ["__proc_set_tty", "_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__proc_set_tty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "get_pid.part.0", "put_pid", "tty_kref_get.part.0", "tty_kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_clear_tty",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "tty_kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tty_check_change",
+    "callees": ["__tty_check_change"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__tty_check_change",
+    "callees": ["__tty_check_change.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_ignored",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

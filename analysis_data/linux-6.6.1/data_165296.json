@@ -1,0 +1,116 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ida_destroy",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "xas_find", "xas_next_entry", "xas_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ida_free",
+    "callees": ["__builtin_constant_p", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_first_bit", "kfree", "xas_load", "xas_set_mark", "xas_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ida_alloc_range",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_find_next_zero_bit", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "find_first_zero_bit", "find_next_zero_bit", "kfree", "kzalloc", "xas_clear_mark", "xas_find_marked", "xas_nomem", "xas_store"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_replace",
+    "callees": ["__radix_tree_lookup", "__radix_tree_replace", "radix_tree_tag_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_get_next",
+    "callees": ["__builtin_expect", "idr_get_next_ul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_get_next_ul",
+    "callees": ["__builtin_expect", "radix_tree_next_chunk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_for_each",
+    "callees": ["__builtin_expect", "radix_tree_next_chunk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_find",
+    "callees": ["radix_tree_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_remove",
+    "callees": ["radix_tree_delete_item"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_alloc_cyclic",
+    "callees": ["idr_alloc_u32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_alloc",
+    "callees": ["__builtin_expect", "idr_alloc_u32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_alloc_u32",
+    "callees": ["__builtin_expect", "idr_get_free", "radix_tree_iter_replace", "radix_tree_iter_tag_clear"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

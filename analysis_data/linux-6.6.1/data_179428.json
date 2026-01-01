@@ -1,0 +1,374 @@
+[
+  {
+    "name": "ping_get_idx",
+    "callees": ["ping_get_first", "ping_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_get_idx",
+    "callees": ["ping_get_first", "ping_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_seq_start",
+    "callees": ["_raw_spin_lock", "ping_get_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_supported",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_cmsg_recv",
+    "callees": ["ip_cmsg_recv_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ping_queue_rcv_skb",
+    "callees": ["kfree_skb_reason", "sock_queue_rcv_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_proc_exit",
+    "callees": ["unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_proc_exit_net",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_proc_init_net",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_seq_show",
+    "callees": ["ping_v4_format_sock", "seq_pad", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_format_sock",
+    "callees": ["__builtin_bswap16", "seq_printf", "sock_i_ino", "sock_i_uid"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "ping_seq_stop",
+    "callees": ["_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_seq_next",
+    "callees": ["ping_get_idx", "ping_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_seq_start",
+    "callees": ["ping_seq_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_seq_start",
+    "callees": ["_raw_spin_lock", "ping_get_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_get_idx",
+    "callees": ["ping_get_first", "ping_get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_get_next",
+    "callees": ["ping_get_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_rcv",
+    "callees": ["__builtin_bswap16", "__ping_queue_rcv_skb", "ping_lookup", "skb_clone", "skb_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_queue_rcv_skb",
+    "callees": ["__ping_queue_rcv_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ping_queue_rcv_skb",
+    "callees": ["kfree_skb_reason", "sock_queue_rcv_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_recvmsg",
+    "callees": ["__builtin_unreachable", "inet_recv_error", "ip_cmsg_recv", "ipv6_iface_scope_id", "memset", "skb_copy_datagram_iter", "skb_free_datagram", "skb_recv_datagram", "sock_recv_timestamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_sendmsg",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "dst_release", "icmp_out_count", "ip_append_data", "ip_cmsg_send", "ip_flush_pending_frames", "ip_route_output_flow", "ip_sendmsg_scope", "ipcm_init_sk", "kfree", "lock_sock_nested", "memcpy", "ping_common_sendmsg", "ping_v4_push_pending_frames", "release_sock", "security_sk_classify_flow", "sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_common_sendmsg",
+    "callees": ["__builtin_unreachable", "memcpy_from_msg", "ping_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_v4_push_pending_frames",
+    "callees": ["csum_partial", "ip_push_pending_frames"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_getfrag",
+    "callees": ["__builtin_expect", "csum_and_copy_from_iter", "iov_iter_revert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_err",
+    "callees": ["__builtin_bswap16", "__builtin_unreachable", "ip_icmp_error", "ipv4_sk_redirect", "ipv4_sk_update_pmtu", "ping_lookup", "ping_supported", "sk_error_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_supported",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_bind",
+    "callees": ["__builtin_bswap16", "dst_release", "lock_sock_nested", "memset", "ping_check_bind_addr", "ping_get_port", "ping_set_saddr", "release_sock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_set_saddr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_check_bind_addr",
+    "callees": ["__ipv6_addr_type", "__rcu_read_lock", "__rcu_read_unlock", "dev_get_by_index_rcu", "inet_addr_type_table", "inet_can_nonlocal_bind", "ipv6_can_nonlocal_bind"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_pre_connect",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_close",
+    "callees": ["sk_common_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_init_sock",
+    "callees": ["groups_free", "inet_get_ping_group_range_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_get_ping_group_range_net",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_unhash",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "sk_del_node_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_hash",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_get_port",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "sk_add_node_rcu", "sock_set_flag"],
+    "global_reads": ["ping_port_rover"],
+    "global_writes": ["ping_port_rover"]
+  },
+  {
+    "name": "ping_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ping_proc_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_cmsg_recv",
+    "callees": ["ip_cmsg_recv_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_sendmsg_scope",
+    "callees": ["sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipcm_init_sk",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipv6_iface_scope_id",
+    "callees": ["__ipv6_addr_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inet_can_nonlocal_bind",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_recv_timestamp",
+    "callees": ["__sock_recv_timestamp", "__sock_recv_wifi_status", "sock_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sock_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_add_node_rcu",
+    "callees": ["hlist_add_tail_rcu", "refcount_inc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sk_del_node_init",
+    "callees": ["__builtin_expect", "refcount_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memcpy_from_msg",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_from_iter", "copy_overflow", "iov_iter_revert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_dec",
+    "callees": ["__refcount_dec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refcount_inc",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hlist_add_tail_rcu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

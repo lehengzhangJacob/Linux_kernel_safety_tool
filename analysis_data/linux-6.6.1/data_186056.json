@@ -1,0 +1,14 @@
+[
+  {
+    "name": "efi_tpm_eventlog_init",
+    "callees": ["_printk", "early_memremap", "early_memunmap", "memblock_reserve", "tpm2_calc_event_log_size"],
+    "global_reads": [],
+    "global_writes": ["efi_tpm_final_log_size"]
+  },
+  {
+    "name": "tpm2_calc_event_log_size",
+    "callees": ["early_memremap", "early_memunmap", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

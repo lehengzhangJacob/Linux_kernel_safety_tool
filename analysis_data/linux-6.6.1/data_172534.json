@@ -1,0 +1,44 @@
+[
+  {
+    "name": "acpi_ns_get_attached_data",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_detach_data",
+    "callees": ["acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_attach_data",
+    "callees": ["acpi_ut_create_internal_object_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_get_secondary_object",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_get_attached_object",
+    "callees": ["acpi_warning"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_detach_object",
+    "callees": ["acpi_ut_remove_address_range", "acpi_ut_remove_reference", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ns_attach_object",
+    "callees": ["acpi_error", "acpi_ns_detach_object", "acpi_ut_add_reference", "acpi_ut_get_descriptor_name"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

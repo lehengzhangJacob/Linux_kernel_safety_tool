@@ -1,0 +1,14 @@
+[
+  {
+    "name": "xfrm_sysctl_fini",
+    "callees": ["kfree", "unregister_net_sysctl_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_sysctl_init",
+    "callees": ["kfree", "kmemdup", "register_net_sysctl_sz"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

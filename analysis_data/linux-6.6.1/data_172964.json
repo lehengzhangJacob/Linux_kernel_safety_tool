@@ -1,0 +1,32 @@
+[
+  {
+    "name": "sdw_intel_acpi_cb.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdw_intel_acpi_scan",
+    "callees": ["acpi_walk_namespace", "sdw_intel_scan_controller"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdw_intel_acpi_cb",
+    "callees": ["acpi_evaluate_integer", "acpi_fetch_acpi_dev", "sdw_intel_acpi_cb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sdw_intel_scan_controller",
+    "callees": ["_dev_err", "_dev_warn", "acpi_fetch_acpi_dev", "fwnode_property_read_u8_array", "is_link_enabled"],
+    "global_reads": ["ctrl_link_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "is_link_enabled",
+    "callees": ["fwnode_get_named_child_node", "fwnode_property_read_u32_array", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

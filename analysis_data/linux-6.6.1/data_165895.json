@@ -1,0 +1,782 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet2id",
+    "callees": ["__peernet2id", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet2id",
+    "callees": ["__peernet2id", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_pre_exit_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_pernet_subsys",
+    "callees": ["down_write", "register_pernet_operations", "up_write"],
+    "global_reads": ["first_device"],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_pre_exit_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_pre_exit_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_pernet_subsys",
+    "callees": ["down_write", "register_pernet_operations", "up_write"],
+    "global_reads": ["first_device"],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list",
+    "callees": ["ops_free_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet2id",
+    "callees": ["__peernet2id", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list",
+    "callees": ["ops_free_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_exit_list",
+    "callees": ["ops_exit_list", "ops_free_list", "ops_pre_exit_list", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": ["netns_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "net_free.part.0",
+    "callees": ["kfree", "kmem_cache_free"],
+    "global_reads": ["net_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netns_owner",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netns_install",
+    "callees": ["__refcount_add", "ns_capable", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netns_put",
+    "callees": ["put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netns_get",
+    "callees": ["__refcount_add", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_pernet_device",
+    "callees": ["down_write", "unregister_pernet_operations", "up_write"],
+    "global_reads": ["first_device"],
+    "global_writes": ["first_device"]
+  },
+  {
+    "name": "register_pernet_device",
+    "callees": ["down_write", "register_pernet_operations", "up_write"],
+    "global_reads": ["first_device"],
+    "global_writes": ["first_device"]
+  },
+  {
+    "name": "unregister_pernet_subsys",
+    "callees": ["down_write", "unregister_pernet_operations", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_pernet_subsys",
+    "callees": ["down_write", "register_pernet_operations", "up_write"],
+    "global_reads": ["first_device"],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_pernet_operations",
+    "callees": ["__unregister_pernet_operations", "ida_free", "rcu_barrier"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "register_pernet_operations",
+    "callees": ["__register_pernet_operations", "ida_alloc_range", "ida_free", "rcu_barrier"],
+    "global_reads": ["max_gen_ptrs"],
+    "global_writes": ["max_gen_ptrs"]
+  },
+  {
+    "name": "__unregister_pernet_operations",
+    "callees": ["free_exit_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__register_pernet_operations",
+    "callees": ["free_exit_list", "ops_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_exit_list",
+    "callees": ["ops_exit_list", "ops_free_list", "ops_pre_exit_list", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ns_init",
+    "callees": ["alloc_workqueue", "down_write", "kmem_cache_create", "net_alloc_generic", "panic", "register_pernet_subsys", "rtnl_register", "setup_net", "up_write"],
+    "global_reads": [],
+    "global_writes": ["init_net_initialized", "net_cachep", "netns_wq"]
+  },
+  {
+    "name": "rtnl_net_notifyid",
+    "callees": ["kfree_skb_reason", "nlmsg_new", "rtnl_net_fill", "rtnl_notify", "rtnl_set_sk_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_dumpid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "idr_for_each", "put_net", "rtnl_valid_dump_net_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_dumpid_one",
+    "callees": ["__peernet2id", "rtnl_net_fill"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_getid",
+    "callees": ["__builtin_expect", "do_trace_netlink_extack", "get_net_ns_by_fd", "get_net_ns_by_id", "get_net_ns_by_pid", "kfree_skb_reason", "nlmsg_new", "peernet2id", "put_net", "rtnl_get_net_ns_capable", "rtnl_net_fill", "rtnl_net_valid_getid_req", "rtnl_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_valid_getid_req",
+    "callees": ["__nlmsg_parse", "do_trace_netlink_extack", "netlink_strict_get_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_fill",
+    "callees": ["nla_put", "nlmsg_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rtnl_net_newid",
+    "callees": ["__builtin_expect", "__nlmsg_parse", "__peernet2id", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "alloc_netid", "do_trace_netlink_extack", "get_net_ns_by_fd", "get_net_ns_by_pid", "put_net", "rtnl_net_notifyid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ns_net_exit",
+    "callees": ["proc_free_inum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ns_net_init",
+    "callees": ["proc_alloc_inum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_net_ns_by_pid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "_raw_spin_lock", "_raw_spin_unlock", "find_task_by_vpid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_net_ns_by_fd",
+    "callees": ["__fdget", "__refcount_add", "fput", "proc_ns_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_net_ns",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_net",
+    "callees": ["__put_net.part.0", "llist_add_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ns_barrier",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cleanup_net",
+    "callees": ["dec_ucount", "down_read", "down_write", "key_remove_domain", "net_free", "ops_exit_list", "ops_free_list", "ops_pre_exit_list", "rcu_barrier", "synchronize_rcu", "unhash_nsid", "up_read", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unhash_nsid",
+    "callees": ["__peernet2id", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "idr_destroy", "idr_remove", "rtnl_net_notifyid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_ns_get_ownership",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_net_ns",
+    "callees": ["__refcount_add", "dec_ucount", "down_read_killable", "inc_net_namespaces", "key_remove_domain", "net_alloc", "net_free", "setup_net", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_drop_ns",
+    "callees": ["net_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_free",
+    "callees": ["__refcount_sub_and_test", "net_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_alloc",
+    "callees": ["kfree", "kmem_cache_alloc", "kmem_cache_free", "kzalloc", "net_alloc_generic"],
+    "global_reads": ["net_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "inc_net_namespaces",
+    "callees": ["inc_ucount"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_defaults_init",
+    "callees": ["panic", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_defaults_init_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_net",
+    "callees": ["__builtin_expect", "__mutex_init", "down_write", "get_random_bytes", "ops_exit_list", "ops_free_list", "ops_init", "ops_pre_exit_list", "rcu_barrier", "synchronize_rcu", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_net_ns_by_id",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "idr_find", "maybe_get_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet_has_id",
+    "callees": ["peernet2id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet2id",
+    "callees": ["__peernet2id", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "peernet2id_alloc",
+    "callees": ["__peernet2id", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "idr_alloc", "maybe_get_net", "put_net", "rtnl_net_notifyid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__peernet2id",
+    "callees": ["idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_eq_idr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_netid",
+    "callees": ["idr_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_free_list",
+    "callees": ["ops_free_list.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_exit_list",
+    "callees": ["__SCT__cond_resched"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_pre_exit_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ops_init",
+    "callees": ["kfree", "kzalloc", "net_assign_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_assign_generic",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "kvfree_call_rcu", "memcpy", "net_alloc_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "net_alloc_generic",
+    "callees": ["kzalloc"],
+    "global_reads": ["max_gen_ptrs"],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "maybe_get_net",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

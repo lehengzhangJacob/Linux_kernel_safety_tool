@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ethnl_set_linkinfo",
+    "callees": ["__ethtool_get_link_ksettings", "do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_linkinfo_validate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkinfo_fill_reply",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkinfo_reply_size",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkinfo_prepare_data",
+    "callees": ["__ethtool_get_link_ksettings", "do_trace_netlink_extack", "ethnl_ops_begin", "ethnl_ops_complete"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

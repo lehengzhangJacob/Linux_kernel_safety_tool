@@ -1,0 +1,206 @@
+[
+  {
+    "name": "trace_intel_cpu_fifo_underrun.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun",
+    "callees": ["__SCT__tp_func_intel_cpu_fifo_underrun", "cpu_online", "trace_intel_cpu_fifo_underrun.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun",
+    "callees": ["__SCT__tp_func_intel_cpu_fifo_underrun", "cpu_online", "trace_intel_cpu_fifo_underrun.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_pch_fifo_underrun",
+    "callees": ["__SCT__tp_func_intel_pch_fifo_underrun", "cpu_online", "trace_intel_pch_fifo_underrun.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_init_fifo_underrun_reporting",
+    "callees": ["intel_has_pch_trancoder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_check_pch_fifo_underruns",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "cpt_check_pch_fifo_underruns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_check_cpu_fifo_underruns",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "i9xx_check_fifo_underruns", "ivb_check_fifo_underruns"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_pch_fifo_underrun_irq_handler",
+    "callees": ["_dev_err", "intel_set_pch_fifo_underrun_reporting", "trace_intel_pch_fifo_underrun"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_cpu_fifo_underrun_irq_handler",
+    "callees": ["_dev_err", "intel_crtc_for_pipe", "intel_fbc_handle_fifo_underrun_irq", "intel_set_cpu_fifo_underrun_reporting", "trace_intel_cpu_fifo_underrun"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_set_pch_fifo_underrun_reporting",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "cpt_set_fifo_underrun_reporting", "ibx_set_fifo_underrun_reporting", "intel_crtc_for_pipe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_set_cpu_fifo_underrun_reporting",
+    "callees": ["__intel_set_cpu_fifo_underrun_reporting", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__intel_set_cpu_fifo_underrun_reporting",
+    "callees": ["bdw_set_fifo_underrun_reporting", "i9xx_set_fifo_underrun_reporting", "ilk_set_fifo_underrun_reporting", "intel_crtc_for_pipe", "ivb_set_fifo_underrun_reporting"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpt_set_fifo_underrun_reporting",
+    "callees": ["_dev_err", "cpt_can_enable_serr_int", "ibx_disable_display_interrupt", "ibx_enable_display_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ibx_set_fifo_underrun_reporting",
+    "callees": ["ibx_disable_display_interrupt", "ibx_enable_display_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdw_set_fifo_underrun_reporting",
+    "callees": ["bdw_disable_pipe_irq", "bdw_enable_pipe_irq", "gen8_de_pipe_underrun_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivb_set_fifo_underrun_reporting",
+    "callees": ["_dev_err", "ilk_disable_display_irq", "ilk_enable_display_irq", "ivb_can_enable_err_int"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ilk_set_fifo_underrun_reporting",
+    "callees": ["ilk_disable_display_irq", "ilk_enable_display_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_set_fifo_underrun_reporting",
+    "callees": ["_dev_err", "i915_pipestat_enable_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i9xx_check_fifo_underruns",
+    "callees": ["_dev_err", "i915_pipestat_enable_mask", "trace_intel_cpu_fifo_underrun"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpt_can_enable_serr_int",
+    "callees": ["intel_crtc_for_pipe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ivb_can_enable_err_int",
+    "callees": ["intel_crtc_for_pipe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_pch_fifo_underrun",
+    "callees": ["__SCT__tp_func_intel_pch_fifo_underrun", "cpu_online", "trace_intel_pch_fifo_underrun.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_intel_cpu_fifo_underrun",
+    "callees": ["__SCT__tp_func_intel_cpu_fifo_underrun", "cpu_online", "trace_intel_cpu_fifo_underrun.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

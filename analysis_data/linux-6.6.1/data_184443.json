@@ -1,0 +1,74 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_ptp_remove",
+    "callees": ["cancel_delayed_work_sync", "netdev_info", "ptp_clock_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_ptp_init",
+    "callees": ["__builtin_expect", "init_timer_key", "netdev_err", "netdev_info", "ptp_clock_register", "schedule_delayed_work", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_systim_overflow_work",
+    "callees": ["ns_to_timespec64", "schedule_delayed_work", "timecounter_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_enable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_settime",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "timecounter_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_gettimex",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "e1000e_read_systim", "ns_to_timespec64", "timecounter_cyc2time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_getcrosststamp",
+    "callees": ["get_device_system_crosststamp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_get_syncdevicetime",
+    "callees": ["__const_udelay", "__ew32", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "convert_art_to_tsc", "timecounter_cyc2time"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_adjtime",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e1000e_phc_adjfine",
+    "callees": ["__ew32", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "e1000e_get_base_timinca"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

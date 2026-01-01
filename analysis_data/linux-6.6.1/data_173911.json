@@ -1,0 +1,182 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_from_bucket",
+    "callees": ["dev_from_same_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_stop",
+    "callees": ["__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptype_seq_show.part.0",
+    "callees": ["__builtin_bswap16", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_seq_show.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock_bh", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_get_online.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_net_exit",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_net_init",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_mc_seq_show",
+    "callees": ["dev_mc_seq_show.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_proc_net_exit",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_proc_net_init",
+    "callees": ["proc_create_net_data", "proc_create_seq_private", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptype_seq_show",
+    "callees": ["ptype_seq_show.part.0", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptype_seq_stop",
+    "callees": ["dev_seq_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptype_seq_next",
+    "callees": ["ptype_get_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ptype_seq_start",
+    "callees": ["__rcu_read_lock", "ptype_get_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_seq_show",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_seq_stop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_seq_next",
+    "callees": ["softnet_get_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_seq_start",
+    "callees": ["softnet_get_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "softnet_get_online",
+    "callees": ["cpu_online", "softnet_get_online.part.0"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_show",
+    "callees": ["dev_seq_printf_stats", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_printf_stats",
+    "callees": ["dev_get_stats", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_stop",
+    "callees": ["__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_next",
+    "callees": ["dev_from_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_seq_start",
+    "callees": ["__rcu_read_lock", "dev_from_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_from_bucket",
+    "callees": ["dev_from_same_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_proc_init",
+    "callees": ["register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

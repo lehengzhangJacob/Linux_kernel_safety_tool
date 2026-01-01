@@ -1,0 +1,74 @@
+[
+  {
+    "name": "gf2_multiply",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_be",
+    "callees": ["__builtin_bswap32", "crc32_body"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__crc32c_le_shift",
+    "callees": ["crc32_generic_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_le_shift",
+    "callees": ["crc32_generic_shift"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_generic_shift",
+    "callees": ["gf2_multiply"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gf2_multiply",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__crc32c_le",
+    "callees": ["crc32_body"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_le",
+    "callees": ["crc32_body"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crc32_body",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

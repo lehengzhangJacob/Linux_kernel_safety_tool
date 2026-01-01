@@ -1,0 +1,14 @@
+[
+  {
+    "name": "nfs_get_root",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "d_obtain_root", "dput", "kfree", "kstrdup", "logfc", "nfs_alloc_fattr_with_label", "nfs_fhget", "nfs_setsecurity", "nfs_superblock_set_dummy_root", "security_d_instantiate", "security_sb_clone_mnt_opts", "security_sb_set_mnt_opts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfs_superblock_set_dummy_root",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "d_make_root", "ihold"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

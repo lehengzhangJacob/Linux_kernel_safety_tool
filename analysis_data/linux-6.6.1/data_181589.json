@@ -1,0 +1,254 @@
+[
+  {
+    "name": "sata_scr_read",
+    "callees": ["sata_pmp_scr_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_deadline",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_eh_analyze_ncq_error",
+    "callees": ["_printk", "ata_dev_phys_link", "ata_eh_read_log_10h", "ata_scsi_sense_is_valid", "ata_scsi_set_sense", "ata_scsi_set_sense_information", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_eh_read_sense_success_ncq_log",
+    "callees": ["_printk", "ata_dev_phys_link", "ata_read_log_page", "ata_scsi_sense_is_valid", "scsi_build_sense_buffer", "scsi_check_sense"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_eh_read_log_10h",
+    "callees": ["_printk", "ata_read_log_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_async_notification",
+    "callees": ["ata_link_next", "ata_port_schedule_eh", "ata_scsi_media_change_notify", "sata_scr_read", "sata_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_sas_queuecmd",
+    "callees": ["__ata_scsi_queuecmd", "__builtin_expect", "ata_class_enabled", "scsi_done"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_sas_slave_configure",
+    "callees": ["ata_scsi_dev_config", "ata_scsi_sdev_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_sas_tport_delete",
+    "callees": ["ata_tport_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_sas_tport_add",
+    "callees": ["ata_tport_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_sas_port_alloc",
+    "callees": ["ata_port_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_change_queue_depth",
+    "callees": ["ata_change_queue_depth"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_change_queue_depth",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ata_scsi_find_dev", "scsi_change_queue_depth"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_activity_store",
+    "callees": ["ata_scsi_find_dev", "simple_strtoul"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_activity_show",
+    "callees": ["ata_scsi_find_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_em_message_type_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_em_message_show",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_em_message_store",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_ncq_prio_enable_store",
+    "callees": ["__builtin_expect", "_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ata_scsi_find_dev", "kstrtoll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_ncq_prio_enable_show",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ata_scsi_find_dev", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_ncq_prio_supported_show",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ata_scsi_find_dev", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_lpm_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_scsi_lpm_store",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ata_dev_next", "ata_link_next", "ata_port_schedule_eh", "strlen", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_lpm_ignore_phy_events",
+    "callees": [],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ata_slave_link_init",
+    "callees": ["__builtin_expect", "ata_link_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_qc_complete_multiple",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_printk", "ata_qc_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_link_hardreset",
+    "callees": ["_printk", "ata_msleep", "ata_phys_link_offline", "ata_wait_ready", "sata_link_resume", "sata_scr_read", "sata_scr_write", "sata_scr_write_flush", "sata_set_spd", "sata_set_spd_needed"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "sata_set_spd",
+    "callees": ["__sata_set_spd_needed", "sata_scr_read", "sata_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_set_spd_needed",
+    "callees": ["__sata_set_spd_needed", "sata_scr_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sata_set_spd_needed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_link_scr_lpm",
+    "callees": ["ata_link_nr_enabled", "msleep", "sata_scr_read", "sata_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_link_resume",
+    "callees": ["_printk", "ata_msleep", "sata_link_debounce", "sata_scr_read", "sata_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_link_debounce",
+    "callees": ["ata_deadline", "ata_msleep", "sata_scr_read"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_from_fis",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_to_fis",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_scr_write_flush",
+    "callees": ["sata_pmp_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_scr_write",
+    "callees": ["sata_pmp_scr_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_scr_read",
+    "callees": ["sata_pmp_scr_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sata_scr_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_deadline",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_class_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

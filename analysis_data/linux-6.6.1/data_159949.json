@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "logon_vet_description",
+    "callees": ["strchr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_read",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_describe",
+    "callees": ["seq_puts", "user_describe.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_destroy",
+    "callees": ["kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_revoke",
+    "callees": ["call_rcu", "key_payload_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_update",
+    "callees": ["call_rcu", "key_payload_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_free_payload_rcu",
+    "callees": ["kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_free_preparse",
+    "callees": ["kfree_sensitive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "user_preparse",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

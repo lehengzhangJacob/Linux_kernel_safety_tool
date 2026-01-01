@@ -1,0 +1,482 @@
+[
+  {
+    "name": "sgl_free_n_order",
+    "callees": ["__builtin_expect", "__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_table",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_table",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree.part.0",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree",
+    "callees": ["kfree", "sg_kfree.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_free_table",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_free_n_order",
+    "callees": ["__builtin_expect", "__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_free_n_order",
+    "callees": ["__builtin_expect", "__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree.part.0",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree",
+    "callees": ["kfree", "sg_kfree.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_free_table",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_table",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_table",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_get_next_page",
+    "callees": ["__sg_page_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree.part.0",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree",
+    "callees": ["kfree", "sg_kfree.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_free_table",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree.part.0",
+    "callees": ["free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kfree",
+    "callees": ["kfree", "sg_kfree.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_free_table",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_free_table",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kmalloc.part.0",
+    "callees": ["__get_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kmalloc",
+    "callees": ["kmalloc_array", "sg_kmalloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_next",
+    "callees": ["sg_miter_get_next_page", "sg_miter_next.part.0", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_free_append_table",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_get_next_page",
+    "callees": ["__sg_page_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_next",
+    "callees": ["sg_miter_get_next_page", "sg_miter_next.part.0", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_start",
+    "callees": ["__builtin_expect", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_start",
+    "callees": ["__builtin_expect", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "extract_iter_to_sg.part.0",
+    "callees": ["_printk", "extract_bvec_to_sg", "extract_kvec_to_sg", "extract_user_to_sg", "extract_xarray_to_sg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kmalloc.part.0",
+    "callees": ["__get_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_next.part.0",
+    "callees": ["kmap", "kmap_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_nents_for_len.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "extract_iter_to_sg",
+    "callees": ["extract_iter_to_sg.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "extract_user_to_sg",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "iov_iter_extract_pages", "unpin_user_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_zero_buffer",
+    "callees": ["memset", "sg_miter_next", "sg_miter_skip", "sg_miter_start", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_pcopy_to_buffer",
+    "callees": ["sg_copy_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_pcopy_from_buffer",
+    "callees": ["sg_copy_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_copy_to_buffer",
+    "callees": ["sg_copy_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_copy_from_buffer",
+    "callees": ["sg_copy_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_copy_buffer",
+    "callees": ["memcpy", "sg_miter_next", "sg_miter_skip", "sg_miter_start", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_stop",
+    "callees": ["__builtin_expect", "__kunmap_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_next",
+    "callees": ["sg_miter_get_next_page", "sg_miter_next.part.0", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_skip",
+    "callees": ["sg_miter_get_next_page", "sg_miter_stop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_get_next_page",
+    "callees": ["__sg_page_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_miter_start",
+    "callees": ["__builtin_expect", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_page_iter_dma_next",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_page_iter_next",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_page_iter_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_free",
+    "callees": ["sgl_free_n_order"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_free_order",
+    "callees": ["sgl_free_n_order"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_free_n_order",
+    "callees": ["__builtin_expect", "__free_pages", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_alloc",
+    "callees": ["sgl_alloc_order"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sgl_alloc_order",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "alloc_pages", "kmalloc_array", "sg_init_table", "sgl_free_n_order"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_alloc_table_from_pages_segment",
+    "callees": ["__builtin_expect", "memcpy", "sg_alloc_append_table_from_pages", "sg_free_append_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_alloc_append_table_from_pages",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "get_next_sg"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "get_next_sg",
+    "callees": ["__builtin_expect", "sg_init_table", "sg_kmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_alloc_table",
+    "callees": ["__builtin_expect", "__sg_alloc_table", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_alloc_table",
+    "callees": ["__builtin_expect", "memset", "sg_init_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_free_table",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_free_append_table",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__sg_free_table",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_kmalloc",
+    "callees": ["kmalloc_array", "sg_kmalloc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_one",
+    "callees": ["sg_init_table", "sg_set_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_init_table",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_last",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_nents_for_len",
+    "callees": ["sg_nents_for_len.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_nents",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_next",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmap_atomic",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kmap",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "sg_set_buf",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "name": "interpret_urb_result",
+    "callees": ["usb_stor_clear_halt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_control_msg",
+    "callees": ["usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_srb",
+    "callees": ["usb_stor_bulk_transfer_sglist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_srb",
+    "callees": ["usb_stor_bulk_transfer_sglist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "interpret_urb_result",
+    "callees": ["usb_stor_clear_halt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "interpret_urb_result",
+    "callees": ["usb_stor_clear_halt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_control_msg",
+    "callees": ["usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_control_msg",
+    "callees": ["usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_port_reset.part.0",
+    "callees": ["__builtin_constant_p", "mutex_unlock", "usb_reset_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "last_sector_hacks.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_port_reset",
+    "callees": ["usb_lock_device_for_reset", "usb_stor_port_reset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_Bulk_reset",
+    "callees": ["usb_stor_reset_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_CB_reset",
+    "callees": ["memset", "usb_stor_reset_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_Bulk_transport",
+    "callees": ["__builtin_expect", "memcpy", "memset", "usb_stor_access_xfer_buf", "usb_stor_bulk_srb", "usb_stor_bulk_transfer_buf", "usleep_range_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_Bulk_max_lun",
+    "callees": ["_dev_info", "usb_stor_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_CB_transport",
+    "callees": ["memcpy", "usb_stor_bulk_srb", "usb_stor_clear_halt", "usb_stor_ctrl_transfer", "usb_stor_intr_transfer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_stop_transport",
+    "callees": ["usb_sg_cancel", "usb_unlink_urb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_invoke_transport",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "last_sector_hacks.part.0", "mutex_lock", "mutex_unlock", "scsi_eh_prep_cmnd", "scsi_eh_restore_cmnd", "scsi_normalize_sense", "scsi_sense_desc_find", "usb_stor_port_reset", "usb_stor_report_device_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_transfer_sg",
+    "callees": ["usb_stor_bulk_transfer_buf", "usb_stor_bulk_transfer_sglist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_srb",
+    "callees": ["usb_stor_bulk_transfer_sglist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_transfer_sglist",
+    "callees": ["__builtin_constant_p", "interpret_urb_result", "usb_sg_cancel", "usb_sg_init", "usb_sg_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_bulk_transfer_buf",
+    "callees": ["interpret_urb_result", "usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_ctrl_transfer",
+    "callees": ["interpret_urb_result", "usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "interpret_urb_result",
+    "callees": ["usb_stor_clear_halt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_clear_halt",
+    "callees": ["usb_reset_endpoint", "usb_stor_control_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_control_msg",
+    "callees": ["usb_stor_msg_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_msg_common",
+    "callees": ["__builtin_constant_p", "__init_swait_queue_head", "usb_kill_urb", "usb_submit_urb", "usb_unlink_urb", "wait_for_completion_interruptible_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_stor_blocking_completion",
+    "callees": ["complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "usb_maxpacket",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

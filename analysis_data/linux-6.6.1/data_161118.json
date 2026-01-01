@@ -1,0 +1,26 @@
+[
+  {
+    "name": "csum_ipv6_magic",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "csum_partial_copy_nocheck",
+    "callees": ["csum_partial_copy_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "csum_and_copy_to_user",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__builtin_expect", "csum_partial_copy_generic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "csum_and_copy_from_user",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__builtin_expect", "csum_partial_copy_generic"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "name": "free_context",
+    "callees": ["dm_io_client_destroy", "dm_put_device", "dm_region_hash_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_context",
+    "callees": ["dm_io_client_destroy", "dm_put_device", "dm_region_hash_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_region",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_bio.part.0",
+    "callees": ["queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_postsuspend.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_status_char.part.0",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mirror_exit",
+    "callees": ["destroy_workqueue", "dm_unregister_target"],
+    "global_reads": ["dm_raid1_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "dm_mirror_init",
+    "callees": ["_printk", "alloc_workqueue", "destroy_workqueue", "dm_register_target"],
+    "global_reads": ["dm_raid1_wq"],
+    "global_writes": ["dm_raid1_wq"]
+  },
+  {
+    "name": "mirror_iterate_devices",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_status",
+    "callees": ["device_status_char.part.0", "dm_rh_dirty_log", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_resume",
+    "callees": ["_printk", "dm_rh_dirty_log", "dm_rh_start_recovery"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_postsuspend",
+    "callees": ["dm_rh_dirty_log", "mirror_postsuspend.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_presuspend",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__flush_workqueue", "__warn_flushing_systemwide_wq", "_printk", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "dm_rh_dirty_log", "dm_rh_recovery_in_flight", "dm_rh_stop_recovery", "finish_wait", "hold_bio", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_end_io",
+    "callees": ["___ratelimit", "__builtin_expect", "_printk", "dm_per_bio_data", "dm_rh_dec", "fail_mirror", "mirror_available", "queue_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_map",
+    "callees": ["__builtin_expect", "choose_mirror", "dm_per_bio_data", "dm_rh_bio_to_region", "dm_rh_dirty_log", "map_bio", "queue_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_dtr",
+    "callees": ["__builtin_constant_p", "__flush_workqueue", "__warn_flushing_systemwide_wq", "destroy_workqueue", "dm_kcopyd_client_destroy", "flush_work", "free_context", "timer_delete_sync"],
+    "global_reads": ["system_freezable_power_efficient_wq", "system_freezable_wq", "system_highpri_wq", "system_long_wq", "system_power_efficient_wq", "system_unbound_wq", "system_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_ctr",
+    "callees": ["__builtin_expect", "_printk", "alloc_context", "alloc_workqueue", "create_dirty_log", "destroy_workqueue", "dm_dirty_log_destroy", "dm_kcopyd_client_create", "dm_rh_get_region_size", "dm_set_target_max_io_len", "free_context", "get_mirror", "init_timer_key", "parse_features", "queue_work_on", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "create_dirty_log",
+    "callees": ["dm_dirty_log_create", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_mirror",
+    "callees": ["dm_get_device", "dm_table_get_mode", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_context",
+    "callees": ["dm_io_client_destroy", "dm_put_device", "dm_region_hash_destroy", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_context",
+    "callees": ["__builtin_expect", "dm_io_client_create", "dm_io_client_destroy", "dm_region_hash_create", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_mirror",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "dm_rh_update_states", "do_failures", "do_reads", "do_recovery", "do_writes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trigger_event",
+    "callees": ["dm_table_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_failures",
+    "callees": ["__builtin_expect", "bio_endio", "dm_rh_mark_nosync", "hold_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_writes",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "delayed_wake", "dm_rh_bio_to_region", "dm_rh_delay", "dm_rh_dirty_log", "dm_rh_flush", "dm_rh_get_state", "dm_rh_inc_pending", "do_write", "map_bio", "queue_work_on", "submit_bio_noacct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_callback",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "bio_endio", "fail_mirror", "queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_reads",
+    "callees": ["__builtin_expect", "bio_endio", "choose_mirror", "dm_rh_bio_to_region", "dm_rh_get_state", "read_async_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_async_bio",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "dm_io", "map_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_callback",
+    "callees": ["___ratelimit", "__builtin_expect", "_printk", "bio_endio", "fail_mirror", "mirror_available", "queue_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hold_bio",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "bio_endio", "dm_noflush_suspending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_region",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_bio",
+    "callees": ["__builtin_expect", "bio_set_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_available",
+    "callees": ["choose_mirror", "dm_rh_bio_to_region", "dm_rh_dirty_log"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_recovery",
+    "callees": ["dm_rh_dirty_log", "dm_rh_recovery_prepare", "dm_rh_recovery_start", "dm_table_event", "recover"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recover",
+    "callees": ["dm_kcopyd_copy", "dm_rh_get_region_key", "dm_rh_get_region_size", "dm_rh_region_to_sector"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "recovery_complete",
+    "callees": ["___ratelimit", "__builtin_constant_p", "_printk", "dm_rh_recovery_end", "dm_rh_region_context", "fail_mirror"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mirror_flush",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "dm_io", "fail_mirror"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fail_mirror",
+    "callees": ["_printk", "queue_work_on"],
+    "global_reads": ["dm_raid1_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "dispatch_bios",
+    "callees": ["queue_bio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "queue_bio",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_bio.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_all_recovery_waiters",
+    "callees": ["__wake_up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_wake",
+    "callees": ["add_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "delayed_wake_fn",
+    "callees": ["queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wakeup_mirrord",
+    "callees": ["queue_work_on"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bio_set_dev",
+    "callees": ["bio_associate_blkg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

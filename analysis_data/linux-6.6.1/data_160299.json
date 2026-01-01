@@ -1,0 +1,50 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_io_context.part.0",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["iocontext_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "blk_ioc_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["iocontext_cachep"]
+  },
+  {
+    "name": "__copy_io",
+    "callees": ["alloc_io_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_task_ioprio",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "alloc_io_context", "capable", "kmem_cache_free", "security_task_setioprio"],
+    "global_reads": ["iocontext_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "exit_io_context",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "put_io_context"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_io_context",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "put_io_context.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_flush_garts.part.0",
+    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["flush_words"],
+    "global_writes": []
+  },
+  {
+    "name": "init_amd_nbs",
+    "callees": ["amd_cache_gart", "amd_cache_northbridges", "fix_erratum_688"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fix_erratum_688",
+    "callees": ["_printk", "on_each_cpu_cond_mask", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fix_erratum_688",
+    "callees": ["msr_set_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_flush_garts",
+    "callees": ["amd_flush_garts.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_cache_gart",
+    "callees": ["_printk", "kmalloc_array", "pci_read_config_dword"],
+    "global_reads": ["flush_words"],
+    "global_writes": ["flush_words"]
+  },
+  {
+    "name": "amd_set_subcaches",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["ban", "reset"],
+    "global_writes": ["ban"]
+  },
+  {
+    "name": "amd_get_subcaches",
+    "callees": ["pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_get_mmconfig_range",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_is_amd_nb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_smn_write",
+    "callees": ["__amd_smn_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_smn_read",
+    "callees": ["__amd_smn_rw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__amd_smn_rw",
+    "callees": ["_printk", "mutex_lock", "mutex_unlock", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "next_northbridge",
+    "callees": ["pci_get_device", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "node_to_amd_nb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_nb_has_feature",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_nb_num",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_gart_present",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_crtc_initial_plane_config",
+    "callees": ["intel_find_initial_plane_obj", "plane_config_fini"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "plane_config_fini",
+    "callees": ["drm_mode_object_put", "kfree", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_find_initial_plane_obj",
+    "callees": ["__refcount_add", "drm_mode_object_get", "i915_vma_pin_fence", "intel_alloc_initial_plane_obj", "intel_fb_fill_view", "intel_plane_copy_uapi_to_hw_state", "intel_plane_disable_noatomic", "intel_plane_uses_fence", "intel_reuse_initial_plane_obj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "initial_plane_vma",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__drm_dev_dbg", "__warn_printk", "_dev_err", "i915_gem_object_create_region_at", "i915_gem_object_set_cache_coherency", "i915_vma_instance", "i915_vma_pin", "ioread64_lo_hi", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

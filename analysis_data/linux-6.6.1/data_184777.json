@@ -1,0 +1,176 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_engines_add_sysfs",
+    "callees": ["_dev_err", "add_defaults", "kobj_engine", "kobject_create_and_add", "kobject_put", "rb_first", "rb_next", "sysfs_create_file_ns", "sysfs_create_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_defaults",
+    "callees": ["kobject_add", "kobject_init", "kobject_put", "kzalloc", "sysfs_create_file_ns", "sysfs_create_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_engine",
+    "callees": ["kobject_add", "kobject_init", "kobject_put", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kobj_engine_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "heartbeat_default",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "heartbeat_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "heartbeat_store",
+    "callees": ["intel_clamp_heartbeat_interval_ms", "intel_engine_set_heartbeat", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "preempt_timeout_default",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "preempt_timeout_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "preempt_timeout_store",
+    "callees": ["intel_clamp_preempt_timeout_ms", "kstrtoull", "set_timer_ms"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stop_default",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stop_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stop_store",
+    "callees": ["intel_clamp_stop_timeout_ms", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timeslice_default",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timeslice_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timeslice_store",
+    "callees": ["__builtin_expect", "intel_clamp_timeslice_duration_ms", "kstrtoull", "set_timer_ms"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_spin_default",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_spin_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "max_spin_store",
+    "callees": ["intel_clamp_max_busywait_duration_ns", "kstrtoull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "all_caps_show",
+    "callees": ["__caps_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "caps_show",
+    "callees": ["__caps_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmio_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inst_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "class_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "name_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

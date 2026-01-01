@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_sleep_type_data.part.0",
+    "callees": ["acpi_error", "acpi_exception", "acpi_ns_evaluate", "acpi_os_allocate_zeroed", "acpi_ut_remove_reference", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_reset.part.0",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_get_sleep_type_data",
+    "callees": ["acpi_get_sleep_type_data.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_write_bit_register",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "acpi_hw_get_bit_register_info", "acpi_hw_register_read", "acpi_hw_register_write"],
+    "global_reads": ["acpi_gbl_hardware_lock"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_read_bit_register",
+    "callees": ["acpi_hw_get_bit_register_info", "acpi_hw_register_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_write",
+    "callees": ["acpi_hw_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_read",
+    "callees": ["acpi_hw_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_reset",
+    "callees": ["acpi_os_write_port", "acpi_reset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

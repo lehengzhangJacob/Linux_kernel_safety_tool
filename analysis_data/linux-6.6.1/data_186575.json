@@ -1,0 +1,122 @@
+[
+  {
+    "name": "backlight_update_status",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_add_follower",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_unprepare.part.0",
+    "callees": ["_dev_info", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_prepare.part.0",
+    "callees": ["_dev_info", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_of_backlight",
+    "callees": ["__builtin_expect", "devm_of_find_backlight"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_drm_panel_add_follower",
+    "callees": ["drm_panel_add_follower"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_remove_follower",
+    "callees": ["_dev_info", "mutex_lock", "mutex_unlock", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_add_follower",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_is_panel_follower",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_get_modes",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_disable",
+    "callees": ["_dev_warn", "backlight_disable", "drm_dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_enable",
+    "callees": ["_dev_warn", "backlight_enable", "drm_dev_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_unprepare",
+    "callees": ["_dev_warn", "drm_panel_unprepare.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_prepare",
+    "callees": ["_dev_warn", "drm_panel_prepare.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_remove",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_add",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_panel_init",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "backlight_disable",
+    "callees": ["backlight_update_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "backlight_enable",
+    "callees": ["backlight_update_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "backlight_update_status",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

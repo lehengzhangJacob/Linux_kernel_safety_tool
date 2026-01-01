@@ -1,0 +1,500 @@
+[
+  {
+    "name": "uni16_to_x8",
+    "callees": ["__builtin_expect", "_fat_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8.part.0",
+    "callees": ["utf16s_to_utf8s"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8",
+    "callees": ["fat_uni_to_x8.part.0", "uni16_to_x8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uni16_to_x8",
+    "callees": ["__builtin_expect", "_fat_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8.part.0",
+    "callees": ["utf16s_to_utf8s"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8",
+    "callees": ["fat_uni_to_x8.part.0", "uni16_to_x8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_short2lower_uni",
+    "callees": ["fat_short2lower_uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parent_ino",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_short2lower_uni",
+    "callees": ["fat_short2lower_uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_short2lower_uni",
+    "callees": ["fat_short2lower_uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_name_match.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nls_strnicmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_name_match",
+    "callees": ["fat_name_match.part.0", "nls_strnicmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_shortname2uni.part.0",
+    "callees": ["fat_short2lower_uni"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_shortname2uni",
+    "callees": ["fat_short2lower_uni", "fat_shortname2uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_name_match.part.0",
+    "callees": ["memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8.part.0",
+    "callees": ["utf16s_to_utf8s"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_shortname2uni.part.0",
+    "callees": ["fat_short2lower_uni"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_add_entries",
+    "callees": ["__brelse", "__fat_fs_error", "__fat_remove_entries", "_fat_msg", "fat_add_new_entries", "fat_chain_add", "fat_free_clusters", "fat_get_entry", "fat_sync_bhs", "mark_buffer_dirty_inode", "memcpy", "sync_dirty_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_add_new_entries",
+    "callees": ["__bforget", "__brelse", "__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__getblk_gfp", "fat_alloc_clusters", "fat_free_clusters", "fat_zeroed_cluster", "lock_buffer", "mark_buffer_dirty_inode", "memcpy", "memset", "unlock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_alloc_new_dir",
+    "callees": ["__builtin_constant_p", "__getblk_gfp", "fat_alloc_clusters", "fat_free_clusters", "fat_time_unix2fat", "fat_zeroed_cluster", "lock_buffer", "mark_buffer_dirty_inode", "memcpy", "memset", "unlock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_remove_entries",
+    "callees": ["__brelse", "__fat_remove_entries", "__mark_inode_dirty", "_fat_msg", "fat_sync_inode", "fat_truncate_time", "inode_maybe_inc_iversion", "mark_buffer_dirty_inode", "sync_dirty_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fat_remove_entries",
+    "callees": ["__brelse", "fat_get_entry", "mark_buffer_dirty_inode", "sync_dirty_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_scan_logstart",
+    "callees": ["fat_get_short_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_scan",
+    "callees": ["fat_get_short_entry", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_subdirs",
+    "callees": ["__brelse", "fat_get_short_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_dir_empty",
+    "callees": ["__brelse", "fat_get_short_entry", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_dotdot_entry",
+    "callees": ["fat_get_short_entry", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_short_entry",
+    "callees": ["fat_get_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_compat_dir_ioctl",
+    "callees": ["__builtin_expect", "fat_generic_ioctl", "fat_ioctl_readdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_compat_ioctl_filldir",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_dir_ioctl",
+    "callees": ["__builtin_expect", "fat_generic_ioctl", "fat_ioctl_readdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ioctl_readdir",
+    "callees": ["__fat_readdir", "down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_ioctl_filldir",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_readdir",
+    "callees": ["__fat_readdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fat_readdir",
+    "callees": ["__brelse", "dir_emit_dot", "dir_emit_dotdot", "dir_emit_dots", "fat_get_entry", "fat_iget", "fat_parse_long", "fat_parse_short", "fat_uni_to_x8", "iput", "iunique", "kmem_cache_free", "memcmp", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["names_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "fat_search_long",
+    "callees": ["fat_get_entry", "fat_name_match", "fat_parse_long", "fat_parse_short", "fat_uni_to_x8", "kmem_cache_free"],
+    "global_reads": ["names_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "fat_parse_short",
+    "callees": ["fat_shortname2uni", "fat_uni_to_x8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_name_match",
+    "callees": ["fat_name_match.part.0", "nls_strnicmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_shortname2uni",
+    "callees": ["fat_short2lower_uni", "fat_shortname2uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_short2lower_uni",
+    "callees": ["fat_short2lower_uni.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_uni_to_x8",
+    "callees": ["fat_uni_to_x8.part.0", "uni16_to_x8"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "uni16_to_x8",
+    "callees": ["__builtin_expect", "_fat_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_get_entry",
+    "callees": ["fat__get_entry", "fat_get_entry.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat__get_entry",
+    "callees": ["___ratelimit", "__bread_gfp", "__brelse", "_fat_msg", "fat_bmap", "fat_dir_readahead"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_dir_readahead",
+    "callees": ["__breadahead", "__brelse", "__builtin_constant_p", "__find_get_block"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fat_checksum",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nls_strnicmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lock_buffer",
+    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trylock_buffer",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dir_emit_dots",
+    "callees": ["dir_emit_dot", "dir_emit_dotdot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parent_ino",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

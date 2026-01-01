@@ -1,0 +1,68 @@
+[
+  {
+    "name": "vgt_deballoon_space",
+    "callees": ["__builtin_constant_p", "__drm_dev_dbg", "drm_mm_remove_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgt_balloon",
+    "callees": ["_dev_err", "_dev_info", "vgt_balloon_space", "vgt_deballoon_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vgt_balloon_space",
+    "callees": ["_dev_info", "i915_gem_gtt_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgt_deballoon",
+    "callees": ["__drm_dev_dbg", "vgt_deballoon_space"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vgt_deballoon_space",
+    "callees": ["__builtin_constant_p", "__drm_dev_dbg", "drm_mm_remove_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_has_huge_gtt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_has_hwsp_emulation",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_has_full_ppgtt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_register",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vgpu_detect",
+    "callees": ["__mutex_init", "_dev_err", "_dev_info", "pci_iomap_range", "pci_iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

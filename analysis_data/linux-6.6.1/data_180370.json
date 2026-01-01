@@ -1,0 +1,200 @@
+[
+  {
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "make_bad_inode",
+    "callees": ["inode_set_ctime_current", "remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iget_failed",
+    "callees": ["iput", "make_bad_inode", "unlock_new_inode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_bad_inode",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "make_bad_inode",
+    "callees": ["inode_set_ctime_current", "remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_set_acl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_tmpfile",
+    "callees": ["bad_inode_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_atomic_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_update_time",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_fiemap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_get_acl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_get_link",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_listxattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_setattr",
+    "callees": ["bad_inode_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_getattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_permission",
+    "callees": ["bad_inode_readlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_readlink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_rename2",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_mknod",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_rmdir",
+    "callees": ["bad_file_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_mkdir",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_symlink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_unlink",
+    "callees": ["bad_file_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_link",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_file_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

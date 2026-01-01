@@ -1,0 +1,164 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_device_ready",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_queue_evtbuf",
+    "callees": ["sg_init_one", "virtqueue_add_inbuf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_input_driver_exit",
+    "callees": ["unregister_virtio_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_input_driver_init",
+    "callees": ["register_virtio_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_restore",
+    "callees": ["virtinput_fill_evt", "virtinput_init_vqs", "virtio_device_ready"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_freeze",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_remove",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "input_unregister_device", "kfree", "virtio_reset_device", "virtqueue_detach_unused_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_probe",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__virtio_cread_many", "__virtio_test_bit", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "input_allocate_device", "input_free_device", "input_mt_init_slots", "input_register_device", "kfree", "kzalloc", "snprintf", "virtinput_cfg_abs", "virtinput_cfg_bits", "virtinput_cfg_select", "virtinput_fill_evt", "virtinput_init_vqs", "virtio_device_ready"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_fill_evt",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "virtinput_queue_evtbuf", "virtqueue_get_vring_size", "virtqueue_kick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_init_vqs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_cfg_abs",
+    "callees": ["__SCT__might_resched", "input_abs_set_res", "input_set_abs_params", "virtinput_cfg_select"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_cfg_bits",
+    "callees": ["__builtin_constant_p", "__virtio_cread_many", "kfree", "kzalloc", "virtinput_cfg_select"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_cfg_select",
+    "callees": ["__SCT__might_resched"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_status",
+    "callees": ["virtinput_send_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_recv_status",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "virtqueue_get_buf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_send_status",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kfree", "kzalloc", "sg_init_one", "virtqueue_add_outbuf", "virtqueue_kick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_recv_events",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "input_event", "virtinput_queue_evtbuf", "virtqueue_get_buf", "virtqueue_kick"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtinput_queue_evtbuf",
+    "callees": ["sg_init_one", "virtqueue_add_inbuf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "input_abs_set_res",
+    "callees": ["input_alloc_absinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virtio_device_ready",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

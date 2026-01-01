@@ -1,0 +1,56 @@
+[
+  {
+    "name": "i915_gem_object_is_lmem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_create_lmem",
+    "callees": ["i915_gem_object_create_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_create_lmem_from_data",
+    "callees": ["__builtin_expect", "__i915_gem_object_flush_map", "__i915_gem_object_release_map", "i915_gem_object_create_region", "i915_gem_object_pin_map_unlocked", "kref_put", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_create_lmem_with_ps",
+    "callees": ["i915_gem_object_create_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_is_lmem",
+    "callees": ["i915_gem_object_is_lmem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_is_lmem",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lmem_io_map",
+    "callees": ["__i915_gem_object_get_dma_address"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "name": "__nfulnl_flush",
+    "callees": ["__nfulnl_send", "instance_put", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nfulnl_flush",
+    "callees": ["__nfulnl_send", "instance_put", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_next",
+    "callees": ["nfnl_log_pernet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "instance_put.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnetlink_log_fini",
+    "callees": ["netlink_unregister_notifier", "nf_log_unregister", "nfnetlink_subsys_unregister", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnetlink_log_init",
+    "callees": ["_printk", "netlink_register_notifier", "netlink_unregister_notifier", "nf_log_register", "nfnetlink_subsys_register", "nfnetlink_subsys_unregister", "register_pernet_subsys", "unregister_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_net_exit",
+    "callees": ["__builtin_expect", "nf_log_unset", "nfnl_log_pernet", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_net_init",
+    "callees": ["nfnl_log_pernet", "proc_create_net_data", "proc_set_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_stop",
+    "callees": ["__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_next",
+    "callees": ["get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "seq_start",
+    "callees": ["__rcu_read_lock", "get_idx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_idx",
+    "callees": ["get_first", "get_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_next",
+    "callees": ["nfnl_log_pernet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_first",
+    "callees": ["nfnl_log_pernet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_recv_config",
+    "callees": ["__builtin_bswap16", "__builtin_bswap32", "__builtin_expect", "__request_module", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "instance_create", "instance_destroy", "instance_lookup_get", "instance_put", "nf_log_bind_pf", "nf_log_unbind_pf", "nfnl_lock", "nfnl_log_pernet", "nfnl_unlock", "nfulnl_set_mode", "nfulnl_set_nlbufsiz"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_recv_unsupp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_rcv_nl_event",
+    "callees": ["__instance_destroy", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "nfnl_log_pernet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_log_packet",
+    "callees": ["__build_packet_message", "__nfulnl_flush", "__refcount_add", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "add_timer", "instance_lookup_get_rcu", "instance_put", "nfnl_log_pernet", "nfulnl_alloc_skb", "nfulnl_get_bridge_size", "strlen"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_put_bridge",
+    "callees": ["__builtin_bswap16", "nla_nest_start_noflag", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_timer",
+    "callees": ["__nfulnl_send", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "instance_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nfulnl_flush",
+    "callees": ["__nfulnl_send", "instance_put", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nfulnl_send",
+    "callees": ["__builtin_expect", "__warn_printk", "kfree_skb_reason", "nfnetlink_unicast", "nlmsg_put"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "instance_destroy",
+    "callees": ["__instance_destroy", "_raw_spin_lock_bh", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__instance_destroy",
+    "callees": ["__nfulnl_flush", "_raw_spin_lock", "_raw_spin_unlock", "instance_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "instance_create",
+    "callees": ["__refcount_add", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "init_timer_key", "kfree", "kzalloc", "nfnl_log_pernet", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "instance_put",
+    "callees": ["__refcount_sub_and_test", "instance_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfulnl_instance_free_rcu",
+    "callees": ["kfree", "module_put", "put_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "instance_lookup_get",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "instance_lookup_get_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "instance_lookup_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nfnl_log_pernet",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": ["nfnl_log_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_parse_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_net",
+    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

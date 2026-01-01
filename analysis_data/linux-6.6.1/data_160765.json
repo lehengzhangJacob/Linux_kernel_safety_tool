@@ -1,0 +1,176 @@
+[
+  {
+    "name": "render_cap_t",
+    "callees": ["seq_put_hex_ll", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "render_cap_t",
+    "callees": ["seq_put_hex_ll", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "render_cap_t",
+    "callees": ["seq_put_hex_ll", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "render_cap_t",
+    "callees": ["seq_put_hex_ll", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_state_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_pid_statm",
+    "callees": ["get_task_mm", "mmput", "seq_put_decimal_ull", "seq_putc", "seq_write", "task_statm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tgid_stat",
+    "callees": ["do_task_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_tid_stat",
+    "callees": ["do_task_stat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_task_stat",
+    "callees": ["KSTK_ESP", "__delayacct_blkio_ticks", "__lock_task_sighand", "__task_pid_nr_ns", "_raw_spin_unlock_irqrestore", "collect_sigign_sigcatch", "get_task_mm", "mmput", "nsec_to_clock_t", "pid_nr_ns", "proc_task_name", "ptrace_may_access", "put_pid", "put_task_stack", "seq_put_decimal_ll", "seq_put_decimal_ull", "seq_putc", "seq_puts", "task_cputime_adjusted", "task_prio", "task_state_index", "task_vsize", "thread_group_cputime_adjusted", "timens_add_boottime_ns", "try_get_task_stack", "tty_devnum", "tty_get_pgrp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "proc_pid_status",
+    "callees": ["arch_proc_pid_thread_features", "cpuset_task_status_allowed", "get_task_mm", "mmput", "proc_task_name", "seq_printf", "seq_putc", "seq_puts", "task_cap", "task_context_switch_counts", "task_core_dumping", "task_cpus_allowed", "task_mem", "task_seccomp", "task_sig", "task_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_proc_pid_thread_features",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_core_dumping",
+    "callees": ["seq_put_decimal_ull", "seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_cpus_allowed",
+    "callees": ["seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "task_context_switch_counts",
+    "callees": ["seq_put_decimal_ull", "seq_putc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_seccomp",
+    "callees": ["__builtin_constant_p", "arch_prctl_spec_ctrl_get", "seq_put_decimal_ull", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_cap",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "render_cap_t"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "render_cap_t",
+    "callees": ["seq_put_hex_ll", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_sig",
+    "callees": ["__lock_task_sighand", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_unlock_irqrestore", "collect_sigign_sigcatch", "render_sigset_t", "seq_put_decimal_ull"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "render_sigset_t",
+    "callees": ["seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_state",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "__task_pid_nr_ns", "_raw_spin_lock", "_raw_spin_unlock", "get_task_cred", "pid_nr_ns", "put_cred", "seq_printf", "seq_put_decimal_ull", "seq_putc", "seq_puts", "task_state_index"],
+    "global_reads": ["overflowgid", "overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "proc_task_name",
+    "callees": ["__get_task_comm", "get_kthread_comm", "seq_escape_str", "seq_printf", "wq_worker_comm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "try_get_task_stack",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_cred",
+    "callees": ["__put_cred"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_add_boottime_ns",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_state_index",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

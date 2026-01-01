@@ -1,0 +1,26 @@
+[
+  {
+    "name": "acpi_ex_do_logical_op",
+    "callees": ["acpi_error", "acpi_ex_convert_to_buffer", "acpi_ex_convert_to_integer", "acpi_ex_convert_to_string", "acpi_ut_remove_reference", "memcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_do_logical_numeric_op",
+    "callees": ["acpi_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_do_math_op",
+    "callees": [],
+    "global_reads": ["acpi_gbl_integer_bit_width"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_get_object_reference",
+    "callees": ["acpi_error", "acpi_ut_create_internal_object_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

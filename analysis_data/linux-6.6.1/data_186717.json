@@ -1,0 +1,272 @@
+[
+  {
+    "name": "drm_gem_shmem_get_sg_table",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_prime_pages_to_sg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_pin",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_gem_shmem_get_pages", "ww_mutex_lock_interruptible", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_get_pages_sgt.part.0",
+    "callees": ["drm_gem_shmem_get_pages_sgt_locked", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_print_info.part.0",
+    "callees": ["drm_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_mmap.part.0",
+    "callees": ["drm_gem_shmem_get_pages", "pgprot_writecombine", "vm_get_page_prot", "vma_start_write", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_object_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_prime_import_sg_table",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__drm_gem_shmem_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_get_pages_sgt",
+    "callees": ["drm_gem_shmem_get_pages_sgt.part.0", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_get_pages_sgt_locked",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "dma_map_sgtable", "drm_gem_shmem_get_pages", "drm_gem_shmem_get_sg_table", "drm_gem_shmem_put_pages", "kfree", "sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_get_sg_table",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_prime_pages_to_sg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_print_info",
+    "callees": ["drm_gem_shmem_print_info.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_mmap",
+    "callees": ["dma_buf_mmap", "drm_gem_object_put.part.0", "drm_gem_shmem_mmap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_vm_close",
+    "callees": ["drm_gem_shmem_put_pages", "drm_gem_vm_close", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_vm_open",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_gem_vm_open", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_gem_shmem_fault",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "vmf_insert_pfn", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": ["__already_done", "vmemmap_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_gem_shmem_dumb_create",
+    "callees": ["drm_gem_shmem_create_with_handle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_purge",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "dma_unmap_sg_attrs", "drm_gem_free_mmap_offset", "drm_gem_shmem_is_purgeable", "drm_gem_shmem_put_pages", "drm_vma_node_unmap", "invalidate_mapping_pages", "kfree", "sg_free_table", "shmem_truncate_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_madvise",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_create_with_handle",
+    "callees": ["__builtin_expect", "__drm_gem_shmem_create", "drm_gem_handle_create", "drm_gem_object_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_vunmap",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "dma_buf_vunmap", "drm_gem_shmem_put_pages", "vunmap"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_gem_shmem_vmap",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "dev_driver_string", "dma_buf_vmap", "dma_buf_vunmap", "drm_gem_shmem_get_pages", "drm_gem_shmem_put_pages", "pgprot_writecombine", "vmap"],
+    "global_reads": ["__default_kernel_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_unpin",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_gem_shmem_put_pages", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_pin",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_gem_shmem_get_pages", "ww_mutex_lock_interruptible", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_put_pages",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "drm_gem_put_pages", "set_pages_array_wb"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "drm_gem_shmem_get_pages",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_gem_get_pages", "set_pages_array_wc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_free",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "dma_unmap_sg_attrs", "drm_gem_object_release", "drm_gem_shmem_put_pages", "drm_prime_gem_destroy", "kfree", "sg_free_table", "ww_mutex_lock", "ww_mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_create",
+    "callees": ["__drm_gem_shmem_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drm_gem_shmem_create",
+    "callees": ["__builtin_expect", "drm_gem_create_mmap_offset", "drm_gem_object_init", "drm_gem_object_release", "drm_gem_private_object_fini", "drm_gem_private_object_init", "kfree", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_mmap",
+    "callees": ["drm_gem_shmem_mmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_vunmap",
+    "callees": ["drm_gem_shmem_vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_vmap",
+    "callees": ["drm_gem_shmem_vmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_get_sg_table",
+    "callees": ["drm_gem_shmem_get_sg_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_unpin",
+    "callees": ["drm_gem_shmem_unpin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_pin",
+    "callees": ["drm_gem_shmem_pin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_print_info",
+    "callees": ["drm_gem_shmem_print_info.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_object_free",
+    "callees": ["drm_gem_shmem_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_shmem_is_purgeable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_vma_node_unmap",
+    "callees": ["__builtin_constant_p", "unmap_mapping_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_start_write",
+    "callees": ["down_write", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "lockd_remove_procfs",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lockd_create_procfs",
+    "callees": ["proc_create", "proc_mkdir", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_end_grace_read",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "simple_read_from_buffer"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  },
+  {
+    "name": "nlm_end_grace_write",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "locks_end_grace", "simple_transaction_get"],
+    "global_reads": ["lockd_net_id"],
+    "global_writes": []
+  }
+]

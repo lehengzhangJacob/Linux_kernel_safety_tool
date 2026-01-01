@@ -1,0 +1,62 @@
+[
+  {
+    "name": "delete_client",
+    "callees": ["snd_seq_delete_kernel_client"],
+    "global_reads": ["my_client"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dummy_input.part.0",
+    "callees": ["snd_seq_kernel_client_dispatch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alsa_seq_dummy_exit",
+    "callees": ["delete_client"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alsa_seq_dummy_init",
+    "callees": ["register_client"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delete_client",
+    "callees": ["snd_seq_delete_kernel_client"],
+    "global_reads": ["my_client"],
+    "global_writes": []
+  },
+  {
+    "name": "register_client",
+    "callees": ["_printk", "create_port", "snd_seq_create_kernel_client", "snd_seq_delete_kernel_client", "snd_seq_kernel_client_get", "snd_seq_kernel_client_put"],
+    "global_reads": ["duplex", "my_client", "ports"],
+    "global_writes": ["my_client"]
+  },
+  {
+    "name": "create_port",
+    "callees": ["kfree", "kzalloc", "memset", "snd_seq_kernel_client_ctl", "sprintf"],
+    "global_reads": ["duplex", "my_client"],
+    "global_writes": []
+  },
+  {
+    "name": "dummy_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dummy_input",
+    "callees": ["dummy_input.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

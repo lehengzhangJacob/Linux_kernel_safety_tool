@@ -1,0 +1,182 @@
+[
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_detect",
+    "callees": ["cypress_send_ext_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_get_finger_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_set_absolute_mode",
+    "callees": ["cypress_send_ext_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_init",
+    "callees": ["_dev_err", "cypress_query_hardware", "cypress_set_absolute_mode", "cypress_set_input_params", "kfree", "kzalloc", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_reconnect",
+    "callees": ["_dev_err", "cypress_detect", "cypress_set_absolute_mode", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_disconnect",
+    "callees": ["kfree", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_set_rate",
+    "callees": ["ps2_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_protocol_handler",
+    "callees": ["cypress_process_packet", "cypress_validate_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_validate_byte",
+    "callees": ["cypress_get_finger_count", "cypress_process_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_get_finger_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_set_input_params",
+    "callees": ["__builtin_constant_p", "input_alloc_absinfo", "input_mt_init_slots", "input_set_abs_params"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_reset",
+    "callees": ["psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_set_absolute_mode",
+    "callees": ["cypress_send_ext_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_query_hardware",
+    "callees": ["cypress_read_fw_version", "cypress_read_tp_metrics"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_read_tp_metrics",
+    "callees": ["cypress_send_ext_cmd", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_read_fw_version",
+    "callees": ["cypress_send_ext_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_detect",
+    "callees": ["cypress_send_ext_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_send_ext_cmd",
+    "callees": ["cypress_ps2_ext_cmd", "cypress_ps2_read_cmd_status", "cypress_verify_cmd_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_read_cmd_status",
+    "callees": ["__SCT__might_resched", "cypress_ps2_sendbyte", "finish_wait", "init_wait_entry", "memcpy", "memset", "prepare_to_wait_event", "ps2_begin_command", "ps2_end_command", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cypress_ps2_sendbyte",
+    "callees": ["ps2_sendbyte"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "perf_msr_probe.part.0",
+    "callees": ["native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_msr_probe",
+    "callees": ["perf_msr_probe.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "not_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

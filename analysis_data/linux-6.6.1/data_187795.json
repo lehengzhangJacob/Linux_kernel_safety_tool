@@ -1,0 +1,182 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_port_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_de_wait_for_register",
+    "callees": ["__intel_wait_for_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_de_wait_for_register",
+    "callees": ["__intel_wait_for_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_init",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "compute_is_dual_link_lvds", "dev_driver_string", "dmi_check_system", "drm_connector_cleanup", "drm_connector_init", "drm_edid_connector_add_modes", "drm_edid_connector_update", "drm_edid_free", "drm_edid_read_ddc", "drm_encoder_cleanup", "drm_encoder_init", "intel_attach_scaling_mode_property", "intel_backlight_setup", "intel_bios_init_panel_late", "intel_bios_is_lvds_present", "intel_connector_alloc", "intel_connector_attach_encoder", "intel_connector_free", "intel_gmbus_get_adapter", "intel_lvds_pps_get_hw_state", "intel_panel_add_edid_fixed_modes", "intel_panel_add_encoder_fixed_mode", "intel_panel_add_vbt_lfp_fixed_mode", "intel_panel_init", "intel_panel_preferred_fixed_mode", "kfree", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compute_is_dual_link_lvds",
+    "callees": ["dmi_check_system", "intel_panel_preferred_fixed_mode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_is_dual_link_lvds",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_get_lvds_encoder",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dual_link_lvds_callback",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_no_lvds_dmi_callback",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_get_modes",
+    "callees": ["__builtin_expect", "drm_edid_connector_add_modes", "drm_edid_connector_update", "intel_panel_get_modes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_compute_config",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_panel_compute_config", "intel_panel_fitting"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_mode_valid",
+    "callees": ["intel_panel_fixed_mode", "intel_panel_mode_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_shutdown",
+    "callees": ["_dev_err", "intel_de_wait_for_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pch_post_disable_lvds",
+    "callees": ["intel_disable_lvds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pch_disable_lvds",
+    "callees": ["intel_backlight_disable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gmch_disable_lvds",
+    "callees": ["intel_backlight_disable", "intel_disable_lvds"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_enable_lvds",
+    "callees": ["_dev_err", "intel_backlight_enable", "intel_de_wait_for_register", "intel_uncore_rmw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_pre_enable_lvds",
+    "callees": ["assert_fdi_rx_pll_disabled", "assert_pll_disabled", "assert_shared_dpll", "intel_lvds_pps_init_hw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_pps_init_hw",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_pps_get_hw_state",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_get_config",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_get_hw_state",
+    "callees": ["intel_display_power_get_if_enabled", "intel_display_power_put_unchecked", "intel_lvds_port_enabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_lvds_port_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_de_wait_for_register",
+    "callees": ["__intel_wait_for_register"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

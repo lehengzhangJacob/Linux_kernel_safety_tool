@@ -1,0 +1,32 @@
+[
+  {
+    "name": "pericom8250_pci_driver_exit",
+    "callees": ["pci_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pericom8250_pci_driver_init",
+    "callees": ["__pci_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pericom8250_remove",
+    "callees": ["serial8250_unregister_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pericom8250_probe",
+    "callees": ["__builtin_expect", "_dev_err", "devm_kmalloc", "memset", "pcim_enable_device", "pcim_iomap", "serial8250_register_8250_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pericom_do_set_divisor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

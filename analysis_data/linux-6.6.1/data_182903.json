@@ -1,0 +1,338 @@
+[
+  {
+    "name": "timerfd_get_remaining",
+    "callees": ["alarm_expires_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_get_remaining",
+    "callees": ["alarm_expires_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hrtimer_forward_now",
+    "callees": ["hrtimer_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hrtimer_forward_now",
+    "callees": ["hrtimer_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_fget",
+    "callees": ["__fdget", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_triggered",
+    "callees": ["__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_settime",
+    "callees": ["do_timerfd_settime", "get_itimerspec64", "put_itimerspec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_settime32",
+    "callees": ["do_timerfd_settime", "get_old_itimerspec32", "put_old_itimerspec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_canceled.part.0",
+    "callees": ["ktime_mono_to_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_canceled",
+    "callees": ["timerfd_canceled.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__timerfd_remove_cancel.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_gettime32",
+    "callees": ["do_timerfd_gettime", "put_old_itimerspec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_gettime",
+    "callees": ["do_timerfd_gettime", "put_itimerspec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_canceled.part.0",
+    "callees": ["ktime_mono_to_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__timerfd_remove_cancel.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_gettime32",
+    "callees": ["do_timerfd_gettime", "put_old_itimerspec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_timerfd_gettime32",
+    "callees": ["__do_sys_timerfd_gettime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_timerfd_gettime32",
+    "callees": ["__do_sys_timerfd_gettime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_settime32",
+    "callees": ["do_timerfd_settime", "get_old_itimerspec32", "put_old_itimerspec32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_timerfd_settime32",
+    "callees": ["__do_sys_timerfd_settime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_timerfd_settime32",
+    "callees": ["__do_sys_timerfd_settime32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_gettime",
+    "callees": ["do_timerfd_gettime", "put_itimerspec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_timerfd_gettime",
+    "callees": ["__do_sys_timerfd_gettime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_timerfd_gettime",
+    "callees": ["__do_sys_timerfd_gettime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_settime",
+    "callees": ["do_timerfd_settime", "get_itimerspec64", "put_itimerspec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_timerfd_settime",
+    "callees": ["__do_sys_timerfd_settime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_timerfd_settime",
+    "callees": ["__do_sys_timerfd_settime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_timerfd_gettime",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "alarm_forward_now", "alarm_restart", "fput", "hrtimer_forward_now", "hrtimer_start_expires", "ns_to_timespec64", "timerfd_fget", "timerfd_get_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_timerfd_settime",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "alarm_forward_now", "alarm_try_to_cancel", "capable", "fput", "hrtimer_forward_now", "hrtimer_try_to_cancel", "itimerspec64_valid", "ns_to_timespec64", "timerfd_fget", "timerfd_get_remaining", "timerfd_setup", "timerfd_setup_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_timerfd_create",
+    "callees": ["__init_waitqueue_head", "alarm_init", "anon_inode_getfd", "capable", "hrtimer_init", "kfree", "ktime_mono_to_any", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_timerfd_create",
+    "callees": ["__do_sys_timerfd_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_timerfd_create",
+    "callees": ["__do_sys_timerfd_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_fget",
+    "callees": ["__fdget", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_show",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "ns_to_timespec64", "seq_printf", "timerfd_get_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_read",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "alarm_forward_now", "alarm_restart", "do_wait_intr_irq", "hrtimer_forward_now", "hrtimer_start_expires", "timerfd_canceled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_poll",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "poll_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_release",
+    "callees": ["alarm_cancel", "hrtimer_cancel", "kvfree_call_rcu", "timerfd_remove_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_setup",
+    "callees": ["__builtin_expect", "alarm_init", "alarm_start", "alarm_start_relative", "hrtimer_init", "hrtimer_start_range_ns", "timens_ktime_to_host", "timerfd_canceled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_get_remaining",
+    "callees": ["alarm_expires_remaining"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_setup_cancel",
+    "callees": ["__timerfd_remove_cancel.part.0", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_canceled",
+    "callees": ["timerfd_canceled.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_remove_cancel",
+    "callees": ["__timerfd_remove_cancel.part.0", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_resume",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_resume_work",
+    "callees": ["timerfd_clock_was_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_clock_was_set",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "ktime_mono_to_any"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_alarmproc",
+    "callees": ["timerfd_triggered"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_tmrproc",
+    "callees": ["timerfd_triggered"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timerfd_triggered",
+    "callees": ["__wake_up_locked_key", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_ktime_to_host",
+    "callees": ["__builtin_expect", "do_timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poll_wait",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hrtimer_forward_now",
+    "callees": ["hrtimer_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "itimerspec64_valid",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

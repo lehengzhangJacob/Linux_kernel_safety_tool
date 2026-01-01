@@ -1,0 +1,26 @@
+[
+  {
+    "name": "resource_clip",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_remove_reservations",
+    "callees": ["remove_e820_regions", "resource_clip"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_e820_regions",
+    "callees": ["_printk", "resource_clip"],
+    "global_reads": ["e820_table", "pci_use_e820"],
+    "global_writes": []
+  },
+  {
+    "name": "resource_clip",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

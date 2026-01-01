@@ -1,0 +1,158 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc_node",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc_node", "kmalloc_large_node", "kmalloc_node_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blk_mq_put_driver_tag",
+    "callees": ["__blk_mq_sub_active_requests", "blk_mq_put_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_put_driver_tag.part.0",
+    "callees": ["__blk_mq_put_driver_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_put_driver_tag",
+    "callees": ["blk_mq_put_driver_tag.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_put_driver_tag.part.0",
+    "callees": ["__blk_mq_put_driver_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_hctx_set_fq_lock_class",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_free_flush_queue",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_alloc_flush_queue",
+    "callees": ["kfree", "kzalloc_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blkdev_issue_flush",
+    "callees": ["bio_init", "submit_bio_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_insert_flush",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "blk_flush_complete_seq", "blk_flush_policy", "blk_mq_end_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mq_flush_data_end_io",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_flush_complete_seq", "blk_mq_put_driver_tag", "blk_mq_sched_restart"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_kick_flush",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "blk_mq_kick_requeue_list", "blk_rq_init"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "is_flush_rq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_end_io",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "blk_account_io_flush", "blk_flush_complete_seq", "blk_flush_cur_seq", "blk_mq_put_driver_tag", "req_ref_put_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_flush_complete_seq",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "blk_flush_cur_seq", "blk_kick_flush", "blk_mq_end_request", "blk_mq_kick_requeue_list"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "blk_account_io_flush",
+    "callees": ["__builtin_expect", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_restart",
+    "callees": ["__blk_mq_sched_restart", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_put_driver_tag",
+    "callees": ["blk_mq_put_driver_tag.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blk_mq_put_driver_tag",
+    "callees": ["__blk_mq_sub_active_requests", "blk_mq_put_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "req_ref_put_and_test",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc_node",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc_node", "kmalloc_large_node", "kmalloc_node_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

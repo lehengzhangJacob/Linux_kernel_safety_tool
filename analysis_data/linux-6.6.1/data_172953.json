@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ext4_init_security",
+    "callees": ["security_inode_init_security"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_initxattrs",
+    "callees": ["ext4_xattr_set_handle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_xattr_security_set",
+    "callees": ["ext4_xattr_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_xattr_security_get",
+    "callees": ["ext4_xattr_get"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

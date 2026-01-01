@@ -1,0 +1,134 @@
+[
+  {
+    "name": "lzma_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_lzma2_end",
+    "callees": ["kfree", "vfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_lzma2_reset",
+    "callees": ["vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_lzma2_create",
+    "callees": ["kfree", "kmalloc_large", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xz_dec_lzma2_run",
+    "callees": ["dict_flush", "dict_reset", "dict_uncompressed", "lzma2_lzma", "lzma_props", "lzma_reset", "rc_read_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma2_lzma",
+    "callees": ["lzma_main", "memcpy", "memmove", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_props",
+    "callees": ["lzma_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_main",
+    "callees": ["dict_repeat", "lzma_literal", "lzma_match", "lzma_rep_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_rep_match",
+    "callees": ["lzma_len"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_match",
+    "callees": ["lzma_len", "rc_direct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_len",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_literal",
+    "callees": ["dict_get", "lzma_literal_probs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lzma_literal_probs",
+    "callees": ["dict_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_direct",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rc_read_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_flush",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_uncompressed",
+    "callees": ["memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_repeat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_get",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dict_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

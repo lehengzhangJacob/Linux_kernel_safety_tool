@@ -1,0 +1,218 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_find_nested",
+    "callees": ["nla_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_find_nested",
+    "callees": ["nla_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_find_nested",
+    "callees": ["nla_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_remove_cb.part.0",
+    "callees": ["netlbl_domhsh_remove_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_genl_init",
+    "callees": ["genl_register_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_remove",
+    "callees": ["cipso_v4_doi_remove", "netlbl_domhsh_walk", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_remove_cb",
+    "callees": ["netlbl_cipsov4_remove_cb.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_listall",
+    "callees": ["cipso_v4_doi_walk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_listall_cb",
+    "callees": ["genlmsg_put", "nla_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_list",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "cipso_v4_doi_getdef", "cipso_v4_doi_putdef", "genlmsg_put", "genlmsg_reply", "kfree_skb_reason", "nla_nest_start_noflag", "nla_put", "nlmsg_new"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_add",
+    "callees": ["netlbl_cipsov4_add_local", "netlbl_cipsov4_add_pass", "netlbl_cipsov4_add_std", "netlbl_netlink_auditinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_add_local",
+    "callees": ["__builtin_return_address", "cipso_v4_doi_add", "cipso_v4_doi_free", "kmalloc_trace", "netlbl_cipsov4_add_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_add_pass",
+    "callees": ["__builtin_return_address", "cipso_v4_doi_add", "cipso_v4_doi_free", "kmalloc_trace", "netlbl_cipsov4_add_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_add_std",
+    "callees": ["__builtin_return_address", "__nla_validate_nested", "cipso_v4_doi_add", "cipso_v4_doi_free", "kfree", "kmalloc_array", "kmalloc_trace", "kzalloc", "netlbl_cipsov4_add_common", "nla_find_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_cipsov4_add_common",
+    "callees": ["__nla_validate_nested"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_netlink_auditinfo",
+    "callees": ["security_current_getsecid_subj"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "genlmsg_reply",
+    "callees": ["netlink_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_find_nested",
+    "callees": ["nla_find"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

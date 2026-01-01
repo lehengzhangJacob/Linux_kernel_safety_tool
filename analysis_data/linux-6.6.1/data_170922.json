@@ -1,0 +1,134 @@
+[
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_detect_tlb_hygon.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_detect_tlb_hygon",
+    "callees": ["cpu_detect_tlb_hygon.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_hygon",
+    "callees": ["check_null_seg_clears_base", "clear_cpu_cap", "cpu_detect_cache_sizes", "early_init_hygon", "hygon_detect_cmp", "hygon_get_topology", "init_hygon_cacheinfo", "msr_set_bit", "read_apic_id", "srat_detect_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_hygon",
+    "callees": ["early_init_hygon_mc", "hygon_get_topology_early", "native_read_msr_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bsp_init_hygon",
+    "callees": ["_printk", "native_read_msr", "native_read_msr_safe", "use_mwaitx_delay"],
+    "global_reads": [],
+    "global_writes": ["__max_die_per_package", "nodes_per_socket", "x86_amd_ls_cfg_base", "x86_amd_ls_cfg_ssbd_mask"]
+  },
+  {
+    "name": "early_init_hygon_mc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "srat_detect_node",
+    "callees": ["nearby_node", "node_state", "numa_cpu_node", "numa_set_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hygon_detect_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hygon_get_topology",
+    "callees": ["cacheinfo_hygon_init_llc_id", "detect_extended_topology", "native_read_msr"],
+    "global_reads": ["nodes_per_socket", "smp_num_siblings"],
+    "global_writes": []
+  },
+  {
+    "name": "hygon_get_topology_early",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["smp_num_siblings"]
+  },
+  {
+    "name": "nearby_node",
+    "callees": ["find_first_bit", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_apic_id",
+    "callees": ["__SCT__apic_call_read"],
+    "global_reads": ["apic"],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

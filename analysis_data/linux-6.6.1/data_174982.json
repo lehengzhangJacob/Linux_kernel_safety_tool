@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_udp_init_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_udp_packet",
+    "callees": ["__builtin_expect", "__nf_ct_refresh_acct", "udp_error"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "udp_error",
+    "callees": ["__builtin_bswap16", "nf_checksum", "nf_l4proto_log_invalid", "skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

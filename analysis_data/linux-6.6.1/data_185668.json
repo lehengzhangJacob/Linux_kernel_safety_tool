@@ -1,0 +1,68 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_config_validate",
+    "callees": ["__builtin_expect", "__warn_printk", "validate_encoder_possible_clones", "validate_encoder_possible_crtcs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_encoder_possible_crtcs",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "validate_encoder_possible_clones",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_config_cleanup",
+    "callees": ["__builtin_expect", "__drm_err", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_framebuffer_free", "drm_framebuffer_print_info", "drm_mode_object_put", "drm_printf", "drm_property_blob_put", "drm_property_destroy", "flush_work", "ida_destroy", "idr_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drmm_mode_config_init",
+    "callees": ["__drmm_add_action_or_reset", "__mutex_init", "drm_mode_config_cleanup", "drm_mode_create_standard_properties", "drm_modeset_lock_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_config_init_release",
+    "callees": ["drm_mode_config_cleanup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_config_reset",
+    "callees": ["drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_getresources",
+    "callees": ["__builtin_expect", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "drm_lease_held", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_modeset_unregister_all",
+    "callees": ["drm_connector_unregister_all", "drm_crtc_unregister_all", "drm_encoder_unregister_all", "drm_plane_unregister_all"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_modeset_register_all",
+    "callees": ["drm_connector_register_all", "drm_crtc_register_all", "drm_crtc_unregister_all", "drm_debugfs_late_register", "drm_encoder_register_all", "drm_encoder_unregister_all", "drm_plane_register_all", "drm_plane_unregister_all"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

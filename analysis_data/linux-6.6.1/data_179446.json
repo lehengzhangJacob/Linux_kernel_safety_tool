@@ -1,0 +1,62 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_memunmap",
+    "callees": ["__builtin_expect", "devres_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_memremap",
+    "callees": ["__devres_alloc_node", "devres_add", "devres_free", "memremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_memremap_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_memremap_release",
+    "callees": ["memunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memunmap",
+    "callees": ["iounmap", "is_ioremap_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memremap",
+    "callees": ["__builtin_expect", "__warn_printk", "ioremap_cache", "ioremap_wc", "ioremap_wt", "pfn_valid", "region_intersects"],
+    "global_reads": ["__already_done", "page_offset_base"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "is_ioremap_addr",
+    "callees": [],
+    "global_reads": ["vmalloc_base"],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  }
+]

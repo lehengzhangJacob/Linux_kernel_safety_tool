@@ -1,0 +1,194 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_irq_affinity",
+    "callees": ["irq_to_desc", "seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "show_irq_affinity",
+    "callees": ["irq_to_desc", "seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "show_irq_affinity",
+    "callees": ["irq_to_desc", "seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_interrupts",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "arch_show_interrupts", "find_next_bit", "irq_to_desc", "seq_printf", "seq_putc"],
+    "global_reads": ["nr_irqs", "prec"],
+    "global_writes": ["prec"]
+  },
+  {
+    "name": "arch_show_interrupts",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_irq_proc",
+    "callees": ["irq_to_desc", "proc_mkdir", "register_default_affinity_proc", "register_irq_proc"],
+    "global_reads": ["nr_irqs"],
+    "global_writes": ["root_irq_dir"]
+  },
+  {
+    "name": "register_default_affinity_proc",
+    "callees": ["proc_create"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_handler_proc",
+    "callees": ["proc_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unregister_irq_proc",
+    "callees": ["remove_proc_entry", "sprintf"],
+    "global_reads": ["root_irq_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "register_irq_proc",
+    "callees": ["mutex_lock", "mutex_unlock", "proc_create_data", "proc_create_single_data", "proc_mkdir", "sprintf"],
+    "global_reads": ["root_irq_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "register_handler_proc",
+    "callees": ["irq_to_desc", "name_unique", "proc_mkdir", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "name_unique",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "irq_to_desc", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_spurious_proc_show",
+    "callees": ["irq_to_desc", "jiffies_to_msecs", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_node_proc_show",
+    "callees": ["irq_to_desc", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_affinity_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_affinity_write",
+    "callees": ["bitmap_parse_user"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "default_affinity_show",
+    "callees": ["seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "irq_effective_aff_list_proc_show",
+    "callees": ["show_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_effective_aff_proc_show",
+    "callees": ["show_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_list_proc_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_proc_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_list_proc_write",
+    "callees": ["write_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_proc_write",
+    "callees": ["write_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_list_proc_show",
+    "callees": ["show_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_proc_show",
+    "callees": ["show_irq_affinity"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irq_affinity_hint_proc_show",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "irq_to_desc", "seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "show_irq_affinity",
+    "callees": ["irq_to_desc", "seq_printf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "acpi_ds_init_one_object.part.0",
+    "callees": ["acpi_ds_auto_serialize_method", "acpi_ds_initialize_region", "acpi_exception", "acpi_ns_get_attached_object", "acpi_ns_get_type", "acpi_ut_get_node_name"],
+    "global_reads": ["acpi_gbl_auto_serialize_methods"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_initialize_objects",
+    "callees": ["acpi_exception", "acpi_get_table_by_index", "acpi_ns_walk_namespace", "acpi_tb_get_owner_id", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ds_init_one_object",
+    "callees": ["acpi_ds_init_one_object.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

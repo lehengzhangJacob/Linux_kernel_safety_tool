@@ -1,0 +1,86 @@
+[
+  {
+    "name": "release_system_zone",
+    "callees": ["kmem_cache_free", "rb_first_postorder", "rb_next_postorder"],
+    "global_reads": ["ext4_system_zone_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_check_blockref",
+    "callees": ["__builtin_expect", "__ext4_error_inode", "ext4_sb_block_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_inode_block_valid",
+    "callees": ["ext4_sb_block_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_sb_block_valid",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_release_system_zone",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_setup_system_zone",
+    "callees": ["__SCT__cond_resched", "add_system_zone", "debug_print_tree", "ext4_block_bitmap", "ext4_get_group_desc", "ext4_inode_bitmap", "ext4_inode_table", "ext4_num_base_meta_blocks", "ext4_protect_reserved_inode", "kfree", "kzalloc", "release_system_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_destroy_system_zone",
+    "callees": ["kfree", "release_system_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_protect_reserved_inode",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "__ext4_error_inode", "__ext4_iget", "add_system_zone", "ext4_map_blocks", "iput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "debug_print_tree",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_printk", "rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_system_zone",
+    "callees": ["kmem_cache_alloc", "kmem_cache_free", "rb_erase", "rb_insert_color", "rb_next", "rb_prev"],
+    "global_reads": ["ext4_system_zone_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "release_system_zone",
+    "callees": ["kmem_cache_free", "rb_first_postorder", "rb_next_postorder"],
+    "global_reads": ["ext4_system_zone_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_exit_system_zone",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["ext4_system_zone_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ext4_init_system_zone",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["ext4_system_zone_cachep"]
+  }
+]

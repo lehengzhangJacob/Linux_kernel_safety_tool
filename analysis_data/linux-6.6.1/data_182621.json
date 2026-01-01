@@ -1,0 +1,38 @@
+[
+  {
+    "name": "drm_mode_create_dumb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_destroy_dumb_ioctl",
+    "callees": ["drm_gem_handle_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_destroy_dumb",
+    "callees": ["drm_gem_handle_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_mmap_dumb_ioctl",
+    "callees": ["drm_gem_dumb_map_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_create_dumb_ioctl",
+    "callees": ["drm_mode_create_dumb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_mode_create_dumb",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

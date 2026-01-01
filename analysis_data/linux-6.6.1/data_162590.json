@@ -1,0 +1,110 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "membuf_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_fpregs_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpregs_set",
+    "callees": ["__builtin_expect", "convert_to_fxsr", "user_regset_copyin"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fpregs_get",
+    "callees": ["__convert_from_fxsr", "copy_xstate_to_uabi_buf", "fpu_sync_fpstate", "membuf_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "convert_to_fxsr",
+    "callees": ["memcpy", "twd_i387_to_fxsr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "convert_from_fxsr",
+    "callees": ["__convert_from_fxsr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__convert_from_fxsr",
+    "callees": ["memcpy", "twd_fxsr_to_i387"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "twd_fxsr_to_i387",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "twd_i387_to_fxsr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xstateregs_set",
+    "callees": ["__bad_copy_to", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "__copy_overflow", "_copy_from_user", "copy_uabi_from_kernel_to_xstate", "vfree", "vmalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xstateregs_get",
+    "callees": ["copy_xstate_to_uabi_buf", "fpu_sync_fpstate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfpregs_set",
+    "callees": ["__builtin_expect", "memcpy", "memset", "user_regset_copyin"],
+    "global_reads": ["mxcsr_feature_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "xfpregs_get",
+    "callees": ["copy_xstate_to_uabi_buf", "fpu_sync_fpstate", "membuf_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_xregset_fpregs_active",
+    "callees": ["regset_fpregs_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regset_fpregs_active",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "membuf_write",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

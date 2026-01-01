@@ -1,0 +1,128 @@
+[
+  {
+    "name": "blk_mq_set_rq_budget_token",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_exit_sched",
+    "callees": ["blk_mq_debugfs_unregister_sched", "blk_mq_debugfs_unregister_sched_hctx", "blk_mq_sched_tags_teardown", "mutex_lock", "mutex_unlock", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_free_rqs",
+    "callees": ["blk_mq_free_rqs", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_init_sched",
+    "callees": ["blk_mq_debugfs_register_sched", "blk_mq_debugfs_register_sched_hctx", "blk_mq_exit_sched", "blk_mq_init_sched_shared_tags", "blk_mq_sched_alloc_map_and_rqs", "blk_mq_sched_free_rqs", "blk_mq_sched_tags_teardown", "kobject_put", "mutex_lock", "mutex_unlock", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_init_sched_shared_tags",
+    "callees": ["blk_mq_alloc_map_and_rqs", "blk_mq_tag_update_sched_shared_tags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_tags_teardown",
+    "callees": ["blk_mq_free_rq_map", "xa_find", "xa_find_after"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_alloc_map_and_rqs",
+    "callees": ["blk_mq_alloc_map_and_rqs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_try_insert_merge",
+    "callees": ["elv_attempt_insert_merge", "rq_mergeable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_bio_merge",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "blk_bio_list_merge"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_dispatch_requests",
+    "callees": ["__blk_mq_sched_dispatch_requests", "__builtin_constant_p", "__builtin_expect", "blk_mq_run_hw_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blk_mq_sched_dispatch_requests",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "blk_mq_dispatch_rq_list", "blk_mq_do_dispatch_ctx", "blk_mq_do_dispatch_sched", "blk_mq_flush_busy_ctxs", "blk_mq_sched_mark_restart_hctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_do_dispatch_ctx",
+    "callees": ["blk_mq_delay_run_hw_queues", "blk_mq_dequeue_from_ctx", "blk_mq_dispatch_rq_list", "blk_mq_set_rq_budget_token", "sbitmap_any_bit_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_do_dispatch_sched",
+    "callees": ["__blk_mq_do_dispatch_sched", "__builtin_expect", "blk_mq_delay_run_hw_queue"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__blk_mq_do_dispatch_sched",
+    "callees": ["blk_mq_delay_run_hw_queues", "blk_mq_dispatch_hctx_list", "blk_mq_dispatch_rq_list", "blk_mq_get_driver_tag", "blk_mq_set_rq_budget_token", "list_sort"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_dispatch_hctx_list",
+    "callees": ["blk_mq_dispatch_rq_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sched_rq_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__blk_mq_sched_restart",
+    "callees": ["blk_mq_run_hw_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_sched_mark_restart_hctx",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_get_driver_tag",
+    "callees": ["__blk_mq_get_driver_tag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "blk_mq_set_rq_budget_token",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rq_mergeable",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

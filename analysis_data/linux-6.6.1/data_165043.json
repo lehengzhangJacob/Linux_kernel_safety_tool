@@ -1,0 +1,92 @@
+[
+  {
+    "name": "fprop_global_destroy",
+    "callees": ["percpu_counter_destroy_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fprop_add_percpu_max",
+    "callees": ["__builtin_expect", "__fprop_add_percpu", "fprop_fraction_percpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_fraction_percpu",
+    "callees": ["__builtin_expect", "fprop_reflect_period_percpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fprop_add_percpu",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "fprop_reflect_period_percpu", "percpu_counter_add_batch"],
+    "global_reads": ["nr_cpu_ids", "percpu_counter_batch"],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_local_destroy_percpu",
+    "callees": ["fprop_global_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_local_init_percpu",
+    "callees": ["__percpu_counter_init_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_fraction_single",
+    "callees": ["__builtin_expect", "fprop_reflect_period_single"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fprop_inc_single",
+    "callees": ["fprop_reflect_period_single", "percpu_counter_add_batch"],
+    "global_reads": ["percpu_counter_batch"],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_local_destroy_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_local_init_single",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_new_period",
+    "callees": ["__percpu_counter_sum", "percpu_counter_add_batch"],
+    "global_reads": ["percpu_counter_batch"],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_global_destroy",
+    "callees": ["percpu_counter_destroy_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fprop_global_init",
+    "callees": ["__percpu_counter_init_many"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

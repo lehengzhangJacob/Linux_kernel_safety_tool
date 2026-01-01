@@ -1,0 +1,218 @@
+[
+  {
+    "name": "free_ldt_struct.part.0",
+    "callees": ["free_pages", "kfree", "vfree_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_set_ldt.part.0",
+    "callees": ["set_tssldt_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ldt_struct.part.0",
+    "callees": ["free_pages", "kfree", "vfree_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ldt_struct.part.0",
+    "callees": ["free_pages", "kfree", "vfree_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_modify_ldt",
+    "callees": ["read_default_ldt", "read_ldt", "write_ldt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_ldt.part.0",
+    "callees": ["load_mm_ldt", "refresh_ldt_segments"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ldt_struct.part.0",
+    "callees": ["free_pages", "kfree", "vfree_atomic"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_set_ldt.part.0",
+    "callees": ["set_tssldt_descriptor"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_modify_ldt",
+    "callees": ["read_default_ldt", "read_ldt", "write_ldt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_modify_ldt",
+    "callees": ["__do_sys_modify_ldt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_modify_ldt",
+    "callees": ["__do_sys_modify_ldt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "write_ldt",
+    "callees": ["__builtin_expect", "_copy_from_user", "alloc_ldt_struct", "down_write_killable", "fill_ldt", "free_ldt_pgtables", "free_ldt_struct.part.0", "install_ldt", "map_ldt_struct", "memcpy", "memset", "unmap_ldt_struct", "up_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_default_ldt",
+    "callees": ["__access_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_ldt",
+    "callees": ["__bad_copy_from", "__builtin_constant_p", "__builtin_expect", "__builtin_object_size", "_copy_to_user", "copy_overflow", "down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldt_arch_exit_mmap",
+    "callees": ["free_ldt_pgtables"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_context_ldt",
+    "callees": ["__builtin_expect", "free_ldt_struct.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ldt_dup_context",
+    "callees": ["alloc_ldt_struct", "free_ldt_pgtables", "free_ldt_struct.part.0", "map_ldt_struct", "memcpy", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "install_ldt",
+    "callees": ["mutex_lock", "mutex_unlock", "on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_ldt_pgtables",
+    "callees": ["free_pgd_range", "tlb_finish_mmu", "tlb_gather_mmu_fullmm"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "unmap_ldt_struct",
+    "callees": ["__builtin_expect", "__get_locked_pte", "__rcu_read_unlock", "_raw_spin_unlock", "flush_tlb_mm_range"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "map_ldt_struct",
+    "callees": ["__builtin_expect", "__get_locked_pte", "__rcu_read_unlock", "_raw_spin_unlock", "is_vmalloc_addr", "map_ldt_struct_to_user", "pfn_pte", "sanity_check_ldt_mapping", "vmalloc_to_pfn"],
+    "global_reads": ["__supported_pte_mask", "page_offset_base", "pgdir_shift", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "sanity_check_ldt_mapping",
+    "callees": ["do_sanity_check"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "map_ldt_struct_to_user",
+    "callees": ["pti_set_user_pgtbl"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "do_sanity_check",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_ldt_struct",
+    "callees": ["__builtin_return_address", "__vmalloc", "get_zeroed_page", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "flush_ldt",
+    "callees": ["flush_ldt.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refresh_ldt_segments",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "switch_ldt",
+    "callees": ["__builtin_expect", "__warn_printk", "debug_locks_off", "load_mm_ldt"],
+    "global_reads": ["debug_locks_silent", "oops_in_progress"],
+    "global_writes": []
+  },
+  {
+    "name": "load_mm_ldt",
+    "callees": ["__builtin_expect", "native_set_ldt.part.0"],
+    "global_reads": ["pgdir_shift"],
+    "global_writes": []
+  },
+  {
+    "name": "fill_ldt",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__access_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pti_set_user_pgtbl",
+    "callees": ["__pti_set_user_pgtbl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_pte",
+    "callees": [],
+    "global_reads": ["__supported_pte_mask"],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmp_init_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmp_nlattr_tuple_size",
+    "callees": ["nla_policy_len"],
+    "global_reads": ["size"],
+    "global_writes": ["size"]
+  },
+  {
+    "name": "icmp_nlattr_to_tuple",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmp_tuple_to_nlattr",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmpv4_error",
+    "callees": ["memset", "nf_conntrack_inet_error", "nf_ip_checksum", "nf_l4proto_log_invalid", "skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_inet_error",
+    "callees": ["__builtin_expect", "nf_conntrack_find_get", "nf_ct_get_tuplepr", "nf_ct_invert_tuple", "nf_ct_put", "nf_l4proto_log_invalid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_icmp_packet",
+    "callees": ["__nf_ct_refresh_acct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_invert_icmp_tuple",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icmp_pkt_to_tuple",
+    "callees": ["skb_header_pointer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_ct_put",
+    "callees": ["__refcount_sub_and_test", "nf_ct_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

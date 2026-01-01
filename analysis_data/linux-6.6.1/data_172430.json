@@ -1,0 +1,206 @@
+[
+  {
+    "name": "perf_trace_event_close",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_close",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perfmon_capable",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_allow_tracepoint",
+    "callees": ["perfmon_capable", "security_perf_event_open"],
+    "global_reads": ["sysctl_perf_event_paranoid"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_put_ref",
+    "callees": ["trace_event_dyn_put_ref", "trace_event_put_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_put_ref",
+    "callees": ["trace_event_dyn_put_ref", "trace_event_put_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_put_ref",
+    "callees": ["trace_event_dyn_put_ref", "trace_event_put_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_init.part.0",
+    "callees": ["perf_trace_event_open", "perf_trace_event_unreg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_buf_update",
+    "callees": ["tracing_gen_ctx"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_buf_alloc",
+    "callees": ["__builtin_expect", "__warn_printk", "memset", "perf_swevent_get_recursion_context"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "perf_trace_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_add",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_uprobe_destroy",
+    "callees": ["destroy_local_trace_uprobe", "mutex_lock", "mutex_unlock", "perf_trace_event_close", "perf_trace_event_unreg", "trace_event_put_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_uprobe_init",
+    "callees": ["__builtin_expect", "create_local_trace_uprobe", "destroy_local_trace_uprobe", "kfree", "mutex_lock", "mutex_unlock", "perf_trace_event_init", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_kprobe_destroy",
+    "callees": ["destroy_local_trace_kprobe", "mutex_lock", "mutex_unlock", "perf_trace_event_close", "perf_trace_event_unreg", "trace_event_put_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_kprobe_init",
+    "callees": ["__builtin_expect", "create_local_trace_kprobe", "destroy_local_trace_kprobe", "kfree", "mutex_lock", "mutex_unlock", "perf_trace_event_init", "strndup_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_destroy",
+    "callees": ["mutex_lock", "mutex_unlock", "perf_trace_event_close", "perf_trace_event_unreg", "trace_event_put_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_init",
+    "callees": ["mutex_lock", "mutex_unlock", "perf_trace_event_init", "trace_event_put_ref", "trace_event_try_get_ref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_init",
+    "callees": ["perf_trace_event_init.part.0", "perf_trace_event_perm", "perf_trace_event_reg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_close",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_event_reg",
+    "callees": ["__alloc_percpu", "find_next_bit", "free_percpu"],
+    "global_reads": ["total_ref_count"],
+    "global_writes": ["total_ref_count"]
+  },
+  {
+    "name": "perf_trace_event_perm",
+    "callees": ["ftrace_event_is_function", "perf_allow_tracepoint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_put_ref",
+    "callees": ["trace_event_dyn_put_ref", "trace_event_put_ref.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_try_get_ref",
+    "callees": ["trace_event_dyn_try_get_ref", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tracing_gen_ctx",
+    "callees": ["tracing_gen_ctx_irq_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_allow_tracepoint",
+    "callees": ["perfmon_capable", "security_perf_event_open"],
+    "global_reads": ["sysctl_perf_event_paranoid"],
+    "global_writes": []
+  },
+  {
+    "name": "perfmon_capable",
+    "callees": ["capable"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

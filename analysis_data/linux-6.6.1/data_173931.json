@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_linkmodes",
+    "callees": ["__ethtool_get_link_ksettings", "do_trace_netlink_extack", "ethnl_update_linkmodes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_set_linkmodes_validate",
+    "callees": ["ethnl_check_linkmodes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_update_linkmodes",
+    "callees": ["do_trace_netlink_extack", "ethnl_auto_linkmodes", "ethnl_update_bitset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_check_linkmodes",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ethnl_auto_linkmodes",
+    "callees": ["__bitmap_equal", "__builtin_constant_p", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmodes_fill_reply",
+    "callees": ["ethnl_put_bitset", "nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmodes_reply_size",
+    "callees": ["ethnl_bitset_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmodes_prepare_data",
+    "callees": ["__ethtool_get_link_ksettings", "do_trace_netlink_extack", "ethnl_ops_begin", "ethnl_ops_complete", "find_first_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

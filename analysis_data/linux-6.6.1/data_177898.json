@@ -1,0 +1,62 @@
+[
+  {
+    "name": "i915_pci_resource_valid.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_resource_valid",
+    "callees": ["i915_pci_resource_valid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_resource_valid.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_unregister_driver",
+    "callees": ["pci_unregister_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_register_driver",
+    "callees": ["__pci_register_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_shutdown",
+    "callees": ["i915_driver_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_probe",
+    "callees": ["_dev_info", "add_taint", "device_id_in_list", "i915_driver_probe", "i915_pci_resource_valid", "intel_display_driver_probe_defer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_resource_valid",
+    "callees": ["i915_pci_resource_valid.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_id_in_list",
+    "callees": ["kfree", "kstrdup", "kstrtou16", "strcmp", "strsep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_pci_remove",
+    "callees": ["i915_driver_remove"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

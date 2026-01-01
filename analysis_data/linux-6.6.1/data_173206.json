@@ -1,0 +1,38 @@
+[
+  {
+    "name": "pci_iomap_range",
+    "callees": ["ioport_map", "ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_iomap_wc_range",
+    "callees": ["ioremap_wc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_iomap_wc",
+    "callees": ["pci_iomap_wc_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_iomap",
+    "callees": ["pci_iomap_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_iomap_wc_range",
+    "callees": ["ioremap_wc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_iomap_range",
+    "callees": ["ioport_map", "ioremap"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "dma_common_free_remap",
+    "callees": ["__warn_printk", "find_vm_area", "vunmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_contiguous_remap",
+    "callees": ["__builtin_expect", "kvfree", "kvmalloc_node", "vmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_pages_remap",
+    "callees": ["find_vm_area", "vmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_common_find_pages",
+    "callees": ["find_vm_area"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

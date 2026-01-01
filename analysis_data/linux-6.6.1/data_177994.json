@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ged_shutdown",
+    "callees": ["free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ged_irq_handler.part.0",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "ged_driver_init",
+    "callees": ["__platform_driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ged_remove",
+    "callees": ["ged_shutdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ged_shutdown",
+    "callees": ["free_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ged_probe",
+    "callees": ["_dev_err", "acpi_walk_resources", "devm_kmalloc", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ged_request_interrupt",
+    "callees": ["_dev_err", "acpi_dev_resource_interrupt", "acpi_get_handle", "devm_kmalloc", "is_acpi_device_node", "request_threaded_irq", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ged_irq_handler",
+    "callees": ["acpi_execute_simple_method", "acpi_ged_irq_handler.part.0"],
+    "global_reads": ["__print_once"],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "audit_remove_mark",
+    "callees": ["fsnotify_destroy_mark", "fsnotify_put_mark"],
+    "global_reads": ["audit_fsnotify_group"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mark_handle_event.part.0",
+    "callees": ["audit_compare_dname_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_fsnotify_init",
+    "callees": ["__builtin_expect", "audit_panic", "fsnotify_alloc_group"],
+    "global_reads": [],
+    "global_writes": ["audit_fsnotify_group"]
+  },
+  {
+    "name": "audit_mark_handle_event",
+    "callees": ["__builtin_expect", "audit_autoremove_mark_rule", "audit_mark_handle_event.part.0"],
+    "global_reads": ["audit_fsnotify_group"],
+    "global_writes": []
+  },
+  {
+    "name": "audit_autoremove_mark_rule",
+    "callees": ["audit_del_rule", "audit_mark_log_rule_change"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_remove_mark_rule",
+    "callees": ["audit_remove_mark"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_remove_mark",
+    "callees": ["fsnotify_destroy_mark", "fsnotify_put_mark"],
+    "global_reads": ["audit_fsnotify_group"],
+    "global_writes": []
+  },
+  {
+    "name": "audit_alloc_mark",
+    "callees": ["__builtin_expect", "dput", "fsnotify_add_mark", "fsnotify_init_mark", "fsnotify_put_mark", "kern_path_locked", "kzalloc", "path_put", "up_write"],
+    "global_reads": ["audit_fsnotify_group"],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mark_compare",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_mark_path",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_fsnotify_free_mark",
+    "callees": ["audit_fsnotify_mark_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "audit_fsnotify_mark_free",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

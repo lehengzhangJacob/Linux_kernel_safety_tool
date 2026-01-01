@@ -1,0 +1,32 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_numa_init",
+    "callees": ["__builtin_constant_p", "_printk", "bitmap_empty", "early_pci_allowed", "find_first_bit", "find_next_bit", "find_northbridge", "numa_add_memblk", "read_pci_config"],
+    "global_reads": ["boot_cpu_physical_apicid", "max_pfn"],
+    "global_writes": []
+  },
+  {
+    "name": "find_northbridge",
+    "callees": ["read_pci_config"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_build_option",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_build_option",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_build_option",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_setup_reserve_mem",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_setup_reserve_io",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_setup_reserve_dma",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_setup_reserve_irq",
+    "callees": ["get_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_range_reserved",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_possible_config",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_bus_resource",
+    "callees": ["_dev_err", "_dev_printk", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_mem_resource",
+    "callees": ["_dev_err", "_dev_printk", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_io_resource",
+    "callees": ["_dev_err", "_dev_printk", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_dma_resource",
+    "callees": ["_dev_err", "_dev_printk", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_irq_resource",
+    "callees": ["_dev_err", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_add_resource",
+    "callees": ["_dev_err", "pnp_new_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_new_resource",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_resource_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_check_dma",
+    "callees": ["free_dma", "request_dma"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_check_irq",
+    "callees": ["free_irq", "pci_uses_irq", "request_threaded_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_uses_irq",
+    "callees": ["pci_dev_put", "pci_dev_uses_irq", "pci_get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_uses_irq",
+    "callees": ["_dev_printk", "pci_read_config_dword"],
+    "global_reads": ["pnp_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_test_handler",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_check_mem",
+    "callees": ["__release_region", "__request_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_check_port",
+    "callees": ["__release_region", "__request_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_free_options",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_mem_resource",
+    "callees": ["dbg_pnp_show_option", "pnp_build_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_port_resource",
+    "callees": ["dbg_pnp_show_option", "pnp_build_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_dma_resource",
+    "callees": ["dbg_pnp_show_option", "pnp_build_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_register_irq_resource",
+    "callees": ["__builtin_constant_p", "dbg_pnp_show_option", "pcibios_penalize_isa_irq", "pnp_build_option"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pnp_build_option",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

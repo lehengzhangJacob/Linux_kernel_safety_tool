@@ -1,0 +1,140 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "e6xx_force_enable_hpet.part.0",
+    "callees": ["_dev_printk"],
+    "global_reads": [],
+    "global_writes": ["force_hpet_address", "force_hpet_resume_type"]
+  },
+  {
+    "name": "early_platform_quirks",
+    "callees": ["dmi_match"],
+    "global_reads": [],
+    "global_writes": ["x86_apple_machine"]
+  },
+  {
+    "name": "quirk_intel_purley_xeon_ras_cap",
+    "callees": ["enable_copy_mc_fragile", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_brickland_xeon_ras_cap",
+    "callees": ["enable_copy_mc_fragile", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "amd_disable_seq_and_redirect_scrub",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_nb_node",
+    "callees": ["node_state", "pci_dev_put", "pci_get_slot", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "force_disable_hpet_msi",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["hpet_msi_disable"]
+  },
+  {
+    "name": "e6xx_force_enable_hpet",
+    "callees": ["e6xx_force_enable_hpet.part.0"],
+    "global_reads": ["force_hpet_address", "hpet_address"],
+    "global_writes": []
+  },
+  {
+    "name": "force_hpet_resume",
+    "callees": ["ati_force_hpet_resume", "ich_force_hpet_resume", "nvidia_force_hpet_resume", "old_ich_force_hpet_resume", "vt8237_force_hpet_resume"],
+    "global_reads": ["force_hpet_resume_type"],
+    "global_writes": []
+  },
+  {
+    "name": "nvidia_force_enable_hpet",
+    "callees": ["_dev_printk", "_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["force_hpet_address", "hpet_address", "hpet_force_user"],
+    "global_writes": ["cached_dev", "force_hpet_address", "force_hpet_resume_type"]
+  },
+  {
+    "name": "nvidia_force_hpet_resume",
+    "callees": ["_printk", "pci_write_config_dword"],
+    "global_reads": ["cached_dev"],
+    "global_writes": []
+  },
+  {
+    "name": "ati_force_enable_hpet",
+    "callees": ["_dev_printk", "_printk", "ati_ixp4x0_rev", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["force_hpet_address", "hpet_address", "hpet_force_user"],
+    "global_writes": ["cached_dev", "force_hpet_address", "force_hpet_resume_type"]
+  },
+  {
+    "name": "ati_ixp4x0_rev",
+    "callees": ["__builtin_expect", "_dev_printk", "pci_read_config_byte", "pci_read_config_dword", "pci_write_config_byte", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ati_force_hpet_resume",
+    "callees": ["_printk", "pci_write_config_dword"],
+    "global_reads": ["cached_dev"],
+    "global_writes": []
+  },
+  {
+    "name": "vt8237_force_enable_hpet",
+    "callees": ["_dev_printk", "_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["force_hpet_address", "hpet_address", "hpet_force_user"],
+    "global_writes": ["cached_dev", "force_hpet_address", "force_hpet_resume_type"]
+  },
+  {
+    "name": "vt8237_force_hpet_resume",
+    "callees": ["__builtin_unreachable", "_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["cached_dev", "force_hpet_address"],
+    "global_writes": []
+  },
+  {
+    "name": "old_ich_force_enable_hpet_user",
+    "callees": ["old_ich_force_enable_hpet"],
+    "global_reads": ["hpet_force_user"],
+    "global_writes": []
+  },
+  {
+    "name": "old_ich_force_enable_hpet",
+    "callees": ["_dev_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["force_hpet_address", "hpet_address"],
+    "global_writes": ["cached_dev", "force_hpet_address", "force_hpet_resume_type"]
+  },
+  {
+    "name": "old_ich_force_hpet_resume",
+    "callees": ["__builtin_unreachable", "_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["cached_dev", "force_hpet_address"],
+    "global_writes": []
+  },
+  {
+    "name": "ich_force_enable_hpet",
+    "callees": ["_dev_printk", "ioremap", "iounmap", "pci_read_config_dword"],
+    "global_reads": ["force_hpet_address", "hpet_address", "rcba_base"],
+    "global_writes": ["force_hpet_address", "force_hpet_resume_type", "rcba_base"]
+  },
+  {
+    "name": "ich_force_hpet_resume",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk"],
+    "global_reads": ["force_hpet_address", "rcba_base"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_irqbalance",
+    "callees": ["_dev_info", "noirqdebug_setup", "pci_bus_read_config_word", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": ["no_irq_affinity"]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "paravirt_disable_iospace",
+    "callees": ["request_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "paravirt_set_sched_clock",
+    "callees": ["__static_call_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_steal_clock",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "paravirt_patch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_tlb_remove_table",
+    "callees": ["tlb_remove_page_size"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "paravirt_BUG",
+    "callees": ["__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "default_banner",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_pv_lock_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

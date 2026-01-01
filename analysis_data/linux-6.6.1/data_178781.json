@@ -1,0 +1,80 @@
+[
+  {
+    "name": "crypto_shash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shash_desc_zero",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_kdf_hmac_sha2",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "crypto_alloc_shash", "crypto_destroy_tfm", "crypto_shash_setkey", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "krb5_hmac_K1", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_hmac_K1",
+    "callees": ["__builtin_bswap32", "crypto_shash_final", "crypto_shash_init", "crypto_shash_update", "shash_desc_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_kdf_feedback_cmac",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "crypto_alloc_shash", "crypto_destroy_tfm", "crypto_shash_setkey", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "krb5_cmac_Ki", "kzalloc", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_cmac_Ki",
+    "callees": ["__builtin_bswap32", "crypto_shash_final", "crypto_shash_init", "crypto_shash_update", "shash_desc_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_derive_key_v2",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kfree_sensitive", "kmalloc_large", "kmalloc_trace", "krb5_DK", "krb5_random_to_key_v2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "krb5_nfold",
+    "callees": ["lcm", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "shash_desc_zero",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crypto_shash_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

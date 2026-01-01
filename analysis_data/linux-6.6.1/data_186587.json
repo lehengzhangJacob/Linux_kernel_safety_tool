@@ -1,0 +1,200 @@
+[
+  {
+    "name": "drm_debugfs_add_file",
+    "callees": ["drmm_kmalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_add_files",
+    "callees": ["drm_debugfs_add_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_add_file",
+    "callees": ["drmm_kmalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_crtc_remove",
+    "callees": ["debugfs_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_crtc_add",
+    "callees": ["debugfs_create_dir", "drm_debugfs_crtc_crc_add", "kasprintf", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_connector_remove",
+    "callees": ["debugfs_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_connector_add",
+    "callees": ["debugfs_create_dir", "debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "output_bpc_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "output_bpc_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vrr_range_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vrr_range_show",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "edid_write",
+    "callees": ["__builtin_expect", "drm_edid_override_reset", "drm_edid_override_set", "kfree", "memdup_user", "strncmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "edid_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "edid_show",
+    "callees": ["drm_edid_override_show"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connector_write",
+    "callees": ["_copy_from_user", "sysfs_streq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connector_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "connector_show",
+    "callees": ["drm_get_connector_force_name", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_add_files",
+    "callees": ["drm_debugfs_add_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_add_file",
+    "callees": ["drmm_kmalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_cleanup",
+    "callees": ["debugfs_remove", "drm_debugfs_remove_all_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_remove_all_files",
+    "callees": ["debugfs_remove", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_remove_files",
+    "callees": ["debugfs_remove", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_late_register",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_init",
+    "callees": ["__mutex_init", "debugfs_create_dir", "debugfs_create_file", "drm_atomic_debugfs_init", "drm_bridge_debugfs_init", "drm_client_debugfs_init", "drm_debugfs_add_files", "drm_drv_uses_atomic_modeset", "drm_framebuffer_debugfs_init", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_create_files",
+    "callees": ["__builtin_return_address", "debugfs_create_file", "kmalloc_trace", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_gpuva_info",
+    "callees": ["__builtin_expect", "seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_entry_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_debugfs_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_name_info",
+    "callees": ["idr_for_each", "mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_gem_one_name_info",
+    "callees": ["seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_clients_info",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "drm_is_current_master", "mutex_lock", "mutex_unlock", "pid_task", "pid_vnr", "seq_printf"],
+    "global_reads": ["overflowuid"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_name_info",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

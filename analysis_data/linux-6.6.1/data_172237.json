@@ -1,0 +1,122 @@
+[
+  {
+    "name": "__do_sys_iopl",
+    "callees": ["capable", "security_locked_down", "task_update_io_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_update_io_bitmap.part.0",
+    "callees": ["__builtin_expect", "clear_ti_thread_flag", "native_tss_update_io_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_update_io_bitmap",
+    "callees": ["set_ti_thread_flag", "task_update_io_bitmap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_update_io_bitmap.part.0",
+    "callees": ["__builtin_expect", "clear_ti_thread_flag", "native_tss_update_io_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_iopl",
+    "callees": ["capable", "security_locked_down", "task_update_io_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_iopl",
+    "callees": ["__do_sys_iopl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_iopl",
+    "callees": ["__do_sys_iopl"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_ioperm",
+    "callees": ["ksys_ioperm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_ioperm",
+    "callees": ["ksys_ioperm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ksys_ioperm",
+    "callees": ["__bitmap_clear", "__bitmap_set", "__builtin_constant_p", "capable", "io_bitmap_exit", "kmalloc_large", "kmemdup", "memset", "security_locked_down"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_bitmap_exit",
+    "callees": ["__refcount_sub_and_test", "kfree", "task_update_io_bitmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_update_io_bitmap",
+    "callees": ["set_ti_thread_flag", "task_update_io_bitmap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "io_bitmap_share",
+    "callees": ["__refcount_add", "set_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

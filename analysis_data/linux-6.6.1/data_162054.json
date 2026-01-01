@@ -1,0 +1,26 @@
+[
+  {
+    "name": "noop_ret",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "noop",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ack_bad",
+    "callees": ["ack_bad_irq", "print_irq_desc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "print_irq_desc",
+    "callees": ["___ratelimit", "_printk"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

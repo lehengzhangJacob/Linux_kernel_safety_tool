@@ -1,0 +1,62 @@
+[
+  {
+    "name": "idr_callback.part.0",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_free_mark",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["inotify_inode_mark_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_free_event",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_free_group_priv",
+    "callees": ["dec_ucount", "idr_destroy", "idr_for_each"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "idr_callback",
+    "callees": ["__warn_printk", "idr_callback.part.0"],
+    "global_reads": ["warned"],
+    "global_writes": ["warned"]
+  },
+  {
+    "name": "inotify_freeing_mark",
+    "callees": ["inotify_ignored_and_remove_idr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_handle_inode_event",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "fsnotify_destroy_event", "fsnotify_destroy_mark", "fsnotify_insert_event", "fsnotify_queue_overflow", "kmalloc_large", "kmalloc_trace", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "inotify_merge",
+    "callees": ["event_compare"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "event_compare",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fsnotify_queue_overflow",
+    "callees": ["fsnotify_insert_event"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

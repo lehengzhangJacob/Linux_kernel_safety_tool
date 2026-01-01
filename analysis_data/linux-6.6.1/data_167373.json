@@ -1,0 +1,2132 @@
+[
+  {
+    "name": "__zone_watermark_ok",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__zone_watermark_ok",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "find_buddy_page_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "buddy_merge_likely",
+    "callees": ["find_buddy_page_pfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_buddy_page_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_capc",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_one_page",
+    "callees": ["__builtin_expect", "__mod_zone_page_state", "buddy_merge_likely", "del_page_from_free_list", "find_buddy_page_pfn", "get_pfnblock_flags_mask", "task_capc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "want_init_on_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "post_alloc_hook",
+    "callees": ["__builtin_expect", "kernel_init_pages", "want_init_on_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "want_init_on_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "post_alloc_hook",
+    "callees": ["__builtin_expect", "kernel_init_pages", "want_init_on_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "want_init_on_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "post_alloc_hook",
+    "callees": ["__builtin_expect", "kernel_init_pages", "want_init_on_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_zone_locked",
+    "callees": ["__SCT__tp_func_mm_page_alloc_zone_locked", "cpu_online", "trace_mm_page_alloc_zone_locked.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_zone_locked",
+    "callees": ["__SCT__tp_func_mm_page_alloc_zone_locked", "cpu_online", "trace_mm_page_alloc_zone_locked.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_statistics",
+    "callees": ["__builtin_expect", "__count_numa_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prepare_alloc_pages.part.0",
+    "callees": ["first_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "get_pfnblock_flags_mask",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags",
+    "callees": ["__builtin_expect", "__gfp_pfmemalloc_flags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__count_vm_events",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_zone_locked",
+    "callees": ["__SCT__tp_func_mm_page_alloc_zone_locked", "cpu_online", "trace_mm_page_alloc_zone_locked.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags",
+    "callees": ["__builtin_expect", "__gfp_pfmemalloc_flags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_statistics",
+    "callees": ["__builtin_expect", "__count_numa_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_managed_dma",
+    "callees": ["first_online_pgdat", "next_online_pgdat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page_bad",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page",
+    "callees": ["__builtin_expect", "check_new_page_bad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_pages",
+    "callees": ["check_new_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rmqueue_pcplist",
+    "callees": ["__builtin_expect", "check_new_pages", "rmqueue_bulk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free",
+    "callees": ["__SCT__tp_func_mm_page_free", "cpu_online", "trace_mm_page_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "drain_pages",
+    "callees": ["drain_pages_zone", "first_online_pgdat", "next_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_extfrag",
+    "callees": ["__SCT__tp_func_mm_page_alloc_extfrag", "cpu_online", "trace_mm_page_alloc_extfrag.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "expand",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_pages",
+    "callees": ["drain_pages_zone", "first_online_pgdat", "next_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_free_pages",
+    "callees": ["alloc_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad_report",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad",
+    "callees": ["__builtin_expect", "free_page_is_bad_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__count_vm_events",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad_report",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad",
+    "callees": ["__builtin_expect", "free_page_is_bad_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad_report",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad",
+    "callees": ["__builtin_expect", "free_page_is_bad_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_free_pages",
+    "callees": ["alloc_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_mems_allowed_retry",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_retry_cpuset",
+    "callees": ["cpuset_nodemask_valid_mems_allowed", "read_mems_allowed_retry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__count_vm_events",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__count_vm_events",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prep_new_page",
+    "callees": ["post_alloc_hook", "prep_compound_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_pages.part.0",
+    "callees": ["__free_pages"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page_bad",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page",
+    "callees": ["__builtin_expect", "check_new_page_bad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_pages",
+    "callees": ["check_new_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "per_cpu_pages_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_cpuset_fallback",
+    "callees": ["get_page_from_freelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_update",
+    "callees": ["mutex_lock", "mutex_unlock", "zone_set_pageset_high_and_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_check_pages_enabled",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_update",
+    "callees": ["mutex_lock", "mutex_unlock", "zone_set_pageset_high_and_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_buddy_page_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_node",
+    "callees": ["__alloc_pages", "warn_if_node_offline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_node",
+    "callees": ["__alloc_pages", "warn_if_node_offline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__zone_watermark_ok",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "min_free_kbytes_sysctl_handler.part.0",
+    "callees": ["setup_per_zone_wmarks"],
+    "global_reads": ["min_free_kbytes"],
+    "global_writes": ["user_min_free_kbytes"]
+  },
+  {
+    "name": "prepare_alloc_pages.part.0",
+    "callees": ["first_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__page_frag_cache_drain.part.0",
+    "callees": ["compound_order", "free_the_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_pages.part.0",
+    "callees": ["__free_pages"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page.part.0",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_zonelist_order_handler.part.0",
+    "callees": ["proc_dostring"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_managed_dma",
+    "callees": ["first_online_pgdat", "next_online_pgdat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_free_buddy_page",
+    "callees": [],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_reset",
+    "callees": ["drain_zonestat", "find_next_bit", "free_percpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_enable",
+    "callees": ["__zone_set_pageset_high_and_batch", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_disable",
+    "callees": ["__drain_all_pages", "__zone_set_pageset_high_and_batch", "mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_contig_range",
+    "callees": ["__builtin_expect", "__free_pages", "__warn_printk", "_compound_head"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "page_alloc_sysctl_init",
+    "callees": ["__register_sysctl_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "percpu_pagelist_high_fraction_sysctl_handler",
+    "callees": ["first_online_pgdat", "mutex_lock", "mutex_unlock", "next_zone", "proc_dointvec_minmax", "zone_set_pageset_high_and_batch"],
+    "global_reads": ["percpu_pagelist_high_fraction"],
+    "global_writes": ["percpu_pagelist_high_fraction"]
+  },
+  {
+    "name": "lowmem_reserve_ratio_sysctl_handler",
+    "callees": ["proc_dointvec_minmax", "setup_per_zone_lowmem_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_min_slab_ratio_sysctl_handler",
+    "callees": ["proc_dointvec_minmax", "setup_min_slab_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_min_slab_ratio",
+    "callees": ["first_online_pgdat", "next_online_pgdat", "next_zone"],
+    "global_reads": ["sysctl_min_slab_ratio"],
+    "global_writes": []
+  },
+  {
+    "name": "sysctl_min_unmapped_ratio_sysctl_handler",
+    "callees": ["proc_dointvec_minmax", "setup_min_unmapped_ratio"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_min_unmapped_ratio",
+    "callees": ["first_online_pgdat", "next_online_pgdat", "next_zone"],
+    "global_reads": ["sysctl_min_unmapped_ratio"],
+    "global_writes": []
+  },
+  {
+    "name": "watermark_scale_factor_sysctl_handler",
+    "callees": ["proc_dointvec_minmax", "setup_per_zone_wmarks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "min_free_kbytes_sysctl_handler",
+    "callees": ["min_free_kbytes_sysctl_handler.part.0", "proc_dointvec_minmax"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_min_free_kbytes",
+    "callees": ["_printk", "int_sqrt", "nr_free_zone_pages"],
+    "global_reads": ["user_min_free_kbytes"],
+    "global_writes": ["min_free_kbytes"]
+  },
+  {
+    "name": "setup_per_zone_wmarks",
+    "callees": ["__setup_per_zone_wmarks", "_raw_spin_lock", "_raw_spin_unlock", "first_online_pgdat", "next_zone", "zone_pcp_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__setup_per_zone_wmarks",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "calculate_totalreserve_pages", "first_online_pgdat", "next_zone"],
+    "global_reads": ["min_free_kbytes", "watermark_scale_factor"],
+    "global_writes": []
+  },
+  {
+    "name": "setup_per_zone_lowmem_reserve",
+    "callees": ["calculate_totalreserve_pages", "first_online_pgdat", "next_online_pgdat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_totalreserve_pages",
+    "callees": ["first_online_pgdat", "next_online_pgdat"],
+    "global_reads": [],
+    "global_writes": ["totalreserve_pages"]
+  },
+  {
+    "name": "page_alloc_init_cpuhp",
+    "callees": ["__builtin_expect", "__cpuhp_setup_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_alloc_cpu_online",
+    "callees": ["first_online_pgdat", "next_zone", "zone_pcp_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_alloc_cpu_dead",
+    "callees": ["cpu_vm_stats_fold", "drain_pages", "first_online_pgdat", "lru_add_drain_cpu", "mlock_drain_remote", "next_zone", "vm_events_fold_cpu", "zone_pcp_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_reserved_area",
+    "callees": ["_printk", "free_reserved_page", "memset"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "adjust_managed_page_count",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_init",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_per_cpu_pageset",
+    "callees": ["__alloc_percpu", "find_next_bit", "first_online_pgdat", "memset", "next_online_pgdat", "next_zone", "setup_zone_pageset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_pcp_update",
+    "callees": ["mutex_lock", "mutex_unlock", "zone_set_pageset_high_and_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_zone_pageset",
+    "callees": ["__alloc_percpu", "find_next_bit", "per_cpu_pages_init", "zone_set_pageset_high_and_batch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_set_pageset_high_and_batch",
+    "callees": ["__zone_set_pageset_high_and_batch", "zone_batchsize", "zone_highsize"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__zone_set_pageset_high_and_batch",
+    "callees": ["find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "per_cpu_pages_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_highsize",
+    "callees": ["cpumask_weight"],
+    "global_reads": ["percpu_pagelist_high_fraction"],
+    "global_writes": []
+  },
+  {
+    "name": "zone_batchsize",
+    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_all_zonelists",
+    "callees": ["__build_all_zonelists", "_printk", "build_all_zonelists_init", "nr_free_zone_pages"],
+    "global_reads": ["nr_online_nodes", "page_group_by_mobility_disabled", "policy_zone", "system_state"],
+    "global_writes": ["page_group_by_mobility_disabled"]
+  },
+  {
+    "name": "build_all_zonelists_init",
+    "callees": ["__build_all_zonelists", "cpuset_init_current_mems_allowed", "find_next_bit", "mminit_verify_zonelist", "per_cpu_pages_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__build_all_zonelists",
+    "callees": ["__printk_safe_enter", "__printk_safe_exit", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "build_zonelists", "find_first_bit", "find_next_bit", "memset", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_zonelists",
+    "callees": ["__node_distance", "_printk", "build_thisnode_zonelists", "build_zonelists_in_node_order", "find_next_best_node", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_thisnode_zonelists",
+    "callees": ["build_zonerefs_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_best_node",
+    "callees": ["__builtin_constant_p", "__node_distance", "find_first_bit", "find_next_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_zonelist_order_handler",
+    "callees": ["__parse_numa_zonelist_order", "numa_zonelist_order_handler.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__parse_numa_zonelist_order",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "build_zonerefs_node",
+    "callees": [],
+    "global_reads": ["policy_zone"],
+    "global_writes": ["policy_zone"]
+  },
+  {
+    "name": "nr_free_buffer_pages",
+    "callees": ["nr_free_zone_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nr_free_zone_pages",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_pages_exact",
+    "callees": ["free_pages.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pages_exact",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "__get_free_pages", "make_alloc_exact"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "make_alloc_exact",
+    "callees": ["__free_pages_ok"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "page_frag_free",
+    "callees": ["__builtin_expect", "compound_order", "free_the_page", "virt_to_head_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_frag_alloc_align",
+    "callees": ["__builtin_expect", "__page_frag_cache_refill", "compound_order", "free_the_page"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__page_frag_cache_drain",
+    "callees": ["__page_frag_cache_drain.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__page_frag_cache_refill",
+    "callees": ["__alloc_pages_node", "__builtin_expect"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pages",
+    "callees": ["free_pages.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_pages",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "free_the_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_zeroed_page",
+    "callees": ["__get_free_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_free_pages",
+    "callees": ["alloc_pages"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__folio_alloc",
+    "callees": ["__alloc_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages",
+    "callees": ["__alloc_pages_slowpath", "__builtin_expect", "alloc_flags_nofragment", "current_gfp_context", "get_page_from_freelist", "prepare_alloc_pages", "trace_mm_page_alloc"],
+    "global_reads": ["__warned", "gfp_allowed_mask"],
+    "global_writes": ["__warned"]
+  },
+  {
+    "name": "__alloc_pages_bulk",
+    "callees": ["__alloc_pages", "__builtin_expect", "__count_vm_events", "__next_zones_zonelist", "__rmqueue_pcplist", "_raw_spin_trylock", "_raw_spin_unlock", "cpuset_node_allowed", "first_zones_zonelist", "post_alloc_hook", "prepare_alloc_pages", "zone_statistics", "zone_watermark_fast"],
+    "global_reads": ["gfp_allowed_mask", "nr_online_nodes"],
+    "global_writes": []
+  },
+  {
+    "name": "check_retry_cpuset",
+    "callees": ["cpuset_nodemask_valid_mems_allowed", "read_mems_allowed_retry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gfp_pfmemalloc_allowed",
+    "callees": ["__gfp_pfmemalloc_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__gfp_pfmemalloc_flags",
+    "callees": ["__builtin_expect", "__gfp_pfmemalloc_flags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gfp_to_alloc_flags",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wake_all_kswapds",
+    "callees": ["__builtin_expect", "__next_zones_zonelist", "first_zones_zonelist", "wakeup_kswapd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_direct_reclaim",
+    "callees": ["__builtin_expect", "__drain_all_pages", "__perform_reclaim", "get_page_from_freelist", "unreserve_highatomic_pageblock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__perform_reclaim",
+    "callees": ["__SCT__cond_resched", "__cpuset_memory_pressure_bump", "try_to_free_pages"],
+    "global_reads": ["cpuset_memory_pressure_enabled"],
+    "global_writes": []
+  },
+  {
+    "name": "should_compact_retry",
+    "callees": ["compaction_zonelist_suitable", "fatal_signal_pending", "trace_compact_retry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_direct_compact",
+    "callees": ["__SCT__cond_resched", "compaction_defer_reset", "delayacct_compact_end", "delayacct_compact_start", "get_page_from_freelist", "prep_new_page", "try_to_compact_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_may_oom",
+    "callees": ["__alloc_pages_cpuset_fallback", "__builtin_expect", "get_page_from_freelist", "mutex_trylock", "mutex_unlock", "out_of_memory", "schedule_timeout_uninterruptible"],
+    "global_reads": ["__warned", "gfp_allowed_mask"],
+    "global_writes": ["__warned"]
+  },
+  {
+    "name": "__alloc_pages_cpuset_fallback",
+    "callees": ["get_page_from_freelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_alloc",
+    "callees": ["___ratelimit", "__builtin_va_end", "__builtin_va_start", "_printk", "cpuset_print_current_mems_allowed", "dump_stack", "has_managed_dma", "warn_alloc_show_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_alloc_show_mem",
+    "callees": ["__show_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_page_from_freelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist", "__node_distance", "__zone_watermark_ok", "cpuset_node_allowed", "node_dirty_ok", "node_reclaim", "prep_new_page", "reserve_highatomic_pageblock", "rmqueue", "zone_watermark_fast"],
+    "global_reads": ["node_reclaim_distance", "node_reclaim_mode", "nr_online_nodes"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_flags_nofragment",
+    "callees": [],
+    "global_reads": ["nr_online_nodes"],
+    "global_writes": []
+  },
+  {
+    "name": "zone_watermark_ok_safe",
+    "callees": ["__zone_watermark_ok", "zone_page_state_snapshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_watermark_ok",
+    "callees": ["__zone_watermark_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__zone_watermark_ok",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "should_fail_alloc_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rmqueue",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__count_vm_events", "__mod_zone_page_state", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "check_new_pages", "del_page_from_free_list", "expand", "find_suitable_fallback", "rmqueue_pcplist", "steal_suitable_fallback", "trace_mm_page_alloc_extfrag", "trace_mm_page_alloc_zone_locked", "wakeup_kswapd", "zone_statistics"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rmqueue_pcplist",
+    "callees": ["__builtin_expect", "__count_vm_events", "__rmqueue_pcplist", "_raw_spin_trylock", "_raw_spin_unlock", "zone_statistics"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__rmqueue_pcplist",
+    "callees": ["__builtin_expect", "check_new_pages", "rmqueue_bulk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "zone_statistics",
+    "callees": ["__builtin_expect", "__count_numa_events"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__putback_isolated_page",
+    "callees": ["__free_one_page"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__isolate_free_page",
+    "callees": ["__mod_zone_page_state", "__zone_watermark_ok", "del_page_from_free_list", "get_pfnblock_flags_mask", "set_pageblock_migratetype"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "split_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_unref_page_list",
+    "callees": ["__builtin_expect", "_raw_spin_trylock", "_raw_spin_unlock", "free_one_page", "free_unref_page_commit", "free_unref_page_prepare", "trace_mm_page_free_batched"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_unref_page",
+    "callees": ["__builtin_expect", "_raw_spin_trylock", "_raw_spin_unlock", "free_one_page", "free_unref_page_commit", "free_unref_page_prepare"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_unref_page_commit",
+    "callees": ["__count_vm_events", "free_pcppages_bulk", "nr_pcp_free", "nr_pcp_high"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nr_pcp_high",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nr_pcp_free",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_unref_page_prepare",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "free_page_is_bad", "free_tail_page_prepare", "get_pfnblock_flags_mask", "is_check_pages_enabled", "kernel_init_pages", "trace_mm_page_free", "want_init_on_free"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_all_pages",
+    "callees": ["__drain_all_pages"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__drain_all_pages",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "drain_pages", "drain_pages_zone", "find_next_bit", "first_online_pgdat", "mutex_lock", "mutex_trylock", "mutex_unlock", "next_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_local_pages",
+    "callees": ["drain_pages", "drain_pages_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_pages",
+    "callees": ["drain_pages_zone", "first_online_pgdat", "next_zone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_pages_zone",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_pcppages_bulk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drain_zone_pages",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "free_pcppages_bulk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rmqueue_bulk",
+    "callees": ["__builtin_expect", "__mod_zone_page_state", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "del_page_from_free_list", "expand", "find_suitable_fallback", "steal_suitable_fallback", "trace_mm_page_alloc_extfrag", "trace_mm_page_alloc_zone_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unreserve_highatomic_pageblock",
+    "callees": ["__builtin_expect", "__next_zones_zonelist", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "first_zones_zonelist", "is_migrate_highatomic_page", "move_freepages_block", "set_pageblock_migratetype"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reserve_highatomic_pageblock",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "get_pfnblock_flags_mask", "move_freepages_block", "set_pageblock_migratetype"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "find_suitable_fallback",
+    "callees": ["can_steal_fallback"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "steal_suitable_fallback",
+    "callees": ["boost_watermark", "change_pageblock_range", "get_pfnblock_flags_mask", "move_freepages_block", "set_pageblock_migratetype"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "boost_watermark",
+    "callees": [],
+    "global_reads": ["watermark_boost_factor"],
+    "global_writes": []
+  },
+  {
+    "name": "can_steal_fallback",
+    "callees": [],
+    "global_reads": ["page_group_by_mobility_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "change_pageblock_range",
+    "callees": ["set_pageblock_migratetype"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "move_freepages_block",
+    "callees": ["move_freepages"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "move_freepages",
+    "callees": ["_compound_head"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "prep_new_page",
+    "callees": ["post_alloc_hook", "prep_compound_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "post_alloc_hook",
+    "callees": ["__builtin_expect", "kernel_init_pages", "want_init_on_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_pages",
+    "callees": ["check_new_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page",
+    "callees": ["__builtin_expect", "check_new_page_bad"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_new_page_bad",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__pageblock_pfn_to_page",
+    "callees": ["pfn_valid"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__free_pages_core",
+    "callees": ["__free_pages_ok"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_pages_ok",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__count_vm_events", "__free_one_page", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "free_page_is_bad", "free_tail_page_prepare", "get_pfnblock_flags_mask", "kernel_init_pages", "trace_mm_page_free"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_pcppages_bulk",
+    "callees": ["__free_one_page", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "trace_mm_page_pcpu_drain"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "kernel_init_pages",
+    "callees": [],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "free_tail_page_prepare",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_compound_head", "bad_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_check_pages_enabled",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad",
+    "callees": ["__builtin_expect", "free_page_is_bad_report"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_page_is_bad_report",
+    "callees": ["bad_page", "page_bad_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_bad_reason",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "split_free_page",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__free_one_page", "__mod_zone_page_state", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "del_page_from_free_list", "get_pfnblock_flags_mask"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__free_one_page",
+    "callees": ["__builtin_expect", "__mod_zone_page_state", "buddy_merge_likely", "del_page_from_free_list", "find_buddy_page_pfn", "get_pfnblock_flags_mask", "task_capc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "buddy_merge_likely",
+    "callees": ["find_buddy_page_pfn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "del_page_from_free_list",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_capc",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "destroy_large_folio",
+    "callees": ["free_huge_folio", "free_the_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "prep_compound_page",
+    "callees": ["folio_set_order"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_the_page",
+    "callees": ["free_the_page.part.0", "free_unref_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_page",
+    "callees": ["_printk", "add_taint", "dump_page", "dump_stack", "print_modules"],
+    "global_reads": ["jiffies", "nr_shown", "nr_unshown", "resume", "vmemmap_base"],
+    "global_writes": ["nr_shown", "nr_unshown", "resume"]
+  },
+  {
+    "name": "set_pageblock_migratetype",
+    "callees": ["__builtin_expect", "set_pfnblock_flags_mask"],
+    "global_reads": ["page_group_by_mobility_disabled", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "set_pfnblock_flags_mask",
+    "callees": ["__builtin_expect", "__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_pfnblock_flags_mask",
+    "callees": ["__nr_to_section"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_migrate_highatomic_page",
+    "callees": ["get_pfnblock_flags_mask"],
+    "global_reads": ["vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "folio_set_order",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_buddy_page_pfn",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_per_zone_wmark_min",
+    "callees": ["calculate_min_free_kbytes", "refresh_zone_stat_thresholds", "setup_min_slab_ratio", "setup_min_unmapped_ratio", "setup_per_zone_lowmem_reserve", "setup_per_zone_wmarks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayacct_compact_end",
+    "callees": ["__delayacct_compact_end"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delayacct_compact_start",
+    "callees": ["__delayacct_compact_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_compact_retry",
+    "callees": ["__SCT__tp_func_compact_retry", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_reclaim_retry_zone",
+    "callees": ["__SCT__tp_func_reclaim_retry_zone", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_extfrag",
+    "callees": ["__SCT__tp_func_mm_page_alloc_extfrag", "cpu_online", "trace_mm_page_alloc_extfrag.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_pcpu_drain",
+    "callees": ["__SCT__tp_func_mm_page_pcpu_drain", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc_zone_locked",
+    "callees": ["__SCT__tp_func_mm_page_alloc_zone_locked", "cpu_online", "trace_mm_page_alloc_zone_locked.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_alloc",
+    "callees": ["__SCT__tp_func_mm_page_alloc", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free_batched",
+    "callees": ["__SCT__tp_func_mm_page_free_batched", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_mm_page_free",
+    "callees": ["__SCT__tp_func_mm_page_free", "cpu_online", "trace_mm_page_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_mems_allowed_retry",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "read_mems_allowed_begin",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "want_init_on_free",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "want_init_on_alloc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_reserved_page",
+    "callees": ["__free_pages", "adjust_managed_page_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__count_vm_events",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "fatal_signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_gfp_context",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "compound_order",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pages_exact_nid",
+    "callees": ["__alloc_pages_node", "__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "make_alloc_exact"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "__alloc_pages_node",
+    "callees": ["__alloc_pages", "warn_if_node_offline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "warn_if_node_offline",
+    "callees": ["_printk", "dump_stack", "node_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pfn_valid",
+    "callees": ["__nr_to_section", "pfn_section_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nr_to_section",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["mem_section"],
+    "global_writes": []
+  },
+  {
+    "name": "first_zones_zonelist",
+    "callees": ["__builtin_expect", "__next_zones_zonelist"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_weight",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

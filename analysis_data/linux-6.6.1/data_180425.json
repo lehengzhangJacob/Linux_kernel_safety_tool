@@ -1,0 +1,632 @@
+[
+  {
+    "name": "__free_fdtable",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_fdtable",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "close_fd",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "filp_close", "pick_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_close_on_exec",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_close_on_exec",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_fdtable",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_fdtable",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__receive_fd.part.0",
+    "callees": ["__builtin_expect", "__receive_sock", "fd_install", "get_unused_fd_flags", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__receive_fd",
+    "callees": ["__receive_fd.part.0", "security_file_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "count_open_files",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_zero_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_zero_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_dup2",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "files_lookup_fd_raw", "ksys_dup3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_dup",
+    "callees": ["fd_install", "fget_raw", "fput", "get_unused_fd_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files_rcu",
+    "callees": ["__builtin_expect", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_unused_fd",
+    "callees": ["__clear_open_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files_rcu",
+    "callees": ["__builtin_expect", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files_rcu",
+    "callees": ["__builtin_expect", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_unused_fd",
+    "callees": ["__clear_open_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files",
+    "callees": ["__fget_files_rcu", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files",
+    "callees": ["__fget_files_rcu", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files",
+    "callees": ["__fget_files_rcu", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__receive_fd.part.0",
+    "callees": ["__builtin_expect", "__receive_sock", "fd_install", "get_unused_fd_flags", "put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_files_struct.part.0",
+    "callees": ["__free_fdtable", "close_files", "kmem_cache_free"],
+    "global_reads": ["files_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "iterate_fd.part.0",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "iterate_fd",
+    "callees": ["iterate_fd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "f_dupfd",
+    "callees": ["alloc_fd", "fd_install"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_dup",
+    "callees": ["fd_install", "fget_raw", "fput", "get_unused_fd_flags"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_dup",
+    "callees": ["__do_sys_dup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_dup",
+    "callees": ["__do_sys_dup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__do_sys_dup2",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "files_lookup_fd_raw", "ksys_dup3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_dup2",
+    "callees": ["__do_sys_dup2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_dup2",
+    "callees": ["__do_sys_dup2"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ia32_sys_dup3",
+    "callees": ["ksys_dup3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__x64_sys_dup3",
+    "callees": ["ksys_dup3"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ksys_dup3",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "do_dup2", "expand_files", "files_lookup_fd_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "receive_fd",
+    "callees": ["__receive_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "receive_fd_replace",
+    "callees": ["__receive_sock", "replace_fd", "security_file_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__receive_fd",
+    "callees": ["__receive_fd.part.0", "security_file_receive"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "replace_fd",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "close_fd", "do_dup2", "expand_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_dup2",
+    "callees": ["__clear_close_on_exec", "__set_close_on_exec", "__set_open_fd", "_raw_spin_unlock", "fd_is_open", "filp_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_close_on_exec",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "close_on_exec"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_close_on_exec",
+    "callees": ["__clear_close_on_exec", "__set_close_on_exec", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__f_unlock_pos",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fdget_pos",
+    "callees": ["__fget_light", "file_needs_f_pos_lock", "mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "file_needs_f_pos_lock",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fdget_raw",
+    "callees": ["__fget_light"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fdget",
+    "callees": ["__fget_light"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_light",
+    "callees": ["__builtin_expect", "__fget_files", "files_lookup_fd_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_lookup_next_fd_rcu",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "files_lookup_fd_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "task_lookup_fd_rcu",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "files_lookup_fd_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fget_task",
+    "callees": ["__fget_files", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fget_raw",
+    "callees": ["__fget_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fget",
+    "callees": ["__fget_files"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files",
+    "callees": ["__fget_files_rcu", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__fget_files_rcu",
+    "callees": ["__builtin_expect", "fput"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_close_on_exec",
+    "callees": ["__SCT__cond_resched", "__put_unused_fd", "_raw_spin_lock", "_raw_spin_unlock", "filp_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "close_fd_get_file",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "pick_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__close_fd_get_file",
+    "callees": ["pick_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__close_range",
+    "callees": ["__range_cloexec", "__range_close", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "put_files_struct", "unshare_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__range_close",
+    "callees": ["__SCT__cond_resched", "__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "filp_close", "pick_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__range_cloexec",
+    "callees": ["__bitmap_set", "__builtin_constant_p", "_raw_spin_lock", "_raw_spin_unlock", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "close_fd",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "filp_close", "pick_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pick_file",
+    "callees": ["__put_unused_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fd_install",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_unused_fd",
+    "callees": ["__put_unused_fd", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__put_unused_fd",
+    "callees": ["__clear_open_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__get_unused_fd_flags",
+    "callees": ["alloc_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_fd",
+    "callees": ["__clear_close_on_exec", "__set_close_on_exec", "__set_open_fd", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "expand_files", "find_next_fd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_fd",
+    "callees": ["find_next_zero_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "exit_files",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "put_files_struct"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_files_struct",
+    "callees": ["put_files_struct.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "close_files",
+    "callees": ["__SCT__cond_resched", "filp_close"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dup_fd",
+    "callees": ["__builtin_expect", "__clear_open_fd", "__free_fdtable", "__init_waitqueue_head", "_raw_spin_lock", "_raw_spin_unlock", "alloc_fdtable", "copy_fd_bitmaps", "count_open_files", "kmem_cache_alloc", "kmem_cache_free", "memset"],
+    "global_reads": ["files_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "count_open_files",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__set_open_fd",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clear_close_on_exec",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "expand_files",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__wake_up", "_raw_spin_lock", "_raw_spin_unlock", "expand_fdtable", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": ["sysctl_nr_open"],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_fdtable",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "kvfree", "kvmalloc_node"],
+    "global_reads": ["sysctl_nr_open"],
+    "global_writes": []
+  },
+  {
+    "name": "copy_fdtable",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "copy_fd_bitmaps", "memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_fd_bitmaps",
+    "callees": ["memcpy", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "free_fdtable_rcu",
+    "callees": ["__free_fdtable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__free_fdtable",
+    "callees": ["kfree", "kvfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "files_lookup_fd_raw",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_next_zero_bit",
+    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_zero_bit"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

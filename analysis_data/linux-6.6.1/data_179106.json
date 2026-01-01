@@ -1,0 +1,560 @@
+[
+  {
+    "name": "platform_device_del",
+    "callees": ["__builtin_expect", "platform_device_del.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_put",
+    "callees": ["__builtin_expect", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource_byname",
+    "callees": ["__builtin_expect", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_put",
+    "callees": ["__builtin_expect", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_resources",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_resources",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_data",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_data",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource_byname",
+    "callees": ["__builtin_expect", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_put",
+    "callees": ["__builtin_expect", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_put",
+    "callees": ["__builtin_expect", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_del",
+    "callees": ["__builtin_expect", "platform_device_del.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_irq_count",
+    "callees": ["platform_get_irq_optional"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_del",
+    "callees": ["__builtin_expect", "platform_device_del.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_irq",
+    "callees": ["dev_err_probe", "platform_get_irq_optional"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_register",
+    "callees": ["device_initialize", "platform_device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_get_and_ioremap_resource",
+    "callees": ["devm_ioremap_resource", "platform_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "modalias_show.part.0",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_uevent.part.0",
+    "callees": ["add_uevent_var"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_del.part.0",
+    "callees": ["device_del", "ida_free", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_get_irq_byname.part.0",
+    "callees": ["__builtin_expect", "__warn_printk", "platform_get_resource_byname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_poweroff.part.0",
+    "callees": ["platform_legacy_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_freeze.part.0",
+    "callees": ["platform_legacy_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_suspend.part.0",
+    "callees": ["platform_legacy_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_bus_init",
+    "callees": ["bus_register", "device_register", "device_unregister", "early_platform_cleanup", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_platform_cleanup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_find_device_by_driver",
+    "callees": ["bus_find_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_match",
+    "callees": ["platform_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_dma_cleanup",
+    "callees": ["iommu_device_unuse_default_domain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_dma_configure",
+    "callees": ["acpi_dma_configure_id", "acpi_get_dma_attr", "iommu_device_use_default_domain", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_shutdown",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_remove",
+    "callees": ["_dev_warn", "dev_pm_domain_detach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_probe",
+    "callees": ["__builtin_expect", "_dev_warn", "dev_pm_domain_attach", "dev_pm_domain_detach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_uevent",
+    "callees": ["acpi_device_uevent_modalias", "platform_uevent.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_match",
+    "callees": ["acpi_driver_match_device", "platform_match_id", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_dev_attrs_visible",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_override_store",
+    "callees": ["driver_set_override"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_override_show",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "numa_node_show",
+    "callees": ["sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "modalias_show",
+    "callees": ["acpi_device_modalias", "modalias_show.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_restore",
+    "callees": ["platform_legacy_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_poweroff",
+    "callees": ["platform_pm_poweroff.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_thaw",
+    "callees": ["platform_legacy_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_freeze",
+    "callees": ["platform_pm_freeze.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_resume",
+    "callees": ["platform_legacy_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_pm_suspend",
+    "callees": ["platform_pm_suspend.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_legacy_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_match_id",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_unregister_drivers",
+    "callees": ["driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_register_drivers",
+    "callees": ["_printk", "driver_register", "driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_create_bundle",
+    "callees": ["__platform_driver_probe", "platform_device_add", "platform_device_add_data", "platform_device_add_resources", "platform_device_alloc", "platform_device_del", "platform_device_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_driver_probe",
+    "callees": ["_printk", "bus_for_each_dev", "driver_register", "driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_bound_to_driver",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_probe_fail",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_driver_unregister",
+    "callees": ["driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_driver_register",
+    "callees": ["driver_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_register_full",
+    "callees": ["device_create_managed_software_node", "platform_device_add", "platform_device_add_data", "platform_device_add_resources", "platform_device_alloc", "platform_device_put", "set_primary_fwnode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_unregister",
+    "callees": ["platform_device_del", "platform_device_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_register",
+    "callees": ["device_initialize", "platform_device_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_del",
+    "callees": ["__builtin_expect", "platform_device_del.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add",
+    "callees": ["_dev_err", "dev_set_name", "device_add", "ida_alloc_range", "ida_free", "insert_resource", "release_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_data",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_add_resources",
+    "callees": ["kfree", "kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_alloc",
+    "callees": ["device_initialize", "kzalloc", "strcpy", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_release",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_device_put",
+    "callees": ["__builtin_expect", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_add_devices",
+    "callees": ["platform_device_del", "platform_device_put", "platform_device_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_irq_byname_optional",
+    "callees": ["__platform_get_irq_byname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_irq_byname",
+    "callees": ["__platform_get_irq_byname", "dev_err_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__platform_get_irq_byname",
+    "callees": ["__dev_fwnode", "__platform_get_irq_byname.part.0", "fwnode_irq_get_byname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource_byname",
+    "callees": ["__builtin_expect", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_get_irqs_affinity",
+    "callees": ["__devres_alloc_node", "_dev_err", "devres_add", "devres_free", "irq_calc_affinity_vectors", "irq_create_affinity_masks", "irq_update_affinity_desc", "kfree", "platform_get_irq", "platform_irq_count"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_get_irqs_affinity_release",
+    "callees": ["irq_dispose_mapping", "is_acpi_device_node", "platform_disable_acpi_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_disable_acpi_irq",
+    "callees": ["platform_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_irq_count",
+    "callees": ["platform_get_irq_optional"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_irq",
+    "callees": ["dev_err_probe", "platform_get_irq_optional"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_irq_optional",
+    "callees": ["__builtin_expect", "__warn_printk", "irq_get_irq_data", "irqd_set_trigger_type", "is_acpi_device_node", "platform_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_ioremap_resource_byname",
+    "callees": ["devm_ioremap_resource", "platform_get_resource_byname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_ioremap_resource",
+    "callees": ["devm_platform_get_and_ioremap_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "devm_platform_get_and_ioremap_resource",
+    "callees": ["devm_ioremap_resource", "platform_get_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_mem_or_io",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "platform_get_resource",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "irqd_set_trigger_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

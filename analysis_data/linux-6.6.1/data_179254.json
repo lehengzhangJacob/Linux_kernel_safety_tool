@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fib4_notifier_exit",
+    "callees": ["fib_notifier_ops_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib4_notifier_init",
+    "callees": ["__builtin_expect", "fib_notifier_ops_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib4_dump",
+    "callees": ["fib4_rules_dump", "fib_notify"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fib4_seq_read",
+    "callees": ["__builtin_expect", "__warn_printk", "fib4_rules_seq_read", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "call_fib4_notifiers",
+    "callees": ["__builtin_expect", "__warn_printk", "call_fib_notifiers", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "call_fib4_notifier",
+    "callees": ["call_fib_notifier"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

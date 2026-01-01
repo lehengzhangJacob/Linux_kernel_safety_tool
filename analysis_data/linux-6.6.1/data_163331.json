@@ -1,0 +1,134 @@
+[
+  {
+    "name": "x86_cpuid_vendor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_cpuid_vendor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_cpuid_vendor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mc_cpu_online",
+    "callees": ["_printk", "get_cpu_device", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "microcode_init",
+    "callees": ["__builtin_expect", "__cpuhp_setup_state", "_printk", "bus_get_dev_root", "init_amd_microcode", "init_intel_microcode", "platform_device_register_resndata", "platform_device_unregister", "put_device", "register_syscore_ops", "schedule_on_each_cpu", "sysfs_create_group"],
+    "global_reads": ["dis_ucode_ldr", "microcode_ops", "microcode_pdev"],
+    "global_writes": ["microcode_ops", "microcode_pdev"]
+  },
+  {
+    "name": "setup_online_cpu",
+    "callees": ["_printk", "mc_cpu_online", "microcode_init_cpu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mc_cpu_down_prep",
+    "callees": ["get_cpu_device", "sysfs_remove_group"],
+    "global_reads": ["microcode_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "mc_cpu_online",
+    "callees": ["_printk", "get_cpu_device", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mc_cpu_starting",
+    "callees": [],
+    "global_reads": ["microcode_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "microcode_bsp_resume",
+    "callees": ["reload_early_microcode"],
+    "global_reads": ["microcode_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "microcode_init_cpu",
+    "callees": ["memset"],
+    "global_reads": ["microcode_ops"],
+    "global_writes": []
+  },
+  {
+    "name": "processor_flags_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "version_show",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reload_early_microcode",
+    "callees": ["reload_ucode_amd", "reload_ucode_intel", "x86_cpuid_vendor", "x86_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "find_microcode_in_initrd",
+    "callees": ["find_cpio_data"],
+    "global_reads": ["initrd_gone", "initrd_start", "page_offset_base", "phys_base"],
+    "global_writes": []
+  },
+  {
+    "name": "save_microcode_in_initrd",
+    "callees": ["save_microcode_in_initrd_amd", "save_microcode_in_initrd_intel"],
+    "global_reads": [],
+    "global_writes": ["initrd_gone"]
+  },
+  {
+    "name": "load_ucode_ap",
+    "callees": ["load_ucode_amd_early", "load_ucode_intel_ap", "x86_cpuid_vendor", "x86_family"],
+    "global_reads": ["dis_ucode_ldr"],
+    "global_writes": []
+  },
+  {
+    "name": "load_ucode_bsp",
+    "callees": ["check_loader_disabled_bsp", "load_ucode_amd_early", "load_ucode_intel_bsp", "x86_cpuid_vendor", "x86_family"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "check_loader_disabled_bsp",
+    "callees": ["amd_check_current_patch_level", "cmdline_find_option_bool", "x86_cpuid_vendor"],
+    "global_reads": ["__dis_opt_str", "dis_ucode_ldr"],
+    "global_writes": ["dis_ucode_ldr"]
+  },
+  {
+    "name": "amd_check_current_patch_level",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "x86_cpuid_vendor",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

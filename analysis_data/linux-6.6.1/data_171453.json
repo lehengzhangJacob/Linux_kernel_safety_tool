@@ -1,0 +1,32 @@
+[
+  {
+    "name": "acpi_ex_store_direct_to_node",
+    "callees": ["acpi_ns_attach_object", "acpi_ut_copy_iobject_to_iobject", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_store_direct_to_node",
+    "callees": ["acpi_ns_attach_object", "acpi_ut_copy_iobject_to_iobject", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_store_object_to_node",
+    "callees": ["acpi_error", "acpi_ex_resolve_object", "acpi_ex_store_direct_to_node", "acpi_ex_store_object_to_object", "acpi_ex_write_data_to_field", "acpi_ns_attach_object", "acpi_ns_get_attached_object", "acpi_ns_get_type", "acpi_ut_get_object_type_name", "acpi_ut_get_type_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_store_object_to_index",
+    "callees": ["acpi_error", "acpi_ut_add_reference", "acpi_ut_copy_iobject_to_iobject", "acpi_ut_get_object_type_name", "acpi_ut_remove_reference"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_ex_store",
+    "callees": ["acpi_ds_store_object_to_local", "acpi_error", "acpi_ex_do_debug_object", "acpi_ex_store_object_to_index", "acpi_ex_store_object_to_node", "acpi_ut_get_object_type_name"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]

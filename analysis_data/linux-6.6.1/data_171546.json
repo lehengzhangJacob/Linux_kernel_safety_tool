@@ -1,0 +1,116 @@
+[
+  {
+    "name": "__on_sig_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__on_sig_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_sig_stack",
+    "callees": ["__on_sig_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sigaltstack_size_valid",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["fpu_default_state_size", "max_frame_size", "strict_sigaltstack_size"],
+    "global_writes": []
+  },
+  {
+    "name": "strict_sas_size",
+    "callees": ["kstrtobool"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_fault",
+    "callees": ["__printk_ratelimit", "_printk", "force_sig", "print_vma_addr"],
+    "global_reads": ["show_unhandled_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "arch_do_signal_or_restart",
+    "callees": ["__builtin_expect", "get_signal", "handle_signal", "restore_saved_sigmask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_signal",
+    "callees": ["__builtin_expect", "fpu__clear_user_states", "setup_rt_frame", "signal_setup_done", "test_ti_thread_flag", "user_disable_single_step"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_rt_frame",
+    "callees": ["ia32_setup_frame", "ia32_setup_rt_frame", "rseq_signal_deliver", "x64_setup_rt_frame"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_sigframe_size",
+    "callees": [],
+    "global_reads": ["max_frame_size"],
+    "global_writes": []
+  },
+  {
+    "name": "init_sigframe_size",
+    "callees": ["_printk", "fpu__get_fpstate_size"],
+    "global_reads": [],
+    "global_writes": ["fpu_default_state_size", "max_frame_size"]
+  },
+  {
+    "name": "get_sigframe",
+    "callees": ["__builtin_expect", "__on_sig_stack", "__printk_ratelimit", "_printk", "copy_fpstate_to_sigframe", "fpu__alloc_mathframe", "on_sig_stack", "sas_ss_flags"],
+    "global_reads": ["show_unhandled_signals"],
+    "global_writes": []
+  },
+  {
+    "name": "sas_ss_flags",
+    "callees": ["on_sig_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "on_sig_stack",
+    "callees": ["__on_sig_stack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__on_sig_stack",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "restore_saved_sigmask",
+    "callees": ["__set_current_blocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_signal_deliver",
+    "callees": ["__builtin_expect", "rseq_handle_notify_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rseq_handle_notify_resume",
+    "callees": ["__rseq_handle_notify_resume"],
+    "global_reads": [],
+    "global_writes": []
+  }
+]
