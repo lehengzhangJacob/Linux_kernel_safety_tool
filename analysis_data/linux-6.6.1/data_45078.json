@@ -18,61 +18,271 @@
     "global_writes": []
   },
   {
-    "name": "perf_trace_prq_report",
-    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit", "strcpy", "trace_event_get_offsets_prq_report"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "perf_trace_qi_submit",
-    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit", "strcpy", "strlen"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_event_raw_event_prq_report",
-    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "strcpy", "trace_event_buffer_commit", "trace_event_buffer_reserve", "trace_event_get_offsets_prq_report"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_event_raw_event_qi_submit",
-    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "strcpy", "strlen", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_raw_output_prq_report",
-    "callees": ["decode_prq_descriptor", "trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_raw_output_qi_submit",
-    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_symbols_seq", "trace_raw_output_prep"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__probestub_prq_report",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__traceiter_prq_report",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__probestub_qi_submit",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__traceiter_qi_submit",
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_gray8_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_build_fourcc_list",
+    "callees": ["__drm_dev_dbg", "_dev_warn", "drm_fb_nonalpha_fourcc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_nonalpha_fourcc",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_mono",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__warn_printk", "dev_driver_string", "drm_fb_gray8_to_mono_line", "drm_fb_xrgb8888_to_gray8_line", "kfree", "kmalloc_large", "kmalloc_trace", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_gray8_to_mono_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_blit",
+    "callees": ["_dev_warn", "drm_fb_memcpy", "drm_fb_swab", "drm_fb_xfrm"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_gray8",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_gray8_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb2101010",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb2101010_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_xrgb2101010",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_xrgb2101010_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_xbgr8888_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_abgr8888_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb8888",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb8888_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb888",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb888_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgba5551",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgba5551_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb1555",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_argb1555_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_xrgb1555",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_xrgb1555_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb565",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb565_swab_line",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb565_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb332",
+    "callees": ["drm_fb_xfrm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_xrgb8888_to_rgb332_line",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_swab",
+    "callees": ["_dev_warn", "drm_fb_xfrm", "drm_format_info_bpp"],
+    "global_reads": ["__print_once"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "drm_fb_swab32_line",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_swab16_line",
+    "callees": ["__builtin_bswap16"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_memcpy",
+    "callees": ["drm_format_info_bpp", "iosys_map_memcpy_to"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_fb_clip_offset",
     "callees": [],
     "global_reads": [],
     "global_writes": []

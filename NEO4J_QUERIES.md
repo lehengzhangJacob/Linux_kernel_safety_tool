@@ -18,7 +18,6 @@ MATCH (n) RETURN count(n) as Nodes, count((n)-[]->()) as Relationships
 
 随机展示 50 条函数调用路径，用于检查数据是否导入成功。
 
-
 ```cypher
 MATCH path = (f1:Function)-[:CALLS]->(f2:Function)
 RETURN path
@@ -94,8 +93,6 @@ RETURN path
 ### 查找可能存在竞态的变量（简单启发式）
 
 查找同时被多个不同函数写入的全局变量。
-
-
 
 ```cypher
 MATCH (f:Function)-[:WRITES]->(g:GlobalVariable)

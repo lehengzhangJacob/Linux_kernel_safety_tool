@@ -1,7 +1,37 @@
 [
   {
-    "name": "zlib_inflate_blob",
-    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "kfree", "kmalloc_large", "kmalloc_trace", "zlib_inflate", "zlib_inflateEnd", "zlib_inflateInit2", "zlib_inflate_workspacesize"],
+    "name": "sg_free_table_chained",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_pool_init",
+    "callees": ["_printk", "kmem_cache_create", "kmem_cache_destroy", "mempool_create", "mempool_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_alloc_table_chained",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__sg_alloc_table", "sg_free_table_chained", "sg_init_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_free_table_chained",
+    "callees": ["__sg_free_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_pool_alloc",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mempool_alloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sg_pool_free",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "mempool_free"],
     "global_reads": [],
     "global_writes": []
   }

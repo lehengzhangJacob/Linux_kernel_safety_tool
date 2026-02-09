@@ -1,14 +1,44 @@
 [
   {
-    "name": "mpi_mulm",
-    "callees": ["mpi_mul", "mpi_tdiv_r"],
+    "name": "cancel_timer.part.0",
+    "callees": ["timer_delete"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "mpi_mul",
-    "callees": ["mpi_alloc_limb_space", "mpi_assign_limb_space", "mpi_free_limb_space", "mpi_resize", "mpihelp_mul"],
+    "name": "cancel_timer.part.0",
+    "callees": ["timer_delete"],
     "global_reads": [],
     "global_writes": []
+  },
+  {
+    "name": "i915_vtd_active",
+    "callees": [],
+    "global_reads": ["x86_hyper_type"],
+    "global_writes": []
+  },
+  {
+    "name": "set_timer_ms",
+    "callees": ["__builtin_constant_p", "__msecs_to_jiffies", "cancel_timer.part.0", "mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "cancel_timer",
+    "callees": ["cancel_timer.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "add_taint_for_CI",
+    "callees": ["__builtin_return_address", "__i915_printk", "add_taint"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_printk",
+    "callees": ["__builtin_expect", "__builtin_return_address", "__builtin_va_end", "__builtin_va_start", "_dev_notice", "_dev_printk", "test_taint"],
+    "global_reads": ["__drm_debug", "shown_bug_once"],
+    "global_writes": ["shown_bug_once"]
   }
 ]

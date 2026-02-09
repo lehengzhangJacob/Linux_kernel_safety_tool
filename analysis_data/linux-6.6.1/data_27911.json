@@ -1,37 +1,7 @@
 [
   {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "scatterwalk_pagedone.part.0",
-    "callees": ["sg_next"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "scatterwalk_ffwd",
-    "callees": ["scatterwalk_crypto_chain", "sg_init_table", "sg_next"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "scatterwalk_map_and_copy",
-    "callees": ["scatterwalk_copychunks", "scatterwalk_ffwd"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "scatterwalk_copychunks",
-    "callees": ["memcpy", "scatterwalk_map", "scatterwalk_pagedone.part.0"],
+    "name": "pci_mmap_resource_range",
+    "callees": ["cachemode2protval", "pgprot_writecombine", "remap_pfn_range"],
     "global_reads": [],
     "global_writes": []
   }

@@ -1,18 +1,54 @@
 [
   {
-    "name": "compound_order",
-    "callees": ["__builtin_constant_p"],
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "compound_order",
-    "callees": ["__builtin_constant_p"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "compound_nr",
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_bit_unlock",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
@@ -24,25 +60,13 @@
     "global_writes": []
   },
   {
-    "name": "_compound_head",
-    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bio_first_folio",
-    "callees": ["__builtin_expect", "_compound_head"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "bio_post_read_processing",
-    "callees": ["__read_end_io"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "compound_order",
+    "name": "clear_bit_unlock",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
@@ -54,98 +78,968 @@
     "global_writes": []
   },
   {
-    "name": "ext4_exit_post_read_processing",
-    "callees": ["kmem_cache_destroy", "mempool_destroy"],
-    "global_reads": ["bio_post_read_ctx_cache", "bio_post_read_ctx_pool"],
-    "global_writes": []
-  },
-  {
-    "name": "ext4_mpage_readpages",
-    "callees": ["bio_add_folio", "bio_alloc_bioset", "block_read_full_folio", "ext4_map_blocks", "folio_unlock", "readahead_folio", "submit_bio", "zero_user_segments"],
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "mpage_end_io",
-    "callees": ["__read_end_io", "bio_post_read_processing"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "bio_post_read_processing",
-    "callees": ["__read_end_io"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "verity_work",
-    "callees": ["__read_end_io", "mempool_free"],
-    "global_reads": ["bio_post_read_ctx_pool"],
-    "global_writes": []
-  },
-  {
-    "name": "decrypt_work",
-    "callees": ["bio_post_read_processing"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__read_end_io",
-    "callees": ["bio_first_folio", "bio_next_folio", "bio_put", "folio_unlock", "mempool_free"],
-    "global_reads": ["bio_post_read_ctx_pool"],
-    "global_writes": []
-  },
-  {
-    "name": "ext4_init_post_read_processing",
-    "callees": ["kmem_cache_create", "kmem_cache_destroy", "mempool_create"],
-    "global_reads": ["bio_post_read_ctx_cache"],
-    "global_writes": ["bio_post_read_ctx_cache", "bio_post_read_ctx_pool"]
-  },
-  {
-    "name": "readahead_folio",
-    "callees": ["__readahead_folio", "folio_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__readahead_folio",
-    "callees": ["__builtin_expect", "__builtin_unreachable", "xa_load"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "bio_next_folio",
-    "callees": ["bio_first_folio"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "bio_first_folio",
-    "callees": ["__builtin_expect", "_compound_head"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "compound_nr",
+    "name": "clear_bit_unlock",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "folio_put",
-    "callees": ["__folio_put"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "compound_order",
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_bit_unlock",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "_compound_head",
-    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jhash2",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_output",
+    "callees": ["__builtin_expect", "ip6_output", "ip_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_forward_finish",
+    "callees": ["__builtin_expect", "dst_output", "ip_forward_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_hash_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_put",
+    "callees": ["__refcount_sub_and_test", "nf_conntrack_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_find_any",
+    "callees": ["mr_mfc_find_any", "mr_mfc_find_any_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mr_cache_put.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mr_cache_put",
+    "callees": ["__refcount_sub_and_test", "mr_cache_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_new",
+    "callees": ["__alloc_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_new",
+    "callees": ["__alloc_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_put",
+    "callees": ["__builtin_expect", "__nlmsg_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_put",
+    "callees": ["__builtin_expect", "__nlmsg_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_net_init.part.0",
+    "callees": ["fib_notifier_ops_unregister", "ipmr_rules_exit", "ipmr_rules_init", "proc_create_net_data", "remove_proc_entry", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nlmsg_parse.part.0",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mr_cache_put.part.0",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_mr_init",
+    "callees": ["_printk", "inet_add_protocol", "kmem_cache_create", "kmem_cache_destroy", "register_netdevice_notifier", "register_pernet_subsys", "rtnl_register", "unregister_netdevice_notifier", "unregister_pernet_subsys"],
+    "global_reads": ["mrt_cachep"],
+    "global_writes": ["mrt_cachep"]
+  },
+  {
+    "name": "ipmr_net_exit_batch",
+    "callees": ["ipmr_rules_exit", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_net_exit",
+    "callees": ["fib_notifier_ops_unregister", "remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_net_init",
+    "callees": ["ipmr_net_init.part.0", "ipmr_notifier_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_notifier_init",
+    "callees": ["__builtin_expect", "fib_notifier_ops_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_dump",
+    "callees": ["mr_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_seq_read",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ipmr_mfc_seq_show",
+    "callees": ["seq_printf", "seq_putc", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_mfc_seq_start",
+    "callees": ["mr_mfc_seq_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_vif_seq_show",
+    "callees": ["seq_printf", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_vif_seq_stop",
+    "callees": ["__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_vif_seq_start",
+    "callees": ["__rcu_read_lock", "mr_vif_seq_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rtm_dumplink",
+    "callees": ["ipmr_fill_table", "ipmr_fill_vif", "ipmr_valid_dumplink", "memset", "nla_nest_start_noflag", "nlmsg_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_valid_dumplink",
+    "callees": ["do_trace_netlink_extack"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_fill_vif",
+    "callees": ["nla_nest_start_noflag", "nla_put", "nla_put_64bit", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_fill_table",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rtm_route",
+    "callees": ["ipmr_mfc_add", "ipmr_mfc_delete", "rtm_to_ipmr_mfcc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_nla_get_ttls",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rtm_dumproute",
+    "callees": ["do_trace_netlink_extack", "ip_valid_fib_dump_req", "mr_rtm_dumproute", "mr_table_dump"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rtm_getroute",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ipmr_fill_mroute", "ipmr_rtm_valid_getroute_req", "kfree_skb_reason", "mr_mfc_find_parent", "nlmsg_new", "rtnl_unicast"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rtm_valid_getroute_req",
+    "callees": ["__nlmsg_parse", "do_trace_netlink_extack", "netlink_strict_get_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "igmpmsg_netlink_event",
+    "callees": ["kfree_skb_reason", "nla_put", "nla_reserve", "nlmsg_new", "nlmsg_put", "nlmsg_trim", "rtnl_notify", "rtnl_set_sk_err", "skb_copy_bits"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mroute_netlink_event",
+    "callees": ["ipmr_fill_mroute", "kfree_skb_reason", "nlmsg_new", "rtnl_notify", "rtnl_set_sk_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_ipmr_fill_mroute",
+    "callees": ["ipmr_fill_mroute"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_fill_mroute",
+    "callees": ["mr_fill_mroute", "nla_put", "nlmsg_put", "nlmsg_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_get_route",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ipmr_cache_find_any", "ipmr_cache_unresolved", "mr_fill_mroute", "mr_mfc_find_parent", "skb_push", "skb_realloc_headroom"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pim_rcv",
+    "callees": ["__builtin_expect", "__pim_rcv", "ip_compute_csum", "kfree_skb_reason", "pskb_may_pull_reason", "skb_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pim_rcv_v1",
+    "callees": ["__builtin_expect", "__pim_rcv", "kfree_skb_reason", "pskb_may_pull_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_mr_input",
+    "callees": ["__builtin_expect", "dev_get_by_index_rcu", "ip_call_ra_chain", "ip_local_deliver", "ip_mr_forward", "ipmr_cache_find_any", "ipmr_cache_unresolved", "kfree_skb_reason", "mr_mfc_find_parent", "nf_conntrack_put", "raw_rcv", "skb_clone"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_mr_forward",
+    "callees": ["ipmr_cache_report", "ipmr_queue_xmit", "kfree_skb_reason", "mr_mfc_find_any_parent", "skb_clone"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_forward_finish",
+    "callees": ["__builtin_expect", "dst_output", "ip_forward_options"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_encap",
+    "callees": ["__builtin_bswap16", "ip_select_ident_segs", "ip_send_check", "memset", "nf_conntrack_put", "skb_push"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_device_event",
+    "callees": ["vif_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_compat_ioctl",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "_copy_from_user", "_copy_to_user", "mr_mfc_find_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_ioctl",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "mr_mfc_find_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_mroute_getsockopt",
+    "callees": ["copy_from_sockptr_offset", "copy_to_sockptr_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_sk_ioctl",
+    "callees": ["sock_ioctl_inout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_mroute_setsockopt",
+    "callees": ["copy_from_sockptr_offset", "inet_netconf_notify_devconf", "ip_ra_control", "ipmr_mfc_add", "ipmr_mfc_delete", "mroute_clean_tables", "ns_capable", "rtnl_lock", "rtnl_unlock", "vif_add", "vif_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mrtsock_destruct",
+    "callees": ["inet_netconf_notify_devconf", "mroute_clean_tables", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mroute_clean_tables",
+    "callees": ["__rhashtable_remove_fast", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "ipmr_destroy_unres", "mr_cache_put", "mr_call_mfc_notifiers", "mroute_netlink_event", "unregister_netdevice_many", "vif_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_mfc_add",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__rhashtable_insert_fast", "_printk", "_raw_spin_lock", "_raw_spin_lock_bh", "_raw_spin_unlock", "_raw_spin_unlock_bh", "call_rcu", "ipmr_cache_alloc", "ipmr_cache_resolve", "ipmr_update_thresholds", "mr_call_mfc_notifiers", "mr_mfc_find_parent", "mroute_netlink_event", "timer_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_mfc_delete",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__rhashtable_remove_fast", "mr_cache_put", "mr_call_mfc_notifiers", "mr_mfc_find_parent", "mroute_netlink_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_unresolved",
+    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "call_rcu", "ipmr_cache_alloc_unres", "ipmr_cache_report", "kfree_skb_reason", "mod_timer", "mroute_netlink_event", "skb_queue_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_report",
+    "callees": ["__alloc_skb", "__builtin_bswap16", "_printk", "dst_hold", "igmpmsg_netlink_event", "kfree_skb_reason", "memcpy", "net_ratelimit", "skb_push", "skb_put", "skb_realloc_headroom", "sock_queue_rcv_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_resolve",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__skb_dequeue", "ip_mr_forward", "memset", "mr_fill_mroute", "rtnl_unicast", "skb_pull", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_alloc_unres",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["jiffies", "mrt_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["jiffies", "mrt_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_find_any",
+    "callees": ["mr_mfc_find_any", "mr_mfc_find_any_parent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vif_add",
+    "callees": ["__builtin_expect", "__ip_dev_find", "_raw_spin_lock", "_raw_spin_unlock", "dev_get_by_index", "dev_get_port_parent_id", "dev_set_allmulti", "inet_netconf_notify_devconf", "ip_rt_multicast_event", "ipmr_new_tunnel", "ipmr_reg_vif", "memcpy", "mr_call_vif_notifiers", "unregister_netdevice_queue", "vif_device_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_update_thresholds",
+    "callees": ["memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_expire_process",
+    "callees": ["_raw_spin_trylock", "_raw_spin_unlock", "ipmr_destroy_unres", "mod_timer", "mroute_netlink_event"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_destroy_unres",
+    "callees": ["call_rcu", "kfree_skb_reason", "memset", "rtnl_unicast", "skb_dequeue", "skb_pull", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_cache_free_rcu",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["mrt_cachep"],
+    "global_writes": []
+  },
+  {
+    "name": "vif_delete",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "dev_set_allmulti", "inet_netconf_notify_devconf", "ip_rt_multicast_event", "mr_call_vif_notifiers", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_vif_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_vif_get_iflink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reg_vif_xmit",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ipmr_cache_report", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_new_tunnel",
+    "callees": ["__dev_get_by_name", "dev_close", "dev_open", "dev_set_allmulti", "ipmr_init_vif_indev", "sprintf", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_init_vif_indev",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ipmr_free_table",
+    "callees": ["kfree", "mroute_clean_tables", "rhashtable_free_and_destroy", "timer_shutdown_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_new_table_set",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_hash_cmp",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rule_default",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rules_dump",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_rules_exit",
+    "callees": ["__builtin_expect", "__warn_printk", "ipmr_free_table", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ipmr_rules_init",
+    "callees": ["__builtin_expect", "ipmr_new_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ipmr_mr_table_iter",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mr_mfc_seq_stop",
+    "callees": ["__rcu_read_unlock", "_raw_spin_unlock_bh"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mr_cache_put",
+    "callees": ["__refcount_sub_and_test", "mr_cache_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "jhash2",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_output",
+    "callees": ["__builtin_expect", "ip6_output", "ip_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_tunnel_rx",
+    "callees": ["skb_scrub_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nla_nest_start_noflag",
+    "callees": ["nla_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_trim",
+    "callees": ["__builtin_expect", "skb_trim"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_new",
+    "callees": ["__alloc_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nlmsg_put",
+    "callees": ["__builtin_expect", "__nlmsg_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cow",
+    "callees": ["__skb_cow", "skb_cloned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_cow",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_dequeue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cloned",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_put",
+    "callees": ["__refcount_sub_and_test", "nf_conntrack_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "copy_overflow",
+    "callees": ["__copy_overflow"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_bit_unlock",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

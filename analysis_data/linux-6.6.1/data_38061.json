@@ -1,331 +1,85 @@
 [
   {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "netlbl_af4list_search",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "netlbl_af4list_search_exact",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
+    "name": "netlbl_af6list_audit_addr",
+    "callees": ["__builtin_bswap32", "audit_log_format"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fat_ent_read_block",
-    "callees": ["fatent_brelse"],
+    "name": "netlbl_af4list_audit_addr",
+    "callees": ["__builtin_bswap32", "audit_log_format"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
+    "name": "netlbl_af6list_remove",
+    "callees": ["netlbl_af6list_search_exact"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fat_ent_read_block",
-    "callees": ["fatent_brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_trim_clusters",
-    "callees": ["blkdev_issue_discard"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_next",
+    "name": "netlbl_af6list_remove_entry",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fat_ent_next",
+    "name": "netlbl_af4list_remove",
+    "callees": ["netlbl_af4list_search_exact"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_remove_entry",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "netlbl_af6list_add",
+    "callees": ["memcmp", "netlbl_af6list_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af4list_add",
+    "callees": ["__builtin_bswap32", "netlbl_af4list_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netlbl_af6list_search_exact",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "netlbl_af6list_search",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "netlbl_af4list_search_exact",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "netlbl_af4list_search",
     "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_reada.part.0",
-    "callees": ["__breadahead", "blk_finish_plug", "blk_start_plug"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_set_ptr.part.0",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_trim_fs",
-    "callees": ["__SCT__cond_resched", "__builtin_expect", "fat_ent_next", "fat_ent_read_block", "fat_ent_reada.part.0", "fat_ra_init", "fat_trim_clusters", "fatal_signal_pending", "fatent_brelse", "mutex_lock", "mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_trim_clusters",
-    "callees": ["blkdev_issue_discard"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_count_free_clusters",
-    "callees": ["__SCT__cond_resched", "fat_ent_next", "fat_ent_read_block", "fat_ent_reada.part.0", "fat_ra_init", "fatent_brelse", "mark_fsinfo_dirty", "mutex_lock", "mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_free_clusters",
-    "callees": ["__brelse", "__fat_fs_error", "fat_collect_bhs", "fat_ent_read", "fat_mirror_bhs", "fat_sync_bhs", "fatent_brelse", "mark_fsinfo_dirty", "mutex_lock", "mutex_unlock", "sb_issue_discard"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_alloc_clusters",
-    "callees": ["__brelse", "__builtin_expect", "__builtin_unreachable", "fat_collect_bhs", "fat_ent_next", "fat_ent_read_block", "fat_free_clusters", "fat_mirror_bhs", "fat_sync_bhs", "fatent_brelse", "inode_needs_sync", "mark_fsinfo_dirty", "mutex_lock", "mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_collect_bhs",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_read_block",
-    "callees": ["fatent_brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_next",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_write",
-    "callees": ["fat_mirror_bhs", "fat_sync_bhs"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_mirror_bhs",
-    "callees": ["__brelse", "__builtin_constant_p", "__getblk_gfp", "lock_buffer", "mark_buffer_dirty_inode", "memcpy", "sync_dirty_buffer", "unlock_buffer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_read",
-    "callees": ["__fat_fs_error", "fat_ent_update_ptr", "fatent_brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_access_init",
-    "callees": ["__fat_fs_error", "__mutex_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat32_ent_next",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat16_ent_next",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_next",
-    "callees": ["__brelse", "__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat32_ent_put",
-    "callees": ["__builtin_expect", "mark_buffer_dirty_inode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat16_ent_put",
-    "callees": ["mark_buffer_dirty_inode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_put",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "mark_buffer_dirty_inode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat32_ent_get",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat16_ent_get",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_get",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_bread",
-    "callees": ["___ratelimit", "__bread_gfp", "__builtin_expect", "_fat_msg"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_bread",
-    "callees": ["___ratelimit", "__bread_gfp", "__brelse", "__builtin_expect", "_fat_msg", "fat12_ent_set_ptr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat32_ent_set_ptr",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat16_ent_set_ptr",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_set_ptr",
-    "callees": ["__builtin_expect", "fat12_ent_set_ptr.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_ent_blocknr",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat12_ent_blocknr",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatent_brelse",
-    "callees": ["__brelse"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "lock_buffer",
-    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trylock_buffer",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatal_signal_pending",
-    "callees": ["__builtin_expect", "test_ti_thread_flag"],
     "global_reads": [],
     "global_writes": []
   }

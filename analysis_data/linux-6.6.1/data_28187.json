@@ -1,6 +1,42 @@
 [
   {
-    "name": "sel_netport_find",
+    "name": "clocks_calc_mult_shift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_get_uname",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_get_uname",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boot_override_clocksource",
+    "callees": ["mutex_lock", "mutex_unlock", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boot_override_clocksource",
+    "callees": ["mutex_lock", "mutex_unlock", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
@@ -12,38 +48,392 @@
     "global_writes": []
   },
   {
-    "name": "sel_netport_init",
+    "name": "",
     "callees": [],
-    "global_reads": ["selinux_enabled_boot"],
-    "global_writes": []
-  },
-  {
-    "name": "sel_netport_flush",
-    "callees": ["_raw_spin_lock_bh", "_raw_spin_unlock_bh", "kvfree_call_rcu"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sel_netport_sid",
-    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "sel_netport_find", "sel_netport_sid_slow"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sel_netport_sid_slow",
-    "callees": ["__builtin_expect", "_printk", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "kzalloc", "security_port_sid", "sel_netport_find", "sel_netport_insert"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sel_netport_insert",
-    "callees": ["kvfree_call_rcu"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sel_netport_find",
+    "name": "clocksource_enqueue",
     "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_reset_watchdog",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_stop_watchdog.part.0",
+    "callees": ["timer_delete"],
+    "global_reads": [],
+    "global_writes": ["watchdog_running"]
+  },
+  {
+    "name": "clocksource_stop_watchdog",
+    "callees": ["clocksource_stop_watchdog.part.0"],
+    "global_reads": ["watchdog", "watchdog_running"],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_suspend_select.part.0",
+    "callees": ["_printk"],
+    "global_reads": ["suspend_clocksource"],
+    "global_writes": ["suspend_clocksource"]
+  },
+  {
+    "name": "__clocksource_change_rating",
+    "callees": ["clocksource_enqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_suspend_select",
+    "callees": ["__clocksource_suspend_select.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_verify_percpu.part.0",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "clocksource_verify_choose_cpus", "cpus_read_lock", "cpus_read_unlock", "find_next_bit", "smp_call_function_single"],
+    "global_reads": ["csnow_mid", "nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_unstable.part.0",
+    "callees": ["schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_suspend_select.part.0",
+    "callees": ["_printk"],
+    "global_reads": ["suspend_clocksource"],
+    "global_writes": ["suspend_clocksource"]
+  },
+  {
+    "name": "clocksource_stop_watchdog.part.0",
+    "callees": ["timer_delete"],
+    "global_reads": [],
+    "global_writes": ["watchdog_running"]
+  },
+  {
+    "name": "boot_override_clock",
+    "callees": ["_printk", "boot_override_clocksource", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boot_override_clocksource",
+    "callees": ["mutex_lock", "mutex_unlock", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_clocksource_sysfs",
+    "callees": ["device_register", "subsys_system_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "available_clocksource_show",
+    "callees": ["mutex_lock", "mutex_unlock", "snprintf", "tick_oneshot_mode_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unbind_clocksource_store",
+    "callees": ["clocksource_unbind", "mutex_lock", "mutex_unlock", "strcmp", "sysfs_get_uname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_clocksource_store",
+    "callees": ["__clocksource_select", "mutex_lock", "mutex_unlock", "sysfs_get_uname"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sysfs_get_uname",
+    "callees": ["memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "current_clocksource_show",
+    "callees": ["mutex_lock", "mutex_unlock", "snprintf"],
+    "global_reads": ["curr_clocksource"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_unregister",
+    "callees": ["clocksource_unbind", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_unbind",
+    "callees": ["__clocksource_select", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clocksource_dequeue_watchdog", "clocksource_select_watchdog", "clocksource_suspend_select"],
+    "global_reads": ["curr_clocksource", "suspend_clocksource", "watchdog"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_change_rating",
+    "callees": ["__clocksource_change_rating", "__clocksource_select", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clocksource_select_watchdog", "clocksource_suspend_select", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_change_rating",
+    "callees": ["clocksource_enqueue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_register_scale",
+    "callees": ["__builtin_expect", "__clocksource_select", "__clocksource_suspend_select", "__clocksource_update_freq_scale", "_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clocksource_arch_init", "clocksource_enqueue", "clocksource_enqueue_watchdog", "clocksource_select_watchdog", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_update_freq_scale",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk", "clocks_calc_mult_shift", "clocksource_update_max_deferment"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "clocksource_enqueue",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_done_booting",
+    "callees": ["__clocksource_select", "__clocksource_watchdog_kthread", "clocksource_default_clock", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": ["curr_clocksource", "finished_booting"]
+  },
+  {
+    "name": "__clocksource_select",
+    "callees": ["_printk", "clocksource_find_best", "strcmp", "tick_oneshot_mode_active", "timekeeping_notify"],
+    "global_reads": ["curr_clocksource"],
+    "global_writes": ["curr_clocksource"]
+  },
+  {
+    "name": "clocksource_find_best",
+    "callees": [],
+    "global_reads": ["curr_clocksource", "finished_booting"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_update_max_deferment",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocks_calc_max_nsecs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_touch_watchdog",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_stop_suspend_timing",
+    "callees": [],
+    "global_reads": ["suspend_clocksource", "suspend_start"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_start_suspend_timing",
+    "callees": ["__builtin_expect", "_printk"],
+    "global_reads": ["__already_done", "suspend_clocksource"],
+    "global_writes": ["__already_done", "suspend_start"]
+  },
+  {
+    "name": "clocksource_suspend_select",
+    "callees": ["__clocksource_suspend_select"],
+    "global_reads": ["suspend_clocksource"],
+    "global_writes": ["suspend_clocksource"]
+  },
+  {
+    "name": "__clocksource_suspend_select",
+    "callees": ["__clocksource_suspend_select.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_watchdog_kthread",
+    "callees": ["__clocksource_select", "__clocksource_watchdog_kthread", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_watchdog_kthread",
+    "callees": ["__clocksource_change_rating", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clocksource_stop_watchdog", "clocksource_verify_percpu.part.0"],
+    "global_reads": ["curr_clocksource", "verify_n_cpus"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_dequeue_watchdog",
+    "callees": ["clocksource_stop_watchdog"],
+    "global_reads": ["watchdog"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_select_watchdog",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "clocksource_reset_watchdog", "clocksource_start_watchdog"],
+    "global_reads": ["watchdog"],
+    "global_writes": ["watchdog"]
+  },
+  {
+    "name": "clocksource_enqueue_watchdog",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_stop_watchdog",
+    "callees": ["clocksource_stop_watchdog.part.0"],
+    "global_reads": ["watchdog", "watchdog_running"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_start_watchdog",
+    "callees": ["add_timer_on", "find_first_bit", "init_timer_key"],
+    "global_reads": ["jiffies", "watchdog", "watchdog_running"],
+    "global_writes": ["watchdog_running"]
+  },
+  {
+    "name": "clocksource_watchdog",
+    "callees": ["__clocksource_unstable", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "add_timer_on", "clocksource_reset_watchdog", "cs_watchdog_read", "find_first_bit", "find_next_bit", "schedule_work", "tick_clock_notify"],
+    "global_reads": ["curr_clocksource", "finished_booting", "nr_cpu_ids", "watchdog", "watchdog_running"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_reset_watchdog",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_verify_percpu",
+    "callees": ["clocksource_verify_percpu.part.0"],
+    "global_reads": ["verify_n_cpus"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_verify_one_cpu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["csnow_mid"]
+  },
+  {
+    "name": "clocksource_verify_choose_cpus",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "find_first_bit", "find_next_bit", "get_random_u32_below"],
+    "global_reads": ["nr_cpu_ids", "verify_n_cpus"],
+    "global_writes": []
+  },
+  {
+    "name": "cs_watchdog_read",
+    "callees": ["_printk"],
+    "global_reads": ["max_cswd_read_retries", "watchdog"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_mark_unstable",
+    "callees": ["__clocksource_unstable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__clocksource_unstable",
+    "callees": ["__clocksource_unstable.part.0"],
+    "global_reads": ["finished_booting"],
+    "global_writes": []
+  },
+  {
+    "name": "clocksource_watchdog_work",
+    "callees": ["__builtin_expect", "kthread_create_on_node", "wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clocks_calc_mult_shift",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_random_u32_below",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__compiletime_assert_130", "__get_random_u32_below", "get_random_u16", "get_random_u32", "get_random_u8"],
     "global_reads": [],
     "global_writes": []
   }

@@ -1,13 +1,49 @@
 [
   {
-    "name": "pasid_cache_invalidation_with_pasid",
-    "callees": ["qi_submit_sync"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "pasid_cache_invalidation_with_pasid",
-    "callees": ["qi_submit_sync"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
@@ -60,81 +96,657 @@
     "global_writes": []
   },
   {
-    "name": "pasid_flush_caches.part.0",
-    "callees": ["pasid_cache_invalidation_with_pasid", "qi_flush_piotlb"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_setup_page_snoop_control",
-    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "clflush_cache_range", "devtlb_invalidation_with_pasid", "intel_pasid_get_entry", "pasid_cache_invalidation_with_pasid", "qi_flush_piotlb"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_setup_pass_through",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "intel_pasid_get_entry", "pasid_flush_caches"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_setup_second_level",
-    "callees": ["_dev_err", "_printk", "_raw_spin_lock", "_raw_spin_unlock", "intel_pasid_get_entry", "iommu_skip_agaw", "pasid_flush_caches", "xa_load"],
-    "global_reads": ["page_offset_base", "phys_base"],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_setup_first_level",
-    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock", "intel_pasid_get_entry", "pasid_flush_caches"],
-    "global_reads": ["page_offset_base", "phys_base"],
-    "global_writes": []
-  },
-  {
-    "name": "pasid_flush_caches",
-    "callees": ["clflush_cache_range", "iommu_flush_write_buffer", "pasid_flush_caches.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_tear_down_entry",
-    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "clflush_cache_range", "devtlb_invalidation_with_pasid", "intel_pasid_clear_entry", "intel_pasid_get_entry", "pasid_cache_invalidation_with_pasid", "qi_flush_piotlb"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pasid_cache_invalidation_with_pasid",
-    "callees": ["qi_submit_sync"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_pasid_get_table",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "intel_pasid_free_table",
-    "callees": ["free_pages", "free_pgtable_page", "kfree"],
-    "global_reads": ["page_offset_base"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "intel_pasid_alloc_table",
-    "callees": ["__SCT__might_resched", "__alloc_pages_node", "__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "clflush_cache_range", "kfree", "kzalloc", "pci_max_pasids"],
-    "global_reads": ["intel_pasid_max_id", "page_offset_base", "vmemmap_base"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "vcmd_free_pasid",
-    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "panic"],
-    "global_reads": ["tsc_khz"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "vcmd_alloc_pasid",
-    "callees": ["_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "panic"],
-    "global_reads": ["tsc_khz"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_commit",
+    "callees": ["__init_swait_queue_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_modeset_disables",
+    "callees": ["crtc_set_mode", "disable_outputs", "drm_atomic_helper_calc_timestamping_constants", "drm_atomic_helper_update_legacy_modeset_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_modeset_disables",
+    "callees": ["crtc_set_mode", "disable_outputs", "drm_atomic_helper_calc_timestamping_constants", "drm_atomic_helper_update_legacy_modeset_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_enabling",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_vblanks",
+    "callees": ["drm_atomic_helper_wait_for_vblanks.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_vblanks",
+    "callees": ["drm_atomic_helper_wait_for_vblanks.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_commit",
+    "callees": ["__init_swait_queue_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_disabling",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_or_fake_commit.part.0",
+    "callees": ["init_commit", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_or_fake_commit",
+    "callees": ["crtc_or_fake_commit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_prepare_planes.part.0",
+    "callees": ["__builtin_expect", "drm_gem_plane_helper_prepare_fb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_or_fake_commit.part.0",
+    "callees": ["init_commit", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check.part.0",
+    "callees": ["drm_atomic_helper_async_check", "drm_atomic_helper_check_planes", "drm_self_refresh_helper_alter_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_vblanks.part.0",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__warn_printk", "drm_crtc_vblank_count", "drm_crtc_vblank_get", "drm_crtc_vblank_put", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_needs_disable.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_bridge_propagate_bus_fmt",
+    "callees": ["kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_page_flip_target",
+    "callees": ["__builtin_expect", "drm_atomic_nonblocking_commit", "drm_atomic_state_alloc", "kref_put", "page_flip_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_page_flip",
+    "callees": ["drm_atomic_nonblocking_commit", "drm_atomic_state_alloc", "kref_put", "page_flip_common"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_flip_common",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_crtc_state", "drm_atomic_get_plane_state", "drm_atomic_set_crtc_for_plane", "drm_atomic_set_fb_for_plane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_resume",
+    "callees": ["drm_atomic_helper_commit_duplicated_state", "drm_drv_uses_atomic_modeset", "drm_mode_config_reset", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_duplicated_state",
+    "callees": ["drm_atomic_commit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_suspend",
+    "callees": ["__builtin_expect", "drm_atomic_helper_disable_all", "drm_atomic_helper_duplicate_state", "drm_drv_uses_atomic_modeset", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "kref_put", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_duplicate_state",
+    "callees": ["__builtin_expect", "drm_atomic_get_connector_state", "drm_atomic_get_crtc_state", "drm_atomic_get_plane_state", "drm_atomic_state_alloc", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_shutdown",
+    "callees": ["_dev_err", "drm_atomic_helper_disable_all", "drm_drv_uses_atomic_modeset", "drm_modeset_acquire_fini", "drm_modeset_acquire_init", "drm_modeset_backoff", "drm_modeset_drop_locks", "drm_modeset_lock_all_ctx", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_disable_all",
+    "callees": ["__builtin_expect", "drm_atomic_add_affected_connectors", "drm_atomic_add_affected_planes", "drm_atomic_commit", "drm_atomic_get_crtc_state", "drm_atomic_set_crtc_for_connector", "drm_atomic_set_crtc_for_plane", "drm_atomic_set_fb_for_plane", "drm_atomic_set_mode_prop_for_crtc", "drm_atomic_state_alloc", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_set_config",
+    "callees": ["__drm_atomic_helper_set_config", "drm_atomic_commit", "drm_atomic_state_alloc", "handle_conflicting_encoders", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_disable_plane",
+    "callees": ["__builtin_expect", "__drm_atomic_helper_disable_plane", "drm_atomic_commit", "drm_atomic_get_plane_state", "drm_atomic_state_alloc", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_update_plane",
+    "callees": ["__builtin_expect", "drm_atomic_commit", "drm_atomic_get_plane_state", "drm_atomic_set_crtc_for_plane", "drm_atomic_set_fb_for_plane", "drm_atomic_state_alloc", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_swap_state",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "wait_for_completion_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_cleanup_planes",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_disable_planes_on_crtc",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_planes_on_crtc",
+    "callees": ["__builtin_expect", "drm_atomic_plane_disabling", "drm_atomic_plane_enabling"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_planes",
+    "callees": ["drm_atomic_plane_disabling", "drm_atomic_plane_enabling"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_prepare_planes",
+    "callees": ["drm_atomic_helper_prepare_planes.part.0", "drm_writeback_prepare_job"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_cleanup_done",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "complete_all", "try_wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_hw_done",
+    "callees": ["__builtin_expect", "__refcount_add", "complete_all", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_fake_vblank",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "drm_crtc_send_vblank_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_dependencies",
+    "callees": ["_dev_err", "drm_crtc_commit_wait"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_setup_commit",
+    "callees": ["__drm_dev_dbg", "__refcount_add", "complete_all", "crtc_or_fake_commit", "init_commit", "kzalloc", "stall_checks", "try_wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_or_fake_commit",
+    "callees": ["crtc_or_fake_commit.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_commit",
+    "callees": ["__init_swait_queue_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "release_crtc_commit",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "stall_checks",
+    "callees": ["__drm_dev_dbg", "__refcount_add", "_dev_err", "_raw_spin_lock", "_raw_spin_unlock", "kref_put", "try_wait_for_completion", "wait_for_completion_interruptible_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit",
+    "callees": ["__refcount_add", "commit_tail", "drm_atomic_helper_async_commit", "drm_atomic_helper_cleanup_planes", "drm_atomic_helper_prepare_planes", "drm_atomic_helper_setup_commit", "drm_atomic_helper_swap_state", "drm_atomic_helper_wait_for_fences", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_async_commit",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_async_check",
+    "callees": ["__drm_dev_dbg", "try_wait_for_completion"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "commit_work",
+    "callees": ["commit_tail"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "commit_tail",
+    "callees": ["drm_atomic_helper_commit_cleanup_done", "drm_atomic_helper_commit_tail", "drm_atomic_helper_wait_for_dependencies", "drm_atomic_helper_wait_for_fences", "drm_self_refresh_helper_update_avg_times", "kref_put", "ktime_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_tail_rpm",
+    "callees": ["drm_atomic_helper_cleanup_planes", "drm_atomic_helper_commit_hw_done", "drm_atomic_helper_commit_modeset_disables", "drm_atomic_helper_commit_modeset_enables", "drm_atomic_helper_commit_planes", "drm_atomic_helper_fake_vblank", "drm_atomic_helper_wait_for_vblanks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_tail",
+    "callees": ["drm_atomic_helper_cleanup_planes", "drm_atomic_helper_commit_hw_done", "drm_atomic_helper_commit_modeset_disables", "drm_atomic_helper_commit_modeset_enables", "drm_atomic_helper_commit_planes", "drm_atomic_helper_fake_vblank", "drm_atomic_helper_wait_for_vblanks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_flip_done",
+    "callees": ["_dev_err", "complete_all", "wait_for_completion_timeout"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_vblanks",
+    "callees": ["drm_atomic_helper_wait_for_vblanks.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_wait_for_fences",
+    "callees": ["__builtin_expect", "dma_fence_wait_timeout", "kref_put", "set_fence_deadline"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_modeset_enables",
+    "callees": ["__drm_dev_dbg", "drm_atomic_bridge_chain_enable", "drm_atomic_bridge_chain_pre_enable", "drm_atomic_helper_commit_writebacks"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_commit_modeset_disables",
+    "callees": ["crtc_set_mode", "disable_outputs", "drm_atomic_helper_calc_timestamping_constants", "drm_atomic_helper_update_legacy_modeset_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "crtc_set_mode",
+    "callees": ["__drm_dev_dbg", "drm_bridge_chain_mode_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_calc_timestamping_constants",
+    "callees": ["drm_calc_timestamping_constants"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_update_legacy_modeset_state",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_outputs",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "__warn_printk", "crtc_needs_disable", "drm_atomic_bridge_chain_disable", "drm_atomic_bridge_chain_post_disable", "drm_crtc_vblank_get", "drm_crtc_vblank_put", "drm_dev_has_vblank"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "crtc_needs_disable",
+    "callees": ["crtc_needs_disable.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check",
+    "callees": ["drm_atomic_helper_check.part.0", "drm_atomic_helper_check_modeset", "drm_atomic_normalize_zpos"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check_planes",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_helper_check_plane_damage", "drm_atomic_helper_plane_changed", "mutex_is_locked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check_crtc_primary_plane",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check_plane_state",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_mode_get_hv_timing", "drm_rect_calc_hscale", "drm_rect_calc_vscale", "drm_rect_clip_scaled", "drm_rect_debug_print", "drm_rect_equals", "drm_rect_rotate", "drm_rect_rotate_inv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check_wb_encoder_state",
+    "callees": ["__drm_dev_dbg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_helper_check_modeset",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_add_affected_connectors", "drm_atomic_add_affected_planes", "drm_atomic_add_encoder_bridges", "drm_dev_has_vblank", "drm_mode_equal", "handle_conflicting_encoders", "mode_fixup", "mode_valid", "mutex_is_locked", "update_connector_routing"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mode_valid",
+    "callees": ["mode_valid_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mode_valid_path",
+    "callees": ["__drm_dev_dbg", "drm_bridge_chain_mode_valid", "drm_crtc_mode_valid", "drm_encoder_mode_valid"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mode_fixup",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_bridge_chain_check", "drm_mode_copy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "update_connector_routing",
+    "callees": ["__drm_dev_dbg", "drm_connector_get_single_encoder", "set_best_encoder", "steal_encoder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "steal_encoder",
+    "callees": ["__drm_dev_dbg", "set_best_encoder"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_best_encoder",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "handle_conflicting_encoders",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "drm_atomic_get_connector_state", "drm_atomic_set_crtc_for_connector", "drm_atomic_set_mode_prop_for_crtc", "drm_connector_get_single_encoder", "drm_connector_list_iter_begin", "drm_connector_list_iter_end", "drm_connector_list_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_drv_uses_atomic_modeset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_disabling",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_atomic_plane_enabling",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_rect_equals",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   }
 ]

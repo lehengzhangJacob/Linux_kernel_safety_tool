@@ -1,145 +1,271 @@
 [
   {
-    "name": "__rwmsr_on_cpus",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "memset", "smp_call_function_many"],
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsr_safe_regs_on_cpu",
-    "callees": ["smp_call_function_single"],
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsr_safe_regs_on_cpu",
-    "callees": ["smp_call_function_single"],
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__wrmsr_safe_regs_on_cpu",
-    "callees": ["wrmsr_safe_regs"],
+    "name": "tcp_cleanup_congestion_control",
+    "callees": ["module_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__rdmsr_safe_regs_on_cpu",
-    "callees": ["rdmsr_safe_regs"],
+    "name": "tcp_validate_congestion_control",
+    "callees": ["_printk"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsrl_safe_on_cpu",
-    "callees": ["rdmsr_safe_on_cpu"],
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsrl_safe_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_validate_congestion_control",
+    "callees": ["_printk"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsr_safe_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsr_safe_on_cpu",
-    "callees": ["__init_swait_queue_head", "memset", "smp_call_function_single_async", "wait_for_completion"],
+    "name": "INET_ECN_dontxmit",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__wrmsr_safe_on_cpu",
-    "callees": ["native_write_msr_safe"],
+    "name": "INET_ECN_dontxmit",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__rdmsr_safe_on_cpu",
-    "callees": ["complete", "native_read_msr_safe"],
+    "name": "INET_ECN_xmit",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsr_on_cpus",
-    "callees": ["__rwmsr_on_cpus"],
+    "name": "INET_ECN_xmit",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsr_on_cpus",
-    "callees": ["__rwmsr_on_cpus"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__rwmsr_on_cpus",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "memset", "smp_call_function_many"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsrl_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_register_congestion_control.part.0",
+    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock", "jhash", "strlen"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "wrmsr_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_ca_find_autoload.part.0",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__request_module", "tcp_ca_find"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsrl_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_reno_undo_cwnd",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rdmsr_on_cpu",
-    "callees": ["memset", "smp_call_function_single"],
+    "name": "tcp_reno_ssthresh",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__wrmsr_on_cpu",
-    "callees": ["native_write_msr"],
+    "name": "tcp_reno_cong_avoid",
+    "callees": ["tcp_cong_avoid_ai", "tcp_slow_start"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__rdmsr_on_cpu",
-    "callees": ["native_read_msr"],
+    "name": "tcp_cong_avoid_ai",
+    "callees": ["__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_write_msr_safe",
-    "callees": ["do_trace_write_msr"],
+    "name": "tcp_slow_start",
+    "callees": ["__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_write_msr",
-    "callees": ["do_trace_write_msr"],
+    "name": "tcp_set_congestion_control",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "tcp_ca_find", "tcp_ca_find_autoload", "tcp_reinit_congestion_control", "try_module_get"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_read_msr_safe",
-    "callees": ["do_trace_read_msr"],
+    "name": "tcp_set_allowed_congestion_control",
+    "callees": ["__builtin_expect", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kstrdup", "strsep", "tcp_ca_find"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_read_msr",
-    "callees": ["do_trace_read_msr"],
+    "name": "tcp_get_allowed_congestion_control",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_get_default_congestion_control",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "strncpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_get_available_congestion_control",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "snprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_congestion_default",
+    "callees": ["tcp_set_default_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_set_default_congestion_control",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "module_put", "tcp_ca_find_autoload", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_cleanup_congestion_control",
+    "callees": ["module_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_reinit_congestion_control",
+    "callees": ["INET_ECN_dontxmit", "INET_ECN_xmit", "memset", "tcp_cleanup_congestion_control", "tcp_init_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_init_congestion_control",
+    "callees": ["INET_ECN_dontxmit", "INET_ECN_xmit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_assign_congestion_control",
+    "callees": ["INET_ECN_dontxmit", "INET_ECN_xmit", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "memset", "try_module_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ca_get_name_by_key",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "strncpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ca_get_key_by_name",
+    "callees": ["__SCT__might_resched", "__rcu_read_lock", "__rcu_read_unlock", "tcp_ca_find_autoload"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_update_congestion_control",
+    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock", "jhash", "strcmp", "strlen", "synchronize_rcu", "tcp_validate_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_unregister_congestion_control",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "synchronize_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_register_congestion_control",
+    "callees": ["tcp_register_congestion_control.part.0", "tcp_validate_congestion_control"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_validate_congestion_control",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ca_find_key",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_set_ca_state",
+    "callees": ["trace_tcp_cong_state_set"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tcp_ca_find",
+    "callees": ["strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_tcp_cong_state_set",
+    "callees": ["__SCT__tp_func_tcp_cong_state_set", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "INET_ECN_dontxmit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "INET_ECN_xmit",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

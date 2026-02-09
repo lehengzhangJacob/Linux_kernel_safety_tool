@@ -1,103 +1,49 @@
 [
   {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__ethtool_dev_mm_supported",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
     "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ethtool_dev_mm_supported",
-    "callees": ["__builtin_expect", "__ethtool_dev_mm_supported", "__warn_printk", "ethnl_ops_begin", "ethnl_ops_complete", "rtnl_is_locked"],
-    "global_reads": ["__already_done"],
-    "global_writes": ["__already_done"]
+    "name": "dmi_id_init",
+    "callees": ["class_register", "class_unregister", "dev_set_name", "device_register", "dmi_id_init_attr_table", "kzalloc", "put_device"],
+    "global_reads": ["dmi_available", "dmi_dev"],
+    "global_writes": ["dmi_dev"]
   },
   {
-    "name": "__ethtool_dev_mm_supported",
+    "name": "dmi_id_init_attr_table",
+    "callees": ["dmi_get_system_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dmi_dev_uevent",
+    "callees": ["add_uevent_var", "get_modalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sys_dmi_modalias_show",
+    "callees": ["get_modalias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_modalias",
+    "callees": ["__builtin_constant_p", "__builtin_memcpy", "__builtin_return_address", "__kmalloc", "ascii_filter", "dmi_get_system_info", "kfree", "kmalloc_large", "kmalloc_trace", "scnprintf", "strlen"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ascii_filter",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ethnl_set_mm",
-    "callees": ["do_trace_netlink_extack"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ethnl_set_mm_validate",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_fill_reply",
-    "callees": ["mm_put_stats", "nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stats",
-    "callees": ["mm_put_stat", "nla_nest_start_noflag", "nlmsg_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_put_stat",
-    "callees": ["nla_put_64bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_reply_size",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mm_prepare_data",
-    "callees": ["ethnl_ops_begin", "ethnl_ops_complete"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_trim",
-    "callees": ["__builtin_expect", "skb_trim"],
+    "name": "sys_dmi_field_show",
+    "callees": ["dmi_get_system_info", "scnprintf"],
     "global_reads": [],
     "global_writes": []
   }

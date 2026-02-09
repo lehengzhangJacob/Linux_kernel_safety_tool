@@ -1,7 +1,7 @@
 [
   {
-    "name": "",
-    "callees": [],
+    "name": "ata_tf_init",
+    "callees": ["memset"],
     "global_reads": [],
     "global_writes": []
   },
@@ -12,80 +12,200 @@
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "ahci_pci_driver_exit",
+    "callees": ["pci_unregister_driver"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "ahci_pci_driver_init",
+    "callees": ["__pci_register_driver"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "param_get_nfs_timeout",
+    "name": "ahci_remove_one",
+    "callees": ["ata_pci_remove_one", "sysfs_remove_file_from_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_shutdown_one",
+    "callees": ["ata_pci_shutdown_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_init_one",
+    "callees": ["_dev_info", "_dev_warn", "acer_sa5_271_workaround", "ahci_broken_lpm", "ahci_broken_online", "ahci_broken_suspend", "ahci_broken_system_poweroff", "ahci_configure_dma_masks", "ahci_gtf_filter_workaround", "ahci_host_activate", "ahci_init_msi", "ahci_mcp89_apple_enable", "ahci_p5wdh_workaround", "ahci_pci_init_controller", "ahci_pci_print_info", "ahci_pci_reset_controller", "ahci_pci_save_initial_config", "ahci_remap_check", "ahci_reset_em", "ahci_sb600_enable_64bit", "ahci_set_em_messages", "ata_host_alloc_pinfo", "ata_port_pbar_desc", "ata_print_version", "devm_kmalloc", "pci_intx", "pci_irq_vector", "pci_match_id", "pci_read_config_byte", "pci_set_master", "pcim_enable_device", "pcim_iomap_regions_request_all", "pcim_iomap_table", "pcim_pin_device", "pm_runtime_put_noidle", "sysfs_add_file_to_group"],
+    "global_reads": ["__print_once", "ahci_ignore_sss", "marvell_enable", "mobile_lpm_policy"],
+    "global_writes": ["__print_once"]
+  },
+  {
+    "name": "remapped_nvme_show",
     "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "param_set_nfs_timeout",
-    "callees": ["cancel_delayed_work", "kstrtoll", "mod_delayed_work_on"],
-    "global_reads": ["system_wq"],
-    "global_writes": []
-  },
-  {
-    "name": "nfs_submount",
-    "callees": ["dget_parent", "dput", "nfs_do_submount"],
+    "name": "ahci_intel_pcs_quirk",
+    "callees": ["pci_match_id", "pci_read_config_word", "pci_write_config_word"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_do_submount",
-    "callees": ["__builtin_expect", "__builtin_return_address", "kfree", "kmalloc_trace", "logfc", "nfs_path", "vfs_get_tree", "vfs_parse_fs_string"],
+    "name": "ahci_init_msi",
+    "callees": ["_printk", "pci_alloc_irq_vectors", "pci_free_irq_vectors"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_release_automount_timer",
-    "callees": ["cancel_delayed_work"],
+    "name": "ahci_get_irq_vector",
+    "callees": ["pci_irq_vector"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_expire_automounts",
-    "callees": ["mark_mounts_for_expiry", "schedule_delayed_work"],
+    "name": "ahci_remap_check",
+    "callees": ["_dev_warn"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_namespace_setattr",
-    "callees": ["nfs_setattr"],
+    "name": "acer_sa5_271_workaround",
+    "callees": ["_dev_info", "dmi_check_system"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_namespace_getattr",
-    "callees": ["generic_fillattr", "nfs_getattr"],
+    "name": "ahci_gtf_filter_workaround",
+    "callees": ["_dev_info", "ata_dev_next", "ata_link_next", "dmi_first_match"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_d_automount",
-    "callees": ["__builtin_expect", "__module_get", "__refcount_add", "fs_context_for_submount", "memcpy", "mnt_set_expiry", "mntget", "nfs_alloc_fattr", "put_fs_context", "put_net", "schedule_delayed_work", "up_write", "vfs_create_mount"],
+    "name": "ahci_broken_online",
+    "callees": ["dmi_first_match"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nfs_path",
-    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "_raw_spin_lock", "_raw_spin_unlock", "memcpy", "strlen"],
+    "name": "ahci_broken_suspend",
+    "callees": ["dmi_first_match", "dmi_get_date", "snprintf", "strcmp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "put_net",
-    "callees": ["__put_net", "__refcount_sub_and_test"],
+    "name": "ahci_broken_system_poweroff",
+    "callees": ["dmi_first_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_sb600_enable_64bit",
+    "callees": ["_dev_warn", "dmi_first_match", "dmi_get_date", "snprintf", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_mcp89_apple_enable",
+    "callees": ["_printk", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_p5wdh_workaround",
+    "callees": ["_dev_info", "dmi_check_system"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_print_info",
+    "callees": ["ahci_print_info", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_configure_dma_masks",
+    "callees": ["_dev_err", "dma_set_mask_and_coherent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_device_resume",
+    "callees": ["ahci_mcp89_apple_enable", "ahci_pci_init_controller", "ahci_pci_reset_controller", "ata_host_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_device_suspend",
+    "callees": ["_dev_err", "ata_host_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_device_runtime_resume",
+    "callees": ["ahci_pci_init_controller", "ahci_pci_reset_controller"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_device_runtime_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_avn_hardreset",
+    "callees": ["_printk", "ahci_dev_classify", "ata_msleep", "ata_tf_init", "ata_tf_to_fis", "pci_read_config_word", "pci_write_config_word", "sata_link_hardreset", "sata_scr_read"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_p5wdh_hardreset",
+    "callees": ["ahci_kick_engine", "ata_tf_init", "ata_tf_to_fis", "ata_wait_after_reset", "sata_link_hardreset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_vt8251_hardreset",
+    "callees": ["sata_link_hardreset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_init_controller",
+    "callees": ["ahci_init_controller"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_reset_controller",
+    "callees": ["ahci_intel_pcs_quirk", "ahci_reset_controller"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ahci_pci_save_initial_config",
+    "callees": ["_dev_info", "ahci_save_initial_config"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pm_runtime_put_noidle",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ata_tf_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_set_mask_and_coherent",
+    "callees": ["dma_set_coherent_mask", "dma_set_mask"],
     "global_reads": [],
     "global_writes": []
   }

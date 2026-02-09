@@ -1,13 +1,97 @@
 [
   {
-    "name": "ext4_should_use_dio",
-    "callees": ["ext4_dio_alignment", "iov_iter_alignment"],
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "file_accessed",
-    "callees": ["touch_atime"],
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_find_root",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_match_device_ids"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_run_osc",
+    "callees": ["acpi_run_osc", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource_list_destroy_entry",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "resource_list_destroy_entry",
+    "callees": ["kfree"],
     "global_reads": [],
     "global_writes": []
   },
@@ -30,170 +114,140 @@
     "global_writes": []
   },
   {
-    "name": "ext4_file_read_iter.part.0",
-    "callees": ["ext4_dio_read_iter", "generic_file_read_iter"],
+    "name": "acpi_pci_root_init",
+    "callees": ["acpi_scan_add_handler_with_hotplug", "pci_acpi_crs_quirks"],
+    "global_reads": ["acpi_pci_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_root_create",
+    "callees": ["__acpi_pci_root_release_info", "_dev_printk", "acpi_dev_power_up_children_with_adr", "acpi_evaluate_dsm", "acpi_get_node", "acpi_pci_probe_root_resources", "is_acpi_device_node", "kfree", "pci_acpi_root_add_resources", "pci_add_resource", "pci_create_root_bus", "pci_scan_child_bus", "pci_set_host_bridge_release", "snprintf"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_open.part.0",
-    "callees": ["dquot_file_open", "ext4_inode_attach_jinode"],
+    "name": "acpi_pci_root_release_info",
+    "callees": ["__acpi_pci_root_release_info", "pci_unmap_iospace", "release_resource"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_llseek",
-    "callees": ["down_read", "generic_file_llseek_size", "iomap_seek_data", "iomap_seek_hole", "up_read", "vfs_setpos"],
+    "name": "__acpi_pci_root_release_info",
+    "callees": ["release_resource", "resource_list_destroy_entry"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_open",
-    "callees": ["__builtin_expect", "ext4_file_open.part.0", "ext4_sample_last_mounted"],
+    "name": "pci_acpi_root_add_resources",
+    "callees": ["_dev_info", "insert_resource_conflict", "resource_list_destroy_entry"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_sample_last_mounted",
-    "callees": ["__builtin_expect", "__ext4_handle_dirty_metadata", "__ext4_journal_get_write_access", "__ext4_journal_start_sb", "__ext4_journal_stop", "d_path", "ext4_superblock_csum_set", "lock_buffer", "memset", "percpu_down_read_trylock", "percpu_up_read", "strncpy", "unlock_buffer"],
+    "name": "acpi_pci_probe_root_resources",
+    "callees": ["_dev_warn", "acpi_dev_get_resources", "acpi_pci_root_validate_resources", "resource_list_destroy_entry"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_mmap",
-    "callees": ["__builtin_expect", "file_accessed"],
+    "name": "acpi_pci_root_validate_resources",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_dev_info", "kfree", "resource_union"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_write_iter",
-    "callees": ["__builtin_expect", "ext4_buffered_write_iter", "ext4_dio_write_iter"],
+    "name": "acpi_pci_root_remove",
+    "callees": ["__builtin_expect", "acpi_ioapic_remove", "acpi_remove_pm_notifier", "device_set_wakeup_capable", "dmar_device_remove", "kfree", "pci_ioapic_remove", "pci_lock_rescan_remove", "pci_remove_root_bus", "pci_stop_root_bus", "pci_unlock_rescan_remove"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_dio_write_iter",
-    "callees": ["__builtin_expect", "__ext4_journal_start_sb", "__ext4_journal_stop", "down_read", "down_read_trylock", "down_write", "down_write_trylock", "ext4_buffered_write_iter", "ext4_dio_write_checks", "ext4_handle_inode_extension", "ext4_orphan_add", "ext4_should_use_dio", "filemap_write_and_wait_range", "invalidate_mapping_pages", "iomap_dio_rw", "up_read", "up_write"],
+    "name": "acpi_pci_root_add",
+    "callees": ["__builtin_memcpy", "_dev_err", "_dev_warn", "_printk", "acpi_device_hid", "acpi_evaluate_integer", "acpi_ioapic_add", "acpi_pci_root_get_mcfg_addr", "device_set_wakeup_capable", "dmar_device_add", "dmar_device_remove", "kfree", "kzalloc", "negotiate_os_control", "pci_acpi_add_bus_pm_notifier", "pci_acpi_scan_root", "pci_assign_unassigned_root_bus_resources", "pci_bus_add_devices", "pci_lock_rescan_remove", "pci_unlock_rescan_remove", "pcibios_resource_survey_bus", "pcie_no_aspm", "strcmp", "try_get_root_bridge_busnr"],
+    "global_reads": ["system_state"],
+    "global_writes": []
+  },
+  {
+    "name": "os_control_query_checks",
+    "callees": ["_dev_info", "decode_osc_bits"],
+    "global_reads": ["pcie_ports_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "calculate_support",
+    "callees": ["pci_ext_cfg_avail", "pci_msi_enabled", "pcie_aspm_support_enabled"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_dio_write_end_io",
-    "callees": ["ext4_convert_unwritten_extents"],
+    "name": "acpi_get_pci_dev",
+    "callees": ["acpi_fetch_acpi_dev", "get_device", "mutex_lock", "mutex_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_handle_inode_extension",
-    "callees": ["__builtin_expect", "__ext4_journal_start_sb", "__ext4_journal_stop", "__ext4_mark_inode_dirty", "ext4_can_truncate", "ext4_orphan_del", "ext4_truncate_failed_write", "ext4_update_inode_size"],
+    "name": "acpi_pci_find_root",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_match_device_ids"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_buffered_write_iter",
-    "callees": ["__builtin_expect", "down_write", "ext4_write_checks", "generic_perform_write", "generic_write_sync", "up_write"],
+    "name": "acpi_pci_query_osc",
+    "callees": ["acpi_pci_run_osc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_write_checks",
-    "callees": ["ext4_generic_write_checks", "file_modified"],
+    "name": "acpi_pci_run_osc",
+    "callees": ["acpi_run_osc", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_generic_write_checks",
-    "callees": ["__builtin_expect", "generic_write_checks"],
+    "name": "decode_osc_bits",
+    "callees": ["_dev_info", "scnprintf"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_overwrite_io",
-    "callees": ["ext4_map_blocks"],
+    "name": "try_get_root_bridge_busnr",
+    "callees": ["acpi_walk_resources"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_release_file",
-    "callees": ["down_write", "ext4_alloc_da_blocks", "ext4_discard_preallocations", "ext4_htree_free_dir_info", "up_write"],
+    "name": "get_root_bridge_busnr_callback",
+    "callees": ["acpi_resource_to_address64"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_splice_read",
-    "callees": ["__builtin_expect", "filemap_splice_read"],
+    "name": "acpi_is_root_bridge",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_match_device_ids"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_file_read_iter",
-    "callees": ["__builtin_expect", "ext4_file_read_iter.part.0"],
+    "name": "acpi_pci_root_scan_dependent",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_dio_read_iter",
-    "callees": ["down_read", "down_read_trylock", "ext4_should_use_dio", "file_accessed", "generic_file_read_iter", "iomap_dio_rw", "up_read"],
+    "name": "acpi_dev_filter_resource_type_cb",
+    "callees": ["acpi_dev_filter_resource_type"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_should_use_dio",
-    "callees": ["ext4_dio_alignment", "iov_iter_alignment"],
+    "name": "resource_list_destroy_entry",
+    "callees": ["kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_truncate_failed_write",
-    "callees": ["down_write", "ext4_truncate", "truncate_inode_pages", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ext4_update_inode_size",
-    "callees": ["ext4_update_i_disksize"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ext4_update_i_disksize",
-    "callees": ["__builtin_expect", "down_write", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "lock_buffer",
-    "callees": ["__SCT__might_resched", "__lock_buffer", "trylock_buffer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trylock_buffer",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "generic_write_sync",
-    "callees": ["iocb_is_dsync", "vfs_fsync_range"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "file_accessed",
-    "callees": ["touch_atime"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "percpu_up_read",
-    "callees": ["__builtin_expect", "rcuwait_wake_up"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "percpu_down_read_trylock",
-    "callees": ["__builtin_expect", "__percpu_down_read"],
+    "name": "resource_union",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }

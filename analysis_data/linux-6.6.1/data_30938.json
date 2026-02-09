@@ -1,55 +1,61 @@
 [
   {
-    "name": "",
+    "name": "page_counter_cancel",
+    "callees": ["__builtin_expect", "__warn_printk", "propagate_protected_usage"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "page_counter_memparse",
+    "callees": ["memparse", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_low",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_min",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_set_max",
+    "callees": ["__SCT__cond_resched"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_uncharge",
+    "callees": ["page_counter_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_try_charge",
+    "callees": ["page_counter_cancel", "propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_charge",
+    "callees": ["propagate_protected_usage"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "page_counter_cancel",
+    "callees": ["__builtin_expect", "__warn_printk", "propagate_protected_usage"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "propagate_protected_usage",
     "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_fallocate",
-    "callees": ["__builtin_expect", "fsnotify_file", "vfs_fallocate"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_fallocate_prep",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_fsync",
-    "callees": ["__builtin_expect", "vfs_fsync_range"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_fsync_prep",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_sync_file_range",
-    "callees": ["__builtin_expect", "sync_file_range"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_sfr_prep",
-    "callees": ["__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "file_real_path",
-    "callees": ["__builtin_expect", "backing_file_real_path"],
     "global_reads": [],
     "global_writes": []
   }

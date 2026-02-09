@@ -1,73 +1,7 @@
 [
   {
-    "name": "private_find_iova",
-    "callees": ["__builtin_expect", "__builtin_unreachable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "private_find_iova",
-    "callees": ["__builtin_expect", "__builtin_unreachable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova_mem.part.0",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "iova_insert_rbtree",
-    "callees": ["rb_insert_color"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova_mem.part.0",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova_mem.part.0",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
     "name": "",
     "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_magazine_alloc",
-    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova_mem.part.0",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "iova_magazine_alloc",
-    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__order_base_2.part.0",
-    "callees": ["__builtin_clzll", "__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
@@ -84,224 +18,80 @@
     "global_writes": []
   },
   {
-    "name": "iova_domain_init_rcaches.part.0",
-    "callees": ["__alloc_percpu", "__cpuhp_state_add_instance", "find_next_bit", "free_iova_rcaches", "iova_magazine_alloc"],
+    "name": "intel_dp_aux_init_backlight_funcs",
+    "callees": ["__drm_dev_dbg", "intel_dp_aux_supports_hdr_backlight", "intel_dp_aux_supports_vesa_backlight"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__order_base_2.part.0",
-    "callees": ["__builtin_clzll", "__builtin_constant_p"],
+    "name": "intel_dp_aux_supports_vesa_backlight",
+    "callees": ["__drm_dev_dbg", "intel_attached_dp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iova_cache_put.part.0",
-    "callees": ["mutex_unlock"],
+    "name": "intel_dp_aux_vesa_setup_backlight",
+    "callees": ["__drm_dev_dbg", "_dev_err", "drm_edp_backlight_init", "intel_attached_dp"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "free_iova_mem.part.0",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "free_global_cached_iovas",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "iova_magazine_free_pfns", "kfree"],
+    "name": "intel_dp_aux_vesa_disable_backlight",
+    "callees": ["drm_edp_backlight_disable", "intel_backlight_invert_pwm_level"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "free_cpu_cached_iovas",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "iova_magazine_free_pfns"],
+    "name": "intel_dp_aux_vesa_enable_backlight",
+    "callees": ["drm_edp_backlight_enable", "intel_backlight_invert_pwm_level", "intel_backlight_level_to_pwm"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "free_iova_rcaches",
-    "callees": ["find_next_bit", "free_percpu", "kfree"],
+    "name": "intel_dp_aux_vesa_set_backlight",
+    "callees": ["drm_edp_backlight_set_level", "intel_backlight_level_to_pwm", "intel_backlight_set_pwm_level"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iova_rcache_get",
-    "callees": ["__builtin_clzll", "__builtin_constant_p", "__iova_rcache_get", "__order_base_2.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__iova_rcache_get",
-    "callees": ["_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "iova_magazine_pop", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_rcache_insert",
-    "callees": ["__builtin_clzll", "__builtin_constant_p", "__iova_rcache_insert", "__order_base_2.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__iova_rcache_insert",
-    "callees": ["_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore", "iova_magazine_alloc", "iova_magazine_free_pfns", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_domain_init_rcaches",
-    "callees": ["iova_domain_init_rcaches.part.0", "kmalloc_array"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_magazine_pop",
+    "name": "intel_dp_aux_vesa_get_backlight",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iova_magazine_free_pfns",
-    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "free_iova_mem.part.0", "private_find_iova", "remove_iova"],
+    "name": "intel_dp_aux_hdr_setup_backlight",
+    "callees": ["__drm_dev_dbg", "_dev_err", "intel_dp_aux_hdr_get_backlight"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iova_magazine_alloc",
-    "callees": ["__builtin_expect", "__builtin_return_address", "kmalloc_trace"],
+    "name": "intel_dp_aux_hdr_disable_backlight",
+    "callees": ["intel_backlight_invert_pwm_level"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "reserve_iova",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "__insert_new_range", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "rb_first", "rb_next"],
+    "name": "intel_dp_aux_hdr_enable_backlight",
+    "callees": ["_dev_err", "drm_dp_dpcd_read", "drm_dp_dpcd_write", "intel_backlight_level_to_pwm", "intel_dp_aux_hdr_set_aux_backlight", "intel_dp_wait_source_oui"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__insert_new_range",
-    "callees": ["alloc_and_init_iova", "iova_insert_rbtree"],
+    "name": "intel_dp_aux_hdr_set_backlight",
+    "callees": ["intel_backlight_level_to_pwm", "intel_backlight_set_pwm_level", "intel_dp_aux_hdr_set_aux_backlight"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "alloc_and_init_iova",
-    "callees": ["kmem_cache_alloc"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "put_iova_domain",
-    "callees": ["free_iova_mem.part.0", "iova_domain_free_rcaches", "rb_first_postorder", "rb_next_postorder"],
+    "name": "intel_dp_aux_hdr_get_backlight",
+    "callees": ["_dev_err", "drm_dp_dpcd_read", "intel_backlight_level_from_pwm"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iova_domain_free_rcaches",
-    "callees": ["__cpuhp_state_remove_instance", "free_iova_rcaches"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova_fast",
-    "callees": ["free_iova", "iova_rcache_insert"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "alloc_iova_fast",
-    "callees": ["__builtin_clzll", "__builtin_constant_p", "alloc_iova", "find_next_bit", "free_cpu_cached_iovas", "free_global_cached_iovas", "iova_rcache_get"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iova",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "free_iova_mem.part.0", "private_find_iova", "remove_iova"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__free_iova",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "free_iova_mem.part.0", "remove_iova"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_iova",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "private_find_iova"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "remove_iova",
-    "callees": ["__builtin_expect", "__builtin_unreachable", "__cached_rbnode_delete_update", "rb_erase"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "private_find_iova",
-    "callees": ["__builtin_expect", "__builtin_unreachable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "alloc_iova",
-    "callees": ["__alloc_and_insert_iova_range", "free_iova_mem.part.0", "kmem_cache_alloc"],
-    "global_reads": ["iova_cache"],
-    "global_writes": []
-  },
-  {
-    "name": "iova_cache_put",
-    "callees": ["__builtin_expect", "__cpuhp_remove_state", "iova_cache_put.part.0", "kmem_cache_destroy", "mutex_lock", "mutex_unlock"],
-    "global_reads": ["iova_cache", "iova_cache_users"],
-    "global_writes": ["iova_cache_users"]
-  },
-  {
-    "name": "iova_cache_get",
-    "callees": ["__cpuhp_remove_state", "__cpuhp_setup_state", "_printk", "kmem_cache_create", "mutex_lock", "mutex_unlock"],
-    "global_reads": ["iova_cache_users"],
-    "global_writes": ["iova_cache", "iova_cache_users"]
-  },
-  {
-    "name": "__alloc_and_insert_iova_range",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "iova_find_limit", "iova_insert_rbtree", "rb_prev"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_insert_rbtree",
-    "callees": ["rb_insert_color"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_find_limit",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__cached_rbnode_delete_update",
-    "callees": ["rb_next"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "init_iova_domain",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "__builtin_unreachable", "rb_insert_color"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_cpuhp_dead",
-    "callees": ["free_cpu_cached_iovas"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iova_rcache_range",
-    "callees": [],
+    "name": "intel_dp_aux_supports_hdr_backlight",
+    "callees": ["__drm_dev_dbg", "_dev_info", "drm_dp_dpcd_read", "intel_dp_wait_source_oui"],
     "global_reads": [],
     "global_writes": []
   }

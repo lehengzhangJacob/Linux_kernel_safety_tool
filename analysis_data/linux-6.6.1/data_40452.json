@@ -1,193 +1,19 @@
 [
   {
-    "name": "genl_family_find_byname",
-    "callees": ["idr_get_next", "strcmp"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "genl_family_find_byname",
-    "callees": ["idr_get_next", "strcmp"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "genl_family_find_byname",
-    "callees": ["idr_get_next", "strcmp"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unlock_all",
-    "callees": ["mutex_unlock", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd_both",
-    "callees": ["genl_get_cmd"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_put_string",
-    "callees": ["nla_put", "strlen"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_put_string",
-    "callees": ["nla_put", "strlen"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_put_string",
-    "callees": ["nla_put", "strlen"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unlock_all",
-    "callees": ["mutex_unlock", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_trim",
-    "callees": ["__builtin_expect", "skb_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_cancel.part.0",
-    "callees": ["nlmsg_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_trim",
-    "callees": ["__builtin_expect", "skb_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_cancel.part.0",
-    "callees": ["nlmsg_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_trim",
-    "callees": ["__builtin_expect", "skb_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_cancel.part.0",
-    "callees": ["nlmsg_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_lock.part.0",
-    "callees": ["mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_lock_all",
-    "callees": ["down_write", "mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_unlock.part.0",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_lock.part.0",
-    "callees": ["mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_unlock.part.0",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_unlock.part.0",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_lock.part.0",
-    "callees": ["mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_unlock.part.0",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_lock.part.0",
-    "callees": ["mutex_lock"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
@@ -246,362 +72,344 @@
     "global_writes": []
   },
   {
-    "name": "genl_register_family.part.0",
-    "callees": ["genl_ctrl_event", "genl_family_find_byname", "genl_lock_all", "genl_unlock_all", "genl_validate_assign_mc_groups", "idr_alloc_cyclic", "idr_remove", "strcmp"],
+    "name": "i915_vm_resv_release",
+    "callees": ["dma_resv_fini", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "genlmsg_cancel.part.0",
-    "callees": ["nlmsg_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_unlock.part.0",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_lock.part.0",
-    "callees": ["mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_notify",
-    "callees": ["__builtin_expect", "nlmsg_notify"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_multicast_allns",
-    "callees": ["__builtin_expect", "genlmsg_mcast"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_mcast",
-    "callees": ["kfree_skb_reason", "netlink_broadcast", "skb_clone"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_init",
-    "callees": ["genl_register_family", "panic", "register_pernet_subsys"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_pernet_exit",
-    "callees": ["netlink_kernel_release"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_pernet_init",
-    "callees": ["__netlink_kernel_create", "panic"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_bind",
-    "callees": ["down_read", "idr_get_next", "ns_capable", "up_read"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumppolicy_done",
-    "callees": ["kfree", "netlink_policy_dump_free"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumppolicy",
-    "callees": ["__builtin_expect", "ctrl_dumppolicy_prep", "ctrl_dumppolicy_put_op", "genl_get_cmd_both", "genl_op_iter_next", "genlmsg_cancel.part.0", "netlink_policy_dump_loop", "netlink_policy_dump_write", "nla_nest_start_noflag"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumppolicy_put_op",
-    "callees": ["ctrl_dumppolicy_prep", "genlmsg_cancel.part.0", "netlink_policy_dump_get_policy_idx", "nla_nest_start_noflag", "nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumppolicy_prep",
-    "callees": ["genlmsg_put", "nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumppolicy_start",
-    "callees": ["__builtin_return_address", "genl_family_find_byname", "genl_get_cmd_both", "genl_op_iter_next", "idr_find", "kfree", "kmalloc_trace", "netlink_policy_dump_add_policy", "netlink_policy_dump_free"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_getfamily",
-    "callees": ["__builtin_expect", "__request_module", "ctrl_build_family_msg", "down_read", "genl_family_find_byname", "genlmsg_reply", "idr_find", "mutex_lock", "mutex_unlock", "up_read"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_build_family_msg",
-    "callees": ["__alloc_skb", "ctrl_fill_info", "kfree_skb_reason"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_dumpfamily",
-    "callees": ["ctrl_fill_info", "idr_get_next"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctrl_fill_info",
-    "callees": ["genl_op_iter_next", "genlmsg_cancel.part.0", "genlmsg_put", "nla_nest_start_noflag", "nla_put", "nla_put_string"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_rcv",
-    "callees": ["down_read", "netlink_rcv_skb", "up_read"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_rcv_msg",
-    "callees": ["genl_family_rcv_msg", "genl_op_lock.part.0", "genl_op_unlock.part.0", "idr_find"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_family_rcv_msg",
-    "callees": ["genl_family_rcv_msg_doit", "genl_family_rcv_msg_dumpit", "genl_get_cmd", "genl_header_check", "netlink_capable", "netlink_ns_capable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_family_rcv_msg_doit",
-    "callees": ["__builtin_expect", "genl_family_rcv_msg_attrs_parse", "kfree", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_family_rcv_msg_dumpit",
-    "callees": ["__netlink_dump_start", "genl_op_lock.part.0", "genl_op_unlock.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_done",
-    "callees": ["genl_op_lock.part.0", "genl_op_unlock.part.0", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_dumpit",
-    "callees": ["genl_op_lock.part.0", "genl_op_unlock.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_start",
-    "callees": ["__builtin_expect", "genl_dumpit_info_alloc", "genl_family_rcv_msg_attrs_parse", "genl_op_lock.part.0", "genl_op_unlock.part.0", "kfree", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_dumpit_info_alloc",
-    "callees": ["__builtin_return_address", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_put",
-    "callees": ["nlmsg_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unregister_family",
-    "callees": ["__SCT__might_resched", "finish_wait", "genl_ctrl_event", "genl_lock_all", "genl_unlock_all", "genl_unregister_mc_groups", "idr_find", "idr_remove", "init_wait_entry", "mutex_unlock", "prepare_to_wait_event", "schedule", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_register_family",
-    "callees": ["genl_register_family.part.0", "genl_validate_ops"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_validate_ops",
-    "callees": ["__builtin_expect", "genl_op_iter_next", "genl_split_op_check"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unregister_mc_groups",
-    "callees": ["__builtin_constant_p", "__netlink_clear_multicast_users", "__rcu_read_lock", "__rcu_read_unlock", "genl_ctrl_event", "netlink_table_grab", "netlink_table_ungrab"],
-    "global_reads": ["mc_groups"],
-    "global_writes": []
-  },
-  {
-    "name": "genl_validate_assign_mc_groups",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__netlink_change_ngroups", "__rcu_read_lock", "__rcu_read_unlock", "genl_allocate_reserve_groups", "memchr", "netlink_change_ngroups", "netlink_table_grab", "netlink_table_ungrab", "strcmp"],
-    "global_reads": ["mc_groups", "mc_groups_longs"],
-    "global_writes": []
-  },
-  {
-    "name": "genl_allocate_reserve_groups",
-    "callees": ["__builtin_constant_p", "find_first_zero_bit", "find_next_zero_bit", "krealloc", "kzalloc"],
-    "global_reads": ["mc_group_start", "mc_groups", "mc_groups_longs"],
-    "global_writes": ["mc_groups", "mc_groups_longs"]
-  },
-  {
-    "name": "genl_op_iter_next",
-    "callees": ["genl_cmd_full_to_split", "genl_op_from_full", "genl_op_from_small", "genl_op_from_split"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd_both",
-    "callees": ["genl_get_cmd"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd",
-    "callees": ["genl_cmd_full_to_split", "genl_get_cmd_full", "genl_get_cmd_small", "genl_get_cmd_split", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_cmd_full_to_split",
-    "callees": ["memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd_split",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "genl_op_from_split",
-    "callees": ["__builtin_expect", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd_small",
-    "callees": ["genl_op_from_small"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_from_small",
-    "callees": ["memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_get_cmd_full",
-    "callees": ["genl_op_from_full"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_op_from_full",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "genl_family_find_byname",
-    "callees": ["idr_get_next", "strcmp"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unlock_all",
-    "callees": ["mutex_unlock", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_lock_all",
-    "callees": ["down_write", "mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_unlock",
-    "callees": ["mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genl_lock",
-    "callees": ["mutex_lock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "genlmsg_reply",
-    "callees": ["netlink_unicast"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_nest_start_noflag",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nla_put_string",
-    "callees": ["nla_put", "strlen"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_trim",
-    "callees": ["__builtin_expect", "skb_trim"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "nlmsg_put",
-    "callees": ["__builtin_expect", "__nlmsg_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__nlmsg_parse",
-    "callees": ["__nla_parse", "do_trace_netlink_extack"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_first_zero_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "_find_first_zero_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_next_zero_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_zero_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__arch_hweight8",
+    "name": "",
     "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_update_needs_vtd_wa",
+    "callees": ["i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vm_no_concurrent_access_wa",
+    "callees": ["intel_ggtt_update_needs_vtd_wa"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_pt_dma",
+    "callees": ["__builtin_expect", "i915_gem_object_make_unshrinkable", "i915_gem_object_pin_map_unlocked", "intel_gt_coherent_map_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__vm_create_scratch_for_read_pinned",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__vm_create_scratch_for_read", "i915_vma_pin", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__vm_create_scratch_for_read",
+    "callees": ["__builtin_expect", "i915_gem_object_create_internal", "i915_gem_object_set_cache_coherency", "i915_vma_instance", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_private_pat",
+    "callees": ["bdw_setup_private_ppat", "chv_setup_private_ppat", "icl_setup_private_ppat", "tgl_setup_private_ppat", "xehp_setup_private_ppat", "xelpg_setup_private_ppat", "xelpmp_setup_private_ppat"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "chv_setup_private_ppat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bdw_setup_private_ppat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icl_setup_private_ppat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xehp_setup_private_ppat",
+    "callees": ["intel_gt_mcr_lock", "intel_gt_mcr_multicast_write_fw", "intel_gt_mcr_unlock", "intel_uncore_forcewake_for_reg", "intel_uncore_forcewake_get", "intel_uncore_forcewake_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tgl_setup_private_ppat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xelpg_setup_private_ppat",
+    "callees": ["intel_gt_mcr_multicast_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xelpmp_setup_private_ppat",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gtt_write_workarounds",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "intel_uncore_rmw"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "free_scratch",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "setup_scratch_page",
+    "callees": ["__builtin_clzll", "__builtin_constant_p", "__builtin_expect", "kref_put", "map_pt_dma", "poison_scratch_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "poison_scratch_page",
+    "callees": ["drm_clflush_virt_range", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fill_page_dma",
+    "callees": ["drm_clflush_virt_range"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__px_page",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__px_dma",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__px_vaddr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_address_space_init",
+    "callees": ["__SCT__might_resched", "__mutex_init", "dma_resv_init", "drm_mm_init", "i915_gem_shrinker_taints_mutex", "intel_vm_no_concurrent_access_wa"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_release",
+    "callees": ["queue_work_on", "trace_i915_ppgtt_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_vm_release",
+    "callees": ["__i915_vm_close", "drm_mm_takedown", "i915_vma_resource_bind_dep_sync_all", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_resv_release",
+    "callees": ["dma_resv_fini", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_address_space_fini",
+    "callees": ["drm_mm_takedown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vm_lock_objects",
+    "callees": ["i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_vm_close",
+    "callees": ["clear_vm_list", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "clear_vm_list",
+    "callees": ["__builtin_expect", "__i915_vma_unbind", "__refcount_add", "i915_gem_object_get_rcu", "i915_vma_destroy_locked", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_pt_dma_locked",
+    "callees": ["__builtin_expect", "i915_gem_object_make_unshrinkable", "i915_gem_object_pin_map", "intel_gt_coherent_map_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "map_pt_dma",
+    "callees": ["__builtin_expect", "i915_gem_object_make_unshrinkable", "i915_gem_object_pin_map_unlocked", "intel_gt_coherent_map_type"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pt_dma",
+    "callees": ["__builtin_expect", "__refcount_add", "i915_gem_object_create_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alloc_pt_lmem",
+    "callees": ["__builtin_expect", "__i915_gem_object_create_lmem_with_ps", "__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_vm_no_concurrent_access_wa",
+    "callees": ["intel_ggtt_update_needs_vtd_wa"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_ggtt_update_needs_vtd_wa",
+    "callees": ["i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_i915_ppgtt_release",
+    "callees": ["__SCT__tp_func_i915_ppgtt_release", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_lock",
+    "callees": ["__i915_gem_object_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_gem_object_lock",
+    "callees": ["__refcount_add", "ww_mutex_lock", "ww_mutex_lock_interruptible"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_gem_object_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

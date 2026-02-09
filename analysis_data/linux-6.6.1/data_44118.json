@@ -1,31 +1,55 @@
 [
   {
-    "name": "acpi_ps_get_arg",
-    "callees": ["acpi_ps_get_opcode_info"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ps_get_arg",
-    "callees": ["acpi_ps_get_opcode_info"],
+    "name": "hid_lookup_quirk",
+    "callees": ["hid_exists_dquirk", "hid_gets_squirk", "mutex_lock", "mutex_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ps_get_depth_next",
-    "callees": ["acpi_ps_get_arg"],
+    "name": "hid_gets_squirk",
+    "callees": ["hid_match_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ps_append_arg",
-    "callees": ["acpi_error", "acpi_ps_get_opcode_info"],
+    "name": "hid_quirks_exit",
+    "callees": ["hid_remove_all_dquirks"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ps_get_arg",
-    "callees": ["acpi_ps_get_opcode_info"],
+    "name": "hid_quirks_init",
+    "callees": ["_printk", "hid_modify_dquirk", "sscanf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_remove_all_dquirks",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_modify_dquirk",
+    "callees": ["__builtin_return_address", "hid_match_one_id", "kfree", "kmalloc_trace", "kzalloc", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_exists_dquirk",
+    "callees": ["hid_match_one_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "hid_ignore",
+    "callees": ["hid_match_id", "strcmp", "strlen", "strncmp"],
     "global_reads": [],
     "global_writes": []
   }

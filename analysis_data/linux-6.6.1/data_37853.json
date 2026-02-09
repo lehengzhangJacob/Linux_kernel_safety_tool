@@ -1,67 +1,151 @@
 [
   {
-    "name": "xz_dec_bcj_reset",
+    "name": "core_siblings_read",
+    "callees": ["bitmap_print_bitmask_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "thread_siblings_list_read",
+    "callees": ["bitmap_print_list_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "thread_siblings_read",
+    "callees": ["bitmap_print_bitmask_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "core_siblings_list_read",
+    "callees": ["bitmap_print_list_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "topology_sysfs_init",
+    "callees": ["__cpuhp_setup_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "topology_remove_dev",
+    "callees": ["get_cpu_device", "sysfs_remove_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "topology_add_dev",
+    "callees": ["get_cpu_device", "sysfs_create_group"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "topology_is_visible",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "xz_dec_bcj_create",
-    "callees": ["__builtin_return_address", "kmalloc_trace"],
+    "name": "package_cpus_list_read",
+    "callees": ["core_siblings_list_read"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "xz_dec_bcj_run",
-    "callees": ["bcj_apply", "bcj_flush", "memcpy", "xz_dec_lzma2_run"],
+    "name": "package_cpus_read",
+    "callees": ["core_siblings_read"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_flush",
-    "callees": ["memcpy", "memmove"],
+    "name": "die_cpus_list_read",
+    "callees": ["bitmap_print_list_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "die_cpus_read",
+    "callees": ["bitmap_print_bitmask_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cluster_cpus_list_read",
+    "callees": ["bitmap_print_list_to_buf", "cpu_clustergroup_mask"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "cluster_cpus_read",
+    "callees": ["bitmap_print_bitmask_to_buf", "cpu_clustergroup_mask"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "core_siblings_list_read",
+    "callees": ["bitmap_print_list_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "core_siblings_read",
+    "callees": ["bitmap_print_bitmask_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "core_cpus_list_read",
+    "callees": ["thread_siblings_list_read"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_apply",
-    "callees": ["bcj_arm", "bcj_armthumb", "bcj_ia64", "bcj_powerpc", "bcj_sparc", "bcj_x86"],
+    "name": "core_cpus_read",
+    "callees": ["thread_siblings_read"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_sparc",
-    "callees": ["__builtin_bswap32"],
+    "name": "thread_siblings_list_read",
+    "callees": ["bitmap_print_list_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "thread_siblings_read",
+    "callees": ["bitmap_print_bitmask_to_buf"],
+    "global_reads": ["nr_cpu_ids"],
+    "global_writes": []
+  },
+  {
+    "name": "ppin_show",
+    "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_armthumb",
-    "callees": [],
+    "name": "core_id_show",
+    "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_arm",
-    "callees": [],
+    "name": "cluster_id_show",
+    "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_ia64",
-    "callees": [],
+    "name": "die_id_show",
+    "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "bcj_powerpc",
-    "callees": ["__builtin_bswap32"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "bcj_x86",
-    "callees": [],
+    "name": "physical_package_id_show",
+    "callees": ["sysfs_emit"],
     "global_reads": [],
     "global_writes": []
   }

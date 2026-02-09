@@ -1,5 +1,35 @@
 [
   {
+    "name": "focaltech_reset",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_reset",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_reset",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_reset",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
     "name": "",
     "callees": [],
     "global_reads": [],
@@ -12,80 +42,110 @@
     "global_writes": []
   },
   {
-    "name": "acpi_ds_delete_walk_state",
-    "callees": ["acpi_error", "acpi_ps_cleanup_scope", "acpi_ut_delete_generic_state", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ds_init_aml_walk",
-    "callees": ["acpi_ds_init_callbacks", "acpi_ds_method_data_init_args", "acpi_ds_scope_stack_push", "acpi_ns_get_attached_object", "acpi_ps_init_scope"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ds_create_walk_state",
-    "callees": ["acpi_ds_method_data_init", "acpi_os_allocate_zeroed"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ds_pop_walk_state",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_push_walk_state",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_get_current_walk_state",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_obj_stack_pop_and_delete",
-    "callees": ["acpi_ut_remove_reference"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_obj_stack_pop",
-    "callees": ["acpi_error"],
+    "name": "focaltech_init",
+    "callees": ["_dev_err", "focaltech_read_size", "focaltech_reset", "focaltech_set_input_params", "focaltech_switch_protocol", "kfree", "kzalloc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_obj_stack_push",
-    "callees": ["acpi_error"],
+    "name": "focaltech_set_scale",
+    "callees": ["focaltech_set_resolution"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_result_stack_pop",
-    "callees": ["acpi_error", "acpi_ut_delete_generic_state", "acpi_ut_pop_generic_state"],
+    "name": "focaltech_set_rate",
+    "callees": ["focaltech_set_resolution"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_result_stack_push",
-    "callees": ["acpi_error", "acpi_ut_create_generic_state", "acpi_ut_push_generic_state"],
+    "name": "focaltech_set_resolution",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_result_push",
-    "callees": ["acpi_ds_result_stack_push", "acpi_error"],
+    "name": "focaltech_read_size",
+    "callees": ["focaltech_read_register"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ds_result_pop",
-    "callees": ["acpi_ds_result_stack_pop", "acpi_error"],
+    "name": "focaltech_reconnect",
+    "callees": ["_dev_err", "focaltech_reset", "focaltech_switch_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_disconnect",
+    "callees": ["focaltech_reset", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_reset",
+    "callees": ["ps2_command", "psmouse_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_switch_protocol",
+    "callees": ["ps2_command"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_process_byte",
+    "callees": ["focaltech_process_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_process_packet",
+    "callees": ["_dev_err", "focaltech_process_abs_packet", "focaltech_process_rel_packet", "focaltech_process_touch_packet", "focaltech_report_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_process_rel_packet",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_process_abs_packet",
+    "callees": ["_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "focaltech_detect",
+    "callees": ["psmouse_matches_pnp_id"],
     "global_reads": [],
     "global_writes": []
   }

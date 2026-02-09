@@ -1,361 +1,97 @@
 [
   {
-    "name": "",
-    "callees": [],
+    "name": "v9fs_sysfs_cleanup",
+    "callees": ["kobject_put", "sysfs_remove_group"],
+    "global_reads": ["v9fs_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_destroy_inode_cache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["v9fs_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "exit_v9fs",
+    "callees": ["unregister_filesystem", "v9fs_destroy_inode_cache", "v9fs_sysfs_cleanup"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fatal_signal_pending",
-    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "name": "init_v9fs",
+    "callees": ["_printk", "register_filesystem", "v9fs_destroy_inode_cache", "v9fs_init_inode_cache", "v9fs_sysfs_cleanup", "v9fs_sysfs_init"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ptrace_report_syscall.part.0",
-    "callees": ["fatal_signal_pending"],
+    "name": "v9fs_destroy_inode_cache",
+    "callees": ["kmem_cache_destroy", "rcu_barrier"],
+    "global_reads": ["v9fs_inode_cache"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_init_inode_cache",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["v9fs_inode_cache"]
+  },
+  {
+    "name": "v9fs_inode_init_once",
+    "callees": ["inode_init_once", "memset"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ptrace_report_syscall",
-    "callees": ["ptrace_notify", "ptrace_report_syscall.part.0", "send_sig"],
+    "name": "v9fs_sysfs_cleanup",
+    "callees": ["kobject_put", "sysfs_remove_group"],
+    "global_reads": ["v9fs_kobj"],
+    "global_writes": []
+  },
+  {
+    "name": "v9fs_sysfs_init",
+    "callees": ["kobject_create_and_add", "kobject_put", "sysfs_create_group"],
+    "global_reads": ["fs_kobj", "v9fs_kobj"],
+    "global_writes": ["v9fs_kobj"]
+  },
+  {
+    "name": "v9fs_session_begin_cancel",
+    "callees": ["p9_client_begin_disconnect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "syscall_get_arguments.part.0",
-    "callees": [],
+    "name": "v9fs_session_cancel",
+    "callees": ["p9_client_disconnect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "syscall_get_arguments",
-    "callees": ["syscall_get_arguments.part.0"],
+    "name": "v9fs_session_close",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "kfree", "p9_client_destroy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "syscall_get_arguments.part.0",
-    "callees": [],
+    "name": "v9fs_session_init",
+    "callees": ["__builtin_expect", "__init_rwsem", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kstrdup", "p9_client_attach", "p9_client_create", "p9_client_destroy", "p9_is_proto_dotl", "p9_is_proto_dotu", "v9fs_parse_options"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "syscall_get_arguments",
-    "callees": ["syscall_get_arguments.part.0"],
+    "name": "v9fs_parse_options",
+    "callees": ["_printk", "get_cache_mode", "kfree", "kstrdup", "kstrtouint", "match_int", "match_strdup", "match_token", "strcmp", "strsep"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "syscall_exit_to_user_mode_prepare",
-    "callees": ["__builtin_expect", "syscall_exit_work"],
-    "global_reads": [],
+    "name": "v9fs_show_options",
+    "callees": ["p9_show_client_options", "seq_printf", "seq_puts", "strcmp"],
+    "global_reads": ["overflowgid", "overflowuid"],
     "global_writes": []
   },
   {
-    "name": "cpu_online",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "raw_irqentry_exit_cond_resched.part.0",
-    "callees": ["__builtin_expect", "preempt_schedule_irq"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ptrace_report_syscall.part.0",
-    "callees": ["fatal_signal_pending"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_get_arguments.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "raw_irqentry_exit_cond_resched",
-    "callees": ["raw_irqentry_exit_cond_resched.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_exit_to_user_mode",
-    "callees": ["__builtin_expect", "__builtin_return_address", "amd_clear_divider", "exit_to_user_mode_prepare"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_enter_from_user_mode",
-    "callees": ["__builtin_return_address"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_exit_to_user_mode",
-    "callees": ["__builtin_expect", "__builtin_return_address", "amd_clear_divider", "exit_to_user_mode_prepare", "syscall_exit_to_user_mode_prepare"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_exit_to_user_mode_work",
-    "callees": ["exit_to_user_mode_prepare", "syscall_exit_to_user_mode_prepare"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_exit_to_user_mode_prepare",
-    "callees": ["__builtin_expect", "syscall_exit_work"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_exit_work",
-    "callees": ["__builtin_expect", "audit_syscall_exit", "ptrace_report_syscall_exit", "trace_sys_exit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "exit_to_user_mode_prepare",
-    "callees": ["__builtin_expect", "arch_exit_to_user_mode_prepare", "exit_to_user_mode_loop"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "exit_to_user_mode_loop",
-    "callees": ["arch_do_signal_or_restart", "resume_user_mode_work", "schedule", "uprobe_notify_resume"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "arch_do_signal_or_restart",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "exit_to_user_mode",
-    "callees": ["__builtin_expect", "__builtin_return_address", "amd_clear_divider"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_enter_from_user_mode_prepare",
-    "callees": ["__builtin_return_address"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_enter_from_user_mode",
-    "callees": ["__builtin_return_address", "syscall_trace_enter"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_enter_from_user_mode_work",
-    "callees": ["syscall_trace_enter"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_enter_audit",
-    "callees": ["__builtin_expect", "audit_syscall_entry", "syscall_get_arguments"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "enter_from_user_mode",
-    "callees": ["__builtin_return_address"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "perf_trace_sys_exit",
-    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "perf_trace_sys_enter",
-    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit", "syscall_get_arguments"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_event_raw_event_sys_exit",
-    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_event_raw_event_sys_enter",
-    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "syscall_get_arguments", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_raw_output_sys_exit",
-    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_raw_output_sys_enter",
-    "callees": ["trace_event_printf", "trace_handle_return", "trace_raw_output_prep"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_init_flags_sys_exit",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_init_flags_sys_enter",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__probestub_sys_exit",
-    "callees": ["__probestub_sys_enter"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__traceiter_sys_exit",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__probestub_sys_enter",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__traceiter_sys_enter",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_sys_exit",
-    "callees": ["__SCT__tp_func_sys_exit", "__builtin_expect", "cpu_online"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "trace_sys_enter",
-    "callees": ["__SCT__tp_func_sys_enter", "__builtin_expect", "cpu_online"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "audit_syscall_exit",
-    "callees": ["__audit_syscall_exit", "__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "audit_syscall_entry",
-    "callees": ["__audit_syscall_entry", "__builtin_expect"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "syscall_get_arguments",
-    "callees": ["syscall_get_arguments.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "resume_user_mode_work",
-    "callees": ["__builtin_expect", "blkcg_maybe_throttle_current", "rseq_handle_notify_resume", "task_work_run"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_nmi_exit",
-    "callees": ["__builtin_expect", "__builtin_return_address", "__builtin_unreachable", "ct_nmi_exit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_nmi_enter",
-    "callees": ["__builtin_expect", "__builtin_return_address", "__builtin_unreachable", "ct_nmi_enter"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_exit",
-    "callees": ["__SCT__irqentry_exit_cond_resched", "__builtin_return_address", "ct_irq_exit", "irqentry_exit_to_user_mode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "irqentry_enter",
-    "callees": ["__builtin_return_address", "ct_irq_enter"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ptrace_report_syscall_exit",
-    "callees": ["ptrace_report_syscall", "user_single_step_report"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ptrace_report_syscall",
-    "callees": ["ptrace_notify", "ptrace_report_syscall.part.0", "send_sig"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fatal_signal_pending",
-    "callees": ["__builtin_expect", "test_ti_thread_flag"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "cpu_online",
-    "callees": ["__builtin_constant_p"],
+    "name": "get_cache_mode",
+    "callees": ["_printk", "kstrtoint", "strcmp"],
     "global_reads": [],
     "global_writes": []
   }

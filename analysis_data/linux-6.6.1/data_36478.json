@@ -1,11 +1,5 @@
 [
   {
-    "name": "cpu_online",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
     "name": "",
     "callees": [],
     "global_reads": [],
@@ -18,32 +12,50 @@
     "global_writes": []
   },
   {
-    "name": "ext4_sync_file",
-    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "blkdev_issue_flush", "ext4_fsync_journal", "ext4_fsync_nojournal", "file_check_and_advance_wb_err", "file_write_and_wait_range", "trace_ext4_sync_file_enter", "trace_ext4_sync_file_exit"],
+    "name": "acpi_pci_irq_disable",
+    "callees": ["acpi_pci_irq_lookup", "acpi_pci_link_free_irq", "acpi_unregister_gsi", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ext4_sync_parent",
-    "callees": ["d_find_any_alias", "dget_parent", "dput", "sync_inode_metadata", "sync_mapping_buffers"],
+    "name": "acpi_pci_irq_enable",
+    "callees": ["_dev_warn", "acpi_pci_irq_lookup", "acpi_pci_irq_valid", "acpi_pci_link_allocate_irq", "acpi_register_gsi", "kfree", "snprintf"],
+    "global_reads": ["acpi_irq_model"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_valid",
+    "callees": ["_dev_warn"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "trace_ext4_sync_file_exit",
-    "callees": ["__SCT__tp_func_ext4_sync_file_exit", "__builtin_expect", "cpu_online"],
+    "name": "acpi_pci_irq_lookup",
+    "callees": ["_dev_warn", "acpi_pci_irq_find_prt_entry", "acpi_reroute_boot_interrupt", "pci_swizzle_interrupt_pin"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "trace_ext4_sync_file_enter",
-    "callees": ["__SCT__tp_func_ext4_sync_file_enter", "__builtin_expect", "cpu_online"],
+    "name": "bridge_has_boot_interrupt_variant",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "cpu_online",
-    "callees": ["__builtin_constant_p"],
+    "name": "acpi_pci_irq_find_prt_entry",
+    "callees": ["acpi_get_irq_routing_table", "acpi_pci_irq_check_entry", "is_acpi_device_node", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_pci_irq_check_entry",
+    "callees": ["acpi_get_handle", "do_prt_fixups", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "do_prt_fixups",
+    "callees": ["_printk", "dmi_check_system", "strcmp", "strcpy", "strlen"],
     "global_reads": [],
     "global_writes": []
   }

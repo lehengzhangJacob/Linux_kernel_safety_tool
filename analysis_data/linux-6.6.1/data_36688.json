@@ -6,14 +6,8 @@
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mmap_read_lock",
-    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
     "global_reads": [],
     "global_writes": []
   },
@@ -24,8 +18,104 @@
     "global_writes": []
   },
   {
-    "name": "mmap_read_unlock",
-    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_send_dst.part.0",
+    "callees": ["arp_create", "arp_xmit", "dst_hold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_send_dst",
+    "callees": ["arp_send_dst.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_set_proxy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_xmit_finish",
+    "callees": ["__dev_queue_xmit"],
     "global_reads": [],
     "global_writes": []
   },
@@ -48,32 +138,356 @@
     "global_writes": []
   },
   {
-    "name": "__do_sys_msync",
-    "callees": ["find_vma", "fput", "mmap_read_lock", "mmap_read_unlock", "vfs_fsync_range"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_msync",
-    "callees": ["__do_sys_msync"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_msync",
-    "callees": ["__do_sys_msync"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "mmap_read_unlock",
-    "callees": ["__mmap_lock_trace_released", "up_read"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "mmap_read_lock",
-    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_read"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_rcv.part.0",
+    "callees": ["NF_HOOK", "kfree_skb_reason", "memset", "pskb_may_pull_reason", "skb_share_check"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_send_dst.part.0",
+    "callees": ["arp_create", "arp_xmit", "dst_hold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_init",
+    "callees": ["dev_add_pack", "neigh_sysctl_register", "neigh_table_init", "register_netdevice_notifier", "register_pernet_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_net_exit",
+    "callees": ["remove_proc_entry"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_net_init",
+    "callees": ["proc_create_net_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_seq_start",
+    "callees": ["neigh_seq_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_seq_show",
+    "callees": ["arp_format_neigh_entry", "arp_format_pneigh_entry", "seq_puts"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_format_pneigh_entry",
+    "callees": ["seq_printf", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_format_neigh_entry",
+    "callees": ["_raw_read_lock", "_raw_read_unlock", "seq_printf", "sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_ifdown",
+    "callees": ["neigh_ifdown"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_netdev_event",
+    "callees": ["neigh_carrier_down", "neigh_changeaddr", "netif_carrier_ok", "rt_cache_flush"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_ioctl",
+    "callees": ["__dev_get_by_name", "_copy_from_user", "_copy_to_user", "arp_req_delete", "arp_req_get", "arp_req_set", "ns_capable", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_delete",
+    "callees": ["__builtin_expect", "arp_invalidate", "arp_req_delete_public", "dst_release", "ip_route_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_delete_public",
+    "callees": ["arp_req_set_proxy", "pneigh_delete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_invalidate",
+    "callees": ["_raw_write_lock_bh", "_raw_write_unlock_bh", "neigh_lookup", "neigh_release", "neigh_remove_one", "neigh_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_get",
+    "callees": ["_raw_read_lock_bh", "_raw_read_unlock_bh", "memcpy", "neigh_lookup", "neigh_release", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_set",
+    "callees": ["__builtin_expect", "__neigh_lookup_errno", "arp_req_set_public", "dst_release", "ip_route_output", "neigh_release", "neigh_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_set_public",
+    "callees": ["arp_req_set_proxy", "dev_getbyhwaddr_rcu", "pneigh_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_req_set_proxy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_rcv",
+    "callees": ["arp_rcv.part.0", "consume_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_is_multicast",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "parp_redo",
+    "callees": ["arp_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_process",
+    "callees": ["__builtin_bswap16", "__neigh_lookup", "arp_accept", "arp_filter", "arp_fwd_proxy", "arp_ignore", "arp_is_garp", "arp_send_dst", "consume_skb", "dst_release", "inet_addr_type_dev_table", "ip_route_input_noref", "iptunnel_metadata_reply", "kfree_skb_reason", "neigh_event_ns", "neigh_release", "neigh_update", "pneigh_enqueue", "pneigh_lookup"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "arp_xmit",
+    "callees": ["NF_HOOK"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_xmit_finish",
+    "callees": ["__dev_queue_xmit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_create",
+    "callees": ["__alloc_skb", "__builtin_bswap16", "dev_hard_header", "kfree_skb_reason", "memcpy", "memset", "skb_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_filter",
+    "callees": ["__builtin_expect", "dst_release", "ip_route_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_accept",
+    "callees": ["inet_confirm_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_ignore",
+    "callees": ["inet_confirm_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_solicit",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "arp_send_dst", "inet_addr_onlink", "inet_addr_type_dev_table", "inet_select_addr", "neigh_app_ns", "neigh_ha_snapshot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_send",
+    "callees": ["arp_send_dst"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_send_dst",
+    "callees": ["arp_send_dst.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_error_report",
+    "callees": ["dst_link_failure", "kfree_skb_reason"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_constructor",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "__refcount_add", "__refcount_dec", "arp_mc_map", "inet_addr_type_dev_table", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_key_eq",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_hash",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arp_mc_map",
+    "callees": ["__builtin_bswap32", "ip_ib_mc_map", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_ib_mc_map",
+    "callees": ["__builtin_bswap32"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_link_failure",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_ha_snapshot",
+    "callees": ["__builtin_expect", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "netif_carrier_ok",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pskb_may_pull_reason",
+    "callees": ["__builtin_expect", "__pskb_pull_tail"],
     "global_reads": [],
     "global_writes": []
   }

@@ -1,535 +1,139 @@
 [
   {
-    "name": "",
+    "name": "drm_simple_display_pipe_init",
+    "callees": ["drm_connector_attach_encoder", "drm_crtc_init_with_planes", "drm_encoder_init", "drm_universal_plane_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_display_pipe_attach_bridge",
+    "callees": ["drm_bridge_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_destroy_state",
+    "callees": ["drm_atomic_helper_plane_destroy_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_duplicate_state",
+    "callees": ["drm_atomic_helper_plane_duplicate_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_reset",
+    "callees": ["drm_atomic_helper_plane_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_format_mod_supported",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "drm_simple_kms_plane_end_fb_access",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "iommu_pmu_stop",
-    "callees": ["ecmd_submit_sync", "iommu_pmu_event_update"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_cpuhp_free.part.0",
-    "callees": ["__cpuhp_remove_state"],
-    "global_reads": ["iommu_cpuhp_slot"],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_cpuhp_free",
-    "callees": ["__cpuhp_state_remove_instance", "iommu_pmu_cpuhp_free.part.0"],
-    "global_reads": ["iommu_cpuhp_slot", "nr_iommu_pmu"],
-    "global_writes": ["nr_iommu_pmu"]
-  },
-  {
-    "name": "filter_ats_en_is_visible",
+    "name": "drm_simple_kms_plane_begin_fb_access",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "filter_pasid_en_is_visible",
+    "name": "drm_simple_kms_plane_cleanup_fb",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "filter_domain_en_is_visible",
+    "name": "drm_simple_kms_plane_prepare_fb",
+    "callees": ["__builtin_expect", "drm_gem_plane_helper_prepare_fb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_plane_atomic_update",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "filter_requester_id_en_is_visible",
+    "name": "drm_simple_kms_plane_atomic_check",
+    "callees": ["drm_atomic_helper_check_plane_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_disable_vblank",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "filter_page_table_en_is_visible",
+    "name": "drm_simple_kms_crtc_enable_vblank",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "find_next_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "name": "drm_simple_kms_crtc_destroy_state",
+    "callees": ["drm_atomic_helper_crtc_destroy_state"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "drm_simple_kms_crtc_duplicate_state",
+    "callees": ["drm_atomic_helper_crtc_duplicate_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_reset",
+    "callees": ["drm_atomic_helper_crtc_reset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_disable",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "drm_simple_kms_crtc_enable",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "drm_simple_kms_crtc_check",
+    "callees": ["drm_atomic_add_affected_planes", "drm_atomic_helper_check_crtc_primary_plane"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drm_simple_kms_crtc_mode_valid",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "__drmm_simple_encoder_alloc",
+    "callees": ["__drmm_encoder_alloc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_cpuhp_free.part.0",
-    "callees": ["__cpuhp_remove_state"],
-    "global_reads": ["iommu_cpuhp_slot"],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_irq_handler.part.0",
-    "callees": ["iommu_pmu_counter_overflow"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_unregister",
-    "callees": ["iommu_pmu_cpuhp_free", "iommu_pmu_unset_interrupt", "perf_pmu_unregister"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_register",
-    "callees": ["__iommu_pmu_register", "_printk", "free_iommu_pmu", "iommu_pmu_cpuhp_free", "iommu_pmu_cpuhp_setup", "iommu_pmu_set_interrupt", "perf_pmu_unregister"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_cpuhp_free",
-    "callees": ["__cpuhp_state_remove_instance", "iommu_pmu_cpuhp_free.part.0"],
-    "global_reads": ["iommu_cpuhp_slot", "nr_iommu_pmu"],
-    "global_writes": ["nr_iommu_pmu"]
-  },
-  {
-    "name": "iommu_pmu_cpuhp_setup",
-    "callees": ["__cpuhp_remove_state", "__cpuhp_setup_state", "__cpuhp_state_add_instance"],
-    "global_reads": ["iommu_cpuhp_slot", "nr_iommu_pmu"],
-    "global_writes": ["iommu_cpuhp_slot", "nr_iommu_pmu"]
-  },
-  {
-    "name": "iommu_pmu_cpu_offline",
-    "callees": ["__builtin_constant_p", "cpumask_any_but", "find_first_bit", "perf_pmu_migrate_context"],
-    "global_reads": ["nr_cpu_ids"],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_cpu_online",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_unset_interrupt",
-    "callees": ["dmar_free_hwirq", "free_irq"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_set_interrupt",
-    "callees": ["dmar_alloc_hwirq", "dmar_free_hwirq", "request_threaded_irq", "snprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "free_iommu_pmu",
-    "callees": ["kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "alloc_iommu_pmu",
-    "callees": ["__builtin_expect", "_printk", "kfree", "kmalloc_array", "kzalloc"],
-    "global_reads": ["__already_done"],
-    "global_writes": ["__already_done"]
-  },
-  {
-    "name": "__iommu_pmu_register",
-    "callees": ["perf_pmu_register"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_irq_handler",
-    "callees": ["iommu_pmu_irq_handler.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_counter_overflow",
-    "callees": ["__builtin_expect", "_printk", "find_next_bit", "iommu_pmu_event_update"],
-    "global_reads": ["__already_done"],
-    "global_writes": ["__already_done"]
-  },
-  {
-    "name": "iommu_pmu_disable",
-    "callees": ["ecmd_submit_sync"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_enable",
-    "callees": ["ecmd_submit_sync"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_del",
-    "callees": ["__builtin_constant_p", "iommu_pmu_stop", "perf_event_update_userpage"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_add",
-    "callees": ["iommu_pmu_assign_event", "iommu_pmu_start"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_assign_event",
-    "callees": ["__builtin_constant_p", "iommu_pmu_validate_per_cntr_event"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_stop",
-    "callees": ["ecmd_submit_sync", "iommu_pmu_event_update"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_start",
-    "callees": ["__builtin_expect", "ecmd_submit_sync", "perf_event_update_userpage"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_event_update",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_pmu_event_init",
-    "callees": ["iommu_pmu_validate_group"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "int_cache_hit_posted_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "int_cache_hit_nonposted_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "int_cache_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "hpt_leaf_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "hpt_leaf_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iotlb_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iotlb_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "hpt_nonleaf_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "hpt_nonleaf_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fs_nonleaf_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fs_nonleaf_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ss_nonleaf_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ss_nonleaf_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pasid_cache_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pasid_cache_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctxt_cache_hit_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ctxt_cache_lookup_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pg_req_posted_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_mem_blocked_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_mrds_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ats_blocked_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pw_occupancy_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_requests_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "iommu_clocks_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_page_table_is_visible",
-    "callees": ["filter_page_table_en_is_visible"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_page_table_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_ats_is_visible",
-    "callees": ["filter_ats_en_is_visible"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_ats_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_pasid_is_visible",
-    "callees": ["filter_pasid_en_is_visible"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_pasid_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_domain_is_visible",
-    "callees": ["filter_domain_en_is_visible"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_domain_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_requester_id_is_visible",
-    "callees": ["filter_requester_id_en_is_visible"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_requester_id_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_page_table_en_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_page_table_en_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_ats_en_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_ats_en_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_pasid_en_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_pasid_en_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_domain_en_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_domain_en_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_requester_id_en_is_visible",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "filter_requester_id_en_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "cpumask_show",
-    "callees": ["bitmap_print_to_pagebuf"],
-    "global_reads": ["nr_cpu_ids"],
-    "global_writes": []
-  },
-  {
-    "name": "event_group_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "event_show",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_next_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "name": "drm_simple_encoder_init",
+    "callees": ["drm_encoder_init"],
     "global_reads": [],
     "global_writes": []
   }

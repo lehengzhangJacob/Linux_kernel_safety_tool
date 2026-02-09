@@ -1,6 +1,138 @@
 [
   {
+    "name": "quirk_disable_msi.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_ht_cap.part.0",
+    "callees": ["quirk_disable_msi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_ht_cap",
+    "callees": ["msi_ht_cap_enabled", "quirk_msi_ht_cap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6_resume_early",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["asus_hides_smbus", "asus_rcba_base"],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6_resume",
+    "callees": ["__builtin_expect", "_dev_info", "iounmap"],
+    "global_reads": ["asus_hides_smbus", "asus_rcba_base"],
+    "global_writes": ["asus_rcba_base"]
+  },
+  {
+    "name": "quirk_disable_msi.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c586_acpi.part.0",
+    "callees": ["quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c586_acpi",
+    "callees": ["quirk_vt82c586_acpi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_msi.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ich6_lpc_generic_decode",
+    "callees": ["_dev_info", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
     "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_radeon_pm.part.0",
+    "callees": ["quirk_d3hot_delay.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_hda_pm",
+    "callees": ["quirk_nvidia_hda_pm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_device",
+    "callees": ["pci_do_fixups"],
+    "global_reads": ["pci_apply_fixup_final_quirks"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_pch_acs_match.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_pch_acs_match",
+    "callees": ["pci_quirk_intel_pch_acs_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_radeon_pm.part.0",
+    "callees": ["quirk_d3hot_delay.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nv_msi_ht_cap_quirk",
+    "callees": ["__nv_msi_ht_cap_quirk.part.0", "pci_msi_enabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_xgene_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_xgene_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_pcie_mch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_xgene_acs",
     "callees": [],
     "global_reads": [],
     "global_writes": []
@@ -36,314 +168,1412 @@
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "quirk_reset_lenovo_thinkpad_p50_nvgpu.part.0",
+    "callees": ["_dev_err", "_dev_info", "ioread32", "iounmap", "pci_disable_device", "pci_iomap", "pci_reset_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_switchtec_ntb_dma_alias.part.0",
+    "callees": ["_dev_err", "_dev_info", "_dev_warn", "ioread16", "ioread32", "ioread8", "pci_add_dma_alias", "pci_disable_device", "pci_iomap", "pci_iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "delay_250ms_after_flr.part.0",
+    "callees": ["pcie_reset_flr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mellanox_check_broken_intx_masking.part.0",
+    "callees": ["_dev_warn", "ioread32be", "ioremap", "iounmap", "pci_disable_device", "pci_enable_device_mem"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_igfx_irq.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__nv_msi_ht_cap_quirk.part.0",
+    "callees": ["_dev_warn", "ht_check_msi_mapping", "ht_disable_msi_mapping", "ht_enable_msi_mapping", "nv_ht_enable_msi_mapping", "pci_dev_put", "pci_find_ht_capability", "pci_get_domain_bus_and_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nvenet_msi_disable.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_ht_cap.part.0",
+    "callees": ["quirk_disable_msi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_brcm_5719_limit_mrrs.part.0",
+    "callees": ["pcie_set_readrq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_reroute_to_boot_interrupts_intel.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_alder_ioapic.part.0",
+    "callees": ["insert_resource", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_amd_8111_boot_interrupt.part.0",
+    "callees": ["_dev_info", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_msi.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_ioapic.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c586_acpi.part.0",
+    "callees": ["quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_p64h2_1k_io.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nopciamd.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_amd_harvest_no_ats.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_intx_disable_qca_bug.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_rev1_53c810.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_plx_pci9050.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_radeon_pm.part.0",
+    "callees": ["quirk_d3hot_delay.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_jmicron_async_suspend.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_natoma.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_alimagik.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_vsfx.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_viaetbf.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_triton.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_nopcipci.part.0",
+    "callees": ["_dev_info"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": ["pci_pci_problems"]
+  },
+  {
+    "name": "quirk_no_flr_snet.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "pci_quirk_intel_pch_acs_match.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "native_read_msr",
-    "callees": ["do_trace_read_msr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "quirk_use_pcie_bridge_dma_alias.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "quirk_thunderbolt_hotplug_msi.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "quirk_nvidia_no_bus_reset.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "native_read_msr",
-    "callees": ["do_trace_read_msr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "quirk_tc86c001_ide.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
+    "name": "aspm_l1_acceptable_latency",
+    "callees": ["_dev_info"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "rom_bar_overlap_defect",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nvidia_ion_ahci_fixup",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
+    "name": "pci_fixup_pericom_acs_store_forward",
+    "callees": ["_dev_info", "pci_read_config_word", "pci_write_config_word"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_write_msr",
-    "callees": ["do_trace_write_msr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_disable_event",
-    "callees": ["native_write_msr_safe"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_should_swap_ts",
-    "callees": ["p4_ht_thread.part.0"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_should_swap_ts",
-    "callees": ["p4_ht_thread.part.0"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "",
+    "name": "apex_pci_fixup_class",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "pci_fixup_no_msi_no_pme",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_fixup_no_d0_pme",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_reset_lenovo_thinkpad_p50_nvgpu",
+    "callees": ["pci_enable_device_mem", "pci_reset_supported", "quirk_reset_lenovo_thinkpad_p50_nvgpu.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_plx_ntb_dma_alias",
+    "callees": ["_dev_info", "pci_add_dma_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_switchtec_ntb_dma_alias",
+    "callees": ["_dev_err", "pci_enable_device", "quirk_switchtec_ntb_dma_alias.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_idt_bus_quirk",
+    "callees": ["pci_bus_generic_read_dev_vendor_id", "pci_bus_write_config_word", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_hda",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_gpu_usb_typec_ucsi",
+    "callees": ["pci_create_device_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_gpu_usb",
+    "callees": ["pci_create_device_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_gpu_hda",
+    "callees": ["pci_create_device_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_fsl_no_msi",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_ht_thread.part.0",
-    "callees": ["find_first_bit"],
+    "name": "quirk_amd_harvest_no_ats",
+    "callees": ["quirk_amd_harvest_no_ats.part.0"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_pmu_init",
-    "callees": ["_printk", "native_read_msr", "native_write_msr_safe", "x86_pmu_config_addr"],
-    "global_reads": [],
-    "global_writes": ["x86_pmu"]
-  },
-  {
-    "name": "ht_show",
-    "callees": ["sprintf"],
+    "name": "quirk_no_ext_tags",
+    "callees": ["_dev_info", "pci_find_host_bridge", "pci_walk_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "escr_show",
-    "callees": ["sprintf"],
+    "name": "quirk_no_flr_snet",
+    "callees": ["quirk_no_flr_snet.part.0"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "cccr_show",
-    "callees": ["sprintf"],
+    "name": "quirk_no_flr",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_pmu_schedule_events",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "memset", "p4_get_alias_event", "p4_get_escr_idx", "p4_ht_thread.part.0", "p4_next_cntr", "p4_pmu_swap_config_ts", "p4_should_swap_ts"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_next_cntr",
-    "callees": ["__builtin_constant_p"],
+    "name": "quirk_intel_qat_vf_cap",
+    "callees": ["kzalloc", "pci_find_capability", "pci_find_saved_cap", "pci_read_config_byte", "pci_read_config_dword", "pci_read_config_word", "pcie_capability_read_word"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_get_escr_idx",
-    "callees": ["__builtin_expect", "__warn_printk"],
-    "global_reads": ["__already_done"],
+    "name": "pci_dev_specific_disable_acs_redir",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_specific_enable_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_disable_intel_spt_pch_acs_redir",
+    "callees": ["_dev_info", "pci_quirk_intel_spt_pch_acs_match", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_enable_intel_spt_pch_acs",
+    "callees": ["_dev_info", "pci_ats_disabled", "pci_quirk_intel_spt_pch_acs_match", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_enable_intel_pch_acs",
+    "callees": ["_dev_info", "_dev_warn", "pci_quirk_enable_intel_lpc_acs", "pci_quirk_enable_intel_rp_mpc_acs", "pci_quirk_intel_pch_acs_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_enable_intel_rp_mpc_acs",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_enable_intel_lpc_acs",
+    "callees": ["_dev_info", "ioremap", "iounmap", "pci_bus_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_specific_acs_enabled",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_wangxun_nic_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_brcm_acs",
+    "callees": ["pci_quirk_xgene_acs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_rciep_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_mf_endpoint_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_spt_pch_acs",
+    "callees": ["pci_quirk_intel_spt_pch_acs_match", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_spt_pch_acs_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_al_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_nxp_rp_acs",
+    "callees": ["pci_quirk_xgene_acs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_qcom_rp_acs",
+    "callees": ["pci_quirk_xgene_acs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_pch_acs",
+    "callees": ["pci_quirk_intel_pch_acs_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_intel_pch_acs_match",
+    "callees": ["pci_quirk_intel_pch_acs_match.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_zhaoxin_pcie_ports_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_xgene_acs",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_cavium_acs",
+    "callees": ["pci_quirk_cavium_acs_match"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_cavium_acs_match",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_amd_sb_acs",
+    "callees": ["acpi_get_table", "acpi_put_table"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_chelsio_T5_disable_root_port_attributes",
+    "callees": ["quirk_disable_root_port_attributes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_root_port_attributes",
+    "callees": ["_dev_info", "_dev_warn", "pcie_capability_clear_and_set_word_unlocked", "pcie_find_root_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_relaxedordering_disable",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_tw686x_class",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_bridge_cavm_thrx2_pcie_root",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_pex_vca_alias",
+    "callees": ["pci_add_dma_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_mic_x200_dma_alias",
+    "callees": ["pci_add_dma_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_use_pcie_bridge_dma_alias",
+    "callees": ["quirk_use_pcie_bridge_dma_alias.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_fixed_dma_alias",
+    "callees": ["pci_add_dma_alias", "pci_match_id"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_dma_func1_alias",
+    "callees": ["pci_add_dma_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_dma_func0_alias",
+    "callees": ["pci_add_dma_alias"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_dev_specific_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_hinic_vf_dev",
+    "callees": ["_dev_warn", "ioread32be", "iowrite32be", "msleep", "pci_iomap", "pci_iounmap", "pci_write_config_word", "pcie_flr"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "delay_250ms_after_flr",
+    "callees": ["delay_250ms_after_flr.part.0", "msleep", "pcie_reset_flr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nvme_disable_and_flr",
+    "callees": ["_dev_warn", "msleep", "pci_iomap", "pci_iounmap", "pci_read_config_word", "pci_write_config_word", "pcie_flr", "pcie_reset_flr"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "reset_chelsio_generic_dev",
+    "callees": ["pci_read_config_word", "pci_restore_state", "pci_save_state", "pci_write_config_word", "pcie_flr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "reset_ivb_igd",
+    "callees": ["_dev_warn", "ioread32", "iowrite32", "msleep", "pci_iomap", "pci_iounmap"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "reset_intel_82599_sfp_virtfn",
+    "callees": ["pcie_flr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_apple_poweroff_thunderbolt",
+    "callees": ["_dev_info", "acpi_execute_simple_method", "acpi_get_handle", "is_acpi_device_node", "msleep"],
+    "global_reads": ["pm_suspend_global_flags", "x86_apple_machine"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_thunderbolt_hotplug_msi",
+    "callees": ["quirk_thunderbolt_hotplug_msi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_no_pm_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_no_bus_reset",
+    "callees": ["quirk_nvidia_no_bus_reset.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_no_bus_reset",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mellanox_check_broken_intx_masking",
+    "callees": ["mellanox_check_broken_intx_masking.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_broken_intx_masking",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_remove_d3hot_delay",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "disable_igfx_irq",
+    "callees": ["_dev_warn", "disable_igfx_irq.part.0", "pci_iomap", "pci_iounmap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_ntb",
+    "callees": ["pci_read_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_mc_errata",
+    "callees": ["__builtin_expect", "_dev_err", "_printk", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": ["__already_done", "pcie_bus_config"],
     "global_writes": ["__already_done"]
   },
   {
-    "name": "p4_pmu_swap_config_ts",
-    "callees": ["p4_ht_thread.part.0", "p4_should_swap_ts"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_handle_irq",
-    "callees": ["__SCT__apic_call_write", "__SCT__x86_pmu_set_period", "__builtin_constant_p", "__builtin_expect", "p4_pmu_clear_cccr_ovf", "perf_event_overflow", "x86_perf_event_update", "x86_pmu_stop"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_set_period",
-    "callees": ["native_write_msr", "x86_perf_event_set_period"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_enable_all",
-    "callees": ["__builtin_constant_p", "__p4_pmu_enable_event"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_enable_event",
-    "callees": ["__p4_pmu_enable_event"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__p4_pmu_enable_event",
-    "callees": ["__builtin_expect", "native_write_msr_safe", "p4_pmu_enable_pebs"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_enable_pebs",
-    "callees": ["native_write_msr_safe"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_disable_all",
-    "callees": ["__builtin_constant_p", "p4_pmu_disable_event"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_disable_event",
-    "callees": ["native_write_msr_safe"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_clear_cccr_ovf",
-    "callees": ["native_read_msr", "native_write_msr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4_hw_config",
-    "callees": ["__builtin_expect", "p4_default_cccr_conf", "p4_default_escr_conf", "p4_ht_thread.part.0", "p4_validate_raw_event", "x86_setup_perfctr"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_validate_raw_event",
-    "callees": ["perf_allow_cpu"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_pmu_event_map",
+    "name": "fixup_mpss_256",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_get_alias_event",
+    "name": "fixup_ti816x_class",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vtd_mask_spec_errors",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_hotplug_bridge",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "x86_pmu_config_addr",
+    "name": "quirk_al_msi_disable",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_intx_disable_qca_bug",
+    "callees": ["quirk_msi_intx_disable_qca_bug.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_intx_disable_ati_bug",
+    "callees": ["pci_dev_put", "pci_get_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_intx_disable_bug",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "p4_default_escr_conf",
-    "callees": ["p4_ht_thread.part.0"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_default_cccr_conf",
-    "callees": ["p4_ht_thread.part.0"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "p4_should_swap_ts",
-    "callees": ["p4_ht_thread.part.0"],
-    "global_reads": ["smp_num_siblings"],
-    "global_writes": []
-  },
-  {
-    "name": "perf_allow_cpu",
-    "callees": ["perfmon_capable", "security_perf_event_open"],
-    "global_reads": ["sysctl_perf_event_paranoid"],
-    "global_writes": []
-  },
-  {
-    "name": "perfmon_capable",
-    "callees": ["capable"],
+    "name": "nv_msi_ht_cap_quirk_leaf",
+    "callees": ["__nv_msi_ht_cap_quirk"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_write_msr",
-    "callees": ["do_trace_write_msr"],
+    "name": "nv_msi_ht_cap_quirk_all",
+    "callees": ["__nv_msi_ht_cap_quirk"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "native_read_msr",
-    "callees": ["do_trace_read_msr"],
+    "name": "__nv_msi_ht_cap_quirk",
+    "callees": ["__nv_msi_ht_cap_quirk.part.0", "pci_msi_enabled"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ht_disable_msi_mapping",
+    "callees": ["_dev_info", "pci_find_ht_capability", "pci_find_next_ht_capability", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nv_ht_enable_msi_mapping",
+    "callees": ["host_bridge_with_leaf", "ht_enable_msi_mapping", "is_end_of_ht_chain", "msi_ht_cap_enabled", "pci_dev_put", "pci_find_ht_capability", "pci_get_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "is_end_of_ht_chain",
+    "callees": ["pci_find_ht_capability", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "host_bridge_with_leaf",
+    "callees": ["ht_check_msi_mapping", "pci_dev_put", "pci_find_ht_capability", "pci_get_slot"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ht_check_msi_mapping",
+    "callees": ["pci_find_ht_capability", "pci_find_next_ht_capability", "pci_read_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nvbridge_check_legacy_irq_routing",
+    "callees": ["_printk", "pci_find_capability", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_quirk_nvidia_tegra_disable_rp_msi",
+    "callees": ["quirk_pcie_mch"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nvenet_msi_disable",
+    "callees": ["dmi_get_system_info", "nvenet_msi_disable.part.0", "strstr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ht_enable_msi_mapping",
+    "callees": ["_dev_info", "pci_find_ht_capability", "pci_find_next_ht_capability", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_ck804_msi_ht_cap",
+    "callees": ["msi_ht_cap_enabled", "pci_dev_put", "pci_get_slot", "quirk_msi_ht_cap"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_msi_ht_cap",
+    "callees": ["msi_ht_cap_enabled", "quirk_msi_ht_cap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "msi_ht_cap_enabled",
+    "callees": ["_dev_info", "pci_find_ht_capability", "pci_find_next_ht_capability", "pci_read_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_780_apc_msi",
+    "callees": ["pci_dev_put", "pci_get_slot", "quirk_disable_msi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_msi",
+    "callees": ["quirk_disable_msi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_all_msi",
+    "callees": ["_dev_warn", "pci_no_msi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_unhide_mch_dev6",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_brcm_5719_limit_mrrs",
+    "callees": ["pci_read_config_dword", "pcie_get_readrq", "quirk_brcm_5719_limit_mrrs.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_via_cx700_pci_parking_caching",
+    "callees": ["_dev_info", "pci_dev_put", "pci_get_device", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_ck804_pcie_aer_ext_cap",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_p64h2_1k_io",
+    "callees": ["pci_read_config_word", "quirk_p64h2_1k_io.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_rev1_53c810",
+    "callees": ["fixup_rev1_53c810.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_enable_clear_retrain_link",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_aspm_l0s_l1",
+    "callees": ["_dev_info", "pci_disable_link_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_aspm_l0s",
+    "callees": ["_dev_info", "pci_disable_link_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_e100_interrupt",
+    "callees": ["_dev_warn", "ioremap", "iounmap", "pci_read_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_netmos",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_plx_pci9050",
+    "callees": ["quirk_plx_pci9050.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_tc86c001_ide",
+    "callees": ["quirk_tc86c001_ide.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_amd_8111_boot_interrupt",
+    "callees": ["_dev_info", "pci_read_config_word", "quirk_disable_amd_8111_boot_interrupt.part.0"],
+    "global_reads": ["noioapicquirk"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_amd_813x_boot_interrupt",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["noioapicquirk"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_broadcom_boot_interrupt",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": ["noioapicquirk"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_intel_boot_interrupt",
+    "callees": ["_dev_info", "pci_read_config_dword", "pci_read_config_word", "pci_write_config_dword", "pci_write_config_word"],
+    "global_reads": ["noioapicquirk"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_reroute_to_boot_interrupts_intel",
+    "callees": ["dmi_check_system", "quirk_reroute_to_boot_interrupts_intel.part.0"],
+    "global_reads": ["noioapicquirk", "noioapicreroute"],
+    "global_writes": []
+  },
+  {
+    "name": "dmi_disable_ioapicreroute",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": ["noioapicreroute"]
+  },
+  {
+    "name": "quirk_ryzen_xhci_d3hot",
+    "callees": ["quirk_nvidia_hda_pm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nvidia_hda_pm",
+    "callees": ["quirk_nvidia_hda_pm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_radeon_pm",
+    "callees": ["quirk_radeon_pm.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_intel_pcie_pm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["pci_pm_d3hot_delay"]
+  },
+  {
+    "name": "quirk_pcie_pxh",
+    "callees": ["_dev_warn"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_huawei_pcie_sva",
+    "callees": ["_dev_warn", "device_create_managed_software_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_pcie_mch",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_no_msi",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_alder_ioapic",
+    "callees": ["quirk_alder_ioapic.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_jmicron_async_suspend",
+    "callees": ["quirk_jmicron_async_suspend.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_jmicron_ata",
+    "callees": ["pci_read_config_byte", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_ac97_lpc",
+    "callees": ["__builtin_expect", "_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_sis_503",
+    "callees": ["pci_read_config_byte", "pci_read_config_word", "pci_write_config_byte", "quirk_sis_96x_smbus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_sis_96x_smbus",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6",
+    "callees": ["asus_hides_smbus_lpc_ich6_resume", "asus_hides_smbus_lpc_ich6_resume_early", "asus_hides_smbus_lpc_ich6_suspend"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6_resume",
+    "callees": ["__builtin_expect", "_dev_info", "iounmap"],
+    "global_reads": ["asus_hides_smbus", "asus_rcba_base"],
+    "global_writes": ["asus_rcba_base"]
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6_resume_early",
+    "callees": ["__builtin_expect"],
+    "global_reads": ["asus_hides_smbus", "asus_rcba_base"],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_lpc_ich6_suspend",
+    "callees": ["__builtin_expect", "ioremap", "pci_read_config_dword"],
+    "global_reads": ["asus_hides_smbus", "asus_rcba_base"],
+    "global_writes": ["asus_rcba_base"]
+  },
+  {
+    "name": "asus_hides_smbus_lpc",
+    "callees": ["__builtin_expect", "_dev_info", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": ["asus_hides_smbus"],
+    "global_writes": []
+  },
+  {
+    "name": "asus_hides_smbus_hostbridge",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": ["asus_hides_smbus"]
+  },
+  {
+    "name": "quirk_eisa_bridge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_no_ata_d3",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ide_samemode",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_svwks_csb5ide",
+    "callees": ["pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_ide_mode",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_disable_pxb",
+    "callees": ["_dev_info", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_mediagx_master",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_transparent_bridge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_dunord",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_ordering",
+    "callees": ["_dev_warn", "pci_read_config_dword", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_cardbus_legacy",
+    "callees": ["pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c598_id",
+    "callees": ["pci_read_config_word", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_via_vlink",
+    "callees": ["__const_udelay", "_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": ["via_vlink_dev_hi", "via_vlink_dev_lo"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_via_bridge",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["via_vlink_dev_hi", "via_vlink_dev_lo"]
+  },
+  {
+    "name": "quirk_via_acpi",
+    "callees": ["pci_read_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_8131_mmrbc",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_ioapic",
+    "callees": ["quirk_amd_ioapic.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_via_vt8237_bypass_apic_deassert",
+    "callees": ["_dev_info", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_via_ioapic",
+    "callees": ["_dev_info", "pci_write_config_byte"],
+    "global_reads": ["nr_ioapics"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_xio2000a",
+    "callees": ["_dev_warn", "pci_read_config_word", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt8235_acpi",
+    "callees": ["quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c686_acpi",
+    "callees": ["quirk_io_region", "quirk_vt82c586_acpi"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vt82c586_acpi",
+    "callees": ["quirk_vt82c586_acpi.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ich7_lpc",
+    "callees": ["ich6_lpc_acpi_gpio", "ich7_lpc_generic_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ich7_lpc_generic_decode",
+    "callees": ["_dev_info", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ich6_lpc",
+    "callees": ["ich6_lpc_acpi_gpio", "ich6_lpc_generic_decode"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ich6_lpc_generic_decode",
+    "callees": ["_dev_info", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ich6_lpc_acpi_gpio",
+    "callees": ["pci_read_config_byte", "quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ich4_lpc_acpi",
+    "callees": ["pci_read_config_byte", "quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_piix4_acpi",
+    "callees": ["pci_read_config_dword", "piix4_io_quirk", "piix4_mem_quirk", "quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "piix4_io_quirk",
+    "callees": ["_dev_info", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ali7101_acpi",
+    "callees": ["quirk_io_region"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_synopsys_haps",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_amd_dwc_class",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_ati_exploding_mce",
+    "callees": ["__request_region", "_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_io_region",
+    "callees": ["_dev_info", "pci_claim_resource", "pci_read_config_word", "pcibios_bus_to_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_cs5536_vsa",
+    "callees": ["_dev_info", "quirk_io"],
+    "global_reads": ["name"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_io",
+    "callees": ["_dev_info", "pci_read_config_dword", "pcibios_bus_to_resource"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_s3_64M",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_extend_bar_to_page",
+    "callees": ["_dev_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nfp6000",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_citrine",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_natoma",
+    "callees": ["quirk_natoma.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_alimagik",
+    "callees": ["quirk_alimagik.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vsfx",
+    "callees": ["quirk_vsfx.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_viaetbf",
+    "callees": ["quirk_viaetbf.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_vialatency",
+    "callees": ["_dev_info", "pci_dev_put", "pci_get_device", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_triton",
+    "callees": ["quirk_triton.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nopciamd",
+    "callees": ["pci_read_config_byte", "quirk_nopciamd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_nopcipci",
+    "callees": ["quirk_nopcipci.part.0"],
+    "global_reads": ["pci_pci_problems"],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_tigerpoint_bm_sts",
+    "callees": ["_dev_info", "pci_read_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_passive_release",
+    "callees": ["_dev_info", "pci_get_device", "pci_read_config_byte", "pci_write_config_byte"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "quirk_mmio_always_on",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_apply_final_quirks",
+    "callees": ["_dev_info", "_printk", "pci_fixup_device", "pci_get_device", "pci_read_config_byte"],
+    "global_reads": ["pci_cache_line_size", "pci_dfl_cache_line_size"],
+    "global_writes": ["pci_apply_fixup_final_quirks", "pci_cache_line_size"]
+  },
+  {
+    "name": "pci_fixup_device",
+    "callees": ["pci_do_fixups"],
+    "global_reads": ["pci_apply_fixup_final_quirks"],
+    "global_writes": []
+  },
+  {
+    "name": "pci_do_fixups",
+    "callees": ["fixup_debug_report", "fixup_debug_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_debug_report",
+    "callees": ["_dev_info", "ktime_get"],
+    "global_reads": ["initcall_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "fixup_debug_start",
+    "callees": ["_dev_info", "ktime_get"],
+    "global_reads": ["initcall_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_failed_link_retrain",
+    "callees": ["_dev_info", "pci_match_id", "pcie_cap_has_lnkctl2", "pcie_capability_read_dword", "pcie_capability_read_word", "pcie_capability_write_word", "pcie_downstream_port", "pcie_retrain_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "of_pci_make_dev_node",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pcie_find_root_port",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }

@@ -1,50 +1,92 @@
 [
   {
-    "name": "",
+    "name": "efivar_lock",
+    "callees": ["down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_set_variable.part.0",
+    "callees": ["efivar_set_variable_locked", "up"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_query_variable_info",
     "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_set_variable",
+    "callees": ["efivar_lock", "efivar_set_variable.part.0"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "eeprom_cleanup_data",
-    "callees": ["kfree"],
-    "global_reads": [],
+    "name": "efivar_set_variable_locked",
+    "callees": ["check_var_size", "ucs2_strsize"],
+    "global_reads": ["__efivars"],
     "global_writes": []
   },
   {
-    "name": "eeprom_fill_reply",
-    "callees": ["nla_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "eeprom_reply_size",
+    "name": "efivar_get_next_variable",
     "callees": [],
-    "global_reads": [],
+    "global_reads": ["__efivars"],
     "global_writes": []
   },
   {
-    "name": "eeprom_parse_request",
-    "callees": ["do_trace_netlink_extack"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "eeprom_prepare_data",
-    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "eeprom_fallback", "ethnl_ops_begin", "ethnl_ops_complete", "get_module_eeprom_by_page", "kfree", "kmalloc_large", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "get_module_eeprom_by_page",
+    "name": "efivar_get_variable",
     "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_unlock",
+    "callees": ["up"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "eeprom_fallback",
-    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "ethtool_get_module_eeprom_call", "ethtool_get_module_info_call", "fallback_set_params", "kfree", "kmalloc_large", "kmalloc_trace"],
-    "global_reads": [],
+    "name": "efivar_trylock",
+    "callees": ["down_trylock", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_lock",
+    "callees": ["down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivar_supports_writes",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "efivars_unregister",
+    "callees": ["_printk", "down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": ["__efivars"]
+  },
+  {
+    "name": "efivars_register",
+    "callees": ["_printk", "down_interruptible", "up"],
+    "global_reads": ["__efivars"],
+    "global_writes": ["__efivars"]
+  },
+  {
+    "name": "efivar_is_available",
+    "callees": [],
+    "global_reads": ["__efivars"],
+    "global_writes": []
+  },
+  {
+    "name": "check_var_size",
+    "callees": [],
+    "global_reads": ["__efivars"],
     "global_writes": []
   }
 ]

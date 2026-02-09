@@ -1,151 +1,379 @@
 [
   {
-    "name": "__tty_buffer_request_room",
-    "callees": ["tty_buffer_alloc"],
+    "name": "vma_res_itree_iter_first",
+    "callees": ["vma_res_itree_subtree_search"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_unlock_exclusive.part.0",
+    "name": "vma_res_itree_iter_first",
+    "callees": ["vma_res_itree_subtree_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_augment_propagate",
+    "callees": ["vma_res_itree_augment_compute_max"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_vma_resource_unhold",
+    "callees": ["__i915_vma_resource_unhold.part.0", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_color_adjust_range.part.0",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_color_adjust_range",
+    "callees": ["i915_vma_resource_color_adjust_range.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_free.part.0",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["slab_vma_resources"],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_get.part.0",
+    "callees": ["__refcount_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_augment_copy",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_free.part.0",
+    "callees": ["kmem_cache_free"],
+    "global_reads": ["slab_vma_resources"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_fence_notify.part.0",
     "callees": ["queue_work_on"],
     "global_reads": ["system_unbound_wq"],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_flush_work",
-    "callees": ["flush_work"],
+    "name": "__i915_vma_resource_unhold.part.0",
+    "callees": ["dma_fence_signal", "i915_refct_sgt_put", "intel_runtime_pm_put_unchecked", "mutex_lock", "mutex_unlock", "vma_res_itree_remove"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_cancel_work",
-    "callees": ["cancel_work_sync"],
+    "name": "dma_fence_get.part.0",
+    "callees": ["__refcount_add"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_restart_work",
-    "callees": ["queue_work_on"],
-    "global_reads": ["system_unbound_wq"],
+    "name": "dma_fence_put.part.0",
+    "callees": ["kref_put"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_set_lock_subclass",
+    "name": "i915_vma_resource_color_adjust_range.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_set_limit",
+    "name": "i915_vma_resource_module_init",
+    "callees": ["kmem_cache_create"],
+    "global_reads": [],
+    "global_writes": ["slab_vma_resources"]
+  },
+  {
+    "name": "i915_vma_resource_module_exit",
+    "callees": ["kmem_cache_destroy"],
+    "global_reads": ["slab_vma_resources"],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_bind_dep_await",
+    "callees": ["__SCT__might_resched", "dma_fence_wait_timeout", "i915_sw_fence_await_dma_fence", "i915_vma_resource_color_adjust_range", "vma_res_itree_iter_first", "vma_res_itree_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_bind_dep_sync_all",
+    "callees": ["dma_fence_get_rcu", "dma_fence_put.part.0", "dma_fence_wait_timeout", "mutex_lock", "mutex_unlock", "vma_res_itree_iter_first"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_bind_dep_sync",
+    "callees": ["__SCT__might_resched", "dma_fence_wait_timeout", "i915_vma_resource_color_adjust_range", "vma_res_itree_iter_first", "vma_res_itree_iter_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_color_adjust_range",
+    "callees": ["i915_vma_resource_color_adjust_range.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_vma_resource_init",
+    "callees": ["__i915_sw_fence_init", "dma_fence_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_unbind",
+    "callees": ["dma_fence_get.part.0", "i915_sw_fence_commit", "intel_runtime_pm_get_if_in_use", "vma_res_itree_insert"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_fence_notify",
+    "callees": ["dma_fence_get.part.0", "dma_fence_put.part.0", "i915_vma_resource_fence_notify.part.0", "i915_vma_resource_unbind_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_unbind_work",
+    "callees": ["__builtin_expect", "__i915_vma_resource_unhold", "dma_fence_put.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_hold",
+    "callees": ["__refcount_add_not_zero"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_unhold",
+    "callees": ["__i915_vma_resource_unhold"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__i915_vma_resource_unhold",
+    "callees": ["__i915_vma_resource_unhold.part.0", "__refcount_sub_and_test"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unbind_fence_release",
+    "callees": ["call_rcu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "unbind_fence_free_rcu",
+    "callees": ["i915_vma_resource_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_timeline_name",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_init",
-    "callees": ["__mutex_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_insert_flip_string_and_push_buffer",
-    "callees": ["__tty_insert_flip_string_flags", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_work_on"],
-    "global_reads": ["system_unbound_wq"],
-    "global_writes": []
-  },
-  {
-    "name": "tty_flip_buffer_push",
-    "callees": ["queue_work_on"],
-    "global_reads": ["system_unbound_wq"],
-    "global_writes": []
-  },
-  {
-    "name": "flush_to_ldisc",
-    "callees": ["__SCT__cond_resched", "__builtin_expect", "lookahead_bufs", "mutex_lock", "mutex_unlock", "receive_buf", "tty_buffer_free"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "receive_buf",
-    "callees": ["memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "lookahead_bufs",
+    "name": "get_driver_name",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_ldisc_receive_buf",
+    "name": "i915_vma_resource_free",
+    "callees": ["i915_vma_resource_free.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_vma_resource_alloc",
+    "callees": ["kmem_cache_alloc"],
+    "global_reads": ["slab_vma_resources"],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_iter_next",
+    "callees": ["vma_res_itree_subtree_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_iter_first",
+    "callees": ["vma_res_itree_subtree_search"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "vma_res_itree_subtree_search",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_prepare_flip_string",
-    "callees": ["__builtin_expect", "__tty_buffer_request_room", "memset"],
+    "name": "vma_res_itree_remove",
+    "callees": ["__rb_erase_color", "rb_next", "vma_res_itree_augment_copy", "vma_res_itree_augment_propagate"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__tty_insert_flip_string_flags",
-    "callees": ["__builtin_expect", "__tty_buffer_request_room", "memcpy", "memset"],
+    "name": "vma_res_itree_insert",
+    "callees": ["__rb_insert_augmented"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_request_room",
-    "callees": ["__tty_buffer_request_room"],
+    "name": "vma_res_itree_augment_rotate",
+    "callees": ["vma_res_itree_augment_compute_max"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__tty_buffer_request_room",
-    "callees": ["tty_buffer_alloc"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_buffer_flush",
-    "callees": ["mutex_lock", "mutex_unlock", "tty_buffer_free"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_buffer_free",
-    "callees": ["__builtin_expect", "kfree", "llist_add_batch"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_buffer_alloc",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace", "llist_del_first"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_buffer_free_all",
-    "callees": ["__builtin_expect", "__warn_printk", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "tty_buffer_space_avail",
+    "name": "vma_res_itree_augment_copy",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_unlock_exclusive",
-    "callees": ["mutex_unlock", "tty_buffer_unlock_exclusive.part.0"],
+    "name": "vma_res_itree_augment_propagate",
+    "callees": ["vma_res_itree_augment_compute_max"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tty_buffer_lock_exclusive",
-    "callees": ["mutex_lock"],
+    "name": "vma_res_itree_augment_compute_max",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i915_refct_sgt_put",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dma_fence_get_rcu",
+    "callees": ["__refcount_add_not_zero"],
     "global_reads": [],
     "global_writes": []
   }

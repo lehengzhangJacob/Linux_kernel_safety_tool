@@ -1,20 +1,116 @@
 [
   {
-    "name": "x86_acpi_numa_init",
-    "callees": ["acpi_numa_init", "srat_disabled"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_numa_processor_affinity_init",
-    "callees": ["__builtin_constant_p", "_printk", "acpi_map_pxm_to_node", "bad_srat", "srat_disabled"],
-    "global_reads": ["acpi_srat_revision"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_numa_x2apic_affinity_init",
-    "callees": ["__builtin_constant_p", "_printk", "acpi_map_pxm_to_node", "bad_srat", "srat_disabled"],
-    "global_reads": ["apic"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_codec_link_down.part.0",
+    "callees": ["snd_hdac_bus_link_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_codec_link_up.part.0",
+    "callees": ["snd_hdac_bus_link_power"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_codec_link_down",
+    "callees": ["snd_hdac_codec_link_down.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_codec_link_up",
+    "callees": ["snd_hdac_codec_link_up.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_remove_device",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "flush_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_add_device",
+    "callees": ["__builtin_constant_p", "_dev_err"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_process_unsol_events",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_queue_event",
+    "callees": ["schedule_work", "trace_hda_unsol_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_exec_verb_unlocked",
+    "callees": ["trace_hda_get_response", "trace_hda_send_cmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_exec_verb",
+    "callees": ["mutex_lock", "mutex_unlock", "snd_hdac_bus_exec_verb_unlocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_exit",
+    "callees": ["__builtin_expect", "cancel_work_sync"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "snd_hdac_bus_init",
+    "callees": ["__init_waitqueue_head", "__mutex_init", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_hda_unsol_event",
+    "callees": ["__SCT__tp_func_hda_unsol_event", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_hda_get_response",
+    "callees": ["__SCT__tp_func_hda_get_response", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_hda_send_cmd",
+    "callees": ["__SCT__tp_func_hda_send_cmd", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
     "global_writes": []
   }
 ]

@@ -1,13 +1,61 @@
 [
   {
-    "name": "__do_compat_sys_keyctl",
-    "callees": ["keyctl_assume_authority", "keyctl_capabilities", "keyctl_chown_key", "keyctl_describe_key", "keyctl_get_keyring_ID", "keyctl_get_security", "keyctl_instantiate_key", "keyctl_instantiate_key_iov", "keyctl_invalidate_key", "keyctl_join_session_keyring", "keyctl_keyring_clear", "keyctl_keyring_link", "keyctl_keyring_move", "keyctl_keyring_search", "keyctl_keyring_unlink", "keyctl_negate_key", "keyctl_pkey_e_d_s", "keyctl_pkey_query", "keyctl_pkey_verify", "keyctl_read_key", "keyctl_reject_key", "keyctl_restrict_keyring", "keyctl_revoke_key", "keyctl_session_to_parent", "keyctl_set_reqkey_keyring", "keyctl_set_timeout", "keyctl_setperm_key", "keyctl_update_key"],
+    "name": "pci_vc_save_restore_dwords",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_keyctl",
-    "callees": ["__do_compat_sys_keyctl"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_allocate_vc_save_buffers",
+    "callees": ["_dev_err", "pci_add_ext_cap_save_buffer", "pci_find_ext_capability", "pci_vc_do_save_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_restore_vc_state",
+    "callees": ["pci_find_ext_capability", "pci_find_saved_ext_cap", "pci_vc_do_save_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_save_vc_state",
+    "callees": ["_dev_err", "pci_find_ext_capability", "pci_find_saved_ext_cap", "pci_vc_do_save_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vc_do_save_buffer",
+    "callees": ["_dev_err", "pci_read_config_dword", "pci_read_config_word", "pci_vc_do_save_buffer", "pci_vc_enable", "pci_vc_load_arb_table", "pci_vc_load_port_arb_table", "pci_vc_save_restore_dwords", "pci_write_config_dword", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vc_enable",
+    "callees": ["_dev_err", "pci_find_ext_capability", "pci_read_config_dword", "pci_wait_for_pending", "pci_write_config_dword", "pcie_downstream_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vc_load_port_arb_table",
+    "callees": ["_dev_err", "pci_read_config_dword", "pci_wait_for_pending", "pci_write_config_dword"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vc_load_arb_table",
+    "callees": ["_dev_err", "pci_read_config_word", "pci_wait_for_pending", "pci_write_config_word"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_vc_save_restore_dwords",
+    "callees": ["pci_read_config_dword", "pci_write_config_dword"],
     "global_reads": [],
     "global_writes": []
   }

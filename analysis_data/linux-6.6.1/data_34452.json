@@ -1,14 +1,290 @@
 [
   {
-    "name": "intel_pconfig_init",
-    "callees": [],
-    "global_reads": ["targets_supported"],
-    "global_writes": ["targets_supported"]
+    "name": "xfrm_local_error",
+    "callees": ["__rcu_read_unlock", "xfrm_state_get_afinfo"],
+    "global_reads": [],
+    "global_writes": []
   },
   {
-    "name": "pconfig_target_supported",
+    "name": "xfrm_local_error",
+    "callees": ["__rcu_read_unlock", "xfrm_state_get_afinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_local_error",
+    "callees": ["__rcu_read_unlock", "xfrm_state_get_afinfo"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_inner_extract_output",
+    "callees": ["xfrm4_extract_output", "xfrm6_extract_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_tunnel_check_size",
+    "callees": ["dst_mtu", "icmp6_send", "ip6_skb_dst_mtu", "skb_gso_validate_network_len", "xfrm6_local_dontfrag", "xfrm_local_error"],
+    "global_reads": ["ipv6_stub"],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_tunnel_check_size",
+    "callees": ["__builtin_bswap32", "__icmp_send", "dst_mtu", "ip_skb_dst_mtu", "skb_gso_validate_network_len", "xfrm_local_error"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_output",
+    "callees": ["kfree_skb_reason", "memset", "skb_checksum_help", "skb_ext_del", "xfrm_output_gso", "xfrm_output_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_output2",
+    "callees": ["xfrm_output_resume"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_output_resume",
+    "callees": ["__builtin_expect", "dst_output", "nf_conntrack_put", "nf_hook", "xfrm_output_one"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_output_one",
+    "callees": ["__builtin_expect", "_raw_spin_lock_bh", "_raw_spin_unlock_bh", "kfree_skb_reason", "ktime_get_real_seconds", "skb_dst_force", "skb_dst_pop", "xfrm_offload", "xfrm_outer_mode_output", "xfrm_replay_overflow", "xfrm_skb_check_space", "xfrm_state_check_expire"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_outer_mode_output",
+    "callees": ["xfrm4_prepare_output", "xfrm4_transport_output", "xfrm6_prepare_output", "xfrm6_ro_output", "xfrm6_transport_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_prepare_output",
+    "callees": ["xfrm6_beet_encap_add", "xfrm6_tunnel_encap_add", "xfrm_inner_extract_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_prepare_output",
+    "callees": ["xfrm4_beet_encap_add", "xfrm4_tunnel_encap_add", "xfrm_inner_extract_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_ro_output",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "ip6_find_1stfragopt", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_transport_output",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "ip6_find_1stfragopt", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_transport_output",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "memmove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_dst_pop",
+    "callees": ["dst_hold", "refdst_drop"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_skb_check_space",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_beet_make_header",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_beet_make_header",
+    "callees": ["__builtin_bswap16", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_extract_header",
+    "callees": ["__builtin_bswap16", "memcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm4_extract_header",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip6_skb_dst_mtu",
+    "callees": ["dst_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm6_local_dontfrag",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "xfrm_offload",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_skb_dst_mtu",
+    "callees": ["ip_dst_mtu_maybe_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_dst_mtu_maybe_forward",
     "callees": ["__builtin_expect"],
-    "global_reads": ["targets_supported"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "dst_output",
+    "callees": ["__builtin_expect", "ip6_output", "ip_output"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "refdst_drop",
+    "callees": ["dst_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_hold",
+    "callees": ["__builtin_expect", "rcuref_get"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rcuref_get",
+    "callees": ["__builtin_expect", "rcuref_get_slowpath"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_put",
+    "callees": ["__refcount_sub_and_test", "nf_conntrack_destroy"],
+    "global_reads": [],
     "global_writes": []
   }
 ]

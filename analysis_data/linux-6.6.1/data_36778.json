@@ -1,25 +1,115 @@
 [
   {
-    "name": "timecounter_cyc2time",
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "timecounter_read",
-    "callees": ["timecounter_read_delta"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "timecounter_read_delta",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "timecounter_init",
+    "name": "",
     "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_init.part.0",
+    "callees": ["regcache_rbtree_exit", "regcache_rbtree_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_drop",
+    "callees": ["__bitmap_clear", "__builtin_constant_p", "memset", "rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_sync",
+    "callees": ["rb_first", "rb_next", "regcache_sync_block", "regmap_async_complete"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_write",
+    "callees": ["regcache_rbtree_insert", "regcache_rbtree_insert_to_block", "regcache_rbtree_lookup", "regcache_rbtree_node_alloc", "regcache_rbtree_set_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_node_alloc",
+    "callees": ["kfree", "kmalloc_array", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_insert_to_block",
+    "callees": ["bitmap_shift_left", "krealloc", "memmove", "memset", "regcache_rbtree_set_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_read",
+    "callees": ["__builtin_constant_p", "regcache_get_val", "regcache_rbtree_lookup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_exit",
+    "callees": ["kfree", "rb_erase", "rb_first", "rb_next"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_init",
+    "callees": ["__builtin_return_address", "kmalloc_trace", "regcache_rbtree_init.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rbtree_debugfs_init",
+    "callees": ["debugfs_create_file"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rbtree_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rbtree_show",
+    "callees": ["rb_first", "rb_next", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "regcache_rbtree_set_register",
+    "callees": ["__builtin_constant_p", "regcache_set_val"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kmalloc_array",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bitmap_shift_left",
+    "callees": ["__bitmap_shift_left", "__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

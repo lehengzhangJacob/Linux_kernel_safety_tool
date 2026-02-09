@@ -1,132 +1,174 @@
 [
   {
-    "name": "fsnotify_data_inode",
-    "callees": [],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_iter_step",
-    "callees": [],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fsnotify_update_child_dentry_flags.part.0",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_init",
-    "callees": ["init_srcu_struct", "kmem_cache_create", "panic"],
-    "global_reads": [],
-    "global_writes": ["fsnotify_mark_connector_cachep"]
-  },
-  {
-    "name": "fsnotify",
-    "callees": ["__builtin_expect", "__srcu_read_lock", "__srcu_read_unlock", "fsnotify_data_sb", "fsnotify_iter_next", "fsnotify_iter_select_report_types", "send_to_group"],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_iter_next",
-    "callees": [],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_iter_select_report_types",
-    "callees": ["fsnotify_compare_groups"],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "send_to_group",
-    "callees": ["fsnotify_effective_ignore_mask", "fsnotify_handle_event", "fsnotify_iter_step"],
+    "name": "pci_get_dev_by_id",
+    "callees": ["bus_find_device", "pci_dev_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_handle_event",
-    "callees": ["__builtin_expect", "fsnotify_handle_inode_event"],
+    "name": "pci_get_dev_by_id",
+    "callees": ["bus_find_device", "pci_dev_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fsnotify_parent",
-    "callees": ["__builtin_expect", "__fsnotify_update_child_dentry_flags", "dget_parent", "dput", "fsnotify", "fsnotify_data_inode", "fsnotify_event_needs_parent", "release_dentry_name_snapshot", "take_dentry_name_snapshot"],
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_event_needs_parent",
-    "callees": [],
+    "name": "pci_get_subsys",
+    "callees": ["pci_get_dev_by_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fsnotify_update_child_dentry_flags",
-    "callees": ["__fsnotify_update_child_dentry_flags.part.0"],
+    "name": "pci_get_dev_by_id",
+    "callees": ["bus_find_device", "pci_dev_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_sb_delete",
-    "callees": ["__SCT__might_resched", "__var_waitqueue", "finish_wait", "fsnotify_destroy_marks", "fsnotify_unmount_inodes", "init_wait_var_entry", "prepare_to_wait_event", "schedule"],
+    "name": "pci_get_dev_by_id",
+    "callees": ["bus_find_device", "pci_dev_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_unmount_inodes",
-    "callees": ["__SCT__cond_resched", "__iget", "_raw_spin_lock", "_raw_spin_unlock", "fsnotify_destroy_marks", "fsnotify_inode", "iput"],
+    "name": "pci_find_next_bus",
+    "callees": ["down_read", "up_read"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fsnotify_vfsmount_delete",
-    "callees": ["fsnotify_destroy_marks"],
+    "name": "pci_get_subsys",
+    "callees": ["pci_get_dev_by_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fsnotify_inode_delete",
-    "callees": ["fsnotify_destroy_marks"],
+    "name": "pci_dev_present",
+    "callees": ["pci_dev_put", "pci_get_dev_by_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_effective_ignore_mask",
-    "callees": [],
+    "name": "pci_get_class",
+    "callees": ["pci_get_dev_by_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_iter_step",
-    "callees": [],
+    "name": "pci_get_device",
+    "callees": ["pci_get_subsys"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_data_sb",
-    "callees": [],
+    "name": "pci_get_subsys",
+    "callees": ["pci_get_dev_by_id"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fsnotify_data_inode",
+    "name": "pci_get_dev_by_id",
+    "callees": ["bus_find_device", "pci_dev_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "match_pci_dev_by_id",
+    "callees": ["pci_match_one_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_get_domain_bus_and_slot",
+    "callees": ["pci_get_subsys"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_get_slot",
+    "callees": ["down_read", "pci_dev_get", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_find_next_bus",
+    "callees": ["down_read", "up_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_find_bus",
+    "callees": ["pci_do_find_bus", "pci_find_next_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_do_find_bus",
+    "callees": ["pci_do_find_bus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_for_each_dma_alias",
+    "callees": ["__builtin_expect", "_find_next_bit", "pci_real_dma_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "pci_match_one_device",
     "callees": [],
     "global_reads": [],
     "global_writes": []

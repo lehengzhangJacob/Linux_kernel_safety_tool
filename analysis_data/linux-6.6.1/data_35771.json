@@ -1,7 +1,571 @@
 [
   {
-    "name": "ramfs_mmu_get_unmapped_area",
+    "name": "trace_rdev_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void",
+    "callees": ["__SCT__tp_func_rdev_return_void", "cpu_online", "trace_rdev_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void",
+    "callees": ["__SCT__tp_func_rdev_return_void", "cpu_online", "trace_rdev_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void",
+    "callees": ["__SCT__tp_func_rdev_return_void", "cpu_online", "trace_rdev_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_work_cancel",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_leave",
+    "callees": ["__cfg80211_leave", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_work_cancel",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_leave",
+    "callees": ["__cfg80211_leave", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
     "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wdev_running",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rfkill_set_block.part.0",
+    "callees": ["cfg80211_shutdown_all_interfaces", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rfkill_set_block.part.0",
+    "callees": ["cfg80211_shutdown_all_interfaces", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_stop_nan.part.0",
+    "callees": ["rdev_stop_nan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_stop_p2p_device.part.0",
+    "callees": ["___cfg80211_scan_done", "__builtin_expect", "rdev_stop_p2p_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_delayed_work_queue.part.0",
+    "callees": ["mod_timer"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_rfkill_start_polling.part.0",
+    "callees": ["rfkill_resume_polling"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void.part.0",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_exit",
+    "callees": ["debugfs_remove", "destroy_workqueue", "nl80211_exit", "regulatory_exit", "unregister_netdevice_notifier", "unregister_pernet_device", "wiphy_sysfs_exit"],
+    "global_reads": ["cfg80211_wq", "ieee80211_debugfs_dir"],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_init",
+    "callees": ["alloc_workqueue", "debugfs_create_dir", "debugfs_remove", "nl80211_exit", "nl80211_init", "register_netdevice_notifier", "register_pernet_device", "regulatory_exit", "regulatory_init", "unregister_netdevice_notifier", "unregister_pernet_device", "wiphy_sysfs_exit", "wiphy_sysfs_init"],
+    "global_reads": ["ieee80211_debugfs_dir"],
+    "global_writes": ["cfg80211_wq", "ieee80211_debugfs_dir"]
+  },
+  {
+    "name": "wiphy_delayed_work_cancel",
+    "callees": ["timer_delete_sync", "wiphy_work_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_delayed_work_queue",
+    "callees": ["wiphy_delayed_work_queue.part.0", "wiphy_work_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_delayed_work_timer",
+    "callees": ["wiphy_work_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_work_cancel",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_work_queue",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_pernet_exit",
+    "callees": ["__builtin_expect", "cfg80211_switch_netns", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_netdev_notifier_call",
+    "callees": ["___cfg80211_scan_done", "__builtin_expect", "__builtin_unreachable", "__wake_up", "_cfg80211_unregister_wdev", "cancel_work_sync", "cfg80211_iftype_allowed", "cfg80211_init_wdev", "cfg80211_leave", "cfg80211_register_wdev", "cfg80211_remove_links", "cfg80211_stop_sched_scan_req", "mutex_lock", "mutex_unlock", "rdev_set_power_mgmt", "rfkill_blocked"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_register_netdevice",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__warn_printk", "cfg80211_register_wdev", "register_netdevice", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "cfg80211_register_wdev",
+    "callees": ["__builtin_expect", "__warn_printk", "_printk", "nl80211_notify_iface", "rtnl_is_locked", "sysfs_create_link"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "cfg80211_init_wdev",
+    "callees": ["__mutex_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_stop_iface",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "kzalloc", "queue_work_on", "trace_cfg80211_stop_iface"],
+    "global_reads": ["cfg80211_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_leave",
+    "callees": ["__cfg80211_leave", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__cfg80211_leave",
+    "callees": ["__cfg80211_leave_ibss", "__cfg80211_leave_mesh", "__cfg80211_leave_ocb", "__cfg80211_stop_ap", "cfg80211_disconnect", "cfg80211_pmsr_wdev_down", "cfg80211_stop_background_radar_detection", "cfg80211_stop_sched_scan_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_update_iface_num",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_unregister_wdev",
+    "callees": ["_cfg80211_unregister_wdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_cfg80211_unregister_wdev",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__warn_printk", "cfg80211_mlme_purge_registrations", "cfg80211_process_wdev_events", "cfg80211_put_bss", "cfg80211_stop_nan", "cfg80211_stop_p2p_device", "cfg80211_unhold_bss", "kvfree_call_rcu", "nl80211_notify_iface", "rtnl_is_locked", "synchronize_net", "sysfs_remove_link", "unregister_netdevice_queue", "wiphy_work_cancel"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "wiphy_rfkill_set_hw_state_reason",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "rfkill_set_hw_state_reason", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_free",
+    "callees": ["put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_dev_free",
+    "callees": ["cfg80211_put_bss", "kfree", "rfkill_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_unregister",
+    "callees": ["__SCT__might_resched", "__builtin_expect", "__builtin_unreachable", "cancel_delayed_work_sync", "cancel_work_sync", "cfg80211_process_wiphy_works", "cfg80211_rdev_free_coalesce", "cfg80211_rdev_free_wowlan", "debugfs_remove", "device_del", "finish_wait", "flush_work", "init_wait_entry", "mutex_lock", "mutex_unlock", "nl80211_notify_wiphy", "prepare_to_wait_event", "rdev_set_wakeup", "rfkill_unregister", "rtnl_lock", "rtnl_unlock", "schedule", "synchronize_rcu", "wiphy_regulatory_deregister"],
+    "global_reads": ["cfg80211_rdev_list_generation"],
+    "global_writes": ["cfg80211_rdev_list_generation"]
+  },
+  {
+    "name": "cfg80211_process_wiphy_works",
+    "callees": ["__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_rfkill_start_polling",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "wiphy_rfkill_start_polling.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_register",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "debugfs_create_dir", "device_add", "ieee80211_set_bitrate_flags", "memcmp", "memcpy", "mutex_lock", "mutex_unlock", "nl80211_common_reg_change_event", "nl80211_notify_wiphy", "rfkill_destroy", "rfkill_register", "rtnl_lock", "rtnl_unlock", "wiphy_regulatory_register", "wiphy_unregister", "wiphy_verify_combinations"],
+    "global_reads": ["cfg80211_disable_40mhz_24ghz", "cfg80211_rdev_list_generation", "ieee80211_debugfs_dir"],
+    "global_writes": ["cfg80211_rdev_list_generation"]
+  },
+  {
+    "name": "wiphy_verify_combinations",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wiphy_new_nm",
+    "callees": ["__builtin_expect", "__init_waitqueue_head", "__mutex_init", "cfg80211_dev_check_name", "dev_set_name", "device_initialize", "init_timer_key", "kfree", "kzalloc", "put_device", "rfkill_alloc", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_wiphy_work",
+    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "mutex_lock", "mutex_unlock", "schedule_work"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_propagate_cac_done_wk",
+    "callees": ["regulatory_propagate_dfs_state", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_propagate_radar_detect_wk",
+    "callees": ["regulatory_propagate_dfs_state", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_sched_scan_stop_wk",
+    "callees": ["cfg80211_stop_sched_scan_req"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_destroy_iface_wk",
+    "callees": ["cfg80211_destroy_ifaces", "rtnl_lock", "rtnl_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_destroy_ifaces",
+    "callees": ["__builtin_expect", "__warn_printk", "cfg80211_leave", "cfg80211_remove_virtual_intf", "dev_close", "mutex_lock", "mutex_unlock", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "cfg80211_event_work",
+    "callees": ["cfg80211_process_rdev_events", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rfkill_block_work",
+    "callees": ["cfg80211_rfkill_set_block.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rfkill_set_block",
+    "callees": ["cfg80211_rfkill_set_block.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_shutdown_all_interfaces",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "__warn_printk", "cfg80211_stop_nan", "cfg80211_stop_p2p_device", "dev_close", "mutex_lock", "mutex_unlock", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "cfg80211_stop_nan",
+    "callees": ["__builtin_expect", "cfg80211_stop_nan.part.0", "wdev_running"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_stop_p2p_device",
+    "callees": ["__builtin_expect", "cfg80211_stop_p2p_device.part.0", "wdev_running"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rfkill_poll",
+    "callees": ["rdev_rfkill_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_switch_netns",
+    "callees": ["__builtin_expect", "__dev_change_net_namespace", "device_rename", "mutex_lock", "mutex_unlock", "nl80211_notify_iface", "nl80211_notify_wiphy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_dev_rename",
+    "callees": ["__builtin_expect", "__warn_printk", "cfg80211_dev_check_name", "debugfs_rename", "device_rename", "nl80211_notify_wiphy", "rtnl_is_locked", "strcmp"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "cfg80211_dev_check_name",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked", "sscanf", "strcmp", "strlen"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "wiphy_idx_to_wiphy",
+    "callees": ["__builtin_expect", "__warn_printk", "cfg80211_rdev_by_wiphy_idx", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "get_wiphy_idx",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rdev_by_wiphy_idx",
+    "callees": ["__builtin_expect", "__warn_printk", "rtnl_is_locked"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "rdev_stop_nan",
+    "callees": ["trace_rdev_return_void", "trace_rdev_stop_nan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_stop_p2p_device",
+    "callees": ["trace_rdev_return_void", "trace_rdev_stop_p2p_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_set_power_mgmt",
+    "callees": ["trace_rdev_return_int", "trace_rdev_set_power_mgmt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "rdev_rfkill_poll",
+    "callees": ["trace_rdev_return_void", "trace_rdev_rfkill_poll"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_cfg80211_stop_iface",
+    "callees": ["__SCT__tp_func_cfg80211_stop_iface", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_stop_nan",
+    "callees": ["__SCT__tp_func_rdev_stop_nan", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_stop_p2p_device",
+    "callees": ["__SCT__tp_func_rdev_stop_p2p_device", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_set_power_mgmt",
+    "callees": ["__SCT__tp_func_rdev_set_power_mgmt", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_set_wakeup",
+    "callees": ["__SCT__tp_func_rdev_set_wakeup", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_rfkill_poll",
+    "callees": ["__SCT__tp_func_rdev_rfkill_poll", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_void",
+    "callees": ["__SCT__tp_func_rdev_return_void", "cpu_online", "trace_rdev_return_void.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_rdev_return_int",
+    "callees": ["__SCT__tp_func_rdev_return_int", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_unhold_bss",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cfg80211_rdev_free_wowlan",
+    "callees": ["kfree", "sock_release"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "wdev_running",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "kzalloc",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

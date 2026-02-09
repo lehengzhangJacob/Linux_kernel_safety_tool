@@ -1,13 +1,67 @@
 [
   {
-    "name": "map_bh",
-    "callees": ["__builtin_constant_p"],
+    "name": "dst_link_failure",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "map_bh",
-    "callees": ["__builtin_constant_p"],
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
     "global_reads": [],
     "global_writes": []
   },
@@ -36,26 +90,8 @@
     "global_writes": []
   },
   {
-    "name": "fat_make_mode",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_destroy_inodecache",
-    "callees": ["kmem_cache_destroy", "rcu_barrier"],
-    "global_reads": ["fat_inode_cachep"],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "writeback_inode",
-    "callees": ["sync_inode_metadata", "writeback_inode.part.0"],
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
     "global_reads": [],
     "global_writes": []
   },
@@ -78,19 +114,25 @@
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "ip_encap_hlen.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "ip_encap_hlen",
+    "callees": ["ip_encap_hlen.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_del",
     "callees": [],
     "global_reads": [],
     "global_writes": []
@@ -114,296 +156,494 @@
     "global_writes": []
   },
   {
-    "name": "exit_fat_fs",
-    "callees": ["fat_cache_destroy", "fat_destroy_inodecache"],
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "init_fat_fs",
-    "callees": ["fat_cache_destroy", "fat_cache_init", "fat_init_inodecache"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_flush_inodes",
-    "callees": ["fat_flush_inodes.part.0", "writeback_inode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "writeback_inode",
-    "callees": ["sync_inode_metadata", "writeback_inode.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_fill_super",
-    "callees": ["__bread_gfp", "__brelse", "__builtin_constant_p", "__builtin_ffs", "__insert_inode_hash", "__mutex_init", "_fat_msg", "calc_fat_clusters", "d_make_root", "fat_attach", "fat_ent_access_init", "fat_read_bpb", "fat_read_root", "fat_read_static_bpb", "fat_set_state", "fat_time_fat2unix", "iput", "kfree", "kzalloc", "load_nls", "memset", "new_inode", "parse_options", "sb_min_blocksize", "sb_set_blocksize", "sprintf", "unload_nls"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_read_static_bpb",
-    "callees": ["_fat_msg", "fat_bpb_is_zero", "memset"],
-    "global_reads": ["notdos1x"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_read_bpb",
-    "callees": ["_fat_msg", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_bpb_is_zero",
+    "name": "ip_tunnel_del",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fat_read_root",
-    "callees": ["fat_calc_dir_size", "fat_mode_can_hold_ro", "fat_subdirs", "inode_maybe_inc_iversion", "set_nlink"],
+    "name": "ip_encap_hlen.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "parse_options",
-    "callees": ["_fat_msg", "current_umask", "kfree", "match_int", "match_octal", "match_strdup", "match_token", "strcmp", "strsep"],
-    "global_reads": ["fat_default_codepage"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_show_options",
-    "callees": ["seq_printf", "seq_puts"],
-    "global_reads": ["overflowgid", "overflowuid"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_sync_inode",
-    "callees": ["__fat_write_inode"],
+    "name": "ip_encap_hlen",
+    "callees": ["ip_encap_hlen.part.0"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "fat_write_inode",
-    "callees": ["__fat_write_inode", "fat_write_inode.part.0"],
+    "name": "__skb_cow",
+    "callees": ["pskb_expand_head"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__fat_write_inode",
-    "callees": ["__bread_gfp", "__brelse", "_fat_msg", "_raw_spin_lock", "_raw_spin_unlock", "fat_make_attrs", "fat_time_unix2fat", "mark_buffer_dirty", "sync_dirty_buffer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_statfs",
-    "callees": ["fat_count_free_clusters"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_remount",
-    "callees": ["fat_set_state", "sync_filesystem"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_destroy_inodecache",
-    "callees": ["kmem_cache_destroy", "rcu_barrier"],
-    "global_reads": ["fat_inode_cachep"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_init_inodecache",
-    "callees": ["kmem_cache_create"],
-    "global_reads": [],
-    "global_writes": ["fat_inode_cachep"]
-  },
-  {
-    "name": "init_once",
-    "callees": ["inode_init_once"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_free_inode",
-    "callees": ["kmem_cache_free"],
-    "global_reads": ["fat_inode_cachep"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_alloc_inode",
-    "callees": ["__init_rwsem", "kmem_cache_alloc_lru"],
-    "global_reads": ["fat_inode_cachep"],
-    "global_writes": []
-  },
-  {
-    "name": "fat_put_super",
-    "callees": ["call_rcu", "fat_set_state", "iput"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "delayed_free",
-    "callees": ["kfree", "unload_nls"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_set_state",
-    "callees": ["__bread_gfp", "__brelse", "_fat_msg", "mark_buffer_dirty", "sync_dirty_buffer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_evict_inode",
-    "callees": ["clear_inode", "fat_cache_inval_inode", "fat_detach", "fat_free_eofblocks", "fat_truncate_blocks", "invalidate_inode_buffers", "truncate_inode_pages_final"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_free_eofblocks",
-    "callees": ["__fat_write_inode", "_fat_msg", "fat_truncate_blocks", "inode_needs_sync"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_build_inode",
-    "callees": ["__insert_inode_hash", "fat_attach", "fat_fill_inode", "fat_iget", "iput", "iunique", "mutex_lock", "mutex_unlock", "new_inode"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_fill_inode",
-    "callees": ["fat_calc_dir_size", "fat_make_mode", "fat_save_attrs", "fat_subdirs", "fat_time_fat2unix", "fat_truncate_atime", "fat_validate_dir", "get_random_u32", "inode_maybe_inc_iversion", "is_exec", "set_nlink"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_validate_dir",
-    "callees": ["__fat_fs_error"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "is_exec",
-    "callees": ["strncmp"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_iget",
-    "callees": ["__builtin_expect", "__builtin_unreachable", "_raw_spin_lock", "_raw_spin_unlock", "igrab"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_detach",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_attach",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_block_truncate_page",
-    "callees": ["block_truncate_page"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "_fat_bmap",
-    "callees": ["down_read", "generic_block_bmap", "up_read"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_get_block_bmap",
-    "callees": ["__builtin_expect", "__builtin_unreachable", "fat_bmap", "map_bh"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_direct_IO",
-    "callees": ["blockdev_direct_IO", "fat_write_failed"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_write_end",
-    "callees": ["__mark_inode_dirty", "fat_truncate_time", "fat_write_failed", "generic_write_end"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_write_begin",
-    "callees": ["cont_write_begin", "fat_write_failed"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_readahead",
-    "callees": ["mpage_readahead"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_read_folio",
-    "callees": ["mpage_read_folio"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_writepages",
-    "callees": ["mpage_writepages"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_get_block",
-    "callees": ["__fat_get_block"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__fat_get_block",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_unreachable", "__fat_fs_error", "fat_add_cluster", "fat_bmap", "map_bh"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_add_cluster",
-    "callees": ["fat_alloc_clusters", "fat_chain_add", "fat_free_clusters"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_save_attrs",
-    "callees": ["fat_mode_can_hold_ro"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_make_attrs",
-    "callees": ["fat_mode_can_hold_ro"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "fat_make_mode",
+    "name": "skb_header_cloned",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "map_bh",
-    "callees": ["__builtin_constant_p"],
+    "name": "skb_cow_head",
+    "callees": ["__skb_cow", "skb_header_cloned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_get_dsfield",
+    "callees": ["__builtin_bswap16", "skb_protocol.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_ecn_encap",
+    "callees": ["ip_tunnel_get_dsfield"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap",
+    "callees": ["ip_tunnel_encap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_encap_hlen.part.0",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_protocol.part.0",
+    "callees": ["__vlan_get_protocol"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_setup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_uninit",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_del"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_init",
+    "callees": ["__alloc_percpu_gfp", "dst_cache_destroy", "dst_cache_init", "find_next_bit", "free_percpu", "gro_cells_init", "strcpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_changelink",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_find", "ip_tunnel_update"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_newlink",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "dev_set_mtu", "eth_hw_addr_random", "ip_tunnel_add", "ip_tunnel_bind_dev", "ip_tunnel_find", "register_netdevice", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_delete_nets",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_destroy", "rtnl_lock", "rtnl_unlock", "unregister_netdevice_many"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_destroy",
+    "callees": ["unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_init_net",
+    "callees": ["__builtin_expect", "__ip_tunnel_create", "__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_add", "ip_tunnel_bind_dev", "memset", "rtnl_lock", "rtnl_unlock", "strscpy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_get_iflink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_get_link_net",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_dellink",
+    "callees": ["__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_del", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_dev_free",
+    "callees": ["dst_cache_destroy", "free_percpu", "gro_cells_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_change_mtu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__ip_tunnel_change_mtu",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_siocdevprivate",
+    "callees": ["_copy_from_user", "_copy_to_user"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_ctl",
+    "callees": ["__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "ip_tunnel_create", "ip_tunnel_find", "ip_tunnel_update", "memcpy", "ns_capable", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_update",
+    "callees": ["dev_addr_mod", "ip_tunnel_add", "ip_tunnel_bind_dev", "ip_tunnel_del", "netdev_state_change"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_xmit",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__ipv6_addr_type", "__skb_get_hash", "dst_cache_get_ip4", "dst_cache_set_ip4", "dst_link_failure", "dst_neigh_lookup", "dst_release", "ip_encap_hlen", "ip_route_output_flow", "ip_tunnel_dst_cache_usable", "ip_tunnel_ecn_encap", "ip_tunnel_encap", "iptunnel_xmit", "kfree_skb_reason", "memset", "neigh_release", "skb_cow_head", "skb_protocol.part.0", "skb_tunnel_info", "tnl_update_pmtu"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "ip_md_tunnel_xmit",
+    "callees": ["__builtin_bswap16", "__builtin_expect", "__skb_get_hash", "dst_cache_get_ip4", "dst_cache_set_ip4", "dst_release", "ip_encap_hlen", "ip_route_output_flow", "ip_tunnel_dst_cache_usable", "ip_tunnel_ecn_encap", "ip_tunnel_encap", "iptunnel_xmit", "kfree_skb_reason", "memset", "skb_cow_head", "skb_tunnel_info", "tnl_update_pmtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "tnl_update_pmtu",
+    "callees": ["__builtin_bswap32", "dst_metrics_write_ptr", "dst_mtu", "icmp_ndo_send", "icmpv6_ndo_send", "skb_dst_update_pmtu_no_confirm"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap_setup",
+    "callees": ["ip_encap_hlen", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap_del_ops",
+    "callees": ["synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap_add_ops",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_rcv",
+    "callees": ["IP_ECN_decapsulate", "__builtin_bswap32", "__builtin_expect", "_printk", "dst_release", "eth_type_trans", "gro_cells_receive", "kfree_skb_reason", "net_ratelimit", "skb_postpull_rcsum", "skb_scrub_packet"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_md_udp_encap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_create",
+    "callees": ["__builtin_expect", "__ip_tunnel_create", "dev_set_mtu", "ip_tunnel_add", "ip_tunnel_bind_dev", "unregister_netdevice_queue"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_bind_dev",
+    "callees": ["__builtin_expect", "__dev_get_by_index", "dst_release", "ip_route_output_flow", "memset"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "__ip_tunnel_create",
+    "callees": ["__builtin_expect", "__builtin_memcpy", "__builtin_strlen", "__warn_printk", "alloc_netdev_mqs", "dev_valid_name", "free_netdev", "register_netdevice", "rtnl_is_locked", "strcpy", "strlen", "strscpy"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "ip_tunnel_find",
+    "callees": ["ip_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_del",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_add",
+    "callees": ["ip_bucket"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_ecn_encap",
+    "callees": ["ip_tunnel_get_dsfield"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_get_dsfield",
+    "callees": ["__builtin_bswap16", "skb_protocol.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_tunnel_encap",
+    "callees": ["ip_tunnel_encap.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ip_encap_hlen",
+    "callees": ["ip_encap_hlen.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "IP_ECN_decapsulate",
+    "callees": ["INET_ECN_decapsulate", "__builtin_bswap16", "skb_protocol.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "INET_ECN_decapsulate",
+    "callees": ["INET_ECN_set_ce", "INET_ECN_set_ect1", "__INET_ECN_decapsulate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eth_hw_addr_random",
+    "callees": ["dev_addr_mod", "eth_random_addr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "eth_random_addr",
+    "callees": ["get_random_bytes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_dst_update_pmtu_no_confirm",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_link_failure",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_neigh_lookup",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_mtu",
+    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dst_metrics_write_ptr",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "neigh_release",
+    "callees": ["__refcount_sub_and_test", "neigh_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_cow_head",
+    "callees": ["__skb_cow", "skb_header_cloned"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_cow",
+    "callees": ["pskb_expand_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_header_cloned",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }

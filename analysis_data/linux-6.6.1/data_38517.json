@@ -1,19 +1,7 @@
 [
   {
-    "name": "__se_sys_ia32_fallocate",
-    "callees": ["ksys_fallocate"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__se_sys_ia32_sync_file_range",
-    "callees": ["ksys_sync_file_range"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__se_sys_ia32_fadvise64_64",
-    "callees": ["ksys_fadvise64_64"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
@@ -24,206 +12,176 @@
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_clone",
-    "callees": ["kernel_clone"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_clone",
-    "callees": ["__do_compat_sys_ia32_clone"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_mmap",
-    "callees": ["_copy_from_user", "ksys_mmap_pgoff"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_mmap",
-    "callees": ["__do_compat_sys_ia32_mmap"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_fstatat64",
-    "callees": ["cp_stat64", "vfs_fstatat"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_fstatat64",
-    "callees": ["__do_compat_sys_ia32_fstatat64"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_fstat64",
-    "callees": ["cp_stat64", "vfs_fstat"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_fstat64",
-    "callees": ["__do_compat_sys_ia32_fstat64"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_lstat64",
-    "callees": ["cp_stat64", "vfs_fstatat"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_lstat64",
-    "callees": ["__do_compat_sys_ia32_lstat64"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__do_compat_sys_ia32_stat64",
-    "callees": ["cp_stat64", "vfs_fstatat"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_compat_sys_ia32_stat64",
-    "callees": ["__do_compat_sys_ia32_stat64"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "cp_stat64",
-    "callees": ["__access_ok", "__builtin_expect"],
-    "global_reads": ["overflowgid", "overflowuid"],
-    "global_writes": []
-  },
-  {
-    "name": "__se_sys_ia32_fallocate",
-    "callees": ["ksys_fallocate"],
+    "name": "gen6_ppgtt_create",
+    "callees": ["__builtin_expect", "__mutex_init", "gen6_alloc_top_pd", "gen6_ppgtt_init_scratch", "kref_put", "kzalloc", "ppgtt_init"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_fallocate",
-    "callees": ["__se_sys_ia32_fallocate"],
+    "name": "gen6_ppgtt_unpin",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_fallocate",
-    "callees": ["__se_sys_ia32_fallocate"],
+    "name": "gen6_alloc_top_pd",
+    "callees": ["__alloc_pd", "__builtin_expect", "__i915_gem_object_create_internal", "__refcount_add", "free_px", "i915_vma_instance"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_fadvise64",
-    "callees": ["ksys_fadvise64_64"],
+    "name": "pd_dummy_obj_put_pages",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_fadvise64",
-    "callees": ["ksys_fadvise64_64"],
+    "name": "pd_dummy_obj_get_pages",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__se_sys_ia32_sync_file_range",
-    "callees": ["ksys_sync_file_range"],
+    "name": "gen6_ppgtt_pin",
+    "callees": ["__builtin_expect", "i915_ggtt_pin", "i915_vm_lock_objects"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_sync_file_range",
-    "callees": ["__se_sys_ia32_sync_file_range"],
+    "name": "pd_vma_unbind",
+    "callees": ["free_px"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_sync_file_range",
-    "callees": ["__se_sys_ia32_sync_file_range"],
+    "name": "pd_vma_bind",
+    "callees": ["gen6_flush_pd"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_readahead",
-    "callees": ["ksys_readahead"],
+    "name": "gen6_ppgtt_cleanup",
+    "callees": ["free_px", "free_scratch", "gen6_ppgtt_free_pd"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_readahead",
-    "callees": ["ksys_readahead"],
+    "name": "gen6_ppgtt_free_pd",
+    "callees": ["free_px"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__se_sys_ia32_fadvise64_64",
-    "callees": ["ksys_fadvise64_64"],
+    "name": "gen6_alloc_va_range",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "fill_page_dma", "gen6_flush_pd", "i915_pte_count", "intel_runtime_pm_get", "intel_runtime_pm_put_unchecked"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_fadvise64_64",
-    "callees": ["__se_sys_ia32_fadvise64_64"],
+    "name": "gen6_flush_pd",
+    "callees": ["gen6_ggtt_invalidate", "gen6_write_pde", "ioread32", "mutex_lock", "mutex_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_fadvise64_64",
-    "callees": ["__se_sys_ia32_fadvise64_64"],
+    "name": "gen6_ppgtt_insert_entries",
+    "callees": ["__builtin_expect", "__px_vaddr"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_pwrite64",
-    "callees": ["ksys_pwrite64"],
+    "name": "gen6_ppgtt_clear_range",
+    "callees": ["__px_vaddr"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_pwrite64",
-    "callees": ["ksys_pwrite64"],
+    "name": "gen6_ppgtt_enable",
+    "callees": ["intel_uncore_rmw"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__ia32_sys_ia32_pread64",
-    "callees": ["ksys_pread64"],
+    "name": "gen7_ppgtt_enable",
+    "callees": ["intel_uncore_rmw"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__x64_sys_ia32_pread64",
-    "callees": ["ksys_pread64"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__ia32_sys_ia32_ftruncate64",
-    "callees": ["do_sys_ftruncate"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__x64_sys_ia32_ftruncate64",
-    "callees": ["do_sys_ftruncate"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__ia32_sys_ia32_truncate64",
-    "callees": ["do_sys_truncate"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__x64_sys_ia32_truncate64",
-    "callees": ["do_sys_truncate"],
+    "name": "gen6_write_pde",
+    "callees": ["__px_dma", "iowrite32"],
     "global_reads": [],
     "global_writes": []
   }

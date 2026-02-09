@@ -1,61 +1,199 @@
 [
   {
-    "name": "blk_set_runtime_active.part.0",
-    "callees": ["__pm_runtime_suspend", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "blk_clear_pm_only", "ktime_get_mono_fast_ns"],
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_set_runtime_active.part.0",
-    "callees": ["__pm_runtime_suspend", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "blk_clear_pm_only", "ktime_get_mono_fast_ns"],
+    "name": "make_bad_inode",
+    "callees": ["inode_set_ctime_current", "remove_inode_hash"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_post_runtime_suspend.part.0",
-    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "blk_clear_pm_only", "ktime_get_mono_fast_ns"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_pre_runtime_resume.part.0",
-    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_set_runtime_active",
-    "callees": ["blk_set_runtime_active.part.0"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_post_runtime_resume",
-    "callees": ["blk_set_runtime_active.part.0"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_pre_runtime_resume",
-    "callees": ["blk_pre_runtime_resume.part.0"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_post_runtime_suspend",
-    "callees": ["blk_post_runtime_suspend.part.0"],
+    "name": "iget_failed",
+    "callees": ["iput", "make_bad_inode", "unlock_new_inode"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_pre_runtime_suspend",
-    "callees": ["__builtin_expect", "_raw_spin_lock_irq", "_raw_spin_unlock_irq", "blk_clear_pm_only", "blk_freeze_queue_start", "blk_mq_unfreeze_queue", "blk_set_pm_only", "ktime_get_mono_fast_ns", "percpu_ref_is_zero", "percpu_ref_switch_to_atomic_sync"],
+    "name": "is_bad_inode",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "blk_pm_runtime_init",
-    "callees": ["__pm_runtime_use_autosuspend", "pm_runtime_set_autosuspend_delay"],
+    "name": "make_bad_inode",
+    "callees": ["inode_set_ctime_current", "remove_inode_hash"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_set_acl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_tmpfile",
+    "callees": ["bad_inode_mkdir"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_atomic_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_update_time",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_fiemap",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_get_acl",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_get_link",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_listxattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_setattr",
+    "callees": ["bad_inode_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_getattr",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_permission",
+    "callees": ["bad_inode_readlink"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_readlink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_rename2",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_mknod",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_rmdir",
+    "callees": ["bad_file_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_mkdir",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_symlink",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_unlink",
+    "callees": ["bad_file_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_link",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_lookup",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_inode_create",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "bad_file_open",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "remove_inode_hash",
+    "callees": ["__remove_inode_hash"],
     "global_reads": [],
     "global_writes": []
   }

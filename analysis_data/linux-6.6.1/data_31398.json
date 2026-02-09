@@ -1,31 +1,331 @@
 [
   {
-    "name": "lcm.part.0",
-    "callees": ["gcd"],
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "lcm",
-    "callees": ["lcm.part.0"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "lcm.part.0",
-    "callees": ["gcd"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "lcm_not_zero",
-    "callees": ["lcm"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "lcm",
-    "callees": ["lcm.part.0"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_try_pull_from_frag0",
+    "callees": ["gro_pull_from_frag0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_list",
+    "callees": ["netif_receive_skb_list_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_one",
+    "callees": ["gro_normal_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_list",
+    "callees": ["netif_receive_skb_list_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_one",
+    "callees": ["gro_normal_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_get_frags.part.0",
+    "callees": ["__napi_alloc_skb"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__skb_gro_checksum_complete",
+    "callees": ["__builtin_expect", "netdev_rx_csum_fault", "skb_checksum"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_gro_frags",
+    "callees": ["dev_gro_receive", "napi_frags_finish", "napi_frags_skb", "trace_napi_gro_frags_entry", "trace_napi_gro_frags_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_frags_skb",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "_printk", "gro_pull_from_frag0", "napi_reuse_skb", "net_ratelimit", "skb_gro_header_slow", "skb_gro_reset_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_frags_finish",
+    "callees": ["eth_type_trans", "gro_normal_one", "napi_reuse_skb", "napi_skb_free_stolen_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_get_frags",
+    "callees": ["napi_get_frags.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_reuse_skb",
+    "callees": ["__builtin_expect", "consume_skb", "nf_conntrack_put", "skb_ext_reset", "skb_orphan"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_gro_receive",
+    "callees": ["dev_gro_receive", "napi_skb_finish", "skb_gro_reset_offset", "trace_napi_gro_receive_entry", "trace_napi_gro_receive_exit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_skb_finish",
+    "callees": ["__kfree_skb", "__napi_kfree_skb", "gro_normal_one", "napi_skb_free_stolen_head"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_find_complete_by_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_find_receive_by_type",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_gro_receive",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "__rcu_read_lock", "__rcu_read_unlock", "gro_flush_oldest", "gro_list_prepare", "gro_try_pull_from_frag0", "inet_gro_receive", "ipv6_gro_receive", "napi_gro_complete"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "gro_try_pull_from_frag0",
+    "callees": ["gro_pull_from_frag0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_pull_from_frag0",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "memcpy", "memmove", "skb_frag_unref"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_list_prepare",
+    "callees": ["__builtin_expect", "memcmp", "skb_metadata_differs", "skb_metadata_dst_cmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "napi_gro_flush",
+    "callees": ["__builtin_constant_p", "__builtin_ffs", "__napi_gro_flush_chain"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__napi_gro_flush_chain",
+    "callees": ["__builtin_constant_p", "napi_gro_complete"],
+    "global_reads": ["jiffies"],
+    "global_writes": []
+  },
+  {
+    "name": "skb_gro_receive",
+    "callees": ["__builtin_expect", "__builtin_unreachable", "memcpy", "virt_to_head_page"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "dev_remove_offload",
+    "callees": ["__dev_remove_offload", "synchronize_net"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__dev_remove_offload",
+    "callees": ["_printk", "_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_add_offload",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_napi_gro_receive_exit",
+    "callees": ["__SCT__tp_func_napi_gro_receive_exit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_napi_gro_frags_exit",
+    "callees": ["__SCT__tp_func_napi_gro_frags_exit", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_napi_gro_receive_entry",
+    "callees": ["__SCT__tp_func_napi_gro_receive_entry", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_napi_gro_frags_entry",
+    "callees": ["__SCT__tp_func_napi_gro_frags_entry", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_one",
+    "callees": ["gro_normal_list"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gro_normal_list",
+    "callees": ["netif_receive_skb_list_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_ext_reset",
+    "callees": ["__builtin_expect", "__skb_ext_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_metadata_differs",
+    "callees": ["__skb_metadata_differs"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skb_orphan",
+    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "nf_conntrack_put",
+    "callees": ["__refcount_sub_and_test", "nf_conntrack_destroy"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "virt_to_head_page",
+    "callees": ["_compound_head"],
+    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

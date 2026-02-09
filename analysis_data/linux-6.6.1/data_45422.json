@@ -1,80 +1,152 @@
 [
   {
-    "name": "acpi_ut_remove_reference.part.0",
-    "callees": ["acpi_ut_update_object_reference"],
+    "name": "__intel_atomic_global_state_free",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference",
-    "callees": ["acpi_ut_remove_reference.part.0", "acpi_ut_valid_internal_object"],
+    "name": "__intel_atomic_global_state_free",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference.part.0",
-    "callees": ["acpi_ut_update_object_reference"],
+    "name": "__intel_atomic_global_state_free",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference",
-    "callees": ["acpi_ut_remove_reference.part.0", "acpi_ut_valid_internal_object"],
+    "name": "__intel_atomic_global_state_free",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference.part.0",
-    "callees": ["acpi_ut_update_object_reference"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference",
-    "callees": ["acpi_ut_remove_reference.part.0", "acpi_ut_valid_internal_object"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_update_ref_count.part.0",
-    "callees": ["acpi_error", "acpi_os_acquire_lock", "acpi_os_release_lock", "acpi_ut_delete_internal_obj", "acpi_warning"],
-    "global_reads": ["acpi_gbl_reference_count_lock"],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ut_remove_reference.part.0",
-    "callees": ["acpi_ut_update_object_reference"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_remove_reference",
-    "callees": ["acpi_ut_remove_reference.part.0", "acpi_ut_valid_internal_object"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_add_reference",
-    "callees": ["acpi_ut_update_object_reference", "acpi_ut_valid_internal_object"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_update_object_reference",
-    "callees": ["acpi_exception", "acpi_ut_create_update_state_and_push", "acpi_ut_delete_generic_state", "acpi_ut_pop_generic_state", "acpi_ut_update_ref_count.part.0"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_delete_internal_object_list",
-    "callees": ["acpi_ut_remove_reference", "kfree"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_delete_internal_obj",
-    "callees": ["acpi_error", "acpi_ev_delete_gpe_block", "acpi_ex_unlink_mutex", "acpi_ns_get_secondary_object", "acpi_os_delete_semaphore", "acpi_ut_delete_object_desc", "acpi_ut_remove_address_range", "acpi_ut_remove_reference", "kfree"],
-    "global_reads": ["acpi_gbl_global_lock_mutex", "acpi_gbl_global_lock_semaphore"],
-    "global_writes": ["acpi_gbl_global_lock_mutex", "acpi_gbl_global_lock_semaphore"]
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_global_state_is_serialized",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_serialize_global_state",
+    "callees": ["__builtin_expect", "intel_atomic_get_crtc_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_lock_global_state",
+    "callees": ["drm_modeset_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_clear_global_state",
+    "callees": ["kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_swap_global_state",
+    "callees": ["__builtin_expect", "__refcount_add", "__warn_printk", "dev_driver_string", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_new_global_obj_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_old_global_obj_state",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_global_obj_state",
+    "callees": ["__drm_dev_dbg", "__refcount_add", "assert_global_state_read_locked", "krealloc", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_global_obj_cleanup",
+    "callees": ["__builtin_expect", "__warn_printk", "dev_driver_string", "kref_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_global_obj_init",
+    "callees": ["memset"],
+    "global_reads": [],
+    "global_writes": []
   }
 ]

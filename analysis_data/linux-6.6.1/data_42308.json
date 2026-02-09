@@ -1,19 +1,13 @@
 [
   {
-    "name": "acpi_ex_resolve_multiple",
-    "callees": ["acpi_ds_method_data_get_node", "acpi_ds_method_data_get_value", "acpi_error", "acpi_ns_get_attached_object", "acpi_ns_get_type", "acpi_ut_get_descriptor_name", "acpi_ut_get_node_name", "acpi_ut_remove_reference"],
-    "global_reads": [],
+    "name": "e1000e_check_options",
+    "callees": ["_dev_err", "_dev_info", "_dev_notice", "e1000_validate_option", "e1000e_set_kmrn_lock_loss_workaround_ich8lan", "kfree", "kstrdup"],
+    "global_reads": ["num_CrcStripping", "num_IntMode", "num_InterruptThrottleRate", "num_KumeranLockLoss", "num_RxAbsIntDelay", "num_RxIntDelay", "num_SmartPowerDownEnable", "num_TxAbsIntDelay", "num_TxIntDelay", "num_WriteProtectNVM"],
     "global_writes": []
   },
   {
-    "name": "acpi_ex_resolve_object_to_value",
-    "callees": ["acpi_ds_get_buffer_arguments", "acpi_ds_get_package_arguments", "acpi_ds_method_data_get_value", "acpi_error", "acpi_ex_read_data_from_field", "acpi_ut_add_reference", "acpi_ut_remove_reference"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ex_resolve_to_value",
-    "callees": ["acpi_error", "acpi_ex_resolve_node_to_value", "acpi_ex_resolve_object_to_value"],
+    "name": "e1000_validate_option",
+    "callees": ["__builtin_unreachable", "_dev_info"],
     "global_reads": [],
     "global_writes": []
   }

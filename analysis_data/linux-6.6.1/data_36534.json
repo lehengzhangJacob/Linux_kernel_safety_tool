@@ -1,91 +1,19 @@
 [
   {
-    "name": "vma_start_write",
-    "callees": ["down_write", "up_write"],
+    "name": "simple_get_bytes",
+    "callees": ["__builtin_expect", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "vma_start_write",
-    "callees": ["down_write", "up_write"],
+    "name": "simple_get_bytes",
+    "callees": ["__builtin_expect", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "vma_start_write",
-    "callees": ["down_write", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4d_offset",
-    "callees": ["p4d_offset.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "vma_start_write",
-    "callees": ["down_write", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pgd_none",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "take_rmap_locks",
-    "callees": ["down_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "take_rmap_locks",
-    "callees": ["down_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "drop_rmap_locks",
-    "callees": ["up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "drop_rmap_locks",
-    "callees": ["up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "vm_unacct_memory",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["vm_committed_as_batch"],
-    "global_writes": []
-  },
-  {
-    "name": "pmd_pgtable_page",
-    "callees": [],
-    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
+    "name": "simple_get_bytes",
+    "callees": ["__builtin_expect", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
@@ -102,248 +30,56 @@
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "cleanup_kerberos_module",
+    "callees": ["gss_mech_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "init_kerberos_module",
+    "callees": ["_printk", "gss_mech_register"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "gss_krb5_unwrap",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "gss_krb5_wrap",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "gss_krb5_verify_mic",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "gss_krb5_get_mic",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "gss_krb5_delete_sec_context",
+    "callees": ["crypto_destroy_tfm", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "gss_krb5_import_sec_context",
+    "callees": ["gss_import_v2_context", "kfree", "kzalloc", "memset"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__do_sys_mremap",
-    "callees": ["__builtin_expect", "__mm_populate", "do_vmi_munmap", "get_unmapped_area", "mmap_write_lock_killable", "mmap_write_unlock", "move_vma", "mremap_to", "mtree_load", "security_vm_enough_memory_mm", "vm_stat_account", "vm_unacct_memory", "vma_expandable", "vma_merge", "vma_to_resize"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__ia32_sys_mremap",
-    "callees": ["__do_sys_mremap"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__x64_sys_mremap",
-    "callees": ["__do_sys_mremap"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "vma_expandable",
-    "callees": ["find_vma_intersection", "get_unmapped_area"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "vma_to_resize",
-    "callees": ["__builtin_expect", "_printk", "may_expand_vm", "mlock_future_ok", "mtree_load"],
-    "global_reads": ["__already_done"],
-    "global_writes": ["__already_done"]
-  },
-  {
-    "name": "move_page_tables",
-    "callees": ["__SCT__cond_resched", "__builtin_expect", "__pte_alloc", "alloc_new_pmd", "alloc_new_pud", "get_old_pmd", "get_old_pud", "mmu_notifier_invalidate_range_end", "mmu_notifier_invalidate_range_start", "move_hugetlb_page_tables", "move_pgt_entry", "move_ptes"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "drop_rmap_locks",
-    "callees": ["up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "take_rmap_locks",
-    "callees": ["down_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "get_old_pmd",
-    "callees": ["get_old_pud", "pmd_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "get_old_pud",
-    "callees": ["p4d_none_or_clear_bad", "p4d_offset", "pgd_none_or_clear_bad", "pud_none_or_clear_bad"],
-    "global_reads": ["page_offset_base", "pgdir_shift"],
-    "global_writes": []
-  },
-  {
-    "name": "vm_unacct_memory",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["vm_committed_as_batch"],
-    "global_writes": []
-  },
-  {
-    "name": "pmd_pgtable_page",
-    "callees": [],
-    "global_reads": ["page_offset_base", "phys_base", "vmemmap_base"],
-    "global_writes": []
-  },
-  {
-    "name": "pmd_alloc",
-    "callees": ["__builtin_expect", "__pmd_alloc", "pmd_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pud_alloc",
-    "callees": ["__builtin_expect", "__pud_alloc"],
-    "global_reads": ["page_offset_base"],
-    "global_writes": []
-  },
-  {
-    "name": "p4d_alloc",
-    "callees": ["__builtin_expect", "__p4d_alloc", "p4d_offset", "pgd_none"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mmu_notifier_invalidate_range_end",
-    "callees": ["__SCT__might_resched", "__builtin_expect", "__mmu_notifier_invalidate_range_end"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "vma_start_write",
-    "callees": ["down_write", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pud_none_or_clear_bad",
-    "callees": ["__builtin_expect", "pud_clear_bad"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4d_none_or_clear_bad",
-    "callees": ["__builtin_expect", "p4d_clear_bad"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pgd_none_or_clear_bad",
-    "callees": ["__builtin_expect", "pgd_bad", "pgd_clear_bad", "pgd_none"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pgd_none",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pgd_bad",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "p4d_offset",
-    "callees": ["p4d_offset.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "pmd_pfn",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mmap_write_unlock",
-    "callees": ["__mmap_lock_trace_released", "up_write"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mmap_write_lock_killable",
-    "callees": ["__mmap_lock_trace_acquire_returned", "__mmap_lock_trace_start_locking", "down_write_killable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "mas_init",
-    "callees": ["memset"],
+    "name": "simple_get_bytes",
+    "callees": ["__builtin_expect", "memcpy"],
     "global_reads": [],
     "global_writes": []
   }

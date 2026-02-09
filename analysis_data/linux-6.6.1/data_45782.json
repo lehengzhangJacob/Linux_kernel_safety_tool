@@ -1,85 +1,205 @@
 [
   {
-    "name": "dst_mtu",
-    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "name": "intel_dp_hdcp2_check_link",
+    "callees": ["intel_dp_hdcp2_read_rx_status"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "find_syn_match.part.0",
+    "name": "intel_dp_hdcp_read_bcaps",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "find_syn_match",
-    "callees": ["find_syn_match.part.0", "strcmp"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_syn_match.part.0",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg_exit",
-    "callees": ["xt_unregister_targets"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg_init",
-    "callees": ["xt_register_targets"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg6_check",
-    "callees": ["___ratelimit", "_printk", "find_syn_match"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg4_check",
-    "callees": ["___ratelimit", "_printk", "find_syn_match"],
+    "name": "",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "find_syn_match",
-    "callees": ["find_syn_match.part.0", "strcmp"],
+    "name": "intel_dp_hdcp_init",
+    "callees": ["intel_dp_is_edp", "intel_hdcp_init", "is_hdcp_supported"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg6",
-    "callees": ["__builtin_bswap16", "ipv6_skip_exthdr", "tcpmss_mangle_packet"],
+    "name": "intel_dp_mst_hdcp2_check_link",
+    "callees": ["intel_dp_hdcp2_check_link"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_tg4",
-    "callees": ["__builtin_bswap16", "tcpmss_mangle_packet"],
+    "name": "intel_dp_mst_hdcp2_stream_encryption",
+    "callees": ["__builtin_expect", "__warn_printk", "_dev_err", "dev_driver_string", "intel_attached_dig_port", "intel_de_wait_for_register", "intel_dp_mst_toggle_hdcp_stream_select"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_mangle_packet",
-    "callees": ["__builtin_bswap16", "_printk", "dst_mtu", "inet_proto_csum_replace4", "memmove", "net_ratelimit", "pskb_expand_head", "skb_ensure_writable", "skb_put", "tcpmss_reverse_mtu"],
+    "name": "intel_dp_mst_hdcp_stream_encryption",
+    "callees": ["_dev_err", "intel_attached_dig_port", "intel_de_wait_for_register", "intel_dp_mst_toggle_hdcp_stream_select"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "tcpmss_reverse_mtu",
-    "callees": ["dst_mtu", "dst_release", "memset", "nf_route"],
+    "name": "intel_dp_mst_toggle_hdcp_stream_select",
+    "callees": ["_dev_err", "intel_attached_dig_port", "intel_ddi_toggle_hdcp_bits"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "dst_mtu",
-    "callees": ["__builtin_expect", "ip6_mtu", "ipv4_mtu"],
+    "name": "intel_dp_hdcp2_capable",
+    "callees": ["drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_check_link",
+    "callees": ["intel_dp_hdcp2_read_rx_status"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_config_stream_type",
+    "callees": ["intel_dp_hdcp2_write_msg"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_read_msg",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read", "get_receiver_id_list_rx_info", "intel_dp_hdcp2_wait_for_msg", "ktime_get_raw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_receiver_id_list_rx_info",
+    "callees": ["drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_write_msg",
+    "callees": ["drm_dp_dpcd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_wait_for_msg",
+    "callees": ["__bad_udelay", "__builtin_constant_p", "__const_udelay", "__drm_dev_dbg", "__udelay", "hdcp2_detect_msg_availability", "intel_dp_hdcp_wait_for_cp_irq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp2_read_rx_status",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_capable",
+    "callees": ["intel_dp_hdcp_read_bcaps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_check_link",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_toggle_signalling",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_v_prime_part",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_ksv_fifo",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_ksv_ready",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_ri_prime",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_repeater_present",
+    "callees": ["intel_dp_hdcp_read_bcaps"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_bcaps",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_bstatus",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_read_bksv",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_write_an_aksv",
+    "callees": ["__drm_dev_dbg", "drm_dp_dpcd_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_dp_hdcp_wait_for_cp_irq",
+    "callees": ["__SCT__might_resched", "___drm_dbg", "__builtin_constant_p", "__msecs_to_jiffies", "finish_wait", "init_wait_entry", "prepare_to_wait_event", "schedule_timeout"],
     "global_reads": [],
     "global_writes": []
   }

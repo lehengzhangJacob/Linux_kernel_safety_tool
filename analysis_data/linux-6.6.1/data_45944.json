@@ -1,73 +1,7 @@
 [
   {
-    "name": "acpi_ut_get_interface",
-    "callees": ["strcmp"],
-    "global_reads": ["acpi_gbl_supported_interfaces"],
-    "global_writes": []
-  },
-  {
-    "name": "kzalloc",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_os_allocate_zeroed",
-    "callees": ["kzalloc"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ut_osi_implementation",
-    "callees": ["acpi_os_signal_semaphore", "acpi_os_wait_semaphore", "acpi_ut_create_internal_object_dbg", "acpi_ut_get_interface", "acpi_ut_remove_reference"],
-    "global_reads": ["acpi_gbl_interface_handler", "acpi_gbl_osi_data", "acpi_gbl_osi_mutex"],
-    "global_writes": ["acpi_gbl_osi_data"]
-  },
-  {
-    "name": "acpi_ut_get_interface",
-    "callees": ["strcmp"],
-    "global_reads": ["acpi_gbl_supported_interfaces"],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ut_update_interfaces",
-    "callees": [],
-    "global_reads": ["acpi_gbl_supported_interfaces"],
-    "global_writes": []
-  },
-  {
-    "name": "acpi_ut_remove_interface",
-    "callees": ["kfree", "strcmp"],
-    "global_reads": ["acpi_gbl_supported_interfaces"],
-    "global_writes": ["acpi_gbl_supported_interfaces"]
-  },
-  {
-    "name": "acpi_ut_install_interface",
-    "callees": ["acpi_os_allocate_zeroed", "kfree", "strcpy", "strlen"],
-    "global_reads": ["acpi_gbl_supported_interfaces"],
-    "global_writes": ["acpi_gbl_supported_interfaces"]
-  },
-  {
-    "name": "acpi_ut_interface_terminate",
-    "callees": ["acpi_os_signal_semaphore", "acpi_os_wait_semaphore", "kfree"],
-    "global_reads": ["acpi_gbl_osi_mutex", "acpi_gbl_supported_interfaces"],
-    "global_writes": ["acpi_gbl_supported_interfaces"]
-  },
-  {
-    "name": "acpi_ut_initialize_interfaces",
-    "callees": ["acpi_os_signal_semaphore", "acpi_os_wait_semaphore"],
-    "global_reads": ["acpi_gbl_osi_mutex"],
-    "global_writes": ["acpi_gbl_supported_interfaces"]
-  },
-  {
-    "name": "acpi_os_allocate_zeroed",
-    "callees": ["kzalloc"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "kzalloc",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "kmalloc_large", "kmalloc_trace"],
+    "name": "intel_pxp_huc_load_and_auth",
+    "callees": ["__i915_gem_object_get_dma_address", "_dev_err", "intel_pxp_tee_stream_message"],
     "global_reads": [],
     "global_writes": []
   }

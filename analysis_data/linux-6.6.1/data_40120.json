@@ -1,59 +1,5 @@
 [
   {
-    "name": "dst_init",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["jiffies"],
-    "global_writes": []
-  },
-  {
-    "name": "metadata_dst_free",
-    "callees": ["dst_cache_destroy", "dst_release", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_init",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["jiffies"],
-    "global_writes": []
-  },
-  {
-    "name": "rcuref_put",
-    "callees": ["__builtin_expect", "rcuref_put_slowpath"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "rcuref_put",
-    "callees": ["__builtin_expect", "rcuref_put_slowpath"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_release_immediate.part.0",
-    "callees": ["dst_destroy", "rcuref_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_release_immediate",
-    "callees": ["dst_release_immediate.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_init",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["jiffies"],
-    "global_writes": []
-  },
-  {
-    "name": "__metadata_dst_init",
-    "callees": ["dst_init", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
     "name": "",
     "callees": [],
     "global_reads": [],
@@ -66,164 +12,86 @@
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "serport_exit",
+    "callees": ["tty_unregister_ldisc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "dst_release_immediate.part.0",
-    "callees": ["dst_destroy", "rcuref_put"],
+    "name": "serport_init",
+    "callees": ["_printk", "tty_register_ldisc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__dst_destroy_metrics_generic.part.0",
+    "name": "serport_ldisc_write_wakeup",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serio_drv_write_wakeup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_hangup",
+    "callees": ["__wake_up", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_compat_ioctl",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_ioctl",
+    "callees": ["__builtin_expect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_read",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__serio_register_port", "_printk", "finish_wait", "init_wait_entry", "kzalloc", "prepare_to_wait_event", "schedule", "serio_unregister_port", "snprintf", "strscpy", "tty_name"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_receive",
+    "callees": ["__builtin_constant_p", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "serio_interrupt"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "serport_ldisc_close",
     "callees": ["kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "dst_release.part.0",
-    "callees": ["call_rcu"],
+    "name": "serport_ldisc_open",
+    "callees": ["__init_waitqueue_head", "capable", "kzalloc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "metadata_dst_free_percpu",
-    "callees": ["dst_cache_destroy", "dst_release", "find_next_bit", "free_percpu"],
+    "name": "serport_serio_close",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "metadata_dst_alloc_percpu",
-    "callees": ["__alloc_percpu_gfp", "__metadata_dst_init", "find_next_bit"],
+    "name": "serport_serio_open",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "metadata_dst_free",
-    "callees": ["dst_cache_destroy", "dst_release", "kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "metadata_dst_alloc",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "__builtin_return_address", "__kmalloc", "__metadata_dst_init", "kmalloc_trace"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__metadata_dst_init",
-    "callees": ["dst_init", "memset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_blackhole_mtu",
+    "name": "serport_serio_write",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "dst_blackhole_redirect",
+    "name": "serio_drv_write_wakeup",
     "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_blackhole_update_pmtu",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_blackhole_neigh_lookup",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_blackhole_cow_metrics",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_blackhole_check",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "__dst_destroy_metrics_generic",
-    "callees": ["__dst_destroy_metrics_generic.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_cow_metrics_generic",
-    "callees": ["__builtin_return_address", "__refcount_sub_and_test", "kfree", "kmalloc_trace", "memcpy"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_release_immediate",
-    "callees": ["dst_release_immediate.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_release",
-    "callees": ["dst_release.part.0", "rcuref_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_dev_put",
-    "callees": [],
-    "global_reads": ["blackhole_netdev"],
-    "global_writes": []
-  },
-  {
-    "name": "dst_destroy_rcu",
-    "callees": ["dst_destroy"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_destroy",
-    "callees": ["dst_release_immediate", "kmem_cache_free", "metadata_dst_free", "percpu_counter_add_batch"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_alloc",
-    "callees": ["dst_init", "kmem_cache_alloc"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_init",
-    "callees": ["percpu_counter_add_batch"],
-    "global_reads": ["jiffies"],
-    "global_writes": []
-  },
-  {
-    "name": "dst_discard_out",
-    "callees": ["kfree_skb_reason"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "dst_discard",
-    "callees": ["kfree_skb_reason"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "rcuref_put",
-    "callees": ["__builtin_expect", "rcuref_put_slowpath"],
     "global_reads": [],
     "global_writes": []
   }

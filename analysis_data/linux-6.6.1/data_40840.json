@@ -1,37 +1,13 @@
 [
   {
-    "name": "netif_carrier_ok",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_find_adapter_by_handle",
+    "callees": ["bus_find_device", "i2c_verify_adapter", "put_device"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "netif_carrier_ok",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "netif_carrier_ok",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "netif_carrier_ok",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "netif_dormant",
-    "callees": ["__builtin_constant_p"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "netif_testing",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_find_adapter_by_handle",
+    "callees": ["bus_find_device", "i2c_verify_adapter", "put_device"],
     "global_reads": [],
     "global_writes": []
   },
@@ -54,110 +30,152 @@
     "global_writes": []
   },
   {
+    "name": "i2c_acpi_register_device",
+    "callees": ["__builtin_expect", "i2c_new_client_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
     "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_urgent_event.part.0",
-    "callees": ["netif_carrier_ok", "netif_is_lag_master", "netif_is_lag_port", "qdisc_tx_changing"],
+    "name": "i2c_acpi_resource_count.part.0",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_fire_event",
-    "callees": ["linkwatch_add_event", "linkwatch_schedule_work", "linkwatch_urgent_event"],
+    "name": "i2c_acpi_remove_space_handler",
+    "callees": ["acpi_bus_detach_private_data", "acpi_bus_get_private_data", "acpi_remove_address_space_handler", "is_acpi_device_node", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_event",
-    "callees": ["__linkwatch_run_queue", "rtnl_lock", "rtnl_unlock"],
-    "global_reads": ["jiffies", "linkwatch_nextevent"],
-    "global_writes": []
-  },
-  {
-    "name": "linkwatch_run_queue",
-    "callees": ["__linkwatch_run_queue"],
+    "name": "i2c_acpi_install_space_handler",
+    "callees": ["_dev_err", "acpi_bus_attach_private_data", "acpi_bus_detach_private_data", "acpi_install_address_space_handler", "is_acpi_device_node", "kfree", "kzalloc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_forget_dev",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "linkwatch_do_dev"],
+    "name": "i2c_acpi_space_handler",
+    "callees": ["_dev_warn", "acpi_buffer_to_resource", "acpi_gsb_i2c_read_bytes", "acpi_gsb_i2c_write_bytes", "i2c_smbus_read_block_data", "i2c_smbus_read_byte", "i2c_smbus_read_byte_data", "i2c_smbus_read_word_data", "i2c_smbus_write_block_data", "i2c_smbus_write_byte", "i2c_smbus_write_byte_data", "i2c_smbus_write_word_data", "kfree", "kzalloc"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__linkwatch_run_queue",
-    "callees": ["_raw_spin_lock_irq", "_raw_spin_unlock_irq", "linkwatch_do_dev", "linkwatch_schedule_work", "linkwatch_urgent_event", "netif_device_present"],
-    "global_reads": ["jiffies", "linkwatch_nextevent"],
-    "global_writes": ["linkwatch_nextevent"]
-  },
-  {
-    "name": "linkwatch_do_dev",
-    "callees": ["dev_activate", "dev_deactivate", "netdev_state_change", "netif_carrier_ok", "rfc2863_policy"],
+    "name": "acpi_gsb_i2c_write_bytes",
+    "callees": ["_dev_err", "i2c_transfer", "kfree", "kzalloc", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_schedule_work",
-    "callees": ["__builtin_constant_p", "mod_delayed_work_on", "schedule_delayed_work"],
-    "global_reads": ["jiffies", "linkwatch_flags", "linkwatch_nextevent", "system_wq"],
-    "global_writes": []
-  },
-  {
-    "name": "linkwatch_add_event",
-    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "name": "acpi_gsb_i2c_read_bytes",
+    "callees": ["_dev_err", "i2c_transfer", "kfree", "kzalloc", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_urgent_event",
-    "callees": ["__builtin_constant_p", "dev_get_iflink", "linkwatch_urgent_event.part.0"],
+    "name": "i2c_acpi_waive_d0_probe",
+    "callees": ["is_acpi_device_node"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "linkwatch_init_dev",
-    "callees": ["netif_carrier_ok", "netif_dormant", "netif_testing", "rfc2863_policy"],
+    "name": "i2c_acpi_new_device_by_fwnode",
+    "callees": ["acpi_dev_free_resource_list", "acpi_dev_get_resources", "i2c_acpi_find_adapter_by_handle", "i2c_new_client_device", "is_acpi_device_node", "memset"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "rfc2863_policy",
-    "callees": ["_raw_write_lock", "_raw_write_unlock", "default_operstate"],
+    "name": "i2c_acpi_notify",
+    "callees": ["i2c_acpi_find_adapter_by_handle", "i2c_acpi_get_info", "i2c_acpi_register_device", "i2c_find_device_by_fwnode", "i2c_unregister_device", "put_device"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "default_operstate",
-    "callees": ["__dev_get_by_index", "dev_get_iflink", "netif_carrier_ok", "netif_dormant", "netif_testing"],
+    "name": "i2c_acpi_find_adapter_by_handle",
+    "callees": ["bus_find_device", "i2c_verify_adapter", "put_device"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "netif_device_present",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_find_bus_speed",
+    "callees": ["_dev_warn", "acpi_walk_namespace", "is_acpi_device_node", "memset"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "netif_testing",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_lookup_speed",
+    "callees": ["acpi_fetch_acpi_dev", "acpi_match_device_ids", "i2c_acpi_do_lookup"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "netif_dormant",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_register_devices",
+    "callees": ["_dev_warn", "acpi_dev_clear_dependencies", "acpi_walk_namespace", "is_acpi_device_node"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "netif_carrier_ok",
-    "callees": ["__builtin_constant_p"],
+    "name": "i2c_acpi_add_device",
+    "callees": ["acpi_fetch_acpi_dev", "i2c_acpi_get_info", "i2c_acpi_register_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_register_device",
+    "callees": ["__builtin_expect", "i2c_new_client_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_get_info",
+    "callees": ["acpi_bus_get_status", "acpi_fetch_acpi_dev", "acpi_set_modalias", "i2c_acpi_do_lookup", "is_acpi_device_node", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_get_irq",
+    "callees": ["acpi_dev_free_resource_list", "acpi_dev_get_resources", "is_acpi_device_node"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_add_irq_resource",
+    "callees": ["acpi_dev_resource_interrupt", "i2c_dev_irq_from_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_do_lookup",
+    "callees": ["acpi_bus_get_status", "acpi_dev_free_resource_list", "acpi_dev_get_resources", "acpi_dev_ready_for_enumeration", "acpi_match_device_ids", "memset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_fill_info",
+    "callees": ["acpi_get_handle"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_client_count",
+    "callees": ["acpi_dev_free_resource_list", "acpi_dev_get_resources"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_resource_count",
+    "callees": ["i2c_acpi_resource_count.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "i2c_acpi_get_i2c_resource",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }

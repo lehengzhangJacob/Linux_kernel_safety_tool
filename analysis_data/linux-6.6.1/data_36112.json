@@ -1,14 +1,38 @@
 [
   {
-    "name": "arc4_crypt",
-    "callees": [],
+    "name": "acpi_processor_set_pdc.part.0",
+    "callees": ["acpi_evaluate_object", "acpi_processor_alloc_pdc", "kfree"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "arc4_setkey",
-    "callees": [],
+    "name": "acpi_early_processor_set_pdc",
+    "callees": ["acpi_get_devices", "acpi_proc_quirk_mwait_check", "acpi_walk_namespace"],
     "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "early_init_pdc",
+    "callees": ["acpi_processor_set_pdc", "processor_physically_present"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_set_pdc",
+    "callees": ["acpi_processor_set_pdc.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_processor_alloc_pdc",
+    "callees": ["__builtin_return_address", "_printk", "arch_acpi_set_proc_cap_bits", "kfree", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "arch_acpi_set_proc_cap_bits",
+    "callees": [],
+    "global_reads": ["boot_option_idle_override"],
     "global_writes": []
   }
 ]

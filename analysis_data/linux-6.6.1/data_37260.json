@@ -1,85 +1,55 @@
 [
   {
-    "name": "misc_cg_max_show",
-    "callees": ["of_css"],
+    "name": "lpit_read_residency_counter_us.part.0",
+    "callees": ["native_read_msr_safe"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "misc_cg_max_show",
-    "callees": ["of_css"],
+    "name": "acpi_init_lpit",
+    "callees": ["acpi_get_table", "acpi_put_table", "lpit_process"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "lpit_process",
+    "callees": ["lpit_update_residency"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_update_residency",
+    "callees": ["bus_get_dev_root", "ioremap", "put_device", "sysfs_add_file_to_group"],
+    "global_reads": ["tsc_khz"],
+    "global_writes": []
+  },
+  {
+    "name": "lpit_read_residency_count_address",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "misc_cg_free",
-    "callees": ["kfree"],
+    "name": "low_power_idle_cpu_residency_us_show",
+    "callees": ["lpit_read_residency_counter_us", "sprintf"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "misc_cg_alloc",
-    "callees": ["kzalloc"],
+    "name": "low_power_idle_system_residency_us_show",
+    "callees": ["lpit_read_residency_counter_us", "sprintf"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "misc_events_show",
-    "callees": ["misc_cg_max_show"],
+    "name": "lpit_read_residency_counter_us",
+    "callees": ["acpi_os_read_iomem", "lpit_read_residency_counter_us.part.0"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "misc_cg_capacity_show",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_current_show",
-    "callees": ["misc_cg_max_show"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_max_write",
-    "callees": ["strim", "strsep"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_max_show",
-    "callees": ["of_css"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_uncharge",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_try_charge",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_set_capacity",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "misc_cg_res_total_usage",
-    "callees": [],
+    "name": "native_read_msr_safe",
+    "callees": ["do_trace_read_msr"],
     "global_reads": [],
     "global_writes": []
   }

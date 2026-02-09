@@ -1,8 +1,92 @@
 [
   {
-    "name": "panic_print_sys_info",
-    "callees": ["console_flush_on_panic", "panic_print_sys_info.part.0"],
-    "global_reads": ["panic_print"],
+    "name": "__phy_modify_mmd_changed",
+    "callees": ["__phy_read_mmd", "__phy_write_mmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_modify_mmd_changed",
+    "callees": ["__phy_read_mmd", "__phy_write_mmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_modify_mmd_changed",
+    "callees": ["__phy_read_mmd", "__phy_write_mmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_select_page",
+    "callees": ["__phy_write_page", "phy_save_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_select_page",
+    "callees": ["__phy_write_page", "phy_save_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_select_page",
+    "callees": ["__phy_write_page", "phy_save_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_select_page",
+    "callees": ["__phy_write_page", "phy_save_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_restore_page",
+    "callees": ["__phy_write_page", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_restore_page",
+    "callees": ["__phy_write_page", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_restore_page",
+    "callees": ["__phy_write_page", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_restore_page",
+    "callees": ["__phy_write_page", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmd_phy_indirect",
+    "callees": ["__mdiobus_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_modify_paged_changed",
+    "callees": ["__mdiobus_modify_changed", "phy_restore_page", "phy_select_page"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "linkmode_test_bit",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "of_set_phy_supported",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   },
   {
@@ -12,199 +96,241 @@
     "global_writes": []
   },
   {
-    "name": "check_panic_on_warn.part.0",
-    "callees": ["panic"],
+    "name": "__phy_read_mmd.part.0",
+    "callees": ["__mdiobus_c45_read", "__mdiobus_read", "mmd_phy_indirect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "nmi_panic.part.0",
-    "callees": ["panic"],
+    "name": "phy_resolve_aneg_pause.part.0",
+    "callees": ["linkmode_test_bit"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "crash_smp_send_stop.part.0",
+    "name": "phy_duplex_to_str.part.0",
     "callees": [],
     "global_reads": [],
-    "global_writes": ["cpus_stopped"]
-  },
-  {
-    "name": "panic_print_sys_info.part.0",
-    "callees": ["__show_mem", "ftrace_dump", "show_state_filter", "sysrq_timer_list_show"],
-    "global_reads": ["panic_print"],
     "global_writes": []
   },
   {
-    "name": "do_oops_enter_exit.part.0",
-    "callees": ["__const_udelay", "_raw_spin_lock", "_raw_spin_lock_irqsave", "_raw_spin_unlock", "_raw_spin_unlock_irqrestore"],
-    "global_reads": ["pause_on_oops", "pause_on_oops_flag", "spin_counter"],
-    "global_writes": ["pause_on_oops_flag", "spin_counter"]
-  },
-  {
-    "name": "panic_on_taint_setup",
-    "callees": ["_printk", "kstrtoull", "strcmp", "strsep"],
-    "global_reads": ["panic_on_taint", "panic_on_taint_nousertaint"],
-    "global_writes": ["panic_on_taint", "panic_on_taint_nousertaint"]
-  },
-  {
-    "name": "oops_setup",
-    "callees": ["strcmp"],
-    "global_reads": [],
-    "global_writes": ["panic_on_oops"]
-  },
-  {
-    "name": "__stack_chk_fail",
-    "callees": ["__builtin_return_address", "panic"],
+    "name": "phy_modify_paged",
+    "callees": ["phy_modify_paged_changed"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "register_warn_debugfs",
-    "callees": ["debugfs_create_file_unsafe"],
+    "name": "phy_modify_paged_changed",
+    "callees": ["__mdiobus_modify_changed", "phy_restore_page", "phy_select_page"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "clear_warn_once_fops_open",
-    "callees": ["simple_attr_open"],
+    "name": "phy_write_paged",
+    "callees": ["__mdiobus_write", "phy_restore_page", "phy_select_page"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "clear_warn_once_set",
-    "callees": ["generic_bug_clear_once", "memset"],
+    "name": "phy_read_paged",
+    "callees": ["__mdiobus_read", "phy_restore_page", "phy_select_page"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__warn_printk",
-    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "_printk", "vprintk"],
+    "name": "phy_restore_page",
+    "callees": ["__phy_write_page", "mutex_unlock"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__warn",
-    "callees": ["_printk", "add_taint", "check_panic_on_warn", "disable_trace_on_warning", "dump_stack", "print_modules", "show_regs", "trace_error_report_end", "vprintk"],
+    "name": "phy_select_page",
+    "callees": ["__phy_write_page", "phy_save_page"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "oops_exit",
-    "callees": ["_printk", "do_oops_enter_exit.part.0", "kmsg_dump"],
-    "global_reads": ["pause_on_oops"],
+    "name": "phy_save_page",
+    "callees": ["__phy_read_page", "mutex_lock"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "oops_enter",
-    "callees": ["arch_trigger_cpumask_backtrace", "debug_locks_off", "do_oops_enter_exit.part.0", "tracing_off"],
-    "global_reads": ["pause_on_oops", "sysctl_oops_all_cpu_backtrace"],
+    "name": "__phy_write_page",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "__phy_read_page",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "phy_modify_mmd",
+    "callees": ["__phy_modify_mmd_changed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "oops_may_print",
+    "name": "__phy_modify_mmd",
+    "callees": ["__phy_modify_mmd_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_modify_mmd_changed",
+    "callees": ["__phy_modify_mmd_changed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_modify_mmd_changed",
+    "callees": ["__phy_read_mmd", "__phy_write_mmd"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_modify",
+    "callees": ["__mdiobus_modify_changed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_modify",
+    "callees": ["__mdiobus_modify_changed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_modify_changed",
+    "callees": ["__mdiobus_modify_changed", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_write_mmd",
+    "callees": ["__phy_write_mmd", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_write_mmd",
+    "callees": ["__mdiobus_c45_write", "__mdiobus_write", "mmd_phy_indirect"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_read_mmd",
+    "callees": ["__phy_read_mmd", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__phy_read_mmd",
+    "callees": ["__phy_read_mmd.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mmd_phy_indirect",
+    "callees": ["__mdiobus_write"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_speed_down_core",
+    "callees": ["__set_linkmode_max_speed", "phy_resolve_min_speed"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_check_downshift",
+    "callees": ["__bitmap_and", "__builtin_constant_p", "_dev_warn", "phy_speed_to_str"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_resolve_aneg_linkmode",
+    "callees": ["__bitmap_and", "__builtin_constant_p", "phy_resolve_aneg_pause.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_resolve_aneg_pause",
+    "callees": ["phy_resolve_aneg_pause.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "of_set_phy_eee_broken",
+    "callees": ["of_set_phy_supported"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "of_set_phy_supported",
     "callees": [],
-    "global_reads": ["pause_on_oops_flag"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "add_taint",
-    "callees": ["__builtin_constant_p", "_printk", "panic"],
-    "global_reads": ["panic_on_taint", "tainted_mask"],
-    "global_writes": ["panic_on_taint"]
-  },
-  {
-    "name": "get_taint",
-    "callees": [],
-    "global_reads": ["tainted_mask"],
+    "name": "phy_set_max_speed",
+    "callees": ["__set_linkmode_max_speed", "phy_advertise_supported"],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "test_taint",
+    "name": "__set_linkmode_max_speed",
+    "callees": ["linkmode_clear_bit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_speeds",
     "callees": ["__builtin_constant_p"],
-    "global_reads": ["tainted_mask"],
-    "global_writes": []
-  },
-  {
-    "name": "print_tainted",
-    "callees": ["__builtin_constant_p", "snprintf", "sprintf"],
-    "global_reads": ["tainted_mask"],
-    "global_writes": []
-  },
-  {
-    "name": "panic",
-    "callees": ["__builtin_constant_p", "__builtin_va_end", "__builtin_va_start", "__const_udelay", "__crash_kexec", "_printk", "atomic_notifier_call_chain", "bust_spinlocks", "console_flush_on_panic", "console_unblank", "console_verbose", "debug_locks_off", "dump_stack", "emergency_restart", "kmsg_dump", "panic_other_cpus_shutdown", "panic_print_sys_info", "panic_smp_self_stop", "vscnprintf"],
-    "global_reads": ["crash_kexec_post_notifiers", "oops_in_progress", "panic_blink", "panic_on_warn", "panic_reboot_mode", "panic_timeout", "tainted_mask"],
-    "global_writes": ["panic_blink", "panic_on_warn", "reboot_mode", "suppress_printk"]
-  },
-  {
-    "name": "panic_other_cpus_shutdown",
-    "callees": ["arch_trigger_cpumask_backtrace", "crash_smp_send_stop"],
-    "global_reads": ["panic_print"],
-    "global_writes": []
-  },
-  {
-    "name": "check_panic_on_warn",
-    "callees": ["check_panic_on_warn.part.0", "panic"],
-    "global_reads": ["panic_on_warn"],
-    "global_writes": []
-  },
-  {
-    "name": "panic_print_sys_info",
-    "callees": ["console_flush_on_panic", "panic_print_sys_info.part.0"],
-    "global_reads": ["panic_print"],
-    "global_writes": []
-  },
-  {
-    "name": "nmi_panic",
-    "callees": ["nmi_panic.part.0", "nmi_panic_self_stop"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "crash_smp_send_stop",
-    "callees": ["crash_smp_send_stop.part.0"],
-    "global_reads": ["cpus_stopped"],
-    "global_writes": []
-  },
-  {
-    "name": "nmi_panic_self_stop",
-    "callees": ["panic_smp_self_stop"],
+    "name": "phy_lookup_setting",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "panic_smp_self_stop",
+    "name": "phy_interface_num_ports",
+    "callees": ["__builtin_expect", "__warn_printk"],
+    "global_reads": ["__already_done"],
+    "global_writes": ["__already_done"]
+  },
+  {
+    "name": "phy_rate_matching_to_str",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "no_blink",
+    "name": "phy_duplex_to_str",
+    "callees": ["phy_duplex_to_str.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "phy_speed_to_str",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "kernel_panic_sysfs_init",
-    "callees": ["sysfs_add_file_to_group"],
-    "global_reads": ["kernel_kobj"],
-    "global_writes": []
-  },
-  {
-    "name": "warn_count_show",
-    "callees": ["sysfs_emit"],
+    "name": "linkmode_test_bit",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "kernel_panic_sysctls_init",
-    "callees": ["__register_sysctl_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "cpu_online",
+    "name": "linkmode_clear_bit",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []

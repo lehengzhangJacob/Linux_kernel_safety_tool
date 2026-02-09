@@ -1,5 +1,59 @@
 [
   {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr.part.0",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["native_write_msr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr.part.0",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["native_write_msr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
     "name": "",
     "callees": [],
     "global_reads": [],
@@ -18,20 +72,254 @@
     "global_writes": []
   },
   {
-    "name": "agp_3_5_enable",
-    "callees": ["__builtin_return_address", "_dev_err", "_dev_info", "agp_3_5_isochronous_node_enable", "agp_3_5_nonisochronous_node_enable", "kfree", "kmalloc_trace", "pci_find_capability", "pci_get_device", "pci_read_config_byte", "pci_read_config_dword", "pci_read_config_word"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "agp_3_5_isochronous_node_enable",
-    "callees": ["_dev_err", "agp_3_5_dev_list_sort", "kfree", "kmalloc_array", "pci_read_config_dword", "pci_read_config_word", "pci_write_config_dword", "pci_write_config_word"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "agp_3_5_dev_list_insert",
+    "name": "",
     "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr.part.0",
+    "callees": ["do_trace_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_exit",
+    "callees": ["platform_driver_unregister"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_init",
+    "callees": ["__platform_driver_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_remove",
+    "callees": ["cpufreq_unregister_driver", "free_acpi_perf_data"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_probe",
+    "callees": ["acpi_cpufreq_boost_init", "acpi_cpufreq_early_init", "cpufreq_get_current_driver", "cpufreq_register_driver", "free_acpi_perf_data"],
+    "global_reads": ["acpi_disabled"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_boost_init",
+    "callees": ["boost_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_resume",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_cpu_exit",
+    "callees": ["acpi_processor_unregister_performance", "boost_set_msr", "kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_cpu_init",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_printk", "acpi_cpufreq_blacklist", "acpi_cpufreq_guess_freq", "acpi_processor_notify_smm", "acpi_processor_register_performance", "acpi_processor_unregister_performance", "arch_set_max_freq_ratio", "cpumask_weight", "dmi_check_system", "get_max_boost_ratio", "kfree", "kmalloc_array", "kzalloc", "on_each_cpu_cond_mask"],
+    "global_reads": ["__already_done", "acpi_perf_data", "acpi_pstate_strict", "bios_with_sw_any_bug", "blacklisted"],
+    "global_writes": ["__already_done", "blacklisted"]
+  },
+  {
+    "name": "get_max_boost_ratio",
+    "callees": ["amd_get_highest_perf", "cppc_get_perf_caps"],
+    "global_reads": ["acpi_pstate_strict"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_blacklist",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "sw_any_bug_found",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": ["bios_with_sw_any_bug"]
+  },
+  {
+    "name": "acpi_cpufreq_early_init",
+    "callees": ["__alloc_percpu", "acpi_processor_preregister_performance", "find_next_bit"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": ["acpi_perf_data"]
+  },
+  {
+    "name": "free_acpi_perf_data",
+    "callees": ["find_next_bit", "free_percpu"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_fast_switch",
+    "callees": ["__builtin_expect", "cpufreq_table_find_index_dl"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": []
+  },
+  {
+    "name": "acpi_cpufreq_target",
+    "callees": ["__builtin_expect", "check_freqs", "drv_write"],
+    "global_reads": ["acpi_perf_data", "acpi_pstate_strict"],
+    "global_writes": []
+  },
+  {
+    "name": "check_freqs",
+    "callees": ["__builtin_expect", "__const_udelay", "drv_read", "extract_freq"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "get_cur_freq_on_cpu",
+    "callees": ["__builtin_expect", "cpufreq_cpu_get_raw", "drv_read", "extract_freq"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": []
+  },
+  {
+    "name": "drv_write",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "smp_call_function_many"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": []
+  },
+  {
+    "name": "do_drv_write",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "drv_read",
+    "callees": ["__builtin_expect", "smp_call_function_any"],
+    "global_reads": ["acpi_perf_data"],
+    "global_writes": []
+  },
+  {
+    "name": "do_drv_read",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_write_io",
+    "callees": ["acpi_os_write_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_read_io",
+    "callees": ["acpi_os_read_port"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_write_amd",
+    "callees": ["native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_read_amd",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_write_intel",
+    "callees": ["native_read_msr", "native_write_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_freq_read_intel",
+    "callees": ["native_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "extract_freq",
+    "callees": ["extract_io", "extract_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_cpb",
+    "callees": ["sprintf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "store_cpb",
+    "callees": ["cpus_read_lock", "cpus_read_unlock", "kstrtouint", "on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "show_freqdomain_cpus",
+    "callees": ["__builtin_expect", "cpufreq_show_cpus"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "set_boost",
+    "callees": ["on_each_cpu_cond_mask"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "boost_set_msr_each",
+    "callees": ["boost_set_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_write_msr",
+    "callees": ["native_write_msr.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "native_read_msr",
+    "callees": ["do_trace_read_msr"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpumask_weight",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

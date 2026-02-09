@@ -1,193 +1,97 @@
 [
   {
-    "name": "internal_change_owner",
-    "callees": ["kernfs_setattr"],
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "internal_change_owner",
-    "callees": ["kernfs_setattr"],
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "seq_commit.part.0",
-    "callees": ["__builtin_expect", "__builtin_unreachable"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_emit_at",
-    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "__warn_printk", "vscnprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_emit",
-    "callees": ["__builtin_expect", "__builtin_va_end", "__builtin_va_start", "__warn_printk", "vscnprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_change_owner",
-    "callees": ["internal_change_owner", "sysfs_groups_change_owner"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_file_change_owner",
-    "callees": ["internal_change_owner", "kernfs_find_and_get_ns", "kernfs_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_link_change_owner",
-    "callees": ["internal_change_owner", "kernfs_find_and_get_ns", "kernfs_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "internal_change_owner",
-    "callees": ["kernfs_setattr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_remove_bin_file",
-    "callees": ["kernfs_remove_by_name_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_create_bin_file",
-    "callees": ["__builtin_expect", "kobject_get_ownership", "sysfs_add_bin_file_mode_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_remove_file_from_group",
-    "callees": ["kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "kernfs_remove_by_name_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_remove_files",
-    "callees": ["kernfs_remove_by_name_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_remove_file_self",
-    "callees": ["__builtin_expect", "kernfs_find_and_get_ns", "kernfs_put", "kernfs_remove_self"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_remove_file_ns",
-    "callees": ["kernfs_remove_by_name_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_unbreak_active_protection",
-    "callees": ["kernfs_put", "kernfs_unbreak_active_protection", "kobject_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_break_active_protection",
-    "callees": ["kernfs_break_active_protection", "kernfs_find_and_get_ns", "kobject_get"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_chmod_file",
-    "callees": ["kernfs_find_and_get_ns", "kernfs_put", "kernfs_setattr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_add_file_to_group",
-    "callees": ["kernfs_find_and_get_ns", "kernfs_get", "kernfs_put", "kobject_get_ownership", "sysfs_add_file_mode_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_create_files",
-    "callees": ["kernfs_remove_by_name_ns", "sysfs_create_file_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_create_file_ns",
-    "callees": ["__builtin_expect", "kobject_get_ownership", "sysfs_add_file_mode_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_add_bin_file_mode_ns",
-    "callees": ["__builtin_expect", "__kernfs_create_file", "sysfs_warn_dup"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_add_file_mode_ns",
-    "callees": ["__builtin_expect", "__kernfs_create_file", "__warn_printk", "sysfs_warn_dup"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_notify",
-    "callees": ["kernfs_find_and_get_ns", "kernfs_get", "kernfs_notify", "kernfs_put"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "sysfs_kf_bin_open",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_bin_mmap",
+    "name": "wait_on_buffer",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__wait_on_buffer"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "memzero_page",
+    "callees": ["memset"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_bin_write",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_write",
-    "callees": [],
+    "name": "zisofs_cleanup",
+    "callees": ["vfree"],
+    "global_reads": ["zisofs_zlib_workspace"],
+    "global_writes": []
+  },
+  {
+    "name": "zisofs_read_folio",
+    "callees": ["_compound_head", "kfree", "kmalloc_array", "pagecache_get_page", "put_page", "unlock_page", "zisofs_fill_pages"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_read",
-    "callees": ["__builtin_expect", "memmove"],
+    "name": "zisofs_fill_pages",
+    "callees": ["__brelse", "__builtin_expect", "__builtin_unreachable", "isofs_bread", "memzero_page", "zisofs_uncompress_block"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_bin_read",
-    "callees": [],
+    "name": "zisofs_init",
+    "callees": ["vmalloc", "zlib_inflate_workspacesize"],
+    "global_reads": [],
+    "global_writes": ["zisofs_zlib_workspace"]
+  },
+  {
+    "name": "wait_on_buffer",
+    "callees": ["__SCT__might_resched", "__builtin_constant_p", "__wait_on_buffer"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "sysfs_kf_seq_show",
-    "callees": ["__builtin_expect", "_printk", "memset", "seq_commit.part.0", "seq_get_buf"],
+    "name": "memzero_page",
+    "callees": ["memset"],
+    "global_reads": ["page_offset_base", "vmemmap_base"],
+    "global_writes": []
+  },
+  {
+    "name": "put_page",
+    "callees": ["_compound_head", "folio_put"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "seq_get_buf",
-    "callees": ["__builtin_expect", "__builtin_unreachable"],
+    "name": "folio_put",
+    "callees": ["__folio_put"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "_compound_head",
+    "callees": ["__builtin_constant_p", "__builtin_expect"],
     "global_reads": [],
     "global_writes": []
   }

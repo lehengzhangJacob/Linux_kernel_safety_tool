@@ -1,61 +1,463 @@
 [
   {
+    "name": "driver_deferred_probe_add.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_add.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_sysfs_remove",
+    "callees": ["device_remove_file", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_add.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_bind_driver.part.0",
+    "callees": ["device_links_force_bind", "driver_bound"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_bind_driver",
+    "callees": ["bus_notify", "device_bind_driver.part.0", "driver_sysfs_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_is_bound",
+    "callees": ["klist_node_attached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_is_bound",
+    "callees": ["klist_node_attached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
     "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "io_tx_ubuf_callback",
-    "callees": ["__io_req_task_work_add", "__refcount_sub_and_test"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
     "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "__driver_attach.part.0",
+    "callees": ["__device_driver_lock", "__device_driver_unlock", "async_schedule_node", "driver_allows_async_probing", "driver_probe_device", "get_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_bind_driver.part.0",
+    "callees": ["device_links_force_bind", "driver_bound"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_bound.part.0",
+    "callees": ["bus_notify", "device_links_driver_bound", "device_pm_check_callbacks", "driver_deferred_probe_del", "driver_deferred_probe_trigger.part.0", "klist_add_tail", "kobject_uevent"],
+    "global_reads": ["driver_deferred_probe_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_trigger.part.0",
+    "callees": ["mutex_lock", "mutex_unlock", "queue_work_on"],
+    "global_reads": ["system_unbound_wq"],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_add.part.0",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove.part.0",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "io_alloc_notif",
-    "callees": ["__builtin_expect", "io_alloc_req", "io_get_task_refs"],
+    "name": "driver_deferred_probe_check_state.part.0",
+    "callees": ["_dev_warn"],
+    "global_reads": ["initcalls_done"],
+    "global_writes": []
+  },
+  {
+    "name": "driver_detach",
+    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "async_synchronize_full", "device_release_driver_internal", "driver_allows_async_probing", "get_device", "put_device"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "io_notif_set_extended",
+    "name": "device_driver_detach",
+    "callees": ["device_release_driver_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_release_driver",
+    "callees": ["device_release_driver_internal"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_release_driver_internal",
+    "callees": ["__device_driver_lock", "__device_driver_unlock", "__device_release_driver"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_release_driver",
+    "callees": ["__device_driver_lock", "__device_driver_unlock", "__pm_runtime_idle", "__pm_runtime_resume", "bus_notify", "device_links_busy", "device_links_driver_cleanup", "device_links_unbind_consumers", "device_pm_check_callbacks", "device_remove", "device_unbind_cleanup", "driver_sysfs_remove", "klist_remove", "kobject_uevent"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_attach",
+    "callees": ["bus_for_each_dev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__driver_attach",
+    "callees": ["__driver_attach.part.0", "driver_deferred_probe_add.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__driver_attach_async_helper",
+    "callees": ["__device_driver_lock", "__device_driver_unlock", "driver_probe_device", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_driver_attach",
+    "callees": ["__device_driver_lock", "__device_driver_unlock", "__driver_probe_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_unlock",
+    "callees": ["mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_driver_lock",
+    "callees": ["mutex_lock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_initial_probe",
+    "callees": ["__device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_attach",
+    "callees": ["__device_attach"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_attach",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "async_schedule_node", "bus_for_each_drv", "device_bind_driver", "device_is_bound", "get_device", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_attach_async_helper",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "bus_for_each_drv", "mutex_lock", "mutex_unlock", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__device_attach_driver",
+    "callees": ["driver_allows_async_probing", "driver_deferred_probe_add.part.0", "driver_probe_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_allows_async_probing",
+    "callees": ["parse_option_str"],
+    "global_reads": ["async_probe_default"],
+    "global_writes": []
+  },
+  {
+    "name": "save_async_options",
+    "callees": ["_printk", "parse_option_str", "strlen", "strscpy"],
+    "global_reads": [],
+    "global_writes": ["async_probe_default"]
+  },
+  {
+    "name": "driver_probe_device",
+    "callees": ["__driver_probe_device", "__wake_up", "driver_deferred_probe_add.part.0", "driver_deferred_probe_trigger.part.0"],
+    "global_reads": ["defer_all_probes", "driver_deferred_probe_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "__driver_probe_device",
+    "callees": ["__pm_runtime_idle", "__pm_runtime_resume", "pm_runtime_barrier", "pm_runtime_get_suppliers", "pm_runtime_put_suppliers", "really_probe", "really_probe_debug"],
+    "global_reads": ["initcall_debug"],
+    "global_writes": []
+  },
+  {
+    "name": "wait_for_device_probe",
+    "callees": ["__SCT__might_resched", "async_synchronize_full", "finish_wait", "flush_work", "init_wait_entry", "prepare_to_wait_event", "schedule"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "really_probe_debug",
+    "callees": ["_printk", "ktime_get", "really_probe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "really_probe",
+    "callees": ["_dev_crit", "_dev_err", "_printk", "bus_notify", "call_driver_probe", "dev_has_sync_state", "device_add_groups", "device_create_file", "device_links_check_suppliers", "device_links_no_driver", "device_remove", "device_unbind_cleanup", "driver_bound", "driver_sysfs_add", "driver_sysfs_remove"],
+    "global_reads": ["defer_all_probes"],
+    "global_writes": []
+  },
+  {
+    "name": "call_driver_probe",
+    "callees": ["_printk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_remove",
+    "callees": ["device_remove.part.0", "device_remove_file", "device_remove_groups"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unbind_cleanup",
+    "callees": ["devres_release_all", "kfree", "pm_runtime_reinit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_synced_show",
+    "callees": ["mutex_lock", "mutex_unlock", "sysfs_emit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "state_synced_store",
+    "callees": ["dev_sync_state", "mutex_lock", "mutex_unlock", "strcmp"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_bind_driver",
+    "callees": ["bus_notify", "device_bind_driver.part.0", "driver_sysfs_add"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_sysfs_remove",
+    "callees": ["device_remove_file", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_sysfs_add",
+    "callees": ["bus_notify", "sysfs_create_link", "sysfs_remove_link"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "coredump_store",
+    "callees": ["mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_bound",
+    "callees": ["_printk", "device_is_bound", "driver_bound.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_is_bound",
+    "callees": ["klist_node_attached"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_probe_exit",
+    "callees": ["debugfs_lookup_and_remove"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_probe_initcall",
+    "callees": ["debugfs_create_file", "driver_deferred_probe_trigger.part.0", "flush_work", "schedule_delayed_work"],
+    "global_reads": ["driver_deferred_probe_enable", "driver_deferred_probe_timeout"],
+    "global_writes": ["driver_deferred_probe_enable", "initcalls_done"]
+  },
+  {
+    "name": "deferred_probe_extend_timeout",
+    "callees": ["cancel_delayed_work", "schedule_delayed_work"],
+    "global_reads": ["driver_deferred_probe_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_probe_timeout_work_func",
+    "callees": ["_dev_info", "driver_deferred_probe_trigger.part.0", "flush_work", "fw_devlink_drivers_done", "fw_devlink_probing_done", "mutex_lock", "mutex_unlock"],
+    "global_reads": ["driver_deferred_probe_enable"],
+    "global_writes": ["driver_deferred_probe_timeout"]
+  },
+  {
+    "name": "driver_deferred_probe_check_state",
+    "callees": ["driver_deferred_probe_check_state.part.0"],
+    "global_reads": ["driver_deferred_probe_timeout"],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_probe_timeout_setup",
+    "callees": ["kstrtoint"],
+    "global_reads": [],
+    "global_writes": ["driver_deferred_probe_timeout"]
+  },
+  {
+    "name": "deferred_devs_open",
+    "callees": ["single_open"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_devs_show",
+    "callees": ["mutex_lock", "mutex_unlock", "seq_printf"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_set_deferred_probe_reason",
+    "callees": ["dev_driver_string", "kasprintf", "kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "device_unblock_probing",
+    "callees": ["driver_deferred_probe_trigger.part.0"],
+    "global_reads": ["driver_deferred_probe_enable"],
+    "global_writes": ["defer_all_probes"]
+  },
+  {
+    "name": "device_block_probing",
+    "callees": ["wait_for_device_probe"],
+    "global_reads": [],
+    "global_writes": ["defer_all_probes"]
+  },
+  {
+    "name": "driver_deferred_probe_trigger",
+    "callees": ["driver_deferred_probe_trigger.part.0"],
+    "global_reads": ["driver_deferred_probe_enable"],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_del",
+    "callees": ["kfree", "mutex_lock", "mutex_unlock"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "driver_deferred_probe_add",
+    "callees": ["driver_deferred_probe_add.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "deferred_probe_work_func",
+    "callees": ["bus_probe_device", "device_pm_move_to_tail", "get_device", "kfree", "mutex_lock", "mutex_unlock", "put_device"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dev_sync_state",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "io_tx_ubuf_callback_ext",
-    "callees": ["io_tx_ubuf_callback"],
+    "name": "dev_has_sync_state",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "io_tx_ubuf_callback",
-    "callees": ["__io_req_task_work_add", "__refcount_sub_and_test"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_notif_complete_tw_ext",
-    "callees": ["io_req_task_complete"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "io_alloc_req",
-    "callees": ["__builtin_expect", "__io_alloc_req_refill"],
+    "name": "driver_probe_done",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }

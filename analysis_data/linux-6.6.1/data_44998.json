@@ -1,55 +1,49 @@
 [
   {
-    "name": "ttm_bo_move_to_lru_tail_unlocked",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ttm_bo_move_to_lru_tail"],
+    "name": "__guc_action_get_hwconfig",
+    "callees": ["intel_guc_send_mmio"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
+    "name": "intel_gt_fini_hwconfig",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_gt_init_hwconfig",
+    "callees": ["guc_hwconfig_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "guc_hwconfig_init",
+    "callees": ["__builtin_constant_p", "__builtin_return_address", "__kmalloc", "guc_hwconfig_discover_size", "guc_hwconfig_fill_buffer", "has_table", "kfree", "kmalloc_large", "kmalloc_trace"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "has_table",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "guc_hwconfig_fill_buffer",
+    "callees": ["__guc_action_get_hwconfig", "i915_vma_unpin_and_release", "intel_guc_allocate_and_map_vma", "memcpy"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "",
-    "callees": [],
+    "name": "guc_hwconfig_discover_size",
+    "callees": ["__guc_action_get_hwconfig"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "ttm_eu_fence_buffer_objects",
-    "callees": ["dma_resv_add_fence", "ttm_bo_move_to_lru_tail_unlocked", "ww_mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ttm_eu_reserve_buffers",
-    "callees": ["__builtin_expect", "dma_resv_reserve_fences", "ttm_bo_reserve", "ttm_bo_reserve_slowpath", "ttm_eu_backoff_reservation_reverse", "ww_acquire_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ttm_eu_backoff_reservation",
-    "callees": ["ttm_bo_move_to_lru_tail_unlocked", "ww_mutex_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ttm_bo_move_to_lru_tail_unlocked",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock", "ttm_bo_move_to_lru_tail"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "ttm_bo_reserve",
-    "callees": ["__builtin_expect", "ww_mutex_lock", "ww_mutex_lock_interruptible", "ww_mutex_trylock"],
+    "name": "__guc_action_get_hwconfig",
+    "callees": ["intel_guc_send_mmio"],
     "global_reads": [],
     "global_writes": []
   }

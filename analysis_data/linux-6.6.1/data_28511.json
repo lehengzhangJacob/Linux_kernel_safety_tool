@@ -1,775 +1,547 @@
 [
   {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_box_offset",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_box_offset",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_box_offset",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_to_box",
-    "callees": [],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_start_hrtimer",
-    "callees": ["hrtimer_start_range_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_start_hrtimer",
-    "callees": ["hrtimer_start_range_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_to_box",
-    "callees": [],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_to_box",
-    "callees": [],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit",
-    "callees": ["uncore_box_exit.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_free_pcibus_map",
-    "callees": ["kfree"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_types_init",
-    "callees": ["uncore_type_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_types_init",
-    "callees": ["uncore_type_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit",
-    "callees": ["uncore_box_exit.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_find_dev_pmu",
-    "callees": ["uncore_pci_find_dev_pmu.part.0", "uncore_pci_find_dev_pmu_from_types"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_put_event_constraint",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_init.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_init",
-    "callees": ["uncore_box_init.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_ref",
-    "callees": ["allocate_boxes", "uncore_box_ref.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_find_dev_pmu",
-    "callees": ["uncore_pci_find_dev_pmu.part.0", "uncore_pci_find_dev_pmu_from_types"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "type_pmu_register",
-    "callees": ["uncore_pmu_register"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_unregister.part.0",
-    "callees": ["perf_pmu_unregister"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_next_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "find_next_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_exit.part.0",
-    "callees": ["bus_unregister_notifier", "kfree", "pci_unregister_driver", "uncore_free_pcibus_map", "uncore_types_exit"],
-    "global_reads": ["uncore_extra_pci_dev", "uncore_pci_driver", "uncore_pci_sub_driver", "uncore_pci_uncores"],
-    "global_writes": ["pcidrv_registered"]
-  },
-  {
-    "name": "uncore_pmu_unregister.part.0",
-    "callees": ["perf_pmu_unregister"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_ref.part.0",
-    "callees": ["uncore_box_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_find_dev_pmu.part.0",
-    "callees": [],
-    "global_reads": ["uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_init.part.0",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "intel_uncore_exit",
-    "callees": ["__cpuhp_remove_state", "intel_uncore_clear_discovery_tables", "uncore_pci_exit.part.0", "uncore_types_exit"],
-    "global_reads": ["pcidrv_registered", "uncore_mmio_uncores", "uncore_msr_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "intel_uncore_init",
-    "callees": ["__cpuhp_setup_state", "intel_uncore_clear_discovery_tables", "intel_uncore_has_discovery_tables", "uncore_cpu_init", "uncore_mmio_init", "uncore_pci_exit.part.0", "uncore_pci_init", "uncore_types_exit", "x86_match_cpu"],
-    "global_reads": ["__max_die_per_package", "__max_logical_packages", "pcidrv_registered", "uncore_mmio_uncores", "uncore_msr_uncores", "uncore_no_discover"],
-    "global_writes": ["__uncore_max_dies"]
-  },
-  {
-    "name": "uncore_mmio_init",
-    "callees": ["type_pmu_register", "uncore_types_exit", "uncore_types_init"],
-    "global_reads": ["uncore_mmio_uncores"],
-    "global_writes": ["uncore_mmio_uncores"]
-  },
-  {
-    "name": "uncore_cpu_init",
-    "callees": ["uncore_msr_pmus_register", "uncore_types_exit", "uncore_types_init"],
-    "global_reads": ["uncore_msr_uncores"],
-    "global_writes": ["uncore_msr_uncores"]
-  },
-  {
-    "name": "uncore_msr_pmus_register",
-    "callees": ["type_pmu_register"],
-    "global_reads": ["uncore_msr_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "type_pmu_register",
-    "callees": ["uncore_pmu_register"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_event_cpu_online",
-    "callees": ["__builtin_constant_p", "find_first_and_bit", "uncore_box_ref", "uncore_change_context"],
-    "global_reads": ["nr_cpu_ids", "uncore_mmio_uncores", "uncore_msr_uncores", "uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_ref",
-    "callees": ["allocate_boxes", "uncore_box_ref.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "allocate_boxes",
-    "callees": ["kfree", "uncore_alloc_box"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_event_cpu_offline",
-    "callees": ["__builtin_constant_p", "cpumask_any_but", "uncore_box_unref", "uncore_change_context"],
-    "global_reads": ["nr_cpu_ids", "uncore_mmio_uncores", "uncore_msr_uncores", "uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_unref",
-    "callees": ["uncore_box_exit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_change_context",
-    "callees": ["uncore_change_type_ctx"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_change_type_ctx",
-    "callees": ["__builtin_expect", "hrtimer_cancel", "perf_pmu_migrate_context"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_init",
-    "callees": ["__pci_register_driver", "kfree", "kzalloc", "uncore_free_pcibus_map", "uncore_pci_pmus_register", "uncore_pci_sub_driver_init", "uncore_types_exit", "uncore_types_init"],
-    "global_reads": ["__uncore_max_dies", "uncore_extra_pci_dev", "uncore_pci_driver", "uncore_pci_sub_driver", "uncore_pci_uncores"],
-    "global_writes": ["pcidrv_registered", "uncore_extra_pci_dev", "uncore_pci_uncores"]
-  },
-  {
-    "name": "uncore_pci_pmus_register",
-    "callees": ["bus_register_notifier", "pci_get_domain_bus_and_slot", "uncore_pci_pmu_register"],
-    "global_reads": ["__uncore_max_dies", "uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_bus_notify",
-    "callees": ["uncore_bus_notify"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_sub_driver_init",
-    "callees": ["bus_register_notifier", "pci_get_device", "uncore_pci_pmu_register", "uncore_pcibus_to_dieid"],
-    "global_reads": ["uncore_pci_sub_driver", "uncore_pci_uncores"],
-    "global_writes": ["uncore_pci_sub_driver"]
-  },
-  {
-    "name": "uncore_pci_sub_bus_notify",
-    "callees": ["uncore_bus_notify"],
-    "global_reads": ["uncore_pci_sub_driver"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_remove",
-    "callees": ["__builtin_expect", "uncore_pci_pmu_unregister", "uncore_pcibus_to_dieid"],
-    "global_reads": ["uncore_extra_pci_dev"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_pmu_unregister",
-    "callees": ["kfree", "uncore_box_exit", "uncore_pmu_unregister.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_probe",
-    "callees": ["uncore_pci_find_dev_pmu", "uncore_pci_pmu_register", "uncore_pcibus_to_dieid"],
-    "global_reads": ["uncore_extra_pci_dev", "uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_pmu_register",
-    "callees": ["__builtin_expect", "kfree", "uncore_alloc_box", "uncore_box_exit", "uncore_box_init", "uncore_pmu_register"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_find_dev_pmu",
-    "callees": ["uncore_pci_find_dev_pmu.part.0", "uncore_pci_find_dev_pmu_from_types"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_find_dev_pmu_from_types",
-    "callees": [],
-    "global_reads": ["__uncore_max_dies", "uncore_pci_uncores"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_types_init",
-    "callees": ["uncore_type_init"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_type_init",
-    "callees": ["__builtin_expect", "kfree", "kmalloc_array", "kzalloc"],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_types_exit",
-    "callees": ["uncore_type_exit"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_type_exit",
-    "callees": ["kfree", "uncore_free_boxes", "uncore_pmu_unregister.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_free_boxes",
-    "callees": ["kfree"],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_register",
-    "callees": ["perf_pmu_register", "uncore_get_pmu_name"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_get_pmu_name",
-    "callees": ["sprintf", "uncore_get_alias_name"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_get_alias_name",
-    "callees": ["sprintf"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_get_attr_cpumask",
-    "callees": ["bitmap_print_to_pagebuf"],
-    "global_reads": ["nr_cpu_ids"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_disable",
-    "callees": ["uncore_pmu_to_box"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_enable",
-    "callees": ["uncore_pmu_to_box"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_init",
-    "callees": ["check_valid_freerunning_event", "uncore_freerunning_counter", "uncore_pmu_to_box", "uncore_validate_group"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_validate_group",
-    "callees": ["kfree", "uncore_alloc_box", "uncore_assign_events", "uncore_collect_events"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_read",
-    "callees": ["uncore_perf_event_update"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_del",
-    "callees": ["uncore_pmu_event_stop", "uncore_put_event_constraint"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_add",
-    "callees": ["uncore_assign_events", "uncore_assign_hw_event", "uncore_collect_events", "uncore_pmu_event_start", "uncore_pmu_event_stop"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_stop",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "hrtimer_cancel", "uncore_perf_event_update"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_event_start",
-    "callees": ["__builtin_constant_p", "__builtin_expect", "uncore_pmu_start_hrtimer"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_assign_events",
-    "callees": ["__builtin_constant_p", "perf_assign_events", "uncore_get_event_constraint", "uncore_put_event_constraint"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_put_event_constraint",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_get_event_constraint",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_collect_events",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_cancel_hrtimer",
-    "callees": ["hrtimer_cancel"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_start_hrtimer",
-    "callees": ["hrtimer_start_range_ns"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pmu_hrtimer",
-    "callees": ["find_next_bit", "hrtimer_forward_now", "uncore_perf_event_update"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_perf_event_update",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_assign_hw_event",
-    "callees": ["uncore_event_ctl", "uncore_fixed_ctl", "uncore_fixed_ctr", "uncore_perf_ctr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_shared_reg_config",
+    "name": "alarmtimer_get_rtcdev",
     "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
-    "global_reads": [],
+    "global_reads": ["rtcdev"],
     "global_writes": []
   },
   {
-    "name": "uncore_put_constraint",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_get_constraint",
+    "name": "alarmtimer_get_rtcdev",
     "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_mmio_read_counter",
-    "callees": ["uncore_mmio_is_valid_offset"],
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_mmio_exit_box",
-    "callees": ["iounmap"],
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_msr_read_counter",
-    "callees": ["native_read_msr"],
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_pmu_to_box",
-    "callees": [],
-    "global_reads": ["__uncore_max_dies"],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_event_show",
-    "callees": ["sprintf"],
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "__find_pci2phy_map",
-    "callees": ["__builtin_return_address", "_raw_spin_lock", "_raw_spin_unlock", "kfree", "kmalloc_trace"],
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_free_pcibus_map",
-    "callees": ["kfree"],
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_device_to_die",
-    "callees": ["find_next_bit"],
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_die_to_segment",
-    "callees": ["pci_find_next_bus", "uncore_pcibus_to_dieid"],
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_pcibus_to_dieid",
-    "callees": ["_raw_spin_lock", "_raw_spin_unlock"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_exit",
-    "callees": ["uncore_box_exit.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_box_init",
-    "callees": ["uncore_box_init.part.0"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_perf_ctr",
-    "callees": ["uncore_msr_perf_ctr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_event_ctl",
-    "callees": ["uncore_msr_event_ctl", "uncore_pci_event_ctl"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_fixed_ctr",
-    "callees": ["uncore_msr_fixed_ctr"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_fixed_ctl",
-    "callees": ["uncore_msr_fixed_ctl"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_perf_ctr",
-    "callees": ["__builtin_constant_p", "uncore_msr_box_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_event_ctl",
-    "callees": ["__builtin_constant_p", "uncore_msr_box_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_fixed_ctr",
-    "callees": ["uncore_msr_box_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_fixed_ctl",
-    "callees": ["uncore_msr_box_offset"],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_msr_box_offset",
-    "callees": [],
-    "global_reads": [],
-    "global_writes": []
-  },
-  {
-    "name": "uncore_pci_event_ctl",
+    "name": "cpu_online",
     "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "uncore_mmio_is_valid_offset",
-    "callees": ["__builtin_expect", "_printk"],
-    "global_reads": ["__already_done"],
-    "global_writes": ["__already_done"]
-  },
-  {
-    "name": "native_read_msr",
-    "callees": ["do_trace_read_msr"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "cpumask_any_but",
-    "callees": ["find_next_bit"],
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "find_next_bit",
-    "callees": ["__builtin_constant_p", "__builtin_ctzl", "__builtin_expect", "_find_next_bit"],
+    "name": "alarm_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue.part.0",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue",
+    "callees": ["alarmtimer_dequeue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue.part.0",
+    "callees": ["timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_init",
+    "callees": ["__platform_driver_register", "class_interface_register", "class_interface_unregister", "rtc_timer_init"],
+    "global_reads": ["rtc_class"],
+    "global_writes": []
+  },
+  {
+    "name": "get_boottime_timespec",
+    "callees": ["ktime_get_boottime_ts64", "timens_add_boottime"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_nsleep",
+    "callees": ["__builtin_expect", "alarm_init_on_stack", "alarmtimer_do_nsleep", "alarmtimer_get_rtcdev", "capable", "ktime_add_safe", "timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_nsleep_restart",
+    "callees": ["alarm_init_on_stack", "alarmtimer_do_nsleep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_do_nsleep",
+    "callees": ["__builtin_expect", "alarm_cancel", "alarm_start", "alarmtimer_freezerset", "freezing", "nanosleep_copyout", "ns_to_timespec64", "schedule", "signal_pending"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_nsleep_wakeup",
+    "callees": ["wake_up_process"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_create",
+    "callees": ["alarm_init", "alarmtimer_get_rtcdev", "capable"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_get_ktime",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_get_timespec",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_clock_getres",
+    "callees": ["alarmtimer_get_rtcdev"],
+    "global_reads": ["hrtimer_resolution"],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_arm",
+    "callees": ["alarm_start", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_wait_running",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_try_to_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_forward",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_timer_rearm",
+    "callees": ["__alarm_forward_now", "alarm_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_handle_timer",
+    "callees": ["__alarm_forward_now", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "posix_timer_event"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_freezerset",
+    "callees": ["__builtin_expect", "__warn_printk", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["__already_done", "freezer_delta"],
+    "global_writes": ["__already_done", "freezer_alarmtype", "freezer_delta", "freezer_expires"]
+  },
+  {
+    "name": "alarm_forward_now",
+    "callees": ["__alarm_forward_now"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__alarm_forward_now",
+    "callees": ["alarm_forward"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_forward",
+    "callees": ["__builtin_expect", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_cancel",
+    "callees": ["alarm_try_to_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_try_to_cancel",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_dequeue", "hrtimer_try_to_cancel", "trace_alarmtimer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_restart",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_enqueue", "hrtimer_start_expires"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_start_relative",
+    "callees": ["alarm_start", "ktime_add_safe"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_start",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_enqueue", "hrtimer_start_range_ns", "trace_alarmtimer_start"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarm_init",
+    "callees": ["hrtimer_init"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_resume",
+    "callees": ["alarmtimer_get_rtcdev", "rtc_timer_cancel"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_suspend",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_get_rtcdev", "pm_wakeup_dev_event", "rtc_read_time", "rtc_timer_cancel", "rtc_timer_start", "rtc_tm_to_ktime", "trace_alarmtimer_suspend"],
+    "global_reads": ["freezer_alarmtype", "freezer_delta", "freezer_expires"],
+    "global_writes": ["freezer_delta"]
+  },
+  {
+    "name": "alarm_expires_remaining",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_fired",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "alarmtimer_dequeue", "alarmtimer_enqueue", "trace_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_dequeue",
+    "callees": ["alarmtimer_dequeue.part.0"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_enqueue",
+    "callees": ["timerqueue_add", "timerqueue_del"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "alarmtimer_rtc_add_device",
+    "callees": ["__builtin_constant_p", "__builtin_expect", "_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore", "device_init_wakeup", "get_device", "platform_device_register_resndata", "platform_device_unregister", "try_module_get"],
+    "global_reads": ["rtcdev"],
+    "global_writes": ["rtcdev"]
+  },
+  {
+    "name": "alarmtimer_get_rtcdev",
+    "callees": ["_raw_spin_lock_irqsave", "_raw_spin_unlock_irqrestore"],
+    "global_reads": ["rtcdev"],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_alarm_class",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "perf_trace_alarmtimer_suspend",
+    "callees": ["__builtin_frame_address", "__builtin_return_address", "perf_trace_buf_alloc", "perf_trace_run_bpf_submit"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_alarm_class",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_event_raw_event_alarmtimer_suspend",
+    "callees": ["__builtin_expect", "__trace_trigger_soft_disabled", "trace_event_buffer_commit", "trace_event_buffer_reserve"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_alarm_class",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_flags_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_raw_output_alarmtimer_suspend",
+    "callees": ["trace_event_printf", "trace_handle_return", "trace_print_flags_seq", "trace_raw_output_prep"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_cancel",
+    "callees": ["__probestub_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_cancel",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_start",
+    "callees": ["__probestub_alarmtimer_fired"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_start",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_fired",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_fired",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__probestub_alarmtimer_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__traceiter_alarmtimer_suspend",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_cancel",
+    "callees": ["__SCT__tp_func_alarmtimer_cancel", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_start",
+    "callees": ["__SCT__tp_func_alarmtimer_start", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_fired",
+    "callees": ["__SCT__tp_func_alarmtimer_fired", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "trace_alarmtimer_suspend",
+    "callees": ["__SCT__tp_func_alarmtimer_suspend", "__builtin_expect", "cpu_online"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_ktime_to_host",
+    "callees": ["__builtin_expect", "do_timens_ktime_to_host"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "timens_add_boottime",
+    "callees": ["set_normalized_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "freezing",
+    "callees": ["freezing_slow_path"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "signal_pending",
+    "callees": ["__builtin_expect", "test_ti_thread_flag"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "test_ti_thread_flag",
+    "callees": ["__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_boottime_ts64",
+    "callees": ["ktime_get_with_offset", "ns_to_timespec64"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_boottime",
+    "callees": ["ktime_get_with_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "ktime_get_real",
+    "callees": ["ktime_get_with_offset"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "cpu_online",
+    "callees": ["__builtin_constant_p"],
     "global_reads": [],
     "global_writes": []
   }

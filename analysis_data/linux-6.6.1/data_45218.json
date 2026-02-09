@@ -1,25 +1,235 @@
 [
   {
-    "name": "acpi_ut_checksum",
+    "name": "__arch_hweight8",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_generate_checksum",
+    "name": "",
     "callees": [],
     "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_verify_cdat_checksum",
-    "callees": ["acpi_bios_warning"],
-    "global_reads": ["acpi_gbl_CDAT"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
     "global_writes": []
   },
   {
-    "name": "acpi_ut_verify_checksum",
-    "callees": ["acpi_bios_warning"],
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_init",
+    "callees": ["intel_atomic_global_obj_init", "kzalloc"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_destroy_state",
+    "callees": ["kfree"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_duplicate_state",
+    "callees": ["kmemdup"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_atomic_check",
+    "callees": ["intel_atomic_get_new_global_obj_state", "intel_atomic_get_old_global_obj_state", "intel_bw_check_data_rate", "intel_bw_check_qgv_points", "intel_can_enable_sagv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_calc_min_cdclk",
+    "callees": ["__builtin_expect", "__drm_dev_dbg", "intel_atomic_get_cdclk_state", "intel_atomic_get_global_obj_state", "intel_atomic_get_old_global_obj_state", "intel_atomic_lock_global_state", "intel_bw_crtc_min_cdclk", "intel_bw_min_cdclk", "intel_bw_state_changed", "skl_crtc_calc_dbuf_bw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_min_cdclk",
+    "callees": ["intel_bw_dbuf_min_cdclk"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_dbuf_min_cdclk",
+    "callees": ["__arch_hweight8", "__builtin_constant_p"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "skl_crtc_calc_dbuf_bw",
+    "callees": ["memset", "skl_plane_calc_dbuf_bw"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_state_changed",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_check_qgv_points",
+    "callees": ["icl_find_qgv_points", "intel_bw_data_rate", "mtl_find_qgv_points"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icl_find_qgv_points",
+    "callees": ["__drm_dev_dbg", "icl_qgv_points_mask", "intel_atomic_lock_global_state", "intel_atomic_serialize_global_state", "intel_can_enable_sagv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtl_find_qgv_points",
+    "callees": ["__drm_dev_dbg", "intel_atomic_lock_global_state", "intel_can_enable_sagv"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_bw_state",
+    "callees": ["intel_atomic_get_global_obj_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_new_bw_state",
+    "callees": ["intel_atomic_get_new_global_obj_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_atomic_get_old_bw_state",
+    "callees": ["intel_atomic_get_old_global_obj_state"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_data_rate",
+    "callees": ["i915_vtd_active"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_crtc_update",
+    "callees": ["__drm_dev_dbg", "intel_bw_crtc_data_rate", "intel_bw_crtc_num_active_planes"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_crtc_min_cdclk",
+    "callees": ["intel_bw_crtc_data_rate"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_crtc_data_rate",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_bw_init_hw",
+    "callees": ["dg2_get_bw_info", "icl_get_bw_info", "tgl_get_bw_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "dg2_get_bw_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "intel_read_qgv_point_info",
+    "callees": ["dg1_mchbar_read_qgv_point_info", "icl_pcode_read_qgv_point_info", "mtl_read_qgv_point_info"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "mtl_read_qgv_point_info",
+    "callees": [],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icl_pcode_restrict_qgv_points",
+    "callees": ["_dev_err", "is_sagv_enabled", "skl_pcode_request"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "adls_pcode_read_psf_gv_point_info",
+    "callees": ["snb_pcode_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "icl_pcode_read_qgv_point_info",
+    "callees": ["snb_pcode_read"],
+    "global_reads": [],
+    "global_writes": []
+  },
+  {
+    "name": "__arch_hweight8",
+    "callees": [],
     "global_reads": [],
     "global_writes": []
   }
