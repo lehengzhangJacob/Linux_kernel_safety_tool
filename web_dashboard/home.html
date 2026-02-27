@@ -212,6 +212,12 @@
                     });
                 };
 
+                const getApiBaseUrl = () => {
+                    const protocol = window.location.protocol;
+                    const hostname = window.location.hostname;
+                    return `${protocol}//${hostname}:5000`;
+                };
+
                 const startScan = async () => {
                     if (scanMode.value === 'local' && !selectedLocalFolder.value) {
                         alert('请先选择要上传的本地源代码文件夹！');
@@ -233,8 +239,9 @@
                     }
                     
                     try {
+                        const apiBase = getApiBaseUrl();
                         // Call backend API to start scan
-                        await fetch('http://localhost:5000/api/scan', {
+                        await fetch(`${apiBase}/api/scan`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ target: targetName })
@@ -242,7 +249,7 @@
 
                         // Poll for status
                         pollInterval = setInterval(async () => {
-                            const res = await fetch('http://localhost:5000/api/scan/status');
+                            const res = await fetch(`${apiBase}/api/scan/status`);
                             const data = await res.json();
                             
                             progress.value = data.progress;

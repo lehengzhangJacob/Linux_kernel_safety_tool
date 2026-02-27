@@ -197,15 +197,23 @@
                     return new Intl.NumberFormat('en-US').format(num);
                 };
 
+                const getApiBaseUrl = () => {
+                    // Use the current window's hostname, but point to port 5000
+                    const protocol = window.location.protocol;
+                    const hostname = window.location.hostname;
+                    return `${protocol}//${hostname}:5000`;
+                };
+
                 const loadDataFromApi = async () => {
                     try {
+                        const apiBase = getApiBaseUrl();
                         // Check API status
-                        const statusRes = await fetch('http://localhost:5000/api/status');
+                        const statusRes = await fetch(`${apiBase}/api/status`);
                         if (!statusRes.ok) throw new Error('API not reachable');
                         apiStatus.value = 'Connected to Neo4j (Live)';
                         
                         // Fetch stats
-                        const statsRes = await fetch('http://localhost:5000/api/stats');
+                        const statsRes = await fetch(`${apiBase}/api/stats`);
                         const stats = await statsRes.json();
                         
                         const funcCount = stats.nodes.Function || 0;
@@ -215,7 +223,7 @@
                         const calls = stats.edges.CALLS || 0;
                         
                         // Fetch graph
-                        const graphRes = await fetch('http://localhost:5000/api/graph?limit=150');
+                        const graphRes = await fetch(`${apiBase}/api/graph?limit=150`);
                         const graphData = await graphRes.json();
                         
                         // Construct data object matching the expected structure
