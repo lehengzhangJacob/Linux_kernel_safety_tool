@@ -228,18 +228,50 @@
                     scanComplete.value = false;
                     progress.value = 0;
                     
-                    const targetName = scanMode.value === 'server' ? selectedTarget.value : `[本地上传] ${selectedLocalFolder.value}`;
+                    const targetName = scanMode.value === 'server' ? selectedTarget.value : selectedLocalFolder.value;
                     logs.value = ['初始化分析引擎...', `目标: ${targetName}`];
                     
+                    const apiBase = getApiBaseUrl();
+
                     if (scanMode.value === 'local') {
                         logs.value.push(`[*] 正在上传 ${fileCount.value} 个文件到服务器...`);
-                        // Simulate upload delay
-                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        
+                        const fileInput = document.getElementById('fileInput');
+                        const files = fileInput.files;
+                        
+                        // 分批上传，避免一次性请求过大
+                        const batchSize = 100;
+                        let uploadedCount = 0;
+                        
+                        for (let i = 0; i < files.length; i += batchSize) {
+                            const formData = new FormData();
+                            formData.append('target_dir', targetName);
+                            
+                            const batch = Array.from(files).slice(i, i + batchSize);
+                            batch.forEach(file => {
+                                // 保持相对路径结构
+                                formData.append('files', file, file.webkitRelativePath);
+                            });
+                            
+                            try {
+                                await fetch(`${apiBase}/api/upload`, {
+                                    method: 'POST',
+                                    body: formData
+                                });
+                                uploadedCount += batch.length;
+                                progress.value = Math.floor((uploadedCount / files.length) * 10); // 上传占前10%进度
+                                logs.value.push(`[*] 已上传 ${uploadedCount}/${files.length} 个文件...`);
+                                scrollToBottom();
+                            } catch (err) {
+                                logs.value.push(`[-] 上传失败: ${err.message}`);
+                                isScanning.value = false;
+                                return;
+                            }
+                        }
                         logs.value.push(`[+] 文件上传完成，准备开始分析。`);
                     }
                     
                     try {
-                        const apiBase = getApiBaseUrl();
                         // Call backend API to start scan
                         await fetch(`${apiBase}/api/scan`, {
                             method: 'POST',
@@ -252,7 +284,12 @@
                             const res = await fetch(`${apiBase}/api/scan/status`);
                             const data = await res.json();
                             
-                            progress.value = data.progress;
+                            // 如果是本地上传，进度从10%开始算
+                            if (scanMode.value === 'local') {
+                                progress.value = 10 + Math.floor(data.progress * 0.9);
+                            } else {
+                                progress.value = data.progress;
+                            }
                             
                             // Only add new logs
                             if (data.logs && data.logs.length > logs.value.length - 2) {
@@ -269,8 +306,12 @@
                                 setTimeout(() => {
                                     goToDashboard();
                                 }, 2000);
+                            } else if (data.status === 'error') {
+                                clearInterval(pollInterval);
+                                isScanning.value = false;
+                                logs.value.push("[-] 分析过程中发生错误，请检查日志。");
                             }
-                        }, 500);
+                        }, 1000); // 每秒轮询一次，避免请求过于频繁
 
                     } catch (error) {
                         logs.value.push(`错误: 无法连接到分析服务器 (${error.message})`);

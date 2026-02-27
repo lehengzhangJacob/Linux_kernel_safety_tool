@@ -5,70 +5,128 @@ import os
 import json
 import threading
 import time
+import subprocess
+from collections import deque
 
 app = Flask(__name__)
 CORS(app)
+app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024 * 1024  # 允许最大 2GB 的上传
 
 # Neo4j connection details
 URI = "bolt://localhost:7687"
 AUTH = ("neo4j", "password") # Default credentials, adjust if needed
 
-# Global state for scan simulation
+# Global state for real scan
 scan_status = {
     "status": "idle",
     "progress": 0,
-    "logs": []
+    "logs": deque(maxlen=300) # 只保留最后300行日志，防止内存溢出
 }
 
-def simulate_scan(target):
+def run_real_scan(target):
     global scan_status
     scan_status["status"] = "running"
     scan_status["progress"] = 5
-    scan_status["logs"] = [f"[*] 准备分析目标: {target}"]
+    scan_status["logs"].clear()
+    scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
     
-    time.sleep(1)
-    scan_status["progress"] = 15
-    scan_status["logs"].append("[*] 正在编译 GCC 插件 (analyzer_plugin.so)...")
+    # 启动真实的分析脚本
+    process = subprocess.Popen(
+        ['./run_analysis.sh', target],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        cwd='/home/jacob/contest'
+    )
     
-    time.sleep(1.5)
-    scan_status["progress"] = 30
-    scan_status["logs"].append("[*] 插件编译完成。正在配置内核构建环境...")
+    # run_analysis.sh 会把 make 的输出重定向到 analysis_<target>.log
+    # 我们开一个子线程去 tail 这个日志文件，让前端能看到真实的编译过程
+    log_file_path = f"/home/jacob/contest/analysis_{target}.log"
     
-    time.sleep(1)
-    scan_status["progress"] = 45
-    scan_status["logs"].append(f"[*] 开始执行内核静态分析 (make -C {target} KCFLAGS=\"-fplugin=...\")...")
+    def tail_log_file():
+        # 等待日志文件创建
+        for _ in range(20):
+            if os.path.exists(log_file_path):
+                break
+            time.sleep(0.5)
+        
+        if os.path.exists(log_file_path):
+            with open(log_file_path, 'r') as f:
+                while scan_status["status"] == "running":
+                    line = f.readline()
+                    if line:
+                        scan_status["logs"].append(line.strip())
+                    else:
+                        time.sleep(0.2)
+
+    tail_thread = threading.Thread(target=tail_log_file)
+    tail_thread.start()
+
+    # 读取脚本本身的输出
+    for line in iter(process.stdout.readline, ''):
+        line = line.strip()
+        if line:
+            scan_status["logs"].append(line)
+            # 根据输出关键字更新进度条
+            if "Building GCC Plugin" in line:
+                scan_status["progress"] = 10
+            elif "Configuring Kernel" in line:
+                scan_status["progress"] = 15
+            elif "Starting Kernel Analysis" in line:
+                scan_status["progress"] = 20
+            elif "Extracting Unprotected" in line:
+                scan_status["progress"] = 80
+            elif "Generating Neo4j" in line:
+                scan_status["progress"] = 90
+
+    process.wait()
     
-    time.sleep(2)
-    scan_status["progress"] = 65
-    scan_status["logs"].append("[*] 正在提取全局变量读写访问记录...")
+    if process.returncode == 0:
+        scan_status["progress"] = 100
+        scan_status["status"] = "completed"
+        scan_status["logs"].append("[+] 分析完成！数据已就绪。")
+    else:
+        scan_status["status"] = "error"
+        scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
+
+@app.route('/api/upload', methods=['POST'])
+def upload_files():
+    if 'files' not in request.files:
+        return jsonify({"error": "No files part"}), 400
     
-    time.sleep(1.5)
-    scan_status["progress"] = 80
-    scan_status["logs"].append("[*] 正在生成函数调用图与变量依赖关系...")
+    files = request.files.getlist('files')
+    target_dir = request.form.get('target_dir', 'uploaded_code')
     
-    time.sleep(1)
-    scan_status["progress"] = 90
-    scan_status["logs"].append("[*] 正在将分析结果导入 Neo4j 图数据库...")
+    base_path = os.path.join('/home/jacob/contest', target_dir)
+    os.makedirs(base_path, exist_ok=True)
     
-    time.sleep(1.5)
-    scan_status["progress"] = 100
-    scan_status["status"] = "completed"
-    scan_status["logs"].append("[+] 分析完成！数据已就绪。")
+    for file in files:
+        if file.filename:
+            # file.filename 包含了前端传来的相对路径
+            file_path = os.path.join(base_path, file.filename)
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
+            file.save(file_path)
+            
+    return jsonify({"message": "Upload complete", "target": target_dir})
 
 @app.route('/api/scan', methods=['POST'])
 def start_scan():
     data = request.json or {}
     target = data.get('target', 'linux-6.12.6')
     
-    # Start the simulation in a background thread
-    thread = threading.Thread(target=simulate_scan, args=(target,))
+    # 启动真实的后台分析线程
+    thread = threading.Thread(target=run_real_scan, args=(target,))
     thread.start()
     
     return jsonify({"message": "Scan started successfully"})
 
 @app.route('/api/scan/status', methods=['GET'])
 def get_scan_status():
-    return jsonify(scan_status)
+    return jsonify({
+        "status": scan_status["status"],
+        "progress": scan_status["progress"],
+        "logs": list(scan_status["logs"])
+    })
 
 def get_db_driver():
     return GraphDatabase.driver(URI, auth=AUTH)
