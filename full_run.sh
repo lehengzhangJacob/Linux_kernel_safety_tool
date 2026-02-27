@@ -19,7 +19,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 # 2. Clean Build (Force Re-analysis)
 if [ -d "$BUILD_DIR" ]; then
     echo "Cleaning build directory: $BUILD_DIR"
-    make -C $KERNEL_SRC O=../$BUILD_DIR clean
+    rm -rf "$BUILD_DIR"
 fi
 
 # 3. Run Analysis (Generates JSON & CSV)
