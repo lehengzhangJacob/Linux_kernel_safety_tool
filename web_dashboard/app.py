@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from neo4j import GraphDatabase
 import os
@@ -11,6 +11,16 @@ from collections import deque
 app = Flask(__name__)
 CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024 * 1024  # 允许最大 2GB 的上传
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+@app.route('/')
+def index():
+    return send_from_directory(BASE_DIR, 'home.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    return send_from_directory(BASE_DIR, path)
 
 # Neo4j connection details
 URI = "bolt://localhost:7687"
@@ -31,12 +41,16 @@ def run_real_scan(target):
     scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
     
     # 启动真实的分析脚本
+    env = os.environ.copy()
+    env['ANALYSIS_JOBS'] = '2'  # 限制编译并发数为2，防止虚拟机内存不足(OOM)被杀
+    
     process = subprocess.Popen(
         ['./run_analysis.sh', target],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
-        cwd='/home/jacob/contest'
+        cwd='/home/jacob/contest',
+        env=env
     )
     
     # run_analysis.sh 会把 make 的输出重定向到 analysis_<target>.log
@@ -95,18 +109,18 @@ def upload_files():
         return jsonify({"error": "No files part"}), 400
     
     files = request.files.getlist('files')
-    target_dir = request.form.get('target_dir', 'uploaded_code')
     
-    base_path = os.path.join('/home/jacob/contest', target_dir)
-    os.makedirs(base_path, exist_ok=True)
+    # The files already contain the top-level directory in their filename (e.g., linux-6.6.1/Makefile)
+    base_path = '/home/jacob/contest'
     
     for file in files:
         if file.filename:
-            # file.filename 包含了前端传来的相对路径
+            # file.filename 包含了前端传来的相对路径 (e.g., folder_name/file.txt)
             file_path = os.path.join(base_path, file.filename)
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
             file.save(file_path)
             
+    target_dir = request.form.get('target_dir', 'uploaded_code')
     return jsonify({"message": "Upload complete", "target": target_dir})
 
 @app.route('/api/scan', methods=['POST'])
@@ -259,6 +273,20 @@ def get_stats():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+def start_neo4j_server():
+    print("[*] Attempting to start Neo4j database...")
+    try:
+        project_root = os.path.abspath(os.path.join(BASE_DIR, '..'))
+        script_path = os.path.join(project_root, 'start_neo4j.sh')
+        if os.path.exists(script_path):
+            subprocess.run(['bash', script_path], cwd=project_root, check=True)
+            print("[+] Neo4j started successfully.")
+        else:
+            print(f"[-] Neo4j start script not found at {script_path}")
+    except Exception as e:
+        print(f"[-] Failed to start Neo4j: {e}")
+
 if __name__ == '__main__':
+    start_neo4j_server()
     print("Starting Neo4j Backend API Server on port 5000...")
     app.run(host='0.0.0.0', port=5000, debug=False)

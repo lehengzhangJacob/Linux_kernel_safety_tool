@@ -100,12 +100,20 @@
                 </div>
 
                 <div class="pt-4">
-                    <button @click="startScan" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-lg shadow-lg shadow-blue-600/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+                    <button v-if="scanMode === 'local' && !uploadComplete" @click="uploadFiles" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-lg shadow-lg shadow-indigo-600/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                        <span v-if="isUploading">正在上传 ({{ uploadProgress }}%)...</span>
+                        <span v-else>第一步：上传源代码</span>
+                    </button>
+
+                    <button @click="startScan" :disabled="scanMode === 'local' && !uploadComplete" :class="(scanMode === 'local' && !uploadComplete) ? 'bg-slate-700 text-slate-500 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 text-white shadow-blue-600/20 hover:scale-[1.02] active:scale-[0.98]'" class="w-full font-bold py-4 rounded-lg shadow-lg transition-all transform flex items-center justify-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        开始安全审计
+                        {{ scanMode === 'local' ? '第二步：开始安全审计' : '开始安全审计' }}
                     </button>
                 </div>
             </div>
@@ -171,6 +179,9 @@
                 
                 const isScanning = ref(false);
                 const scanComplete = ref(false);
+                const isUploading = ref(false);
+                const uploadComplete = ref(false);
+                const uploadProgress = ref(0);
                 const progress = ref(0);
                 const logs = ref([]);
                 let pollInterval = null;
@@ -186,6 +197,8 @@
                         const pathParts = files[0].webkitRelativePath.split('/');
                         selectedLocalFolder.value = pathParts[0];
                         fileCount.value = files.length;
+                        uploadComplete.value = false;
+                        uploadProgress.value = 0;
                     }
                 };
 
@@ -200,6 +213,8 @@
                             if (entry && entry.isDirectory) {
                                 selectedLocalFolder.value = entry.name;
                                 fileCount.value = "多个"; // Hard to count synchronously
+                                uploadComplete.value = false;
+                                uploadProgress.value = 0;
                             }
                         }
                     }
@@ -218,9 +233,52 @@
                     return `${protocol}//${hostname}:5000`;
                 };
 
-                const startScan = async () => {
-                    if (scanMode.value === 'local' && !selectedLocalFolder.value) {
+                const uploadFiles = async () => {
+                    if (!selectedLocalFolder.value) {
                         alert('请先选择要上传的本地源代码文件夹！');
+                        return;
+                    }
+
+                    isUploading.value = true;
+                    uploadProgress.value = 0;
+                    const apiBase = getApiBaseUrl();
+                    const fileInput = document.getElementById('fileInput');
+                    const files = fileInput.files;
+                    
+                    const batchSize = 100;
+                    let uploadedCount = 0;
+                    
+                    for (let i = 0; i < files.length; i += batchSize) {
+                        const formData = new FormData();
+                        formData.append('target_dir', selectedLocalFolder.value);
+                        
+                        const batch = Array.from(files).slice(i, i + batchSize);
+                        batch.forEach(file => {
+                            formData.append('files', file, file.webkitRelativePath);
+                        });
+                        
+                        try {
+                            await fetch(`${apiBase}/api/upload`, {
+                                method: 'POST',
+                                body: formData
+                            });
+                            uploadedCount += batch.length;
+                            uploadProgress.value = Math.floor((uploadedCount / files.length) * 100);
+                        } catch (err) {
+                            alert(`上传失败: ${err.message}`);
+                            isUploading.value = false;
+                            return;
+                        }
+                    }
+                    
+                    isUploading.value = false;
+                    uploadComplete.value = true;
+                    alert('源代码上传成功！现在可以开始安全审计了。');
+                };
+
+                const startScan = async () => {
+                    if (scanMode.value === 'local' && !uploadComplete.value) {
+                        alert('请先完成源代码上传！');
                         return;
                     }
 
@@ -232,44 +290,6 @@
                     logs.value = ['初始化分析引擎...', `目标: ${targetName}`];
                     
                     const apiBase = getApiBaseUrl();
-
-                    if (scanMode.value === 'local') {
-                        logs.value.push(`[*] 正在上传 ${fileCount.value} 个文件到服务器...`);
-                        
-                        const fileInput = document.getElementById('fileInput');
-                        const files = fileInput.files;
-                        
-                        // 分批上传，避免一次性请求过大
-                        const batchSize = 100;
-                        let uploadedCount = 0;
-                        
-                        for (let i = 0; i < files.length; i += batchSize) {
-                            const formData = new FormData();
-                            formData.append('target_dir', targetName);
-                            
-                            const batch = Array.from(files).slice(i, i + batchSize);
-                            batch.forEach(file => {
-                                // 保持相对路径结构
-                                formData.append('files', file, file.webkitRelativePath);
-                            });
-                            
-                            try {
-                                await fetch(`${apiBase}/api/upload`, {
-                                    method: 'POST',
-                                    body: formData
-                                });
-                                uploadedCount += batch.length;
-                                progress.value = Math.floor((uploadedCount / files.length) * 10); // 上传占前10%进度
-                                logs.value.push(`[*] 已上传 ${uploadedCount}/${files.length} 个文件...`);
-                                scrollToBottom();
-                            } catch (err) {
-                                logs.value.push(`[-] 上传失败: ${err.message}`);
-                                isScanning.value = false;
-                                return;
-                            }
-                        }
-                        logs.value.push(`[+] 文件上传完成，准备开始分析。`);
-                    }
                     
                     try {
                         // Call backend API to start scan
@@ -284,12 +304,7 @@
                             const res = await fetch(`${apiBase}/api/scan/status`);
                             const data = await res.json();
                             
-                            // 如果是本地上传，进度从10%开始算
-                            if (scanMode.value === 'local') {
-                                progress.value = 10 + Math.floor(data.progress * 0.9);
-                            } else {
-                                progress.value = data.progress;
-                            }
+                            progress.value = data.progress;
                             
                             // Only add new logs
                             if (data.logs && data.logs.length > logs.value.length - 2) {
@@ -331,11 +346,15 @@
                     dragOver,
                     isScanning,
                     scanComplete,
+                    isUploading,
+                    uploadComplete,
+                    uploadProgress,
                     progress,
                     logs,
                     triggerFileInput,
                     handleFileSelect,
                     handleDrop,
+                    uploadFiles,
                     startScan,
                     goToDashboard
                 };

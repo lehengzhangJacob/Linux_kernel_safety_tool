@@ -45,9 +45,12 @@ rm -f "$ANALYSIS_JSON_DIR"/*.json
 
 # We use 'modules_prepare' or just build the kernel to trigger compilation of C files
 # Using -k to keep going even if some files fail
+# Allow configuring parallel job count via ANALYSIS_JOBS env var. Default to 4 to avoid OOM on small VMs.
+JOBS="${ANALYSIS_JOBS:-4}"
+echo "[*] Using parallel jobs: $JOBS"
 make -C $KERNEL_SRC O=../$BUILD_DIR ARCH=$ARCH \
     KCFLAGS="-fplugin=$PLUGIN_SO" \
-    -j$(nproc) -k > "analysis_${KERNEL_SRC}.log" 2>&1 || true
+    -j${JOBS} -k > "analysis_${KERNEL_SRC}.log" 2>&1 || true
 
 # Extract Race Warnings to a separate list
 echo "[*] Extracting Unprotected Global Variable Access List..."

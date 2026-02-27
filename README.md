@@ -380,7 +380,27 @@ sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-
 
 ## 运行分析
 
-### 1. 一键全流程 (推荐)
+### 1. 启动 Web 控制台 (推荐)
+
+本项目提供了一个现代化的 SaaS 风格 Web 控制台，支持本地源码上传、实时编译日志查看以及可视化报告跳转。
+
+```bash
+# 激活 Python 环境 (如果使用了 conda)
+conda activate myenv
+
+# 启动 Flask 后端服务 (会自动启动 Neo4j 数据库)
+python web_dashboard/app.py
+```
+
+启动后，在浏览器中访问：**http://localhost:5000**
+
+**Web 控制台功能特点：**
+* **两步走审计流程**：支持选择本地内核源码文件夹，分批上传至服务器，避免大文件卡顿。
+* **实时日志追踪**：在网页端实时滚动显示 GCC 插件的编译和分析日志。
+* **OOM 保护机制**：后端自动限制编译并发数 (`ANALYSIS_JOBS=2`)，防止在内存受限的虚拟机中触发 OOM-Killer。
+* **自动数据库管理**：Flask 启动时会自动检测并拉起 Neo4j 图数据库，无需手动执行脚本。
+
+### 2. 一键全流程 (命令行方式)
 
 使用 `full_run.sh` 脚本可以自动完成清理、编译、分析、数据导入和数据库启动的所有步骤：
 
@@ -426,7 +446,7 @@ sequenceDiagram
 * **连接地址**: `bolt://localhost:7687`
 * **认证方式**: 选择 **"No Authentication"** (无需用户名/密码)
 
-### 2. 分析其他内核版本 (进阶)
+### 3. 分析其他内核版本 (进阶)
 
 本项目根目录下提供了多个版本的 Linux 内核源码包（如 `linux-5.15.145.tar.xz`, `linux-6.11.10.tar.xz` 等）。您可以按照以下步骤分析其他版本：
 
@@ -444,7 +464,7 @@ sequenceDiagram
 
    此命令将自动创建对应的构建目录 (`build_analysis_linux-6.11.10`) 和数据目录 (`neo4j_data_linux-6.11.10`)，互不干扰。
 
-### 3. 单独启动数据库
+### 4. 单独启动数据库
 
 如果你已经运行过分析，只想启动数据库查看结果：
 
@@ -457,7 +477,7 @@ sequenceDiagram
 * 默认连接地址：`bolt://localhost:7687`
 * 如果提示登录，默认用户名/密码通常为 `neo4j` / `neo4j`（首次登录需修改），或根据 `conf/neo4j.conf` 配置确定。
 
-### 4. 测试工具链
+### 5. 测试工具链
 
 要在不构建整个内核的情况下测试插件逻辑和数据生成流程：
 
