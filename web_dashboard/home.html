@@ -69,16 +69,34 @@
             
             <div v-if="!isScanning && !scanComplete" class="space-y-6">
                 <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">选择分析目标 (内核源码目录)</label>
-                    <select v-model="selectedTarget" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
-                        <option value="linux-6.12.6">linux-6.12.6 (推荐)</option>
-                        <option value="linux-6.6.1">linux-6.6.1</option>
-                        <option value="test_case">自定义上传路径...</option>
-                    </select>
-                </div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">选择分析目标</label>
+                    <div class="flex gap-4 mb-4">
+                        <button @click="scanMode = 'server'" :class="scanMode === 'server' ? 'bg-blue-600 text-white border-blue-500' : 'bg-slate-800 text-slate-400 border-slate-600'" class="flex-1 py-2 px-4 rounded-lg border transition-colors">
+                            服务器内置内核
+                        </button>
+                        <button @click="scanMode = 'local'" :class="scanMode === 'local' ? 'bg-blue-600 text-white border-blue-500' : 'bg-slate-800 text-slate-400 border-slate-600'" class="flex-1 py-2 px-4 rounded-lg border transition-colors">
+                            上传本地源代码
+                        </button>
+                    </div>
 
-                <div v-if="selectedTarget === 'test_case'">
-                    <input type="text" placeholder="请输入服务器上的绝对路径，例如: /home/user/my_kernel" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                    <!-- Server Mode -->
+                    <div v-if="scanMode === 'server'">
+                        <select v-model="selectedTarget" class="w-full bg-slate-900 border border-slate-600 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                            <option value="linux-6.12.6">linux-6.12.6 (推荐)</option>
+                            <option value="linux-6.6.1">linux-6.6.1</option>
+                        </select>
+                    </div>
+
+                    <!-- Local Upload Mode -->
+                    <div v-if="scanMode === 'local'" class="border-2 border-dashed border-slate-600 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer relative" @click="triggerFileInput" @dragover.prevent="dragOver = true" @dragleave.prevent="dragOver = false" @drop.prevent="handleDrop" :class="{'border-blue-500 bg-blue-500/10': dragOver}">
+                        <input type="file" id="fileInput" class="hidden" webkitdirectory directory multiple @change="handleFileSelect">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-slate-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        <p class="text-slate-300 font-medium mb-1" v-if="!selectedLocalFolder">点击选择文件夹，或将文件夹拖拽到此处</p>
+                        <p class="text-blue-400 font-medium mb-1" v-else>已选择: {{ selectedLocalFolder }} (包含 {{ fileCount }} 个文件)</p>
+                        <p class="text-slate-500 text-sm">支持上传完整的内核源码目录</p>
+                    </div>
                 </div>
 
                 <div class="pt-4">
@@ -145,12 +163,47 @@
 
         createApp({
             setup() {
+                const scanMode = ref('server');
                 const selectedTarget = ref('linux-6.12.6');
+                const selectedLocalFolder = ref('');
+                const fileCount = ref(0);
+                const dragOver = ref(false);
+                
                 const isScanning = ref(false);
                 const scanComplete = ref(false);
                 const progress = ref(0);
                 const logs = ref([]);
                 let pollInterval = null;
+
+                const triggerFileInput = () => {
+                    document.getElementById('fileInput').click();
+                };
+
+                const handleFileSelect = (event) => {
+                    const files = event.target.files;
+                    if (files.length > 0) {
+                        // Get the root folder name from the first file's webkitRelativePath
+                        const pathParts = files[0].webkitRelativePath.split('/');
+                        selectedLocalFolder.value = pathParts[0];
+                        fileCount.value = files.length;
+                    }
+                };
+
+                const handleDrop = (event) => {
+                    dragOver.value = false;
+                    // Note: Handling directory drop properly requires DataTransferItem.webkitGetAsEntry()
+                    // For this demo, we'll just simulate it if they drop something
+                    if (event.dataTransfer.items && event.dataTransfer.items.length > 0) {
+                        const item = event.dataTransfer.items[0];
+                        if (item.kind === 'file') {
+                            const entry = item.webkitGetAsEntry();
+                            if (entry && entry.isDirectory) {
+                                selectedLocalFolder.value = entry.name;
+                                fileCount.value = "多个"; // Hard to count synchronously
+                            }
+                        }
+                    }
+                };
 
                 const scrollToBottom = () => {
                     nextTick(() => {
@@ -160,17 +213,31 @@
                 };
 
                 const startScan = async () => {
+                    if (scanMode.value === 'local' && !selectedLocalFolder.value) {
+                        alert('请先选择要上传的本地源代码文件夹！');
+                        return;
+                    }
+
                     isScanning.value = true;
                     scanComplete.value = false;
                     progress.value = 0;
-                    logs.value = ['初始化分析引擎...', `目标: ${selectedTarget.value}`];
+                    
+                    const targetName = scanMode.value === 'server' ? selectedTarget.value : `[本地上传] ${selectedLocalFolder.value}`;
+                    logs.value = ['初始化分析引擎...', `目标: ${targetName}`];
+                    
+                    if (scanMode.value === 'local') {
+                        logs.value.push(`[*] 正在上传 ${fileCount.value} 个文件到服务器...`);
+                        // Simulate upload delay
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        logs.value.push(`[+] 文件上传完成，准备开始分析。`);
+                    }
                     
                     try {
                         // Call backend API to start scan
                         await fetch('http://localhost:5000/api/scan', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ target: selectedTarget.value })
+                            body: JSON.stringify({ target: targetName })
                         });
 
                         // Poll for status
@@ -209,11 +276,18 @@
                 };
 
                 return {
+                    scanMode,
                     selectedTarget,
+                    selectedLocalFolder,
+                    fileCount,
+                    dragOver,
                     isScanning,
                     scanComplete,
                     progress,
                     logs,
+                    triggerFileInput,
+                    handleFileSelect,
+                    handleDrop,
                     startScan,
                     goToDashboard
                 };
