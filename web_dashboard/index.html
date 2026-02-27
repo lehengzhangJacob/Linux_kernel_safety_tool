@@ -53,6 +53,10 @@
                 <h1 class="text-xl font-bold tracking-wider">内核并发安全分析仪表盘 <span class="text-sm font-normal text-slate-400 ml-2">Kernel Concurrency Safety Dashboard</span></h1>
             </div>
             <div class="flex items-center gap-4">
+                <div class="text-sm" :class="apiStatus.includes('Live') ? 'text-emerald-400' : 'text-amber-400'">
+                    <span class="inline-block w-2 h-2 rounded-full mr-1" :class="apiStatus.includes('Live') ? 'bg-emerald-400' : 'bg-amber-400'"></span>
+                    {{ apiStatus }}
+                </div>
                 <div class="text-sm text-slate-400">
                     当前分析版本: <span class="text-blue-400 font-mono font-bold">{{ data ? data.kernel_version : '加载中...' }}</span>
                 </div>
@@ -183,14 +187,71 @@
         createApp({
             setup() {
                 const data = ref(null);
+                const useNeo4jApi = ref(true); // Toggle between static JSON and Neo4j API
+                const apiStatus = ref('Connecting...');
                 let rwChartInstance = null;
                 let topoChartInstance = null;
 
                 const formatNumber = (num) => {
+                    if (typeof num !== 'number') return num;
                     return new Intl.NumberFormat('en-US').format(num);
                 };
 
-                const loadData = async () => {
+                const loadDataFromApi = async () => {
+                    try {
+                        // Check API status
+                        const statusRes = await fetch('http://localhost:5000/api/status');
+                        if (!statusRes.ok) throw new Error('API not reachable');
+                        apiStatus.value = 'Connected to Neo4j (Live)';
+                        
+                        // Fetch stats
+                        const statsRes = await fetch('http://localhost:5000/api/stats');
+                        const stats = await statsRes.json();
+                        
+                        const funcCount = stats.nodes.Function || 0;
+                        const varCount = stats.nodes.GlobalVariable || 0;
+                        const reads = stats.edges.READS || 0;
+                        const writes = stats.edges.WRITES || 0;
+                        const calls = stats.edges.CALLS || 0;
+                        
+                        // Fetch graph
+                        const graphRes = await fetch('http://localhost:5000/api/graph?limit=150');
+                        const graphData = await graphRes.json();
+                        
+                        // Construct data object matching the expected structure
+                        data.value = {
+                            kernel_version: 'Live Neo4j Database',
+                            scan_time: new Date().toISOString().split('T')[0],
+                            summary: {
+                                analysis_files: stats.analysis_files || 'N/A',
+                                total_nodes: funcCount + varCount,
+                                total_functions: funcCount,
+                                total_variables: varCount,
+                                total_edges: reads + writes + calls,
+                                total_warnings: reads + writes,
+                                warning_reads: reads,
+                                warning_writes: writes
+                            },
+                            race_warnings: {
+                                top_variables: stats.top_variables,
+                                warnings_sample: stats.warnings_sample || []
+                            },
+                            graph: graphData
+                        };
+                        
+                        nextTick(() => {
+                            initCharts();
+                        });
+                        
+                    } catch (error) {
+                        console.error('Failed to load from API, falling back to static JSON:', error);
+                        apiStatus.value = 'API Offline - Using Static JSON';
+                        useNeo4jApi.value = false;
+                        loadDataFromJson();
+                    }
+                };
+
+                const loadDataFromJson = async () => {
                     try {
                         // 尝试加载生成的JSON数据
                         const response = await fetch('./data_linux-6.12.6.json');
@@ -204,6 +265,14 @@
                     } catch (error) {
                         console.error('Error loading data:', error);
                         alert('无法加载数据文件。请确保已运行 python3 generate_data.py linux-6.12.6 并且通过HTTP服务器访问此页面。');
+                    }
+                };
+
+                const loadData = () => {
+                    if (useNeo4jApi.value) {
+                        loadDataFromApi();
+                    } else {
+                        loadDataFromJson();
                     }
                 };
 
@@ -321,7 +390,8 @@
                 return {
                     data,
                     formatNumber,
-                    exportReport
+                    exportReport,
+                    apiStatus
                 };
             }
         }).mount('#app');
