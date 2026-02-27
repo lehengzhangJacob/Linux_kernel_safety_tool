@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内核并发安全分析仪表盘</title>
+    <!-- 引入 Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <!-- 引入 Tailwind CSS (用于快速布局) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a; /* slate-900 */
+            color: #f8fafc; /* slate-50 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .card {
+            background-color: #1e293b; /* slate-800 */
+            border: 1px solid #334155; /* slate-700 */
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .chart-container {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="h-screen flex flex-col overflow-hidden">
+        <!-- 顶部导航栏 -->
+        <header class="bg-slate-900 border-b border-slate-700 p-4 flex justify-between items-center shrink-0">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-xl">K</div>
+                <h1 class="text-xl font-bold tracking-wider">内核并发安全分析仪表盘 <span class="text-sm font-normal text-slate-400 ml-2">Kernel Concurrency Safety Dashboard</span></h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="text-sm text-slate-400">
+                    当前分析版本: <span class="text-blue-400 font-mono font-bold">{{ data ? data.kernel_version : '加载中...' }}</span>
+                </div>
+                <button @click="exportReport" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    导出审计报告
+                </button>
+            </div>
+        </header>
+
+        <!-- 主要内容区 -->
+        <main class="flex-1 overflow-hidden p-4 flex gap-4" v-if="data">
+            <!-- 左侧面板：统计数据和图表 -->
+            <div class="w-1/3 flex flex-col gap-4 overflow-y-auto pr-2">
+                
+                <!-- 核心指标卡片 -->
+                <div class="grid grid-cols-2 gap-4 shrink-0">
+                    <div class="card p-4 flex flex-col justify-center">
+                        <div class="text-slate-400 text-xs uppercase tracking-wider mb-1">分析文件数</div>
+                        <div class="text-2xl font-bold text-blue-400">{{ formatNumber(data.summary.analysis_files) }}</div>
+                    </div>
+                    <div class="card p-4 flex flex-col justify-center">
+                        <div class="text-slate-400 text-xs uppercase tracking-wider mb-1">提取函数数</div>
+                        <div class="text-2xl font-bold text-emerald-400">{{ formatNumber(data.summary.total_functions) }}</div>
+                    </div>
+                    <div class="card p-4 flex flex-col justify-center">
+                        <div class="text-slate-400 text-xs uppercase tracking-wider mb-1">调用关系边</div>
+                        <div class="text-2xl font-bold text-purple-400">{{ formatNumber(data.summary.total_edges) }}</div>
+                    </div>
+                    <div class="card p-4 flex flex-col justify-center border-l-4 border-l-red-500">
+                        <div class="text-slate-400 text-xs uppercase tracking-wider mb-1">发现竞态警告</div>
+                        <div class="text-2xl font-bold text-red-400">{{ formatNumber(data.summary.total_warnings) }}</div>
+                    </div>
+                </div>
+
+                <!-- 读写比例图表 -->
+                <div class="card p-4 shrink-0 h-64">
+                    <h3 class="text-sm font-bold text-slate-300 mb-2">竞态警告类型分布</h3>
+                    <div id="rwChart" class="chart-container"></div>
+                </div>
+
+                <!-- 高危变量列表 -->
+                <div class="card p-4 flex-1 min-h-[300px] flex flex-col">
+                    <h3 class="text-sm font-bold text-slate-300 mb-3">高危全局变量 Top 10</h3>
+                    <div class="overflow-y-auto flex-1">
+                        <table class="w-full text-sm text-left">
+                            <thead class="text-xs text-slate-400 uppercase bg-slate-800/50 sticky top-0">
+                                <tr>
+                                    <th class="px-3 py-2 rounded-tl">变量名</th>
+                                    <th class="px-3 py-2 text-right rounded-tr">警告次数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(item, index) in data.race_warnings.top_variables.slice(0, 10)" :key="index" class="border-b border-slate-700/50 hover:bg-slate-700/30">
+                                    <td class="px-3 py-2 font-mono text-orange-300">{{ item.name }}</td>
+                                    <td class="px-3 py-2 text-right font-bold text-slate-300">{{ item.count }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧面板：拓扑图和警告详情 -->
+            <div class="w-2/3 flex flex-col gap-4">
+                <!-- 依赖拓扑图 -->
+                <div class="card p-4 flex-1 flex flex-col relative">
+                    <div class="flex justify-between items-center mb-2 z-10">
+                        <h3 class="text-sm font-bold text-slate-300">函数调用与变量访问拓扑图 (局部采样)</h3>
+                        <div class="flex gap-3 text-xs">
+                            <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-blue-500 inline-block"></span> 函数</span>
+                            <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-orange-500 inline-block"></span> 全局变量</span>
+                        </div>
+                    </div>
+                    <div id="topoChart" class="chart-container absolute inset-0 mt-10"></div>
+                </div>
+
+                <!-- 警告详情列表 -->
+                <div class="card p-4 h-1/3 shrink-0 flex flex-col">
+                    <h3 class="text-sm font-bold text-slate-300 mb-3">最新竞态警告详情</h3>
+                    <div class="overflow-y-auto flex-1">
+                        <table class="w-full text-sm text-left">
+                            <thead class="text-xs text-slate-400 uppercase bg-slate-800/50 sticky top-0">
+                                <tr>
+                                    <th class="px-3 py-2">类型</th>
+                                    <th class="px-3 py-2">目标变量</th>
+                                    <th class="px-3 py-2">所在函数</th>
+                                    <th class="px-3 py-2">风险等级</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(warn, index) in data.race_warnings.warnings_sample.slice(0, 50)" :key="index" class="border-b border-slate-700/50 hover:bg-slate-700/30">
+                                    <td class="px-3 py-2">
+                                        <span :class="warn.type === 'Read' ? 'text-emerald-400 bg-emerald-400/10' : 'text-rose-400 bg-rose-400/10'" class="px-2 py-1 rounded text-xs font-bold">
+                                            {{ warn.type }}
+                                        </span>
+                                    </td>
+                                    <td class="px-3 py-2 font-mono text-orange-300">{{ warn.variable }}</td>
+                                    <td class="px-3 py-2 font-mono text-blue-300">{{ warn.function }}</td>
+                                    <td class="px-3 py-2">
+                                        <span class="text-red-400 flex items-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                            </svg>
+                                            高
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 加载状态 -->
+        <div v-else class="flex-1 flex items-center justify-center flex-col gap-4">
+            <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <div class="text-slate-400">正在加载分析数据...</div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted, nextTick } = Vue;
+
+        createApp({
+            setup() {
+                const data = ref(null);
+                let rwChartInstance = null;
+                let topoChartInstance = null;
+
+                const formatNumber = (num) => {
+                    return new Intl.NumberFormat('en-US').format(num);
+                };
+
+                const loadData = async () => {
+                    try {
+                        // 尝试加载生成的JSON数据
+                        const response = await fetch('./data_linux-6.12.6.json');
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        data.value = await response.json();
+                        
+                        // 数据加载完成后初始化图表
+                        nextTick(() => {
+                            initCharts();
+                        });
+                    } catch (error) {
+                        console.error('Error loading data:', error);
+                        alert('无法加载数据文件。请确保已运行 python3 generate_data.py linux-6.12.6 并且通过HTTP服务器访问此页面。');
+                    }
+                };
+
+                const initCharts = () => {
+                    // 1. 读写比例饼图
+                    const rwChartDom = document.getElementById('rwChart');
+                    if (rwChartDom) {
+                        rwChartInstance = echarts.init(rwChartDom, 'dark');
+                        rwChartInstance.setOption({
+                            backgroundColor: 'transparent',
+                            tooltip: { trigger: 'item' },
+                            legend: { top: '5%', left: 'center', textStyle: { color: '#94a3b8' } },
+                            series: [
+                                {
+                                    name: '警告类型',
+                                    type: 'pie',
+                                    radius: ['40%', '70%'],
+                                    avoidLabelOverlap: false,
+                                    itemStyle: {
+                                        borderRadius: 10,
+                                        borderColor: '#1e293b',
+                                        borderWidth: 2
+                                    },
+                                    label: { show: false, position: 'center' },
+                                    emphasis: {
+                                        label: { show: true, fontSize: 20, fontWeight: 'bold' }
+                                    },
+                                    labelLine: { show: false },
+                                    data: [
+                                        { value: data.value.summary.warning_reads, name: '无保护读 (Read)', itemStyle: { color: '#34d399' } },
+                                        { value: data.value.summary.warning_writes, name: '无保护写 (Write)', itemStyle: { color: '#fb7185' } }
+                                    ]
+                                }
+                            ]
+                        });
+                    }
+
+                    // 2. 拓扑图
+                    const topoChartDom = document.getElementById('topoChart');
+                    if (topoChartDom && data.value.graph) {
+                        topoChartInstance = echarts.init(topoChartDom, 'dark');
+                        
+                        const graphNodes = data.value.graph.nodes.map(node => ({
+                            id: node.id,
+                            name: node.name,
+                            symbolSize: node.symbolSize,
+                            value: node.value,
+                            category: node.category,
+                            itemStyle: {
+                                color: node.category === 0 ? '#3b82f6' : '#f97316', // 函数蓝色，变量橙色
+                                borderColor: '#1e293b',
+                                borderWidth: 1
+                            }
+                        }));
+
+                        topoChartInstance.setOption({
+                            backgroundColor: 'transparent',
+                            tooltip: {
+                                formatter: function (params) {
+                                    if (params.dataType === 'node') {
+                                        return `${params.data.category === 0 ? '函数' : '变量'}: ${params.data.name}<br/>关联度: ${params.data.value}`;
+                                    }
+                                    return `${params.data.source} -> ${params.data.target}`;
+                                }
+                            },
+                            series: [
+                                {
+                                    type: 'graph',
+                                    layout: 'force',
+                                    data: graphNodes,
+                                    links: data.value.graph.edges,
+                                    roam: true,
+                                    label: {
+                                        show: true,
+                                        position: 'right',
+                                        formatter: '{b}',
+                                        color: '#cbd5e1',
+                                        fontSize: 10
+                                    },
+                                    force: {
+                                        repulsion: 200,
+                                        edgeLength: [50, 100],
+                                        gravity: 0.1
+                                    },
+                                    lineStyle: {
+                                        color: '#475569',
+                                        curveness: 0.3,
+                                        width: 1,
+                                        opacity: 0.7
+                                    },
+                                    emphasis: {
+                                        focus: 'adjacency',
+                                        lineStyle: { width: 3 }
+                                    }
+                                }
+                            ]
+                        });
+                    }
+
+                    // 监听窗口大小变化，重绘图表
+                    window.addEventListener('resize', () => {
+                        if (rwChartInstance) rwChartInstance.resize();
+                        if (topoChartInstance) topoChartInstance.resize();
+                    });
+                };
+
+                const exportReport = () => {
+                    alert('PDF报告生成功能正在开发中...\n在实际演示中，这里会调用后端的Python脚本生成一份包含所有统计数据和高危漏洞列表的PDF文件。');
+                };
+
+                onMounted(() => {
+                    loadData();
+                });
+
+                return {
+                    data,
+                    formatNumber,
+                    exportReport
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

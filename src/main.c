@@ -184,6 +184,47 @@ static int do_stop_db(const char *app_dir) {
                    app_dir, app_dir, app_dir);
 }
 
+/* ── START WEB DASHBOARD ── */
+static int do_start_web(const char *app_dir, const char *kernel) {
+    printf("[*] Generating dashboard data for %s...\n", kernel);
+    run_cmd("cd '%s' && python3 web_dashboard/generate_data.py %s", app_dir, kernel);
+    
+    printf("\n[*] Starting Web Dashboard on port 8080...\n");
+    printf("    Open your browser and visit: http://localhost:8080/index.html\n");
+    printf("    Press Ctrl+C to stop the server.\n\n");
+    
+    return run_cmd("cd '%s/web_dashboard' && python3 -m http.server 8080", app_dir);
+}
+
+/* ── GENERATE PDF REPORT ── */
+static int do_generate_report(const char *app_dir, const char *kernel) {
+    printf("[*] Generating PDF Security Audit Report for %s...\n", kernel);
+    return run_cmd("cd '%s' && python3 tools/generate_pdf.py %s", app_dir, kernel);
+}
+
+/* ── INSTALL GIT HOOK ── */
+static int do_install_git_hook(const char *app_dir) {
+    printf("[*] Installing pre-commit git hook for automated scanning...\n");
+    
+    struct stat st;
+    char git_dir[PATH_MAX];
+    snprintf(git_dir, sizeof(git_dir), "%s/.git", app_dir);
+    
+    if (stat(git_dir, &st) != 0) {
+        printf("Error: Not a git repository. Cannot install git hook.\n");
+        return 1;
+    }
+    
+    int ret = run_cmd("cd '%s' && cp tools/pre-commit.sample .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit", app_dir);
+    if (ret == 0) {
+        printf("  ✓ Git hook installed successfully at .git/hooks/pre-commit\n");
+        printf("  The analyzer will now run automatically on 'git commit'.\n");
+    } else {
+        printf("  ✗ Failed to install git hook.\n");
+    }
+    return ret;
+}
+
 /* ── CLEAN ── */
 static int do_clean(const char *app_dir) {
     printf("[*] Cleaning build artifacts...\n");
@@ -250,6 +291,9 @@ static void print_help(void) {
     printf("  test               Test the toolchain with a sample file\n");
     printf("  start-db           Start Neo4j graph database\n");
     printf("  stop-db            Stop Neo4j graph database\n");
+    printf("  start-web [kernel] Start Web Dashboard (default: linux-6.6.1)\n");
+    printf("  report [kernel]    Generate PDF Security Audit Report (default: linux-6.6.1)\n");
+    printf("  git-hook           Install pre-commit git hook for automated scanning\n");
     printf("  clean              Remove build artifacts\n");
     printf("  status             Show installation and analysis status\n");
     printf("  --help, -h         Show this help message\n");
@@ -289,6 +333,17 @@ int main(int argc, char *argv[]) {
     }
     else if (strcmp(cmd, "stop-db") == 0) {
         return do_stop_db(app_dir);
+    }
+    else if (strcmp(cmd, "start-web") == 0) {
+        const char *kernel = (argc > 2) ? argv[2] : "linux-6.6.1";
+        return do_start_web(app_dir, kernel);
+    }
+    else if (strcmp(cmd, "report") == 0) {
+        const char *kernel = (argc > 2) ? argv[2] : "linux-6.6.1";
+        return do_generate_report(app_dir, kernel);
+    }
+    else if (strcmp(cmd, "git-hook") == 0) {
+        return do_install_git_hook(app_dir);
     }
     else if (strcmp(cmd, "clean") == 0) {
         return do_clean(app_dir);

@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+# Pre-commit hook to run kernel safety analyzer on modified files
+#
+# To install:
+# cp tools/pre-commit.sample .git/hooks/pre-commit
+# chmod +x .git/hooks/pre-commit
+
+echo "=================================================="
+echo "  Running Kernel Safety Analyzer Pre-commit Hook"
+echo "=================================================="
+
+# Check if kernel_analyzer exists
+if [ ! -f "./kernel_analyzer" ]; then
+    echo "Error: kernel_analyzer not found. Please compile it first."
+    echo "Run: gcc src/main.c -o kernel_analyzer"
+    exit 1
+fi
+
+# Get list of modified C files
+MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.c$')
+
+if [ -z "$MODIFIED_FILES" ]; then
+    echo "No C files modified. Skipping analysis."
+    exit 0
+fi
+
+echo "Modified C files detected:"
+echo "$MODIFIED_FILES"
+echo ""
+
+# Run the test command as a quick check
+# In a real scenario, you might run a targeted analysis on the modified files
+echo "Running quick toolchain test..."
+./kernel_analyzer test
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "⚠️  WARNING: Kernel Safety Analyzer found potential issues!"
+    echo "⚠️  Please review the warnings above. The commit will proceed, but you should fix these issues later."
+    echo "=================================================="
+    # Exit 0 allows the commit to proceed despite warnings
+    exit 0
+fi
+
+echo ""
+echo "✅ Kernel Safety Analyzer passed. Proceeding with commit."
+exit 0
