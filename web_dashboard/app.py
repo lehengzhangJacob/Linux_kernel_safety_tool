@@ -3,6 +3,8 @@ from flask_cors import CORS
 from neo4j import GraphDatabase
 import os
 import json
+import threading
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -10,6 +12,63 @@ CORS(app)
 # Neo4j connection details
 URI = "bolt://localhost:7687"
 AUTH = ("neo4j", "password") # Default credentials, adjust if needed
+
+# Global state for scan simulation
+scan_status = {
+    "status": "idle",
+    "progress": 0,
+    "logs": []
+}
+
+def simulate_scan(target):
+    global scan_status
+    scan_status["status"] = "running"
+    scan_status["progress"] = 5
+    scan_status["logs"] = [f"[*] 准备分析目标: {target}"]
+    
+    time.sleep(1)
+    scan_status["progress"] = 15
+    scan_status["logs"].append("[*] 正在编译 GCC 插件 (analyzer_plugin.so)...")
+    
+    time.sleep(1.5)
+    scan_status["progress"] = 30
+    scan_status["logs"].append("[*] 插件编译完成。正在配置内核构建环境...")
+    
+    time.sleep(1)
+    scan_status["progress"] = 45
+    scan_status["logs"].append(f"[*] 开始执行内核静态分析 (make -C {target} KCFLAGS=\"-fplugin=...\")...")
+    
+    time.sleep(2)
+    scan_status["progress"] = 65
+    scan_status["logs"].append("[*] 正在提取全局变量读写访问记录...")
+    
+    time.sleep(1.5)
+    scan_status["progress"] = 80
+    scan_status["logs"].append("[*] 正在生成函数调用图与变量依赖关系...")
+    
+    time.sleep(1)
+    scan_status["progress"] = 90
+    scan_status["logs"].append("[*] 正在将分析结果导入 Neo4j 图数据库...")
+    
+    time.sleep(1.5)
+    scan_status["progress"] = 100
+    scan_status["status"] = "completed"
+    scan_status["logs"].append("[+] 分析完成！数据已就绪。")
+
+@app.route('/api/scan', methods=['POST'])
+def start_scan():
+    data = request.json or {}
+    target = data.get('target', 'linux-6.12.6')
+    
+    # Start the simulation in a background thread
+    thread = threading.Thread(target=simulate_scan, args=(target,))
+    thread.start()
+    
+    return jsonify({"message": "Scan started successfully"})
+
+@app.route('/api/scan/status', methods=['GET'])
+def get_scan_status():
+    return jsonify(scan_status)
 
 def get_db_driver():
     return GraphDatabase.driver(URI, auth=AUTH)
