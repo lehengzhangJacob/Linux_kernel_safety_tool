@@ -598,7 +598,31 @@ export default {
         }]
       })
     },
-    exportReport() {
+    async exportReport() {
+      try {
+        const response = await axios.get('/api/report/pdf', {
+          responseType: 'blob',
+          timeout: 30000
+        })
+
+        const blob = new Blob([response.data], { type: 'application/pdf' })
+        const contentDisposition = response.headers['content-disposition'] || ''
+        const matched = contentDisposition.match(/filename="?([^";]+)"?/i)
+        const filename = matched ? matched[1] : `kernel_security_report_${Date.now()}.pdf`
+
+        const downloadUrl = window.URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        link.href = downloadUrl
+        link.download = filename
+        document.body.appendChild(link)
+        link.click()
+        link.remove()
+        window.URL.revokeObjectURL(downloadUrl)
+        return
+      } catch (error) {
+        console.warn('Backend PDF export failed, fallback to browser export:', error)
+      }
+
       // 生成PDF格式的审计报告
       const { jsPDF } = window.jspdf
       const doc = new jsPDF()

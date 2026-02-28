@@ -41,12 +41,20 @@
                   <span>服务器内置内核</span>
                 </div>
               </button>
-              <button @click="scanMode = 'local'" :class="scanMode === 'local' ? 'active-button' : 'inactive-button'" class="mode-button">
+              <button @click="scanMode = 'local_folder'" :class="scanMode === 'local_folder' ? 'active-button' : 'inactive-button'" class="mode-button">
                 <div class="button-content">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                   </svg>
-                  <span>上传本地源代码</span>
+                  <span>上传文件夹</span>
+                </div>
+              </button>
+              <button @click="scanMode = 'local_archive'" :class="scanMode === 'local_archive' ? 'active-button' : 'inactive-button'" class="mode-button">
+                <div class="button-content">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12h8M8 8h8M8 16h5" />
+                  </svg>
+                  <span>上传压缩包</span>
                 </div>
               </button>
             </div>
@@ -62,8 +70,8 @@
               </div>
             </div>
 
-            <!-- 本地上传模式 -->
-            <div v-if="scanMode === 'local'" class="upload-section" @click="triggerFileInput" @dragover.prevent="dragOver = true" @dragleave.prevent="dragOver = false" @drop.prevent="handleDrop" :class="{'drag-over': dragOver}">
+            <!-- 文件夹上传模式 -->
+            <div v-if="scanMode === 'local_folder'" class="upload-section" @click="triggerFolderInput" @dragover.prevent="dragOver = true" @dragleave.prevent="dragOver = false" @drop.prevent="handleDrop" :class="{'drag-over': dragOver}">
               <input type="file" id="fileInput" class="hidden" webkitdirectory directory multiple @change="handleFileSelect">
               <div class="upload-content">
                 <div class="upload-icon-container">
@@ -71,30 +79,48 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
                   </svg>
                 </div>
-                <h3 class="upload-title" v-if="!selectedLocalFolder">上传内核源代码</h3>
+                <h3 class="upload-title" v-if="!selectedLocalFolder">上传内核源代码目录</h3>
                 <h3 class="upload-title selected" v-else>已选择: {{ selectedLocalFolder }}</h3>
                 <p class="upload-description" v-if="!selectedLocalFolder">点击选择文件夹，或将文件夹拖拽到此处</p>
                 <p class="upload-description" v-else>包含 {{ fileCount }} 个文件</p>
                 <p class="upload-help">支持上传完整的内核源码目录</p>
               </div>
             </div>
+
+            <!-- 压缩包上传模式 -->
+            <div v-if="scanMode === 'local_archive'" class="upload-section archive-upload-section" @click="triggerArchiveInput">
+              <input type="file" id="archiveInput" class="hidden" accept=".zip,.tar,.tar.gz,.tgz,.tar.xz,.txz,.tar.bz2,.tbz2" @change="handleArchiveSelect">
+              <div class="upload-content">
+                <div class="upload-icon-container">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12h8M8 8h8M8 16h5" />
+                  </svg>
+                </div>
+                <h3 class="upload-title" v-if="!selectedLocalFolder">上传内核源代码压缩包</h3>
+                <h3 class="upload-title selected" v-else>已选择: {{ selectedLocalFolder }}</h3>
+                <p class="upload-description" v-if="!selectedLocalFolder">点击选择 .tar.gz/.tgz/.tar/.zip/.tar.xz 文件</p>
+                <p class="upload-description" v-else>文件: {{ fileCount }}</p>
+                <p class="upload-help">上传后自动解压并进入分析流程</p>
+                <button type="button" class="archive-select-button" @click.stop="triggerArchiveInput">选择压缩包文件</button>
+              </div>
+            </div>
           </div>
 
           <div class="action-section">
-            <button v-if="scanMode === 'local' && !uploadComplete" @click="uploadFiles" class="upload-button">
+            <button v-if="(scanMode === 'local_folder' || scanMode === 'local_archive') && !uploadComplete" @click="uploadFiles" class="upload-button">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
               </svg>
               <span v-if="isUploading">正在上传 ({{ uploadProgress }}%)...</span>
-              <span v-else>第一步：上传源代码</span>
+              <span v-else>{{ scanMode === 'local_archive' ? '第一步：上传压缩包' : '第一步：上传文件夹' }}</span>
             </button>
 
-            <button @click="startScan" :disabled="scanMode === 'local' && !uploadComplete" class="scan-button" :class="{'disabled': scanMode === 'local' && !uploadComplete}">
+            <button @click="startScan" :disabled="(scanMode === 'local_folder' || scanMode === 'local_archive') && !uploadComplete" class="scan-button" :class="{'disabled': (scanMode === 'local_folder' || scanMode === 'local_archive') && !uploadComplete}">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              {{ scanMode === 'local' ? '第二步：开始安全审计' : '开始安全审计' }}
+              {{ (scanMode === 'local_folder' || scanMode === 'local_archive') ? '第二步：开始安全审计' : '开始安全审计' }}
             </button>
           </div>
         </div>
@@ -170,8 +196,20 @@ export default {
     }
   },
   methods: {
-    triggerFileInput() {
+    isSupportedArchiveFile(fileName) {
+      const normalized = (fileName || '').trim().toLowerCase()
+      const supported = ['.zip', '.tar.gz', '.tgz', '.tar', '.tar.xz', '.txz', '.tar.bz2', '.tbz2']
+      return supported.some(ext => normalized.endsWith(ext))
+    },
+    archiveTargetDir(fileName) {
+      const normalized = (fileName || '').trim()
+      return normalized.replace(/\.(tar\.gz|tgz|tar|zip|tar\.xz|txz|tar\.bz2|tbz2)$/i, '')
+    },
+    triggerFolderInput() {
       document.getElementById('fileInput').click()
+    },
+    triggerArchiveInput() {
+      document.getElementById('archiveInput').click()
     },
     handleFileSelect(event) {
       const files = event.target.files
@@ -179,6 +217,16 @@ export default {
         const pathParts = files[0].webkitRelativePath.split('/')
         this.selectedLocalFolder = pathParts[0]
         this.fileCount = files.length
+        this.uploadComplete = false
+        this.uploadProgress = 0
+      }
+    },
+    handleArchiveSelect(event) {
+      const files = event.target.files
+      if (files.length > 0) {
+        const archive = files[0]
+        this.selectedLocalFolder = this.archiveTargetDir(archive.name)
+        this.fileCount = archive.name
         this.uploadComplete = false
         this.uploadProgress = 0
       }
@@ -206,39 +254,80 @@ export default {
     },
     async uploadFiles() {
       if (!this.selectedLocalFolder) {
-        alert('请先选择要上传的本地源代码文件夹！')
+        alert(this.scanMode === 'local_archive' ? '请先选择压缩包文件！' : '请先选择要上传的本地源代码文件夹！')
         return
       }
 
       this.isUploading = true
       this.uploadProgress = 0
-      const fileInput = document.getElementById('fileInput')
-      const files = fileInput.files
-      
-      const batchSize = 100
-      let uploadedCount = 0
-      
-      for (let i = 0; i < files.length; i += batchSize) {
+      if (this.scanMode === 'local_archive') {
+        const archiveInput = document.getElementById('archiveInput')
+        const archive = archiveInput.files[0]
+        if (!archive) {
+          alert('请先选择压缩包文件！')
+          this.isUploading = false
+          return
+        }
         const formData = new FormData()
         formData.append('target_dir', this.selectedLocalFolder)
-        
-        const batch = Array.from(files).slice(i, i + batchSize)
-        batch.forEach(file => {
-          formData.append('files', file, file.webkitRelativePath)
-        })
-        
+        formData.append('archive', archive)
+
         try {
           await axios.post('/api/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
+            },
+            onUploadProgress: (event) => {
+              if (event && event.total) {
+                this.uploadProgress = Math.min(99, Math.floor((event.loaded / event.total) * 100))
+              }
             }
           })
-          uploadedCount += batch.length
-          this.uploadProgress = Math.floor((uploadedCount / files.length) * 100)
+          this.uploadProgress = 100
         } catch (err) {
-          alert(`上传失败: ${err.message}`)
+          const backendMessage = err?.response?.data?.error
+          alert(`上传失败: ${backendMessage || err.message}`)
           this.isUploading = false
           return
+        }
+      } else {
+        const fileInput = document.getElementById('fileInput')
+        const files = fileInput.files
+        const totalFiles = files.length
+
+        const batchSize = 100
+        let uploadedCount = 0
+
+        for (let i = 0; i < files.length; i += batchSize) {
+          const formData = new FormData()
+          formData.append('target_dir', this.selectedLocalFolder)
+
+          const batch = Array.from(files).slice(i, i + batchSize)
+          batch.forEach(file => {
+            formData.append('files', file, file.webkitRelativePath)
+          })
+          const batchStart = uploadedCount
+
+          try {
+            await axios.post('/api/upload', formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              },
+              onUploadProgress: (event) => {
+                if (event && event.total) {
+                  const batchRatio = event.loaded / event.total
+                  const combined = (batchStart + (batch.length * batchRatio)) / totalFiles
+                  this.uploadProgress = Math.min(99, Math.floor(combined * 100))
+                }
+              }
+            })
+            uploadedCount += batch.length
+            this.uploadProgress = Math.floor((uploadedCount / files.length) * 100)
+          } catch (err) {
+            alert(`上传失败: ${err.message}`)
+            this.isUploading = false
+            return
+          }
         }
       }
       
@@ -247,7 +336,7 @@ export default {
       alert('源代码上传成功！现在可以开始安全审计了。')
     },
     async startScan() {
-      if (this.scanMode === 'local' && !this.uploadComplete) {
+      if ((this.scanMode === 'local_folder' || this.scanMode === 'local_archive') && !this.uploadComplete) {
         alert('请先完成源代码上传！')
         return
       }
@@ -255,9 +344,14 @@ export default {
       this.isScanning = true
       this.scanComplete = false
       this.progress = 0
+
+      if (this.pollInterval) {
+        clearInterval(this.pollInterval)
+        this.pollInterval = null
+      }
       
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
-      const isUploaded = this.scanMode === 'local'
+      const isUploaded = this.scanMode !== 'server'
       this.logs = ['初始化分析引擎...', `目标: ${targetName}`]
       
       try {
@@ -266,30 +360,39 @@ export default {
 
         // Poll for status
         this.pollInterval = setInterval(async () => {
-          const res = await axios.get('/api/scan/status')
-          const data = res.data
-          
-          this.progress = data.progress
-          
-          // Only add new logs
-          if (data.logs && data.logs.length > this.logs.length - 2) {
-            const newLogs = data.logs.slice(this.logs.length - 2)
-            this.logs.push(...newLogs)
-            this.scrollToBottom()
-          }
+          try {
+            const res = await axios.get('/api/scan/status')
+            const data = res.data
 
-          if (data.status === 'completed') {
+            this.progress = typeof data.progress === 'number' ? data.progress : this.progress
+
+            // Only add new logs
+            if (data.logs && data.logs.length > this.logs.length - 2) {
+              const newLogs = data.logs.slice(this.logs.length - 2)
+              this.logs.push(...newLogs)
+              this.scrollToBottom()
+            }
+
+            if (data.status === 'completed') {
+              clearInterval(this.pollInterval)
+              this.pollInterval = null
+              this.scanComplete = true
+              this.progress = 100
+              // Auto redirect after 2 seconds
+              setTimeout(() => {
+                this.goToDashboard()
+              }, 2000)
+            } else if (data.status === 'error') {
+              clearInterval(this.pollInterval)
+              this.pollInterval = null
+              this.isScanning = false
+              this.logs.push("[-] 分析过程中发生错误，请检查日志。")
+            }
+          } catch (error) {
             clearInterval(this.pollInterval)
-            this.scanComplete = true
-            this.progress = 100
-            // Auto redirect after 2 seconds
-            setTimeout(() => {
-              this.goToDashboard()
-            }, 2000)
-          } else if (data.status === 'error') {
-            clearInterval(this.pollInterval)
+            this.pollInterval = null
             this.isScanning = false
-            this.logs.push("[-] 分析过程中发生错误，请检查日志。")
+            this.logs.push(`错误: 获取扫描进度失败 (${error.message})`)
           }
         }, 1000) // 每秒轮询一次，避免请求过于频繁
 
@@ -529,6 +632,26 @@ export default {
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.archive-upload-section {
+  cursor: default;
+}
+
+.archive-select-button {
+  margin-top: 12px;
+  background-color: #2563eb;
+  color: #fff;
+  border: 1px solid #3b82f6;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.archive-select-button:hover {
+  background-color: #1d4ed8;
 }
 
 .upload-section:hover {

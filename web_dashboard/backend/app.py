@@ -1,10 +1,13 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, Response
 from flask_cors import CORS
 import os
 import json
 import threading
 import time
 import subprocess
+import shutil
+import tarfile
+import zipfile
 from collections import deque
 
 app = Flask(__name__)
@@ -37,70 +40,163 @@ scan_status = {
 # In-memory data storage
 analysis_data = {}
 
+
+def _pdf_escape_text(text):
+    return text.replace('\\', '\\\\').replace('(', '\\(').replace(')', '\\)')
+
+
+def build_minimal_pdf(lines):
+    rendered_lines = [str(line)[:110] for line in lines if line is not None]
+
+    commands = [
+        'BT',
+        '/F1 12 Tf',
+        '50 790 Td'
+    ]
+
+    first_line = True
+    for line in rendered_lines:
+        escaped = _pdf_escape_text(line)
+        if not first_line:
+            commands.append('0 -16 Td')
+        commands.append(f'({escaped}) Tj')
+        first_line = False
+
+    commands.append('ET')
+    content_stream = '\n'.join(commands).encode('latin-1', errors='replace')
+
+    objects = [
+        b'<< /Type /Catalog /Pages 2 0 R >>',
+        b'<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+        b'<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>',
+        b'<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
+        f'<< /Length {len(content_stream)} >>\nstream\n'.encode('ascii') + content_stream + b'\nendstream'
+    ]
+
+    pdf_parts = [b'%PDF-1.4\n%\xe2\xe3\xcf\xd3\n']
+    offsets = [0]
+
+    for index, obj in enumerate(objects, start=1):
+        offsets.append(sum(len(part) for part in pdf_parts))
+        pdf_parts.append(f'{index} 0 obj\n'.encode('ascii') + obj + b'\nendobj\n')
+
+    xref_offset = sum(len(part) for part in pdf_parts)
+    pdf_parts.append(f'xref\n0 {len(objects) + 1}\n'.encode('ascii'))
+    pdf_parts.append(b'0000000000 65535 f \n')
+    for offset in offsets[1:]:
+        pdf_parts.append(f'{offset:010d} 00000 n \n'.encode('ascii'))
+
+    pdf_parts.append(
+        f'trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\nstartxref\n{xref_offset}\n%%EOF\n'.encode('ascii')
+    )
+
+    return b''.join(pdf_parts)
+
+
+def sanitize_target_dir(name):
+    if not name:
+        return "uploaded_code"
+    cleaned = "".join(ch if ch.isalnum() or ch in ('-', '_', '.') else '_' for ch in name)
+    cleaned = cleaned.strip('._')
+    return cleaned or "uploaded_code"
+
+
+def strip_archive_suffix(filename):
+    lower = filename.lower()
+    for suffix in ('.tar.gz', '.tgz', '.tar.xz', '.txz', '.tar.bz2', '.tbz2', '.tar', '.zip'):
+        if lower.endswith(suffix):
+            return filename[:-len(suffix)]
+    return os.path.splitext(filename)[0]
+
+
+def is_within_directory(base_dir, target_path):
+    base_real = os.path.realpath(base_dir)
+    target_real = os.path.realpath(target_path)
+    return os.path.commonpath([base_real, target_real]) == base_real
+
+
+def safe_extract_zip(zip_path, dest_dir):
+    with zipfile.ZipFile(zip_path, 'r') as archive:
+        for member in archive.infolist():
+            member_path = os.path.join(dest_dir, member.filename)
+            if not is_within_directory(dest_dir, member_path):
+                raise ValueError(f"非法压缩包路径: {member.filename}")
+        archive.extractall(dest_dir)
+
+
+def safe_extract_tar(tar_path, dest_dir):
+    with tarfile.open(tar_path, 'r:*') as archive:
+        for member in archive.getmembers():
+            member_path = os.path.join(dest_dir, member.name)
+            if not is_within_directory(dest_dir, member_path):
+                raise ValueError(f"非法压缩包路径: {member.name}")
+        archive.extractall(dest_dir)
+
 def run_real_scan(target, is_uploaded=False):
     global scan_status
     scan_status["status"] = "running"
     scan_status["progress"] = 5
     scan_status["logs"].clear()
     scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
-    
+
     # 判断是上传的代码还是服务器内置内核
     if is_uploaded:
-        # 上传的代码存储在 data/<target>/
         source_path = os.path.join(DATA_DIR, target)
-        # 结果存储在 data/<target>_result/
         result_path = os.path.join(DATA_DIR, f"{target}_result")
-        
+
         if not os.path.exists(source_path):
             scan_status["status"] = "error"
             scan_status["logs"].append(f"[-] 错误: 找不到上传的代码目录: {source_path}")
             return
-        
+
         os.makedirs(result_path, exist_ok=True)
         scan_status["logs"].append(f"[*] 分析上传的代码: {source_path}")
         scan_status["logs"].append(f"[*] 结果将保存到: {result_path}")
-        
-        # 对上传的代码执行分析（简化版本，直接扫描C文件）
-        analyze_uploaded_code(target, source_path, result_path)
-    else:
-        # 服务器内置内核，使用原有的分析脚本
-        env = os.environ.copy()
-        env['ANALYSIS_JOBS'] = '2'
-        
-        process = subprocess.Popen(
-            [os.path.join(PROJECT_ROOT, 'run_analysis.sh'), target],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            text=True,
-            cwd=PROJECT_ROOT,
-            env=env
-        )
-        
-        for line in iter(process.stdout.readline, ''):
-            line = line.strip()
-            if line:
-                scan_status["logs"].append(line)
-                if "Building GCC Plugin" in line:
-                    scan_status["progress"] = 10
-                elif "Configuring Kernel" in line:
-                    scan_status["progress"] = 15
-                elif "Starting Kernel Analysis" in line:
-                    scan_status["progress"] = 20
-                elif "Extracting Unprotected" in line:
-                    scan_status["progress"] = 80
-                elif "Generating Neo4j" in line:
-                    scan_status["progress"] = 90
 
-        process.wait()
-        
-        if process.returncode == 0:
-            scan_status["progress"] = 100
-            scan_status["status"] = "completed"
-            scan_status["logs"].append("[+] 分析完成！数据已就绪。")
-            generate_analysis_data(target)
-        else:
-            scan_status["status"] = "error"
-            scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
+        analyze_uploaded_code(target, source_path, result_path)
+        scan_status["progress"] = 100
+        scan_status["status"] = "completed"
+        scan_status["logs"].append("[+] 上传代码分析完成！")
+        return
+
+    # 服务器内置内核，使用原有分析脚本
+    env = os.environ.copy()
+    env['ANALYSIS_JOBS'] = '2'
+
+    process = subprocess.Popen(
+        [os.path.join(PROJECT_ROOT, 'run_analysis.sh'), target],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        cwd=PROJECT_ROOT,
+        env=env
+    )
+
+    for line in iter(process.stdout.readline, ''):
+        line = line.strip()
+        if line:
+            scan_status["logs"].append(line)
+            if "Building GCC Plugin" in line:
+                scan_status["progress"] = 10
+            elif "Configuring Kernel" in line:
+                scan_status["progress"] = 15
+            elif "Starting Kernel Analysis" in line:
+                scan_status["progress"] = 20
+            elif "Extracting Unprotected" in line:
+                scan_status["progress"] = 80
+            elif "Generating Neo4j" in line:
+                scan_status["progress"] = 90
+
+    process.wait()
+
+    if process.returncode == 0:
+        scan_status["progress"] = 100
+        scan_status["status"] = "completed"
+        scan_status["logs"].append("[+] 分析完成！数据已就绪。")
+        generate_analysis_data(target)
+    else:
+        scan_status["status"] = "error"
+        scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
 
 def analyze_uploaded_code(target, source_path, result_path):
     """分析上传的代码目录，生成完整的分析文件"""
@@ -604,13 +700,17 @@ def build_sample_graph(edges_filepath, nodes_filepath, max_nodes=150):
 
 @app.route('/api/upload', methods=['POST'])
 def upload_files():
-    if 'files' not in request.files:
-        return jsonify({"error": "No files part"}), 400
-    
-    files = request.files.getlist('files')
-    
+    files = request.files.getlist('files') if 'files' in request.files else []
+    archive = request.files.get('archive')
+
+    if not files and (archive is None or not archive.filename):
+        return jsonify({"error": "No files or archive provided"}), 400
+
     # 获取目标文件夹名称
-    target_dir = request.form.get('target_dir', 'uploaded_code')
+    target_dir = request.form.get('target_dir', '')
+    if not target_dir and archive and archive.filename:
+        target_dir = strip_archive_suffix(os.path.basename(archive.filename))
+    target_dir = sanitize_target_dir(target_dir)
     
     # 构建存储路径: data/<target_dir>/
     upload_base_path = os.path.join(DATA_DIR, target_dir)
@@ -620,20 +720,49 @@ def upload_files():
     result_path = os.path.join(DATA_DIR, f"{target_dir}_result")
     os.makedirs(result_path, exist_ok=True)
     
-    for file in files:
-        if file.filename:
-            # file.filename 包含了前端传来的相对路径 (e.g., folder_name/file.txt)
-            # 我们需要去掉最外层的文件夹名，只保留内部结构
-            relative_path = file.filename
-            if '/' in relative_path:
-                # 去掉第一层目录名，保留剩余路径
-                parts = relative_path.split('/', 1)
-                if len(parts) > 1:
-                    relative_path = parts[1]
-            
-            file_path = os.path.join(upload_base_path, relative_path)
-            os.makedirs(os.path.dirname(file_path), exist_ok=True)
-            file.save(file_path)
+    if files:
+        for file in files:
+            if file.filename:
+                relative_path = file.filename
+                if '/' in relative_path:
+                    parts = relative_path.split('/', 1)
+                    if len(parts) > 1:
+                        relative_path = parts[1]
+
+                file_path = os.path.join(upload_base_path, relative_path)
+                if not is_within_directory(upload_base_path, file_path):
+                    return jsonify({"error": "Invalid file path in upload"}), 400
+                os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                file.save(file_path)
+
+    if archive and archive.filename:
+        archive_name = os.path.basename(archive.filename)
+        archive_path = os.path.join(DATA_DIR, f".upload_tmp_{int(time.time())}_{archive_name}")
+        archive.save(archive_path)
+
+        if os.path.exists(upload_base_path):
+            shutil.rmtree(upload_base_path)
+        os.makedirs(upload_base_path, exist_ok=True)
+
+        lower_name = archive_name.lower().strip()
+        try:
+            if lower_name.endswith('.zip'):
+                safe_extract_zip(archive_path, upload_base_path)
+            elif (
+                lower_name.endswith('.tar.gz')
+                or lower_name.endswith('.tgz')
+                or lower_name.endswith('.tar.xz')
+                or lower_name.endswith('.txz')
+                or lower_name.endswith('.tar.bz2')
+                or lower_name.endswith('.tbz2')
+                or lower_name.endswith('.tar')
+            ):
+                safe_extract_tar(archive_path, upload_base_path)
+            else:
+                return jsonify({"error": "Unsupported archive format. Use zip/tar/tar.gz/tgz/tar.xz/tar.bz2"}), 400
+        finally:
+            if os.path.exists(archive_path):
+                os.remove(archive_path)
             
     return jsonify({
         "message": "Upload complete", 
@@ -905,6 +1034,70 @@ def get_stats():
             "warnings_sample": [],
             "analysis_files": 0
         })
+
+
+@app.route('/api/report/pdf', methods=['GET'])
+def download_pdf_report():
+    target = next(iter(analysis_data.keys()), None)
+    data = analysis_data.get(target, {}) if target else {}
+
+    if 'summary' not in data:
+        file_data = load_analysis_result_from_file()
+        if file_data:
+            data = file_data
+
+    report_target = data.get('target') or data.get('kernel_version') or 'unknown'
+    summary = data.get('summary', {}) if isinstance(data, dict) else {}
+    race_warnings = data.get('race_warnings', {}) if isinstance(data, dict) else {}
+    top_variables = race_warnings.get('top_variables', [])[:10]
+    warnings_sample = race_warnings.get('warnings_sample', [])[:10]
+
+    lines = [
+        'Kernel Security Audit Report',
+        f'Generated At: {time.strftime("%Y-%m-%d %H:%M:%S")}',
+        f'Target: {report_target}',
+        '',
+        'Summary',
+        f"Analyzed Files: {summary.get('analysis_files', 0)}",
+        f"Functions: {summary.get('total_functions', 0)}",
+        f"Global Variables: {summary.get('total_variables', 0)}",
+        f"Edges: {summary.get('total_edges', 0)}",
+        f"Warnings: {summary.get('total_warnings', 0)}",
+        '',
+        'Top Risky Variables',
+    ]
+
+    if not summary:
+        lines.append('- No analysis data available yet; this is an empty template report.')
+
+    if top_variables:
+        for item in top_variables:
+            lines.append(f"- {item.get('name', 'unknown')}: {item.get('count', 0)}")
+    else:
+        lines.append('- No variable statistics available')
+
+    lines.append('')
+    lines.append('Recent Warnings')
+
+    if warnings_sample:
+        for warn in warnings_sample:
+            lines.append(
+                f"- {warn.get('type', 'Unknown')} {warn.get('variable', 'unknown')} in {warn.get('function', 'unknown')}"
+            )
+    else:
+        lines.append('- No warning sample available')
+
+    pdf_bytes = build_minimal_pdf(lines)
+    timestamp = time.strftime('%Y%m%d_%H%M%S')
+    filename = f'kernel_security_report_{report_target}_{timestamp}.pdf'
+
+    return Response(
+        pdf_bytes,
+        mimetype='application/pdf',
+        headers={
+            'Content-Disposition': f'attachment; filename="{filename}"'
+        }
+    )
 
 if __name__ == '__main__':
     print("Starting Kernel Safety Analysis Backend API Server on port 5000...")
