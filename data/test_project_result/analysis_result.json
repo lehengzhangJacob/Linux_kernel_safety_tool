@@ -1,0 +1,58 @@
+{
+  "target": "test_project",
+  "source_path": "/home/ldd_team/Linux_kernel_safety_tool/data/test_project",
+  "total_files": 1,
+  "files": [
+    {
+      "path": "src/test.c",
+      "size": 351
+    }
+  ],
+  "warnings": [
+    {
+      "type": "Read",
+      "variable": "global_counter",
+      "function": "increment_counter"
+    },
+    {
+      "type": "Write",
+      "variable": "static_var",
+      "function": "read_counter"
+    }
+  ],
+  "global_variables": [
+    {
+      "file": "src/test.c",
+      "variable": "global_counter",
+      "type": "int"
+    },
+    {
+      "file": "src/test.c",
+      "variable": "static_var",
+      "type": "int"
+    }
+  ],
+  "functions": [
+    {
+      "file": "src/test.c",
+      "function": "increment_counter"
+    },
+    {
+      "file": "src/test.c",
+      "function": "read_counter"
+    },
+    {
+      "file": "src/test.c",
+      "function": "process_data"
+    },
+    {
+      "file": "src/test.c",
+      "function": "main"
+    }
+  ],
+  "summary": {
+    "total_global_vars": 2,
+    "total_functions": 4,
+    "total_warnings": 2
+  }
+}
