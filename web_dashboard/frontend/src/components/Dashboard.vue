@@ -175,12 +175,28 @@
 
       <!-- 第四行：警告详情 -->
       <div class="card p-5 border border-slate-700/50">
-        <h3 class="text-sm font-bold text-slate-300 mb-4 flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-.77-1.964-.77-2.732 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-          最新竞态警告详情
-        </h3>
+        <div class="flex flex-col gap-3 mb-4">
+          <h3 class="text-sm font-bold text-slate-300 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-.77-1.964-.77-2.732 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            竞态警告详情
+          </h3>
+          <div class="flex flex-wrap gap-3 items-center">
+            <input
+              v-model="warningKeyword"
+              @keyup.enter="applyWarningFilters"
+              placeholder="搜索函数/变量"
+              class="bg-slate-800 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200"
+            />
+            <select v-model="warningSeverity" class="bg-slate-800 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200">
+              <option value="">全部等级</option>
+              <option value="HIGH">HIGH</option>
+              <option value="MEDIUM">MEDIUM</option>
+            </select>
+            <button @click="applyWarningFilters" class="text-xs px-3 py-2 rounded bg-blue-600 hover:bg-blue-500 text-white">查询</button>
+          </div>
+        </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm text-left">
             <thead class="text-xs text-slate-400 uppercase bg-slate-800/50">
@@ -193,7 +209,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(warn, index) in (data.race_warnings.warnings_sample || []).slice(0, 20)" :key="index" 
+                <tr v-for="(warn, index) in pagedWarnings" :key="index" 
                   class="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
                 <td class="px-4 py-3">
                   <span :class="warn.type === 'Read' ? 'text-emerald-400 bg-emerald-400/10' : 'text-rose-400 bg-rose-400/10'" 
@@ -204,11 +220,14 @@
                 <td class="px-4 py-3 font-mono text-orange-300">{{ warn.variable }}</td>
                 <td class="px-4 py-3 font-mono text-blue-300">{{ warn.function }}</td>
                 <td class="px-4 py-3">
-                  <span class="text-red-400 flex items-center gap-1 bg-red-400/10 px-2 py-1 rounded-full text-xs">
+                  <span
+                    class="flex items-center gap-1 px-2 py-1 rounded-full text-xs"
+                    :class="warn.severity === 'HIGH' ? 'text-red-400 bg-red-400/10' : 'text-amber-300 bg-amber-400/10'"
+                  >
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 002 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
                     </svg>
-                    高
+                    {{ warn.severity || 'MEDIUM' }}
                   </span>
                 </td>
                 <td class="px-4 py-3">
@@ -217,6 +236,23 @@
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+          <div>
+            共 {{ warningsTotal }} 条，当前第 {{ warningsPage }} 页
+          </div>
+          <div class="flex items-center gap-2">
+            <button
+              @click="changeWarningsPage(warningsPage - 1)"
+              :disabled="warningsPage <= 1 || warningsLoading"
+              class="px-3 py-1 rounded border border-slate-700 disabled:opacity-40"
+            >上一页</button>
+            <button
+              @click="changeWarningsPage(warningsPage + 1)"
+              :disabled="warningsPage * warningsPageSize >= warningsTotal || warningsLoading"
+              class="px-3 py-1 rounded border border-slate-700 disabled:opacity-40"
+            >下一页</button>
+          </div>
         </div>
       </div>
     </main>
@@ -248,7 +284,15 @@ export default {
       rwChartInstance: null,
       statsChartInstance: null,
       funcChartInstance: null,
-      topoChartInstance: null
+      topoChartInstance: null,
+      runId: null,
+      warningSeverity: '',
+      warningKeyword: '',
+      warningsPage: 1,
+      warningsPageSize: 20,
+      warningsTotal: 0,
+      pagedWarnings: [],
+      warningsLoading: false
     }
   },
   methods: {
@@ -258,12 +302,15 @@ export default {
     },
     async loadDataFromResult() {
       try {
-        // 从结果目录加载分析数据
-        const response = await axios.get('/api/stats')
+        this.runId = this.$route?.query?.run_id || null
+        const params = this.runId ? { run_id: this.runId } : {}
+
+        const response = await axios.get('/api/stats', { params })
         const stats = response.data
+        this.runId = stats?.run_id || this.runId
         
         // 获取图数据
-        const graphRes = await axios.get('/api/graph?limit=150')
+        const graphRes = await axios.get('/api/graph', { params: { ...params, limit: 150 } })
         const graphData = graphRes.data
         
         // 改进数据转换逻辑
@@ -314,7 +361,7 @@ export default {
             total_calls: stats.edges?.CALLS || 0,
             total_reads: stats.edges?.READS || 0,
             total_writes: stats.edges?.WRITES || 0,
-            total_warnings: (stats.warnings_sample || []).length,
+            total_warnings: 0,
             warning_reads: stats.edges?.READS || 0,
             warning_writes: stats.edges?.WRITES || 0
           },
@@ -327,6 +374,7 @@ export default {
         }
         
         this.apiStatus = 'Live'
+        await this.fetchWarnings(1)
         
         // 使用setTimeout确保DOM完全渲染后再初始化图表
         setTimeout(() => {
@@ -384,6 +432,9 @@ export default {
           ]
         }
       }
+      this.pagedWarnings = this.data.race_warnings.warnings_sample || []
+      this.warningsTotal = this.pagedWarnings.length
+      this.data.summary.total_warnings = this.warningsTotal
       
       this.apiStatus = 'Live'
       
@@ -391,6 +442,40 @@ export default {
       setTimeout(() => {
         this.initCharts()
       }, 100)
+    },
+    async fetchWarnings(page = 1) {
+      this.warningsLoading = true
+      try {
+        const params = {
+          page,
+          page_size: this.warningsPageSize,
+          severity: this.warningSeverity || undefined,
+          q: this.warningKeyword || undefined,
+          run_id: this.runId || undefined
+        }
+        const res = await axios.get('/api/warnings', { params })
+        this.runId = res.data.run_id || this.runId
+        this.warningsPage = res.data.page || page
+        this.warningsTotal = res.data.total || 0
+        this.pagedWarnings = res.data.items || []
+
+        if (this.data?.summary) {
+          this.data.summary.total_warnings = this.warningsTotal
+          this.data.race_warnings.warnings_sample = this.pagedWarnings
+        }
+      } catch (err) {
+        console.error('Failed to load warnings:', err)
+      } finally {
+        this.warningsLoading = false
+      }
+    },
+    applyWarningFilters() {
+      this.fetchWarnings(1)
+    },
+    changeWarningsPage(nextPage) {
+      if (nextPage < 1) return
+      if ((nextPage - 1) * this.warningsPageSize >= this.warningsTotal) return
+      this.fetchWarnings(nextPage)
     },
     initCharts() {
       // 确保DOM已经渲染
@@ -601,6 +686,9 @@ export default {
     async exportReport() {
       try {
         const response = await axios.get('/api/report/pdf', {
+          params: {
+            run_id: this.runId || undefined
+          },
           responseType: 'blob',
           timeout: 30000
         })

@@ -104,9 +104,17 @@
                 <button type="button" class="archive-select-button" @click.stop="triggerArchiveInput">选择压缩包文件</button>
               </div>
             </div>
+
           </div>
 
           <div class="action-section">
+            <button v-if="!isScanning && !scanComplete" @click="recoverLastTask" class="recover-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              恢复上次任务/结果
+            </button>
+
             <button v-if="(scanMode === 'local_folder' || scanMode === 'local_archive') && !uploadComplete" @click="uploadFiles" class="upload-button">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
@@ -122,6 +130,78 @@
               </svg>
               {{ (scanMode === 'local_folder' || scanMode === 'local_archive') ? '第二步：开始安全审计' : '开始安全审计' }}
             </button>
+          </div>
+
+          <div class="history-section">
+            <div class="history-header">
+              <label class="section-label">历史审计记录</label>
+              <button class="history-refresh" @click="loadHistory" :disabled="historyLoading">刷新</button>
+            </div>
+
+            <div class="history-filters">
+              <select v-model="historyFilterType" class="history-select" @change="reloadHistoryFromFirstPage">
+                <option value="all">全部类型</option>
+                <option value="builtin">内置内核</option>
+                <option value="uploaded">用户上传</option>
+              </select>
+              <select v-model="historyFilterStatus" class="history-select" @change="reloadHistoryFromFirstPage">
+                <option value="all">全部状态</option>
+                <option value="completed">已完成</option>
+                <option value="running">运行中</option>
+                <option value="error">失败</option>
+              </select>
+              <input
+                v-model.trim="historyFilterTarget"
+                class="history-input"
+                type="text"
+                placeholder="按目标名称筛选"
+                @keyup.enter="reloadHistoryFromFirstPage"
+              >
+              <button class="history-search" @click="reloadHistoryFromFirstPage" :disabled="historyLoading">查询</button>
+            </div>
+
+            <div class="history-list" v-if="historyItems.length">
+              <div v-for="item in historyItems" :key="item.run_id" class="history-item">
+                <div class="history-item-top">
+                  <div>
+                    <div class="history-title">{{ item.target_name }} <span class="history-type">[{{ item.target_type }}]</span></div>
+                    <div class="history-meta">
+                      run_id: {{ item.run_id }}
+                    </div>
+                    <div class="history-meta">
+                      开始: {{ item.started_at_text || '-' }} | 结束: {{ item.finished_at_text || '-' }}
+                    </div>
+                  </div>
+                  <span class="history-status" :class="`status-${item.status}`">{{ item.status }}</span>
+                </div>
+
+                <div class="history-stats">
+                  告警: {{ item.total_warnings }} | 分析文件: {{ item.analysis_files }}
+                  <span v-if="item.is_uploaded"> | 上传占用: {{ formatBytes(item.upload_size_bytes) }} | 结果占用: {{ formatBytes(item.result_size_bytes) }}</span>
+                </div>
+
+                <div class="history-actions">
+                  <button class="history-open" :disabled="!item.can_open_report" @click="openHistoryReport(item)">查看该次报告</button>
+                  <button class="history-delete" :disabled="historyDeletingRunId === item.run_id" @click="deleteHistory(item, false)">删除该次记录</button>
+                  <button
+                    v-if="item.is_uploaded"
+                    class="history-delete-all"
+                    :disabled="historyDeletingRunId === item.run_id"
+                    @click="deleteHistory(item, true)"
+                  >
+                    删除该上传内核及全部结果
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div v-else class="history-empty">暂无历史记录</div>
+
+            <div class="history-pagination">
+              <button class="history-page-btn" :disabled="historyPage <= 1 || historyLoading" @click="changeHistoryPage(-1)">上一页</button>
+              <span>第 {{ historyPage }} 页 / 共 {{ historyTotalPages }} 页</span>
+              <button class="history-page-btn" :disabled="historyPage >= historyTotalPages || historyLoading" @click="changeHistoryPage(1)">下一页</button>
+            </div>
           </div>
         </div>
 
@@ -192,7 +272,28 @@ export default {
       uploadProgress: 0,
       progress: 0,
       logs: [],
-      pollInterval: null
+      pollInterval: null,
+      currentRunId: null,
+      lastServerLogCount: 0,
+      historyLoading: false,
+      historyDeletingRunId: null,
+      historyItems: [],
+      historyPage: 1,
+      historyPageSize: 8,
+      historyTotal: 0,
+      historyFilterType: 'all',
+      historyFilterStatus: 'all',
+      historyFilterTarget: ''
+    }
+  },
+  async mounted() {
+    await this.tryResumeRunningTask()
+    await this.loadHistory()
+  },
+  beforeUnmount() {
+    if (this.pollInterval) {
+      clearInterval(this.pollInterval)
+      this.pollInterval = null
     }
   },
   methods: {
@@ -252,6 +353,211 @@ export default {
         if (box) box.scrollTop = box.scrollHeight
       }, 100)
     },
+    buildRecoverParams() {
+      const target = this.scanMode === 'server' ? this.selectedTarget : (this.selectedLocalFolder || '')
+      const isUploaded = this.scanMode !== 'server'
+      const params = { is_uploaded: isUploaded ? 1 : 0 }
+      if (target) {
+        params.target = target
+      }
+      return params
+    },
+    startPollingStatus() {
+      if (this.pollInterval) {
+        clearInterval(this.pollInterval)
+        this.pollInterval = null
+      }
+
+      this.pollInterval = setInterval(async () => {
+        try {
+          const res = await axios.get('/api/scan/status')
+          const data = res.data || {}
+
+          this.progress = typeof data.progress === 'number' ? data.progress : this.progress
+          this.currentRunId = data.run_id || this.currentRunId
+
+          if (Array.isArray(data.logs)) {
+            if (data.logs.length < this.lastServerLogCount) {
+              this.logs = []
+              this.lastServerLogCount = 0
+            }
+            if (data.logs.length > this.lastServerLogCount) {
+              const newLogs = data.logs.slice(this.lastServerLogCount)
+              this.logs.push(...newLogs)
+              this.lastServerLogCount = data.logs.length
+              this.scrollToBottom()
+            }
+          }
+
+          if (data.status === 'completed') {
+            clearInterval(this.pollInterval)
+            this.pollInterval = null
+            this.scanComplete = true
+            this.isScanning = false
+            this.progress = 100
+            setTimeout(() => {
+              this.goToDashboard()
+            }, 2000)
+          } else if (data.status === 'error') {
+            clearInterval(this.pollInterval)
+            this.pollInterval = null
+            this.isScanning = false
+            this.scanComplete = false
+            this.logs.push('[-] 分析过程中发生错误，请检查日志。')
+          }
+        } catch (error) {
+          clearInterval(this.pollInterval)
+          this.pollInterval = null
+          this.isScanning = false
+          this.scanComplete = false
+          this.logs.push(`错误: 获取扫描进度失败 (${error.message})`)
+        }
+      }, 1000)
+    },
+    async recoverLastTask(showAlert = true) {
+      try {
+        const params = this.buildRecoverParams()
+        const res = await axios.get('/api/scan/recover', { params })
+        const data = res.data || {}
+
+        if (!data.recoverable) {
+          if (showAlert) {
+            alert(data.message || '没有可恢复的历史任务，请发起新的审计。')
+          }
+          return
+        }
+
+        this.currentRunId = data.run_id || null
+        this.progress = typeof data.progress === 'number' ? data.progress : 0
+        this.logs = Array.isArray(data.logs) ? [...data.logs] : []
+        this.lastServerLogCount = this.logs.length
+        this.scrollToBottom()
+
+        if (data.status === 'running') {
+          this.isScanning = true
+          this.scanComplete = false
+          this.startPollingStatus()
+          if (showAlert) {
+            alert('已恢复到进行中的任务进度。')
+          }
+          return
+        }
+
+        this.isScanning = false
+        this.scanComplete = true
+        this.progress = 100
+        if (showAlert) {
+          alert('已恢复最近一次完成的分析结果，无需重新审计。')
+        }
+      } catch (error) {
+        if (showAlert) {
+          alert(`恢复失败: ${error?.response?.data?.message || error.message}`)
+        }
+      }
+    },
+    async tryResumeRunningTask() {
+      try {
+        const params = this.buildRecoverParams()
+        const res = await axios.get('/api/scan/recover', { params })
+        const data = res.data || {}
+
+        // 自动恢复仅用于“进行中的任务”，避免每次打开首页都跳到历史完成结果
+        if (!data.recoverable || data.status !== 'running') {
+          return
+        }
+
+        this.currentRunId = data.run_id || null
+        this.progress = typeof data.progress === 'number' ? data.progress : 0
+        this.logs = Array.isArray(data.logs) ? [...data.logs] : ['[*] 已恢复进行中的任务']
+        this.lastServerLogCount = this.logs.length
+        this.isScanning = true
+        this.scanComplete = false
+        this.scrollToBottom()
+        this.startPollingStatus()
+      } catch (_error) {
+        // 自动恢复失败不打断用户正常使用
+      }
+    },
+    formatBytes(value) {
+      const size = Number(value || 0)
+      if (!Number.isFinite(size) || size <= 0) return '0 B'
+      const units = ['B', 'KB', 'MB', 'GB', 'TB']
+      let num = size
+      let idx = 0
+      while (num >= 1024 && idx < units.length - 1) {
+        num /= 1024
+        idx += 1
+      }
+      return `${num.toFixed(idx === 0 ? 0 : 1)} ${units[idx]}`
+    },
+    async loadHistory() {
+      this.historyLoading = true
+      try {
+        const params = {
+          page: this.historyPage,
+          page_size: this.historyPageSize,
+          target_type: this.historyFilterType,
+          status: this.historyFilterStatus
+        }
+        if (this.historyFilterTarget) {
+          params.target = this.historyFilterTarget
+        }
+
+        const res = await axios.get('/api/history', { params })
+        this.historyItems = Array.isArray(res.data?.items) ? res.data.items : []
+        this.historyTotal = Number(res.data?.total || 0)
+      } catch (error) {
+        alert(`加载历史记录失败: ${error?.response?.data?.error || error.message}`)
+      } finally {
+        this.historyLoading = false
+      }
+    },
+    reloadHistoryFromFirstPage() {
+      this.historyPage = 1
+      this.loadHistory()
+    },
+    changeHistoryPage(delta) {
+      const nextPage = this.historyPage + delta
+      if (nextPage < 1 || nextPage > this.historyTotalPages) {
+        return
+      }
+      this.historyPage = nextPage
+      this.loadHistory()
+    },
+    openHistoryReport(item) {
+      if (!item?.run_id) {
+        return
+      }
+      this.currentRunId = item.run_id
+      this.$router.push({ path: '/dashboard', query: { run_id: item.run_id } })
+    },
+    async deleteHistory(item, purgeUploadedPayload) {
+      if (!item?.run_id) {
+        return
+      }
+
+      const tip = purgeUploadedPayload
+        ? `确认删除上传目标 ${item.target_name} 的源码压缩包、源码目录、全部历史结果和数据库记录吗？`
+        : `确认删除该次审计记录 ${item.run_id} 吗？`
+
+      if (!window.confirm(tip)) {
+        return
+      }
+
+      this.historyDeletingRunId = item.run_id
+      try {
+        await axios.delete(`/api/history/${encodeURIComponent(item.run_id)}`, {
+          params: {
+            purge_uploaded_payload: purgeUploadedPayload ? 1 : 0
+          }
+        })
+        await this.loadHistory()
+      } catch (error) {
+        alert(`删除失败: ${error?.response?.data?.error || error.message}`)
+      } finally {
+        this.historyDeletingRunId = null
+      }
+    },
     async uploadFiles() {
       if (!this.selectedLocalFolder) {
         alert(this.scanMode === 'local_archive' ? '请先选择压缩包文件！' : '请先选择要上传的本地源代码文件夹！')
@@ -295,7 +601,7 @@ export default {
         const files = fileInput.files
         const totalFiles = files.length
 
-        const batchSize = 100
+        const batchSize = 300
         let uploadedCount = 0
 
         for (let i = 0; i < files.length; i += batchSize) {
@@ -333,7 +639,11 @@ export default {
       
       this.isUploading = false
       this.uploadComplete = true
-      alert('源代码上传成功！现在可以开始安全审计了。')
+      if (this.scanMode === 'local_archive') {
+        alert('压缩包上传成功！解压将在分析阶段进行，现在可以开始安全审计。')
+      } else {
+        alert('源代码上传成功！现在可以开始安全审计了。')
+      }
     },
     async startScan() {
       if ((this.scanMode === 'local_folder' || this.scanMode === 'local_archive') && !this.uploadComplete) {
@@ -353,48 +663,13 @@ export default {
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
       const isUploaded = this.scanMode !== 'server'
       this.logs = ['初始化分析引擎...', `目标: ${targetName}`]
+      this.lastServerLogCount = 0
       
       try {
         // Call backend API to start scan
-        await axios.post('/api/scan', { target: targetName, is_uploaded: isUploaded })
-
-        // Poll for status
-        this.pollInterval = setInterval(async () => {
-          try {
-            const res = await axios.get('/api/scan/status')
-            const data = res.data
-
-            this.progress = typeof data.progress === 'number' ? data.progress : this.progress
-
-            // Only add new logs
-            if (data.logs && data.logs.length > this.logs.length - 2) {
-              const newLogs = data.logs.slice(this.logs.length - 2)
-              this.logs.push(...newLogs)
-              this.scrollToBottom()
-            }
-
-            if (data.status === 'completed') {
-              clearInterval(this.pollInterval)
-              this.pollInterval = null
-              this.scanComplete = true
-              this.progress = 100
-              // Auto redirect after 2 seconds
-              setTimeout(() => {
-                this.goToDashboard()
-              }, 2000)
-            } else if (data.status === 'error') {
-              clearInterval(this.pollInterval)
-              this.pollInterval = null
-              this.isScanning = false
-              this.logs.push("[-] 分析过程中发生错误，请检查日志。")
-            }
-          } catch (error) {
-            clearInterval(this.pollInterval)
-            this.pollInterval = null
-            this.isScanning = false
-            this.logs.push(`错误: 获取扫描进度失败 (${error.message})`)
-          }
-        }, 1000) // 每秒轮询一次，避免请求过于频繁
+        const startRes = await axios.post('/api/scan', { target: targetName, is_uploaded: isUploaded })
+        this.currentRunId = startRes?.data?.run_id || null
+        this.startPollingStatus()
 
       } catch (error) {
         this.logs.push(`错误: 无法连接到分析服务器 (${error.message})`)
@@ -402,7 +677,14 @@ export default {
       }
     },
     goToDashboard() {
-      this.$router.push('/dashboard')
+      const query = this.currentRunId ? { run_id: this.currentRunId } : {}
+      this.$router.push({ path: '/dashboard', query })
+    }
+  },
+  computed: {
+    historyTotalPages() {
+      const pages = Math.ceil(this.historyTotal / this.historyPageSize)
+      return pages > 0 ? pages : 1
     }
   }
 }
@@ -560,6 +842,26 @@ export default {
   margin-bottom: 24px;
 }
 
+.recover-button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background-color: rgba(30, 41, 59, 0.7);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.recover-button:hover {
+  border-color: #3b82f6;
+  color: #dbeafe;
+}
+
 .mode-button {
   flex: 1;
   padding: 12px 16px;
@@ -621,6 +923,148 @@ export default {
   margin-top: 8px;
   font-size: 12px;
   color: #94a3b8;
+}
+
+.history-section {
+  margin-top: 8px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.history-refresh,
+.history-search,
+.history-page-btn {
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.history-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.history-select,
+.history-input {
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.history-list {
+  max-height: 360px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(30, 41, 59, 0.45);
+}
+
+.history-item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.history-title {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.history-type,
+.history-meta,
+.history-stats,
+.history-empty,
+.history-pagination {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.history-stats {
+  margin-top: 6px;
+}
+
+.history-status {
+  font-size: 12px;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 3px 10px;
+  height: fit-content;
+}
+
+.status-completed {
+  color: #86efac;
+  border-color: #166534;
+}
+
+.status-running {
+  color: #93c5fd;
+  border-color: #1d4ed8;
+}
+
+.status-error {
+  color: #fca5a5;
+  border-color: #b91c1c;
+}
+
+.history-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.history-open,
+.history-delete,
+.history-delete-all {
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid #334155;
+}
+
+.history-open {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.history-delete {
+  background: #7f1d1d;
+  color: #fee2e2;
+}
+
+.history-delete-all {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+.history-pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* 上传区域 */

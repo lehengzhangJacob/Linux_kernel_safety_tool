@@ -8,6 +8,9 @@ import subprocess
 import shutil
 import tarfile
 import zipfile
+import sqlite3
+import uuid
+import re
 from collections import deque
 
 app = Flask(__name__)
@@ -22,6 +25,476 @@ WEB_DASHBOARD_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
 DATA_DIR = os.path.join(WEB_DASHBOARD_DIR, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# 用户上传源码专用目录
+UPLOADS_ROOT_DIR = os.path.join(DATA_DIR, 'uploads')
+os.makedirs(UPLOADS_ROOT_DIR, exist_ok=True)
+
+# 上传任务分析产物专用目录（按 target/run_id 隔离）
+ANALYSIS_RESULTS_ROOT_DIR = os.path.join(DATA_DIR, 'analysis_results')
+os.makedirs(ANALYSIS_RESULTS_ROOT_DIR, exist_ok=True)
+
+# SQLite 持久化目录（使用 backend 目录下的 data）
+BACKEND_DATA_DIR = os.path.join(BASE_DIR, 'data')
+os.makedirs(BACKEND_DATA_DIR, exist_ok=True)
+SQLITE_DB_PATH = os.path.join(BACKEND_DATA_DIR, 'analysis.db')
+
+
+def get_db_connection():
+    conn = sqlite3.connect(SQLITE_DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+def get_upload_target_root(target):
+    return os.path.join(UPLOADS_ROOT_DIR, sanitize_target_dir(target))
+
+
+def get_upload_source_dir(target):
+    return os.path.join(get_upload_target_root(target), 'source')
+
+
+def get_upload_archive_dir(target):
+    return os.path.join(get_upload_target_root(target), 'archive')
+
+
+def get_upload_meta_path(target):
+    return os.path.join(get_upload_target_root(target), 'upload_meta.json')
+
+
+def get_run_result_dir(target, run_id):
+    safe_target = sanitize_target_dir(target)
+    return os.path.join(ANALYSIS_RESULTS_ROOT_DIR, safe_target, f'run_{run_id}')
+
+
+def init_sqlite_db():
+    conn = get_db_connection()
+    try:
+        conn.execute('PRAGMA journal_mode=WAL;')
+        conn.execute('PRAGMA synchronous=NORMAL;')
+
+        conn.execute(
+            '''
+            CREATE TABLE IF NOT EXISTS analysis_runs (
+                run_id TEXT PRIMARY KEY,
+                target_name TEXT NOT NULL,
+                target_type TEXT NOT NULL,
+                status TEXT NOT NULL,
+                started_at INTEGER NOT NULL,
+                finished_at INTEGER,
+                error_message TEXT,
+                is_uploaded INTEGER NOT NULL DEFAULT 0
+            )
+            '''
+        )
+
+        conn.execute(
+            '''
+            CREATE TABLE IF NOT EXISTS warnings (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                run_id TEXT NOT NULL,
+                target_name TEXT NOT NULL,
+                warn_type TEXT NOT NULL,
+                severity TEXT NOT NULL,
+                variable_name TEXT,
+                function_name TEXT,
+                raw_text TEXT,
+                created_at INTEGER NOT NULL,
+                FOREIGN KEY (run_id) REFERENCES analysis_runs(run_id)
+            )
+            '''
+        )
+
+        conn.execute(
+            '''
+            CREATE TABLE IF NOT EXISTS summary_stats (
+                run_id TEXT PRIMARY KEY,
+                kernel_version TEXT,
+                analysis_files INTEGER,
+                total_functions INTEGER,
+                total_variables INTEGER,
+                total_edges INTEGER,
+                total_calls INTEGER,
+                total_reads INTEGER,
+                total_writes INTEGER,
+                total_warnings INTEGER,
+                warning_reads INTEGER,
+                warning_writes INTEGER,
+                top_variables_json TEXT,
+                top_functions_json TEXT,
+                FOREIGN KEY (run_id) REFERENCES analysis_runs(run_id)
+            )
+            '''
+        )
+
+        conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_run_id ON warnings(run_id)')
+        conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_severity ON warnings(severity)')
+        conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_var_func ON warnings(variable_name, function_name)')
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def normalize_warning_type(value):
+    return 'Write' if str(value).lower() == 'write' else 'Read'
+
+
+def warning_severity_from_type(warn_type):
+    return 'HIGH' if warn_type == 'Write' else 'MEDIUM'
+
+
+def create_run_record(run_id, target_name, is_uploaded):
+    conn = get_db_connection()
+    try:
+        conn.execute(
+            '''
+            INSERT INTO analysis_runs(run_id, target_name, target_type, status, started_at, is_uploaded)
+            VALUES (?, ?, ?, 'running', ?, ?)
+            ''',
+            (run_id, target_name, 'uploaded' if is_uploaded else 'builtin', int(time.time()), 1 if is_uploaded else 0)
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def update_run_status(run_id, status, error_message=None):
+    conn = get_db_connection()
+    try:
+        conn.execute(
+            '''
+            UPDATE analysis_runs
+            SET status = ?, finished_at = ?, error_message = ?
+            WHERE run_id = ?
+            ''',
+            (status, int(time.time()), error_message, run_id)
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def persist_warnings(run_id, target_name, warnings, raw_lines=None):
+    conn = get_db_connection()
+    try:
+        conn.execute('DELETE FROM warnings WHERE run_id = ?', (run_id,))
+        now_ts = int(time.time())
+        rows = []
+
+        for idx, warn in enumerate(warnings):
+            warn_type = normalize_warning_type(warn.get('type'))
+            rows.append(
+                (
+                    run_id,
+                    target_name,
+                    warn_type,
+                    warning_severity_from_type(warn_type),
+                    warn.get('variable') or '',
+                    warn.get('function') or '',
+                    (raw_lines[idx] if raw_lines and idx < len(raw_lines) else ''),
+                    now_ts,
+                )
+            )
+
+        if rows:
+            conn.executemany(
+                '''
+                INSERT INTO warnings(run_id, target_name, warn_type, severity, variable_name, function_name, raw_text, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                ''',
+                rows
+            )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def persist_summary(run_id, data):
+    summary = data.get('summary', {})
+    race_warnings = data.get('race_warnings', {})
+    conn = get_db_connection()
+    try:
+        conn.execute(
+            '''
+            INSERT OR REPLACE INTO summary_stats(
+                run_id, kernel_version, analysis_files, total_functions, total_variables,
+                total_edges, total_calls, total_reads, total_writes, total_warnings,
+                warning_reads, warning_writes, top_variables_json, top_functions_json
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''',
+            (
+                run_id,
+                data.get('kernel_version') or data.get('target') or 'unknown',
+                int(summary.get('analysis_files', 0)),
+                int(summary.get('total_functions', 0)),
+                int(summary.get('total_variables', 0)),
+                int(summary.get('total_edges', 0)),
+                int(summary.get('total_calls', 0)),
+                int(summary.get('total_reads', 0)),
+                int(summary.get('total_writes', 0)),
+                int(summary.get('total_warnings', 0)),
+                int(summary.get('warning_reads', 0)),
+                int(summary.get('warning_writes', 0)),
+                json.dumps(race_warnings.get('top_variables', []), ensure_ascii=False),
+                json.dumps(race_warnings.get('top_functions', []), ensure_ascii=False),
+            )
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def latest_run_id(target_name=None):
+    conn = get_db_connection()
+    try:
+        if target_name:
+            row = conn.execute(
+                '''
+                SELECT run_id FROM analysis_runs
+                WHERE target_name = ?
+                ORDER BY started_at DESC
+                LIMIT 1
+                ''',
+                (target_name,)
+            ).fetchone()
+        else:
+            row = conn.execute(
+                'SELECT run_id FROM analysis_runs ORDER BY started_at DESC LIMIT 1'
+            ).fetchone()
+        return row['run_id'] if row else None
+    finally:
+        conn.close()
+
+
+def get_latest_run(target_name=None, is_uploaded=None, statuses=None):
+    conn = get_db_connection()
+    try:
+        clauses = []
+        params = []
+
+        if target_name:
+            clauses.append('target_name = ?')
+            params.append(target_name)
+
+        if is_uploaded is not None:
+            clauses.append('is_uploaded = ?')
+            params.append(1 if is_uploaded else 0)
+
+        if statuses:
+            placeholders = ','.join(['?'] * len(statuses))
+            clauses.append(f'status IN ({placeholders})')
+            params.extend(statuses)
+
+        where_sql = f"WHERE {' AND '.join(clauses)}" if clauses else ''
+        row = conn.execute(
+            f'''
+            SELECT run_id, target_name, status, started_at, finished_at, error_message, is_uploaded
+            FROM analysis_runs
+            {where_sql}
+            ORDER BY started_at DESC
+            LIMIT 1
+            ''',
+            params,
+        ).fetchone()
+        return row
+    finally:
+        conn.close()
+
+
+def has_reusable_uploaded_result(target, run_id):
+    if not target or not run_id:
+        return False
+
+    result_dir = get_run_result_dir(target, run_id)
+    race_file, nodes_file, edges_file = resolve_prebuilt_paths(
+        target,
+        result_base=result_dir,
+        prefer_result=True,
+        prefer_display=False,
+    )
+    return bool(race_file and nodes_file and edges_file)
+
+
+def format_timestamp(ts):
+    if not ts:
+        return None
+    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(ts)))
+
+
+def get_dir_size_bytes(path):
+    if not path or not os.path.exists(path):
+        return 0
+    if os.path.isfile(path):
+        return os.path.getsize(path)
+
+    total_size = 0
+    for root, _, files in os.walk(path):
+        for name in files:
+            file_path = os.path.join(root, name)
+            try:
+                total_size += os.path.getsize(file_path)
+            except OSError:
+                continue
+    return total_size
+
+
+def bool_from_query(value, default=False):
+    if value is None:
+        return default
+    return str(value).strip().lower() in ('1', 'true', 'yes', 'on')
+
+
+def remove_uploaded_target_payload(target_name):
+    safe_target = sanitize_target_dir(target_name)
+    removed_paths = []
+
+    upload_target_root = get_upload_target_root(safe_target)
+    if os.path.exists(upload_target_root):
+        shutil.rmtree(upload_target_root)
+        removed_paths.append(upload_target_root)
+
+    analysis_target_root = os.path.join(ANALYSIS_RESULTS_ROOT_DIR, safe_target)
+    if os.path.exists(analysis_target_root):
+        shutil.rmtree(analysis_target_root)
+        removed_paths.append(analysis_target_root)
+
+    return removed_paths
+
+
+def delete_run_records(run_ids):
+    if not run_ids:
+        return
+
+    conn = get_db_connection()
+    try:
+        placeholders = ','.join(['?'] * len(run_ids))
+        conn.execute(f'DELETE FROM warnings WHERE run_id IN ({placeholders})', run_ids)
+        conn.execute(f'DELETE FROM summary_stats WHERE run_id IN ({placeholders})', run_ids)
+        conn.execute(f'DELETE FROM analysis_runs WHERE run_id IN ({placeholders})', run_ids)
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def pick_first_existing(paths):
+    for path in paths:
+        if path and os.path.exists(path):
+            return path
+    return None
+
+
+def resolve_prebuilt_paths(target, result_base=None, prefer_display=False, prefer_result=False):
+    result_base = result_base or os.path.join(DATA_DIR, f'{target}_result')
+
+    race_root_default = os.path.join(PROJECT_ROOT, f'race_warnings_{target}.txt')
+    race_root_display = os.path.join(PROJECT_ROOT, f'race_warnings_{target}_display.txt')
+    race_result_default = os.path.join(result_base, f'race_warnings_{target}.txt')
+    race_result_display = os.path.join(result_base, f'race_warnings_{target}_display.txt')
+
+    nodes_root_default = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}', 'nodes.csv')
+    edges_root_default = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}', 'edges.csv')
+    nodes_root_display = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}_display', 'nodes.csv')
+    edges_root_display = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}_display', 'edges.csv')
+
+    nodes_result_default = os.path.join(result_base, f'neo4j_data_{target}', 'nodes.csv')
+    edges_result_default = os.path.join(result_base, f'neo4j_data_{target}', 'edges.csv')
+    nodes_result_display = os.path.join(result_base, f'neo4j_data_{target}_display', 'nodes.csv')
+    edges_result_display = os.path.join(result_base, f'neo4j_data_{target}_display', 'edges.csv')
+
+    race_candidates = []
+    graph_candidates = []
+
+    if prefer_result:
+        if prefer_display:
+            race_candidates.extend([race_result_display, race_result_default, race_root_display, race_root_default])
+            graph_candidates.extend([
+                (nodes_result_display, edges_result_display),
+                (nodes_result_default, edges_result_default),
+                (nodes_root_display, edges_root_display),
+                (nodes_root_default, edges_root_default),
+            ])
+        else:
+            race_candidates.extend([race_result_default, race_result_display, race_root_default, race_root_display])
+            graph_candidates.extend([
+                (nodes_result_default, edges_result_default),
+                (nodes_result_display, edges_result_display),
+                (nodes_root_default, edges_root_default),
+                (nodes_root_display, edges_root_display),
+            ])
+    else:
+        if prefer_display:
+            race_candidates.extend([race_root_display, race_root_default, race_result_display, race_result_default])
+            graph_candidates.extend([
+                (nodes_root_display, edges_root_display),
+                (nodes_root_default, edges_root_default),
+                (nodes_result_display, edges_result_display),
+                (nodes_result_default, edges_result_default),
+            ])
+        else:
+            race_candidates.extend([race_root_default, race_root_display, race_result_default, race_result_display])
+            graph_candidates.extend([
+                (nodes_root_default, edges_root_default),
+                (nodes_root_display, edges_root_display),
+                (nodes_result_default, edges_result_default),
+                (nodes_result_display, edges_result_display),
+            ])
+
+    race_file = pick_first_existing(race_candidates)
+    nodes_file = None
+    edges_file = None
+    for nfile, efile in graph_candidates:
+        if os.path.exists(nfile) and os.path.exists(efile):
+            nodes_file = nfile
+            edges_file = efile
+            break
+
+    return race_file, nodes_file, edges_file
+
+
+def resolve_analysis_log_path(target, result_base=None, prefer_display=False, prefer_result=False):
+    result_base = result_base or os.path.join(DATA_DIR, f'{target}_result')
+
+    root_default = os.path.join(PROJECT_ROOT, f'analysis_{target}.log')
+    root_display = os.path.join(PROJECT_ROOT, f'analysis_{target}_display.log')
+    result_default = os.path.join(result_base, f'analysis_{target}.log')
+    result_display = os.path.join(result_base, f'analysis_{target}_display.log')
+
+    candidates = []
+    if prefer_result:
+        if prefer_display:
+            candidates = [result_display, result_default, root_display, root_default]
+        else:
+            candidates = [result_default, result_display, root_default, root_display]
+    else:
+        if prefer_display:
+            candidates = [root_display, root_default, result_display, result_default]
+        else:
+            candidates = [root_default, root_display, result_default, result_display]
+
+    return pick_first_existing(candidates)
+
+
+def count_analysis_files_from_log(log_path):
+    if not log_path or not os.path.exists(log_path):
+        return 0
+
+    compiled_objects = set()
+    pattern = re.compile(r'^\s*CC\s+(.+)$')
+    with open(log_path, 'r', encoding='utf-8', errors='ignore') as f:
+        for line in f:
+            match = pattern.match(line)
+            if not match:
+                continue
+            obj = match.group(1).strip()
+            if obj.endswith('.o'):
+                compiled_objects.add(obj)
+
+    return len(compiled_objects)
+
+
+def has_prebuilt_result(target):
+    race_file, nodes_file, edges_file = resolve_prebuilt_paths(target, prefer_display=True)
+    return bool(race_file and nodes_file and edges_file)
+
 @app.route('/')
 def index():
     return send_from_directory(os.path.join(WEB_DASHBOARD_DIR, 'frontend', 'dist'), 'index.html')
@@ -34,11 +507,16 @@ def serve_static(path):
 scan_status = {
     "status": "idle",
     "progress": 0,
+    "run_id": None,
+    "target": None,
     "logs": deque(maxlen=300) # 只保留最后300行日志，防止内存溢出
 }
 
-# In-memory data storage
+# In-memory data storage（按 run_id 存储，避免并发任务串数据）
 analysis_data = {}
+current_run_id = None
+
+init_sqlite_db()
 
 
 def _pdf_escape_text(text):
@@ -109,6 +587,14 @@ def strip_archive_suffix(filename):
     return os.path.splitext(filename)[0]
 
 
+def detect_archive_suffix(filename):
+    lower = (filename or '').lower()
+    for suffix in ('.tar.gz', '.tgz', '.tar.xz', '.txz', '.tar.bz2', '.tbz2', '.tar', '.zip'):
+        if lower.endswith(suffix):
+            return suffix
+    return os.path.splitext(filename)[1] or '.bin'
+
+
 def is_within_directory(base_dir, target_path):
     base_real = os.path.realpath(base_dir)
     target_real = os.path.realpath(target_path)
@@ -132,347 +618,353 @@ def safe_extract_tar(tar_path, dest_dir):
                 raise ValueError(f"非法压缩包路径: {member.name}")
         archive.extractall(dest_dir)
 
-def run_real_scan(target, is_uploaded=False):
-    global scan_status
-    scan_status["status"] = "running"
-    scan_status["progress"] = 5
-    scan_status["logs"].clear()
-    scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
 
-    # 判断是上传的代码还是服务器内置内核
-    if is_uploaded:
-        source_path = os.path.join(DATA_DIR, target)
-        result_path = os.path.join(DATA_DIR, f"{target}_result")
+def ensure_uploaded_source_ready(target):
+    source_dir = get_upload_source_dir(target)
+    meta_path = get_upload_meta_path(target)
 
-        if not os.path.exists(source_path):
-            scan_status["status"] = "error"
-            scan_status["logs"].append(f"[-] 错误: 找不到上传的代码目录: {source_path}")
-            return
+    if os.path.isdir(source_dir) and os.listdir(source_dir):
+        return source_dir, None
 
-        os.makedirs(result_path, exist_ok=True)
-        scan_status["logs"].append(f"[*] 分析上传的代码: {source_path}")
-        scan_status["logs"].append(f"[*] 结果将保存到: {result_path}")
+    if not os.path.exists(meta_path):
+        return None, '未找到上传元数据，请重新上传源码'
 
-        analyze_uploaded_code(target, source_path, result_path)
-        scan_status["progress"] = 100
-        scan_status["status"] = "completed"
-        scan_status["logs"].append("[+] 上传代码分析完成！")
+    try:
+        with open(meta_path, 'r', encoding='utf-8') as f:
+            meta = json.load(f)
+    except Exception as exc:
+        return None, f'上传元数据损坏: {str(exc)}'
+
+    mode = meta.get('mode')
+    if mode != 'archive':
+        return None, '上传源目录为空，请重新上传源码'
+
+    archive_path = meta.get('archive_file')
+    if not archive_path or not os.path.exists(archive_path):
+        return None, '上传压缩包不存在，请重新上传'
+
+    if os.path.exists(source_dir):
+        shutil.rmtree(source_dir)
+    os.makedirs(source_dir, exist_ok=True)
+
+    archive_name = meta.get('archive_name') or os.path.basename(archive_path)
+    lower_name = archive_name.lower().strip()
+    try:
+        if lower_name.endswith('.zip'):
+            safe_extract_zip(archive_path, source_dir)
+        elif (
+            lower_name.endswith('.tar.gz')
+            or lower_name.endswith('.tgz')
+            or lower_name.endswith('.tar.xz')
+            or lower_name.endswith('.txz')
+            or lower_name.endswith('.tar.bz2')
+            or lower_name.endswith('.tbz2')
+            or lower_name.endswith('.tar')
+        ):
+            safe_extract_tar(archive_path, source_dir)
+        else:
+            return None, '不支持的压缩包格式'
+    except Exception as exc:
+        return None, f'解压失败: {str(exc)}'
+
+    if not os.listdir(source_dir):
+        return None, '压缩包解压后为空目录'
+
+    return source_dir, None
+
+
+def resolve_kernel_source_dir(upload_base_dir):
+    if os.path.isfile(os.path.join(upload_base_dir, 'Makefile')) and os.path.isfile(os.path.join(upload_base_dir, 'Kconfig')):
+        return upload_base_dir
+
+    subdirs = [
+        os.path.join(upload_base_dir, name)
+        for name in os.listdir(upload_base_dir)
+        if os.path.isdir(os.path.join(upload_base_dir, name))
+    ]
+
+    if len(subdirs) == 1:
+        only_dir = subdirs[0]
+        if os.path.isfile(os.path.join(only_dir, 'Makefile')) and os.path.isfile(os.path.join(only_dir, 'Kconfig')):
+            return only_dir
+
+    # Fallback: search nested folders (depth <= 3) for kernel root markers.
+    base_depth = upload_base_dir.rstrip(os.sep).count(os.sep)
+    for root, dirs, _ in os.walk(upload_base_dir):
+        current_depth = root.rstrip(os.sep).count(os.sep) - base_depth
+        if current_depth > 3:
+            dirs[:] = []
+            continue
+
+        if os.path.isfile(os.path.join(root, 'Makefile')) and os.path.isfile(os.path.join(root, 'Kconfig')):
+            return root
+
+    return upload_base_dir
+
+
+def stream_command_to_log(cmd, cwd, env, log_path, progress_hook=None):
+    with open(log_path, 'a', encoding='utf-8') as log_file:
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=cwd,
+            env=env,
+        )
+        for line in iter(process.stdout.readline, ''):
+            line = line.rstrip('\n')
+            log_file.write(line + '\n')
+            if line:
+                scan_status['logs'].append(line)
+                if progress_hook:
+                    progress_hook(line)
+        process.wait()
+        return process.returncode
+
+
+def update_uploaded_progress_from_line(line):
+    text = (line or '').strip()
+    if not text:
         return
 
-    # 服务器内置内核，使用原有分析脚本
-    env = os.environ.copy()
-    env['ANALYSIS_JOBS'] = '2'
+    milestones = [
+        ('Target Kernel:', 12),
+        ('[*] Building GCC Plugin...', 18),
+        ('[*] Configuring Kernel', 24),
+        ('[*] Starting Kernel Analysis', 35),
+        ('[*] Extracting Unprotected Global Variable Access List...', 72),
+        ('[*] Generating Neo4j Import Data...', 82),
+        ('Processing complete. Found', 88),
+        ('neo4j-admin import', 92),
+        ('Starting Neo4j with Java 17...', 96),
+    ]
 
-    process = subprocess.Popen(
-        [os.path.join(PROJECT_ROOT, 'run_analysis.sh'), target],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        cwd=PROJECT_ROOT,
-        env=env
-    )
+    for marker, progress in milestones:
+        if marker in text and scan_status['progress'] < progress:
+            scan_status['progress'] = progress
+            return
 
-    for line in iter(process.stdout.readline, ''):
-        line = line.strip()
-        if line:
-            scan_status["logs"].append(line)
-            if "Building GCC Plugin" in line:
-                scan_status["progress"] = 10
-            elif "Configuring Kernel" in line:
-                scan_status["progress"] = 15
-            elif "Starting Kernel Analysis" in line:
-                scan_status["progress"] = 20
-            elif "Extracting Unprotected" in line:
-                scan_status["progress"] = 80
-            elif "Generating Neo4j" in line:
-                scan_status["progress"] = 90
 
-    process.wait()
+def run_uploaded_real_analysis(target, source_path, result_path):
+    kernel_source_dir = resolve_kernel_source_dir(source_path)
 
-    if process.returncode == 0:
-        scan_status["progress"] = 100
-        scan_status["status"] = "completed"
-        scan_status["logs"].append("[+] 分析完成！数据已就绪。")
-        generate_analysis_data(target)
-    else:
-        scan_status["status"] = "error"
-        scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
+    if not os.path.isfile(os.path.join(kernel_source_dir, 'Makefile')) or not os.path.isfile(os.path.join(kernel_source_dir, 'Kconfig')):
+        scan_status['logs'].append(f'[-] 上传目录不是可构建的 Linux 内核源码: {kernel_source_dir}')
+        return False
 
-def analyze_uploaded_code(target, source_path, result_path):
-    """分析上传的代码目录，生成完整的分析文件"""
-    global scan_status
-    
-    scan_status["progress"] = 20
-    scan_status["logs"].append("[*] 扫描上传的源代码文件...")
-    
-    # 查找所有C文件
-    c_files = []
-    for root, dirs, files in os.walk(source_path):
-        for file in files:
-            if file.endswith('.c'):
-                c_files.append(os.path.join(root, file))
-    
-    scan_status["logs"].append(f"[*] 找到 {len(c_files)} 个C源文件")
-    scan_status["progress"] = 30
-    
-    # 开始静态代码分析
-    scan_status["logs"].append("[*] 开始静态代码分析...")
-    
-    # 创建分析结果文件
-    analysis_result = {
-        "target": target,
-        "source_path": source_path,
-        "total_files": len(c_files),
-        "files": [],
-        "warnings": []
-    }
-    
-    # 静态分析：查找潜在的全局变量和函数
-    import re
-    
-    global_vars = []
-    functions = []
-    analysis_logs = []
-    race_warnings = []
-    
-    for i, c_file in enumerate(c_files[:100]):  # 分析更多文件
-        try:
-            with open(c_file, 'r', encoding='utf-8', errors='ignore') as f:
-                content = f.read()
-                
-            analysis_logs.append(f"[*] 分析文件: {os.path.relpath(c_file, source_path)}")
-            
-            # 查找全局变量定义
-            var_pattern = r'(int|char|void|static|unsigned|long|struct\s+\w+)\s+(\w+)\s*[=;]'
-            matches = re.findall(var_pattern, content)
-            for match in matches:
-                var_name = match[1]
-                if var_name not in ['main', 'if', 'for', 'while', 'return']:
-                    global_vars.append({
-                        "file": os.path.relpath(c_file, source_path),
-                        "variable": var_name,
-                        "type": match[0]
-                    })
-            
-            # 查找函数定义
-            func_pattern = r'(\w+)\s*\([^)]*\)\s*\{'
-            func_matches = re.findall(func_pattern, content)
-            for func in func_matches:
-                if func not in ['if', 'for', 'while', 'switch', 'return']:
-                    functions.append({
-                        "file": os.path.relpath(c_file, source_path),
-                        "function": func
-                    })
-            
-            analysis_result["files"].append({
-                "path": os.path.relpath(c_file, source_path),
-                "size": os.path.getsize(c_file)
-            })
-            
-        except Exception as e:
-            error_msg = f"[-] 读取文件失败 {c_file}: {str(e)}"
-            scan_status["logs"].append(error_msg)
-            analysis_logs.append(error_msg)
-        
-        # 更新进度
-        if i % 10 == 0:
-            scan_status["progress"] = 30 + int((i / min(len(c_files), 100)) * 40)
-    
-    scan_status["progress"] = 70
-    scan_status["logs"].append(f"[*] 发现 {len(global_vars)} 个全局变量")
-    scan_status["logs"].append(f"[*] 发现 {len(functions)} 个函数定义")
-    
-    # 生成竞态警告
-    warnings = []
-    for var in global_vars[:30]:  # 前30个全局变量
-        if len(warnings) < 20:
-            warning = {
-                "type": "Read" if len(warnings) % 2 == 0 else "Write",
-                "variable": var["variable"],
-                "function": functions[len(warnings) % len(functions)]["function"] if functions else "unknown"
-            }
-            warnings.append(warning)
-            race_warnings.append(f"[RACE_WARNING] Unprotected {warning['type']} to '{warning['variable']}' in '{warning['function']}'")
-    
-    analysis_result["global_variables"] = global_vars[:200]
-    analysis_result["functions"] = functions[:200]
-    analysis_result["warnings"] = warnings
-    analysis_result["summary"] = {
-        "total_global_vars": len(global_vars),
-        "total_functions": len(functions),
-        "total_warnings": len(warnings)
-    }
-    
-    # 保存分析结果到 result 目录
-    result_file = os.path.join(result_path, 'analysis_result.json')
-    with open(result_file, 'w', encoding='utf-8') as f:
-        json.dump(analysis_result, f, indent=2, ensure_ascii=False)
-    
-    scan_status["logs"].append(f"[*] 分析结果已保存到: {result_file}")
-    
-    # 生成分析日志文件（与内置内核格式一致）
+    os.makedirs(result_path, exist_ok=True)
     analysis_log_file = os.path.join(result_path, f'analysis_{target}.log')
-    with open(analysis_log_file, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(analysis_logs))
-    scan_status["logs"].append(f"[*] 分析日志已保存到: {analysis_log_file}")
-    
-    # 生成竞态警告文件（与内置内核格式一致）
-    race_warnings_file = os.path.join(result_path, f'race_warnings_{target}.txt')
-    with open(race_warnings_file, 'w', encoding='utf-8') as f:
-        f.write('\n'.join(race_warnings))
-    scan_status["logs"].append(f"[*] 竞态警告已保存到: {race_warnings_file}")
-    
-    # 生成Neo4j数据文件
-    neo4j_dir = os.path.join(result_path, f'neo4j_data_{target}')
-    os.makedirs(neo4j_dir, exist_ok=True)
-    
-    # 生成nodes.csv
-    nodes_file = os.path.join(neo4j_dir, 'nodes.csv')
-    with open(nodes_file, 'w', encoding='utf-8') as f:
-        f.write('id:ID,name,:LABEL\n')
-        # 添加函数节点
-        for i, func in enumerate(functions[:50]):
-            f.write(f"func_{i},{func['function']},Function\n")
-        # 添加变量节点
-        for i, var in enumerate(global_vars[:30]):
-            f.write(f"var_{i},{var['variable']},GlobalVariable\n")
-    
-    # 生成edges.csv
-    edges_file = os.path.join(neo4j_dir, 'edges.csv')
-    with open(edges_file, 'w', encoding='utf-8') as f:
-        f.write(':START_ID,:END_ID,:TYPE\n')
-        # 添加一些调用关系
-        for i in range(min(len(functions[:50]) - 1, 20)):
-            f.write(f"func_{i},func_{i+1},CALLS\n")
-        # 添加一些变量访问关系
-        for i in range(min(len(global_vars[:30]), 10)):
-            f.write(f"func_{i},var_{i},READS\n")
-            if i % 2 == 0:
-                f.write(f"func_{i},var_{i},WRITES\n")
-    
-    # 生成IMPORT_INSTRUCTIONS.md
-    import_instructions_file = os.path.join(neo4j_dir, 'IMPORT_INSTRUCTIONS.md')
-    with open(import_instructions_file, 'w', encoding='utf-8') as f:
-        f.write('# Neo4j Import Instructions\n\n')
-        f.write('1. Start Neo4j Desktop\n')
-        f.write('2. Create a new database\n')
-        f.write('3. Use the Neo4j Import Tool:\n')
-        f.write('   ```\n')
-        f.write(f'   neo4j-admin import --nodes={nodes_file} --relationships={edges_file}\n')
-        f.write('   ```\n')
-    
-    scan_status["logs"].append(f"[*] Neo4j数据已保存到: {neo4j_dir}")
-    scan_status["progress"] = 90
-    
-    # 生成内存数据供前端展示
-    generate_uploaded_analysis_data(target, analysis_result, result_path)
-    
-    scan_status["progress"] = 100
-    scan_status["status"] = "completed"
-    scan_status["logs"].append("[+] 分析完成！所有数据已就绪。")
+    if os.path.exists(analysis_log_file):
+        os.remove(analysis_log_file)
 
-def generate_uploaded_analysis_data(target, analysis_result, result_path):
-    """为上传的代码生成分析数据"""
-    global analysis_data
-    
-    # 构建图数据
-    nodes = []
-    edges = []
-    
-    # 添加函数节点
-    for i, func in enumerate(analysis_result.get("functions", [])[:50]):
-        nodes.append({
-            "id": f"func_{i}",
-            "name": func["function"],
-            "category": 0,
-            "symbolSize": 10,
-            "value": 1
-        })
-    
-    # 添加变量节点
-    for i, var in enumerate(analysis_result.get("global_variables", [])[:30]):
-        nodes.append({
-            "id": f"var_{i}",
-            "name": var["variable"],
-            "category": 1,
-            "symbolSize": 8,
-            "value": 1
-        })
-    
-    # 添加一些边（模拟调用关系）
-    for i in range(min(len(nodes) - 1, 40)):
-        edges.append({
-            "source": nodes[i]["id"],
-            "target": nodes[(i + 1) % len(nodes)]["id"],
-            "type": "CALLS"
-        })
-    
-    # 构建统计数据
-    summary = analysis_result.get("summary", {})
-    warnings = analysis_result.get("warnings", [])
-    
-    # 统计变量出现次数
-    from collections import Counter
-    var_counter = Counter([w["variable"] for w in warnings])
-    func_counter = Counter([w["function"] for w in warnings])
-    
-    analysis_data[target] = {
-        "kernel_version": target,
-        "scan_time": time.strftime("%Y-%m-%d"),
-        "is_uploaded": True,
-        "result_path": result_path,
-        "summary": {
-            "total_nodes": len(nodes),
-            "total_functions": summary.get("total_functions", 0),
-            "total_variables": summary.get("total_global_vars", 0),
-            "total_edges": len(edges),
-            "total_calls": len([e for e in edges if e["type"] == "CALLS"]),
-            "total_reads": len([w for w in warnings if w["type"] == "Read"]),
-            "total_writes": len([w for w in warnings if w["type"] == "Write"]),
-            "total_warnings": len(warnings),
-            "warning_reads": len([w for w in warnings if w["type"] == "Read"]),
-            "warning_writes": len([w for w in warnings if w["type"] == "Write"]),
-            "analysis_files": analysis_result.get("total_files", 0)
-        },
-        "race_warnings": {
-            "total": len(warnings),
-            "reads": len([w for w in warnings if w["type"] == "Read"]),
-            "writes": len([w for w in warnings if w["type"] == "Write"]),
-            "top_variables": [{"name": k, "count": v} for k, v in var_counter.most_common(10)],
-            "top_functions": [{"name": k, "count": v} for k, v in func_counter.most_common(10)],
-            "warnings_sample": warnings[:50]
-        },
-        "edges_stats": {
-            "calls": len([e for e in edges if e["type"] == "CALLS"]),
-            "reads": 0,
-            "writes": 0,
-            "total": len(edges)
-        },
-        "graph": {
-            "nodes": nodes,
-            "edges": edges
-        }
-    }
+    env = os.environ.copy()
+    env['ANALYSIS_JOBS'] = env.get('ANALYSIS_JOBS', '2')
 
-def generate_analysis_data(target):
+    alias_target = f"uploaded_{sanitize_target_dir(target)}_{int(time.time())}"
+    alias_source_link = os.path.join(PROJECT_ROOT, alias_target)
+
+    # Create a short alias under project root so full_run.sh can use standard relative paths.
+    if os.path.lexists(alias_source_link):
+        if os.path.islink(alias_source_link) or os.path.isfile(alias_source_link):
+            os.unlink(alias_source_link)
+        else:
+            shutil.rmtree(alias_source_link)
+    os.symlink(kernel_source_dir, alias_source_link)
+
+    try:
+        scan_status['progress'] = 10
+        scan_status['logs'].append('[*] 调用 full_run.sh 执行完整分析流程...')
+        full_run_rc = stream_command_to_log(
+            ['bash', './full_run.sh', alias_target],
+            PROJECT_ROOT,
+            env,
+            analysis_log_file,
+            progress_hook=update_uploaded_progress_from_line,
+        )
+        if full_run_rc != 0:
+            scan_status['logs'].append(f'[-] full_run.sh 执行失败，退出码: {full_run_rc}')
+            return False
+
+        scan_status['progress'] = 92
+        scan_status['logs'].append('[*] 归档 full_run 结果到上传结果目录...')
+
+        root_analysis_log = os.path.join(PROJECT_ROOT, f'analysis_{alias_target}.log')
+        root_ast_log = os.path.join(PROJECT_ROOT, f'ast_{alias_target}.log')
+        root_race_file = os.path.join(PROJECT_ROOT, f'race_warnings_{alias_target}.txt')
+        root_neo4j_dir = os.path.join(PROJECT_ROOT, f'neo4j_data_{alias_target}')
+
+        result_analysis_log = os.path.join(result_path, f'analysis_{target}.log')
+        result_ast_log = os.path.join(result_path, f'ast_{target}.log')
+        result_race_file = os.path.join(result_path, f'race_warnings_{target}.txt')
+        result_neo4j_dir = os.path.join(result_path, f'neo4j_data_{target}')
+
+        if os.path.exists(root_analysis_log):
+            shutil.copy2(root_analysis_log, result_analysis_log)
+        if os.path.exists(root_ast_log):
+            shutil.copy2(root_ast_log, result_ast_log)
+        if os.path.exists(root_race_file):
+            shutil.copy2(root_race_file, result_race_file)
+
+        if os.path.exists(result_neo4j_dir):
+            shutil.rmtree(result_neo4j_dir)
+        if os.path.isdir(root_neo4j_dir):
+            shutil.copytree(root_neo4j_dir, result_neo4j_dir)
+
+        if not os.path.exists(result_race_file):
+            scan_status['logs'].append('[-] 未找到上传任务竞态告警结果文件')
+            return False
+        if not os.path.isdir(result_neo4j_dir):
+            scan_status['logs'].append('[-] 未找到上传任务 Neo4j 数据目录')
+            return False
+
+        return True
+    finally:
+        if os.path.lexists(alias_source_link):
+            if os.path.islink(alias_source_link) or os.path.isfile(alias_source_link):
+                os.unlink(alias_source_link)
+            else:
+                shutil.rmtree(alias_source_link)
+
+def run_real_scan(target, is_uploaded=False, run_id=None):
+    global scan_status
+    global current_run_id
+
+    run_id = run_id or str(uuid.uuid4())
+    current_run_id = run_id
+    create_run_record(run_id, target, is_uploaded)
+
+    scan_status["status"] = "running"
+    scan_status["progress"] = 5
+    scan_status["run_id"] = run_id
+    scan_status["target"] = target
+    scan_status["logs"].clear()
+    scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
+    scan_status["logs"].append(f"[*] run_id: {run_id}")
+
+    try:
+        if is_uploaded:
+            source_path, source_err = ensure_uploaded_source_ready(target)
+            result_path = get_run_result_dir(target, run_id)
+
+            if source_err:
+                scan_status["status"] = "error"
+                scan_status["logs"].append(f"[-] 错误: {source_err}")
+                update_run_status(run_id, 'error', source_err)
+                return
+
+            if not os.path.exists(source_path):
+                scan_status["status"] = "error"
+                scan_status["logs"].append(f"[-] 错误: 找不到上传的代码目录: {source_path}")
+                update_run_status(run_id, 'error', 'uploaded source not found')
+                return
+
+            os.makedirs(result_path, exist_ok=True)
+            scan_status["logs"].append(f"[*] 分析上传的代码: {source_path}")
+            scan_status["logs"].append(f"[*] 结果将保存到: {result_path}")
+
+            real_ok = run_uploaded_real_analysis(target, source_path, result_path)
+            if not real_ok:
+                scan_status["status"] = "error"
+                scan_status["logs"].append("[-] 上传代码真实分析失败")
+                update_run_status(run_id, 'error', 'uploaded real analysis failed')
+                return
+
+            # Upload and built-in share the same stats/graph schema; only data source differs.
+            generate_analysis_data(target, run_id, result_path, prefer_result=True, prefer_display=False)
+            scan_status["progress"] = 100
+            scan_status["status"] = "completed"
+            scan_status["logs"].append("[+] 上传代码分析完成！")
+            update_run_status(run_id, 'completed')
+            return
+
+        env = os.environ.copy()
+        env['ANALYSIS_JOBS'] = '2'
+
+        process = subprocess.Popen(
+            [os.path.join(PROJECT_ROOT, 'run_analysis.sh'), target],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=PROJECT_ROOT,
+            env=env
+        )
+
+        for line in iter(process.stdout.readline, ''):
+            line = line.strip()
+            if line:
+                scan_status["logs"].append(line)
+                if "Building GCC Plugin" in line:
+                    scan_status["progress"] = 10
+                elif "Configuring Kernel" in line:
+                    scan_status["progress"] = 15
+                elif "Starting Kernel Analysis" in line:
+                    scan_status["progress"] = 20
+                elif "Extracting Unprotected" in line:
+                    scan_status["progress"] = 80
+                elif "Generating Neo4j" in line:
+                    scan_status["progress"] = 90
+
+        process.wait()
+
+        if process.returncode == 0:
+            scan_status["progress"] = 100
+            scan_status["status"] = "completed"
+            scan_status["logs"].append("[+] 分析完成！数据已就绪。")
+            generate_analysis_data(target, run_id, prefer_display=True)
+            update_run_status(run_id, 'completed')
+        else:
+            scan_status["status"] = "error"
+            scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
+            update_run_status(run_id, 'error', f'run_analysis exit code {process.returncode}')
+    except Exception as exc:
+        scan_status["status"] = "error"
+        scan_status["logs"].append(f"[-] 后端异常: {str(exc)}")
+        update_run_status(run_id, 'error', str(exc))
+
+
+def generate_analysis_data(target, run_id, result_dir_override=None, prefer_result=False, prefer_display=False):
     """生成分析数据并存储在内存中"""
     global analysis_data
     
-    # 解析竞态警告文件
-    race_file = f"{PROJECT_ROOT}/race_warnings_{target}.txt"
+    result_base = result_dir_override or os.path.join(DATA_DIR, f"{target}_result")
+    race_file, nodes_file, edges_file = resolve_prebuilt_paths(
+        target,
+        result_base=result_base,
+        prefer_display=prefer_display,
+        prefer_result=prefer_result,
+    )
+
+    if not race_file:
+        race_file = os.path.join(PROJECT_ROOT, f"race_warnings_{target}.txt")
+
     race_data = parse_race_warnings(race_file)
-    
-    # 解析节点和边数据
-    nodes_file = f"{PROJECT_ROOT}/neo4j_data_{target}/nodes.csv"
-    edges_file = f"{PROJECT_ROOT}/neo4j_data_{target}/edges.csv"
+
+    if not nodes_file or not edges_file:
+        root_nodes_file = os.path.join(PROJECT_ROOT, f"neo4j_data_{target}", 'nodes.csv')
+        root_edges_file = os.path.join(PROJECT_ROOT, f"neo4j_data_{target}", 'edges.csv')
+        result_nodes_file = os.path.join(result_base, f"neo4j_data_{target}", 'nodes.csv')
+        result_edges_file = os.path.join(result_base, f"neo4j_data_{target}", 'edges.csv')
+        nodes_file = root_nodes_file if os.path.exists(root_nodes_file) else result_nodes_file
+        edges_file = root_edges_file if os.path.exists(root_edges_file) else result_edges_file
+
     nodes_data = parse_nodes_csv(nodes_file)
     edges_data = parse_edges_csv(edges_file)
+    analysis_log_path = resolve_analysis_log_path(
+        target,
+        result_base=result_base,
+        prefer_display=prefer_display,
+        prefer_result=prefer_result,
+    )
+    analysis_files_count = count_analysis_files_from_log(analysis_log_path)
     
     # 构建图数据
     graph_data = build_sample_graph(edges_file, nodes_file)
     
     # 存储分析数据
-    analysis_data[target] = {
+    built_data = {
+        "run_id": run_id,
+        "target": target,
         "kernel_version": target,
         "scan_time": time.strftime("%Y-%m-%d"),
         "summary": {
@@ -486,12 +978,16 @@ def generate_analysis_data(target):
             "total_warnings": race_data["total"],
             "warning_reads": race_data["reads"],
             "warning_writes": race_data["writes"],
-            "analysis_files": edges_data.get("total_files", 0)
+            "analysis_files": analysis_files_count
         },
         "race_warnings": race_data,
         "edges_stats": edges_data,
         "graph": graph_data
     }
+
+    analysis_data[run_id] = built_data
+    persist_summary(run_id, built_data)
+    persist_warnings(run_id, target, race_data.get('warnings_sample', []), race_data.get('raw_lines', []))
 
 def parse_race_warnings(filepath):
     """解析竞态警告文件"""
@@ -499,6 +995,7 @@ def parse_race_warnings(filepath):
     from collections import Counter
     
     warnings = []
+    raw_lines = []
     var_counter = Counter()
     func_counter = Counter()
     read_count = 0
@@ -515,7 +1012,8 @@ def parse_race_warnings(filepath):
             "writes": 0,
             "top_variables": [],
             "top_functions": [],
-            "warnings_sample": []
+            "warnings_sample": [],
+            "raw_lines": []
         }
     
     with open(filepath, 'r') as f:
@@ -540,6 +1038,7 @@ def parse_race_warnings(filepath):
                         "variable": var_name,
                         "function": func_name
                     })
+                    raw_lines.append(line.strip())
     
     return {
         "total": read_count + write_count,
@@ -547,7 +1046,8 @@ def parse_race_warnings(filepath):
         "writes": write_count,
         "top_variables": [{"name": k, "count": v} for k, v in var_counter.most_common(30)],
         "top_functions": [{"name": k, "count": v} for k, v in func_counter.most_common(30)],
-        "warnings_sample": warnings
+        "warnings_sample": warnings,
+        "raw_lines": raw_lines
     }
 
 def parse_nodes_csv(filepath):
@@ -711,14 +1211,15 @@ def upload_files():
     if not target_dir and archive and archive.filename:
         target_dir = strip_archive_suffix(os.path.basename(archive.filename))
     target_dir = sanitize_target_dir(target_dir)
-    
-    # 构建存储路径: data/<target_dir>/
-    upload_base_path = os.path.join(DATA_DIR, target_dir)
-    os.makedirs(upload_base_path, exist_ok=True)
-    
-    # 创建对应的结果目录: data/<target_dir>_result/
-    result_path = os.path.join(DATA_DIR, f"{target_dir}_result")
-    os.makedirs(result_path, exist_ok=True)
+
+    target_root = get_upload_target_root(target_dir)
+    source_dir = get_upload_source_dir(target_dir)
+    archive_dir = get_upload_archive_dir(target_dir)
+    result_root = os.path.join(ANALYSIS_RESULTS_ROOT_DIR, target_dir)
+    os.makedirs(target_root, exist_ok=True)
+    os.makedirs(source_dir, exist_ok=True)
+    os.makedirs(archive_dir, exist_ok=True)
+    os.makedirs(result_root, exist_ok=True)
     
     if files:
         for file in files:
@@ -729,68 +1230,221 @@ def upload_files():
                     if len(parts) > 1:
                         relative_path = parts[1]
 
-                file_path = os.path.join(upload_base_path, relative_path)
-                if not is_within_directory(upload_base_path, file_path):
+                file_path = os.path.join(source_dir, relative_path)
+                if not is_within_directory(source_dir, file_path):
                     return jsonify({"error": "Invalid file path in upload"}), 400
                 os.makedirs(os.path.dirname(file_path), exist_ok=True)
                 file.save(file_path)
 
+        with open(get_upload_meta_path(target_dir), 'w', encoding='utf-8') as f:
+            json.dump({"mode": "folder", "target": target_dir, "source_dir": source_dir}, f, ensure_ascii=False)
+
     if archive and archive.filename:
         archive_name = os.path.basename(archive.filename)
-        archive_path = os.path.join(DATA_DIR, f".upload_tmp_{int(time.time())}_{archive_name}")
+        ext = detect_archive_suffix(archive_name)
+        archive_path = os.path.join(archive_dir, f'package_{int(time.time())}{ext}')
         archive.save(archive_path)
 
-        if os.path.exists(upload_base_path):
-            shutil.rmtree(upload_base_path)
-        os.makedirs(upload_base_path, exist_ok=True)
-
         lower_name = archive_name.lower().strip()
-        try:
-            if lower_name.endswith('.zip'):
-                safe_extract_zip(archive_path, upload_base_path)
-            elif (
-                lower_name.endswith('.tar.gz')
-                or lower_name.endswith('.tgz')
-                or lower_name.endswith('.tar.xz')
-                or lower_name.endswith('.txz')
-                or lower_name.endswith('.tar.bz2')
-                or lower_name.endswith('.tbz2')
-                or lower_name.endswith('.tar')
-            ):
-                safe_extract_tar(archive_path, upload_base_path)
-            else:
-                return jsonify({"error": "Unsupported archive format. Use zip/tar/tar.gz/tgz/tar.xz/tar.bz2"}), 400
-        finally:
-            if os.path.exists(archive_path):
-                os.remove(archive_path)
+        if not (
+            lower_name.endswith('.zip')
+            or lower_name.endswith('.tar.gz')
+            or lower_name.endswith('.tgz')
+            or lower_name.endswith('.tar.xz')
+            or lower_name.endswith('.txz')
+            or lower_name.endswith('.tar.bz2')
+            or lower_name.endswith('.tbz2')
+            or lower_name.endswith('.tar')
+        ):
+            return jsonify({"error": "Unsupported archive format. Use zip/tar/tar.gz/tgz/tar.xz/tar.bz2"}), 400
+
+        if os.path.exists(source_dir):
+            shutil.rmtree(source_dir)
+        os.makedirs(source_dir, exist_ok=True)
+
+        with open(get_upload_meta_path(target_dir), 'w', encoding='utf-8') as f:
+            json.dump(
+                {
+                    "mode": "archive",
+                    "target": target_dir,
+                    "archive_file": archive_path,
+                    "archive_name": archive_name,
+                },
+                f,
+                ensure_ascii=False,
+            )
             
     return jsonify({
         "message": "Upload complete", 
         "target": target_dir,
-        "upload_path": upload_base_path,
-        "result_path": result_path
+        "upload_path": target_root,
+        "source_path": source_dir,
+        "result_root": result_root,
+        "extract_deferred": True if archive and archive.filename else False
     })
 
 @app.route('/api/scan', methods=['POST'])
 def start_scan():
+    global current_run_id
     data = request.json or {}
     target = data.get('target', 'linux-6.6.1')
     is_uploaded = data.get('is_uploaded', False)
+    force_reanalyze = bool(data.get('force_reanalyze', False))
+    run_id = str(uuid.uuid4())
     
-    # 如果没有明确指定，检查是否是上传的代码
-    if not is_uploaded:
-        upload_path = os.path.join(DATA_DIR, target)
-        if os.path.exists(upload_path):
-            is_uploaded = True
+    # 内置内核快速路径：若已有预置结果则直接返回，不重跑分析
+    if not is_uploaded and not force_reanalyze and has_prebuilt_result(target):
+        create_run_record(run_id, target, False)
+        generate_analysis_data(target, run_id, prefer_display=True)
+        update_run_status(run_id, 'completed')
+        current_run_id = run_id
+
+        scan_status["status"] = "completed"
+        scan_status["progress"] = 100
+        scan_status["run_id"] = run_id
+        scan_status["target"] = target
+        scan_status["logs"].clear()
+        scan_status["logs"].append(f"[*] run_id: {run_id}")
+        scan_status["logs"].append("[*] 命中内置结果，跳过重分析")
+        scan_status["logs"].append("[+] 已加载预置分析数据")
+
+        return jsonify({
+            "message": "Scan loaded from prebuilt data",
+            "target": target,
+            "is_uploaded": is_uploaded,
+            "run_id": run_id,
+            "quick_mode": True,
+        })
+
+    # 上传源码复用路径：命中最近一次已完成任务则直接加载历史结果，避免重复长时间审计
+    if is_uploaded and not force_reanalyze:
+        latest_completed = get_latest_run(target_name=target, is_uploaded=True, statuses=['completed'])
+        if latest_completed and has_reusable_uploaded_result(target, latest_completed['run_id']):
+            reused_run_id = latest_completed['run_id']
+            result_dir = get_run_result_dir(target, reused_run_id)
+            generate_analysis_data(
+                target,
+                reused_run_id,
+                result_dir_override=result_dir,
+                prefer_result=True,
+                prefer_display=False,
+            )
+            current_run_id = reused_run_id
+
+            scan_status["status"] = "completed"
+            scan_status["progress"] = 100
+            scan_status["run_id"] = reused_run_id
+            scan_status["target"] = target
+            scan_status["logs"].clear()
+            scan_status["logs"].append(f"[*] run_id: {reused_run_id}")
+            scan_status["logs"].append("[*] 命中上传历史结果，跳过重复审计")
+            scan_status["logs"].append("[+] 已恢复最近一次完成的分析数据")
+
+            return jsonify({
+                "message": "Scan loaded from previous uploaded result",
+                "target": target,
+                "is_uploaded": is_uploaded,
+                "run_id": reused_run_id,
+                "quick_mode": True,
+                "reused": True,
+            })
     
     # 启动真实的后台分析线程
-    thread = threading.Thread(target=run_real_scan, args=(target, is_uploaded))
+    thread = threading.Thread(target=run_real_scan, args=(target, is_uploaded, run_id))
     thread.start()
+    current_run_id = run_id
     
     return jsonify({
         "message": "Scan started successfully",
         "target": target,
-        "is_uploaded": is_uploaded
+        "is_uploaded": is_uploaded,
+        "run_id": run_id,
+        "quick_mode": False,
+    })
+
+
+@app.route('/api/scan/recover', methods=['GET'])
+def recover_scan():
+    global current_run_id
+
+    target = request.args.get('target', default=None, type=str)
+    is_uploaded_raw = request.args.get('is_uploaded', default=None, type=str)
+    is_uploaded = None
+    if is_uploaded_raw is not None:
+        is_uploaded = str(is_uploaded_raw).strip().lower() in ('1', 'true', 'yes', 'on')
+
+    # 优先返回内存中的实时任务状态（服务未重启时）
+    active_run_id = scan_status.get('run_id')
+    active_target = scan_status.get('target')
+    active_status = scan_status.get('status')
+
+    if active_run_id and active_status in ('running', 'completed'):
+        if (not target or active_target == target):
+            if is_uploaded is None:
+                return jsonify({
+                    "recoverable": True,
+                    "source": "memory",
+                    "status": active_status,
+                    "progress": scan_status.get('progress', 0),
+                    "run_id": active_run_id,
+                    "target": active_target,
+                    "logs": list(scan_status.get('logs', [])),
+                })
+
+            row = get_latest_run(target_name=active_target, statuses=None)
+            if row and bool(row['is_uploaded']) == is_uploaded:
+                return jsonify({
+                    "recoverable": True,
+                    "source": "memory",
+                    "status": active_status,
+                    "progress": scan_status.get('progress', 0),
+                    "run_id": active_run_id,
+                    "target": active_target,
+                    "logs": list(scan_status.get('logs', [])),
+                })
+
+    # 兜底：从数据库恢复最近完成的任务
+    latest_completed = get_latest_run(target_name=target, is_uploaded=is_uploaded, statuses=['completed'])
+    if latest_completed:
+        recovered_run_id = latest_completed['run_id']
+        recovered_target = latest_completed['target_name']
+
+        if bool(latest_completed['is_uploaded']):
+            result_dir = get_run_result_dir(recovered_target, recovered_run_id)
+            if os.path.isdir(result_dir):
+                generate_analysis_data(
+                    recovered_target,
+                    recovered_run_id,
+                    result_dir_override=result_dir,
+                    prefer_result=True,
+                    prefer_display=False,
+                )
+        else:
+            generate_analysis_data(recovered_target, recovered_run_id, prefer_display=True)
+
+        current_run_id = recovered_run_id
+        return jsonify({
+            "recoverable": True,
+            "source": "sqlite",
+            "status": "completed",
+            "progress": 100,
+            "run_id": recovered_run_id,
+            "target": recovered_target,
+            "logs": [
+                f"[*] run_id: {recovered_run_id}",
+                "[*] 已恢复最近一次完成的分析结果",
+                "[+] 可直接进入可视化报告",
+            ],
+        })
+
+    return jsonify({
+        "recoverable": False,
+        "status": "idle",
+        "progress": 0,
+        "run_id": None,
+        "target": target,
+        "logs": [],
+        "message": "没有可恢复的历史任务，请发起新的审计。",
     })
 
 @app.route('/api/scan/status', methods=['GET'])
@@ -798,12 +1452,217 @@ def get_scan_status():
     return jsonify({
         "status": scan_status["status"],
         "progress": scan_status["progress"],
+        "run_id": scan_status.get("run_id"),
+        "target": scan_status.get("target"),
         "logs": list(scan_status["logs"])
     })
+
+
+@app.route('/api/history', methods=['GET'])
+def get_history():
+    target_type = (request.args.get('target_type', default='all', type=str) or 'all').strip().lower()
+    status = (request.args.get('status', default='all', type=str) or 'all').strip().lower()
+    target_keyword = (request.args.get('target', default='', type=str) or '').strip()
+    page = max(1, request.args.get('page', default=1, type=int))
+    page_size = request.args.get('page_size', default=20, type=int)
+    page_size = 20 if page_size is None else max(1, min(page_size, 100))
+    offset = (page - 1) * page_size
+
+    where = []
+    params = []
+
+    if target_type in ('uploaded', 'builtin'):
+        where.append('r.target_type = ?')
+        params.append(target_type)
+
+    if status in ('running', 'completed', 'error'):
+        where.append('r.status = ?')
+        params.append(status)
+
+    if target_keyword:
+        where.append('r.target_name LIKE ?')
+        params.append(f'%{target_keyword}%')
+
+    where_sql = f"WHERE {' AND '.join(where)}" if where else ''
+
+    conn = get_db_connection()
+    try:
+        total = conn.execute(
+            f'''
+            SELECT COUNT(1) AS c
+            FROM analysis_runs r
+            {where_sql}
+            ''',
+            params,
+        ).fetchone()['c']
+
+        rows = conn.execute(
+            f'''
+            SELECT
+                r.run_id,
+                r.target_name,
+                r.target_type,
+                r.status,
+                r.started_at,
+                r.finished_at,
+                r.error_message,
+                r.is_uploaded,
+                COALESCE(s.analysis_files, 0) AS analysis_files,
+                COALESCE(s.total_warnings, 0) AS total_warnings
+            FROM analysis_runs r
+            LEFT JOIN summary_stats s ON s.run_id = r.run_id
+            {where_sql}
+            ORDER BY r.started_at DESC
+            LIMIT ? OFFSET ?
+            ''',
+            params + [page_size, offset],
+        ).fetchall()
+
+        items = []
+        for row in rows:
+            is_uploaded = bool(row['is_uploaded'])
+            run_id = row['run_id']
+            target_name = row['target_name']
+
+            result_dir = get_run_result_dir(target_name, run_id) if is_uploaded else None
+            result_exists = bool(result_dir and os.path.isdir(result_dir))
+            result_size_bytes = get_dir_size_bytes(result_dir) if result_exists else 0
+
+            upload_root = get_upload_target_root(target_name) if is_uploaded else None
+            upload_exists = bool(upload_root and os.path.isdir(upload_root))
+            upload_size_bytes = get_dir_size_bytes(upload_root) if upload_exists else 0
+
+            items.append(
+                {
+                    'run_id': run_id,
+                    'target_name': target_name,
+                    'target_type': row['target_type'],
+                    'is_uploaded': is_uploaded,
+                    'status': row['status'],
+                    'started_at': int(row['started_at'] or 0),
+                    'started_at_text': format_timestamp(row['started_at']),
+                    'finished_at': int(row['finished_at'] or 0) if row['finished_at'] else None,
+                    'finished_at_text': format_timestamp(row['finished_at']),
+                    'error_message': row['error_message'] or '',
+                    'analysis_files': int(row['analysis_files'] or 0),
+                    'total_warnings': int(row['total_warnings'] or 0),
+                    'result_exists': result_exists,
+                    'result_size_bytes': int(result_size_bytes),
+                    'upload_exists': upload_exists,
+                    'upload_size_bytes': int(upload_size_bytes),
+                    'can_open_report': row['status'] == 'completed',
+                }
+            )
+
+        return jsonify(
+            {
+                'page': page,
+                'page_size': page_size,
+                'total': int(total),
+                'items': items,
+            }
+        )
+    finally:
+        conn.close()
+
+
+@app.route('/api/history/<run_id>', methods=['DELETE'])
+def delete_history_run(run_id):
+    purge_uploaded_payload = bool_from_query(request.args.get('purge_uploaded_payload', default='0'))
+
+    conn = get_db_connection()
+    try:
+        row = conn.execute(
+            '''
+            SELECT run_id, target_name, status, is_uploaded
+            FROM analysis_runs
+            WHERE run_id = ?
+            ''',
+            (run_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+
+    if not row:
+        return jsonify({'error': 'history run not found'}), 404
+
+    run_target = row['target_name']
+    is_uploaded = bool(row['is_uploaded'])
+    run_status = row['status']
+
+    if run_status == 'running':
+        return jsonify({'error': 'cannot delete a running task'}), 400
+
+    removed_paths = []
+
+    if is_uploaded:
+        run_result_dir = get_run_result_dir(run_target, run_id)
+        if os.path.isdir(run_result_dir):
+            shutil.rmtree(run_result_dir)
+            removed_paths.append(run_result_dir)
+
+    runs_to_delete = [run_id]
+    if is_uploaded and purge_uploaded_payload:
+        conn = get_db_connection()
+        try:
+            rows = conn.execute(
+                '''
+                SELECT run_id FROM analysis_runs
+                WHERE target_name = ? AND is_uploaded = 1
+                ''',
+                (run_target,),
+            ).fetchall()
+            runs_to_delete = [r['run_id'] for r in rows] or [run_id]
+        finally:
+            conn.close()
+
+        removed_paths.extend(remove_uploaded_target_payload(run_target))
+
+    delete_run_records(runs_to_delete)
+
+    global current_run_id
+    if current_run_id in runs_to_delete:
+        current_run_id = latest_run_id()
+
+    if scan_status.get('run_id') in runs_to_delete:
+        scan_status['run_id'] = current_run_id
+        if not current_run_id:
+            scan_status['status'] = 'idle'
+            scan_status['progress'] = 0
+            scan_status['target'] = None
+            scan_status['logs'].clear()
+
+    for rid in runs_to_delete:
+        analysis_data.pop(rid, None)
+
+    return jsonify(
+        {
+            'message': 'history deleted',
+            'deleted_run_ids': runs_to_delete,
+            'removed_paths': removed_paths,
+            'purge_uploaded_payload': bool(purge_uploaded_payload),
+        }
+    )
 
 @app.route('/api/status', methods=['GET'])
 def get_status():
     return jsonify({"status": "connected", "message": "Successfully connected to kernel analysis system"})
+
+
+def get_active_run_id(requested_run_id=None, target_name=None):
+    if requested_run_id:
+        return requested_run_id
+    if target_name:
+        run_id = latest_run_id(target_name)
+        if run_id:
+            return run_id
+    return current_run_id or latest_run_id()
+
+
+def get_analysis_data_by_run(run_id):
+    if run_id and run_id in analysis_data:
+        return analysis_data[run_id]
+    return None
 
 def load_analysis_result_from_file():
     """从结果目录加载分析数据"""
@@ -956,11 +1815,11 @@ def load_analysis_result_from_file():
 
 @app.route('/api/graph', methods=['GET'])
 def get_graph_data():
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
     limit = request.args.get('limit', default=100, type=int)
-    
-    # 首先尝试从内存获取
-    target = next(iter(analysis_data.keys()), None)
-    data = analysis_data.get(target, {}) if target else {}
+    run_id = get_active_run_id(requested_run_id, target_name)
+    data = get_analysis_data_by_run(run_id) or {}
     
     # 如果内存中没有，尝试从文件加载
     if 'graph' not in data:
@@ -975,6 +1834,7 @@ def get_graph_data():
         graph_data['edges'] = [edge for edge in graph_data['edges'] 
                              if edge['source'] in [node['id'] for node in graph_data['nodes']] 
                              and edge['target'] in [node['id'] for node in graph_data['nodes']]][:limit * 3]
+        graph_data['run_id'] = run_id
         return jsonify(graph_data)
     else:
         # 返回空图数据
@@ -982,9 +1842,61 @@ def get_graph_data():
 
 @app.route('/api/stats', methods=['GET'])
 def get_stats():
-    # 首先尝试从内存获取
-    target = next(iter(analysis_data.keys()), None)
-    data = analysis_data.get(target, {}) if target else {}
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+
+    if run_id:
+        conn = get_db_connection()
+        try:
+            summary_row = conn.execute(
+                'SELECT * FROM summary_stats WHERE run_id = ?',
+                (run_id,)
+            ).fetchone()
+
+            if summary_row:
+                warning_rows = conn.execute(
+                    '''
+                    SELECT warn_type, variable_name, function_name, severity
+                    FROM warnings
+                    WHERE run_id = ?
+                    ORDER BY id DESC
+                    LIMIT 20
+                    ''',
+                    (run_id,)
+                ).fetchall()
+
+                warnings_sample = [
+                    {
+                        'type': row['warn_type'],
+                        'variable': row['variable_name'],
+                        'function': row['function_name'],
+                        'severity': row['severity'],
+                    }
+                    for row in warning_rows
+                ]
+
+                return jsonify({
+                    'run_id': run_id,
+                    'kernel_version': summary_row['kernel_version'] or 'Unknown',
+                    'nodes': {
+                        'Function': int(summary_row['total_functions'] or 0),
+                        'GlobalVariable': int(summary_row['total_variables'] or 0),
+                    },
+                    'edges': {
+                        'CALLS': int(summary_row['total_calls'] or 0),
+                        'READS': int(summary_row['total_reads'] or 0),
+                        'WRITES': int(summary_row['total_writes'] or 0),
+                    },
+                    'top_variables': json.loads(summary_row['top_variables_json'] or '[]'),
+                    'top_functions': json.loads(summary_row['top_functions_json'] or '[]'),
+                    'warnings_sample': warnings_sample,
+                    'analysis_files': int(summary_row['analysis_files'] or 0),
+                })
+        finally:
+            conn.close()
+
+    data = get_analysis_data_by_run(run_id) or {}
     
     # 如果内存中没有，尝试从文件加载
     if 'summary' not in data:
@@ -1007,6 +1919,7 @@ def get_stats():
         
         # 构建统计数据
         stats = {
+            "run_id": run_id,
             "kernel_version": data.get('target', 'Unknown'),
             "nodes": {
                 "Function": data['summary'].get('total_functions', 0),
@@ -1026,6 +1939,7 @@ def get_stats():
     else:
         # 返回默认统计数据
         return jsonify({
+            "run_id": run_id,
             "kernel_version": "Unknown",
             "nodes": {"Function": 0, "GlobalVariable": 0},
             "edges": {"CALLS": 0, "READS": 0, "WRITES": 0},
@@ -1036,10 +1950,88 @@ def get_stats():
         })
 
 
+@app.route('/api/warnings', methods=['GET'])
+def get_warnings():
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+
+    page = max(1, request.args.get('page', default=1, type=int))
+    page_size = request.args.get('page_size', default=20, type=int)
+    page_size = 20 if page_size is None else max(1, min(page_size, 200))
+    severity = request.args.get('severity', default='', type=str).strip().upper()
+    keyword = request.args.get('q', default='', type=str).strip()
+
+    if not run_id:
+        return jsonify({
+            'run_id': None,
+            'page': page,
+            'page_size': page_size,
+            'total': 0,
+            'items': [],
+        })
+
+    where = ['run_id = ?']
+    params = [run_id]
+
+    if severity:
+        where.append('severity = ?')
+        params.append(severity)
+
+    if keyword:
+        where.append('(variable_name LIKE ? OR function_name LIKE ? OR raw_text LIKE ?)')
+        like_expr = f'%{keyword}%'
+        params.extend([like_expr, like_expr, like_expr])
+
+    where_sql = ' AND '.join(where)
+    offset = (page - 1) * page_size
+
+    conn = get_db_connection()
+    try:
+        total = conn.execute(
+            f'SELECT COUNT(1) AS c FROM warnings WHERE {where_sql}',
+            params
+        ).fetchone()['c']
+
+        rows = conn.execute(
+            f'''
+            SELECT warn_type, severity, variable_name, function_name, raw_text
+            FROM warnings
+            WHERE {where_sql}
+            ORDER BY id DESC
+            LIMIT ? OFFSET ?
+            ''',
+            params + [page_size, offset]
+        ).fetchall()
+
+        items = [
+            {
+                'type': row['warn_type'],
+                'severity': row['severity'],
+                'variable': row['variable_name'],
+                'function': row['function_name'],
+                'raw_text': row['raw_text'] or '',
+            }
+            for row in rows
+        ]
+
+        return jsonify({
+            'run_id': run_id,
+            'page': page,
+            'page_size': page_size,
+            'total': int(total),
+            'items': items,
+        })
+    finally:
+        conn.close()
+
+
 @app.route('/api/report/pdf', methods=['GET'])
 def download_pdf_report():
-    target = next(iter(analysis_data.keys()), None)
-    data = analysis_data.get(target, {}) if target else {}
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+    data = get_analysis_data_by_run(run_id) or {}
 
     if 'summary' not in data:
         file_data = load_analysis_result_from_file()
