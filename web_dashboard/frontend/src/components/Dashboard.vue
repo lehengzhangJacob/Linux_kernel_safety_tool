@@ -21,6 +21,25 @@
           <span class="text-slate-400">当前版本:</span> 
           <span class="text-blue-400 font-mono font-bold ml-1">{{ data ? data.kernel_version : '加载中...' }}</span>
         </div>
+        <!-- 数据源标识 -->
+        <div v-if="data && data.is_demo_data" class="px-3 py-1 rounded-full text-xs font-medium bg-amber-500/20 text-amber-400 border border-amber-500/30 flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          演示数据
+        </div>
+        <div v-else-if="data && data.is_prebuilt" class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+          预置分析数据
+        </div>
+        <div v-else-if="data && !data.is_demo_data" class="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          真实分析结果
+        </div>
         <button @click="exportReport" class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 shadow-lg shadow-blue-600/20" style="background: linear-gradient(to right, #2563eb, #4f46e5); transition: all 0.2s ease;">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -390,7 +409,7 @@ export default {
     loadMockData() {
       // 模拟数据用于测试
       this.data = {
-        kernel_version: 'linux-6.6.1',
+        kernel_version: '未连接',
         scan_time: new Date().toISOString().split('T')[0],
         summary: {
           analysis_files: 8302,

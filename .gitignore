@@ -1,6 +1,79 @@
-build_analysis_linux-6.6.1/
+# Build artifacts
+build_analysis_*/
 *.o
 *.a
 *.so
-manual_push.sh
-batch_push.py
+
+# Kernel source files
+linux-*.tar.xz
+linux-*/
+
+# Log files
+*.log
+*_display.log
+
+# Neo4j and JDK tools
+tools/neo4j-community-*/
+tools/jdk-*/
+tools/*.tar.gz
+neo4j_data_*/
+
+# Analysis data
+analysis_data/
+analysis_*.log
+ast_*.log
+race_warnings_*.txt
+
+# Uploaded kernel source archives
+web_dashboard/data/uploads/*/archive/
+web_dashboard/data/uploads/*/source/
+*.tar.xz
+*.tar.gz
+*.tar.bz2
+*.zip
+
+# Web dashboard
+web_dashboard/frontend/node_modules/
+web_dashboard/frontend/dist/
+web_dashboard/backend/venv/
+web_dashboard/backend/__pycache__/
+web_dashboard/backend/data/*.db
+web_dashboard/data/linux-*/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+import.report
+
+# Compiled executable
+kernel_analyzer
+
+# Documentation files
+CHANGELOG
+timu*.jpg
+演示文稿*.pptx
+presentation.pptx
+
+# Test data
+test_code/
+test_upload.c
+
+# Competition files
+yga/
+yga_md/
+
+# Package locks
+package-lock.json
+
+# IDE files
+.vscode/
+.idea/
+*.iml

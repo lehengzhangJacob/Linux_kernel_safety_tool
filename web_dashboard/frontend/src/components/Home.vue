@@ -235,6 +235,17 @@
             <div v-if="!scanComplete" class="log-pulse">_</div>
           </div>
 
+          <!-- 数据类型提示 -->
+          <div v-if="scanComplete && dataSource" class="data-source-notice" :class="dataSource.is_demo ? 'demo' : 'real'">
+            <svg v-if="dataSource.is_demo" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>{{ dataSource.message }}</span>
+          </div>
+
           <div v-if="scanComplete" class="complete-section">
             <button @click="goToDashboard" class="complete-button">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -283,7 +294,8 @@ export default {
       historyTotal: 0,
       historyFilterType: 'all',
       historyFilterStatus: 'all',
-      historyFilterTarget: ''
+      historyFilterTarget: '',
+      dataSource: null
     }
   },
   async mounted() {
@@ -395,6 +407,8 @@ export default {
             this.scanComplete = true
             this.isScanning = false
             this.progress = 100
+            // 获取数据类型信息
+            this.fetchDataSourceInfo()
             setTimeout(() => {
               this.goToDashboard()
             }, 2000)
@@ -679,6 +693,26 @@ export default {
     goToDashboard() {
       const query = this.currentRunId ? { run_id: this.currentRunId } : {}
       this.$router.push({ path: '/dashboard', query })
+    },
+    async fetchDataSourceInfo() {
+      if (!this.currentRunId) return
+      try {
+        const res = await axios.get(`/api/data/${this.currentRunId}`)
+        const data = res.data || {}
+        if (data.is_demo_data) {
+          this.dataSource = {
+            is_demo: true,
+            message: '当前显示的是演示数据，真实分析未产生有效结果'
+          }
+        } else {
+          this.dataSource = {
+            is_demo: false,
+            message: '当前显示的是真实分析结果'
+          }
+        }
+      } catch (error) {
+        console.log('获取数据源信息失败:', error)
+      }
     }
   },
   computed: {
@@ -1332,6 +1366,30 @@ export default {
 .log-pulse {
   color: #3b82f6;
   animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 数据源提示 */
+.data-source-notice {
+  margin: 12px 0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.data-source-notice.demo {
+  background-color: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+.data-source-notice.real {
+  background-color: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
 }
 
 /* 完成区域 */

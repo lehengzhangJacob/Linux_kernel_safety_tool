@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/ldd_team/Linux_kernel_safety_tool/web_dashboard/backend/venv
+set -gx VIRTUAL_ENV /home/ldd_team/linux_kernel_safety_tool/web_dashboard/backend/venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

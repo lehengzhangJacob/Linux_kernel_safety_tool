@@ -186,20 +186,15 @@ static int do_stop_db(const char *app_dir) {
 
 /* ── START WEB DASHBOARD ── */
 static int do_start_web(const char *app_dir, const char *kernel) {
-    printf("[*] Generating dashboard data for %s...\n", kernel);
-    run_cmd("cd '%s' && python3 web_dashboard/generate_data.py %s", app_dir, kernel);
-    
-    printf("\n[*] Starting Web Dashboard on port 8080...\n");
-    printf("    Open your browser and visit: http://localhost:8080/index.html\n");
+    printf("[*] Starting Web Dashboard...\n");
+    printf("    Frontend: http://localhost:3001\n");
+    printf("    Backend:  http://localhost:5000/api/status\n");
     printf("    Press Ctrl+C to stop the server.\n\n");
+    printf("    Note: Make sure to install dependencies first:\n");
+    printf("      Backend: cd web_dashboard/backend && python3 -m venv venv && source venv/bin/activate && pip install -r ../../requirements.txt\n");
+    printf("      Frontend: cd web_dashboard/frontend && npm install && npm run build\n\n");
     
-    return run_cmd("cd '%s/web_dashboard' && python3 -m http.server 8080", app_dir);
-}
-
-/* ── GENERATE PDF REPORT ── */
-static int do_generate_report(const char *app_dir, const char *kernel) {
-    printf("[*] Generating PDF Security Audit Report for %s...\n", kernel);
-    return run_cmd("cd '%s' && python3 tools/generate_pdf.py %s", app_dir, kernel);
+    return run_cmd("cd '%s/scripts' && bash start_web.sh", app_dir);
 }
 
 /* ── INSTALL GIT HOOK ── */
@@ -291,8 +286,7 @@ static void print_help(void) {
     printf("  test               Test the toolchain with a sample file\n");
     printf("  start-db           Start Neo4j graph database\n");
     printf("  stop-db            Stop Neo4j graph database\n");
-    printf("  start-web [kernel] Start Web Dashboard (default: linux-6.6.1)\n");
-    printf("  report [kernel]    Generate PDF Security Audit Report (default: linux-6.6.1)\n");
+    printf("  start-web          Start Web Dashboard\n");
     printf("  git-hook           Install pre-commit git hook for automated scanning\n");
     printf("  clean              Remove build artifacts\n");
     printf("  status             Show installation and analysis status\n");
@@ -335,12 +329,7 @@ int main(int argc, char *argv[]) {
         return do_stop_db(app_dir);
     }
     else if (strcmp(cmd, "start-web") == 0) {
-        const char *kernel = (argc > 2) ? argv[2] : "linux-6.6.1";
-        return do_start_web(app_dir, kernel);
-    }
-    else if (strcmp(cmd, "report") == 0) {
-        const char *kernel = (argc > 2) ? argv[2] : "linux-6.6.1";
-        return do_generate_report(app_dir, kernel);
+        return do_start_web(app_dir, NULL);
     }
     else if (strcmp(cmd, "git-hook") == 0) {
         return do_install_git_hook(app_dir);

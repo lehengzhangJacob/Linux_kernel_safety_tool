@@ -1,9 +1,9 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g -I./src
 
-SRC = src/main.c src/analyzer.c src/utils.c
+SRC = src/main.c
 OBJ = $(SRC:.c=.o)
-TARGET = analyzer
+TARGET = kernel_analyzer
 
 all: $(TARGET)
 
@@ -15,6 +15,3 @@ $(TARGET): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
-
-test: $(TARGET)
-	./$(TARGET) test/sample_kernel.c

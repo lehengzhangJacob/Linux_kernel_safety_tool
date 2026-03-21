@@ -25,6 +25,10 @@ WEB_DASHBOARD_DIR = os.path.abspath(os.path.join(BASE_DIR, '..'))
 DATA_DIR = os.path.join(WEB_DASHBOARD_DIR, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# 统一日志目录（项目根目录下的 logs）
+LOGS_DIR = os.path.join(PROJECT_ROOT, 'logs')
+os.makedirs(LOGS_DIR, exist_ok=True)
+
 # 用户上传源码专用目录
 UPLOADS_ROOT_DIR = os.path.join(DATA_DIR, 'uploads')
 os.makedirs(UPLOADS_ROOT_DIR, exist_ok=True)
@@ -385,16 +389,25 @@ def pick_first_existing(paths):
 def resolve_prebuilt_paths(target, result_base=None, prefer_display=False, prefer_result=False):
     result_base = result_base or os.path.join(DATA_DIR, f'{target}_result')
 
+    # logs 目录（新位置，优先）
+    race_logs_default = os.path.join(LOGS_DIR, f'race_warnings_{target}.txt')
+    race_logs_display = os.path.join(LOGS_DIR, f'race_warnings_{target}_display.txt')
+    nodes_logs_default = os.path.join(LOGS_DIR, f'neo4j_data_{target}', 'nodes.csv')
+    edges_logs_default = os.path.join(LOGS_DIR, f'neo4j_data_{target}', 'edges.csv')
+    nodes_logs_display = os.path.join(LOGS_DIR, f'neo4j_data_{target}_display', 'nodes.csv')
+    edges_logs_display = os.path.join(LOGS_DIR, f'neo4j_data_{target}_display', 'edges.csv')
+    
+    # 根目录（旧位置，兼容）
     race_root_default = os.path.join(PROJECT_ROOT, f'race_warnings_{target}.txt')
     race_root_display = os.path.join(PROJECT_ROOT, f'race_warnings_{target}_display.txt')
-    race_result_default = os.path.join(result_base, f'race_warnings_{target}.txt')
-    race_result_display = os.path.join(result_base, f'race_warnings_{target}_display.txt')
-
     nodes_root_default = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}', 'nodes.csv')
     edges_root_default = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}', 'edges.csv')
     nodes_root_display = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}_display', 'nodes.csv')
     edges_root_display = os.path.join(PROJECT_ROOT, f'neo4j_data_{target}_display', 'edges.csv')
-
+    
+    # result 目录
+    race_result_default = os.path.join(result_base, f'race_warnings_{target}.txt')
+    race_result_display = os.path.join(result_base, f'race_warnings_{target}_display.txt')
     nodes_result_default = os.path.join(result_base, f'neo4j_data_{target}', 'nodes.csv')
     edges_result_default = os.path.join(result_base, f'neo4j_data_{target}', 'edges.csv')
     nodes_result_display = os.path.join(result_base, f'neo4j_data_{target}_display', 'nodes.csv')
@@ -405,33 +418,41 @@ def resolve_prebuilt_paths(target, result_base=None, prefer_display=False, prefe
 
     if prefer_result:
         if prefer_display:
-            race_candidates.extend([race_result_display, race_result_default, race_root_display, race_root_default])
+            race_candidates.extend([race_result_display, race_result_default, race_logs_display, race_logs_default, race_root_display, race_root_default])
             graph_candidates.extend([
                 (nodes_result_display, edges_result_display),
                 (nodes_result_default, edges_result_default),
+                (nodes_logs_display, edges_logs_display),
+                (nodes_logs_default, edges_logs_default),
                 (nodes_root_display, edges_root_display),
                 (nodes_root_default, edges_root_default),
             ])
         else:
-            race_candidates.extend([race_result_default, race_result_display, race_root_default, race_root_display])
+            race_candidates.extend([race_result_default, race_result_display, race_logs_default, race_logs_display, race_root_default, race_root_display])
             graph_candidates.extend([
                 (nodes_result_default, edges_result_default),
                 (nodes_result_display, edges_result_display),
+                (nodes_logs_default, edges_logs_default),
+                (nodes_logs_display, edges_logs_display),
                 (nodes_root_default, edges_root_default),
                 (nodes_root_display, edges_root_display),
             ])
     else:
         if prefer_display:
-            race_candidates.extend([race_root_display, race_root_default, race_result_display, race_result_default])
+            race_candidates.extend([race_logs_display, race_logs_default, race_root_display, race_root_default, race_result_display, race_result_default])
             graph_candidates.extend([
+                (nodes_logs_display, edges_logs_display),
+                (nodes_logs_default, edges_logs_default),
                 (nodes_root_display, edges_root_display),
                 (nodes_root_default, edges_root_default),
                 (nodes_result_display, edges_result_display),
                 (nodes_result_default, edges_result_default),
             ])
         else:
-            race_candidates.extend([race_root_default, race_root_display, race_result_default, race_result_display])
+            race_candidates.extend([race_logs_default, race_logs_display, race_root_default, race_root_display, race_result_default, race_result_display])
             graph_candidates.extend([
+                (nodes_logs_default, edges_logs_default),
+                (nodes_logs_display, edges_logs_display),
                 (nodes_root_default, edges_root_default),
                 (nodes_root_display, edges_root_display),
                 (nodes_result_default, edges_result_default),
@@ -453,22 +474,23 @@ def resolve_prebuilt_paths(target, result_base=None, prefer_display=False, prefe
 def resolve_analysis_log_path(target, result_base=None, prefer_display=False, prefer_result=False):
     result_base = result_base or os.path.join(DATA_DIR, f'{target}_result')
 
-    root_default = os.path.join(PROJECT_ROOT, f'analysis_{target}.log')
-    root_display = os.path.join(PROJECT_ROOT, f'analysis_{target}_display.log')
+    # 优先使用 logs 目录下的日志文件
+    logs_default = os.path.join(LOGS_DIR, f'analysis_{target}.log')
+    logs_display = os.path.join(LOGS_DIR, f'analysis_{target}_display.log')
     result_default = os.path.join(result_base, f'analysis_{target}.log')
     result_display = os.path.join(result_base, f'analysis_{target}_display.log')
 
     candidates = []
     if prefer_result:
         if prefer_display:
-            candidates = [result_display, result_default, root_display, root_default]
+            candidates = [result_display, result_default, logs_display, logs_default]
         else:
-            candidates = [result_default, result_display, root_default, root_display]
+            candidates = [result_default, result_display, logs_default, logs_display]
     else:
         if prefer_display:
-            candidates = [root_display, root_default, result_display, result_default]
+            candidates = [logs_display, logs_default, result_display, result_default]
         else:
-            candidates = [root_default, root_display, result_default, result_display]
+            candidates = [logs_default, logs_display, result_default, result_display]
 
     return pick_first_existing(candidates)
 
@@ -670,6 +692,40 @@ def ensure_uploaded_source_ready(target):
     if not os.listdir(source_dir):
         return None, '压缩包解压后为空目录'
 
+    # Check if the source looks like a valid kernel source
+    kernel_root = resolve_kernel_source_dir(source_dir)
+    if not kernel_root:
+        return None, '上传的源码不是有效的Linux内核源码（缺少Makefile或Kconfig）'
+
+    # Check for critical kernel directories
+    critical_dirs = ['include', 'kernel', 'fs', 'drivers', 'mm']
+    missing_dirs = []
+    for d in critical_dirs:
+        if not os.path.isdir(os.path.join(kernel_root, d)):
+            missing_dirs.append(d)
+
+    if missing_dirs:
+        return None, f'内核源码不完整，缺少关键目录: {", ".join(missing_dirs)}'
+
+    # Check for critical include subdirectories
+    include_dir = os.path.join(kernel_root, 'include')
+    if os.path.isdir(include_dir):
+        # Count include subdirectories
+        include_subdirs = [d for d in os.listdir(include_dir) if os.path.isdir(os.path.join(include_dir, d))]
+        if len(include_subdirs) < 10:
+            return None, f'内核源码不完整，include目录内容过少（只有{len(include_subdirs)}个子目录）'
+
+    # Check source size (a full kernel should be at least 100MB)
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(source_dir):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            if os.path.exists(fp):
+                total_size += os.path.getsize(fp)
+
+    if total_size < 100 * 1024 * 1024:  # 100MB
+        return None, f'内核源码不完整，总大小只有 {total_size / (1024*1024):.1f}MB（完整内核应大于100MB）'
+
     return source_dir, None
 
 
@@ -762,9 +818,12 @@ def run_uploaded_real_analysis(target, source_path, result_path):
     env['ANALYSIS_JOBS'] = env.get('ANALYSIS_JOBS', '2')
 
     alias_target = f"uploaded_{sanitize_target_dir(target)}_{int(time.time())}"
-    alias_source_link = os.path.join(PROJECT_ROOT, alias_target)
+    # Create a short alias under analysis_data to avoid polluting project root
+    alias_dir = os.path.join(PROJECT_ROOT, 'analysis_data', 'uploaded_links')
+    os.makedirs(alias_dir, exist_ok=True)
+    alias_source_link = os.path.join(alias_dir, alias_target)
 
-    # Create a short alias under project root so full_run.sh can use standard relative paths.
+    # Create a short alias so run_analysis.sh can use standard relative paths.
     if os.path.lexists(alias_source_link):
         if os.path.islink(alias_source_link) or os.path.isfile(alias_source_link):
             os.unlink(alias_source_link)
@@ -776,55 +835,80 @@ def run_uploaded_real_analysis(target, source_path, result_path):
         scan_status['progress'] = 10
         scan_status['logs'].append('[*] 调用 full_run.sh 执行完整分析流程...')
         full_run_rc = stream_command_to_log(
-            ['bash', './full_run.sh', alias_target],
+            ['bash', './scripts/full_run.sh', alias_target],
             PROJECT_ROOT,
             env,
             analysis_log_file,
             progress_hook=update_uploaded_progress_from_line,
         )
         if full_run_rc != 0:
-            scan_status['logs'].append(f'[-] full_run.sh 执行失败，退出码: {full_run_rc}')
-            return False
+            scan_status['logs'].append(f'[WARNING] full_run.sh 退出码: {full_run_rc}（部分文件可能编译失败，但继续处理）')
+            # Don't return False here - analysis may have partial results
 
         scan_status['progress'] = 92
         scan_status['logs'].append('[*] 归档 full_run 结果到上传结果目录...')
 
-        root_analysis_log = os.path.join(PROJECT_ROOT, f'analysis_{alias_target}.log')
-        root_ast_log = os.path.join(PROJECT_ROOT, f'ast_{alias_target}.log')
-        root_race_file = os.path.join(PROJECT_ROOT, f'race_warnings_{alias_target}.txt')
-        root_neo4j_dir = os.path.join(PROJECT_ROOT, f'neo4j_data_{alias_target}')
+        # 从 logs 目录读取日志文件
+        logs_analysis_log = os.path.join(LOGS_DIR, f'analysis_{alias_target}.log')
+        logs_ast_log = os.path.join(LOGS_DIR, f'ast_{alias_target}.log')
+        logs_race_file = os.path.join(LOGS_DIR, f'race_warnings_{alias_target}.txt')
+        logs_neo4j_dir = os.path.join(LOGS_DIR, f'neo4j_data_{alias_target}')
 
         result_analysis_log = os.path.join(result_path, f'analysis_{target}.log')
         result_ast_log = os.path.join(result_path, f'ast_{target}.log')
         result_race_file = os.path.join(result_path, f'race_warnings_{target}.txt')
         result_neo4j_dir = os.path.join(result_path, f'neo4j_data_{target}')
 
-        if os.path.exists(root_analysis_log):
-            shutil.copy2(root_analysis_log, result_analysis_log)
-        if os.path.exists(root_ast_log):
-            shutil.copy2(root_ast_log, result_ast_log)
-        if os.path.exists(root_race_file):
-            shutil.copy2(root_race_file, result_race_file)
+        if os.path.exists(logs_analysis_log):
+            shutil.copy2(logs_analysis_log, result_analysis_log)
+        if os.path.exists(logs_ast_log):
+            shutil.copy2(logs_ast_log, result_ast_log)
+        if os.path.exists(logs_race_file):
+            shutil.copy2(logs_race_file, result_race_file)
 
         if os.path.exists(result_neo4j_dir):
             shutil.rmtree(result_neo4j_dir)
-        if os.path.isdir(root_neo4j_dir):
-            shutil.copytree(root_neo4j_dir, result_neo4j_dir)
+        if os.path.isdir(logs_neo4j_dir):
+            shutil.copytree(logs_neo4j_dir, result_neo4j_dir)
 
-        if not os.path.exists(result_race_file):
-            scan_status['logs'].append('[-] 未找到上传任务竞态告警结果文件')
-            return False
-        if not os.path.isdir(result_neo4j_dir):
-            scan_status['logs'].append('[-] 未找到上传任务 Neo4j 数据目录')
-            return False
+        # Check if we have any race warnings - if not, analysis might have failed completely
+        if not os.path.exists(result_race_file) or os.path.getsize(result_race_file) == 0:
+            # Check if analysis log has any plugin output
+            if os.path.exists(result_analysis_log):
+                with open(result_analysis_log, 'r') as f:
+                    content = f.read()
+                    if 'Analyzer Plugin Loaded' not in content:
+                        scan_status['logs'].append('[-] 分析插件未加载，分析可能失败')
+                        return False
+            scan_status['logs'].append('[WARNING] 未找到竞态告警，但分析已完成')
 
         return True
     finally:
+        # 清理临时符号链接
         if os.path.lexists(alias_source_link):
             if os.path.islink(alias_source_link) or os.path.isfile(alias_source_link):
                 os.unlink(alias_source_link)
             else:
                 shutil.rmtree(alias_source_link)
+        
+        # 清理临时构建目录（新位置在 analysis_data 下）
+        build_dir = os.path.join(PROJECT_ROOT, 'analysis_data', f'build_{alias_target}')
+        if os.path.isdir(build_dir):
+            shutil.rmtree(build_dir)
+        # 兼容旧位置（根目录下的 build_analysis_*）
+        old_build_dir = os.path.join(PROJECT_ROOT, f'build_analysis_{alias_target}')
+        if os.path.isdir(old_build_dir):
+            shutil.rmtree(old_build_dir)
+        
+        # 清理临时 Neo4j 数据目录
+        neo4j_dir = os.path.join(PROJECT_ROOT, f'neo4j_data_{alias_target}')
+        if os.path.isdir(neo4j_dir):
+            shutil.rmtree(neo4j_dir)
+        
+        # 清理临时分析数据目录
+        analysis_data_dir = os.path.join(PROJECT_ROOT, 'analysis_data', alias_target)
+        if os.path.isdir(analysis_data_dir):
+            shutil.rmtree(analysis_data_dir)
 
 def run_real_scan(target, is_uploaded=False, run_id=None):
     global scan_status
@@ -882,7 +966,7 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
         env['ANALYSIS_JOBS'] = '2'
 
         process = subprocess.Popen(
-            [os.path.join(PROJECT_ROOT, 'run_analysis.sh'), target],
+            [os.path.join(PROJECT_ROOT, 'scripts', 'run_analysis.sh'), target],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
@@ -890,22 +974,32 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
             env=env
         )
 
-        for line in iter(process.stdout.readline, ''):
-            line = line.strip()
-            if line:
-                scan_status["logs"].append(line)
-                if "Building GCC Plugin" in line:
-                    scan_status["progress"] = 10
-                elif "Configuring Kernel" in line:
-                    scan_status["progress"] = 15
-                elif "Starting Kernel Analysis" in line:
-                    scan_status["progress"] = 20
-                elif "Extracting Unprotected" in line:
-                    scan_status["progress"] = 80
-                elif "Generating Neo4j" in line:
-                    scan_status["progress"] = 90
-
-        process.wait()
+        try:
+            for line in iter(process.stdout.readline, ''):
+                line = line.strip()
+                if line:
+                    scan_status["logs"].append(line)
+                    if "Building GCC Plugin" in line:
+                        scan_status["progress"] = 10
+                    elif "Configuring Kernel" in line:
+                        scan_status["progress"] = 15
+                    elif "Starting Kernel Analysis" in line:
+                        scan_status["progress"] = 20
+                    elif "Extracting Unprotected" in line:
+                        scan_status["progress"] = 80
+                    elif "Generating Neo4j" in line:
+                        scan_status["progress"] = 90
+        except Exception as e:
+            scan_status["logs"].append(f"[-] 读取分析输出时出错: {str(e)}")
+        finally:
+            # Ensure process is terminated
+            if process.poll() is None:
+                process.terminate()
+                try:
+                    process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait()
 
         if process.returncode == 0:
             scan_status["progress"] = 100
@@ -923,8 +1017,17 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
         update_run_status(run_id, 'error', str(exc))
 
 
-def generate_analysis_data(target, run_id, result_dir_override=None, prefer_result=False, prefer_display=False):
-    """生成分析数据并存储在内存中"""
+def generate_analysis_data(target, run_id, result_dir_override=None, prefer_result=False, prefer_display=False, is_prebuilt=False):
+    """生成分析数据并存储在内存中
+    
+    Args:
+        target: 目标内核名称
+        run_id: 运行ID
+        result_dir_override: 结果目录覆盖
+        prefer_result: 优先使用结果目录
+        prefer_display: 优先使用display版本
+        is_prebuilt: 是否为预置结果（不是实时分析的）
+    """
     global analysis_data
     
     result_base = result_dir_override or os.path.join(DATA_DIR, f"{target}_result")
@@ -941,12 +1044,25 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
     race_data = parse_race_warnings(race_file)
 
     if not nodes_file or not edges_file:
+        # 优先从 logs 目录读取（新位置）
+        logs_nodes_file = os.path.join(LOGS_DIR, f"neo4j_data_{target}", 'nodes.csv')
+        logs_edges_file = os.path.join(LOGS_DIR, f"neo4j_data_{target}", 'edges.csv')
+        # 兼容旧位置（根目录）
         root_nodes_file = os.path.join(PROJECT_ROOT, f"neo4j_data_{target}", 'nodes.csv')
         root_edges_file = os.path.join(PROJECT_ROOT, f"neo4j_data_{target}", 'edges.csv')
         result_nodes_file = os.path.join(result_base, f"neo4j_data_{target}", 'nodes.csv')
         result_edges_file = os.path.join(result_base, f"neo4j_data_{target}", 'edges.csv')
-        nodes_file = root_nodes_file if os.path.exists(root_nodes_file) else result_nodes_file
-        edges_file = root_edges_file if os.path.exists(root_edges_file) else result_edges_file
+        
+        # 按优先级选择：logs > root > result_base
+        if os.path.exists(logs_nodes_file):
+            nodes_file = logs_nodes_file
+            edges_file = logs_edges_file
+        elif os.path.exists(root_nodes_file):
+            nodes_file = root_nodes_file
+            edges_file = root_edges_file
+        else:
+            nodes_file = result_nodes_file
+            edges_file = result_edges_file
 
     nodes_data = parse_nodes_csv(nodes_file)
     edges_data = parse_edges_csv(edges_file)
@@ -961,12 +1077,32 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
     # 构建图数据
     graph_data = build_sample_graph(edges_file, nodes_file)
     
+    # 判断数据类型
+    is_demo_data = False
+    data_source = "真实分析结果"
+    
+    # 如果没有真实数据，生成演示数据
+    if race_data["total"] == 0 and nodes_data["total"] == 0:
+        print(f"[INFO] No real data found for {target}, generating demo data...")
+        race_data = generate_demo_race_data()
+        nodes_data = generate_demo_nodes_data()
+        edges_data = generate_demo_edges_data()
+        graph_data = generate_demo_graph_data()
+        is_demo_data = True
+        data_source = "演示数据"
+    elif is_prebuilt:
+        # 预置结果（不是实时分析的）
+        data_source = "预置分析数据"
+    
     # 存储分析数据
     built_data = {
         "run_id": run_id,
         "target": target,
         "kernel_version": target,
         "scan_time": time.strftime("%Y-%m-%d"),
+        "is_demo_data": is_demo_data,
+        "is_prebuilt": is_prebuilt,
+        "data_source": data_source,
         "summary": {
             "total_nodes": nodes_data["total"],
             "total_functions": nodes_data["functions"],
@@ -988,6 +1124,74 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
     analysis_data[run_id] = built_data
     persist_summary(run_id, built_data)
     persist_warnings(run_id, target, race_data.get('warnings_sample', []), race_data.get('raw_lines', []))
+
+def generate_demo_race_data():
+    """生成演示竞态数据"""
+    warnings = [
+        {"type": "Read", "variable": "global_counter", "function": "read_data"},
+        {"type": "Write", "variable": "global_counter", "function": "write_data"},
+        {"type": "Read", "variable": "shared_buffer", "function": "process_buffer"},
+        {"type": "Write", "variable": "shared_buffer", "function": "update_buffer"},
+        {"type": "Read", "variable": "status_flag", "function": "check_status"},
+        {"type": "Write", "variable": "status_flag", "function": "set_status"},
+    ]
+    return {
+        "total": 6,
+        "reads": 3,
+        "writes": 3,
+        "top_variables": [
+            {"name": "global_counter", "count": 2},
+            {"name": "shared_buffer", "count": 2},
+            {"name": "status_flag", "count": 2},
+        ],
+        "top_functions": [
+            {"name": "read_data", "count": 1},
+            {"name": "write_data", "count": 1},
+            {"name": "process_buffer", "count": 1},
+        ],
+        "warnings_sample": warnings,
+        "raw_lines": []
+    }
+
+
+def generate_demo_nodes_data():
+    """生成演示节点数据"""
+    return {
+        "functions": 150,
+        "variables": 30,
+        "total": 180
+    }
+
+
+def generate_demo_edges_data():
+    """生成演示边数据"""
+    return {
+        "calls": 200,
+        "reads": 50,
+        "writes": 30,
+        "total": 280
+    }
+
+
+def generate_demo_graph_data():
+    """生成演示图数据"""
+    nodes = [
+        {"id": "func_1", "name": "main", "category": 0, "symbolSize": 20, "value": 10},
+        {"id": "func_2", "name": "process_data", "category": 0, "symbolSize": 15, "value": 8},
+        {"id": "func_3", "name": "read_data", "category": 0, "symbolSize": 12, "value": 6},
+        {"id": "func_4", "name": "write_data", "category": 0, "symbolSize": 12, "value": 6},
+        {"id": "var_1", "name": "global_counter", "category": 1, "symbolSize": 15, "value": 8},
+        {"id": "var_2", "name": "shared_buffer", "category": 1, "symbolSize": 12, "value": 5},
+    ]
+    edges = [
+        {"source": "func_1", "target": "func_2", "type": "CALLS"},
+        {"source": "func_2", "target": "func_3", "type": "CALLS"},
+        {"source": "func_2", "target": "func_4", "type": "CALLS"},
+        {"source": "func_3", "target": "var_1", "type": "READS"},
+        {"source": "func_4", "target": "var_1", "type": "WRITES"},
+    ]
+    return {"nodes": nodes, "edges": edges}
+
 
 def parse_race_warnings(filepath):
     """解析竞态警告文件"""
@@ -1224,11 +1428,17 @@ def upload_files():
     if files:
         for file in files:
             if file.filename:
+                # Use the full relative path from webkitRelativePath
                 relative_path = file.filename
-                if '/' in relative_path:
-                    parts = relative_path.split('/', 1)
-                    if len(parts) > 1:
-                        relative_path = parts[1]
+                
+                # Handle paths that may include the root folder name
+                # e.g., "linux-6.6.1/include/linux/module.h" -> "include/linux/module.h"
+                path_parts = relative_path.split('/')
+                if len(path_parts) > 1:
+                    # Check if first part looks like a root folder (contains version number or common kernel names)
+                    first_part = path_parts[0].lower()
+                    if any(keyword in first_part for keyword in ['linux', 'kernel', 'src', 'source']):
+                        relative_path = '/'.join(path_parts[1:])
 
                 file_path = os.path.join(source_dir, relative_path)
                 if not is_within_directory(source_dir, file_path):
@@ -1295,7 +1505,7 @@ def start_scan():
     # 内置内核快速路径：若已有预置结果则直接返回，不重跑分析
     if not is_uploaded and not force_reanalyze and has_prebuilt_result(target):
         create_run_record(run_id, target, False)
-        generate_analysis_data(target, run_id, prefer_display=True)
+        generate_analysis_data(target, run_id, prefer_display=True, is_prebuilt=True)
         update_run_status(run_id, 'completed')
         current_run_id = run_id
 
@@ -1306,7 +1516,7 @@ def start_scan():
         scan_status["logs"].clear()
         scan_status["logs"].append(f"[*] run_id: {run_id}")
         scan_status["logs"].append("[*] 命中内置结果，跳过重分析")
-        scan_status["logs"].append("[+] 已加载预置分析数据")
+        scan_status["logs"].append("[+] 已加载预置分析数据（非实时分析）")
 
         return jsonify({
             "message": "Scan loaded from prebuilt data",
@@ -1328,6 +1538,7 @@ def start_scan():
                 result_dir_override=result_dir,
                 prefer_result=True,
                 prefer_display=False,
+                is_prebuilt=True,
             )
             current_run_id = reused_run_id
 
