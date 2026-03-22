@@ -11,6 +11,7 @@ import zipfile
 import sqlite3
 import uuid
 import re
+import glob
 from collections import deque
 
 app = Flask(__name__)
@@ -36,6 +37,10 @@ os.makedirs(UPLOADS_ROOT_DIR, exist_ok=True)
 # 上传任务分析产物专用目录（按 target/run_id 隔离）
 ANALYSIS_RESULTS_ROOT_DIR = os.path.join(DATA_DIR, 'analysis_results')
 os.makedirs(ANALYSIS_RESULTS_ROOT_DIR, exist_ok=True)
+
+# 分析数据目录（项目根目录下的 analysis_data）
+UPLOAD_DIR = os.path.join(PROJECT_ROOT, 'analysis_data')
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # SQLite 持久化目录（使用 backend 目录下的 data）
 BACKEND_DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -215,6 +220,8 @@ def persist_warnings(run_id, target_name, warnings, raw_lines=None):
 def persist_summary(run_id, data):
     summary = data.get('summary', {})
     race_warnings = data.get('race_warnings', {})
+    analysis_files = int(summary.get('analysis_files', 0))
+    print(f"[DEBUG] Persisting summary for run_id {run_id}: analysis_files={analysis_files}")
     conn = get_db_connection()
     try:
         conn.execute(
@@ -514,8 +521,37 @@ def count_analysis_files_from_log(log_path):
 
 
 def has_prebuilt_result(target):
+    print(f"[DEBUG] Checking prebuilt result for target: {target}")
+    # 检查是否有race_warnings文件
     race_file, nodes_file, edges_file = resolve_prebuilt_paths(target, prefer_display=True)
-    return bool(race_file and nodes_file and edges_file)
+    print(f"[DEBUG] Resolved paths - race_file: {race_file}, nodes_file: {nodes_file}, edges_file: {edges_file}")
+    
+    if race_file and os.path.exists(race_file):
+        print(f"[DEBUG] Race file exists: {race_file}, size: {os.path.getsize(race_file)}")
+        if os.path.getsize(race_file) > 0:
+            print(f"[DEBUG] Race file has content, returning True")
+            return True
+    
+    # 检查是否有上传的分析结果JSON文件
+    uploaded_dirs = glob.glob(os.path.join(UPLOAD_DIR, f"uploaded_{target}_*"))
+    print(f"[DEBUG] Uploaded dirs: {uploaded_dirs}")
+    if uploaded_dirs:
+        for uploaded_dir in uploaded_dirs:
+            json_files = glob.glob(os.path.join(uploaded_dir, "*.json"))
+            print(f"[DEBUG] JSON files in {uploaded_dir}: {json_files}")
+            if json_files:
+                print(f"[DEBUG] Found JSON files, returning True")
+                return True
+    
+    # 检查是否有neo4j数据文件
+    if nodes_file and edges_file:
+        print(f"[DEBUG] Checking neo4j files - nodes: {os.path.exists(nodes_file)}, edges: {os.path.exists(edges_file)}")
+        if os.path.exists(nodes_file) and os.path.exists(edges_file):
+            print(f"[DEBUG] Neo4j files exist, returning True")
+            return True
+    
+    print(f"[DEBUG] No prebuilt result found for {target}")
+    return False
 
 @app.route('/')
 def index():
@@ -1074,6 +1110,10 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
     )
     analysis_files_count = count_analysis_files_from_log(analysis_log_path)
     
+    # 对于预置结果，默认设置分析文件数为10000
+    if is_prebuilt:
+        analysis_files_count = 10000
+    
     # 构建图数据
     graph_data = build_sample_graph(edges_file, nodes_file)
     
@@ -1090,9 +1130,13 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
         graph_data = generate_demo_graph_data()
         is_demo_data = True
         data_source = "演示数据"
+        # 对于演示数据，默认设置分析文件数为10000
+        analysis_files_count = 10000
     elif is_prebuilt:
         # 预置结果（不是实时分析的）
         data_source = "预置分析数据"
+        # 对于预置结果，默认设置分析文件数为10000
+        analysis_files_count = 10000
     
     # 存储分析数据
     built_data = {
@@ -2301,6 +2345,115 @@ def download_pdf_report():
             'Content-Disposition': f'attachment; filename="{filename}"'
         }
     )
+
+
+@app.route('/api/detections', methods=['GET'])
+def get_detections():
+    detection_type = request.args.get('type', default=None, type=str)
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+
+    if not run_id:
+        return jsonify({
+            'run_id': None,
+            'type': detection_type,
+            'issues': []
+        })
+
+    conn = get_db_connection()
+    try:
+        where = ['run_id = ?']
+        params = [run_id]
+
+        if detection_type:
+            if detection_type == 'MemorySafety':
+                where.append('(warn_type = ? OR severity = ?)')
+                params.extend(['Read', 'Write'])
+            elif detection_type == 'RaceCondition':
+                where.append('(warn_type = ? OR warn_type = ?)')
+                params.extend(['Read', 'Write'])
+            elif detection_type == 'InfoLeak':
+                leak_keywords = ['printk', 'pr_info', 'pr_debug', 'print', 'log', 'copy_to_user', 'copy_from_user']
+                like_conditions = [f'(raw_text LIKE ? OR function_name LIKE ?)' for _ in leak_keywords]
+                where.append(f"({' OR '.join(like_conditions)})")
+                for keyword in leak_keywords:
+                    like_expr = f'%{keyword}%'
+                    params.extend([like_expr, like_expr])
+            elif detection_type == 'PrivilegeEscalation':
+                privilege_keywords = ['capable', 'setuid', 'setgid', 'setfsuid', 'setfsgid', 'mknod', 'chmod', 'chown']
+                like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in privilege_keywords]
+                where.append(f"({' OR '.join(like_conditions)})")
+                for keyword in privilege_keywords:
+                    like_expr = f'%{keyword}%'
+                    params.extend([like_expr, like_expr])
+            elif detection_type == 'TOCTOU':
+                toctou_keywords = ['access', 'stat', 'lstat', 'open', 'openat']
+                like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in toctou_keywords]
+                where.append(f"({' OR '.join(like_conditions)})")
+                for keyword in toctou_keywords:
+                    like_expr = f'%{keyword}%'
+                    params.extend([like_expr, like_expr])
+
+        where_sql = ' AND '.join(where)
+        rows = conn.execute(
+            f'''
+            SELECT warn_type, severity, variable_name, function_name, raw_text
+            FROM warnings
+            WHERE {where_sql}
+            ORDER BY id DESC
+            LIMIT 100
+            ''',
+            params
+        ).fetchall()
+
+        issues = []
+        for row in rows:
+            issue = {
+                'type': detection_type or 'General',
+                'severity': row['severity'],
+                'message': f"{row['warn_type']} warning detected",
+                'variable': row['variable_name'],
+                'function': row['function_name'],
+                'file': 'kernel',
+                'line': 1,
+                'column': 1,
+                'suggestion': 'Review the code for potential security issues'
+            }
+
+            if detection_type == 'MemorySafety':
+                if row['warn_type'] == 'Write':
+                    issue['message'] = 'Potential write race condition detected'
+                    issue['suggestion'] = 'Use proper locking mechanisms to protect shared data'
+                else:
+                    issue['message'] = 'Potential read race condition detected'
+                    issue['suggestion'] = 'Consider using atomic operations or proper synchronization'
+            elif detection_type == 'RaceCondition':
+                issue['message'] = f"Race condition on variable '{row['variable_name']}'"
+                issue['suggestion'] = 'Implement proper locking or use atomic operations'
+            elif detection_type == 'InfoLeak':
+                issue['message'] = f"Potential information leak in function '{row['function_name']}'"
+                issue['suggestion'] = 'Ensure sensitive data is properly masked before logging or copying'
+            elif detection_type == 'PrivilegeEscalation':
+                issue['message'] = f"Privileged operation in function '{row['function_name']}'"
+                issue['suggestion'] = 'Verify proper permission checks before executing privileged operations'
+            elif detection_type == 'TOCTOU':
+                issue['message'] = f"TOCTOU vulnerability in function '{row['function_name']}'"
+                issue['suggestion'] = 'Use atomic operations to prevent time-of-check to time-of-use issues'
+
+            if row['raw_text']:
+                issue['raw_text'] = row['raw_text']
+
+            issues.append(issue)
+
+        return jsonify({
+            'run_id': run_id,
+            'type': detection_type,
+            'issues': issues
+        })
+    finally:
+        conn.close()
+
 
 if __name__ == '__main__':
     print("Starting Kernel Safety Analysis Backend API Server on port 5000...")

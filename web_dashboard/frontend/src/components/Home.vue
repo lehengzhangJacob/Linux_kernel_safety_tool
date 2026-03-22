@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <MainNav :has-audit-data="scanComplete" />
     <!-- 背景装饰 -->
     <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.2), rgba(126, 34, 206, 0.2));"></div>
     <div class="grid-container absolute inset-0 opacity-10 z-0">
@@ -266,9 +267,13 @@
 
 <script>
 import axios from 'axios'
+import MainNav from './navigation/MainNav.vue'
 
 export default {
   name: 'Home',
+  components: {
+    MainNav
+  },
   data() {
     return {
       scanMode: 'server',
@@ -407,6 +412,7 @@ export default {
             this.scanComplete = true
             this.isScanning = false
             this.progress = 100
+            localStorage.setItem('hasAuditData', 'true')
             // 获取数据类型信息
             this.fetchDataSourceInfo()
             setTimeout(() => {
@@ -460,6 +466,7 @@ export default {
         this.isScanning = false
         this.scanComplete = true
         this.progress = 100
+        localStorage.setItem('hasAuditData', 'true')
         if (showAlert) {
           alert('已恢复最近一次完成的分析结果，无需重新审计。')
         }

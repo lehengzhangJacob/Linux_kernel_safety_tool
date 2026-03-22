@@ -1,5 +1,6 @@
 <template>
   <div class="dashboard">
+    <MainNav :has-audit-data="!!data" />
     <!-- 背景装饰 -->
     <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.1), rgba(79, 70, 229, 0.1));"></div>
     
@@ -334,12 +335,16 @@ import axios from 'axios'
 import * as echarts from 'echarts'
 import jsPDF from 'jspdf'
 import 'jspdf-autotable'
+import MainNav from './navigation/MainNav.vue'
 
 // 将jsPDF添加到window对象，以便在方法中使用
 window.jspdf = { jsPDF }
 
 export default {
   name: 'Dashboard',
+  components: {
+    MainNav
+  },
   data() {
     return {
       data: null,

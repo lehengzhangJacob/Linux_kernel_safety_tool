@@ -22,9 +22,11 @@ CROSS_COMPILE=""
 cd "$PROJECT_ROOT"
 
 # Determine kernel source path
-# Check multiple locations: PROJECT_ROOT, analysis_data/uploaded_links, or absolute path
+# Check multiple locations: PROJECT_ROOT, analysis_data, analysis_data/uploaded_links, or absolute path
 if [ -d "$PROJECT_ROOT/$KERNEL_SRC" ]; then
     KERNEL_SRC_PATH="$PROJECT_ROOT/$KERNEL_SRC"
+elif [ -d "$PROJECT_ROOT/analysis_data/$KERNEL_SRC" ]; then
+    KERNEL_SRC_PATH="$PROJECT_ROOT/analysis_data/$KERNEL_SRC"
 elif [ -d "$PROJECT_ROOT/analysis_data/uploaded_links/$KERNEL_SRC" ]; then
     KERNEL_SRC_PATH="$PROJECT_ROOT/analysis_data/uploaded_links/$KERNEL_SRC"
 elif [ -d "$KERNEL_SRC" ]; then
@@ -33,6 +35,7 @@ else
     echo "[-] Error: Kernel source directory not found: $KERNEL_SRC"
     echo "[-] Checked locations:"
     echo "    - $PROJECT_ROOT/$KERNEL_SRC"
+    echo "    - $PROJECT_ROOT/analysis_data/$KERNEL_SRC"
     echo "    - $PROJECT_ROOT/analysis_data/uploaded_links/$KERNEL_SRC"
     echo "    - $KERNEL_SRC (absolute path)"
     exit 1
@@ -122,7 +125,7 @@ make -C "$KERNEL_SRC_PATH" O="$BUILD_DIR" ARCH=$ARCH \
 
 # Extract Race Warnings to a separate list
 echo "[*] Extracting Unprotected Global Variable Access List..."
-grep "\[RACE_WARNING\]" "$LOGS_DIR/analysis_${KERNEL_SRC}.log" > "$LOGS_DIR/race_warnings_${KERNEL_SRC}.txt" || true
+grep "[RACE_WARNING]" "$LOGS_DIR/analysis_${KERNEL_SRC}.log" > "$LOGS_DIR/race_warnings_${KERNEL_SRC}.txt" || true
 echo "    Unprotected accesses saved to: logs/race_warnings_${KERNEL_SRC}.txt"
 
 echo "[*] Analysis finished."
@@ -140,7 +143,7 @@ echo "    Check 'logs/race_warnings_${KERNEL_SRC}.txt' for the list of unprotect
 echo "[*] Generating Neo4j Import Data..."
 # Pass the data directory and output directory to the script
 # Output to logs directory to avoid polluting project root
-NEO4J_OUTPUT_DIR="$PROJECT_ROOT/neo4j_data_${KERNEL_SRC}"
+NEO4J_OUTPUT_DIR="$PROJECT_ROOT/logs/neo4j_data_${KERNEL_SRC}"
 mkdir -p "$NEO4J_OUTPUT_DIR"
 if python3 "$PROJECT_ROOT/tools/export_to_neo4j.py" "$ANALYSIS_JSON_DIR" "$NEO4J_OUTPUT_DIR"; then
     echo "[+] Neo4j data generation completed successfully"
