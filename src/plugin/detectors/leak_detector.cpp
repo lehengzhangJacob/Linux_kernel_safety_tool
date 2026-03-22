@@ -1,9 +1,24 @@
 #include "leak_detector.h"
+#if __has_include(<gimple.h>)
 #include <gimple.h>
+#elif __has_include("/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gimple.h")
+#include "/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gimple.h"
+#endif
+
+#if __has_include(<gimple-iterator.h>)
 #include <gimple-iterator.h>
+#elif __has_include("/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gimple-iterator.h")
+#include "/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gimple-iterator.h"
+#endif
+
+#if __has_include(<tree.h>)
 #include <tree.h>
+#elif __has_include("/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/tree.h")
+#include "/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/tree.h"
+#endif
 #include <string.h>
 #include <algorithm>
+#include <vector>
 
 // -----------------------------------------------------------------------------
 // InfoLeakDetector Implementation
@@ -219,16 +234,18 @@ bool InfoLeakDetector::is_log_function(gimple *stmt) {
     std::string fname(name);
     std::transform(fname.begin(), fname.end(), fname.begin(), ::tolower);
 
-    static std::set<std::string> log_functions = {
-        "printk", "pr_info", "pr_warn", "pr_err", "pr_debug",
-        "dev_info", "dev_warn", "dev_err", "dev_dbg",
-        "netdev_info", "netdev_warn", "netdev_err",
-        "dprintk", "vprintk",
-        "printf", "fprintf", "sprintf", "snprintf",
-        "syslog", "syslog_printk"
+    static const std::vector<std::string> log_keywords = {
+        "printk", "pr_", "dev_", "netdev_", "dprintk", "vprintk",
+        "printf", "fprintf", "sprintf", "snprintf", "seq_printf", "trace_printk", "syslog"
     };
 
-    return log_functions.count(fname) > 0;
+    for (const auto& kw : log_keywords) {
+        if (fname.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool InfoLeakDetector::is_error_output(gimple *stmt) {
@@ -243,13 +260,17 @@ bool InfoLeakDetector::is_error_output(gimple *stmt) {
     std::string fname(name);
     std::transform(fname.begin(), fname.end(), fname.begin(), ::tolower);
 
-    static std::set<std::string> error_functions = {
-        "warn", "warning", "error", "err",
-        "panic", "bug", "dump_stack",
-        "WARN_ON", "BUG_ON", "WARN_ON_ONCE"
+    static const std::vector<std::string> error_keywords = {
+        "warn", "warning", "error", "err", "panic", "bug", "oops", "dump_stack"
     };
 
-    return error_functions.count(fname) > 0;
+    for (const auto& kw : error_keywords) {
+        if (fname.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool InfoLeakDetector::is_network_output(gimple *stmt) {
@@ -264,16 +285,18 @@ bool InfoLeakDetector::is_network_output(gimple *stmt) {
     std::string fname(name);
     std::transform(fname.begin(), fname.end(), fname.begin(), ::tolower);
 
-    static std::set<std::string> network_functions = {
-        "send", "sendto", "sendmsg", "sendmmsg",
-        "write", "writev", "pwrite", "pwritev",
-        "sys_write", "sys_send", "sys_sendto", "sys_sendmsg",
-        "tcp_sendmsg", "udp_sendmsg", "sock_sendmsg",
-        "net_sendmsg", "net_write", "ip_send_skb",
-        "sk_sendmsg", "sk_write", "sock_write"
+    static const std::vector<std::string> network_keywords = {
+        "send", "sendto", "sendmsg", "sendmmsg", "sock_send", "tcp_send", "udp_send",
+        "ip_send", "net_send", "xmit", "transmit", "copy_to_user", "put_user"
     };
 
-    return network_functions.count(fname) > 0;
+    for (const auto& kw : network_keywords) {
+        if (fname.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool InfoLeakDetector::is_file_output(gimple *stmt) {
@@ -288,33 +311,103 @@ bool InfoLeakDetector::is_file_output(gimple *stmt) {
     std::string fname(name);
     std::transform(fname.begin(), fname.end(), fname.begin(), ::tolower);
 
-    static std::set<std::string> file_functions = {
-        "fwrite", "fprintf", "fputs", "fputc",
-        "write", "writev", "pwrite", "pwritev",
-        "sys_write", "sys_pwrite", "filp_write",
-        "vfs_write", "vfs_pwrite", "kernel_write",
-        "file_write", "file_putc", "file_puts"
+    static const std::vector<std::string> file_keywords = {
+        "fwrite", "fprintf", "fputs", "fputc", "write", "pwrite", "writev",
+        "filp_write", "vfs_write", "kernel_write", "seq_write", "proc_write",
+        "sys_write", "copy_from_user"
     };
 
-    return file_functions.count(fname) > 0;
+    for (const auto& kw : file_keywords) {
+        if (fname.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void InfoLeakDetector::check_log_output(gimple *stmt) {
     if (!is_log_function(stmt) && !is_error_output(stmt) && 
         !is_network_output(stmt) && !is_file_output(stmt)) return;
 
+    auto is_pointer_format_leak = [](tree expr) -> bool {
+        tree v = expr;
+        if (!v) return false;
+        if (TREE_CODE(v) == ADDR_EXPR) {
+            v = TREE_OPERAND(v, 0);
+        }
+        if (!v || TREE_CODE(v) != STRING_CST) return false;
+
+        const char* fmt = TREE_STRING_POINTER(v);
+        if (!fmt) return false;
+
+        std::string lower_fmt(fmt);
+        std::transform(lower_fmt.begin(), lower_fmt.end(), lower_fmt.begin(), ::tolower);
+        return lower_fmt.find("%p") != std::string::npos;
+    };
+
+    bool reported_pointer_fmt = false;
+
     for (unsigned i = 0; i < gimple_call_num_args(stmt); i++) {
         tree arg = gimple_call_arg(stmt, i);
         if (!arg) continue;
 
-        tree arg_val = arg;
-        if (TREE_CODE(arg) == ADDR_EXPR) {
-            arg_val = TREE_OPERAND(arg, 0);
+        auto extract_name = [](tree expr) -> std::string {
+            if (!expr) return "";
+
+            tree v = expr;
+            if (TREE_CODE(v) == ADDR_EXPR) {
+                v = TREE_OPERAND(v, 0);
+            }
+
+            if (TREE_CODE(v) == SSA_NAME) {
+                tree ssa_var = SSA_NAME_VAR(v);
+                if (ssa_var) {
+                    v = ssa_var;
+                }
+            }
+
+            if (DECL_P(v) && DECL_NAME(v)) {
+                return std::string(IDENTIFIER_POINTER(DECL_NAME(v)));
+            }
+
+            if (TREE_CODE(v) == COMPONENT_REF) {
+                tree field = TREE_OPERAND(v, 1);
+                if (field && DECL_P(field) && DECL_NAME(field)) {
+                    return std::string(IDENTIFIER_POINTER(DECL_NAME(field)));
+                }
+            }
+
+            return "";
+        };
+
+        std::string arg_name = extract_name(arg);
+        std::string lower_arg_name = arg_name;
+        std::transform(lower_arg_name.begin(), lower_arg_name.end(), lower_arg_name.begin(), ::tolower);
+
+        bool sensitive_arg = false;
+        if (!arg_name.empty() && is_sensitive_data(arg_name)) {
+            sensitive_arg = true;
         }
 
         // 检查敏感变量
-        if (DECL_P(arg_val) && sensitive_vars.count(arg_val) > 0) {
-            std::string var_name = sensitive_vars[arg_val];
+        if (!sensitive_arg) {
+            tree lookup = arg;
+            if (TREE_CODE(lookup) == ADDR_EXPR) {
+                lookup = TREE_OPERAND(lookup, 0);
+            }
+            if (TREE_CODE(lookup) == SSA_NAME && SSA_NAME_VAR(lookup)) {
+                lookup = SSA_NAME_VAR(lookup);
+            }
+
+            if (lookup && sensitive_vars.count(lookup) > 0) {
+                sensitive_arg = true;
+                arg_name = sensitive_vars[lookup];
+            }
+        }
+
+        if (sensitive_arg) {
+            std::string var_name = arg_name.empty() ? "sensitive_data" : arg_name;
             expanded_location loc;
             loc = expand_location(gimple_location(stmt));
 
@@ -350,6 +443,19 @@ void InfoLeakDetector::check_log_output(gimple *stmt) {
             add_result("InfoLeak", severity, msg, loc.line, loc.column,
                       "Avoid hardcoding sensitive data; use environment variables or configuration files");
         }
+
+        // 内核常见信息泄露：日志/错误输出直接打印指针地址（%p 及其变体）。
+        if (!reported_pointer_fmt && (is_log_function(stmt) || is_error_output(stmt)) && is_pointer_format_leak(arg)) {
+            expanded_location loc;
+            loc = expand_location(gimple_location(stmt));
+            add_result(
+                "InfoLeak", "Medium",
+                "Potential kernel pointer address leakage via format string (%p)",
+                loc.line, loc.column,
+                "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+            );
+            reported_pointer_fmt = true;
+        }
     }
 }
 
@@ -373,12 +479,36 @@ void InfoLeakDetector::analyze_function(tree fndecl) {
                 tree lhs = gimple_assign_lhs(stmt);
                 tree rhs1 = gimple_assign_rhs1(stmt);
 
-                if (lhs && DECL_P(lhs)) {
-                    track_sensitive_data_flow(lhs, bb);
+                if (lhs) {
+                    tree lhs_var = lhs;
+                    if (TREE_CODE(lhs_var) == SSA_NAME && SSA_NAME_VAR(lhs_var)) {
+                        lhs_var = SSA_NAME_VAR(lhs_var);
+                    }
+                    if (TREE_CODE(lhs_var) == COMPONENT_REF) {
+                        tree field = TREE_OPERAND(lhs_var, 1);
+                        if (field && DECL_P(field)) {
+                            track_sensitive_data_flow(field, bb);
+                        }
+                    }
+                    if (lhs_var && DECL_P(lhs_var)) {
+                        track_sensitive_data_flow(lhs_var, bb);
+                    }
                 }
 
-                if (rhs1 && DECL_P(rhs1)) {
-                    track_sensitive_data_flow(rhs1, bb);
+                if (rhs1) {
+                    tree rhs_var = rhs1;
+                    if (TREE_CODE(rhs_var) == SSA_NAME && SSA_NAME_VAR(rhs_var)) {
+                        rhs_var = SSA_NAME_VAR(rhs_var);
+                    }
+                    if (TREE_CODE(rhs_var) == COMPONENT_REF) {
+                        tree field = TREE_OPERAND(rhs_var, 1);
+                        if (field && DECL_P(field)) {
+                            track_sensitive_data_flow(field, bb);
+                        }
+                    }
+                    if (rhs_var && DECL_P(rhs_var)) {
+                        track_sensitive_data_flow(rhs_var, bb);
+                    }
                 }
             }
 
@@ -386,8 +516,24 @@ void InfoLeakDetector::analyze_function(tree fndecl) {
             if (is_gimple_call(stmt)) {
                 for (unsigned i = 0; i < gimple_call_num_args(stmt); i++) {
                     tree arg = gimple_call_arg(stmt, i);
-                    if (arg && DECL_P(arg)) {
-                        track_sensitive_data_flow(arg, bb);
+                    if (!arg) continue;
+
+                    tree arg_var = arg;
+                    if (TREE_CODE(arg_var) == ADDR_EXPR) {
+                        arg_var = TREE_OPERAND(arg_var, 0);
+                    }
+                    if (TREE_CODE(arg_var) == SSA_NAME && SSA_NAME_VAR(arg_var)) {
+                        arg_var = SSA_NAME_VAR(arg_var);
+                    }
+                    if (TREE_CODE(arg_var) == COMPONENT_REF) {
+                        tree field = TREE_OPERAND(arg_var, 1);
+                        if (field && DECL_P(field)) {
+                            track_sensitive_data_flow(field, bb);
+                        }
+                    }
+
+                    if (arg_var && DECL_P(arg_var)) {
+                        track_sensitive_data_flow(arg_var, bb);
                     }
                 }
             }

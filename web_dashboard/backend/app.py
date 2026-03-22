@@ -386,6 +386,48 @@ def delete_run_records(run_ids):
         conn.close()
 
 
+def purge_uploaded_reports(target_name):
+    safe_target = sanitize_target_dir(target_name)
+    conn = get_db_connection()
+    try:
+        rows = conn.execute(
+            '''
+            SELECT run_id, status
+            FROM analysis_runs
+            WHERE target_name = ? AND is_uploaded = 1
+            ''',
+            (safe_target,),
+        ).fetchall()
+    finally:
+        conn.close()
+
+    running = [r['run_id'] for r in rows if (r['status'] or '').lower() == 'running']
+    if running:
+        return {
+            'ok': False,
+            'reason': 'running',
+            'running_run_ids': running,
+            'deleted_run_ids': [],
+        }
+
+    run_ids = [r['run_id'] for r in rows]
+    removed_result_dirs = []
+    for rid in run_ids:
+        result_dir = get_run_result_dir(safe_target, rid)
+        if os.path.isdir(result_dir):
+            shutil.rmtree(result_dir)
+            removed_result_dirs.append(result_dir)
+
+    delete_run_records(run_ids)
+    return {
+        'ok': True,
+        'reason': '',
+        'running_run_ids': [],
+        'deleted_run_ids': run_ids,
+        'removed_result_dirs': removed_result_dirs,
+    }
+
+
 def pick_first_existing(paths):
     for path in paths:
         if path and os.path.exists(path):
@@ -518,6 +560,187 @@ def count_analysis_files_from_log(log_path):
                 compiled_objects.add(obj)
 
     return len(compiled_objects)
+
+
+def get_run_row(run_id):
+    if not run_id:
+        return None
+    conn = get_db_connection()
+    try:
+        row = conn.execute(
+            '''
+            SELECT run_id, target_name, is_uploaded, started_at, finished_at
+            FROM analysis_runs
+            WHERE run_id = ?
+            ''',
+            (run_id,),
+        ).fetchone()
+        return row
+    finally:
+        conn.close()
+
+
+def resolve_analysis_log_path_for_run(run_id, target_name=None):
+    row = get_run_row(run_id)
+    if row:
+        target_name = row['target_name']
+        is_uploaded = bool(row['is_uploaded'])
+        started_at = int(row['started_at'] or 0)
+    else:
+        is_uploaded = False
+        started_at = 0
+
+    if not target_name:
+        return None
+
+    if not is_uploaded:
+        return resolve_analysis_log_path(target_name, prefer_display=False, prefer_result=False)
+
+    # 上传任务日志命名：analysis_uploaded_<target>_<ts>.log
+    pattern = os.path.join(LOGS_DIR, f'analysis_uploaded_{target_name}_*.log')
+    candidates = glob.glob(pattern)
+    if not candidates:
+        return resolve_analysis_log_path(target_name, prefer_display=False, prefer_result=False)
+
+    def _score(path):
+        name = os.path.basename(path)
+        m = re.search(r'_(\d+)\.log$', name)
+        if m and started_at > 0:
+            ts = int(m.group(1))
+            return abs(ts - started_at)
+        return 10**18
+
+    # 优先按上传时间戳接近 run 的 started_at；兜底按最近修改时间
+    candidates.sort(key=lambda p: (_score(p), -os.path.getmtime(p)))
+    return candidates[0]
+
+
+def parse_detector_summary_from_log(log_path):
+    summary = {
+        'buffer_overflow': 0,
+        'null_pointer': 0,
+        'use_after_free': 0,
+        'memory_safety': 0,
+        'info_leak': 0,
+        'privilege_escalation': 0,
+        'toctou': 0,
+    }
+
+    if not log_path or not os.path.exists(log_path):
+        return summary
+
+    patterns = {
+        'buffer_overflow': re.compile(r'\[BufferOverflowDetector\]\s+Found\s+(\d+)\s+buffer overflow issues'),
+        'null_pointer': re.compile(r'\[NullPointerDetector\]\s+Found\s+(\d+)\s+null pointer issues'),
+        'use_after_free': re.compile(r'\[UseAfterFreeDetector\]\s+Found\s+(\d+)\s+use-after-free issues'),
+        'info_leak': re.compile(r'\[InfoLeakDetector\]\s+Found\s+(\d+)\s+information leakage issues'),
+        'privilege_escalation': re.compile(r'\[PrivilegeEscalationDetector\]\s+Found\s+(\d+)\s+privilege escalation issues'),
+        'toctou': re.compile(r'\[TOCTOUDetector\]\s+Found\s+(\d+)\s+TOCTOU issues'),
+        'memory_safety_total': re.compile(r'^MemorySafety:\s+(\d+)\s+findings\s*$'),
+    }
+
+    with open(log_path, 'r', encoding='utf-8', errors='ignore') as f:
+        for line in f:
+            line = line.strip()
+            for key, pat in patterns.items():
+                m = pat.search(line)
+                if not m:
+                    continue
+                value = int(m.group(1))
+                if key == 'memory_safety_total':
+                    summary['memory_safety'] = value
+                else:
+                    summary[key] = value
+
+    if summary['memory_safety'] == 0:
+        summary['memory_safety'] = summary['buffer_overflow'] + summary['null_pointer'] + summary['use_after_free']
+
+    return summary
+
+
+def resolve_detection_json_dirs_for_run(run_id, target_name=None):
+    row = get_run_row(run_id)
+    if row:
+        target_name = row['target_name']
+
+    if not target_name:
+        return []
+
+    candidates = [
+        get_run_result_dir(target_name, run_id),
+        os.path.join(UPLOAD_DIR, target_name),
+        os.path.join(UPLOAD_DIR, 'uploaded_links', target_name),
+    ]
+
+    # Uploaded analyses are often stored under analysis_data/uploaded_<target>_<ts>
+    candidates.extend(glob.glob(os.path.join(UPLOAD_DIR, f'uploaded_{target_name}_*')))
+
+    seen = set()
+    result = []
+    for d in candidates:
+        if not d:
+            continue
+        real = os.path.realpath(d)
+        if real in seen:
+            continue
+        seen.add(real)
+        if os.path.isdir(real):
+            result.append(real)
+    return result
+
+
+def parse_detector_summary_from_json_dirs(json_dirs):
+    summary = {
+        'buffer_overflow': 0,
+        'null_pointer': 0,
+        'use_after_free': 0,
+        'memory_safety': 0,
+        'info_leak': 0,
+        'privilege_escalation': 0,
+        'toctou': 0,
+    }
+
+    type_map = {
+        'BufferOverflow': 'buffer_overflow',
+        'NullPointer': 'null_pointer',
+        'UseAfterFree': 'use_after_free',
+        'InfoLeak': 'info_leak',
+        'PrivilegeEscalation': 'privilege_escalation',
+        'TOCTOU': 'toctou',
+    }
+
+    found_files = 0
+    for d in json_dirs:
+        for path in glob.glob(os.path.join(d, 'detections_*.json')):
+            found_files += 1
+            try:
+                with open(path, 'r', encoding='utf-8', errors='ignore') as f:
+                    items = json.load(f)
+                if not isinstance(items, list):
+                    continue
+                for item in items:
+                    if not isinstance(item, dict):
+                        continue
+                    mapped = type_map.get(item.get('type'))
+                    if mapped:
+                        summary[mapped] += 1
+            except Exception:
+                continue
+
+    summary['memory_safety'] = (
+        summary['buffer_overflow'] + summary['null_pointer'] + summary['use_after_free']
+    )
+    return summary, found_files
+
+
+def get_detector_summary_for_run(run_id, target_name=None):
+    json_dirs = resolve_detection_json_dirs_for_run(run_id, target_name)
+    json_summary, found_files = parse_detector_summary_from_json_dirs(json_dirs)
+    if found_files > 0:
+        return json_summary
+
+    log_path = resolve_analysis_log_path_for_run(run_id, target_name)
+    return parse_detector_summary_from_log(log_path)
 
 
 def has_prebuilt_result(target):
@@ -765,6 +988,66 @@ def ensure_uploaded_source_ready(target):
     return source_dir, None
 
 
+def list_uploaded_archive_targets():
+    items = []
+    if not os.path.isdir(UPLOADS_ROOT_DIR):
+        return items
+
+    for entry in os.listdir(UPLOADS_ROOT_DIR):
+        target = sanitize_target_dir(entry)
+        target_root = get_upload_target_root(target)
+        if not os.path.isdir(target_root):
+            continue
+
+        meta_path = get_upload_meta_path(target)
+        if not os.path.isfile(meta_path):
+            continue
+
+        try:
+            with open(meta_path, 'r', encoding='utf-8') as f:
+                meta = json.load(f)
+        except Exception:
+            continue
+
+        if meta.get('mode') != 'archive':
+            continue
+
+        archive_file = meta.get('archive_file')
+        archive_exists = bool(archive_file and os.path.isfile(archive_file))
+        archive_size_bytes = 0
+        archive_updated_at = 0
+        if archive_exists:
+            try:
+                archive_size_bytes = os.path.getsize(archive_file)
+                archive_updated_at = int(os.path.getmtime(archive_file))
+            except OSError:
+                archive_size_bytes = 0
+                archive_updated_at = 0
+
+        source_dir = get_upload_source_dir(target)
+        source_ready = bool(os.path.isdir(source_dir) and os.listdir(source_dir))
+
+        meta_updated_at = 0
+        try:
+            meta_updated_at = int(os.path.getmtime(meta_path))
+        except OSError:
+            meta_updated_at = 0
+
+        updated_at = max(meta_updated_at, archive_updated_at)
+
+        items.append({
+            'target': target,
+            'archive_name': meta.get('archive_name') or (os.path.basename(archive_file) if archive_file else ''),
+            'archive_exists': archive_exists,
+            'archive_size_bytes': archive_size_bytes,
+            'source_ready': source_ready,
+            'updated_at': updated_at,
+        })
+
+    items.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
+    return items
+
+
 def resolve_kernel_source_dir(upload_base_dir):
     if os.path.isfile(os.path.join(upload_base_dir, 'Makefile')) and os.path.isfile(os.path.join(upload_base_dir, 'Kconfig')):
         return upload_base_dir
@@ -828,8 +1111,8 @@ def update_uploaded_progress_from_line(line):
         ('[*] Extracting Unprotected Global Variable Access List...', 72),
         ('[*] Generating Neo4j Import Data...', 82),
         ('Processing complete. Found', 88),
-        ('neo4j-admin import', 92),
-        ('Starting Neo4j with Java 17...', 96),
+        ('[+] Neo4j data generation completed successfully', 92),
+        ('[*] 已归档', 96),
     ]
 
     for marker, progress in milestones:
@@ -867,22 +1150,24 @@ def run_uploaded_real_analysis(target, source_path, result_path):
             shutil.rmtree(alias_source_link)
     os.symlink(kernel_source_dir, alias_source_link)
 
+    alias_analysis_data_dir = os.path.join(PROJECT_ROOT, 'analysis_data', alias_target)
+
     try:
         scan_status['progress'] = 10
-        scan_status['logs'].append('[*] 调用 full_run.sh 执行完整分析流程...')
-        full_run_rc = stream_command_to_log(
-            ['bash', './scripts/full_run.sh', alias_target],
+        scan_status['logs'].append('[*] 调用 run_analysis.sh 执行上传内核分析流程...')
+        analysis_rc = stream_command_to_log(
+            ['bash', './scripts/run_analysis.sh', alias_target],
             PROJECT_ROOT,
             env,
             analysis_log_file,
             progress_hook=update_uploaded_progress_from_line,
         )
-        if full_run_rc != 0:
-            scan_status['logs'].append(f'[WARNING] full_run.sh 退出码: {full_run_rc}（部分文件可能编译失败，但继续处理）')
+        if analysis_rc != 0:
+            scan_status['logs'].append(f'[WARNING] run_analysis.sh 退出码: {analysis_rc}（部分文件可能编译失败，但继续处理）')
             # Don't return False here - analysis may have partial results
 
         scan_status['progress'] = 92
-        scan_status['logs'].append('[*] 归档 full_run 结果到上传结果目录...')
+        scan_status['logs'].append('[*] 归档分析结果到上传结果目录...')
 
         # 从 logs 目录读取日志文件
         logs_analysis_log = os.path.join(LOGS_DIR, f'analysis_{alias_target}.log')
@@ -906,6 +1191,20 @@ def run_uploaded_real_analysis(target, source_path, result_path):
             shutil.rmtree(result_neo4j_dir)
         if os.path.isdir(logs_neo4j_dir):
             shutil.copytree(logs_neo4j_dir, result_neo4j_dir)
+
+        # 保留探测器细粒度结果，避免上传任务退化为仅 race_warnings 推断。
+        if os.path.isdir(alias_analysis_data_dir):
+            copied_detection_files = 0
+            for filename in os.listdir(alias_analysis_data_dir):
+                if filename.startswith('detections_') and filename.endswith('.json'):
+                    src_path = os.path.join(alias_analysis_data_dir, filename)
+                    dst_path = os.path.join(result_path, filename)
+                    shutil.copy2(src_path, dst_path)
+                    copied_detection_files += 1
+            if copied_detection_files > 0:
+                scan_status['logs'].append(f'[*] 已归档 {copied_detection_files} 个检测结果文件到上传任务目录')
+            else:
+                scan_status['logs'].append('[WARNING] 未发现 detections_*.json，检测模块详情可能不完整')
 
         # Check if we have any race warnings - if not, analysis might have failed completely
         if not os.path.exists(result_race_file) or os.path.getsize(result_race_file) == 0:
@@ -942,9 +1241,8 @@ def run_uploaded_real_analysis(target, source_path, result_path):
             shutil.rmtree(neo4j_dir)
         
         # 清理临时分析数据目录
-        analysis_data_dir = os.path.join(PROJECT_ROOT, 'analysis_data', alias_target)
-        if os.path.isdir(analysis_data_dir):
-            shutil.rmtree(analysis_data_dir)
+        if os.path.isdir(alias_analysis_data_dir):
+            shutil.rmtree(alias_analysis_data_dir)
 
 def run_real_scan(target, is_uploaded=False, run_id=None):
     global scan_status
@@ -1109,10 +1407,19 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
         prefer_result=prefer_result,
     )
     analysis_files_count = count_analysis_files_from_log(analysis_log_path)
-    
-    # 对于预置结果，默认设置分析文件数为10000
+
+    # For prebuilt data, prefer the default analysis log's file count to avoid
+    # stale display-log statistics.
     if is_prebuilt:
-        analysis_files_count = 10000
+        default_log_path = resolve_analysis_log_path(
+            target,
+            result_base=result_base,
+            prefer_display=False,
+            prefer_result=prefer_result,
+        )
+        default_count = count_analysis_files_from_log(default_log_path)
+        if default_count > 0:
+            analysis_files_count = default_count
     
     # 构建图数据
     graph_data = build_sample_graph(edges_file, nodes_file)
@@ -1130,13 +1437,10 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
         graph_data = generate_demo_graph_data()
         is_demo_data = True
         data_source = "演示数据"
-        # 对于演示数据，默认设置分析文件数为10000
-        analysis_files_count = 10000
+        # 演示数据不覆盖 analysis_files，保持日志统计值（无日志时为 0）
     elif is_prebuilt:
         # 预置结果（不是实时分析的）
         data_source = "预置分析数据"
-        # 对于预置结果，默认设置分析文件数为10000
-        analysis_files_count = 10000
     
     # 存储分析数据
     built_data = {
@@ -1537,6 +1841,15 @@ def upload_files():
         "extract_deferred": True if archive and archive.filename else False
     })
 
+
+@app.route('/api/uploaded-archives', methods=['GET'])
+def get_uploaded_archives():
+    items = list_uploaded_archive_targets()
+    return jsonify({
+        'items': items,
+        'total': len(items),
+    })
+
 @app.route('/api/scan', methods=['POST'])
 def start_scan():
     global current_run_id
@@ -1544,7 +1857,21 @@ def start_scan():
     target = data.get('target', 'linux-6.6.1')
     is_uploaded = data.get('is_uploaded', False)
     force_reanalyze = bool(data.get('force_reanalyze', False))
+    overwrite_existing = bool(data.get('overwrite_existing', False))
     run_id = str(uuid.uuid4())
+
+    if is_uploaded:
+        target = sanitize_target_dir(target)
+
+    # 上传内核强制重跑并覆盖：删除该 target 的历史报告记录与产物，保留上传包本身。
+    if is_uploaded and force_reanalyze and overwrite_existing:
+        purge_result = purge_uploaded_reports(target)
+        if not purge_result.get('ok'):
+            return jsonify({
+                "error": "该目标仍有运行中的任务，无法覆盖历史报告",
+                "target": target,
+                "running_run_ids": purge_result.get('running_run_ids', []),
+            }), 409
     
     # 内置内核快速路径：若已有预置结果则直接返回，不重跑分析
     if not is_uploaded and not force_reanalyze and has_prebuilt_result(target):
@@ -1614,6 +1941,7 @@ def start_scan():
         "target": target,
         "is_uploaded": is_uploaded,
         "run_id": run_id,
+        "overwrite_existing": overwrite_existing,
         "quick_mode": False,
     })
 
@@ -2361,96 +2689,375 @@ def get_detections():
             'issues': []
         })
 
+    detector_summary = get_detector_summary_for_run(run_id, target_name)
+    if detection_type == 'MemorySafety' and detector_summary.get('memory_safety', 0) == 0:
+        return jsonify({'run_id': run_id, 'type': detection_type, 'issues': []})
+    if detection_type == 'InfoLeak' and detector_summary.get('info_leak', 0) == 0:
+        return jsonify({'run_id': run_id, 'type': detection_type, 'issues': []})
+    if detection_type == 'PrivilegeEscalation' and detector_summary.get('privilege_escalation', 0) == 0:
+        return jsonify({'run_id': run_id, 'type': detection_type, 'issues': []})
+    if detection_type == 'TOCTOU' and detector_summary.get('toctou', 0) == 0:
+        return jsonify({'run_id': run_id, 'type': detection_type, 'issues': []})
+
+    json_backed_types = {'MemorySafety', 'InfoLeak', 'PrivilegeEscalation', 'TOCTOU'}
+    if detection_type in json_backed_types:
+        json_result = load_detector_issues_for_run(run_id, target_name, detection_type)
+        if json_result['total_count'] > 0:
+            return jsonify({
+                'run_id': run_id,
+                'type': detection_type,
+                'issues': json_result['issues'],
+                'total_count': json_result['total_count'],
+                'returned_count': len(json_result['issues']),
+                'truncated': json_result['total_count'] > len(json_result['issues']),
+                'subtype_counts': json_result.get('subtype_counts', {}),
+            })
+
     conn = get_db_connection()
     try:
         where = ['run_id = ?']
         params = [run_id]
 
         if detection_type:
-            if detection_type == 'MemorySafety':
-                where.append('(warn_type = ? OR severity = ?)')
-                params.extend(['Read', 'Write'])
-            elif detection_type == 'RaceCondition':
-                where.append('(warn_type = ? OR warn_type = ?)')
-                params.extend(['Read', 'Write'])
-            elif detection_type == 'InfoLeak':
-                leak_keywords = ['printk', 'pr_info', 'pr_debug', 'print', 'log', 'copy_to_user', 'copy_from_user']
-                like_conditions = [f'(raw_text LIKE ? OR function_name LIKE ?)' for _ in leak_keywords]
-                where.append(f"({' OR '.join(like_conditions)})")
-                for keyword in leak_keywords:
-                    like_expr = f'%{keyword}%'
-                    params.extend([like_expr, like_expr])
-            elif detection_type == 'PrivilegeEscalation':
-                privilege_keywords = ['capable', 'setuid', 'setgid', 'setfsuid', 'setfsgid', 'mknod', 'chmod', 'chown']
-                like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in privilege_keywords]
-                where.append(f"({' OR '.join(like_conditions)})")
-                for keyword in privilege_keywords:
-                    like_expr = f'%{keyword}%'
-                    params.extend([like_expr, like_expr])
-            elif detection_type == 'TOCTOU':
-                toctou_keywords = ['access', 'stat', 'lstat', 'open', 'openat']
-                like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in toctou_keywords]
-                where.append(f"({' OR '.join(like_conditions)})")
-                for keyword in toctou_keywords:
-                    like_expr = f'%{keyword}%'
-                    params.extend([like_expr, like_expr])
+            extra_where, extra_params = build_detection_where_clause(detection_type)
+            where.extend(extra_where)
+            params.extend(extra_params)
 
         where_sql = ' AND '.join(where)
+        query_limit = 100
+        if detection_type == 'MemorySafety' and detector_summary.get('memory_safety', 0) > 0:
+            query_limit = min(500, int(detector_summary.get('memory_safety', 0)))
+        elif detection_type == 'RaceCondition':
+            query_limit = 500
+
+        total_row = conn.execute(
+            f'''
+            SELECT COUNT(1) AS c
+            FROM warnings
+            WHERE {where_sql}
+            ''',
+            params
+        ).fetchone()
+        total_count = int(total_row['c'] or 0)
+
         rows = conn.execute(
             f'''
             SELECT warn_type, severity, variable_name, function_name, raw_text
             FROM warnings
             WHERE {where_sql}
             ORDER BY id DESC
-            LIMIT 100
+            LIMIT ?
             ''',
-            params
+            params + [query_limit]
         ).fetchall()
 
         issues = []
         for row in rows:
+            raw_text = row['raw_text'] or ''
+            function_name = row['function_name'] or 'unknown_function'
+            variable_name = row['variable_name'] or 'unknown_variable'
+            severity = row['severity'] or 'MEDIUM'
+            lower_text = f"{raw_text} {function_name} {variable_name}".lower()
+
             issue = {
                 'type': detection_type or 'General',
-                'severity': row['severity'],
+                'severity': severity.title(),
                 'message': f"{row['warn_type']} warning detected",
-                'variable': row['variable_name'],
-                'function': row['function_name'],
+                'variable': variable_name,
+                'function': function_name,
                 'file': 'kernel',
                 'line': 1,
                 'column': 1,
-                'suggestion': 'Review the code for potential security issues'
+                'suggestion': 'Review the code for potential security issues',
             }
 
             if detection_type == 'MemorySafety':
-                if row['warn_type'] == 'Write':
-                    issue['message'] = 'Potential write race condition detected'
-                    issue['suggestion'] = 'Use proper locking mechanisms to protect shared data'
+                if 'free' in lower_text or 'kfree' in lower_text:
+                    issue['type'] = 'UseAfterFree'
+                    issue['message'] = f"Potential use-after-free around '{function_name}'"
+                    issue['suggestion'] = 'Set pointer to NULL after free and avoid further dereference'
+                elif row['warn_type'] == 'Write':
+                    issue['type'] = 'BufferOverflow'
+                    issue['message'] = f"Potential unsafe write to '{variable_name}'"
+                    issue['suggestion'] = 'Add bounds checks and protect shared writes with synchronization'
                 else:
-                    issue['message'] = 'Potential read race condition detected'
-                    issue['suggestion'] = 'Consider using atomic operations or proper synchronization'
-            elif detection_type == 'RaceCondition':
-                issue['message'] = f"Race condition on variable '{row['variable_name']}'"
-                issue['suggestion'] = 'Implement proper locking or use atomic operations'
-            elif detection_type == 'InfoLeak':
-                issue['message'] = f"Potential information leak in function '{row['function_name']}'"
-                issue['suggestion'] = 'Ensure sensitive data is properly masked before logging or copying'
-            elif detection_type == 'PrivilegeEscalation':
-                issue['message'] = f"Privileged operation in function '{row['function_name']}'"
-                issue['suggestion'] = 'Verify proper permission checks before executing privileged operations'
-            elif detection_type == 'TOCTOU':
-                issue['message'] = f"TOCTOU vulnerability in function '{row['function_name']}'"
-                issue['suggestion'] = 'Use atomic operations to prevent time-of-check to time-of-use issues'
+                    issue['type'] = 'NullPointer'
+                    issue['message'] = f"Potential unsafe read on '{variable_name}'"
+                    issue['suggestion'] = 'Check pointer validity before dereference and synchronize reads'
 
-            if row['raw_text']:
-                issue['raw_text'] = row['raw_text']
+            elif detection_type == 'RaceCondition':
+                issue['type'] = row['warn_type'] if row['warn_type'] in ('Read', 'Write') else 'Deadlock'
+                issue['message'] = f"Race condition on variable '{variable_name}'"
+                issue['suggestion'] = 'Implement proper locking or use atomic operations'
+
+            elif detection_type == 'InfoLeak':
+                if any(k in lower_text for k in ['socket', 'send', 'recv', 'net', 'tcp', 'udp', 'copy_to_user']):
+                    issue['type'] = 'Network'
+                elif any(k in lower_text for k in ['file', 'fs', 'open', 'write', 'fwrite']):
+                    issue['type'] = 'File'
+                else:
+                    issue['type'] = 'Log'
+
+                if any(k in lower_text for k in ['password', 'passwd', 'pwd']):
+                    issue['dataType'] = 'password'
+                elif any(k in lower_text for k in ['key', 'secret', 'rsa', 'pem']):
+                    issue['dataType'] = 'key'
+                elif any(k in lower_text for k in ['token', 'jwt', 'oauth']):
+                    issue['dataType'] = 'token'
+                elif any(k in lower_text for k in ['card', 'cvv']):
+                    issue['dataType'] = 'creditcard'
+                else:
+                    issue['dataType'] = 'personal'
+
+                issue['message'] = f"Potential information leak in function '{function_name}'"
+                issue['suggestion'] = 'Ensure sensitive data is masked or encrypted before logging/transmission/output'
+
+            elif detection_type == 'PrivilegeEscalation':
+                if any(k in lower_text for k in ['setuid', 'setgid', 'setfsuid', 'setfsgid']):
+                    issue['type'] = 'PermissionBypass'
+                elif any(k in lower_text for k in ['capable', 'cap_', 'cap_sys_admin']):
+                    issue['type'] = 'CapabilityCheck'
+                else:
+                    issue['type'] = 'PrivilegedSyscall'
+
+                issue['message'] = f"Privileged operation in function '{function_name}'"
+                issue['suggestion'] = 'Verify permission/capability checks before privileged operations'
+
+            elif detection_type == 'TOCTOU':
+                if 'symlink' in lower_text:
+                    issue['type'] = 'SymlinkAttack'
+                elif any(k in lower_text for k in ['access', 'stat', 'lstat']) and any(k in lower_text for k in ['open', 'openat']):
+                    issue['type'] = 'FileTOCTOU'
+                else:
+                    issue['type'] = 'RaceWindow'
+
+                issue['checkFunction'] = 'access/stat'
+                issue['useFunction'] = 'open/openat'
+                issue['message'] = f"TOCTOU risk in function '{function_name}'"
+                issue['suggestion'] = 'Use atomic operations and avoid check/use split paths'
+
+            if raw_text:
+                issue['raw_text'] = raw_text
 
             issues.append(issue)
 
         return jsonify({
             'run_id': run_id,
             'type': detection_type,
-            'issues': issues
+            'issues': issues,
+            'total_count': total_count,
+            'returned_count': len(issues),
+            'truncated': total_count > len(issues),
         })
+    finally:
+        conn.close()
+
+
+def build_detection_where_clause(detection_type):
+    where_clauses = []
+    where_params = []
+
+    if detection_type == 'MemorySafety':
+        where_clauses.append('(warn_type = ? OR warn_type = ?)')
+        where_params.extend(['Read', 'Write'])
+
+    elif detection_type == 'RaceCondition':
+        where_clauses.append('(warn_type = ? OR warn_type = ?)')
+        where_params.extend(['Read', 'Write'])
+
+    elif detection_type == 'InfoLeak':
+        leak_keywords = ['printk', 'pr_info', 'pr_debug', 'print', 'log', 'copy_to_user', 'copy_from_user']
+        like_conditions = [f'(raw_text LIKE ? OR function_name LIKE ?)' for _ in leak_keywords]
+        where_clauses.append(f"({' OR '.join(like_conditions)})")
+        for keyword in leak_keywords:
+            like_expr = f'%{keyword}%'
+            where_params.extend([like_expr, like_expr])
+
+    elif detection_type == 'PrivilegeEscalation':
+        privilege_keywords = ['capable', 'setuid', 'setgid', 'setfsuid', 'setfsgid', 'mknod', 'chmod', 'chown']
+        like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in privilege_keywords]
+        where_clauses.append(f"({' OR '.join(like_conditions)})")
+        for keyword in privilege_keywords:
+            like_expr = f'%{keyword}%'
+            where_params.extend([like_expr, like_expr])
+
+    elif detection_type == 'TOCTOU':
+        toctou_keywords = ['access', 'stat', 'lstat', 'open', 'openat']
+        like_conditions = [f'(function_name LIKE ? OR raw_text LIKE ?)' for _ in toctou_keywords]
+        where_clauses.append(f"({' OR '.join(like_conditions)})")
+        for keyword in toctou_keywords:
+            like_expr = f'%{keyword}%'
+            where_params.extend([like_expr, like_expr])
+
+    return where_clauses, where_params
+
+
+def load_detector_issues_for_run(run_id, target_name, detection_type, limit=500):
+    json_dirs = resolve_detection_json_dirs_for_run(run_id, target_name)
+    detection_files = []
+    for d in json_dirs:
+        detection_files.extend(glob.glob(os.path.join(d, 'detections_*.json')))
+
+    if not detection_files:
+        return {'issues': [], 'total_count': 0, 'subtype_counts': {}}
+
+    detection_files = sorted(detection_files, key=lambda p: os.path.getmtime(p), reverse=True)
+
+    type_filters = {
+        'MemorySafety': {'BufferOverflow', 'NullPointer', 'UseAfterFree'},
+        'InfoLeak': {'InfoLeak'},
+        'PrivilegeEscalation': {'PrivilegeEscalation'},
+        'TOCTOU': {'TOCTOU'},
+    }
+    target_types = type_filters.get(detection_type, set())
+    if not target_types:
+        return {'issues': [], 'total_count': 0, 'subtype_counts': {}}
+
+    issues = []
+    total_count = 0
+    subtype_counts = {}
+    for path in detection_files:
+        try:
+            with open(path, 'r', encoding='utf-8', errors='ignore') as f:
+                items = json.load(f)
+        except Exception:
+            continue
+
+        if not isinstance(items, list):
+            continue
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+
+            raw_type = item.get('type')
+            if raw_type not in target_types:
+                continue
+
+            message = str(item.get('message') or 'Security issue detected')
+            lower_text = message.lower()
+
+            normalized_type = raw_type
+            if detection_type == 'InfoLeak':
+                if any(k in lower_text for k in ['socket', 'send', 'recv', 'net', 'tcp', 'udp', 'copy_to_user']):
+                    normalized_type = 'Network'
+                elif any(k in lower_text for k in ['file', 'fs', 'open', 'write', 'fwrite']):
+                    normalized_type = 'File'
+                else:
+                    normalized_type = 'Log'
+            elif detection_type == 'PrivilegeEscalation':
+                if any(k in lower_text for k in ['setuid', 'setgid', 'setfsuid', 'setfsgid']):
+                    normalized_type = 'PermissionBypass'
+                elif any(k in lower_text for k in ['capable', 'cap_', 'cap_sys_admin']):
+                    normalized_type = 'CapabilityCheck'
+                else:
+                    normalized_type = 'PrivilegedSyscall'
+            elif detection_type == 'TOCTOU':
+                if 'symlink' in lower_text:
+                    normalized_type = 'SymlinkAttack'
+                elif any(k in lower_text for k in ['access', 'stat', 'lstat']) and any(k in lower_text for k in ['open', 'openat']):
+                    normalized_type = 'FileTOCTOU'
+                else:
+                    normalized_type = 'RaceWindow'
+
+            total_count += 1
+            subtype_counts[normalized_type] = subtype_counts.get(normalized_type, 0) + 1
+
+            if len(issues) >= limit:
+                continue
+
+            severity = str(item.get('severity') or 'MEDIUM').title()
+            issue = {
+                'type': normalized_type,
+                'severity': severity,
+                'message': message,
+                'variable': item.get('variable') or 'unknown_variable',
+                'function': item.get('function') or 'unknown_function',
+                'file': item.get('file') or 'kernel',
+                'line': int(item.get('line') or 1),
+                'column': int(item.get('column') or 1),
+                'suggestion': item.get('suggestion') or 'Review the code for potential security issues',
+                'raw_text': message,
+            }
+
+            if detection_type == 'InfoLeak':
+                if any(k in lower_text for k in ['password', 'passwd', 'pwd']):
+                    issue['dataType'] = 'password'
+                elif any(k in lower_text for k in ['key', 'secret', 'rsa', 'pem']):
+                    issue['dataType'] = 'key'
+                elif any(k in lower_text for k in ['token', 'jwt', 'oauth']):
+                    issue['dataType'] = 'token'
+                elif any(k in lower_text for k in ['card', 'cvv']):
+                    issue['dataType'] = 'creditcard'
+                elif any(k in lower_text for k in ['address', 'pointer', '%p']):
+                    issue['dataType'] = 'address'
+                else:
+                    issue['dataType'] = 'personal'
+
+            if detection_type == 'TOCTOU':
+                issue['checkFunction'] = 'access/stat/permission'
+                issue['useFunction'] = 'open/rename/unlink'
+
+            issues.append(issue)
+
+    return {
+        'issues': issues,
+        'total_count': total_count,
+        'subtype_counts': subtype_counts,
+    }
+
+
+@app.route('/api/detections/summary', methods=['GET'])
+def get_detection_summary():
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+
+    if not run_id:
+        return jsonify({
+            'run_id': None,
+            'memory_safety': 0,
+            'race_condition': 0,
+            'info_leak': 0,
+            'privilege_escalation': 0,
+            'toctou': 0,
+        })
+
+    category_map = {
+        'memory_safety': 'MemorySafety',
+        'race_condition': 'RaceCondition',
+        'info_leak': 'InfoLeak',
+        'privilege_escalation': 'PrivilegeEscalation',
+        'toctou': 'TOCTOU',
+    }
+
+    detector_summary = get_detector_summary_for_run(run_id, target_name)
+
+    conn = get_db_connection()
+    try:
+        summary = {'run_id': run_id}
+        for key, detection_type in category_map.items():
+            where = ['run_id = ?']
+            params = [run_id]
+
+            extra_where, extra_params = build_detection_where_clause(detection_type)
+            where.extend(extra_where)
+            params.extend(extra_params)
+
+            where_sql = ' AND '.join(where)
+            row = conn.execute(
+                f'SELECT COUNT(1) AS c FROM warnings WHERE {where_sql}',
+                params,
+            ).fetchone()
+            summary[key] = int(row['c'] or 0)
+
+        # 用探测器真实统计覆盖对应模块，避免模块间数据“看起来一样”。
+        summary['memory_safety'] = int(detector_summary.get('memory_safety', summary['memory_safety']))
+        summary['info_leak'] = int(detector_summary.get('info_leak', summary['info_leak']))
+        summary['privilege_escalation'] = int(detector_summary.get('privilege_escalation', summary['privilege_escalation']))
+        summary['toctou'] = int(detector_summary.get('toctou', summary['toctou']))
+
+        return jsonify(summary)
     finally:
         conn.close()
 

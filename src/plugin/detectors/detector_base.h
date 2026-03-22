@@ -1,8 +1,21 @@
 #ifndef DETECTOR_BASE_H
 #define DETECTOR_BASE_H
 
+#if __has_include(<gcc-plugin.h>)
 #include <gcc-plugin.h>
+#elif __has_include("/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gcc-plugin.h")
+#include "/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/gcc-plugin.h"
+#else
+#error "gcc-plugin.h not found. Please install GCC plugin headers or configure includePath."
+#endif
+
+#if __has_include(<tree.h>)
 #include <tree.h>
+#elif __has_include("/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/tree.h")
+#include "/usr/lib/gcc/x86_64-linux-gnu/13/plugin/include/tree.h"
+#else
+#error "tree.h not found. Please install GCC plugin headers or configure includePath."
+#endif
 #include <string>
 #include <vector>
 #include <map>

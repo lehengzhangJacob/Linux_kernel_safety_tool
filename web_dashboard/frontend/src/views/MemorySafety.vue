@@ -207,6 +207,7 @@ export default {
       filterType: 'all',
       filterSeverity: 'all',
       issues: [],
+      totalCountFromApi: 0,
       stats: {
         bufferOverflow: 0,
         nullPointer: 0,
@@ -227,16 +228,41 @@ export default {
   async mounted() {
     await this.loadData()
   },
+  watch: {
+    '$route.query.run_id': {
+      async handler() {
+        await this.loadData()
+      }
+    }
+  },
   methods: {
     async loadData() {
       this.loading = true
       try {
-        const response = await axios.get('/api/detections?type=MemorySafety')
+        const runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || undefined
+        const response = await axios.get('/api/detections', {
+          params: {
+            type: 'MemorySafety',
+            run_id: runId
+          }
+        })
+        if (response?.data?.run_id) {
+          localStorage.setItem('currentRunId', response.data.run_id)
+        }
         this.issues = response.data.issues || []
+        this.totalCountFromApi = Number(response?.data?.total_count || this.issues.length)
+        const subtypeCounts = response?.data?.subtype_counts || {}
+        if (Object.keys(subtypeCounts).length > 0) {
+          this.stats.bufferOverflow = Number(subtypeCounts.BufferOverflow || 0)
+          this.stats.nullPointer = Number(subtypeCounts.NullPointer || 0)
+          this.stats.useAfterFree = Number(subtypeCounts.UseAfterFree || 0)
+        }
         this.updateStats()
       } catch (error) {
         console.error('加载数据失败:', error)
-        this.loadDemoData()
+        this.issues = []
+        this.totalCountFromApi = 0
+        this.updateStats()
       } finally {
         this.loading = false
       }
@@ -274,10 +300,12 @@ export default {
       this.updateStats()
     },
     updateStats() {
-      this.stats.bufferOverflow = this.issues.filter(i => i.type === 'BufferOverflow').length
-      this.stats.nullPointer = this.issues.filter(i => i.type === 'NullPointer').length
-      this.stats.useAfterFree = this.issues.filter(i => i.type === 'UseAfterFree').length
-      this.stats.total = this.issues.length
+      if (!this.stats.bufferOverflow && !this.stats.nullPointer && !this.stats.useAfterFree) {
+        this.stats.bufferOverflow = this.issues.filter(i => i.type === 'BufferOverflow').length
+        this.stats.nullPointer = this.issues.filter(i => i.type === 'NullPointer').length
+        this.stats.useAfterFree = this.issues.filter(i => i.type === 'UseAfterFree').length
+      }
+      this.stats.total = this.totalCountFromApi || this.issues.length
     },
     async refreshData() {
       await this.loadData()

@@ -1,9 +1,11 @@
 #include "privilege_detector.h"
 #include <gimple.h>
 #include <gimple-iterator.h>
+#include <cfg.h>
 #include <tree.h>
 #include <string.h>
 #include <algorithm>
+#include <set>
 
 // -----------------------------------------------------------------------------
 // PrivilegeEscalationDetector Implementation
@@ -144,7 +146,17 @@ bool PrivilegeEscalationDetector::is_privileged_syscall(const std::string& name)
     std::string lower_name = name;
     std::transform(lower_name.begin(), lower_name.end(), lower_name.begin(), ::tolower);
 
-    return privileged_syscalls.count(lower_name) > 0;
+    if (privileged_syscalls.count(lower_name) > 0) {
+        return true;
+    }
+
+    for (const auto& kw : privileged_syscalls) {
+        if (lower_name.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool PrivilegeEscalationDetector::is_privileged_var(tree var) {
@@ -356,13 +368,33 @@ void TOCTOUDetector::initialize_functions() {
     race_prone_functions.insert("faccessat");
     race_prone_functions.insert("opendir");
     race_prone_functions.insert("readdir");
+    race_prone_functions.insert("filp_open");
+    race_prone_functions.insert("vfs_open");
+    race_prone_functions.insert("path_openat");
+    race_prone_functions.insert("do_filp_open");
+    race_prone_functions.insert("renameat");
+    race_prone_functions.insert("renameat2");
+    race_prone_functions.insert("unlinkat");
+    race_prone_functions.insert("symlink");
+    race_prone_functions.insert("linkat");
+    race_prone_functions.insert("truncate");
 }
 
 bool TOCTOUDetector::is_race_prone_function(const std::string& name) {
     std::string lower_name = name;
     std::transform(lower_name.begin(), lower_name.end(), lower_name.begin(), ::tolower);
 
-    return race_prone_functions.count(lower_name) > 0;
+    if (race_prone_functions.count(lower_name) > 0) {
+        return true;
+    }
+
+    for (const auto& kw : race_prone_functions) {
+        if (lower_name.find(kw) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool TOCTOUDetector::is_file_operation(gimple *stmt) {
@@ -380,62 +412,180 @@ bool TOCTOUDetector::is_file_operation(gimple *stmt) {
 void TOCTOUDetector::check_toctou_pattern(gimple *stmt) {
     if (!stmt || !is_gimple_call(stmt)) return;
 
-    // Check if this is a file operation
-    if (!is_file_operation(stmt)) return;
+    tree fn_cur = gimple_call_fndecl(stmt);
+    if (!fn_cur) return;
+    const char* cur_name = IDENTIFIER_POINTER(DECL_NAME(fn_cur));
+    if (!cur_name) return;
+
+    std::string cur_fn(cur_name);
+    std::transform(cur_fn.begin(), cur_fn.end(), cur_fn.begin(), ::tolower);
+
+    auto is_check_name = [](const std::string& fn_name) -> bool {
+        static const std::vector<std::string> check_keywords = {
+            "access", "stat", "lstat", "faccess", "permission", "inode_permission",
+            "may_open", "security_", "path_lookup", "filename_lookup", "lookup", "kern_path"
+        };
+
+        for (const auto& kw : check_keywords) {
+            if (fn_name.find(kw) != std::string::npos) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    // Use-side operations (time-of-use)
+    bool is_use_op = (
+        cur_fn.find("open") != std::string::npos ||
+        cur_fn.find("filp_open") != std::string::npos ||
+        cur_fn.find("vfs_open") != std::string::npos ||
+        cur_fn.find("path_open") != std::string::npos ||
+        cur_fn.find("fopen") != std::string::npos ||
+        cur_fn.find("freopen") != std::string::npos ||
+        cur_fn.find("rename") != std::string::npos ||
+        cur_fn.find("renameat") != std::string::npos ||
+        cur_fn.find("unlink") != std::string::npos ||
+        cur_fn.find("unlinkat") != std::string::npos ||
+        cur_fn.find("symlink") != std::string::npos ||
+        cur_fn.find("linkat") != std::string::npos ||
+        cur_fn.find("chmod") != std::string::npos ||
+        cur_fn.find("chown") != std::string::npos ||
+        cur_fn.find("mknod") != std::string::npos ||
+        cur_fn.find("truncate") != std::string::npos
+    );
+
+    if (!is_use_op) return;
 
     basic_block bb = gimple_bb(stmt);
     if (!bb) return;
 
-    // Look for the pattern: check() -> use()
+    auto has_check_op_in_bb = [&is_check_name](basic_block block) -> bool {
+        if (!block) return false;
+
+        gimple_stmt_iterator it;
+        for (it = gsi_start_bb(block); !gsi_end_p(it); gsi_next(&it)) {
+            gimple *s = gsi_stmt(it);
+            if (!is_gimple_call(s)) continue;
+
+            tree fn_prev = gimple_call_fndecl(s);
+            if (!fn_prev) continue;
+            const char* prev_name = IDENTIFIER_POINTER(DECL_NAME(fn_prev));
+            if (!prev_name) continue;
+
+            std::string prev_fn(prev_name);
+            std::transform(prev_fn.begin(), prev_fn.end(), prev_fn.begin(), ::tolower);
+
+            bool is_check_op = is_check_name(prev_fn);
+
+            if (is_check_op) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+    // Look for the pattern: check() -> use() in same block or immediate predecessor.
     gimple_stmt_iterator gsi;
     bool found_check = false;
-    tree checked_var = NULL_TREE;
 
     for (gsi = gsi_start_bb(bb); !gsi_end_p(gsi); gsi_next(&gsi)) {
         gimple *s = gsi_stmt(gsi);
         if (s == stmt) break;
 
-        // Look for access/stat calls
         if (is_gimple_call(s)) {
-            tree fn = gimple_call_fndecl(s);
-            if (fn) {
-                const char* name = IDENTIFIER_POINTER(DECL_NAME(fn));
-                if (name && is_race_prone_function(name)) {
-                    found_check = true;
-                    // Get the checked variable (usually first argument)
-                    if (gimple_call_num_args(s) > 0) {
-                        checked_var = gimple_call_arg(s, 0);
-                    }
-                    break;
-                }
+            tree fn_prev = gimple_call_fndecl(s);
+            if (!fn_prev) continue;
+            const char* prev_name = IDENTIFIER_POINTER(DECL_NAME(fn_prev));
+            if (!prev_name) continue;
+
+            std::string prev_fn(prev_name);
+            std::transform(prev_fn.begin(), prev_fn.end(), prev_fn.begin(), ::tolower);
+
+            bool is_check_op = is_check_name(prev_fn);
+
+            if (is_check_op) {
+                found_check = true;
+                break;
             }
         }
     }
 
-    if (found_check && checked_var) {
-        // Now look for use of the checked variable
-        for (gsi = gsi_start_bb(bb); !gsi_end_p(gsi); gsi_next(&gsi)) {
-            gimple *s = gsi_stmt(gsi);
+    if (!found_check) {
+        edge e;
+        edge_iterator ei;
+        FOR_EACH_EDGE(e, ei, bb->preds) {
+            if (has_check_op_in_bb(e->src)) {
+                found_check = true;
+                break;
+            }
 
-            if (s == stmt) break;
-
-            // Check if the checked variable is used
-            if (is_gimple_assign(s)) {
-                tree lhs = gimple_assign_lhs(s);
-                tree rhs1 = gimple_assign_rhs1(s);
-
-                if ((lhs == checked_var || rhs1 == checked_var)) {
-                    expanded_location loc;
-                    loc = expand_location(gimple_location(stmt));
-
-                    add_result("TOCTOU", "High",
-                               "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
-                               loc.line, loc.column,
-                               "Use atomic file operations or re-check after use");
+            // One more hop catches common check/use splits across branch merge blocks.
+            edge e2;
+            edge_iterator ei2;
+            FOR_EACH_EDGE(e2, ei2, e->src->preds) {
+                if (has_check_op_in_bb(e2->src)) {
+                    found_check = true;
                     break;
                 }
             }
+            if (found_check) {
+                break;
+            }
         }
+    }
+
+    // Fallback heuristic: if a function has check-op and use-op but they are far apart,
+    // still report once per function to avoid chronic under-reporting.
+    if (!found_check && cfun && cfun->decl) {
+        bool has_any_check = false;
+
+        basic_block bb2;
+        gimple_stmt_iterator gsi2;
+        FOR_EACH_BB_FN(bb2, cfun) {
+            for (gsi2 = gsi_start_bb(bb2); !gsi_end_p(gsi2); gsi_next(&gsi2)) {
+                gimple *s2 = gsi_stmt(gsi2);
+                if (!s2 || !is_gimple_call(s2)) continue;
+
+                tree fn2 = gimple_call_fndecl(s2);
+                if (!fn2) continue;
+                const char* name2 = IDENTIFIER_POINTER(DECL_NAME(fn2));
+                if (!name2) continue;
+
+                std::string fn_name2(name2);
+                std::transform(fn_name2.begin(), fn_name2.end(), fn_name2.begin(), ::tolower);
+                if (is_check_name(fn_name2)) {
+                    has_any_check = true;
+                    break;
+                }
+            }
+            if (has_any_check) break;
+        }
+
+        if (has_any_check) {
+            static std::set<unsigned int> reported_funcs;
+            unsigned int uid = DECL_UID(cfun->decl);
+            if (reported_funcs.insert(uid).second) {
+                expanded_location loc;
+                loc = expand_location(gimple_location(stmt));
+
+                add_result("TOCTOU", "Medium",
+                           "Potential TOCTOU pattern: check and file operation appear in the same function",
+                           loc.line, loc.column,
+                           "Use atomic file APIs (openat2/O_NOFOLLOW) or re-validate target after open");
+                found_check = true;
+            }
+        }
+    }
+
+    if (found_check) {
+        expanded_location loc;
+        loc = expand_location(gimple_location(stmt));
+
+        add_result("TOCTOU", "High",
+                   "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+                   loc.line, loc.column,
+                   "Use openat2/O_NOFOLLOW or re-check object identity after open");
     }
 }
 

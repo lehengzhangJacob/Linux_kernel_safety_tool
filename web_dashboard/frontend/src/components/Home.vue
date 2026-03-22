@@ -106,6 +106,53 @@
               </div>
             </div>
 
+            <div v-if="scanMode === 'local_archive'" class="archive-history-block">
+              <div class="archive-history-row">
+                <select v-model="selectedExistingArchiveTarget" class="server-select" @change="onExistingArchiveChange">
+                  <option value="">或选择历史上传压缩包（可直接重审）</option>
+                  <option v-for="item in uploadedArchiveOptions" :key="item.target" :value="item.target">
+                    {{ item.target }} - {{ item.archive_name || '未命名压缩包' }}{{ item.archive_exists ? '' : '（压缩包已丢失）' }}
+                  </option>
+                </select>
+                <button type="button" class="history-refresh" @click="loadUploadedArchiveOptions" :disabled="uploadedArchiveLoading">刷新</button>
+              </div>
+
+              <div v-if="selectedExistingArchiveTarget" class="archive-strategy-block">
+                <label class="section-label">历史压缩包处理方式</label>
+                <div class="button-group archive-strategy-group">
+                  <button
+                    type="button"
+                    class="mode-button"
+                    :class="archiveReuseMode === 'reuse_report' ? 'active-button' : 'inactive-button'"
+                    @click="archiveReuseMode = 'reuse_report'"
+                  >
+                    直接查看以前运行好的报告
+                  </button>
+                  <button
+                    type="button"
+                    class="mode-button"
+                    :class="archiveReuseMode === 'rerun_overwrite' ? 'active-button' : 'inactive-button'"
+                    @click="archiveReuseMode = 'rerun_overwrite'"
+                  >
+                    全部重新跑并覆盖历史报告
+                  </button>
+                </div>
+
+                <div v-if="archiveReuseMode === 'reuse_report'" class="archive-report-picker">
+                  <select v-model="selectedExistingRunId" class="server-select">
+                    <option value="">请选择历史报告</option>
+                    <option v-for="item in existingCompletedReports" :key="item.run_id" :value="item.run_id">
+                      {{ item.started_at_text || '-' }} | run_id: {{ item.run_id }} | 告警: {{ item.total_warnings }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <p v-if="selectedExistingArchiveTarget && !selectedExistingArchiveAvailable" class="archive-missing-tip">
+                该历史压缩包文件已不存在，请重新上传压缩包后再分析。
+              </p>
+            </div>
+
           </div>
 
           <div class="action-section">
@@ -300,12 +347,19 @@ export default {
       historyFilterType: 'all',
       historyFilterStatus: 'all',
       historyFilterTarget: '',
+      uploadedArchiveOptions: [],
+      uploadedArchiveLoading: false,
+      selectedExistingArchiveTarget: '',
+      archiveReuseMode: 'reuse_report',
+      existingCompletedReports: [],
+      selectedExistingRunId: '',
       dataSource: null
     }
   },
   async mounted() {
     await this.tryResumeRunningTask()
     await this.loadHistory()
+    await this.loadUploadedArchiveOptions()
   },
   beforeUnmount() {
     if (this.pollInterval) {
@@ -343,10 +397,80 @@ export default {
       const files = event.target.files
       if (files.length > 0) {
         const archive = files[0]
+        this.selectedExistingArchiveTarget = ''
         this.selectedLocalFolder = this.archiveTargetDir(archive.name)
         this.fileCount = archive.name
         this.uploadComplete = false
         this.uploadProgress = 0
+      }
+    },
+    async loadUploadedArchiveOptions() {
+      this.uploadedArchiveLoading = true
+      try {
+        const res = await axios.get('/api/uploaded-archives')
+        this.uploadedArchiveOptions = Array.isArray(res.data?.items) ? res.data.items : []
+      } catch (_error) {
+        this.uploadedArchiveOptions = []
+      } finally {
+        this.uploadedArchiveLoading = false
+      }
+    },
+    onExistingArchiveChange() {
+      if (!this.selectedExistingArchiveTarget) {
+        this.existingCompletedReports = []
+        this.selectedExistingRunId = ''
+        return
+      }
+
+      const selected = this.uploadedArchiveOptions.find(item => item.target === this.selectedExistingArchiveTarget)
+      if (!selected) {
+        this.uploadComplete = false
+        this.existingCompletedReports = []
+        this.selectedExistingRunId = ''
+        return
+      }
+
+      this.selectedLocalFolder = selected.target
+      this.fileCount = selected.archive_name || '历史压缩包'
+      this.uploadComplete = !!selected.archive_exists
+      this.uploadProgress = selected.archive_exists ? 100 : 0
+      this.archiveReuseMode = 'reuse_report'
+
+      const archiveInput = document.getElementById('archiveInput')
+      if (archiveInput) {
+        archiveInput.value = ''
+      }
+
+      this.loadCompletedReportsForTarget(selected.target)
+
+      if (!selected.archive_exists) {
+        alert('该历史压缩包已不存在，请重新上传压缩包。')
+      }
+    },
+    async loadCompletedReportsForTarget(targetName) {
+      this.existingCompletedReports = []
+      this.selectedExistingRunId = ''
+      if (!targetName) {
+        return
+      }
+
+      try {
+        const res = await axios.get('/api/history', {
+          params: {
+            page: 1,
+            page_size: 100,
+            target_type: 'uploaded',
+            status: 'completed',
+            target: targetName
+          }
+        })
+        const items = Array.isArray(res.data?.items) ? res.data.items : []
+        this.existingCompletedReports = items.filter(item => item.target_name === targetName)
+        if (this.existingCompletedReports.length > 0) {
+          this.selectedExistingRunId = this.existingCompletedReports[0].run_id
+        }
+      } catch (_error) {
+        this.existingCompletedReports = []
       }
     },
     handleDrop(event) {
@@ -392,6 +516,9 @@ export default {
 
           this.progress = typeof data.progress === 'number' ? data.progress : this.progress
           this.currentRunId = data.run_id || this.currentRunId
+          if (this.currentRunId) {
+            localStorage.setItem('currentRunId', this.currentRunId)
+          }
 
           if (Array.isArray(data.logs)) {
             if (data.logs.length < this.lastServerLogCount) {
@@ -448,6 +575,9 @@ export default {
         }
 
         this.currentRunId = data.run_id || null
+        if (this.currentRunId) {
+          localStorage.setItem('currentRunId', this.currentRunId)
+        }
         this.progress = typeof data.progress === 'number' ? data.progress : 0
         this.logs = Array.isArray(data.logs) ? [...data.logs] : []
         this.lastServerLogCount = this.logs.length
@@ -488,6 +618,9 @@ export default {
         }
 
         this.currentRunId = data.run_id || null
+        if (this.currentRunId) {
+          localStorage.setItem('currentRunId', this.currentRunId)
+        }
         this.progress = typeof data.progress === 'number' ? data.progress : 0
         this.logs = Array.isArray(data.logs) ? [...data.logs] : ['[*] 已恢复进行中的任务']
         this.lastServerLogCount = this.logs.length
@@ -550,6 +683,7 @@ export default {
         return
       }
       this.currentRunId = item.run_id
+      localStorage.setItem('currentRunId', item.run_id)
       this.$router.push({ path: '/dashboard', query: { run_id: item.run_id } })
     },
     async deleteHistory(item, purgeUploadedPayload) {
@@ -667,6 +801,23 @@ export default {
       }
     },
     async startScan() {
+      if (this.scanMode === 'local_archive' && this.selectedExistingArchiveTarget && !this.selectedExistingArchiveAvailable) {
+        alert('所选历史压缩包已不存在，请重新上传压缩包后再分析。')
+        return
+      }
+
+      if (this.scanMode === 'local_archive' && this.selectedExistingArchiveTarget && this.archiveReuseMode === 'reuse_report') {
+        if (!this.selectedExistingRunId) {
+          alert('请先选择一个历史报告。')
+          return
+        }
+        this.currentRunId = this.selectedExistingRunId
+        localStorage.setItem('currentRunId', this.selectedExistingRunId)
+        localStorage.setItem('hasAuditData', 'true')
+        this.$router.push({ path: '/dashboard', query: { run_id: this.selectedExistingRunId } })
+        return
+      }
+
       if ((this.scanMode === 'local_folder' || this.scanMode === 'local_archive') && !this.uploadComplete) {
         alert('请先完成源代码上传！')
         return
@@ -683,13 +834,25 @@ export default {
       
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
       const isUploaded = this.scanMode !== 'server'
+      const forceReanalyze = this.scanMode === 'local_archive' && !!this.selectedExistingArchiveTarget && this.archiveReuseMode === 'rerun_overwrite'
       this.logs = ['初始化分析引擎...', `目标: ${targetName}`]
       this.lastServerLogCount = 0
       
       try {
         // Call backend API to start scan
-        const startRes = await axios.post('/api/scan', { target: targetName, is_uploaded: isUploaded })
+        const payload = {
+          target: targetName,
+          is_uploaded: isUploaded,
+          force_reanalyze: forceReanalyze
+        }
+        if (forceReanalyze) {
+          payload.overwrite_existing = true
+        }
+        const startRes = await axios.post('/api/scan', payload)
         this.currentRunId = startRes?.data?.run_id || null
+        if (this.currentRunId) {
+          localStorage.setItem('currentRunId', this.currentRunId)
+        }
         this.startPollingStatus()
 
       } catch (error) {
@@ -723,9 +886,28 @@ export default {
     }
   },
   computed: {
+    selectedExistingArchiveAvailable() {
+      if (!this.selectedExistingArchiveTarget) {
+        return false
+      }
+      const selected = this.uploadedArchiveOptions.find(item => item.target === this.selectedExistingArchiveTarget)
+      return !!selected?.archive_exists
+    },
     historyTotalPages() {
       const pages = Math.ceil(this.historyTotal / this.historyPageSize)
       return pages > 0 ? pages : 1
+    }
+  },
+  watch: {
+    scanMode(newValue) {
+      if (newValue !== 'local_archive') {
+        this.selectedExistingArchiveTarget = ''
+        this.existingCompletedReports = []
+        this.selectedExistingRunId = ''
+        this.archiveReuseMode = 'reuse_report'
+      } else {
+        this.loadUploadedArchiveOptions()
+      }
     }
   }
 }
@@ -1137,6 +1319,34 @@ export default {
 
 .archive-select-button:hover {
   background-color: #1d4ed8;
+}
+
+.archive-history-block {
+  margin-top: 12px;
+}
+
+.archive-history-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.archive-strategy-block {
+  margin-top: 10px;
+}
+
+.archive-strategy-group {
+  margin-bottom: 10px;
+}
+
+.archive-report-picker {
+  margin-top: 8px;
+}
+
+.archive-missing-tip {
+  margin-top: 8px;
+  color: #f59e0b;
+  font-size: 13px;
 }
 
 .upload-section:hover {

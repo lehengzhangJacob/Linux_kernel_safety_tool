@@ -253,6 +253,7 @@ export default {
       filterType: 'all',
       filterSeverity: 'all',
       issues: [],
+      totalCountFromApi: 0,
       topVariables: [],
       stats: {
         readRace: 0,
@@ -274,17 +275,63 @@ export default {
   async mounted() {
     await this.loadData()
   },
+  watch: {
+    '$route.query.run_id': {
+      async handler() {
+        await this.loadData()
+      }
+    }
+  },
   methods: {
     async loadData() {
       this.loading = true
       try {
-        const response = await axios.get('/api/race-conditions')
+        const runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || undefined
+        const response = await axios.get('/api/detections', {
+          params: {
+            type: 'RaceCondition',
+            run_id: runId
+          }
+        })
+        if (response?.data?.run_id) {
+          localStorage.setItem('currentRunId', response.data.run_id)
+        }
         this.issues = response.data.issues || []
-        this.topVariables = response.data.topVariables || []
+        this.totalCountFromApi = Number(response?.data?.total_count || this.issues.length)
+        this.stats.readRace = 0
+        this.stats.writeRace = 0
+        this.stats.deadlock = 0
+        const subtypeCounts = response?.data?.subtype_counts || {}
+        if (Object.keys(subtypeCounts).length > 0) {
+          this.stats.readRace = Number(subtypeCounts.Read || 0)
+          this.stats.writeRace = Number(subtypeCounts.Write || 0)
+          this.stats.deadlock = Number(subtypeCounts.Deadlock || 0)
+        }
+        const variableCounter = {}
+        this.issues.forEach((issue) => {
+          const key = issue.variable || 'unknown'
+          if (!variableCounter[key]) {
+            variableCounter[key] = { variable: key, reads: 0, writes: 0 }
+          }
+          if (issue.type === 'Read') {
+            variableCounter[key].reads += 1
+          } else if (issue.type === 'Write') {
+            variableCounter[key].writes += 1
+          }
+        })
+        this.topVariables = Object.values(variableCounter)
+          .sort((a, b) => (b.reads + b.writes) - (a.reads + a.writes))
+          .slice(0, 10)
         this.updateStats()
       } catch (error) {
         console.error('加载数据失败:', error)
-        this.loadDemoData()
+        this.issues = []
+        this.totalCountFromApi = 0
+        this.topVariables = []
+        this.stats.readRace = 0
+        this.stats.writeRace = 0
+        this.stats.deadlock = 0
+        this.updateStats()
       } finally {
         this.loading = false
       }
@@ -330,10 +377,12 @@ export default {
       this.updateStats()
     },
     updateStats() {
-      this.stats.readRace = this.issues.filter(i => i.type === 'Read').length
-      this.stats.writeRace = this.issues.filter(i => i.type === 'Write').length
-      this.stats.deadlock = this.issues.filter(i => i.type === 'Deadlock').length
-      this.stats.total = this.issues.length
+      if (!this.stats.readRace && !this.stats.writeRace && !this.stats.deadlock) {
+        this.stats.readRace = this.issues.filter(i => i.type === 'Read').length
+        this.stats.writeRace = this.issues.filter(i => i.type === 'Write').length
+        this.stats.deadlock = this.issues.filter(i => i.type === 'Deadlock').length
+      }
+      this.stats.total = this.totalCountFromApi || this.issues.length
     },
     async refreshData() {
       await this.loadData()
