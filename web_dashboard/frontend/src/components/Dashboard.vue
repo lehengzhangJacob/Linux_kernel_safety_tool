@@ -52,7 +52,7 @@
     <!-- 主要内容区 -->
     <main class="flex-1 overflow-auto p-6 relative z-10" v-if="data">
       <!-- 第一行：核心指标卡片 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
         <div class="card p-5 flex flex-col justify-center border border-slate-700/50 hover:border-blue-500/50 transition-colors">
           <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +66,7 @@
         <div class="card p-5 flex flex-col justify-center border border-slate-700/50 hover:border-emerald-500/50 transition-colors">
           <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4M6 16l4 4-4 4M6 8l4 4-4 4" />
             </svg>
             提取函数数
           </div>
@@ -88,23 +88,67 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-.77-1.964-.77-2.732 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
-            发现竞态警告
+            内存安全
           </div>
-          <div class="text-3xl font-bold text-red-400">{{ formatNumber(data.summary.total_warnings) }}</div>
-          <div class="text-xs text-slate-500 mt-1">需要关注的安全问题</div>
+          <div class="text-3xl font-bold text-red-400">{{ formatNumber(data.summary.memory_safety || 0) }}</div>
+          <div class="text-xs text-slate-500 mt-1">缓冲区溢出、空指针等</div>
+        </div>
+        <div class="card p-5 flex flex-col justify-center border-l-4 border-l-yellow-500 border border-slate-700/50 hover:border-yellow-500/50 transition-colors">
+          <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            信息泄露
+          </div>
+          <div class="text-3xl font-bold text-yellow-400">{{ formatNumber(data.summary.info_leak || 0) }}</div>
+          <div class="text-xs text-slate-500 mt-1">敏感数据泄露</div>
         </div>
       </div>
 
-      <!-- 第二行：图表区域 -->
+      <!-- 第二行：核心指标卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="card p-5 flex flex-col justify-center border-l-4 border-l-green-500 border border-slate-700/50 hover:border-green-500/50 transition-colors">
+          <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            权限提升
+          </div>
+          <div class="text-3xl font-bold text-green-400">{{ formatNumber(data.summary.privilege_escalation || 0) }}</div>
+          <div class="text-xs text-slate-500 mt-1">特权系统调用</div>
+        </div>
+        <div class="card p-5 flex flex-col justify-center border-l-4 border-l-purple-500 border border-slate-700/50 hover:border-purple-500/50 transition-colors">
+          <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            TOCTOU
+          </div>
+          <div class="text-3xl font-bold text-purple-400">{{ formatNumber(data.summary.toctou || 0) }}</div>
+          <div class="text-xs text-slate-500 mt-1">时间检查时间使用</div>
+        </div>
+        <div class="card p-5 flex flex-col justify-center border-l-4 border-l-blue-500 border border-slate-700/50 hover:border-blue-500/50 transition-colors">
+          <div class="text-slate-400 text-xs uppercase tracking-wider mb-2 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            竞态条件
+          </div>
+          <div class="text-3xl font-bold text-blue-400">{{ formatNumber(data.summary.race_condition || 0) }}</div>
+          <div class="text-xs text-slate-500 mt-1">未保护的全局变量访问</div>
+        </div>
+      </div>
+
+      <!-- 第三行：图表区域 -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-        <!-- 竞态警告类型分布 -->
+        <!-- 漏洞类型分布 -->
         <div class="card p-5 min-h-[320px] border border-slate-700/50">
           <h3 class="text-sm font-bold text-slate-300 mb-4 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
             </svg>
-            竞态警告类型分布
+            漏洞类型分布
           </h3>
           <div ref="rwChart" class="chart-container" style="height: 240px;"></div>
         </div>
@@ -132,7 +176,7 @@
         </div>
       </div>
 
-      <!-- 第三行：拓扑图和详细信息 -->
+      <!-- 第四行：拓扑图和详细信息 -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <!-- 依赖拓扑图 -->
         <div class="card p-5 min-h-[400px] border border-slate-700/50">
@@ -192,14 +236,14 @@
         </div>
       </div>
 
-      <!-- 第四行：警告详情 -->
+      <!-- 第五行：警告详情 -->
       <div class="card p-5 border border-slate-700/50">
         <div class="flex flex-col gap-3 mb-4">
           <h3 class="text-sm font-bold text-slate-300 flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-.77-1.964-.77-2.732 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
-            竞态警告详情
+            漏洞警告详情
           </h3>
           <div class="flex flex-wrap gap-3 items-center">
             <input
@@ -231,9 +275,9 @@
                 <tr v-for="(warn, index) in pagedWarnings" :key="index" 
                   class="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
                 <td class="px-4 py-3">
-                  <span :class="warn.type === 'Read' ? 'text-emerald-400 bg-emerald-400/10' : 'text-rose-400 bg-rose-400/10'" 
+                  <span :class="warn.type === 'Read' ? 'text-emerald-400 bg-emerald-400/10' : 'text-rose-400 bg-rose-400/10'"
                         class="px-2 py-1 rounded-full text-xs font-bold">
-                    {{ warn.type === 'Read' ? '读取' : '写入' }}
+                    {{ warn.type === 'Read' ? '读取' : warn.type === 'Write' ? '写入' : warn.type }}
                   </span>
                 </td>
                 <td class="px-4 py-3 font-mono text-orange-300">{{ warn.variable }}</td>
@@ -324,6 +368,27 @@ export default {
         this.runId = this.$route?.query?.run_id || null
         const params = this.runId ? { run_id: this.runId } : {}
 
+        // 尝试加载我们的GCC插件生成的JSON数据
+        try {
+          const jsonFiles = await axios.get('/api/json_files')
+          if (jsonFiles.data && jsonFiles.data.files && jsonFiles.data.files.length > 0) {
+            const latestFile = jsonFiles.data.files[0]
+            const jsonData = await axios.get(`/api/json_data/${latestFile}`)
+            this.processGccPluginData(jsonData.data)
+            this.apiStatus = 'Live'
+            await this.fetchWarnings(1)
+            
+            // 使用setTimeout确保DOM完全渲染后再初始化图表
+            setTimeout(() => {
+              this.initCharts()
+            }, 100)
+            return
+          }
+        } catch (jsonError) {
+          console.log('No GCC plugin JSON data found, using backend API:', jsonError)
+        }
+
+        // 回退到使用后端API
         const response = await axios.get('/api/stats', { params })
         const stats = response.data
         this.runId = stats?.run_id || this.runId
@@ -382,7 +447,12 @@ export default {
             total_writes: stats.edges?.WRITES || 0,
             total_warnings: 0,
             warning_reads: stats.edges?.READS || 0,
-            warning_writes: stats.edges?.WRITES || 0
+            warning_writes: stats.edges?.WRITES || 0,
+            memory_safety: 0,
+            info_leak: 0,
+            privilege_escalation: 0,
+            toctou: 0,
+            race_condition: 0
           },
           race_warnings: {
             top_variables: finalTopVars,
@@ -406,6 +476,78 @@ export default {
         this.loadMockData()
       }
     },
+    processGccPluginData(jsonData) {
+      if (!jsonData || !jsonData.detections) {
+        console.error('Invalid GCC plugin JSON data')
+        return
+      }
+
+      // 统计不同类型的漏洞
+      const memorySafetyCount = jsonData.detections.filter(d => d.type === 'BufferOverflow' || d.type === 'NullPointer' || d.type === 'UseAfterFree').length
+      const infoLeakCount = jsonData.detections.filter(d => d.type === 'InfoLeak').length
+      const privilegeEscalationCount = jsonData.detections.filter(d => d.type === 'PrivilegeEscalation').length
+      const toctouCount = jsonData.detections.filter(d => d.type === 'TOCTOU').length
+      const raceConditionCount = jsonData.detections.filter(d => d.type === 'RaceCondition').length
+
+      // 统计变量和函数的出现次数
+      const varCounter = {}
+      const funcCounter = {}
+
+      jsonData.detections.forEach(det => {
+        if (det.function) {
+          funcCounter[det.function] = (funcCounter[det.function] || 0) + 1
+        }
+      })
+
+      // 转换top_variables格式
+      const topVars = []
+      
+      // 转换top_functions格式
+      const topFuncs = Object.entries(funcCounter)
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 10)
+
+      // 准备警告样本
+      const warningsSample = jsonData.detections.map(det => ({
+        type: det.type,
+        variable: det.variable || '',
+        function: det.function || '',
+        severity: det.severity || 'MEDIUM',
+        message: det.message || '',
+        line: det.line || 0
+      }))
+
+      this.data = {
+        kernel_version: 'GCC Plugin Analysis',
+        scan_time: new Date().toISOString().split('T')[0],
+        summary: {
+          analysis_files: 1,
+          total_nodes: 0,
+          total_functions: Object.keys(funcCounter).length,
+          total_variables: 0,
+          total_edges: 0,
+          total_calls: 0,
+          total_reads: 0,
+          total_writes: 0,
+          total_warnings: jsonData.detections.length,
+          memory_safety: memorySafetyCount,
+          info_leak: infoLeakCount,
+          privilege_escalation: privilegeEscalationCount,
+          toctou: toctouCount,
+          race_condition: raceConditionCount
+        },
+        race_warnings: {
+          top_variables: topVars,
+          top_functions: topFuncs,
+          warnings_sample: warningsSample
+        },
+        graph: {
+          nodes: [],
+          edges: []
+        }
+      }
+    },
     loadMockData() {
       // 模拟数据用于测试
       this.data = {
@@ -422,7 +564,12 @@ export default {
           total_writes: 30,
           total_warnings: 15,
           warning_reads: 8,
-          warning_writes: 7
+          warning_writes: 7,
+          memory_safety: 5,
+          info_leak: 3,
+          privilege_escalation: 2,
+          toctou: 1,
+          race_condition: 4
         },
         race_warnings: {
           top_variables: [
@@ -541,14 +688,29 @@ export default {
           label: { show: false },
           data: [
             { 
-              value: this.data.summary.warning_reads, 
-              name: '无保护读 (Read)', 
-              itemStyle: { color: '#34d399' }
+              value: this.data.summary.memory_safety || 0, 
+              name: '内存安全', 
+              itemStyle: { color: '#ef4444' }
             },
             { 
-              value: this.data.summary.warning_writes, 
-              name: '无保护写 (Write)', 
-              itemStyle: { color: '#fb7185' }
+              value: this.data.summary.info_leak || 0, 
+              name: '信息泄露', 
+              itemStyle: { color: '#f59e0b' }
+            },
+            { 
+              value: this.data.summary.privilege_escalation || 0, 
+              name: '权限提升', 
+              itemStyle: { color: '#10b981' }
+            },
+            { 
+              value: this.data.summary.toctou || 0, 
+              name: 'TOCTOU', 
+              itemStyle: { color: '#8b5cf6' }
+            },
+            { 
+              value: this.data.summary.race_condition || 0, 
+              name: '竞态条件', 
+              itemStyle: { color: '#3b82f6' }
             }
           ]
         }]
@@ -879,15 +1041,15 @@ export default {
           { align: 'center' }
         )
         doc.text(
-          '内核并发安全分析系统 v1.0',
+          `生成时间: ${new Date().toLocaleString()}`,
           105,
           295,
           { align: 'center' }
         )
       }
       
-      // 保存PDF文件
-      doc.save(`kernel_security_report_${this.data.kernel_version}_${Date.now()}.pdf`)
+      // 保存PDF
+      doc.save(`kernel_security_report_${Date.now()}.pdf`)
     }
   },
   mounted() {
@@ -906,15 +1068,17 @@ export default {
 <style scoped>
 .dashboard {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #0f172a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f8fafc;
 }
 
 .card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  border: 1px solid rgba(51, 65, 85, 0.5);
+  background-color: rgba(30, 41, 59, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
 }
 
 .chart-container {
@@ -922,23 +1086,13 @@ export default {
   height: 100%;
 }
 
-/* 滚动条样式 */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1e293b;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #475569;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0;
+  }
+  
+  main {
+    padding: 1rem;
+  }
 }
 </style>

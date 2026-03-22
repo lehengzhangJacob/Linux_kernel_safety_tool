@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -g -I./src
 
 SRC = src/main.c
 OBJ = $(SRC:.c=.o)
-TARGET = kernel_analyzer
+TARGET = bin/kernel_analyzer
 
 all: $(TARGET)
 
