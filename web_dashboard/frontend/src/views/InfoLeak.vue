@@ -271,6 +271,7 @@ export default {
       filterSeverity: 'all',
       filterData: 'all',
       issues: [],
+      totalCountFromApi: 0,
       stats: {
         logLeak: 0,
         networkLeak: 0,
@@ -284,7 +285,8 @@ export default {
       return this.issues.filter(issue => {
         const typeMatch = this.filterType === 'all' || issue.type === this.filterType
         const severityMatch = this.filterSeverity === 'all' || issue.severity === this.filterSeverity
-        const dataMatch = this.filterData === 'all' || issue.dataType.toLowerCase() === this.filterData
+        const issueDataType = (issue.dataType || '').toLowerCase()
+        const dataMatch = this.filterData === 'all' || issueDataType === this.filterData
         return typeMatch && severityMatch && dataMatch
       })
     }
@@ -292,16 +294,47 @@ export default {
   async mounted() {
     await this.loadData()
   },
+  watch: {
+    '$route.query.run_id': {
+      async handler() {
+        await this.loadData()
+      }
+    }
+  },
   methods: {
     async loadData() {
       this.loading = true
       try {
-        const response = await axios.get('/api/detections?type=InfoLeak')
+        const runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || undefined
+        const response = await axios.get('/api/detections', {
+          params: {
+            type: 'InfoLeak',
+            run_id: runId
+          }
+        })
+        if (response?.data?.run_id) {
+          localStorage.setItem('currentRunId', response.data.run_id)
+        }
         this.issues = response.data.issues || []
+        this.totalCountFromApi = Number(response?.data?.total_count || this.issues.length)
+        this.stats.logLeak = 0
+        this.stats.networkLeak = 0
+        this.stats.fileLeak = 0
+        const subtypeCounts = response?.data?.subtype_counts || {}
+        if (Object.keys(subtypeCounts).length > 0) {
+          this.stats.logLeak = Number(subtypeCounts.Log || 0)
+          this.stats.networkLeak = Number(subtypeCounts.Network || 0)
+          this.stats.fileLeak = Number(subtypeCounts.File || 0)
+        }
         this.updateStats()
       } catch (error) {
         console.error('加载数据失败:', error)
-        this.loadDemoData()
+        this.issues = []
+        this.totalCountFromApi = 0
+        this.stats.logLeak = 0
+        this.stats.networkLeak = 0
+        this.stats.fileLeak = 0
+        this.updateStats()
       } finally {
         this.loading = false
       }
@@ -345,10 +378,12 @@ export default {
       this.updateStats()
     },
     updateStats() {
-      this.stats.logLeak = this.issues.filter(i => i.type === 'Log').length
-      this.stats.networkLeak = this.issues.filter(i => i.type === 'Network').length
-      this.stats.fileLeak = this.issues.filter(i => i.type === 'File').length
-      this.stats.total = this.issues.length
+      if (!this.stats.logLeak && !this.stats.networkLeak && !this.stats.fileLeak) {
+        this.stats.logLeak = this.issues.filter(i => i.type === 'Log').length
+        this.stats.networkLeak = this.issues.filter(i => i.type === 'Network').length
+        this.stats.fileLeak = this.issues.filter(i => i.type === 'File').length
+      }
+      this.stats.total = this.totalCountFromApi || this.issues.length
     },
     async refreshData() {
       await this.loadData()

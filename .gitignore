@@ -11,12 +11,17 @@ linux-*/
 # Log files
 *.log
 *_display.log
+logs/*.pid
+logs/comparison_results/
 
 # Neo4j and JDK tools
 tools/neo4j-community-*/
 tools/jdk-*/
 tools/*.tar.gz
 neo4j_data_*/
+tools/neo4j-community-*/run/*.pid
+tools/neo4j-community-*/logs/
+tools/neo4j-community-*/data/
 
 # Analysis data
 analysis_data/

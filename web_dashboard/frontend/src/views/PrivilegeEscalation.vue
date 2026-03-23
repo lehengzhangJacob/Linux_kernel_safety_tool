@@ -218,6 +218,7 @@ export default {
       filterType: 'all',
       filterSeverity: 'all',
       issues: [],
+      totalCountFromApi: 0,
       stats: {
         privilegedSyscall: 0,
         permissionBypass: 0,
@@ -238,16 +239,47 @@ export default {
   async mounted() {
     await this.loadData()
   },
+  watch: {
+    '$route.query.run_id': {
+      async handler() {
+        await this.loadData()
+      }
+    }
+  },
   methods: {
     async loadData() {
       this.loading = true
       try {
-        const response = await axios.get('/api/detections?type=PrivilegeEscalation')
+        const runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || undefined
+        const response = await axios.get('/api/detections', {
+          params: {
+            type: 'PrivilegeEscalation',
+            run_id: runId
+          }
+        })
+        if (response?.data?.run_id) {
+          localStorage.setItem('currentRunId', response.data.run_id)
+        }
         this.issues = response.data.issues || []
+        this.totalCountFromApi = Number(response?.data?.total_count || this.issues.length)
+        this.stats.privilegedSyscall = 0
+        this.stats.permissionBypass = 0
+        this.stats.capabilityCheck = 0
+        const subtypeCounts = response?.data?.subtype_counts || {}
+        if (Object.keys(subtypeCounts).length > 0) {
+          this.stats.privilegedSyscall = Number(subtypeCounts.PrivilegedSyscall || 0)
+          this.stats.permissionBypass = Number(subtypeCounts.PermissionBypass || 0)
+          this.stats.capabilityCheck = Number(subtypeCounts.CapabilityCheck || 0)
+        }
         this.updateStats()
       } catch (error) {
         console.error('加载数据失败:', error)
-        this.loadDemoData()
+        this.issues = []
+        this.totalCountFromApi = 0
+        this.stats.privilegedSyscall = 0
+        this.stats.permissionBypass = 0
+        this.stats.capabilityCheck = 0
+        this.updateStats()
       } finally {
         this.loading = false
       }
@@ -288,10 +320,12 @@ export default {
       this.updateStats()
     },
     updateStats() {
-      this.stats.privilegedSyscall = this.issues.filter(i => i.type === 'PrivilegedSyscall').length
-      this.stats.permissionBypass = this.issues.filter(i => i.type === 'PermissionBypass').length
-      this.stats.capabilityCheck = this.issues.filter(i => i.type === 'CapabilityCheck').length
-      this.stats.total = this.issues.length
+      if (!this.stats.privilegedSyscall && !this.stats.permissionBypass && !this.stats.capabilityCheck) {
+        this.stats.privilegedSyscall = this.issues.filter(i => i.type === 'PrivilegedSyscall').length
+        this.stats.permissionBypass = this.issues.filter(i => i.type === 'PermissionBypass').length
+        this.stats.capabilityCheck = this.issues.filter(i => i.type === 'CapabilityCheck').length
+      }
+      this.stats.total = this.totalCountFromApi || this.issues.length
     },
     async refreshData() {
       await this.loadData()

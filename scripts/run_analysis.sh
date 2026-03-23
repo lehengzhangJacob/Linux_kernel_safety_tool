@@ -55,7 +55,12 @@ make -C "$PROJECT_ROOT/src/plugin"
 # Clean build directory if it exists from a failed/corrupted build
 if [ -d "$BUILD_DIR" ]; then
     echo "[*] Cleaning existing build directory: $BUILD_DIR"
-    rm -rf "$BUILD_DIR"
+    if ! rm -rf "$BUILD_DIR"; then
+        FALLBACK_BUILD_DIR="$PROJECT_ROOT/analysis_data/build_${KERNEL_SRC}_$(date +%s)"
+        echo "[WARNING] Failed to clean build directory (possible permission issue)."
+        echo "[WARNING] Falling back to fresh build directory: $FALLBACK_BUILD_DIR"
+        BUILD_DIR="$FALLBACK_BUILD_DIR"
+    fi
 fi
 echo "[*] Creating build directory: $BUILD_DIR"
 mkdir -p "$BUILD_DIR"

@@ -370,7 +370,7 @@ export default {
     },
     async loadDataFromResult() {
       try {
-        this.runId = this.$route?.query?.run_id || null
+        this.runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || null
         const params = this.runId ? { run_id: this.runId } : {}
 
         // 尝试加载我们的GCC插件生成的JSON数据
@@ -397,10 +397,34 @@ export default {
         const response = await axios.get('/api/stats', { params })
         const stats = response.data
         this.runId = stats?.run_id || this.runId
+        if (this.runId) {
+          localStorage.setItem('currentRunId', this.runId)
+        }
         
         // 获取图数据
         const graphRes = await axios.get('/api/graph', { params: { ...params, limit: 150 } })
         const graphData = graphRes.data
+
+        // 获取五类安全检测统计（按当前 run_id）
+        let detectionSummary = {
+          memory_safety: 0,
+          info_leak: 0,
+          privilege_escalation: 0,
+          toctou: 0,
+          race_condition: 0
+        }
+        try {
+          const detectionRes = await axios.get('/api/detections/summary', { params })
+          detectionSummary = {
+            memory_safety: detectionRes?.data?.memory_safety || 0,
+            info_leak: detectionRes?.data?.info_leak || 0,
+            privilege_escalation: detectionRes?.data?.privilege_escalation || 0,
+            toctou: detectionRes?.data?.toctou || 0,
+            race_condition: detectionRes?.data?.race_condition || 0
+          }
+        } catch (e) {
+          console.warn('Failed to load detection summary:', e)
+        }
         
         // 改进数据转换逻辑
         // 统计变量和函数的出现次数
@@ -453,11 +477,11 @@ export default {
             total_warnings: 0,
             warning_reads: stats.edges?.READS || 0,
             warning_writes: stats.edges?.WRITES || 0,
-            memory_safety: 0,
-            info_leak: 0,
-            privilege_escalation: 0,
-            toctou: 0,
-            race_condition: 0
+            memory_safety: detectionSummary.memory_safety,
+            info_leak: detectionSummary.info_leak,
+            privilege_escalation: detectionSummary.privilege_escalation,
+            toctou: detectionSummary.toctou,
+            race_condition: detectionSummary.race_condition
           },
           race_warnings: {
             top_variables: finalTopVars,

@@ -226,6 +226,7 @@ export default {
       filterType: 'all',
       filterSeverity: 'all',
       issues: [],
+      totalCountFromApi: 0,
       stats: {
         fileToctou: 0,
         symlinkAttack: 0,
@@ -246,16 +247,47 @@ export default {
   async mounted() {
     await this.loadData()
   },
+  watch: {
+    '$route.query.run_id': {
+      async handler() {
+        await this.loadData()
+      }
+    }
+  },
   methods: {
     async loadData() {
       this.loading = true
       try {
-        const response = await axios.get('/api/detections?type=TOCTOU')
+        const runId = this.$route?.query?.run_id || localStorage.getItem('currentRunId') || undefined
+        const response = await axios.get('/api/detections', {
+          params: {
+            type: 'TOCTOU',
+            run_id: runId
+          }
+        })
+        if (response?.data?.run_id) {
+          localStorage.setItem('currentRunId', response.data.run_id)
+        }
         this.issues = response.data.issues || []
+        this.totalCountFromApi = Number(response?.data?.total_count || this.issues.length)
+        this.stats.fileToctou = 0
+        this.stats.symlinkAttack = 0
+        this.stats.raceWindow = 0
+        const subtypeCounts = response?.data?.subtype_counts || {}
+        if (Object.keys(subtypeCounts).length > 0) {
+          this.stats.fileToctou = Number(subtypeCounts.FileTOCTOU || 0)
+          this.stats.symlinkAttack = Number(subtypeCounts.SymlinkAttack || 0)
+          this.stats.raceWindow = Number(subtypeCounts.RaceWindow || 0)
+        }
         this.updateStats()
       } catch (error) {
         console.error('加载数据失败:', error)
-        this.loadDemoData()
+        this.issues = []
+        this.totalCountFromApi = 0
+        this.stats.fileToctou = 0
+        this.stats.symlinkAttack = 0
+        this.stats.raceWindow = 0
+        this.updateStats()
       } finally {
         this.loading = false
       }
@@ -299,10 +331,12 @@ export default {
       this.updateStats()
     },
     updateStats() {
-      this.stats.fileToctou = this.issues.filter(i => i.type === 'FileTOCTOU').length
-      this.stats.symlinkAttack = this.issues.filter(i => i.type === 'SymlinkAttack').length
-      this.stats.raceWindow = this.issues.filter(i => i.type === 'RaceWindow').length
-      this.stats.total = this.issues.length
+      if (!this.stats.fileToctou && !this.stats.symlinkAttack && !this.stats.raceWindow) {
+        this.stats.fileToctou = this.issues.filter(i => i.type === 'FileTOCTOU').length
+        this.stats.symlinkAttack = this.issues.filter(i => i.type === 'SymlinkAttack').length
+        this.stats.raceWindow = this.issues.filter(i => i.type === 'RaceWindow').length
+      }
+      this.stats.total = this.totalCountFromApi || this.issues.length
     },
     async refreshData() {
       await this.loadData()

@@ -41,7 +41,7 @@ public:
     void analyze_function(tree fndecl) override;
     void finalize() override;
     std::string get_name() const override { return "TOCTOU"; }
-    std::string get_type() const override { return "PrivilegeEscalation"; }
+    std::string get_type() const override { return "TOCTOU"; }
     std::string get_description() const override {
         return "Detects Time-of-Check-Time-of-Use (TOCTOU) vulnerabilities";
     }
