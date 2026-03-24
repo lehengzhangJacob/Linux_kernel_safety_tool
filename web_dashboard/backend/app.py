@@ -562,6 +562,59 @@ def count_analysis_files_from_log(log_path):
     return len(compiled_objects)
 
 
+def count_analysis_files_from_json_dirs(json_dirs):
+    analyzed_units = set()
+    for d in json_dirs or []:
+        if not os.path.isdir(d):
+            continue
+        for path in glob.glob(os.path.join(d, 'data_*.json')):
+            analyzed_units.add(os.path.basename(path))
+    return len(analyzed_units)
+
+
+def ensure_neo4j_csv_from_json_dirs(target_name, json_dirs):
+    output_dir = os.path.join(LOGS_DIR, f'neo4j_data_{target_name}')
+    nodes_file = os.path.join(output_dir, 'nodes.csv')
+    edges_file = os.path.join(output_dir, 'edges.csv')
+
+    nodes_ready = os.path.exists(nodes_file) and os.path.getsize(nodes_file) > 0
+    edges_ready = os.path.exists(edges_file) and os.path.getsize(edges_file) > 0
+    if nodes_ready and edges_ready:
+        return nodes_file, edges_file
+
+    source_dir = None
+    for d in json_dirs or []:
+        if not os.path.isdir(d):
+            continue
+        if glob.glob(os.path.join(d, 'data_*.json')):
+            source_dir = d
+            break
+
+    if not source_dir:
+        return nodes_file, edges_file
+
+    os.makedirs(output_dir, exist_ok=True)
+    for stale_path in (nodes_file, edges_file):
+        if os.path.exists(stale_path) and os.path.getsize(stale_path) == 0:
+            os.remove(stale_path)
+
+    cmd = [
+        'python3',
+        os.path.join(PROJECT_ROOT, 'tools', 'export_to_neo4j.py'),
+        source_dir,
+        output_dir,
+    ]
+    result = subprocess.run(cmd, cwd=PROJECT_ROOT, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"[WARNING] Failed to generate Neo4j CSV for {target_name}: {result.stderr or result.stdout}")
+
+    instructions_path = os.path.join(output_dir, 'IMPORT_INSTRUCTIONS.md')
+    if os.path.exists(instructions_path):
+        os.remove(instructions_path)
+
+    return nodes_file, edges_file
+
+
 def get_run_row(run_id):
     if not run_id:
         return None
@@ -1371,6 +1424,7 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
         prefer_display=prefer_display,
         prefer_result=prefer_result,
     )
+    json_dirs = resolve_detection_json_dirs_for_run(run_id, target)
 
     if not race_file:
         race_file = os.path.join(PROJECT_ROOT, f"race_warnings_{target}.txt")
@@ -1398,6 +1452,17 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
             nodes_file = result_nodes_file
             edges_file = result_edges_file
 
+    if (
+        not nodes_file or not edges_file
+        or not os.path.exists(nodes_file)
+        or not os.path.exists(edges_file)
+    ):
+        generated_nodes_file, generated_edges_file = ensure_neo4j_csv_from_json_dirs(target, json_dirs)
+        if os.path.exists(generated_nodes_file):
+            nodes_file = generated_nodes_file
+        if os.path.exists(generated_edges_file):
+            edges_file = generated_edges_file
+
     nodes_data = parse_nodes_csv(nodes_file)
     edges_data = parse_edges_csv(edges_file)
     analysis_log_path = resolve_analysis_log_path(
@@ -1407,6 +1472,8 @@ def generate_analysis_data(target, run_id, result_dir_override=None, prefer_resu
         prefer_result=prefer_result,
     )
     analysis_files_count = count_analysis_files_from_log(analysis_log_path)
+    if analysis_files_count == 0:
+        analysis_files_count = count_analysis_files_from_json_dirs(json_dirs)
 
     # For prebuilt data, prefer the default analysis log's file count to avoid
     # stale display-log statistics.
