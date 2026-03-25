@@ -12,7 +12,11 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
     
     print(f"Scanning {data_dir} for JSON files...")
-    files = glob.glob(os.path.join(data_dir, "*.json"))
+    # Only consume analyzer data files (functions list). Skip detector output like detections_*.json.
+    files = [
+        p for p in glob.glob(os.path.join(data_dir, "*.json"))
+        if os.path.basename(p).startswith("data_")
+    ]
     
     if not files:
         print("No data files found!")

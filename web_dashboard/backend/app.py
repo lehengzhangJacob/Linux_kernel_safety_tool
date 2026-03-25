@@ -1609,64 +1609,104 @@ def generate_demo_graph_data():
 
 
 def parse_race_warnings(filepath):
-    """解析竞态警告文件"""
+    """解析竞态警告文件。
+
+    说明：编译日志里同一条竞态告警可能会重复出现（同一变量在不同编译单元/路径被多次打印）。
+    为了让仪表盘的“告警总数”更贴近“告警条目规模”的直观感受：
+    - 默认统计口径：按 (Read/Write, 变量名) 去重统计
+    - 同时保留 raw_*：按原始打印行数统计，便于解释为何会出现 2 万+ 的情况
+    """
     import re
     from collections import Counter
-    
-    warnings = []
-    raw_lines = []
+
+    warnings_sample = []
+    raw_lines_sample = []
+    sample_seen = set()  # (rw_type, var, func)
+
+    # Top 统计仍按原始频次（未去重），更能体现热点
     var_counter = Counter()
     func_counter = Counter()
-    read_count = 0
-    write_count = 0
-    
+
+    raw_read_count = 0
+    raw_write_count = 0
+
+    # 默认统计口径（去重）
+    unique_rw_var = set()      # (rw_type, var)
+    unique_read_vars = set()   # var
+    unique_write_vars = set()  # var
+
     pattern = re.compile(
         r'\[RACE_WARNING\] Unprotected (Read|Write) (?:from|to) \'([^\']+)\' in \'([^\']+)\''
     )
-    
+
     if not os.path.exists(filepath):
         return {
             "total": 0,
             "reads": 0,
             "writes": 0,
+            "raw_total": 0,
+            "raw_reads": 0,
+            "raw_writes": 0,
             "top_variables": [],
             "top_functions": [],
             "warnings_sample": [],
             "raw_lines": []
         }
-    
-    with open(filepath, 'r') as f:
+
+    with open(filepath, 'r', errors='ignore') as f:
         for line in f:
-            m = pattern.match(line.strip())
-            if m:
-                rw_type = m.group(1)
-                var_name = m.group(2)
-                func_name = m.group(3)
-                
-                if rw_type == "Read":
-                    read_count += 1
-                else:
-                    write_count += 1
-                
-                var_counter[var_name] += 1
-                func_counter[func_name] += 1
-                
-                if len(warnings) < 200:
-                    warnings.append({
+            s = line.strip()
+            m = pattern.match(s)
+            if not m:
+                continue
+
+            rw_type = m.group(1)  # Read / Write
+            var_name = m.group(2)
+            func_name = m.group(3)
+
+            # 原始统计（不去重）
+            if rw_type == "Read":
+                raw_read_count += 1
+            else:
+                raw_write_count += 1
+
+            var_counter[var_name] += 1
+            func_counter[func_name] += 1
+
+            # 去重统计：按 (读写类型, 变量名)
+            unique_rw_var.add((rw_type, var_name))
+            if rw_type == "Read":
+                unique_read_vars.add(var_name)
+            else:
+                unique_write_vars.add(var_name)
+
+            # 采样：避免 200 条里被重复刷屏
+            if len(warnings_sample) < 200:
+                sample_key = (rw_type, var_name, func_name)
+                if sample_key not in sample_seen:
+                    sample_seen.add(sample_key)
+                    warnings_sample.append({
                         "type": rw_type,
                         "variable": var_name,
                         "function": func_name
                     })
-                    raw_lines.append(line.strip())
-    
+                    raw_lines_sample.append(s)
+
     return {
-        "total": read_count + write_count,
-        "reads": read_count,
-        "writes": write_count,
+        # 默认（去重）口径：更接近“5000+”
+        "total": len(unique_rw_var),
+        "reads": len(unique_read_vars),
+        "writes": len(unique_write_vars),
+
+        # 原始（未去重）口径：解释“2 万+”
+        "raw_total": raw_read_count + raw_write_count,
+        "raw_reads": raw_read_count,
+        "raw_writes": raw_write_count,
+
         "top_variables": [{"name": k, "count": v} for k, v in var_counter.most_common(30)],
         "top_functions": [{"name": k, "count": v} for k, v in func_counter.most_common(30)],
-        "warnings_sample": warnings,
-        "raw_lines": raw_lines
+        "warnings_sample": warnings_sample,
+        "raw_lines": raw_lines_sample
     }
 
 def parse_nodes_csv(filepath):
@@ -1941,18 +1981,24 @@ def start_scan():
             }), 409
     
     # 内置内核快速路径：若已有预置结果则直接返回，不重跑分析
+    # 关键优化：复用最近一次已完成的内置 run_id，避免用户每次点开都看到“新的 run_id”。
     if not is_uploaded and not force_reanalyze and has_prebuilt_result(target):
-        create_run_record(run_id, target, False)
-        generate_analysis_data(target, run_id, prefer_display=True, is_prebuilt=True)
-        update_run_status(run_id, 'completed')
-        current_run_id = run_id
+        latest_completed = get_latest_run(target_name=target, is_uploaded=False, statuses=['completed'])
+        reused_run_id = latest_completed['run_id'] if latest_completed else run_id
+
+        if not latest_completed:
+            create_run_record(reused_run_id, target, False)
+            update_run_status(reused_run_id, 'completed')
+
+        generate_analysis_data(target, reused_run_id, prefer_display=True, is_prebuilt=True)
+        current_run_id = reused_run_id
 
         scan_status["status"] = "completed"
         scan_status["progress"] = 100
-        scan_status["run_id"] = run_id
+        scan_status["run_id"] = reused_run_id
         scan_status["target"] = target
         scan_status["logs"].clear()
-        scan_status["logs"].append(f"[*] run_id: {run_id}")
+        scan_status["logs"].append(f"[*] run_id: {reused_run_id}")
         scan_status["logs"].append("[*] 命中内置结果，跳过重分析")
         scan_status["logs"].append("[+] 已加载预置分析数据（非实时分析）")
 
@@ -1960,8 +2006,9 @@ def start_scan():
             "message": "Scan loaded from prebuilt data",
             "target": target,
             "is_uploaded": is_uploaded,
-            "run_id": run_id,
+            "run_id": reused_run_id,
             "quick_mode": True,
+            "reused": bool(latest_completed),
         })
 
     # 上传源码复用路径：命中最近一次已完成任务则直接加载历史结果，避免重复长时间审计
@@ -3130,5 +3177,7 @@ def get_detection_summary():
 
 
 if __name__ == '__main__':
-    print("Starting Kernel Safety Analysis Backend API Server on port 5000...")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    # 支持通过环境变量指定端口，便于 5000 被占用（例如残留旧进程/权限问题）时仍可启动新版本后端。
+    port = int(os.environ.get('BACKEND_PORT') or os.environ.get('PORT') or 5000)
+    print(f"Starting Kernel Safety Analysis Backend API Server on port {port}...")
+    app.run(host='0.0.0.0', port=port, debug=False)
