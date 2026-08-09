@@ -833,6 +833,10 @@ def has_prebuilt_result(target):
 def index():
     return send_from_directory(os.path.join(WEB_DASHBOARD_DIR, 'frontend', 'dist'), 'index.html')
 
+@app.route('/assets/<path:path>')
+def serve_assets(path):
+    return send_from_directory(os.path.join(WEB_DASHBOARD_DIR, 'frontend', 'dist', 'assets'), path)
+
 @app.route('/<path:path>')
 def serve_static(path):
     return send_from_directory(os.path.join(WEB_DASHBOARD_DIR, 'frontend', 'dist'), path)
