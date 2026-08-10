@@ -1,0 +1,416 @@
+[
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'bus_token' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 315,
+    "column": 9,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 177,
+    "column": 10,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 93,
+    "column": 7,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 315,
+    "column": 9,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array write",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 20,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array write",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 20,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array write",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 20,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 616,
+    "column": 10,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 177,
+    "column": 10,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 190,
+    "column": 18,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 87,
+    "column": 7,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 90,
+    "column": 7,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 93,
+    "column": 7,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 965,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 965,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1727,
+    "column": 12,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1639,
+    "column": 19,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1656,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1073,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1074,
+    "column": 12,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1052,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1053,
+    "column": 12,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1027,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1027,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1029,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1029,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1031,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 26,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1073,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 1074,
+    "column": 12,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 985,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 985,
+    "column": 13,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 986,
+    "column": 12,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 965,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 26,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 784,
+    "column": 26,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 771,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/irq/irqdomain.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  }
+]

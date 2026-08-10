@@ -1,0 +1,3080 @@
+[
+  {
+    "type": "InfoLeak",
+    "severity": "High",
+    "message": "Sensitive data 'path' may be leaked to error output",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2877,
+    "column": 2,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2833,
+    "column": 3,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'mntpath' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2833,
+    "column": 3,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 300,
+    "column": 12,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 187,
+    "column": 12,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 185,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4869,
+    "column": 6,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4922,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4922,
+    "column": 18,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4829,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4832,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4449,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4437,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 28,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 28,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3642,
+    "column": 38,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3598,
+    "column": 16,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3350,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3242,
+    "column": 20,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2633,
+    "column": 20,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1455,
+    "column": 4,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1455,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1437,
+    "column": 7,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 185,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 590,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 591,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 593,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 156,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 196,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 185,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 980,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 982,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1024,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1026,
+    "column": 3,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1027,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1028,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 23,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 23,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 134,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 355,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 311,
+    "column": 6,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 28,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 37,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 38,
+    "column": 2,
+    "suggestion": "Set pointer to NULL after free"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3718,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_create_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1112,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'fc_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1916,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 955,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_change_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 956,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'drop_collected_mounts' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4794,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_kern_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'fs_context_for_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1129,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'parse_monolithic_mount_data' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1137,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'fc_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1139,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_create_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1112,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__register_sysctl_init' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 5064,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 5000,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 5001,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 5002,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mount_too_revealing.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_kern_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_kern_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4699,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'build_mount_kattr' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4712,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_mount_setattr' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4718,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'finish_mount_kattr' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4721,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_mount_setattr' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4677,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_idmap_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4447,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'can_idmap_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4386,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4217,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_lock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2506,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4276,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4290,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'chroot_fs_refs' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4292,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unlock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4295,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_pivot_root' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4209,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4110,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_move_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4149,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_move_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4101,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3984,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mount_too_revealing' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4028,
+    "column": 6,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_create_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4040,
+    "column": 17,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_fsmount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3972,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'copy_mount_string' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3912,
+    "column": 16,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'copy_mount_string' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3917,
+    "column": 15,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'copy_mount_options' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3922,
+    "column": 12,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3927,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3904,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3718,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3650,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_remount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3697,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_move_mount_old' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3703,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_new_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3705,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3570,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'select_submounts' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3565,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_mount_busy' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3537,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_mount_busy' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3492,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3499,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'get_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3425,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_add_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3431,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unlock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3432,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'fs_context_for_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3357,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'parse_monolithic_mount_data' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3374,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mount_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3375,
+    "column": 15,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_new_mount_fc' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3380,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mount_too_revealing' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3299,
+    "column": 16,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_create_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3309,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_lock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2506,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_add_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3320,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unlock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3321,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_move_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3249,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_lock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3153,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'can_move_mount_beneath' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3195,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'check_for_nsfs_mounts' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3211,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unlock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3227,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagation_would_overmount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3120,
+    "column": 6,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagation_would_overmount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 3135,
+    "column": 6,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'change_mount_ro_state' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2871,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'set_mount_attributes' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2873,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2737,
+    "column": 19,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_lock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2506,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2662,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unlock_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2666,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'clone_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2615,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'get_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2483,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'get_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2321,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'count_mounts' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2327,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint_beneath' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2364,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2366,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_change_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2380,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2392,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2114,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'clone_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2122,
+    "column": 12,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2073,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2059,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'clone_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1977,
+    "column": 12,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'clone_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2012,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 2025,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ksys_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1931,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ksys_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1921,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1916,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'can_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1891,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1893,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1872,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1880,
+    "column": 28,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1842,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'lookup_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1818,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1826,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1829,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1767,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_umount_root' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1769,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1783,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'shrink_submounts' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1787,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_mount_busy' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1789,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1791,
+    "column": 5,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'parse_monolithic_mount_data' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1694,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_mount_unlock' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1631,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1646,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'disconnect_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1663,
+    "column": 16,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'umount_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1670,
+    "column": 5,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'propagate_mount_busy' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1547,
+    "column": 6,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'clone_mnt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1404,
+    "column": 6,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_is_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1319,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_pin_kill' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 1244,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_submount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_kern_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'fc_mount.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint_beneath' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 993,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 995,
+    "column": 3,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_set_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 955,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'mnt_change_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 956,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 864,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__put_mountpoint.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'lookup_mountpoint' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 804,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'd_set_mounted' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 817,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'sysfs_init' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4778,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'init_mount_tree' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/namespace.c",
+    "line": 4787,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  }
+]

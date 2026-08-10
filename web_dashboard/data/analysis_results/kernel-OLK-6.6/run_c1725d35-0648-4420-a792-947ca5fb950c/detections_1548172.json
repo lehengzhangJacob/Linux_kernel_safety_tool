@@ -1,0 +1,371 @@
+[
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'page' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1040,
+    "column": 1,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'page' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1039,
+    "column": 1,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'page' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1038,
+    "column": 1,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'page' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1037,
+    "column": 1,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'page' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1036,
+    "column": 1,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1040,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1039,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1038,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1037,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1036,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 963,
+    "column": 9,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 770,
+    "column": 19,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 635,
+    "column": 33,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 603,
+    "column": 32,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 614,
+    "column": 10,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 618,
+    "column": 8,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 579,
+    "column": 32,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 326,
+    "column": 25,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 328,
+    "column": 25,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array write",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 339,
+    "column": 24,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array write",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 341,
+    "column": 24,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 291,
+    "column": 36,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 294,
+    "column": 36,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 297,
+    "column": 36,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 300,
+    "column": 36,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 302,
+    "column": 30,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1280,
+    "column": 33,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1281,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 960,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 170,
+    "column": 16,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 207,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1293,
+    "column": 21,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1268,
+    "column": 21,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 763,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 170,
+    "column": 16,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 207,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 742,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 170,
+    "column": 16,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 207,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 623,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'x86_event_sysfs_show' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/events/amd/core.c",
+    "line": 1271,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  }
+]

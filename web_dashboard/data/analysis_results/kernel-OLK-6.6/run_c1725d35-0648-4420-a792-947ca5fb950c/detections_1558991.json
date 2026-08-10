@@ -1,0 +1,155 @@
+[
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 132,
+    "column": 3,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 147,
+    "column": 3,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 152,
+    "column": 3,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Potential kernel pointer address leakage via format string (%p)",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 158,
+    "column": 3,
+    "suggestion": "Use pointer hashing/obfuscation (e.g., %pK) and avoid exposing raw addresses"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 142,
+    "column": 17,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 53,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 53,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 53,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 23,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 550,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 522,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 288,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 256,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 53,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 23,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 18,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "UseAfterFree",
+    "severity": "High",
+    "message": "Use after free detected",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/lib/devres.c",
+    "line": 550,
+    "column": 8,
+    "suggestion": "Set pointer to NULL after free"
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__do_sys_getegid16.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__do_sys_getgid16.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__do_sys_geteuid16.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__do_sys_getuid16.part.0' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 0,
+    "column": 0,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setfsgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 111,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setfsuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 106,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_getresgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 87,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setresgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 83,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_setresgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 81,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_getresuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 64,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setresuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 60,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_setresuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 58,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 55,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setreuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 50,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_setreuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 48,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 45,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__sys_setregid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 40,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_setregid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 38,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ksys_fchown' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 35,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_fchown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 33,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_fchownat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 1232,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_lchown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 28,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_fchownat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 1226,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__se_sys_chown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/uid16.c",
+    "line": 23,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  }
+]

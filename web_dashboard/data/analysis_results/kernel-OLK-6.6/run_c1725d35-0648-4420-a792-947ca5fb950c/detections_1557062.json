@@ -1,0 +1,254 @@
+[
+  {
+    "type": "InfoLeak",
+    "severity": "High",
+    "message": "Sensitive data 'cred' may be leaked to error output",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 581,
+    "column": 13,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "InfoLeak",
+    "severity": "Medium",
+    "message": "Sensitive data 'path' may be leaked to log",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 188,
+    "column": 8,
+    "suggestion": "Avoid leaking sensitive data; consider redaction or hashing"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Potential buffer overflow in array read",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 600,
+    "column": 10,
+    "suggestion": "Add bounds checking before array access"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 1133,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 256,
+    "column": 23,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 637,
+    "column": 42,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 637,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 638,
+    "column": 21,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 641,
+    "column": 14,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 663,
+    "column": 36,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 36,
+    "column": 10,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 70,
+    "column": 9,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 207,
+    "column": 8,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 128,
+    "column": 2,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 139,
+    "column": 43,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 140,
+    "column": 41,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 141,
+    "column": 20,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 142,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 155,
+    "column": 19,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "NullPointer",
+    "severity": "High",
+    "message": "Potential null pointer dereference",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 156,
+    "column": 22,
+    "suggestion": "Add null check before dereferencing pointer"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'down_write_killable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 124,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__register_sysctl_init' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 1034,
+    "column": 2,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'format_corename' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 583,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_unlinkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 681,
+    "column": 4,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'unshare_files' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 754,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'expand_corename' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/coredump.c",
+    "line": 105,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  }
+]

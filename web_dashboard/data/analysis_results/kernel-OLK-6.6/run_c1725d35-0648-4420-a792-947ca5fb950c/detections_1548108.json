@@ -1,0 +1,1136 @@
+[
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 148,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 158,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 283,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 366,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "BufferOverflow",
+    "severity": "Critical",
+    "message": "Unsafe string operation may cause buffer overflow",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 368,
+    "column": 1,
+    "suggestion": "Use safe string functions (strncpy, strncat, snprintf)"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_exit' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 2,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fork' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 3,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_link' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 10,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_unlink' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 11,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_execve' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 12,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mknod' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 15,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_chmod' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 16,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_lchown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 17,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getpid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 21,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 22,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_oldumount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 23,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 24,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 25,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_stime32' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 26,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_ptrace' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 27,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_kill' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 38,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_rename' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 39,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mkdir' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 40,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_rmdir' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 41,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 47,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 48,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_geteuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 50,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getegid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 51,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 53,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setpgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 58,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_chroot' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 62,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getppid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 65,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setsid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 67,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setreuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 71,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setregid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 72,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_sethostname' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 75,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_settimeofday' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 80,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_symlink' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 84,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_readlink' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 86,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_reboot' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 89,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchmod' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 95,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 96,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getpriority' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 97,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setpriority' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 98,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_ioperm' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 102,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_socketcall' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 103,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_iopl' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 111,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_clone' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 121,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setdomainname' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 122,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_adjtimex_time32' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 125,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getpgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 133,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_sysfs' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 136,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setfsuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 139,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setfsgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 140,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getsid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 148,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setresuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 165,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getresuid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 166,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setresgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 171,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getresgid16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 172,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_prctl' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 173,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_chown16' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 183,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_capget' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 185,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_capset' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 186,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_vfork' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 191,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_lchown' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 199,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 200,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 201,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_geteuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 202,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getegid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 203,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setreuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 204,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setregid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 205,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchown' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 208,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setresuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 209,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getresuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 210,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setresgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 211,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getresgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 212,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_chown' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 213,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 214,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 215,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setfsuid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 216,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setfsgid' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 217,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_pivot_root' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 218,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_tkill' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 239,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_exit_group' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 253,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_clock_settime32' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 265,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_tgkill' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 271,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mbind' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 275,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mq_unlink' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 279,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_kexec_load' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 284,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mkdirat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 297,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mknodat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 298,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchownat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 299,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_unlinkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 302,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_renameat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 303,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_linkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 304,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_symlinkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 305,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_readlinkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 306,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchmodat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 307,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_unshare' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 311,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setns' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 347,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_renameat2' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 354,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_seccomp' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 355,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_execveat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 359,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_socket' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 360,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_socketpair' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 361,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_bind' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 362,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_connect' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 363,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_listen' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 364,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_accept4' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 365,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getsockopt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 366,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_setsockopt' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 367,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getsockname' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 368,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_getpeername' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 369,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_sendto' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 370,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_sendmsg' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 371,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_recvfrom' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 372,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_recvmsg' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 373,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_arch_prctl' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 385,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_clock_settime' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 405,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_move_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 430,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fsmount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 433,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_clone3' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 436,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_mount_setattr' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 443,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall '__ia32_sys_fchmodat2' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 453,
+    "column": 1,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "Medium",
+    "message": "Potential TOCTOU pattern: check and file operation appear in the same function",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 6,
+    "column": 1,
+    "suggestion": "Use atomic file APIs (openat2/O_NOFOLLOW) or re-validate target after open"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/arch/x86/entry/syscall_32.c",
+    "line": 6,
+    "column": 1,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  }
+]

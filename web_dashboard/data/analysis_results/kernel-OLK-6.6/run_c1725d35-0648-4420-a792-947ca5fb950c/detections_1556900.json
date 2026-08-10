@@ -1,0 +1,155 @@
+[
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_rmdir' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 244,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_mkdir' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 236,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'do_unlinkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 220,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_symlink' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 212,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'may_linkat' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 186,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_link' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 192,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'vfs_mknod' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 160,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'chmod_common' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 108,
+    "column": 10,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'chown_common' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 93,
+    "column": 11,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'ns_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 71,
+    "column": 7,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_umount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 41,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'path_mount' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 25,
+    "column": 8,
+    "suggestion": "Add capability check before calling privileged syscall"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 212,
+    "column": 11,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 186,
+    "column": 10,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 160,
+    "column": 11,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 108,
+    "column": 10,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  },
+  {
+    "type": "TOCTOU",
+    "severity": "High",
+    "message": "Potential Time-of-Check-Time-of-Use (TOCTOU) vulnerability",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/fs/init.c",
+    "line": 93,
+    "column": 11,
+    "suggestion": "Use openat2/O_NOFOLLOW or re-check object identity after open"
+  }
+]

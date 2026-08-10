@@ -1,0 +1,11 @@
+[
+  {
+    "type": "PrivilegeEscalation",
+    "severity": "High",
+    "message": "Privileged syscall 'cap_capable' called without permission check",
+    "file": "/home/ldd_team/linux_kernel_safety_tool/web_dashboard/data/uploads/kernel-OLK-6.6/source/kernel-OLK-6.6/kernel/ksyms_common.c",
+    "line": 583,
+    "column": 9,
+    "suggestion": "Add capability check before calling privileged syscall"
+  }
+]

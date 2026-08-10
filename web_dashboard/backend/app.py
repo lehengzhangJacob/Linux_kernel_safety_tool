@@ -622,7 +622,7 @@ def get_run_row(run_id):
     try:
         row = conn.execute(
             '''
-            SELECT run_id, target_name, is_uploaded, started_at, finished_at
+            SELECT run_id, target_name, is_uploaded, started_at, finished_at, status, error_message
             FROM analysis_runs
             WHERE run_id = ?
             ''',
@@ -2150,13 +2150,43 @@ def recover_scan():
 
 @app.route('/api/scan/status', methods=['GET'])
 def get_scan_status():
-    return jsonify({
+    requested_run_id = (request.args.get('run_id', default=None, type=str) or '').strip() or None
+    mem_run_id = scan_status.get("run_id")
+    payload = {
         "status": scan_status["status"],
         "progress": scan_status["progress"],
-        "run_id": scan_status.get("run_id"),
+        "run_id": mem_run_id,
         "target": scan_status.get("target"),
-        "logs": list(scan_status["logs"])
-    })
+        "logs": list(scan_status["logs"]),
+        "error_message": None,
+    }
+
+    # 前端按 run_id 跟踪任务：内存状态丢失/被覆盖时，回退到数据库状态，避免进度页中断。
+    if requested_run_id:
+        row = get_run_row(requested_run_id)
+        if row:
+            db_status = row['status'] or 'running'
+            db_target = row['target_name']
+            db_error = row['error_message'] or None
+            if mem_run_id == requested_run_id:
+                payload["error_message"] = db_error
+                # 内存已 idle 但 DB 已终态时，以 DB 为准，方便自动跳转 dashboard
+                if payload["status"] in ('idle', None, '') and db_status in ('completed', 'error'):
+                    payload["status"] = db_status
+                    payload["target"] = db_target
+                    if db_status == 'completed':
+                        payload["progress"] = 100
+            else:
+                payload = {
+                    "status": db_status,
+                    "progress": 100 if db_status == 'completed' else (5 if db_status == 'running' else payload["progress"]),
+                    "run_id": requested_run_id,
+                    "target": db_target,
+                    "logs": [],
+                    "error_message": db_error,
+                }
+
+    return jsonify(payload)
 
 
 @app.route('/api/history', methods=['GET'])

@@ -30,7 +30,7 @@
         <div class="decor-top-right"></div>
         <div class="decor-bottom-left"></div>
         
-        <div v-if="!isScanning && !scanComplete" class="content-section">
+        <div v-if="!isScanning && !scanComplete && !scanFailed" class="content-section">
           <div>
             <label class="section-label">选择分析目标</label>
             <div class="button-group">
@@ -257,20 +257,20 @@
         <div v-else class="content-section">
           <div class="progress-header">
             <h3 class="progress-title">
-              <svg v-if="!scanComplete" class="spin-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <svg v-if="!scanComplete && !scanFailed" class="spin-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              <svg v-else class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg v-else-if="scanComplete" class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              {{ scanComplete ? '审计完成' : '正在执行深度并发安全分析...' }}
+              {{ scanFailed ? '审计失败' : (scanComplete ? '审计完成' : '正在执行深度并发安全分析...') }}
             </h3>
-            <span class="progress-percentage" :class="scanComplete ? 'complete' : 'in-progress'">{{ progress }}%</span>
+            <span class="progress-percentage" :class="scanComplete ? 'complete' : (scanFailed ? 'error' : 'in-progress')">{{ progress }}%</span>
           </div>
           
           <div class="progress-bar-container">
-            <div class="progress-bar" :class="scanComplete ? 'complete' : 'in-progress'" :style="`width: ${progress}%`">
+            <div class="progress-bar" :class="scanComplete ? 'complete' : (scanFailed ? 'error' : 'in-progress')" :style="`width: ${progress}%`">
               <div class="progress-shimmer"></div>
             </div>
           </div>
@@ -280,7 +280,7 @@
               <span class="log-time">{{ new Date().toLocaleTimeString() }}</span> 
               <span :class="{'success': log.includes('完成') || log.includes('成功'), 'warning': log.includes('警告'), 'error': log.includes('错误')}">{{ log }}</span>
             </div>
-            <div v-if="!scanComplete" class="log-pulse">_</div>
+            <div v-if="!scanComplete && !scanFailed" class="log-pulse">_</div>
           </div>
 
           <!-- 数据类型提示 -->
@@ -292,6 +292,11 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span>{{ dataSource.message }}</span>
+          </div>
+
+          <div v-if="scanFailed" class="complete-section">
+            <p class="scan-error-text">{{ scanErrorMessage || '分析失败，请查看上方日志。' }}</p>
+            <button @click="resetScanPanel" class="recover-button">返回重新选择</button>
           </div>
 
           <div v-if="scanComplete" class="complete-section">
@@ -330,13 +335,18 @@ export default {
       dragOver: false,
       isScanning: false,
       scanComplete: false,
+      scanFailed: false,
+      scanErrorMessage: '',
       isUploading: false,
       uploadComplete: false,
       uploadProgress: 0,
       progress: 0,
       logs: [],
       pollInterval: null,
+      pollInFlight: false,
+      pollFailCount: 0,
       currentRunId: null,
+      trackedRunId: null,
       lastServerLogCount: 0,
       historyLoading: false,
       historyDeletingRunId: null,
@@ -362,12 +372,78 @@ export default {
     await this.loadUploadedArchiveOptions()
   },
   beforeUnmount() {
-    if (this.pollInterval) {
-      clearInterval(this.pollInterval)
-      this.pollInterval = null
-    }
+    this.stopPollingStatus()
   },
   methods: {
+    stopPollingStatus() {
+      if (this.pollInterval) {
+        clearTimeout(this.pollInterval)
+        this.pollInterval = null
+      }
+      this.pollInFlight = false
+    },
+    resetScanPanel() {
+      this.stopPollingStatus()
+      this.isScanning = false
+      this.scanComplete = false
+      this.scanFailed = false
+      this.scanErrorMessage = ''
+      this.progress = 0
+      this.logs = []
+      this.lastServerLogCount = 0
+      this.pollFailCount = 0
+      this.loadHistory()
+    },
+    markScanCompleted(runId = null) {
+      this.stopPollingStatus()
+      if (runId) {
+        this.currentRunId = runId
+        this.trackedRunId = runId
+        localStorage.setItem('currentRunId', runId)
+      }
+      this.scanComplete = true
+      this.isScanning = false
+      this.scanFailed = false
+      this.progress = 100
+      localStorage.setItem('hasAuditData', 'true')
+      this.fetchDataSourceInfo()
+      this.loadHistory()
+      setTimeout(() => {
+        this.goToDashboard()
+      }, 1500)
+    },
+    markScanFailed(message = '') {
+      this.stopPollingStatus()
+      this.isScanning = false
+      this.scanComplete = false
+      this.scanFailed = true
+      this.scanErrorMessage = message || '分析过程中发生错误'
+      if (message) {
+        this.logs.push(`[-] ${message}`)
+      } else {
+        this.logs.push('[-] 分析过程中发生错误，请检查日志。')
+      }
+      this.loadHistory()
+    },
+    async pollTrackedRunFromHistory() {
+      const runId = this.trackedRunId || this.currentRunId
+      if (!runId) return null
+
+      const params = {
+        page: 1,
+        page_size: 30,
+        target_type: 'all',
+        status: 'all'
+      }
+      const targetHint = this.scanMode === 'server' ? this.selectedTarget : (this.selectedLocalFolder || '')
+      if (targetHint) {
+        params.target = targetHint
+      }
+
+      const res = await axios.get('/api/history', { params, timeout: 15000 })
+      const items = Array.isArray(res.data?.items) ? res.data.items : []
+      return items.find(item => item.run_id === runId) || null
+    },
     isSupportedArchiveFile(fileName) {
       const normalized = (fileName || '').trim().toLowerCase()
       const supported = ['.zip', '.tar.gz', '.tgz', '.tar', '.tar.xz', '.txz', '.tar.bz2', '.tbz2']
@@ -504,20 +580,55 @@ export default {
       return params
     },
     startPollingStatus() {
-      if (this.pollInterval) {
-        clearInterval(this.pollInterval)
-        this.pollInterval = null
-      }
+      this.stopPollingStatus()
+      this.pollFailCount = 0
 
-      this.pollInterval = setInterval(async () => {
+      const tick = async () => {
+        if (!this.isScanning) {
+          return
+        }
+        if (this.pollInFlight) {
+          this.pollInterval = setTimeout(tick, 1000)
+          return
+        }
+
+        this.pollInFlight = true
         try {
-          const res = await axios.get('/api/scan/status')
+          const params = {}
+          const tracked = this.trackedRunId || this.currentRunId
+          if (tracked) {
+            params.run_id = tracked
+          }
+
+          const res = await axios.get('/api/scan/status', { params, timeout: 20000 })
           const data = res.data || {}
 
-          this.progress = typeof data.progress === 'number' ? data.progress : this.progress
-          this.currentRunId = data.run_id || this.currentRunId
+          // 若状态接口暂时指向别的任务，用历史记录兜底当前 tracked run
+          if (tracked && data.run_id && data.run_id !== tracked && data.status === 'running') {
+            const hist = await this.pollTrackedRunFromHistory()
+            if (hist?.status === 'completed') {
+              this.logs.push('[+] 任务已完成，正在进入分析报告...')
+              this.markScanCompleted(tracked)
+              return
+            }
+            if (hist?.status === 'error') {
+              this.markScanFailed(hist.error_message || '分析失败')
+              return
+            }
+            this.logs.push('[*] 后台任务仍在运行，继续等待进度...')
+            this.pollFailCount = 0
+            return
+          }
+
+          if (typeof data.progress === 'number') {
+            this.progress = data.progress
+          }
+          this.currentRunId = data.run_id || this.currentRunId || tracked
           if (this.currentRunId) {
             localStorage.setItem('currentRunId', this.currentRunId)
+          }
+          if (!this.trackedRunId && this.currentRunId) {
+            this.trackedRunId = this.currentRunId
           }
 
           if (Array.isArray(data.logs)) {
@@ -534,32 +645,65 @@ export default {
           }
 
           if (data.status === 'completed') {
-            clearInterval(this.pollInterval)
-            this.pollInterval = null
-            this.scanComplete = true
-            this.isScanning = false
-            this.progress = 100
-            localStorage.setItem('hasAuditData', 'true')
-            // 获取数据类型信息
-            this.fetchDataSourceInfo()
-            setTimeout(() => {
-              this.goToDashboard()
-            }, 2000)
-          } else if (data.status === 'error') {
-            clearInterval(this.pollInterval)
-            this.pollInterval = null
-            this.isScanning = false
-            this.scanComplete = false
-            this.logs.push('[-] 分析过程中发生错误，请检查日志。')
+            this.logs.push('[+] 审计完成，即将跳转到 Dashboard...')
+            this.markScanCompleted(this.currentRunId || tracked)
+            return
           }
+
+          if (data.status === 'error') {
+            this.markScanFailed(data.error_message || '分析过程中发生错误')
+            return
+          }
+
+          // idle 时不要退出进度页：继续用历史记录确认任务是否还在跑/已完成
+          if (data.status === 'idle' && tracked) {
+            const hist = await this.pollTrackedRunFromHistory()
+            if (hist?.status === 'completed') {
+              this.logs.push('[+] 任务已完成，正在进入分析报告...')
+              this.markScanCompleted(tracked)
+              return
+            }
+            if (hist?.status === 'error') {
+              this.markScanFailed(hist.error_message || '分析失败')
+              return
+            }
+            if (hist?.status === 'running') {
+              this.logs.push('[*] 进度接口暂时空闲，任务仍在后台运行...')
+            }
+          }
+
+          this.pollFailCount = 0
         } catch (error) {
-          clearInterval(this.pollInterval)
-          this.pollInterval = null
-          this.isScanning = false
-          this.scanComplete = false
-          this.logs.push(`错误: 获取扫描进度失败 (${error.message})`)
+          this.pollFailCount += 1
+          this.logs.push(`[*] 进度同步短暂失败，继续等待后台任务... (${error.message})`)
+          this.scrollToBottom()
+
+          // 网络抖动不闪退；多次失败后用历史记录确认终态
+          if (this.pollFailCount >= 2) {
+            try {
+              const hist = await this.pollTrackedRunFromHistory()
+              if (hist?.status === 'completed') {
+                this.logs.push('[+] 已从历史记录确认任务完成，正在进入分析报告...')
+                this.markScanCompleted(hist.run_id)
+                return
+              }
+              if (hist?.status === 'error') {
+                this.markScanFailed(hist.error_message || '分析失败')
+                return
+              }
+            } catch (_histError) {
+              // 历史兜底失败也继续轮询
+            }
+          }
+        } finally {
+          this.pollInFlight = false
+          if (this.isScanning) {
+            this.pollInterval = setTimeout(tick, 1500)
+          }
         }
-      }, 1000)
+      }
+
+      this.pollInterval = setTimeout(tick, 500)
     },
     async recoverLastTask(showAlert = true) {
       try {
@@ -575,12 +719,15 @@ export default {
         }
 
         this.currentRunId = data.run_id || null
+        this.trackedRunId = this.currentRunId
         if (this.currentRunId) {
           localStorage.setItem('currentRunId', this.currentRunId)
         }
         this.progress = typeof data.progress === 'number' ? data.progress : 0
         this.logs = Array.isArray(data.logs) ? [...data.logs] : []
         this.lastServerLogCount = this.logs.length
+        this.scanFailed = false
+        this.scanErrorMessage = ''
         this.scrollToBottom()
 
         if (data.status === 'running') {
@@ -593,13 +740,10 @@ export default {
           return
         }
 
-        this.isScanning = false
-        this.scanComplete = true
-        this.progress = 100
-        localStorage.setItem('hasAuditData', 'true')
         if (showAlert) {
           alert('已恢复最近一次完成的分析结果，无需重新审计。')
         }
+        this.markScanCompleted(this.currentRunId)
       } catch (error) {
         if (showAlert) {
           alert(`恢复失败: ${error?.response?.data?.message || error.message}`)
@@ -618,6 +762,7 @@ export default {
         }
 
         this.currentRunId = data.run_id || null
+        this.trackedRunId = this.currentRunId
         if (this.currentRunId) {
           localStorage.setItem('currentRunId', this.currentRunId)
         }
@@ -626,6 +771,7 @@ export default {
         this.lastServerLogCount = this.logs.length
         this.isScanning = true
         this.scanComplete = false
+        this.scanFailed = false
         this.scrollToBottom()
         this.startPollingStatus()
       } catch (_error) {
@@ -823,14 +969,14 @@ export default {
         return
       }
 
+      this.stopPollingStatus()
       this.isScanning = true
       this.scanComplete = false
+      this.scanFailed = false
+      this.scanErrorMessage = ''
       this.progress = 0
-
-      if (this.pollInterval) {
-        clearInterval(this.pollInterval)
-        this.pollInterval = null
-      }
+      this.trackedRunId = null
+      this.pollFailCount = 0
       
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
       const isUploaded = this.scanMode !== 'server'
@@ -848,16 +994,26 @@ export default {
         if (forceReanalyze) {
           payload.overwrite_existing = true
         }
-        const startRes = await axios.post('/api/scan', payload)
+        const startRes = await axios.post('/api/scan', payload, { timeout: 30000 })
         this.currentRunId = startRes?.data?.run_id || null
+        this.trackedRunId = this.currentRunId
         if (this.currentRunId) {
           localStorage.setItem('currentRunId', this.currentRunId)
         }
+
+        // 快速路径：预置/复用结果直接完成并跳转 dashboard
+        if (startRes?.data?.quick_mode) {
+          this.logs.push('[+] 已加载已有分析结果，即将跳转 Dashboard...')
+          this.markScanCompleted(this.currentRunId)
+          return
+        }
+
         this.startPollingStatus()
 
       } catch (error) {
-        this.logs.push(`错误: 无法连接到分析服务器 (${error.message})`)
-        this.isScanning = false
+        const detail = error?.response?.data?.error || error.message
+        this.logs.push(`错误: 无法启动分析 (${detail})`)
+        this.markScanFailed(detail)
       }
     },
     goToDashboard() {
@@ -1508,6 +1664,10 @@ export default {
   color: #10b981;
 }
 
+.progress-percentage.error {
+  color: #f87171;
+}
+
 .progress-bar-container {
   width: 100%;
   background-color: #1e293b;
@@ -1531,6 +1691,16 @@ export default {
 
 .progress-bar.complete {
   background: #10b981;
+}
+
+.progress-bar.error {
+  background: #ef4444;
+}
+
+.scan-error-text {
+  color: #fca5a5;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .progress-shimmer {
