@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory, Response
+from flask import Flask, jsonify, request, send_from_directory, send_file, Response
 from flask_cors import CORS
 import os
 import json
@@ -666,6 +666,94 @@ def resolve_analysis_log_path_for_run(run_id, target_name=None):
     # 优先按上传时间戳接近 run 的 started_at；兜底按最近修改时间
     candidates.sort(key=lambda p: (_score(p), -os.path.getmtime(p)))
     return candidates[0]
+
+
+def _pick_timestamped_log(pattern, started_at=0):
+    candidates = [p for p in glob.glob(pattern) if os.path.isfile(p)]
+    if not candidates:
+        return None
+
+    def _score(path):
+        name = os.path.basename(path)
+        m = re.search(r'_(\d+)\.(?:log|txt)$', name)
+        if m and started_at > 0:
+            return abs(int(m.group(1)) - started_at)
+        return 10**18
+
+    candidates.sort(key=lambda p: (_score(p), -os.path.getmtime(p)))
+    return candidates[0]
+
+
+def resolve_geek_log_path(kind, run_id=None, target_name=None):
+    """解析极客日志路径。kind: ast | race_warnings"""
+    kind = (kind or '').strip().lower()
+    if kind not in ('ast', 'race_warnings'):
+        return None, None, None
+
+    row = get_run_row(run_id) if run_id else None
+    if row:
+        target_name = row['target_name']
+        is_uploaded = bool(row['is_uploaded'])
+        started_at = int(row['started_at'] or 0)
+    else:
+        is_uploaded = None
+        started_at = 0
+        if not target_name and run_id:
+            return None, None, None
+
+    if not target_name:
+        # 从当前内存分析数据兜底
+        mem = get_analysis_data_by_run(run_id) if run_id else None
+        if isinstance(mem, dict):
+            target_name = mem.get('target') or mem.get('kernel_version')
+        if not target_name and current_run_id and current_run_id in analysis_data:
+            mem = analysis_data[current_run_id]
+            target_name = mem.get('target') or mem.get('kernel_version')
+            run_id = run_id or current_run_id
+
+    if not target_name:
+        return None, None, None
+
+    candidates = []
+    if run_id:
+        result_dir = get_run_result_dir(target_name, run_id)
+        if kind == 'ast':
+            candidates.append(os.path.join(result_dir, f'ast_{target_name}.log'))
+        else:
+            candidates.append(os.path.join(result_dir, f'race_warnings_{target_name}.txt'))
+            candidates.append(os.path.join(result_dir, f'race_warnings_{target_name}_display.txt'))
+
+    if kind == 'ast':
+        candidates.extend([
+            os.path.join(LOGS_DIR, f'ast_{target_name}.log'),
+            os.path.join(PROJECT_ROOT, f'ast_{target_name}.log'),
+        ])
+        if is_uploaded is not False:
+            ts_hit = _pick_timestamped_log(
+                os.path.join(LOGS_DIR, f'ast_uploaded_{target_name}_*.log'),
+                started_at,
+            )
+            if ts_hit:
+                candidates.insert(1, ts_hit)
+    else:
+        race_file, _, _ = resolve_prebuilt_paths(target_name, prefer_display=False, prefer_result=bool(run_id))
+        if race_file:
+            candidates.append(race_file)
+        candidates.extend([
+            os.path.join(LOGS_DIR, f'race_warnings_{target_name}.txt'),
+            os.path.join(LOGS_DIR, f'race_warnings_{target_name}_display.txt'),
+            os.path.join(PROJECT_ROOT, f'race_warnings_{target_name}.txt'),
+        ])
+        if is_uploaded is not False:
+            ts_hit = _pick_timestamped_log(
+                os.path.join(LOGS_DIR, f'race_warnings_uploaded_{target_name}_*.txt'),
+                started_at,
+            )
+            if ts_hit:
+                candidates.insert(1, ts_hit)
+
+    path = pick_first_existing(candidates)
+    return path, target_name, run_id
 
 
 def parse_detector_summary_from_log(log_path):
@@ -2755,6 +2843,35 @@ def get_warnings():
         })
     finally:
         conn.close()
+
+
+@app.route('/api/logs/<kind>/download', methods=['GET'])
+def download_geek_log(kind):
+    """极客入口：直接下载已有 AST / race_warnings 原始日志，不做二次加工。"""
+    kind = (kind or '').strip().lower()
+    if kind not in ('ast', 'race_warnings'):
+        return jsonify({'error': 'kind 仅支持 ast 或 race_warnings'}), 400
+
+    requested_run_id = request.args.get('run_id', default=None, type=str)
+    target_name = request.args.get('target', default=None, type=str)
+    run_id = get_active_run_id(requested_run_id, target_name)
+
+    path, resolved_target, resolved_run = resolve_geek_log_path(kind, run_id=run_id, target_name=target_name)
+    if not path or not os.path.isfile(path):
+        return jsonify({
+            'error': '未找到对应日志文件',
+            'kind': kind,
+            'run_id': resolved_run or run_id,
+            'target': resolved_target or target_name,
+        }), 404
+
+    download_name = os.path.basename(path)
+    return send_file(
+        path,
+        as_attachment=True,
+        download_name=download_name,
+        mimetype='text/plain; charset=utf-8',
+    )
 
 
 @app.route('/api/report/pdf', methods=['GET'])

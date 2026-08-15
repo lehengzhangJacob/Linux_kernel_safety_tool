@@ -41,6 +41,12 @@
           </svg>
           真实分析结果
         </div>
+        <button @click="downloadGeekLog('ast')" class="text-slate-200 px-3 py-2 rounded-lg text-sm font-medium border border-slate-600 hover:border-cyan-400/60 hover:text-cyan-300 transition-all flex items-center gap-2 bg-slate-800/60" title="下载原始 AST 日志">
+          AST Log
+        </button>
+        <button @click="downloadGeekLog('race_warnings')" class="text-slate-200 px-3 py-2 rounded-lg text-sm font-medium border border-slate-600 hover:border-amber-400/60 hover:text-amber-300 transition-all flex items-center gap-2 bg-slate-800/60" title="下载原始竞态告警日志">
+          Race Warnings
+        </button>
         <button @click="exportReport" class="text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 shadow-lg shadow-blue-600/20" style="background: linear-gradient(to right, #2563eb, #4f46e5); transition: all 0.2s ease;">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -333,12 +339,8 @@
 <script>
 import axios from 'axios'
 import * as echarts from 'echarts'
-import jsPDF from 'jspdf'
-import 'jspdf-autotable'
 import MainNav from './navigation/MainNav.vue'
-
-// 将jsPDF添加到window对象，以便在方法中使用
-window.jspdf = { jsPDF }
+import { buildProfessionalPdf, WARNINGS_EXPORT_LIMIT } from '../utils/auditReportPdf.js'
 
 export default {
   name: 'Dashboard',
@@ -367,6 +369,16 @@ export default {
     formatNumber(num) {
       if (typeof num !== 'number') return num
       return new Intl.NumberFormat('en-US').format(num)
+    },
+    downloadGeekLog(kind) {
+      const runId = this.runId || this.$route?.query?.run_id || localStorage.getItem('currentRunId') || ''
+      const params = new URLSearchParams()
+      if (runId) params.set('run_id', runId)
+      const target = this.data?.kernel_version || this.data?.target
+      if (target) params.set('target', target)
+      const qs = params.toString()
+      const url = `/api/logs/${encodeURIComponent(kind)}/download${qs ? `?${qs}` : ''}`
+      window.open(url, '_blank')
     },
     async loadDataFromResult() {
       try {
@@ -893,192 +905,95 @@ export default {
         }]
       })
     },
-    async exportReport() {
+    async fetchWarningsForReport(limit = WARNINGS_EXPORT_LIMIT) {
+      const runId = this.runId || this.$route?.query?.run_id || localStorage.getItem('currentRunId') || null
+      const collected = []
+      let total = 0
+      const pageSize = Math.min(50, limit)
+
       try {
-        const response = await axios.get('/api/report/pdf', {
-          params: {
-            run_id: this.runId || undefined
-          },
-          responseType: 'blob',
-          timeout: 30000
-        })
+        // 先拉高危，再补中危，合计不超过 limit
+        for (const severity of ['HIGH', 'MEDIUM', '']) {
+          if (collected.length >= limit) break
+          let page = 1
+          while (collected.length < limit) {
+            const need = limit - collected.length
+            const res = await axios.get('/api/warnings', {
+              params: {
+                run_id: runId || undefined,
+                page,
+                page_size: Math.min(pageSize, need),
+                severity: severity || undefined,
+              },
+              timeout: 20000,
+            })
+            const items = Array.isArray(res.data?.items) ? res.data.items : []
+            total = Math.max(total, Number(res.data?.total || 0))
+            if (!items.length) break
 
-        const blob = new Blob([response.data], { type: 'application/pdf' })
-        const contentDisposition = response.headers['content-disposition'] || ''
-        const matched = contentDisposition.match(/filename="?([^";]+)"?/i)
-        const filename = matched ? matched[1] : `kernel_security_report_${Date.now()}.pdf`
+            for (const item of items) {
+              const key = `${item.severity}|${item.type}|${item.variable}|${item.function}`
+              if (collected.some((x) => `${x.severity}|${x.type}|${x.variable}|${x.function}` === key)) {
+                continue
+              }
+              collected.push(item)
+              if (collected.length >= limit) break
+            }
 
-        const downloadUrl = window.URL.createObjectURL(blob)
-        const link = document.createElement('a')
-        link.href = downloadUrl
-        link.download = filename
-        document.body.appendChild(link)
-        link.click()
-        link.remove()
-        window.URL.revokeObjectURL(downloadUrl)
-        return
-      } catch (error) {
-        console.warn('Backend PDF export failed, fallback to browser export:', error)
-      }
-
-      // 生成PDF格式的审计报告
-      const { jsPDF } = window.jspdf
-      const doc = new jsPDF()
-      
-      // 设置字体
-      doc.setFont('helvetica')
-      
-      // 添加标题
-      doc.setFontSize(20)
-      doc.setTextColor(40, 40, 40)
-      doc.text('内核并发安全审计报告', 105, 20, { align: 'center' })
-      
-      // 添加版本号
-      doc.setFontSize(10)
-      doc.setTextColor(100, 100, 100)
-      doc.text('版本: 1.0', 105, 28, { align: 'center' })
-      
-      // 添加分隔线
-      doc.setDrawColor(200, 200, 200)
-      doc.line(20, 35, 190, 35)
-      
-      // 添加基本信息
-      doc.setFontSize(12)
-      doc.setTextColor(40, 40, 40)
-      doc.text('基本信息', 20, 45)
-      
-      doc.setFontSize(10)
-      doc.setTextColor(80, 80, 80)
-      doc.text(`内核版本: ${this.data.kernel_version}`, 25, 55)
-      doc.text(`扫描时间: ${this.data.scan_time}`, 25, 62)
-      doc.text(`分析文件数: ${this.data.summary.analysis_files}`, 25, 69)
-      doc.text(`函数总数: ${this.data.summary.total_functions}`, 25, 76)
-      doc.text(`变量总数: ${this.data.summary.total_variables}`, 25, 83)
-      doc.text(`发现警告数: ${this.data.summary.total_warnings}`, 25, 90)
-      
-      // 添加统计摘要表格
-      doc.setFontSize(12)
-      doc.setTextColor(40, 40, 40)
-      doc.text('统计摘要', 20, 105)
-      
-      const summaryData = [
-        ['指标', '数值'],
-        ['分析文件数', this.data.summary.analysis_files],
-        ['函数总数', this.data.summary.total_functions],
-        ['变量总数', this.data.summary.total_variables],
-        ['调用关系边', this.data.summary.total_edges],
-        ['函数调用数', this.data.summary.total_calls],
-        ['读取操作数', this.data.summary.total_reads],
-        ['写入操作数', this.data.summary.total_writes],
-        ['竞态警告数', this.data.summary.total_warnings]
-      ]
-      
-      doc.autoTable({
-        startY: 110,
-        head: [['指标', '数值']],
-        body: summaryData.slice(1),
-        theme: 'grid',
-        styles: {
-          fontSize: 9,
-          cellPadding: 3
-        },
-        headStyles: {
-          fillColor: [59, 130, 246],
-          textColor: [255, 255, 255],
-          fontStyle: 'bold'
+            if (items.length < pageSize) break
+            page += 1
+            if (page > 5) break
+          }
         }
-      })
-      
-      // 添加高危变量列表
-      const topVars = (this.data.race_warnings.top_variables || []).slice(0, 10)
-      if (topVars.length > 0) {
-        doc.addPage()
-        doc.setFontSize(12)
-        doc.setTextColor(40, 40, 40)
-        doc.text('高危全局变量 Top 10', 20, 20)
-        
-        const varData = [
-          ['排名', '变量名', '警告次数'],
-          ...topVars.map((item, index) => [
-            index + 1,
-            item.name,
-            item.count
-          ])
-        ]
-        
-        doc.autoTable({
-          startY: 30,
-          head: [['排名', '变量名', '警告次数']],
-          body: varData.slice(1),
-          theme: 'grid',
-          styles: {
-            fontSize: 9,
-            cellPadding: 3
+      } catch (e) {
+        console.warn('fetchWarningsForReport failed, fallback to sample:', e)
+      }
+
+      if (!collected.length) {
+        const sample = this.data?.race_warnings?.warnings_sample || this.pagedWarnings || []
+        return {
+          items: sample.slice(0, limit),
+          total: Number(this.warningsTotal || sample.length || this.data?.summary?.total_warnings || 0),
+        }
+      }
+
+      return { items: collected.slice(0, limit), total: total || collected.length }
+    },
+    async exportReport() {
+      if (!this.data) {
+        alert('暂无分析数据，请等待仪表盘加载完成后再导出。')
+        return
+      }
+
+      try {
+        // 确保图表已渲染；若尚未初始化则尝试初始化一次
+        if (!this.rwChartInstance || !this.statsChartInstance || !this.funcChartInstance) {
+          this.initCharts()
+          await new Promise((r) => setTimeout(r, 250))
+        }
+
+        const { items, total } = await this.fetchWarningsForReport(WARNINGS_EXPORT_LIMIT)
+        // 用警告总数修正 summary，便于健康分与摘要准确
+        if (this.data.summary && total > 0) {
+          this.data.summary.total_warnings = Math.max(Number(this.data.summary.total_warnings || 0), total)
+        }
+
+        await buildProfessionalPdf({
+          data: this.data,
+          runId: this.runId,
+          chartInstances: {
+            rwChartInstance: this.rwChartInstance,
+            statsChartInstance: this.statsChartInstance,
+            funcChartInstance: this.funcChartInstance,
+            topoChartInstance: this.topoChartInstance,
           },
-          headStyles: {
-            fillColor: [239, 68, 68],
-            textColor: [255, 255, 255],
-            fontStyle: 'bold'
-          }
+          warnings: items,
+          warningsTotal: total,
         })
+      } catch (error) {
+        console.error('Professional PDF export failed:', error)
+        alert(`导出专业审计报告失败: ${error?.message || error}`)
       }
-      
-      // 添加警告详情
-      const warnings = (this.data.race_warnings.warnings_sample || []).slice(0, 20)
-      if (warnings.length > 0) {
-        doc.addPage()
-        doc.setFontSize(12)
-        doc.setTextColor(40, 40, 40)
-        doc.text('竞态警告详情', 20, 20)
-        
-        const warningData = [
-          ['类型', '目标变量', '所在函数'],
-          ...warnings.map(warn => [
-            warn.type === 'Read' ? '读取' : '写入',
-            warn.variable,
-            warn.function
-          ])
-        ]
-        
-        doc.autoTable({
-          startY: 30,
-          head: [['类型', '目标变量', '所在函数']],
-          body: warningData.slice(1),
-          theme: 'grid',
-          styles: {
-            fontSize: 8,
-            cellPadding: 2
-          },
-          headStyles: {
-            fillColor: [245, 158, 11],
-            textColor: [255,255, 255],
-            fontStyle: 'bold'
-          }
-        })
-      }
-      
-      // 添加页脚
-      const pageCount = doc.internal.getNumberOfPages()
-      for (let i = 1; i <= pageCount; i++) {
-        doc.setPage(i)
-        doc.setFontSize(8)
-        doc.setTextColor(150, 150, 150)
-        doc.text(
-          `第 ${i} 页 / 共 ${pageCount} 页`,
-          105,
-          290,
-          { align: 'center' }
-        )
-        doc.text(
-          `生成时间: ${new Date().toLocaleString()}`,
-          105,
-          295,
-          { align: 'center' }
-        )
-      }
-      
-      // 保存PDF
-      doc.save(`kernel_security_report_${Date.now()}.pdf`)
     }
   },
   mounted() {
