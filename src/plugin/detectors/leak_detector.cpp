@@ -27,7 +27,7 @@
 void InfoLeakDetector::initialize() {
     initialize_patterns();
     sensitive_vars.clear();
-    fprintf(stdout, "[InfoLeakDetector] Initialized with %zu sensitive patterns\n", 
+    fprintf(stderr, "[InfoLeakDetector] Initialized with %zu sensitive patterns\n", 
             sensitive_patterns.size());
 }
 
@@ -547,5 +547,5 @@ void InfoLeakDetector::analyze_function(tree fndecl) {
 }
 
 void InfoLeakDetector::finalize() {
-    fprintf(stdout, "[InfoLeakDetector] Found %zu information leakage issues\n", results.size());
+    fprintf(stderr, "[InfoLeakDetector] Found %zu information leakage issues\n", results.size());
 }

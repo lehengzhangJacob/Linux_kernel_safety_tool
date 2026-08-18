@@ -44,8 +44,9 @@ else
 fi
 
 # 3. Run Analysis (Generates JSON & CSV)
-echo "[INFO] Running analysis for $KERNEL_SRC..."
-"$SCRIPT_DIR/run_analysis.sh" "$KERNEL_SRC"
+# Optional: KERNEL_ARCH / ARCH / CROSS_COMPILE are forwarded by run_analysis.sh
+echo "[INFO] Running analysis for $KERNEL_SRC (ARCH=${KERNEL_ARCH:-${ARCH:-x86}})..."
+"$SCRIPT_DIR/run_analysis.sh" "$KERNEL_SRC" "${KERNEL_ARCH:-${ARCH:-}}"
 
 # 4. Import Data to Neo4j
 if [ -n "$NEO4J_DIR" ] && [ -n "$JAVA_DIR" ]; then

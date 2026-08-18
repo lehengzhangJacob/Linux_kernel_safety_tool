@@ -16,7 +16,7 @@ private:
 
 public:
     void initialize() override {
-        fprintf(stdout, "[BufferOverflowDetector] Initialized\n");
+        fprintf(stderr, "[BufferOverflowDetector] Initialized\n");
     }
 
     void analyze_function(tree fndecl) override;
@@ -38,7 +38,7 @@ private:
 public:
     void initialize() override {
         checked_pointers.clear();
-        fprintf(stdout, "[NullPointerDetector] Initialized\n");
+        fprintf(stderr, "[NullPointerDetector] Initialized\n");
     }
 
     void analyze_function(tree fndecl) override;
@@ -60,7 +60,7 @@ private:
 public:
     void initialize() override {
         freed_pointers.clear();
-        fprintf(stdout, "[UseAfterFreeDetector] Initialized\n");
+        fprintf(stderr, "[UseAfterFreeDetector] Initialized\n");
     }
 
     void analyze_function(tree fndecl) override;

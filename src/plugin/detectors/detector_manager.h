@@ -77,16 +77,16 @@ public:
     }
 
     void print_summary() {
-        fprintf(stdout, "\n=== Detection Summary ===\n");
+        fprintf(stderr, "\n=== Detection Summary ===\n");
         size_t total = 0;
         for (auto& pair : all_results) {
             const std::string& type = pair.first;
             const std::vector<DetectionResult>& results = pair.second;
             size_t count = results.size();
             total += count;
-            fprintf(stdout, "%s: %zu findings\n", type.c_str(), count);
+            fprintf(stderr, "%s: %zu findings\n", type.c_str(), count);
         }
-        fprintf(stdout, "Total: %zu findings\n", total);
+        fprintf(stderr, "Total: %zu findings\n", total);
     }
 
     const std::map<std::string, std::vector<DetectionResult>>& get_all_results() const {

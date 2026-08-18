@@ -14,7 +14,7 @@
 void PrivilegeEscalationDetector::initialize() {
     initialize_syscalls();
     privileged_call_sites.clear();
-    fprintf(stdout, "[PrivilegeEscalationDetector] Initialized with %zu privileged syscalls\n",
+    fprintf(stderr, "[PrivilegeEscalationDetector] Initialized with %zu privileged syscalls\n",
             privileged_syscalls.size());
 }
 
@@ -343,7 +343,7 @@ void PrivilegeEscalationDetector::analyze_function(tree fndecl) {
 }
 
 void PrivilegeEscalationDetector::finalize() {
-    fprintf(stdout, "[PrivilegeEscalationDetector] Found %zu privilege escalation issues\n", results.size());
+    fprintf(stderr, "[PrivilegeEscalationDetector] Found %zu privilege escalation issues\n", results.size());
 }
 
 // -----------------------------------------------------------------------------
@@ -352,7 +352,7 @@ void PrivilegeEscalationDetector::finalize() {
 
 void TOCTOUDetector::initialize() {
     initialize_functions();
-    fprintf(stdout, "[TOCTOUDetector] Initialized\n");
+    fprintf(stderr, "[TOCTOUDetector] Initialized\n");
 }
 
 void TOCTOUDetector::initialize_functions() {
@@ -611,5 +611,5 @@ void TOCTOUDetector::analyze_function(tree fndecl) {
 }
 
 void TOCTOUDetector::finalize() {
-    fprintf(stdout, "[TOCTOUDetector] Found %zu TOCTOU issues\n", results.size());
+    fprintf(stderr, "[TOCTOUDetector] Found %zu TOCTOU issues\n", results.size());
 }

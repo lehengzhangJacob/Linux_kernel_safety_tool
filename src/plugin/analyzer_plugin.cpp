@@ -188,11 +188,11 @@ void analyze_node(cgraph_node *node, FILE *ast_out, FunctionAnalysis &fa) {
                      const char* var_name = IDENTIFIER_POINTER(DECL_NAME(lhs));
                      fa.global_writes.insert(var_name);
                      fprintf(ast_out, "  │   │   \033[1;31m└── [WRITE] Global '%s'\033[0m\n", var_name);
-                     fprintf(stdout, "[WRITE] Global '%s' in function '%s'\n", var_name, func_name);
+                     fprintf(stderr, "[WRITE] Global '%s' in function '%s'\n", var_name, func_name);
 
                      if (lockset.empty()) {
                          fprintf(ast_out, "  │   │   \033[1;41;37m└── [RACE_WARNING] Unprotected Write to '%s'\033[0m\n", var_name);
-                         fprintf(stdout, "[RACE_WARNING] Unprotected Write to '%s' in '%s'\n", var_name, func_name);
+                         fprintf(stderr, "[RACE_WARNING] Unprotected Write to '%s' in '%s'\n", var_name, func_name);
                      }
                 }
 
@@ -200,11 +200,11 @@ void analyze_node(cgraph_node *node, FILE *ast_out, FunctionAnalysis &fa) {
                      const char* var_name = IDENTIFIER_POINTER(DECL_NAME(rhs1));
                      fa.global_reads.insert(var_name);
                      fprintf(ast_out, "  │   │   \033[1;32m└── [READ] Global '%s'\033[0m\n", var_name);
-                     fprintf(stdout, "[READ] Global '%s' in function '%s'\n", var_name, func_name);
+                     fprintf(stderr, "[READ] Global '%s' in function '%s'\n", var_name, func_name);
 
                      if (lockset.empty()) {
                          fprintf(ast_out, "  │   │   \033[1;41;37m└── [RACE_WARNING] Unprotected Read from '%s'\033[0m\n", var_name);
-                         fprintf(stdout, "[RACE_WARNING] Unprotected Read from '%s' in '%s'\n", var_name, func_name);
+                         fprintf(stderr, "[RACE_WARNING] Unprotected Read from '%s' in '%s'\n", var_name, func_name);
                      }
                 }
             }

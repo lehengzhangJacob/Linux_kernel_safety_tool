@@ -12,6 +12,7 @@ import sqlite3
 import uuid
 import re
 import glob
+import signal
 from collections import deque
 
 app = Flask(__name__)
@@ -46,6 +47,285 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 BACKEND_DATA_DIR = os.path.join(BASE_DIR, 'data')
 os.makedirs(BACKEND_DATA_DIR, exist_ok=True)
 SQLITE_DB_PATH = os.path.join(BACKEND_DATA_DIR, 'analysis.db')
+
+# Supported kernel architectures for analysis builds
+ARCH_PRESETS = {
+    'x86': {
+        'id': 'x86',
+        'label': 'x86 / x86_64（本机）',
+        'arch': 'x86',
+        'cross_compile': '',
+        'hint': '使用主机 gcc，无需交叉编译器',
+        'apt_hint': 'sudo apt install gcc-13-plugin-dev g++',
+        'plugin_apt_hint': 'sudo apt install gcc-13-plugin-dev',
+    },
+    'arm64': {
+        'id': 'arm64',
+        'label': 'arm64 / aarch64',
+        'arch': 'arm64',
+        'cross_compile': 'aarch64-linux-gnu-',
+        'hint': '需要 aarch64-linux-gnu-gcc 与 plugin-dev',
+        'apt_hint': 'sudo apt install gcc-aarch64-linux-gnu g++-13-aarch64-linux-gnu gcc-13-plugin-dev-aarch64-linux-gnu',
+        'plugin_apt_hint': 'sudo apt install gcc-13-plugin-dev-aarch64-linux-gnu g++-13-aarch64-linux-gnu',
+    },
+    'arm': {
+        'id': 'arm',
+        'label': 'arm（32-bit）',
+        'arch': 'arm',
+        'cross_compile': 'arm-linux-gnueabihf-',
+        'hint': '需要 arm-linux-gnueabihf-gcc 与 plugin-dev',
+        'apt_hint': 'sudo apt install gcc-arm-linux-gnueabihf g++-13-arm-linux-gnueabihf gcc-13-plugin-dev-arm-linux-gnueabihf',
+        'plugin_apt_hint': 'sudo apt install gcc-13-plugin-dev-arm-linux-gnueabihf g++-13-arm-linux-gnueabihf',
+    },
+    'loongarch': {
+        'id': 'loongarch',
+        'label': 'loongarch（主线 / GCC13）',
+        'arch': 'loongarch',
+        'cross_compile': 'loongarch64-linux-gnu-',
+        'hint': '主线 LoongArch：apt gcc-13 + tools/cross-bin 包装',
+        'apt_hint': 'sudo apt install gcc-13-loongarch64-linux-gnu g++-13-loongarch64-linux-gnu gcc-13-plugin-dev-loongarch64-linux-gnu && ./scripts/setup_cross_bin.sh',
+        'plugin_apt_hint': 'sudo apt install gcc-13-plugin-dev-loongarch64-linux-gnu g++-13-loongarch64-linux-gnu && ./scripts/setup_cross_bin.sh',
+    },
+    'loongnix': {
+        'id': 'loongnix',
+        'label': 'Loongnix（厂商 GCC8）',
+        # Kernel make ARCH is still loongarch; CROSS_COMPILE is the isolated vendor prefix.
+        'arch': 'loongarch',
+        'cross_compile': None,  # filled below after VENDOR path is known
+        'hint': 'Loongnix 4.19：使用 tools/vendor/loongson-gcc8，不改动系统 gcc-13',
+        'apt_hint': './scripts/install_loongnix_toolchain.sh',
+        'plugin_apt_hint': (
+            '厂商 GCC8 需自带 gcc-plugin.h；插件可能与 GCC8 ABI 不兼容。'
+            '勿改用系统 gcc-13 分析 Loongnix。安装：./scripts/install_loongnix_toolchain.sh'
+        ),
+    },
+}
+
+VENDOR_LOONGSON_GCC8_PREFIX = os.path.join(
+    PROJECT_ROOT, 'tools', 'vendor', 'loongson-gcc8', 'bin', 'loongarch64-linux-gnu-'
+)
+ARCH_PRESETS['loongnix']['cross_compile'] = VENDOR_LOONGSON_GCC8_PREFIX
+
+ARCH_ALIASES = {
+    'x86': 'x86',
+    'x86_64': 'x86',
+    'amd64': 'x86',
+    'i386': 'x86',
+    'i686': 'x86',
+    'arm64': 'arm64',
+    'aarch64': 'arm64',
+    'arm': 'arm',
+    'armv7': 'arm',
+    'arm32': 'arm',
+    'loongarch': 'loongarch',
+    'loongarch64': 'loongarch',
+    'loong64': 'loongarch',
+    'loongnix': 'loongnix',
+    'auto': 'auto',
+}
+
+CROSS_BIN_DIR = os.path.join(PROJECT_ROOT, 'tools', 'cross-bin')
+
+
+def _which_with_cross_bin(name):
+    """Look up executable, preferring project tools/cross-bin wrappers."""
+    if not name:
+        return None
+    local = os.path.join(CROSS_BIN_DIR, name)
+    if os.path.isfile(local) and os.access(local, os.X_OK):
+        return local
+    path = shutil.which(name)
+    if path:
+        return path
+    # Ubuntu versioned names: foo-gcc-13
+    for ver in ('13', '14', '12', '11'):
+        path = shutil.which(f'{name}-{ver}')
+        if path:
+            return path
+    return None
+
+
+def normalize_arch_id(arch_raw):
+    key = str(arch_raw or 'x86').strip().lower()
+    if key in ('', 'auto'):
+        return 'auto'
+    return ARCH_ALIASES.get(key)
+
+
+def toolchain_compiler_path(cross_compile_prefix):
+    """Return absolute path of <prefix>gcc if found, else None."""
+    prefix = cross_compile_prefix or ''
+    cc_name = f'{prefix}gcc' if prefix else 'gcc'
+    # Absolute vendor prefixes (…/loongarch64-linux-gnu-gcc)
+    if os.path.isabs(cc_name) and os.path.isfile(cc_name) and os.access(cc_name, os.X_OK):
+        return cc_name
+    return _which_with_cross_bin(cc_name)
+
+
+def toolchain_cxx_path(cross_compile_prefix):
+    prefix = cross_compile_prefix or ''
+    cxx_name = f'{prefix}g++' if prefix else 'g++'
+    return _which_with_cross_bin(cxx_name)
+
+
+def plugin_headers_ready(cc_path):
+    """True if gcc-plugin.h exists for this compiler."""
+    if not cc_path:
+        return False, None
+    try:
+        out = subprocess.check_output(
+            [cc_path, '-print-file-name=plugin'],
+            text=True,
+            stderr=subprocess.DEVNULL,
+            timeout=10,
+        ).strip()
+    except (subprocess.SubprocessError, OSError):
+        return False, None
+    if not out or out == 'plugin':
+        return False, out
+    header = os.path.join(out, 'include', 'gcc-plugin.h')
+    return os.path.isfile(header), out
+
+
+def detect_kernel_arch(source_dir, hint_name=None):
+    """
+    Detect likely ARCH from path/name keywords, then arch/ tree presence.
+    Returns (arch_id, reason_string).
+    Names containing 'loongnix' map to the vendor-GCC8 preset, not apt GCC13.
+    """
+    text = ' '.join(
+        filter(None, [str(hint_name or ''), str(source_dir or '')])
+    ).lower()
+
+    keyword_rules = [
+        ('loongnix', ('loongnix',)),
+        ('loongarch', ('loongarch', 'loong64', 'loong')),
+        ('arm64', ('aarch64', 'arm64')),
+        ('arm', ('armhf', 'armel', 'armv7', '/arm-', '_arm_', ' arm ')),
+        ('x86', ('x86_64', 'amd64', 'x86', 'i386')),
+    ]
+    for arch_id, keys in keyword_rules:
+        for key in keys:
+            if key in text:
+                return arch_id, f'名称/路径关键词命中: {key}'
+
+    # Prefer non-x86 arch dirs when present (vendor trees like Loongnix)
+    if source_dir and os.path.isdir(source_dir):
+        for arch_id in ('loongarch', 'arm64', 'arm', 'x86'):
+            if os.path.isdir(os.path.join(source_dir, 'arch', arch_id)):
+                if arch_id != 'x86':
+                    return arch_id, f'源码树存在 arch/{arch_id}'
+        if os.path.isdir(os.path.join(source_dir, 'arch', 'x86')):
+            return 'x86', '源码树存在 arch/x86'
+
+    return 'x86', '默认 x86'
+
+
+def resolve_arch_config(arch_raw, cross_compile_override=None, source_dir=None, hint_name=None):
+    """
+    Resolve user arch selection to make ARCH / CROSS_COMPILE.
+    Returns (ok, config_dict_or_error_message).
+    arch_raw may be 'auto'.
+    """
+    arch_id = normalize_arch_id(arch_raw)
+    detect_reason = None
+    if arch_id == 'auto' or arch_id is None and str(arch_raw).strip().lower() in ('', 'auto'):
+        arch_id, detect_reason = detect_kernel_arch(source_dir, hint_name=hint_name or arch_raw)
+    if not arch_id or arch_id == 'auto':
+        supported = ', '.join(list(ARCH_PRESETS.keys()) + ['auto'])
+        return False, f'不支持的架构: {arch_raw}（可选: {supported}）'
+
+    if arch_id not in ARCH_PRESETS:
+        supported = ', '.join(list(ARCH_PRESETS.keys()) + ['auto'])
+        return False, f'不支持的架构: {arch_raw}（可选: {supported}）'
+
+    preset = dict(ARCH_PRESETS[arch_id])
+    if cross_compile_override is not None:
+        preset['cross_compile'] = str(cross_compile_override)
+    cc_path = toolchain_compiler_path(preset['cross_compile'])
+    # Plugin .so is always built with host g++ against target GCC plugin headers
+    host_cxx_path = toolchain_cxx_path('')
+    plugin_ok, plugin_dir = plugin_headers_ready(cc_path)
+    preset['toolchain_ready'] = bool(cc_path)
+    preset['cxx_ready'] = bool(host_cxx_path)
+    preset['plugin_ready'] = bool(plugin_ok)
+    preset['ready_for_analysis'] = bool(cc_path and host_cxx_path and plugin_ok)
+    preset['compiler_path'] = cc_path
+    preset['cxx_path'] = host_cxx_path
+    preset['plugin_dir'] = plugin_dir
+    preset['detect_reason'] = detect_reason
+    return True, preset
+
+
+def list_arch_options():
+    items = []
+    for arch_id in ARCH_PRESETS:
+        ok, cfg = resolve_arch_config(arch_id)
+        if not ok:
+            continue
+        items.append({
+            'id': cfg['id'],
+            'label': cfg['label'],
+            'arch': cfg['arch'],
+            'cross_compile': cfg['cross_compile'],
+            'hint': cfg['hint'],
+            'apt_hint': cfg['apt_hint'],
+            'plugin_apt_hint': cfg.get('plugin_apt_hint'),
+            'toolchain_ready': cfg['toolchain_ready'],
+            'plugin_ready': cfg['plugin_ready'],
+            'cxx_ready': cfg['cxx_ready'],
+            'ready_for_analysis': cfg['ready_for_analysis'],
+            'compiler_path': cfg['compiler_path'],
+        })
+    # synthetic auto entry for UI
+    items.insert(0, {
+        'id': 'auto',
+        'label': '自动识别',
+        'arch': 'auto',
+        'cross_compile': '',
+        'hint': '根据压缩包名/源码 arch/ 目录自动选择',
+        'apt_hint': None,
+        'plugin_apt_hint': None,
+        'toolchain_ready': True,
+        'plugin_ready': True,
+        'cxx_ready': True,
+        'ready_for_analysis': True,
+        'compiler_path': None,
+    })
+    return items
+
+
+def extract_analysis_failure_hints(log_path, limit=8):
+    """Pull likely failure lines from an analysis log when results are empty."""
+    if not log_path or not os.path.isfile(log_path):
+        return []
+    patterns = (
+        'error:',
+        'Error:',
+        'fatal error:',
+        'fplugin',
+        'Incompatible GCC',
+        'plugin',
+        'Assembler messages',
+        'junk at end of line',
+        'Cross compiler not found',
+        'plugin headers missing',
+        'Plugin failed',
+    )
+    hints = []
+    try:
+        with open(log_path, 'r', errors='ignore') as f:
+            for line in f:
+                s = line.strip()
+                if not s:
+                    continue
+                if any(p in s for p in patterns):
+                    hints.append(s[:300])
+                    if len(hints) >= limit:
+                        break
+    except OSError:
+        return []
+    return hints
 
 
 def get_db_connection():
@@ -942,7 +1222,84 @@ scan_status = {
 analysis_data = {}
 current_run_id = None
 
+# 分析进程控制：支持用户停止正在进行的分析（杀掉 bash/make/gcc 进程组）
+scan_cancel_event = threading.Event()
+_scan_process_lock = threading.Lock()
+current_scan_process = None
+current_scan_pgid = None
+
 init_sqlite_db()
+
+
+def register_scan_process(process):
+    """记录当前分析子进程，便于停止时整组终止。"""
+    global current_scan_process, current_scan_pgid
+    with _scan_process_lock:
+        current_scan_process = process
+        try:
+            current_scan_pgid = os.getpgid(process.pid) if process and process.pid else None
+        except OSError:
+            current_scan_pgid = process.pid if process else None
+
+
+def clear_scan_process(process=None):
+    global current_scan_process, current_scan_pgid
+    with _scan_process_lock:
+        if process is None or current_scan_process is process:
+            current_scan_process = None
+            current_scan_pgid = None
+
+
+def terminate_scan_process_tree(grace_seconds=3):
+    """向当前分析进程组发送 SIGTERM，超时后 SIGKILL。返回是否发出过信号。"""
+    with _scan_process_lock:
+        process = current_scan_process
+        pgid = current_scan_pgid
+
+    if process is None and pgid is None:
+        return False
+
+    signaled = False
+    try:
+        if pgid is not None:
+            os.killpg(pgid, signal.SIGTERM)
+            signaled = True
+        elif process is not None and process.poll() is None:
+            process.terminate()
+            signaled = True
+    except (ProcessLookupError, OSError):
+        pass
+
+    deadline = time.time() + max(0.5, float(grace_seconds))
+    while process is not None and process.poll() is None and time.time() < deadline:
+        time.sleep(0.1)
+
+    if process is not None and process.poll() is None:
+        try:
+            if pgid is not None:
+                os.killpg(pgid, signal.SIGKILL)
+            else:
+                process.kill()
+            signaled = True
+        except (ProcessLookupError, OSError):
+            pass
+        try:
+            process.wait(timeout=2)
+        except Exception:
+            pass
+
+    return signaled
+
+
+def was_scan_cancelled():
+    return scan_cancel_event.is_set()
+
+
+def mark_scan_cancelled(run_id, message='用户已停止分析'):
+    scan_status['status'] = 'cancelled'
+    scan_status['logs'].append(f'[*] {message}')
+    if run_id:
+        update_run_status(run_id, 'cancelled', message)
 
 
 def _pdf_escape_text(text):
@@ -1231,16 +1588,39 @@ def stream_command_to_log(cmd, cwd, env, log_path, progress_hook=None):
             text=True,
             cwd=cwd,
             env=env,
+            start_new_session=True,
         )
-        for line in iter(process.stdout.readline, ''):
-            line = line.rstrip('\n')
-            log_file.write(line + '\n')
-            if line:
-                scan_status['logs'].append(line)
-                if progress_hook:
-                    progress_hook(line)
-        process.wait()
-        return process.returncode
+        register_scan_process(process)
+        try:
+            for line in iter(process.stdout.readline, ''):
+                if was_scan_cancelled():
+                    break
+                line = line.rstrip('\n')
+                log_file.write(line + '\n')
+                if line:
+                    scan_status['logs'].append(line)
+                    if progress_hook:
+                        progress_hook(line)
+            if was_scan_cancelled() and process.poll() is None:
+                terminate_scan_process_tree()
+            # 关闭 stdout，避免残留阻塞
+            try:
+                if process.stdout:
+                    process.stdout.close()
+            except Exception:
+                pass
+            if process.poll() is None:
+                try:
+                    process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    terminate_scan_process_tree(grace_seconds=1)
+                    try:
+                        process.wait(timeout=2)
+                    except Exception:
+                        pass
+            return process.returncode if process.returncode is not None else (-15 if was_scan_cancelled() else -1)
+        finally:
+            clear_scan_process(process)
 
 
 def update_uploaded_progress_from_line(line):
@@ -1266,7 +1646,7 @@ def update_uploaded_progress_from_line(line):
             return
 
 
-def run_uploaded_real_analysis(target, source_path, result_path):
+def run_uploaded_real_analysis(target, source_path, result_path, arch_cfg=None):
     kernel_source_dir = resolve_kernel_source_dir(source_path)
 
     if not os.path.isfile(os.path.join(kernel_source_dir, 'Makefile')) or not os.path.isfile(os.path.join(kernel_source_dir, 'Kconfig')):
@@ -1278,8 +1658,18 @@ def run_uploaded_real_analysis(target, source_path, result_path):
     if os.path.exists(analysis_log_file):
         os.remove(analysis_log_file)
 
+    arch_cfg = arch_cfg or ARCH_PRESETS['x86']
     env = os.environ.copy()
+    # Prefer project cross-bin wrappers for unversioned CROSS_COMPILE*gcc/g++
+    cross_bin = CROSS_BIN_DIR
+    if os.path.isdir(cross_bin):
+        env['PATH'] = cross_bin + os.pathsep + env.get('PATH', '')
     env['ANALYSIS_JOBS'] = env.get('ANALYSIS_JOBS', '2')
+    env['KERNEL_ARCH'] = arch_cfg['arch']
+    env['KERNEL_CROSS_COMPILE'] = arch_cfg.get('cross_compile', '')
+    # Clear inherited CROSS_COMPILE so script uses KERNEL_CROSS_COMPILE
+    env['CROSS_COMPILE'] = arch_cfg.get('cross_compile', '')
+    env['ARCH'] = arch_cfg['arch']
 
     alias_target = f"uploaded_{sanitize_target_dir(target)}_{int(time.time())}"
     # Create a short alias under analysis_data to avoid polluting project root
@@ -1299,17 +1689,32 @@ def run_uploaded_real_analysis(target, source_path, result_path):
 
     try:
         scan_status['progress'] = 10
+        preset_id = arch_cfg.get('id') or arch_cfg['arch']
+        scan_status['logs'].append(
+            f"[*] 架构: preset={preset_id} ARCH={arch_cfg['arch']} "
+            f"CROSS_COMPILE='{arch_cfg.get('cross_compile', '')}'"
+        )
+        if arch_cfg.get('detect_reason'):
+            scan_status['logs'].append(f"[*] 架构识别: {arch_cfg['detect_reason']}")
+        if arch_cfg.get('compiler_path'):
+            scan_status['logs'].append(f"[*] 编译器: {arch_cfg['compiler_path']}")
         scan_status['logs'].append('[*] 调用 run_analysis.sh 执行上传内核分析流程...')
         analysis_rc = stream_command_to_log(
-            ['bash', './scripts/run_analysis.sh', alias_target],
+            ['bash', './scripts/run_analysis.sh', alias_target, preset_id],
             PROJECT_ROOT,
             env,
             analysis_log_file,
             progress_hook=update_uploaded_progress_from_line,
         )
+        if was_scan_cancelled():
+            scan_status['logs'].append('[*] 分析进程已终止（用户停止）')
+            return 'cancelled'
         if analysis_rc != 0:
             scan_status['logs'].append(f'[WARNING] run_analysis.sh 退出码: {analysis_rc}（部分文件可能编译失败，但继续处理）')
             # Don't return False here - analysis may have partial results
+
+        if was_scan_cancelled():
+            return 'cancelled'
 
         scan_status['progress'] = 92
         scan_status['logs'].append('[*] 归档分析结果到上传结果目录...')
@@ -1355,12 +1760,21 @@ def run_uploaded_real_analysis(target, source_path, result_path):
         if not os.path.exists(result_race_file) or os.path.getsize(result_race_file) == 0:
             # Check if analysis log has any plugin output
             if os.path.exists(result_analysis_log):
-                with open(result_analysis_log, 'r') as f:
+                with open(result_analysis_log, 'r', errors='ignore') as f:
                     content = f.read()
                     if 'Analyzer Plugin Loaded' not in content:
                         scan_status['logs'].append('[-] 分析插件未加载，分析可能失败')
+                        hints = extract_analysis_failure_hints(result_analysis_log)
+                        for h in hints:
+                            scan_status['logs'].append(f'[hint] {h}')
                         return False
-            scan_status['logs'].append('[WARNING] 未找到竞态告警，但分析已完成')
+            hints = extract_analysis_failure_hints(result_analysis_log)
+            if hints:
+                scan_status['logs'].append('[WARNING] 未找到竞态告警；分析日志可疑片段:')
+                for h in hints:
+                    scan_status['logs'].append(f'[hint] {h}')
+            else:
+                scan_status['logs'].append('[WARNING] 未找到竞态告警，但分析已完成')
 
         return True
     finally:
@@ -1389,13 +1803,18 @@ def run_uploaded_real_analysis(target, source_path, result_path):
         if os.path.isdir(alias_analysis_data_dir):
             shutil.rmtree(alias_analysis_data_dir)
 
-def run_real_scan(target, is_uploaded=False, run_id=None):
+def run_real_scan(target, is_uploaded=False, run_id=None, arch_cfg=None):
     global scan_status
     global current_run_id
 
     run_id = run_id or str(uuid.uuid4())
     current_run_id = run_id
     create_run_record(run_id, target, is_uploaded)
+
+    arch_cfg = arch_cfg or ARCH_PRESETS['x86']
+
+    scan_cancel_event.clear()
+    clear_scan_process()
 
     scan_status["status"] = "running"
     scan_status["progress"] = 5
@@ -1404,11 +1823,26 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
     scan_status["logs"].clear()
     scan_status["logs"].append(f"[*] 开始真实分析任务，目标: {target}")
     scan_status["logs"].append(f"[*] run_id: {run_id}")
+    preset_id = arch_cfg.get('id') or arch_cfg['arch']
+    scan_status["logs"].append(
+        f"[*] 架构: preset={preset_id} ARCH={arch_cfg['arch']} "
+        f"CROSS_COMPILE='{arch_cfg.get('cross_compile', '')}'"
+    )
+    if arch_cfg.get('detect_reason'):
+        scan_status["logs"].append(f"[*] 架构识别: {arch_cfg['detect_reason']}")
 
     try:
         if is_uploaded:
+            if was_scan_cancelled():
+                mark_scan_cancelled(run_id)
+                return
+
             source_path, source_err = ensure_uploaded_source_ready(target)
             result_path = get_run_result_dir(target, run_id)
+
+            if was_scan_cancelled():
+                mark_scan_cancelled(run_id)
+                return
 
             if source_err:
                 scan_status["status"] = "error"
@@ -1426,7 +1860,10 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
             scan_status["logs"].append(f"[*] 分析上传的代码: {source_path}")
             scan_status["logs"].append(f"[*] 结果将保存到: {result_path}")
 
-            real_ok = run_uploaded_real_analysis(target, source_path, result_path)
+            real_ok = run_uploaded_real_analysis(target, source_path, result_path, arch_cfg=arch_cfg)
+            if real_ok == 'cancelled' or was_scan_cancelled():
+                mark_scan_cancelled(run_id)
+                return
             if not real_ok:
                 scan_status["status"] = "error"
                 scan_status["logs"].append("[-] 上传代码真实分析失败")
@@ -1442,19 +1879,34 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
             return
 
         env = os.environ.copy()
+        if os.path.isdir(CROSS_BIN_DIR):
+            env['PATH'] = CROSS_BIN_DIR + os.pathsep + env.get('PATH', '')
         env['ANALYSIS_JOBS'] = '2'
+        env['KERNEL_ARCH'] = arch_cfg['arch']
+        env['KERNEL_CROSS_COMPILE'] = arch_cfg.get('cross_compile', '')
+        env['CROSS_COMPILE'] = arch_cfg.get('cross_compile', '')
+        env['ARCH'] = arch_cfg['arch']
+        preset_id = arch_cfg.get('id') or arch_cfg['arch']
+
+        if was_scan_cancelled():
+            mark_scan_cancelled(run_id)
+            return
 
         process = subprocess.Popen(
-            [os.path.join(PROJECT_ROOT, 'scripts', 'run_analysis.sh'), target],
+            [os.path.join(PROJECT_ROOT, 'scripts', 'run_analysis.sh'), target, preset_id],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
             cwd=PROJECT_ROOT,
-            env=env
+            env=env,
+            start_new_session=True,
         )
+        register_scan_process(process)
 
         try:
             for line in iter(process.stdout.readline, ''):
+                if was_scan_cancelled():
+                    break
                 line = line.strip()
                 if line:
                     scan_status["logs"].append(line)
@@ -1472,13 +1924,22 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
             scan_status["logs"].append(f"[-] 读取分析输出时出错: {str(e)}")
         finally:
             # Ensure process is terminated
-            if process.poll() is None:
-                process.terminate()
+            if was_scan_cancelled() or process.poll() is None:
+                if process.poll() is None:
+                    terminate_scan_process_tree()
                 try:
                     process.wait(timeout=5)
                 except subprocess.TimeoutExpired:
-                    process.kill()
-                    process.wait()
+                    terminate_scan_process_tree(grace_seconds=1)
+                    try:
+                        process.wait(timeout=2)
+                    except Exception:
+                        pass
+            clear_scan_process(process)
+
+        if was_scan_cancelled():
+            mark_scan_cancelled(run_id)
+            return
 
         if process.returncode == 0:
             scan_status["progress"] = 100
@@ -1491,10 +1952,14 @@ def run_real_scan(target, is_uploaded=False, run_id=None):
             scan_status["logs"].append(f"[-] 分析结束，退出码: {process.returncode}")
             update_run_status(run_id, 'error', f'run_analysis exit code {process.returncode}')
     except Exception as exc:
+        if was_scan_cancelled():
+            mark_scan_cancelled(run_id)
+            return
         scan_status["status"] = "error"
         scan_status["logs"].append(f"[-] 后端异常: {str(exc)}")
         update_run_status(run_id, 'error', str(exc))
-
+    finally:
+        clear_scan_process()
 
 def generate_analysis_data(target, run_id, result_dir_override=None, prefer_result=False, prefer_display=False, is_prebuilt=False):
     """生成分析数据并存储在内存中
@@ -2049,6 +2514,17 @@ def get_uploaded_archives():
         'total': len(items),
     })
 
+@app.route('/api/arch/options', methods=['GET'])
+def get_arch_options():
+    """List supported ARCH presets and whether the host toolchain is ready."""
+    items = list_arch_options()
+    return jsonify({
+        'items': items,
+        'default': 'x86',
+        'total': len(items),
+    })
+
+
 @app.route('/api/scan', methods=['POST'])
 def start_scan():
     global current_run_id
@@ -2057,10 +2533,44 @@ def start_scan():
     is_uploaded = data.get('is_uploaded', False)
     force_reanalyze = bool(data.get('force_reanalyze', False))
     overwrite_existing = bool(data.get('overwrite_existing', False))
+    arch_raw = data.get('arch', data.get('architecture', None))
+    if arch_raw is None:
+        arch_raw = 'auto' if is_uploaded else 'x86'
+    cross_override = data.get('cross_compile', None)
     run_id = str(uuid.uuid4())
 
     if is_uploaded:
         target = sanitize_target_dir(target)
+
+    # 已有运行中的分析时拒绝再开新任务（可先调用 /api/scan/stop）
+    if scan_status.get('status') == 'running':
+        return jsonify({
+            "error": "已有分析正在进行，请先停止后再启动新任务",
+            "running_run_id": scan_status.get('run_id'),
+            "running_target": scan_status.get('target'),
+        }), 409
+
+    # Resolve auto ARCH using upload source tree when available
+    detect_source = None
+    if is_uploaded:
+        try:
+            detect_source = get_upload_source_dir(target)
+            if detect_source and os.path.isdir(detect_source):
+                detect_source = resolve_kernel_source_dir(detect_source)
+        except Exception:
+            detect_source = get_upload_source_dir(target)
+
+    ok, arch_cfg = resolve_arch_config(
+        arch_raw,
+        cross_compile_override=cross_override,
+        source_dir=detect_source,
+        hint_name=target,
+    )
+    if not ok:
+        return jsonify({"error": arch_cfg}), 400
+
+    # Real rebuilds need a working compiler; prebuilt quick-path can skip this.
+    needs_real_build = True
 
     # 上传内核强制重跑并覆盖：删除该 target 的历史报告记录与产物，保留上传包本身。
     if is_uploaded and force_reanalyze and overwrite_existing:
@@ -2093,12 +2603,15 @@ def start_scan():
         scan_status["logs"].append(f"[*] run_id: {reused_run_id}")
         scan_status["logs"].append("[*] 命中内置结果，跳过重分析")
         scan_status["logs"].append("[+] 已加载预置分析数据（非实时分析）")
+        scan_status["logs"].append("[*] 提示: 内置结果基于 x86；所选架构仅在强制重分析时生效")
 
         return jsonify({
             "message": "Scan loaded from prebuilt data",
             "target": target,
             "is_uploaded": is_uploaded,
             "run_id": reused_run_id,
+            "arch": arch_cfg['arch'],
+            "detect_reason": arch_cfg.get('detect_reason'),
             "quick_mode": True,
             "reused": bool(latest_completed),
         })
@@ -2133,12 +2646,38 @@ def start_scan():
                 "target": target,
                 "is_uploaded": is_uploaded,
                 "run_id": reused_run_id,
+                "arch": arch_cfg['arch'],
+                "detect_reason": arch_cfg.get('detect_reason'),
                 "quick_mode": True,
                 "reused": True,
             })
+
+    if needs_real_build and not arch_cfg.get('ready_for_analysis'):
+        missing = []
+        if not arch_cfg.get('toolchain_ready'):
+            missing.append(f"编译器 {(arch_cfg.get('cross_compile') or '')}gcc")
+        if not arch_cfg.get('cxx_ready'):
+            missing.append('主机 g++')
+        if not arch_cfg.get('plugin_ready'):
+            missing.append('GCC plugin 头文件 (gcc-plugin.h)')
+        hint = arch_cfg.get('plugin_apt_hint') or arch_cfg.get('apt_hint') or arch_cfg.get('hint') or ''
+        preset_id = arch_cfg.get('id') or arch_cfg.get('arch')
+        return jsonify({
+            "error": (
+                f"架构 {preset_id} 尚未就绪（缺少: {', '.join(missing) or '未知'}）。{hint}"
+            ),
+            "arch": arch_cfg['arch'],
+            "arch_id": preset_id,
+            "cross_compile": arch_cfg.get('cross_compile', ''),
+            "toolchain_ready": arch_cfg.get('toolchain_ready'),
+            "plugin_ready": arch_cfg.get('plugin_ready'),
+            "cxx_ready": arch_cfg.get('cxx_ready'),
+            "apt_hint": arch_cfg.get('apt_hint'),
+            "plugin_apt_hint": arch_cfg.get('plugin_apt_hint'),
+        }), 400
     
     # 启动真实的后台分析线程
-    thread = threading.Thread(target=run_real_scan, args=(target, is_uploaded, run_id))
+    thread = threading.Thread(target=run_real_scan, args=(target, is_uploaded, run_id, arch_cfg))
     thread.start()
     current_run_id = run_id
     
@@ -2147,8 +2686,49 @@ def start_scan():
         "target": target,
         "is_uploaded": is_uploaded,
         "run_id": run_id,
+        "arch": arch_cfg['arch'],
+        "cross_compile": arch_cfg.get('cross_compile', ''),
+        "detect_reason": arch_cfg.get('detect_reason'),
         "overwrite_existing": overwrite_existing,
         "quick_mode": False,
+    })
+
+
+@app.route('/api/scan/stop', methods=['POST'])
+def stop_scan():
+    """停止当前正在进行的分析（终止 run_analysis / make / gcc 进程组）。"""
+    data = request.json or {}
+    requested_run_id = (data.get('run_id') or '').strip() or None
+
+    active_status = scan_status.get('status')
+    active_run_id = scan_status.get('run_id')
+    active_target = scan_status.get('target')
+
+    if active_status != 'running':
+        return jsonify({
+            "error": "当前没有运行中的分析",
+            "status": active_status,
+            "run_id": active_run_id,
+            "target": active_target,
+        }), 409
+
+    if requested_run_id and active_run_id and requested_run_id != active_run_id:
+        return jsonify({
+            "error": "run_id 与当前运行任务不匹配",
+            "running_run_id": active_run_id,
+            "requested_run_id": requested_run_id,
+        }), 409
+
+    scan_cancel_event.set()
+    scan_status['logs'].append('[*] 收到停止请求，正在终止分析进程...')
+    process_signaled = terminate_scan_process_tree()
+
+    return jsonify({
+        "message": "Stop requested",
+        "run_id": active_run_id,
+        "target": active_target,
+        "process_signaled": process_signaled,
+        "status": "stopping",
     })
 
 
@@ -2259,7 +2839,7 @@ def get_scan_status():
             if mem_run_id == requested_run_id:
                 payload["error_message"] = db_error
                 # 内存已 idle 但 DB 已终态时，以 DB 为准，方便自动跳转 dashboard
-                if payload["status"] in ('idle', None, '') and db_status in ('completed', 'error'):
+                if payload["status"] in ('idle', None, '') and db_status in ('completed', 'error', 'cancelled'):
                     payload["status"] = db_status
                     payload["target"] = db_target
                     if db_status == 'completed':
@@ -2294,7 +2874,7 @@ def get_history():
         where.append('r.target_type = ?')
         params.append(target_type)
 
-    if status in ('running', 'completed', 'error'):
+    if status in ('running', 'completed', 'error', 'cancelled'):
         where.append('r.status = ?')
         params.append(status)
 

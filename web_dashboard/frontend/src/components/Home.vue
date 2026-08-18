@@ -60,6 +60,33 @@
               </button>
             </div>
 
+            <!-- 目标架构（上传/强制重分析时生效） -->
+            <div class="arch-select-block">
+              <label class="section-label">目标架构 ARCH</label>
+              <select v-model="selectedArch" class="server-select">
+                <option
+                  v-for="item in archOptions"
+                  :key="item.id"
+                  :value="item.id"
+                >
+                  {{ formatArchOptionLabel(item) }}
+                </option>
+              </select>
+              <div class="select-help">
+                <span v-if="currentArchOption">{{ currentArchOption.hint }}</span>
+                <span v-if="currentArchOption && currentArchOption.id !== 'auto' && !currentArchOption.ready_for_analysis">
+                  —
+                  <span v-if="!currentArchOption.toolchain_ready">工具链未安装</span>
+                  <span v-else-if="!currentArchOption.plugin_ready">插件头未安装</span>
+                  <span v-else-if="!currentArchOption.cxx_ready">g++ 未安装</span>
+                  <span v-if="currentArchOption.plugin_apt_hint || currentArchOption.apt_hint">
+                    （{{ currentArchOption.plugin_apt_hint || currentArchOption.apt_hint }}）
+                  </span>
+                </span>
+                <span v-if="scanMode === 'server'">；内置预置结果仍走 x86 快速路径，仅强制重分析时用所选架构。</span>
+              </div>
+            </div>
+
             <!-- 服务器模式 -->
             <div v-if="scanMode === 'server'" class="server-mode-section">
               <select v-model="selectedTarget" class="server-select">
@@ -197,6 +224,7 @@
                 <option value="completed">已完成</option>
                 <option value="running">运行中</option>
                 <option value="error">失败</option>
+                <option value="cancelled">已停止</option>
               </select>
               <input
                 v-model.trim="historyFilterTarget"
@@ -264,9 +292,19 @@
               <svg v-else-if="scanComplete" class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              {{ scanFailed ? '审计失败' : (scanComplete ? '审计完成' : '正在执行深度并发安全分析...') }}
+              {{ scanFailed ? (scanCancelled ? '审计已停止' : '审计失败') : (scanComplete ? '审计完成' : '正在执行深度并发安全分析...') }}
             </h3>
-            <span class="progress-percentage" :class="scanComplete ? 'complete' : (scanFailed ? 'error' : 'in-progress')">{{ progress }}%</span>
+            <div class="progress-header-right">
+              <button
+                v-if="isScanning && !scanComplete && !scanFailed"
+                @click="stopScan"
+                class="stop-button"
+                :disabled="isStopping"
+              >
+                {{ isStopping ? '正在停止...' : '停止分析' }}
+              </button>
+              <span class="progress-percentage" :class="scanComplete ? 'complete' : (scanFailed ? 'error' : 'in-progress')">{{ progress }}%</span>
+            </div>
           </div>
           
           <div class="progress-bar-container">
@@ -295,7 +333,7 @@
           </div>
 
           <div v-if="scanFailed" class="complete-section">
-            <p class="scan-error-text">{{ scanErrorMessage || '分析失败，请查看上方日志。' }}</p>
+            <p class="scan-error-text">{{ scanErrorMessage || (scanCancelled ? '分析已停止。' : '分析失败，请查看上方日志。') }}</p>
             <button @click="resetScanPanel" class="recover-button">返回重新选择</button>
           </div>
 
@@ -330,13 +368,24 @@ export default {
     return {
       scanMode: 'server',
       selectedTarget: 'linux-6.6.1',
+      selectedArch: 'x86',
+      archOptions: [
+        { id: 'auto', label: '自动识别', hint: '根据压缩包名/源码 arch/ 自动选择', toolchain_ready: true, plugin_ready: true, cxx_ready: true, ready_for_analysis: true },
+        { id: 'x86', label: 'x86 / x86_64（本机）', hint: '使用主机 gcc', toolchain_ready: true, plugin_ready: true, cxx_ready: true, ready_for_analysis: true },
+        { id: 'arm64', label: 'arm64 / aarch64', hint: '需要 aarch64 交叉工具链', toolchain_ready: false, plugin_ready: false, cxx_ready: false, ready_for_analysis: false },
+        { id: 'arm', label: 'arm（32-bit）', hint: '需要 armhf 交叉工具链', toolchain_ready: false, plugin_ready: false, cxx_ready: false, ready_for_analysis: false },
+        { id: 'loongarch', label: 'loongarch（主线 / GCC13）', hint: '主线 LoongArch：apt gcc-13', toolchain_ready: false, plugin_ready: false, cxx_ready: false, ready_for_analysis: false },
+        { id: 'loongnix', label: 'Loongnix（厂商 GCC8）', hint: 'Loongnix 4.19：tools/vendor/loongson-gcc8', toolchain_ready: false, plugin_ready: false, cxx_ready: false, ready_for_analysis: false },
+      ],
       selectedLocalFolder: '',
       fileCount: 0,
       dragOver: false,
       isScanning: false,
       scanComplete: false,
       scanFailed: false,
+      scanCancelled: false,
       scanErrorMessage: '',
+      isStopping: false,
       isUploading: false,
       uploadComplete: false,
       uploadProgress: 0,
@@ -367,6 +416,7 @@ export default {
     }
   },
   async mounted() {
+    await this.loadArchOptions()
     await this.tryResumeRunningTask()
     await this.loadHistory()
     await this.loadUploadedArchiveOptions()
@@ -375,6 +425,30 @@ export default {
     this.stopPollingStatus()
   },
   methods: {
+    async loadArchOptions() {
+      try {
+        const res = await axios.get('/api/arch/options', { timeout: 10000 })
+        const items = Array.isArray(res.data?.items) ? res.data.items : []
+        if (items.length) {
+          this.archOptions = items
+          if (!items.some(item => item.id === this.selectedArch)) {
+            this.selectedArch = this.scanMode === 'server' ? (res.data?.default || 'x86') : 'auto'
+          }
+        }
+      } catch (_error) {
+        // keep local fallback options
+      }
+    },
+    formatArchOptionLabel(item) {
+      if (!item) return ''
+      if (item.id === 'auto') return item.label
+      if (item.ready_for_analysis) return item.label
+      const parts = []
+      if (!item.toolchain_ready) parts.push('工具链')
+      if (item.toolchain_ready && !item.plugin_ready) parts.push('插件头')
+      if (item.toolchain_ready && !item.cxx_ready) parts.push('g++')
+      return `${item.label}（${parts.join('/') || '未就绪'}未安装）`
+    },
     stopPollingStatus() {
       if (this.pollInterval) {
         clearTimeout(this.pollInterval)
@@ -387,7 +461,9 @@ export default {
       this.isScanning = false
       this.scanComplete = false
       this.scanFailed = false
+      this.scanCancelled = false
       this.scanErrorMessage = ''
+      this.isStopping = false
       this.progress = 0
       this.logs = []
       this.lastServerLogCount = 0
@@ -404,6 +480,8 @@ export default {
       this.scanComplete = true
       this.isScanning = false
       this.scanFailed = false
+      this.scanCancelled = false
+      this.isStopping = false
       this.progress = 100
       localStorage.setItem('hasAuditData', 'true')
       this.fetchDataSourceInfo()
@@ -412,18 +490,46 @@ export default {
         this.goToDashboard()
       }, 1500)
     },
-    markScanFailed(message = '') {
+    markScanFailed(message = '', cancelled = false) {
       this.stopPollingStatus()
       this.isScanning = false
       this.scanComplete = false
       this.scanFailed = true
-      this.scanErrorMessage = message || '分析过程中发生错误'
+      this.scanCancelled = !!cancelled
+      this.isStopping = false
+      this.scanErrorMessage = message || (cancelled ? '分析已由用户停止' : '分析过程中发生错误')
       if (message) {
         this.logs.push(`[-] ${message}`)
+      } else if (cancelled) {
+        this.logs.push('[-] 分析已由用户停止。')
       } else {
         this.logs.push('[-] 分析过程中发生错误，请检查日志。')
       }
       this.loadHistory()
+    },
+    async stopScan() {
+      if (this.isStopping || !this.isScanning || this.scanComplete || this.scanFailed) {
+        return
+      }
+      if (!window.confirm('确定停止当前正在进行的分析？')) {
+        return
+      }
+      this.isStopping = true
+      this.logs.push('[*] 正在请求停止分析...')
+      try {
+        const payload = {}
+        const runId = this.trackedRunId || this.currentRunId
+        if (runId) {
+          payload.run_id = runId
+        }
+        const res = await axios.post('/api/scan/stop', payload, { timeout: 20000 })
+        this.logs.push(`[+] ${res.data?.message || '已发送停止请求'}`)
+        // 继续轮询，等待后端把状态落到 cancelled
+      } catch (error) {
+        const detail = error?.response?.data?.error || error.message
+        this.logs.push(`[-] 停止失败: ${detail}`)
+        this.isStopping = false
+      }
     },
     async pollTrackedRunFromHistory() {
       const runId = this.trackedRunId || this.currentRunId
@@ -611,6 +717,10 @@ export default {
               this.markScanCompleted(tracked)
               return
             }
+            if (hist?.status === 'cancelled') {
+              this.markScanFailed(hist.error_message || '分析已由用户停止', true)
+              return
+            }
             if (hist?.status === 'error') {
               this.markScanFailed(hist.error_message || '分析失败')
               return
@@ -650,6 +760,11 @@ export default {
             return
           }
 
+          if (data.status === 'cancelled') {
+            this.markScanFailed(data.error_message || '分析已由用户停止', true)
+            return
+          }
+
           if (data.status === 'error') {
             this.markScanFailed(data.error_message || '分析过程中发生错误')
             return
@@ -661,6 +776,10 @@ export default {
             if (hist?.status === 'completed') {
               this.logs.push('[+] 任务已完成，正在进入分析报告...')
               this.markScanCompleted(tracked)
+              return
+            }
+            if (hist?.status === 'cancelled') {
+              this.markScanFailed(hist.error_message || '分析已由用户停止', true)
               return
             }
             if (hist?.status === 'error') {
@@ -685,6 +804,10 @@ export default {
               if (hist?.status === 'completed') {
                 this.logs.push('[+] 已从历史记录确认任务完成，正在进入分析报告...')
                 this.markScanCompleted(hist.run_id)
+                return
+              }
+              if (hist?.status === 'cancelled') {
+                this.markScanFailed(hist.error_message || '分析已由用户停止', true)
                 return
               }
               if (hist?.status === 'error') {
@@ -973,7 +1096,9 @@ export default {
       this.isScanning = true
       this.scanComplete = false
       this.scanFailed = false
+      this.scanCancelled = false
       this.scanErrorMessage = ''
+      this.isStopping = false
       this.progress = 0
       this.trackedRunId = null
       this.pollFailCount = 0
@@ -981,7 +1106,7 @@ export default {
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
       const isUploaded = this.scanMode !== 'server'
       const forceReanalyze = this.scanMode === 'local_archive' && !!this.selectedExistingArchiveTarget && this.archiveReuseMode === 'rerun_overwrite'
-      this.logs = ['初始化分析引擎...', `目标: ${targetName}`]
+      this.logs = ['初始化分析引擎...', `目标: ${targetName}`, `架构: ${this.selectedArch}`]
       this.lastServerLogCount = 0
       
       try {
@@ -989,7 +1114,8 @@ export default {
         const payload = {
           target: targetName,
           is_uploaded: isUploaded,
-          force_reanalyze: forceReanalyze
+          force_reanalyze: forceReanalyze,
+          arch: this.selectedArch
         }
         if (forceReanalyze) {
           payload.overwrite_existing = true
@@ -999,6 +1125,12 @@ export default {
         this.trackedRunId = this.currentRunId
         if (this.currentRunId) {
           localStorage.setItem('currentRunId', this.currentRunId)
+        }
+        if (startRes?.data?.arch) {
+          this.logs.push(`[*] 后端确认架构: ${startRes.data.arch}`)
+        }
+        if (startRes?.data?.detect_reason) {
+          this.logs.push(`[*] 架构识别: ${startRes.data.detect_reason}`)
         }
 
         // 快速路径：预置/复用结果直接完成并跳转 dashboard
@@ -1042,6 +1174,9 @@ export default {
     }
   },
   computed: {
+    currentArchOption() {
+      return this.archOptions.find(item => item.id === this.selectedArch) || null
+    },
     selectedExistingArchiveAvailable() {
       if (!this.selectedExistingArchiveTarget) {
         return false
@@ -1056,6 +1191,14 @@ export default {
   },
   watch: {
     scanMode(newValue) {
+      if (newValue === 'server') {
+        if (this.selectedArch === 'auto') {
+          this.selectedArch = 'x86'
+        }
+      } else if (this.selectedArch === 'x86' || !this.selectedArch) {
+        // Upload modes default to auto-detect
+        this.selectedArch = 'auto'
+      }
       if (newValue !== 'local_archive') {
         this.selectedExistingArchiveTarget = ''
         this.existingCompletedReports = []
@@ -1278,6 +1421,17 @@ export default {
 }
 
 /* 服务器模式 */
+.arch-select-block {
+  margin-bottom: 20px;
+}
+
+.arch-select-block .section-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
 .server-mode-section {
   margin-bottom: 24px;
 }
@@ -1406,6 +1560,11 @@ export default {
 .status-error {
   color: #fca5a5;
   border-color: #b91c1c;
+}
+
+.status-cancelled {
+  color: #fdba74;
+  border-color: #c2410c;
 }
 
 .history-actions {
@@ -1626,6 +1785,36 @@ export default {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 8px;
+  gap: 12px;
+}
+
+.progress-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.stop-button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #7f1d1d;
+  background: rgba(127, 29, 29, 0.35);
+  color: #fecaca;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.stop-button:hover:not(:disabled) {
+  background: rgba(185, 28, 28, 0.55);
+  border-color: #ef4444;
+  color: #fff;
+}
+
+.stop-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .progress-title {

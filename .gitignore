@@ -18,6 +18,8 @@ logs/comparison_results/
 tools/neo4j-community-*/
 tools/jdk-*/
 tools/*.tar.gz
+# Isolated vendor toolchains (Loongnix GCC8 etc.) — large binaries, never in git
+tools/vendor/
 neo4j_data_*/
 tools/neo4j-community-*/run/*.pid
 tools/neo4j-community-*/logs/
@@ -95,3 +97,6 @@ web_dashboard/data/uploads/
 logs/*.port
 logs/*log_path
 docs/演示文档.pptx
+
+# Host-local cross compiler symlinks (regenerate via scripts/setup_cross_bin.sh)
+tools/cross-bin/

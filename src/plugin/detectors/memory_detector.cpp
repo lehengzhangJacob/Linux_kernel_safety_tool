@@ -31,7 +31,7 @@ void BufferOverflowDetector::analyze_function(tree fndecl) {
 }
 
 void BufferOverflowDetector::finalize() {
-    fprintf(stdout, "[BufferOverflowDetector] Found %zu buffer overflow issues\n", results.size());
+    fprintf(stderr, "[BufferOverflowDetector] Found %zu buffer overflow issues\n", results.size());
 }
 
 bool BufferOverflowDetector::is_array_access(tree expr) {
@@ -196,7 +196,7 @@ void NullPointerDetector::analyze_function(tree fndecl) {
 }
 
 void NullPointerDetector::finalize() {
-    fprintf(stdout, "[NullPointerDetector] Found %zu null pointer issues\n", results.size());
+    fprintf(stderr, "[NullPointerDetector] Found %zu null pointer issues\n", results.size());
 }
 
 bool NullPointerDetector::is_potential_null(tree ptr) {
@@ -299,7 +299,7 @@ void UseAfterFreeDetector::analyze_function(tree fndecl) {
 }
 
 void UseAfterFreeDetector::finalize() {
-    fprintf(stdout, "[UseAfterFreeDetector] Found %zu use-after-free issues\n", results.size());
+    fprintf(stderr, "[UseAfterFreeDetector] Found %zu use-after-free issues\n", results.size());
 }
 
 bool UseAfterFreeDetector::is_free_call(gimple *stmt) {
