@@ -418,6 +418,17 @@ def init_sqlite_db():
         conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_run_id ON warnings(run_id)')
         conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_severity ON warnings(severity)')
         conn.execute('CREATE INDEX IF NOT EXISTS idx_warnings_var_func ON warnings(variable_name, function_name)')
+
+        # 兼容旧库：为历史任务补充架构字段
+        run_cols = {
+            row[1]
+            for row in conn.execute('PRAGMA table_info(analysis_runs)').fetchall()
+        }
+        if 'arch' not in run_cols:
+            conn.execute('ALTER TABLE analysis_runs ADD COLUMN arch TEXT')
+        if 'arch_preset' not in run_cols:
+            conn.execute('ALTER TABLE analysis_runs ADD COLUMN arch_preset TEXT')
+
         conn.commit()
     finally:
         conn.close()
@@ -431,15 +442,41 @@ def warning_severity_from_type(warn_type):
     return 'HIGH' if warn_type == 'Write' else 'MEDIUM'
 
 
-def create_run_record(run_id, target_name, is_uploaded):
+def format_arch_label(arch_preset=None, arch=None):
+    """人类可读的架构标签（历史列表/报告展示）。"""
+    preset = (arch_preset or '').strip().lower()
+    make_arch = (arch or '').strip().lower()
+    if preset == 'loongnix':
+        return 'loongnix'
+    if preset in ('loongarch', 'arm64', 'arm', 'x86'):
+        return preset
+    if make_arch in ('loongarch', 'arm64', 'arm', 'x86'):
+        return make_arch
+    return preset or make_arch or ''
+
+
+def create_run_record(run_id, target_name, is_uploaded, arch_cfg=None):
+    arch_cfg = arch_cfg or {}
+    arch = (arch_cfg.get('arch') or '').strip() or None
+    arch_preset = (arch_cfg.get('id') or arch or '').strip() or None
     conn = get_db_connection()
     try:
         conn.execute(
             '''
-            INSERT INTO analysis_runs(run_id, target_name, target_type, status, started_at, is_uploaded)
-            VALUES (?, ?, ?, 'running', ?, ?)
+            INSERT INTO analysis_runs(
+                run_id, target_name, target_type, status, started_at, is_uploaded, arch, arch_preset
+            )
+            VALUES (?, ?, ?, 'running', ?, ?, ?, ?)
             ''',
-            (run_id, target_name, 'uploaded' if is_uploaded else 'builtin', int(time.time()), 1 if is_uploaded else 0)
+            (
+                run_id,
+                target_name,
+                'uploaded' if is_uploaded else 'builtin',
+                int(time.time()),
+                1 if is_uploaded else 0,
+                arch,
+                arch_preset,
+            ),
         )
         conn.commit()
     finally:
@@ -1809,9 +1846,8 @@ def run_real_scan(target, is_uploaded=False, run_id=None, arch_cfg=None):
 
     run_id = run_id or str(uuid.uuid4())
     current_run_id = run_id
-    create_run_record(run_id, target, is_uploaded)
-
     arch_cfg = arch_cfg or ARCH_PRESETS['x86']
+    create_run_record(run_id, target, is_uploaded, arch_cfg=arch_cfg)
 
     scan_cancel_event.clear()
     clear_scan_process()
@@ -2589,7 +2625,7 @@ def start_scan():
         reused_run_id = latest_completed['run_id'] if latest_completed else run_id
 
         if not latest_completed:
-            create_run_record(reused_run_id, target, False)
+            create_run_record(reused_run_id, target, False, arch_cfg=ARCH_PRESETS.get('x86'))
             update_run_status(reused_run_id, 'completed')
 
         generate_analysis_data(target, reused_run_id, prefer_display=True, is_prebuilt=True)
@@ -2906,6 +2942,8 @@ def get_history():
                 r.finished_at,
                 r.error_message,
                 r.is_uploaded,
+                r.arch,
+                r.arch_preset,
                 COALESCE(s.analysis_files, 0) AS analysis_files,
                 COALESCE(s.total_warnings, 0) AS total_warnings
             FROM analysis_runs r
@@ -2931,6 +2969,10 @@ def get_history():
             upload_exists = bool(upload_root and os.path.isdir(upload_root))
             upload_size_bytes = get_dir_size_bytes(upload_root) if upload_exists else 0
 
+            arch = row['arch'] if 'arch' in row.keys() else None
+            arch_preset = row['arch_preset'] if 'arch_preset' in row.keys() else None
+            arch_label = format_arch_label(arch_preset, arch)
+
             items.append(
                 {
                     'run_id': run_id,
@@ -2938,6 +2980,9 @@ def get_history():
                     'target_type': row['target_type'],
                     'is_uploaded': is_uploaded,
                     'status': row['status'],
+                    'arch': arch or '',
+                    'arch_preset': arch_preset or '',
+                    'arch_label': arch_label,
                     'started_at': int(row['started_at'] or 0),
                     'started_at_text': format_timestamp(row['started_at']),
                     'finished_at': int(row['finished_at'] or 0) if row['finished_at'] else None,

@@ -163,13 +163,27 @@
                   >
                     全部重新跑并覆盖历史报告
                   </button>
+                  <button
+                    type="button"
+                    class="mode-button"
+                    :class="archiveReuseMode === 'rerun_new' ? 'active-button' : 'inactive-button'"
+                    @click="archiveReuseMode = 'rerun_new'"
+                  >
+                    同包再跑一份新报告（保留旧报告）
+                  </button>
                 </div>
+                <p class="archive-strategy-tip">
+                  换架构对比时请选「同包再跑一份新报告」；想清掉旧结果再选「覆盖历史报告」。
+                </p>
 
                 <div v-if="archiveReuseMode === 'reuse_report'" class="archive-report-picker">
                   <select v-model="selectedExistingRunId" class="server-select">
                     <option value="">请选择历史报告</option>
                     <option v-for="item in existingCompletedReports" :key="item.run_id" :value="item.run_id">
-                      {{ item.started_at_text || '-' }} | run_id: {{ item.run_id }} | 告警: {{ item.total_warnings }}
+                      {{ item.started_at_text || '-' }}
+                      | 架构: {{ item.arch_label || '未知' }}
+                      | 告警: {{ item.total_warnings }}
+                      | run: {{ (item.run_id || '').slice(0, 8) }}
                     </option>
                   </select>
                 </div>
@@ -240,7 +254,11 @@
               <div v-for="item in historyItems" :key="item.run_id" class="history-item">
                 <div class="history-item-top">
                   <div>
-                    <div class="history-title">{{ item.target_name }} <span class="history-type">[{{ item.target_type }}]</span></div>
+                    <div class="history-title">
+                      {{ item.target_name }}
+                      <span class="history-type">[{{ item.target_type }}]</span>
+                      <span v-if="item.arch_label" class="history-arch">架构: {{ item.arch_label }}</span>
+                    </div>
                     <div class="history-meta">
                       run_id: {{ item.run_id }}
                     </div>
@@ -1105,8 +1123,19 @@ export default {
       
       const targetName = this.scanMode === 'server' ? this.selectedTarget : this.selectedLocalFolder
       const isUploaded = this.scanMode !== 'server'
-      const forceReanalyze = this.scanMode === 'local_archive' && !!this.selectedExistingArchiveTarget && this.archiveReuseMode === 'rerun_overwrite'
-      this.logs = ['初始化分析引擎...', `目标: ${targetName}`, `架构: ${this.selectedArch}`]
+      const isHistoryArchiveRerun = this.scanMode === 'local_archive' && !!this.selectedExistingArchiveTarget
+      const forceReanalyze = isHistoryArchiveRerun && (
+        this.archiveReuseMode === 'rerun_overwrite' || this.archiveReuseMode === 'rerun_new'
+      )
+      const overwriteExisting = isHistoryArchiveRerun && this.archiveReuseMode === 'rerun_overwrite'
+      this.logs = [
+        '初始化分析引擎...',
+        `目标: ${targetName}`,
+        `架构: ${this.selectedArch}`,
+        forceReanalyze
+          ? (overwriteExisting ? '策略: 覆盖重跑' : '策略: 追加新报告（保留历史）')
+          : '策略: 常规分析'
+      ]
       this.lastServerLogCount = 0
       
       try {
@@ -1115,10 +1144,8 @@ export default {
           target: targetName,
           is_uploaded: isUploaded,
           force_reanalyze: forceReanalyze,
+          overwrite_existing: overwriteExisting,
           arch: this.selectedArch
-        }
-        if (forceReanalyze) {
-          payload.overwrite_existing = true
         }
         const startRes = await axios.post('/api/scan', payload, { timeout: 30000 })
         this.currentRunId = startRes?.data?.run_id || null
@@ -1527,12 +1554,22 @@ export default {
 }
 
 .history-type,
+.history-arch,
 .history-meta,
 .history-stats,
 .history-empty,
 .history-pagination {
   color: #94a3b8;
   font-size: 12px;
+}
+
+.history-arch {
+  margin-left: 8px;
+  color: #7dd3fc;
+  border: 1px solid #0e7490;
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-weight: 500;
 }
 
 .history-stats {
@@ -1651,7 +1688,22 @@ export default {
 }
 
 .archive-strategy-group {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.archive-strategy-group .mode-button {
+  flex: 1 1 180px;
+  min-width: 0;
+  font-size: 13px;
+  padding: 10px 12px;
+}
+
+.archive-strategy-tip {
+  margin: 0 0 8px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .archive-report-picker {
