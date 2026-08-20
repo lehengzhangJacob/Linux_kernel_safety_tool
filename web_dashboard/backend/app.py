@@ -446,12 +446,17 @@ def format_arch_label(arch_preset=None, arch=None):
     """人类可读的架构标签（历史列表/报告展示）。"""
     preset = (arch_preset or '').strip().lower()
     make_arch = (arch or '').strip().lower()
-    if preset == 'loongnix':
-        return 'loongnix'
-    if preset in ('loongarch', 'arm64', 'arm', 'x86'):
-        return preset
-    if make_arch in ('loongarch', 'arm64', 'arm', 'x86'):
-        return make_arch
+    labels = {
+        'loongnix': 'LoongArch',
+        'loongarch': 'LoongArch',
+        'arm64': 'ARM64',
+        'arm': 'ARM32',
+        'x86': 'x86',
+    }
+    if preset in labels:
+        return labels[preset]
+    if make_arch in labels:
+        return labels[make_arch]
     return preset or make_arch or ''
 
 
@@ -3106,7 +3111,34 @@ def get_active_run_id(requested_run_id=None, target_name=None):
 def get_analysis_data_by_run(run_id):
     if run_id and run_id in analysis_data:
         return analysis_data[run_id]
-    return None
+    if not run_id:
+        return None
+
+    row = get_run_row(run_id)
+    if not row:
+        return None
+
+    target = row['target_name']
+    is_uploaded = bool(row['is_uploaded'])
+    try:
+        if is_uploaded:
+            result_dir = get_run_result_dir(target, run_id)
+            if not os.path.isdir(result_dir):
+                return None
+            generate_analysis_data(
+                target,
+                run_id,
+                result_dir_override=result_dir,
+                prefer_result=True,
+                prefer_display=False,
+            )
+        else:
+            generate_analysis_data(target, run_id, prefer_display=True)
+    except Exception as exc:
+        print(f"[WARNING] Failed to reload analysis data for {run_id}: {exc}")
+        return None
+
+    return analysis_data.get(run_id)
 
 def load_analysis_result_from_file():
     """从结果目录加载分析数据"""
@@ -3272,14 +3304,19 @@ def get_graph_data():
             data = file_data
     
     if 'graph' in data:
-        # 限制节点数量
-        graph_data = data['graph']
-        graph_data['nodes'] = graph_data['nodes'][:limit]
-        graph_data['edges'] = [edge for edge in graph_data['edges'] 
-                             if edge['source'] in [node['id'] for node in graph_data['nodes']] 
-                             and edge['target'] in [node['id'] for node in graph_data['nodes']]][:limit * 3]
-        graph_data['run_id'] = run_id
-        return jsonify(graph_data)
+        # 限制节点数量（复制后再裁剪，避免改坏内存里的完整图）
+        raw_graph = data.get('graph') or {}
+        nodes = list(raw_graph.get('nodes') or [])[:limit]
+        node_ids = {node.get('id') for node in nodes}
+        edges = [
+            edge for edge in (raw_graph.get('edges') or [])
+            if edge.get('source') in node_ids and edge.get('target') in node_ids
+        ][:limit * 3]
+        return jsonify({
+            'nodes': nodes,
+            'edges': edges,
+            'run_id': run_id,
+        })
     else:
         # 返回空图数据
         return jsonify({"nodes": [], "edges": []})
